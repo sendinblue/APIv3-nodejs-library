@@ -1,0 +1,8 @@
+# SendinBlueApi.InlineResponse202
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**processId** | **Number** | Id of the process created | 
+
+

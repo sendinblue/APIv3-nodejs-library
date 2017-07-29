@@ -1,0 +1,37 @@
+{
+  "name": "sendinblue-apiv3",
+  "version": "1.0.0",
+  "description": "Official SendinBlue provided RESTFul API V3 nodejs library",
+  "license": "ISC",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive"
+  },
+  "keywords": [
+    "sendinblue"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sendinblue/APIv3-nodejs-library.git"
+  },
+  "author": {
+    "name": "SendinBlue",
+    "email": "developers@sendinblue.com",
+    "url": "https://www.sendinblue.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/sendinblue/APIv3-nodejs-library.git/issues"
+  },
+  "homepage": "https://github.com/sendinblue/APIv3-nodejs-library.git/",
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "superagent": "3.5.2"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
+  }
+}

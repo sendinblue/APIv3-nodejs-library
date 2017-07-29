@@ -1,0 +1,9 @@
+# SendinBlueApi.InlineResponse20015MessagesSent
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**campaignId** | **Number** | ID of the campaign which generated the event | 
+**eventTime** | **Date** | Date of the event | 
+
+
