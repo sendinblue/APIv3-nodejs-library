@@ -28,7 +28,7 @@ apiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new SendinBlueApi.TransactionalSMSApi();
 
 var opts = { 
-  'limit': 100, // Number | Number of documents per page
+  'limit': 50, // Number | Number of documents per page
   'startDate': new Date("2013-10-20"), // Date | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
   'endDate': new Date("2013-10-20"), // Date | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
   'offset': 0, // Number | Index of the first document of the page

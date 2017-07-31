@@ -252,7 +252,7 @@
     /**
      * Get your SMTP activity aggregated per day
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit Number of documents returned per page (default to 100)
+     * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document on the page (default to 0)
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD)
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
@@ -350,7 +350,7 @@
      * Get the list of SMTP templates
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false (default to false)
-     * @param {Number} opts.limit Number of documents returned per page (default to 500)
+     * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
      * @param {module:api/SMTPApi~getSmtpTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse20012}
