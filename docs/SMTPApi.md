@@ -260,7 +260,7 @@ apiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new SendinBlueApi.SMTPApi();
 
 var opts = { 
-  'limit': 100, // Number | Number of documents returned per page
+  'limit': 50, // Number | Number of documents returned per page
   'offset': 0, // Number | Index of the first document on the page
   'startDate': new Date("2013-10-20"), // Date | Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD)
   'endDate': new Date("2013-10-20"), // Date | Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
@@ -370,7 +370,7 @@ var apiInstance = new SendinBlueApi.SMTPApi();
 
 var opts = { 
   'templateStatus': false, // Boolean | Filter on the status of the template. Active = true, inactive = false
-  'limit': 500, // Number | Number of documents returned per page
+  'limit': 50, // Number | Number of documents returned per page
   'offset': 0 // Number | Index of the first document in the page
 };
 
