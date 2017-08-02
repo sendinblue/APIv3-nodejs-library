@@ -59,7 +59,7 @@
     /**
      * Get all the SMS activity (unaggregated events)
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit Number of documents per page (default to 100)
+     * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
