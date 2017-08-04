@@ -75,12 +75,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property testEmail (base name: "testEmail")', function() {
-      // uncomment below and update the code to test the property testEmail
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
-      //expect(instance).to.be();
-    });
-
     it('should have the property htmlContent (base name: "htmlContent")', function() {
       // uncomment below and update the code to test the property htmlContent
       //var instane = new SendinBlueApi.UpdateSmtpTemplate();

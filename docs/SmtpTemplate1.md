@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **tag** | **String** | Tag of the template | [optional] 
 **sender** | [**SmtptemplatestemplateIdSender**](SmtptemplatestemplateIdSender.md) |  | [optional] 
 **templateName** | **String** | Name of the template | [optional] 
-**testEmail** | **String** | Email address to send the test email message to | [optional] 
 **htmlContent** | **String** | Required if htmlUrl is empty. Body of the message (HTML must have more than 10 characters) | [optional] 
 **htmlUrl** | **String** | Required if htmlContent is empty. URL to the body of the email (HTML) | [optional] 
 **subject** | **String** | Subject of the email | [optional] 
