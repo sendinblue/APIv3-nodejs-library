@@ -81,9 +81,6 @@
       if (data.hasOwnProperty('templateName')) {
         obj['templateName'] = ApiClient.convertToType(data['templateName'], 'String');
       }
-      if (data.hasOwnProperty('testEmail')) {
-        obj['testEmail'] = ApiClient.convertToType(data['testEmail'], 'String');
-      }
       if (data.hasOwnProperty('htmlContent')) {
         obj['htmlContent'] = ApiClient.convertToType(data['htmlContent'], 'String');
       }
@@ -123,11 +120,6 @@
    * @member {String} templateName
    */
   exports.prototype['templateName'] = undefined;
-  /**
-   * Email address to send the test email message to
-   * @member {String} testEmail
-   */
-  exports.prototype['testEmail'] = undefined;
   /**
    * Required if htmlUrl is empty. Body of the message (HTML must have more than 10 characters)
    * @member {String} htmlContent
