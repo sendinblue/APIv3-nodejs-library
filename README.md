@@ -424,6 +424,7 @@ Class | Method | HTTP request | Description
  - [SendinBlueApi.SmsCampaignsRecipients](docs/SmsCampaignsRecipients.md)
  - [SendinBlueApi.SmtpTemplate](docs/SmtpTemplate.md)
  - [SendinBlueApi.SmtpTemplate1](docs/SmtpTemplate1.md)
+ - [SendinBlueApi.SmtpemailAttachment](docs/SmtpemailAttachment.md)
  - [SendinBlueApi.SmtpemailBcc](docs/SmtpemailBcc.md)
  - [SendinBlueApi.SmtpemailCc](docs/SmtpemailCc.md)
  - [SendinBlueApi.SmtpemailReplyTo](docs/SmtpemailReplyTo.md)

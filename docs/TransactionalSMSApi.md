@@ -52,7 +52,7 @@ apiInstance.getSmsEvents(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **Number**| Number of documents per page | [optional] [default to 100]
+ **limit** | **Number**| Number of documents per page | [optional] [default to 50]
  **startDate** | **Date**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report | [optional] 
  **endDate** | **Date**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report | [optional] 
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]

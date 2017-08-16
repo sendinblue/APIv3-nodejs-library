@@ -57,12 +57,6 @@
       //expect(instance).to.be.a(SendinBlueApi.SmtptemplatestemplateIdsendAttachment);
     });
 
-    it('should have the property url (base name: "url")', function() {
-      // uncomment below and update the code to test the property url
-      //var instane = new SendinBlueApi.SmtptemplatestemplateIdsendAttachment();
-      //expect(instance).to.be();
-    });
-
     it('should have the property content (base name: "content")', function() {
       // uncomment below and update the code to test the property content
       //var instane = new SendinBlueApi.SmtptemplatestemplateIdsendAttachment();

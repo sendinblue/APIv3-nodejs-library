@@ -56,6 +56,7 @@
 
 
 
+
   };
 
   /**
@@ -80,6 +81,9 @@
       }
       if (data.hasOwnProperty('replyTo')) {
         obj['replyTo'] = ApiClient.convertToType(data['replyTo'], 'String');
+      }
+      if (data.hasOwnProperty('attachmentUrl')) {
+        obj['attachmentUrl'] = ApiClient.convertToType(data['attachmentUrl'], 'String');
       }
       if (data.hasOwnProperty('attachment')) {
         obj['attachment'] = ApiClient.convertToType(data['attachment'], [SmtptemplatestemplateIdsendAttachment]);
@@ -115,7 +119,12 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * Pass the absolute URL (no local file) or the base64 content of the attachment. Name can be used in both cases to define the attachment name. It is mandatory in case of content. Extension allowed: gif, png, bmp, cgm, jpg, jpeg, tif, tiff, rtf, txt, css, shtml, html, htm, csv, zip, pdf, xml, ods, doc, docx, docm, ics, xls, xlsx, ppt, tar, and ez
+   * Absolute url of the attachment (no local file). Extension allowed: gif, png, bmp, cgm, jpg, jpeg, tif, tiff, rtf, txt, css, shtml, html, htm, csv, zip, pdf, xml, ods, doc, docx, docm, ics, xls, xlsx, ppt, tar, and ez
+   * @member {String} attachmentUrl
+   */
+  exports.prototype['attachmentUrl'] = undefined;
+  /**
+   * Pass the base64 content of the attachment. Extension allowed: gif, png, bmp, cgm, jpg, jpeg, tif, tiff, rtf, txt, css, shtml, html, htm, csv, zip, pdf, xml, ods, doc, docx, docm, ics, xls, xlsx, ppt, tar, and ez
    * @member {Array.<module:model/SmtptemplatestemplateIdsendAttachment>} attachment
    */
   exports.prototype['attachment'] = undefined;

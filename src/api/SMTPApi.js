@@ -349,7 +349,7 @@
     /**
      * Get the list of SMTP templates
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false (default to false)
+     * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
      * @param {module:api/SMTPApi~getSmtpTemplatesCallback} callback The callback function, accepting three arguments: error, data, response

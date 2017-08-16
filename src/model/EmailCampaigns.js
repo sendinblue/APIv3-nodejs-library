@@ -194,7 +194,7 @@
    */
   exports.prototype['attachmentUrl'] = undefined;
   /**
-   * Use true to embedded the images in your email. Final size of the email should be less than 5MB. Campaigns with embedded images can not be sent to more than 5000 contacts
+   * Use true to embedded the images in your email. Final size of the email should be less than 4MB. Campaigns with embedded images can not be sent to more than 5000 contacts
    * @member {Boolean} inlineImageActivation
    * @default false
    */
