@@ -26,7 +26,7 @@
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.SmtptemplatestemplateIdsendAttachment = factory(root.SendinBlueApi.ApiClient);
+    root.SendinBlueApi.SmtpemailAttachment = factory(root.SendinBlueApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,14 +35,14 @@
 
 
   /**
-   * The SmtptemplatestemplateIdsendAttachment model module.
-   * @module model/SmtptemplatestemplateIdsendAttachment
+   * The SmtpemailAttachment model module.
+   * @module model/SmtpemailAttachment
    * @version 3.0.0
    */
 
   /**
-   * Constructs a new <code>SmtptemplatestemplateIdsendAttachment</code>.
-   * @alias module:model/SmtptemplatestemplateIdsendAttachment
+   * Constructs a new <code>SmtpemailAttachment</code>.
+   * @alias module:model/SmtpemailAttachment
    * @class
    */
   var exports = function() {
@@ -50,19 +50,23 @@
 
 
 
+
   };
 
   /**
-   * Constructs a <code>SmtptemplatestemplateIdsendAttachment</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SmtpemailAttachment</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SmtptemplatestemplateIdsendAttachment} obj Optional instance to populate.
-   * @return {module:model/SmtptemplatestemplateIdsendAttachment} The populated <code>SmtptemplatestemplateIdsendAttachment</code> instance.
+   * @param {module:model/SmtpemailAttachment} obj Optional instance to populate.
+   * @return {module:model/SmtpemailAttachment} The populated <code>SmtpemailAttachment</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('url')) {
+        obj['url'] = ApiClient.convertToType(data['url'], 'String');
+      }
       if (data.hasOwnProperty('content')) {
         obj['content'] = ApiClient.convertToType(data['content'], 'Blob');
       }
@@ -73,6 +77,11 @@
     return obj;
   }
 
+  /**
+   * Absolute url of the attachment (no local file).
+   * @member {String} url
+   */
+  exports.prototype['url'] = undefined;
   /**
    * Base64 encoded chunk data of the attachment generated on the fly
    * @member {Blob} content

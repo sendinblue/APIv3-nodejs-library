@@ -81,6 +81,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property attachmentUrl (base name: "attachmentUrl")', function() {
+      // uncomment below and update the code to test the property attachmentUrl
+      //var instane = new SendinBlueApi.SendEmail();
+      //expect(instance).to.be();
+    });
+
     it('should have the property attachment (base name: "attachment")', function() {
       // uncomment below and update the code to test the property attachment
       //var instane = new SendinBlueApi.SendEmail();

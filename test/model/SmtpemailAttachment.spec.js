@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.SendEmail1();
+    instance = new SendinBlueApi.SmtpemailAttachment();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,58 +50,28 @@
       object[property] = value;
   }
 
-  describe('SendEmail1', function() {
-    it('should create an instance of SendEmail1', function() {
-      // uncomment below and update the code to test SendEmail1
-      //var instane = new SendinBlueApi.SendEmail1();
-      //expect(instance).to.be.a(SendinBlueApi.SendEmail1);
+  describe('SmtpemailAttachment', function() {
+    it('should create an instance of SmtpemailAttachment', function() {
+      // uncomment below and update the code to test SmtpemailAttachment
+      //var instane = new SendinBlueApi.SmtpemailAttachment();
+      //expect(instance).to.be.a(SendinBlueApi.SmtpemailAttachment);
     });
 
-    it('should have the property emailTo (base name: "emailTo")', function() {
-      // uncomment below and update the code to test the property emailTo
-      //var instane = new SendinBlueApi.SendEmail1();
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
+      //var instane = new SendinBlueApi.SmtpemailAttachment();
       //expect(instance).to.be();
     });
 
-    it('should have the property emailBcc (base name: "emailBcc")', function() {
-      // uncomment below and update the code to test the property emailBcc
-      //var instane = new SendinBlueApi.SendEmail1();
+    it('should have the property content (base name: "content")', function() {
+      // uncomment below and update the code to test the property content
+      //var instane = new SendinBlueApi.SmtpemailAttachment();
       //expect(instance).to.be();
     });
 
-    it('should have the property emailCc (base name: "emailCc")', function() {
-      // uncomment below and update the code to test the property emailCc
-      //var instane = new SendinBlueApi.SendEmail1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property replyTo (base name: "replyTo")', function() {
-      // uncomment below and update the code to test the property replyTo
-      //var instane = new SendinBlueApi.SendEmail1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property attachmentUrl (base name: "attachmentUrl")', function() {
-      // uncomment below and update the code to test the property attachmentUrl
-      //var instane = new SendinBlueApi.SendEmail1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property attachment (base name: "attachment")', function() {
-      // uncomment below and update the code to test the property attachment
-      //var instane = new SendinBlueApi.SendEmail1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property headers (base name: "headers")', function() {
-      // uncomment below and update the code to test the property headers
-      //var instane = new SendinBlueApi.SendEmail1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property attributes (base name: "attributes")', function() {
-      // uncomment below and update the code to test the property attributes
-      //var instane = new SendinBlueApi.SendEmail1();
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new SendinBlueApi.SmtpemailAttachment();
       //expect(instance).to.be();
     });
 

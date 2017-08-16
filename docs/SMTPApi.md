@@ -282,7 +282,7 @@ apiInstance.getSmtpReport(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **Number**| Number of documents returned per page | [optional] [default to 100]
+ **limit** | **Number**| Number of documents returned per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document on the page | [optional] [default to 0]
  **startDate** | **Date**| Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD) | [optional] 
  **endDate** | **Date**| Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD) | [optional] 
@@ -369,7 +369,7 @@ apiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new SendinBlueApi.SMTPApi();
 
 var opts = { 
-  'templateStatus': false, // Boolean | Filter on the status of the template. Active = true, inactive = false
+  'templateStatus': true, // Boolean | Filter on the status of the template. Active = true, inactive = false
   'limit': 50, // Number | Number of documents returned per page
   'offset': 0 // Number | Index of the first document in the page
 };
@@ -388,8 +388,8 @@ apiInstance.getSmtpTemplates(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateStatus** | **Boolean**| Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false | [optional] [default to false]
- **limit** | **Number**| Number of documents returned per page | [optional] [default to 500]
+ **templateStatus** | **Boolean**| Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false | [optional] 
+ **limit** | **Number**| Number of documents returned per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document in the page | [optional] [default to 0]
 
 ### Return type

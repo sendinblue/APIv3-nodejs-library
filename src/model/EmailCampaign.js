@@ -187,7 +187,7 @@
    */
   exports.prototype['attachmentUrl'] = undefined;
   /**
-   * Status of inline image. inlineImageActivation = false means image can’t be embedded, & inlineImageActivation = true means image can be embedded, in the email. You cannot send a campaign of more than 5MB with images embedded in the email. Campaigns with the images embedded in the email must be sent to less than 5000 contacts.
+   * Status of inline image. inlineImageActivation = false means image can’t be embedded, & inlineImageActivation = true means image can be embedded, in the email. You cannot send a campaign of more than 4MB with images embedded in the email. Campaigns with the images embedded in the email must be sent to less than 5000 contacts.
    * @member {Boolean} inlineImageActivation
    * @default false
    */

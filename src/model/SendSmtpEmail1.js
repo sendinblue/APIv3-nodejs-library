@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SmtpemailBcc', 'model/SmtpemailCc', 'model/SmtpemailReplyTo', 'model/SmtpemailSender', 'model/SmtpemailTo', 'model/SmtptemplatestemplateIdsendAttachment'], factory);
+    define(['ApiClient', 'model/SmtpemailAttachment', 'model/SmtpemailBcc', 'model/SmtpemailCc', 'model/SmtpemailReplyTo', 'model/SmtpemailSender', 'model/SmtpemailTo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./SmtpemailBcc'), require('./SmtpemailCc'), require('./SmtpemailReplyTo'), require('./SmtpemailSender'), require('./SmtpemailTo'), require('./SmtptemplatestemplateIdsendAttachment'));
+    module.exports = factory(require('../ApiClient'), require('./SmtpemailAttachment'), require('./SmtpemailBcc'), require('./SmtpemailCc'), require('./SmtpemailReplyTo'), require('./SmtpemailSender'), require('./SmtpemailTo'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.SendSmtpEmail1 = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SmtpemailBcc, root.SendinBlueApi.SmtpemailCc, root.SendinBlueApi.SmtpemailReplyTo, root.SendinBlueApi.SmtpemailSender, root.SendinBlueApi.SmtpemailTo, root.SendinBlueApi.SmtptemplatestemplateIdsendAttachment);
+    root.SendinBlueApi.SendSmtpEmail1 = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SmtpemailAttachment, root.SendinBlueApi.SmtpemailBcc, root.SendinBlueApi.SmtpemailCc, root.SendinBlueApi.SmtpemailReplyTo, root.SendinBlueApi.SmtpemailSender, root.SendinBlueApi.SmtpemailTo);
   }
-}(this, function(ApiClient, SmtpemailBcc, SmtpemailCc, SmtpemailReplyTo, SmtpemailSender, SmtpemailTo, SmtptemplatestemplateIdsendAttachment) {
+}(this, function(ApiClient, SmtpemailAttachment, SmtpemailBcc, SmtpemailCc, SmtpemailReplyTo, SmtpemailSender, SmtpemailTo) {
   'use strict';
 
 
@@ -99,7 +99,7 @@
         obj['replyTo'] = SmtpemailReplyTo.constructFromObject(data['replyTo']);
       }
       if (data.hasOwnProperty('attachment')) {
-        obj['attachment'] = ApiClient.convertToType(data['attachment'], [SmtptemplatestemplateIdsendAttachment]);
+        obj['attachment'] = ApiClient.convertToType(data['attachment'], [SmtpemailAttachment]);
       }
       if (data.hasOwnProperty('headers')) {
         obj['headers'] = ApiClient.convertToType(data['headers'], {'String': 'String'});
@@ -148,7 +148,7 @@
   exports.prototype['replyTo'] = undefined;
   /**
    * Pass the absolute URL (no local file) or the base64 content of the attachment. Name can be used in both cases to define the attachment name. It is mandatory in case of content. Extension allowed: gif, png, bmp, cgm, jpg, jpeg, tif, tiff, rtf, txt, css, shtml, html, htm, csv, zip, pdf, xml, ods, doc, docx, docm, ics, xls, xlsx, ppt, tar, and ez
-   * @member {Array.<module:model/SmtptemplatestemplateIdsendAttachment>} attachment
+   * @member {Array.<module:model/SmtpemailAttachment>} attachment
    */
   exports.prototype['attachment'] = undefined;
   /**
