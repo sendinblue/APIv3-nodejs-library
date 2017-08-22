@@ -93,6 +93,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property ip (base name: "ip")', function() {
+      // uncomment below and update the code to test the property ip
+      //var instane = new SendinBlueApi.InlineResponse20011Events();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

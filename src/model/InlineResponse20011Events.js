@@ -60,6 +60,7 @@
     _this['event'] = event;
     _this['reason'] = reason;
     _this['tag'] = tag;
+
   };
 
   /**
@@ -90,6 +91,9 @@
       }
       if (data.hasOwnProperty('tag')) {
         obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
+      }
+      if (data.hasOwnProperty('ip')) {
+        obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
       }
     }
     return obj;
@@ -125,6 +129,11 @@
    * @member {String} tag
    */
   exports.prototype['tag'] = undefined;
+  /**
+   * IP from which the user has opened the email or clicked on the link (only availble if the event is opened or clicks)
+   * @member {String} ip
+   */
+  exports.prototype['ip'] = undefined;
 
 
   /**
