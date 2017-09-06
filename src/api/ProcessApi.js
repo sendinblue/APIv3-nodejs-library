@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2007', 'model/InlineResponse2007Processes', 'model/InlineResponse403'], factory);
+    define(['ApiClient', 'model/ErrorModel', 'model/GetProcess', 'model/GetProcesses'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse2007'), require('../model/InlineResponse2007Processes'), require('../model/InlineResponse403'));
+    module.exports = factory(require('../ApiClient'), require('../model/ErrorModel'), require('../model/GetProcess'), require('../model/GetProcesses'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.ProcessApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2007, root.SendinBlueApi.InlineResponse2007Processes, root.SendinBlueApi.InlineResponse403);
+    root.SendinBlueApi.ProcessApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetProcess, root.SendinBlueApi.GetProcesses);
   }
-}(this, function(ApiClient, InlineResponse2007, InlineResponse2007Processes, InlineResponse403) {
+}(this, function(ApiClient, ErrorModel, GetProcess, GetProcesses) {
   'use strict';
 
   /**
@@ -48,21 +48,13 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the getProcess operation.
-     * @callback module:api/ProcessApi~getProcessCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007Processes} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Return the informations for a process
      * @param {String} processId Id of the process
-     * @param {module:api/ProcessApi~getProcessCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2007Processes}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetProcess} and HTTP response
      */
-    this.getProcess = function(processId, callback) {
+    this.getProcessWithHttpInfo = function(processId) {
       var postBody = null;
 
       // verify the required parameter 'processId' is set
@@ -84,32 +76,36 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2007Processes;
+      var returnType = GetProcess;
 
       return this.apiClient.callApi(
         '/processes/{processId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getProcesses operation.
-     * @callback module:api/ProcessApi~getProcessesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Return the informations for a process
+     * @param {String} processId Id of the process
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetProcess}
      */
+    this.getProcess = function(processId) {
+      return this.getProcessWithHttpInfo(processId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Return all the processes for your account
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number limitation for the result returned (default to 10)
      * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
-     * @param {module:api/ProcessApi~getProcessesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2007}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetProcesses} and HTTP response
      */
-    this.getProcesses = function(opts, callback) {
+    this.getProcessesWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -128,13 +124,27 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2007;
+      var returnType = GetProcesses;
 
       return this.apiClient.callApi(
         '/processes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Return all the processes for your account
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit Number limitation for the result returned (default to 10)
+     * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetProcesses}
+     */
+    this.getProcesses = function(opts) {
+      return this.getProcessesWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

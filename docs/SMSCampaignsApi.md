@@ -18,43 +18,42 @@ Method | HTTP request | Description
 
 <a name="createSMSCampaign"></a>
 # **createSMSCampaign**
-> InlineResponse201 createSMSCampaign(createSmsCampaign)
+> CreateModel createSMSCampaign(createSmsCampaign)
 
 Creates a SMS campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMSCampaignsApi();
 
-var createSmsCampaign = new SendinBlueApi.CreateSmsCampaign1(); // CreateSmsCampaign1 | Values to create an SMS Campaign
+var createSmsCampaign = new SendinBlueApi.CreateSmsCampaign(); // CreateSmsCampaign | Values to create an SMS Campaign
 
+apiInstance.createSMSCampaign(createSmsCampaign).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createSMSCampaign(createSmsCampaign, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createSmsCampaign** | [**CreateSmsCampaign1**](CreateSmsCampaign1.md)| Values to create an SMS Campaign | 
+ **createSmsCampaign** | [**CreateSmsCampaign**](CreateSmsCampaign.md)| Values to create an SMS Campaign | 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateModel**](CreateModel.md)
 
 ### Authorization
 
@@ -73,26 +72,25 @@ Delete the SMS campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMSCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | id of the SMS campaign
 
+apiInstance.deleteSMSCampaigns(campaignId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteSMSCampaigns(campaignId, callback);
 ```
 
 ### Parameters
@@ -116,18 +114,20 @@ null (empty response body)
 
 <a name="getSMSCampaigns"></a>
 # **getSMSCampaigns**
-> InlineResponse20021 getSMSCampaigns(opts)
+> GetSmsCampaigns getSMSCampaigns(opts)
 
 Returns the informations for all your created SMS campaigns
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMSCampaignsApi();
 
@@ -136,15 +136,12 @@ var opts = {
   'limit': 500, // Number | Number limitation for the result returned
   'offset': 0 // Number | Beginning point in the list to retrieve from.
 };
+apiInstance.getSMSCampaigns(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getSMSCampaigns(opts, callback);
 ```
 
 ### Parameters
@@ -157,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**GetSmsCampaigns**](GetSmsCampaigns.md)
 
 ### Authorization
 
@@ -170,34 +167,33 @@ Name | Type | Description  | Notes
 
 <a name="getSmsCampaign"></a>
 # **getSmsCampaign**
-> InlineResponse20021Campaigns getSmsCampaign(campaignId, getSmsCampaign)
+> GetSmsCampaign getSmsCampaign(campaignId, getSmsCampaign)
 
 Get a SMS campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMSCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | id of the SMS campaign
 
-var getSmsCampaign = new SendinBlueApi.GetSmsCampaign1(); // GetSmsCampaign1 | Values to update an SMS Campaign
+var getSmsCampaign = new SendinBlueApi.GetSmsCampaign(); // GetSmsCampaign | Values to update an SMS Campaign
 
+apiInstance.getSmsCampaign(campaignId, getSmsCampaign).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getSmsCampaign(campaignId, getSmsCampaign, callback);
 ```
 
 ### Parameters
@@ -205,11 +201,11 @@ apiInstance.getSmsCampaign(campaignId, getSmsCampaign, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| id of the SMS campaign | 
- **getSmsCampaign** | [**GetSmsCampaign1**](GetSmsCampaign1.md)| Values to update an SMS Campaign | 
+ **getSmsCampaign** | [**GetSmsCampaign**](GetSmsCampaign.md)| Values to update an SMS Campaign | 
 
 ### Return type
 
-[**InlineResponse20021Campaigns**](InlineResponse20021Campaigns.md)
+[**GetSmsCampaign**](GetSmsCampaign.md)
 
 ### Authorization
 
@@ -222,7 +218,7 @@ Name | Type | Description  | Notes
 
 <a name="requestSMSRecipientExport"></a>
 # **requestSMSRecipientExport**
-> InlineResponse202 requestSMSRecipientExport(campaignId, opts)
+> CreatedProcessId requestSMSRecipientExport(campaignId, opts)
 
 Exports the recipients of the specified campaign.
 
@@ -230,29 +226,28 @@ It returns the background process ID which on completion calls the notify URL th
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMSCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | id of the campaign
 
 var opts = { 
-  'recipientExport': new SendinBlueApi.RecipientExport1() // RecipientExport1 | Values to send for a recipient export request
+  'recipientExport': new SendinBlueApi.RequestSMSRecipientExport() // RequestSMSRecipientExport | Values to send for a recipient export request
 };
+apiInstance.requestSMSRecipientExport(campaignId, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.requestSMSRecipientExport(campaignId, opts, callback);
 ```
 
 ### Parameters
@@ -260,11 +255,11 @@ apiInstance.requestSMSRecipientExport(campaignId, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| id of the campaign | 
- **recipientExport** | [**RecipientExport1**](RecipientExport1.md)| Values to send for a recipient export request | [optional] 
+ **recipientExport** | [**RequestSMSRecipientExport**](RequestSMSRecipientExport.md)| Values to send for a recipient export request | [optional] 
 
 ### Return type
 
-[**InlineResponse202**](InlineResponse202.md)
+[**CreatedProcessId**](CreatedProcessId.md)
 
 ### Authorization
 
@@ -283,26 +278,25 @@ Send your SMS campaign immediately
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMSCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | id of the campaign
 
+apiInstance.sendSMSCampaignNow(campaignId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.sendSMSCampaignNow(campaignId, callback);
 ```
 
 ### Parameters
@@ -334,28 +328,27 @@ Send report of Sent and Archived campaign, to the specified email addresses, wit
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMSCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | id of the campaign
 
-var sendReport = new SendinBlueApi.SendReport2(); // SendReport2 | Values for send a report
+var sendReport = new SendinBlueApi.SendReport(); // SendReport | Values for send a report
 
+apiInstance.sendSMSReport(campaignId, sendReport).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.sendSMSReport(campaignId, sendReport, callback);
 ```
 
 ### Parameters
@@ -363,7 +356,7 @@ apiInstance.sendSMSReport(campaignId, sendReport, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| id of the campaign | 
- **sendReport** | [**SendReport2**](SendReport2.md)| Values for send a report | 
+ **sendReport** | [**SendReport**](SendReport.md)| Values for send a report | 
 
 ### Return type
 
@@ -386,28 +379,27 @@ Send an SMS
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMSCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the SMS campaign
 
-var sendTestSms = new SendinBlueApi.SendTestSms1(); // SendTestSms1 | Mobile number to which send the test
+var sendTestSms = new SendinBlueApi.SendTestSms(); // SendTestSms | Mobile number to which send the test
 
+apiInstance.sendTestSms(campaignId, sendTestSms).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.sendTestSms(campaignId, sendTestSms, callback);
 ```
 
 ### Parameters
@@ -415,7 +407,7 @@ apiInstance.sendTestSms(campaignId, sendTestSms, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| Id of the SMS campaign | 
- **sendTestSms** | [**SendTestSms1**](SendTestSms1.md)| Mobile number to which send the test | 
+ **sendTestSms** | [**SendTestSms**](SendTestSms.md)| Mobile number to which send the test | 
 
 ### Return type
 
@@ -438,28 +430,27 @@ Update the campaign status
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMSCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | id of the campaign
 
-var status = new SendinBlueApi.Status1(); // Status1 | Status of the campaign.
+var status = new SendinBlueApi.UpdateCampaignStatus(); // UpdateCampaignStatus | Status of the campaign.
 
+apiInstance.updateSMSCampaignStatus(campaignId, status).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateSMSCampaignStatus(campaignId, status, callback);
 ```
 
 ### Parameters
@@ -467,7 +458,7 @@ apiInstance.updateSMSCampaignStatus(campaignId, status, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| id of the campaign | 
- **status** | [**Status1**](Status1.md)| Status of the campaign. | 
+ **status** | [**UpdateCampaignStatus**](UpdateCampaignStatus.md)| Status of the campaign. | 
 
 ### Return type
 
@@ -490,28 +481,27 @@ Updates a SMS campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMSCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | id of the SMS campaign
 
-var updateSmsCampaign = new SendinBlueApi.UpdateSmsCampaign1(); // UpdateSmsCampaign1 | Values to update an SMS Campaign
+var updateSmsCampaign = new SendinBlueApi.UpdateSmsCampaign(); // UpdateSmsCampaign | Values to update an SMS Campaign
 
+apiInstance.updateSmsCampaign(campaignId, updateSmsCampaign).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateSmsCampaign(campaignId, updateSmsCampaign, callback);
 ```
 
 ### Parameters
@@ -519,7 +509,7 @@ apiInstance.updateSmsCampaign(campaignId, updateSmsCampaign, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| id of the SMS campaign | 
- **updateSmsCampaign** | [**UpdateSmsCampaign1**](UpdateSmsCampaign1.md)| Values to update an SMS Campaign | 
+ **updateSmsCampaign** | [**UpdateSmsCampaign**](UpdateSmsCampaign.md)| Values to update an SMS Campaign | 
 
 ### Return type
 

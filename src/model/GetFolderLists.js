@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20018Lists'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20018Lists'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetFolderLists = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20018Lists);
+    root.SendinBlueApi.GetFolderLists = factory(root.SendinBlueApi.ApiClient);
   }
-}(this, function(ApiClient, InlineResponse20018Lists) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -44,7 +44,7 @@
    * Constructs a new <code>GetFolderLists</code>.
    * @alias module:model/GetFolderLists
    * @class
-   * @param lists {Array.<module:model/InlineResponse20018Lists>} 
+   * @param lists {Array.<Object>} 
    * @param count {Number} Number of lists in the folder
    */
   var exports = function(lists, count) {
@@ -66,7 +66,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('lists')) {
-        obj['lists'] = ApiClient.convertToType(data['lists'], [InlineResponse20018Lists]);
+        obj['lists'] = ApiClient.convertToType(data['lists'], [Object]);
       }
       if (data.hasOwnProperty('count')) {
         obj['count'] = ApiClient.convertToType(data['count'], 'Number');
@@ -76,7 +76,7 @@
   }
 
   /**
-   * @member {Array.<module:model/InlineResponse20018Lists>} lists
+   * @member {Array.<Object>} lists
    */
   exports.prototype['lists'] = undefined;
   /**

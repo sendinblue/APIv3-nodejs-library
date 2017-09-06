@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **category** | **String** | Attribute categorisation. | 
 **name** | **String** | Name of the attribute | 
 **value** | **String** | Value of the attribute | 
-**enumemaration** | [**[ContactsattributesEnumemaration]**](ContactsattributesEnumemaration.md) | Values that the attribute can take. Use only if the attribute&#39;s category is category | [optional] 
+**enumemaration** | [**[CreateAttributeEnumemaration]**](CreateAttributeEnumemaration.md) | Values that the attribute can take. Use only if the attribute&#39;s category is category | [optional] 
 **type** | **String** | Type of the attribute | [optional] 
 
 

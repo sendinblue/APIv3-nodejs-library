@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse200Address', 'model/InlineResponse200MarketingAutomation', 'model/InlineResponse200Plan', 'model/InlineResponse200Relay'], factory);
+    define(['ApiClient', 'model/GetAccountMarketingAutomation', 'model/GetAccountPlan', 'model/GetAccountRelay', 'model/GetExtendedClient', 'model/GetExtendedClientAddress'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse200Address'), require('./InlineResponse200MarketingAutomation'), require('./InlineResponse200Plan'), require('./InlineResponse200Relay'));
+    module.exports = factory(require('../ApiClient'), require('./GetAccountMarketingAutomation'), require('./GetAccountPlan'), require('./GetAccountRelay'), require('./GetExtendedClient'), require('./GetExtendedClientAddress'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetAccount = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse200Address, root.SendinBlueApi.InlineResponse200MarketingAutomation, root.SendinBlueApi.InlineResponse200Plan, root.SendinBlueApi.InlineResponse200Relay);
+    root.SendinBlueApi.GetAccount = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetAccountMarketingAutomation, root.SendinBlueApi.GetAccountPlan, root.SendinBlueApi.GetAccountRelay, root.SendinBlueApi.GetExtendedClient, root.SendinBlueApi.GetExtendedClientAddress);
   }
-}(this, function(ApiClient, InlineResponse200Address, InlineResponse200MarketingAutomation, InlineResponse200Plan, InlineResponse200Relay) {
+}(this, function(ApiClient, GetAccountMarketingAutomation, GetAccountPlan, GetAccountRelay, GetExtendedClient, GetExtendedClientAddress) {
   'use strict';
 
 
@@ -44,20 +44,17 @@
    * Constructs a new <code>GetAccount</code>.
    * @alias module:model/GetAccount
    * @class
+   * @implements module:model/GetExtendedClient
    * @param email {String} Login Email
    * @param firstName {String} First Name
    * @param lastName {String} Last Name
    * @param companyName {String} Name of the company
-   * @param plan {Array.<module:model/InlineResponse200Plan>} Information about your plans and credits
+   * @param plan {Array.<module:model/GetAccountPlan>} Information about your plans and credits
    */
   var exports = function(email, firstName, lastName, companyName, plan) {
     var _this = this;
 
-    _this['email'] = email;
-    _this['firstName'] = firstName;
-    _this['lastName'] = lastName;
-    _this['companyName'] = companyName;
-
+    GetExtendedClient.call(_this, email, firstName, lastName, companyName);
     _this['plan'] = plan;
 
 
@@ -74,71 +71,63 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('email')) {
-        obj['email'] = ApiClient.convertToType(data['email'], 'String');
-      }
-      if (data.hasOwnProperty('firstName')) {
-        obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
-      }
-      if (data.hasOwnProperty('lastName')) {
-        obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
-      }
-      if (data.hasOwnProperty('companyName')) {
-        obj['companyName'] = ApiClient.convertToType(data['companyName'], 'String');
-      }
-      if (data.hasOwnProperty('address')) {
-        obj['address'] = InlineResponse200Address.constructFromObject(data['address']);
-      }
+      GetExtendedClient.constructFromObject(data, obj);
       if (data.hasOwnProperty('plan')) {
-        obj['plan'] = ApiClient.convertToType(data['plan'], [InlineResponse200Plan]);
+        obj['plan'] = ApiClient.convertToType(data['plan'], [GetAccountPlan]);
       }
       if (data.hasOwnProperty('relay')) {
-        obj['relay'] = InlineResponse200Relay.constructFromObject(data['relay']);
+        obj['relay'] = GetAccountRelay.constructFromObject(data['relay']);
       }
       if (data.hasOwnProperty('marketingAutomation')) {
-        obj['marketingAutomation'] = InlineResponse200MarketingAutomation.constructFromObject(data['marketingAutomation']);
+        obj['marketingAutomation'] = GetAccountMarketingAutomation.constructFromObject(data['marketingAutomation']);
       }
     }
     return obj;
   }
 
   /**
+   * Information about your plans and credits
+   * @member {Array.<module:model/GetAccountPlan>} plan
+   */
+  exports.prototype['plan'] = undefined;
+  /**
+   * @member {module:model/GetAccountRelay} relay
+   */
+  exports.prototype['relay'] = undefined;
+  /**
+   * @member {module:model/GetAccountMarketingAutomation} marketingAutomation
+   */
+  exports.prototype['marketingAutomation'] = undefined;
+
+  // Implement GetExtendedClient interface:
+  /**
    * Login Email
    * @member {String} email
    */
-  exports.prototype['email'] = undefined;
+exports.prototype['email'] = undefined;
+
   /**
    * First Name
    * @member {String} firstName
    */
-  exports.prototype['firstName'] = undefined;
+exports.prototype['firstName'] = undefined;
+
   /**
    * Last Name
    * @member {String} lastName
    */
-  exports.prototype['lastName'] = undefined;
+exports.prototype['lastName'] = undefined;
+
   /**
    * Name of the company
    * @member {String} companyName
    */
-  exports.prototype['companyName'] = undefined;
+exports.prototype['companyName'] = undefined;
+
   /**
-   * @member {module:model/InlineResponse200Address} address
+   * @member {module:model/GetExtendedClientAddress} address
    */
-  exports.prototype['address'] = undefined;
-  /**
-   * Information about your plans and credits
-   * @member {Array.<module:model/InlineResponse200Plan>} plan
-   */
-  exports.prototype['plan'] = undefined;
-  /**
-   * @member {module:model/InlineResponse200Relay} relay
-   */
-  exports.prototype['relay'] = undefined;
-  /**
-   * @member {module:model/InlineResponse200MarketingAutomation} marketingAutomation
-   */
-  exports.prototype['marketingAutomation'] = undefined;
+exports.prototype['address'] = undefined;
 
 
 

@@ -18,43 +18,42 @@ Method | HTTP request | Description
 
 <a name="createEmailCampaign"></a>
 # **createEmailCampaign**
-> InlineResponse201 createEmailCampaign(emailCampaigns)
+> CreateModel createEmailCampaign(emailCampaigns)
 
 Create an email campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
-var emailCampaigns = new SendinBlueApi.EmailCampaigns(); // EmailCampaigns | Values to create a campaign
+var emailCampaigns = new SendinBlueApi.CreateEmailCampaign(); // CreateEmailCampaign | Values to create a campaign
 
+apiInstance.createEmailCampaign(emailCampaigns).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createEmailCampaign(emailCampaigns, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **emailCampaigns** | [**EmailCampaigns**](EmailCampaigns.md)| Values to create a campaign | 
+ **emailCampaigns** | [**CreateEmailCampaign**](CreateEmailCampaign.md)| Values to create a campaign | 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateModel**](CreateModel.md)
 
 ### Authorization
 
@@ -73,26 +72,25 @@ Delete an email campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | id of the campaign
 
+apiInstance.deleteEmailCampaigns(campaignId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteEmailCampaigns(campaignId, callback);
 ```
 
 ### Parameters
@@ -116,35 +114,34 @@ null (empty response body)
 
 <a name="emailExportRecipients"></a>
 # **emailExportRecipients**
-> InlineResponse202 emailExportRecipients(campaignId, opts)
+> CreatedProcessId emailExportRecipients(campaignId, opts)
 
 Export the recipients of a campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
 var opts = { 
-  'recipientExport': new SendinBlueApi.RecipientExport() // RecipientExport | Values to send for a recipient export request
+  'recipientExport': new SendinBlueApi.EmailExportRecipients() // EmailExportRecipients | Values to send for a recipient export request
 };
+apiInstance.emailExportRecipients(campaignId, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.emailExportRecipients(campaignId, opts, callback);
 ```
 
 ### Parameters
@@ -152,11 +149,11 @@ apiInstance.emailExportRecipients(campaignId, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| Id of the campaign | 
- **recipientExport** | [**RecipientExport**](RecipientExport.md)| Values to send for a recipient export request | [optional] 
+ **recipientExport** | [**EmailExportRecipients**](EmailExportRecipients.md)| Values to send for a recipient export request | [optional] 
 
 ### Return type
 
-[**InlineResponse202**](InlineResponse202.md)
+[**CreatedProcessId**](CreatedProcessId.md)
 
 ### Authorization
 
@@ -169,32 +166,31 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCampaign"></a>
 # **getEmailCampaign**
-> InlineResponse2008Campaigns getEmailCampaign(campaignId)
+> GetEmailCampaign getEmailCampaign(campaignId)
 
 Get campaign informations
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
+apiInstance.getEmailCampaign(campaignId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getEmailCampaign(campaignId, callback);
 ```
 
 ### Parameters
@@ -205,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008Campaigns**](InlineResponse2008Campaigns.md)
+[**GetEmailCampaign**](GetEmailCampaign.md)
 
 ### Authorization
 
@@ -218,18 +214,20 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCampaigns"></a>
 # **getEmailCampaigns**
-> InlineResponse2008 getEmailCampaigns(opts)
+> GetEmailCampaigns getEmailCampaigns(opts)
 
 Return all your created campaigns
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
@@ -239,15 +237,12 @@ var opts = {
   'limit': 500, // Number | Number of documents per page
   'offset': 0 // Number | Index of the first document in the page
 };
+apiInstance.getEmailCampaigns(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getEmailCampaigns(opts, callback);
 ```
 
 ### Parameters
@@ -261,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**GetEmailCampaigns**](GetEmailCampaigns.md)
 
 ### Authorization
 
@@ -280,26 +275,25 @@ Send an email campaign id of the campaign immediately
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
+apiInstance.sendEmailCampaignNow(campaignId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.sendEmailCampaignNow(campaignId, callback);
 ```
 
 ### Parameters
@@ -331,28 +325,27 @@ A PDF will be sent to the specified email addresses
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
-var sendReport = new SendinBlueApi.SendReport1(); // SendReport1 | Values for send a report
+var sendReport = new SendinBlueApi.SendReport(); // SendReport | Values for send a report
 
+apiInstance.sendReport(campaignId, sendReport).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.sendReport(campaignId, sendReport, callback);
 ```
 
 ### Parameters
@@ -360,7 +353,7 @@ apiInstance.sendReport(campaignId, sendReport, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| Id of the campaign | 
- **sendReport** | [**SendReport1**](SendReport1.md)| Values for send a report | 
+ **sendReport** | [**SendReport**](SendReport.md)| Values for send a report | 
 
 ### Return type
 
@@ -383,28 +376,27 @@ Send an email campaign to your test list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
-var emailTo = new SendinBlueApi.EmailTo(); // EmailTo | 
+var emailTo = new SendinBlueApi.SendTestEmail(); // SendTestEmail | 
 
+apiInstance.sendTestEmail(campaignId, emailTo).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.sendTestEmail(campaignId, emailTo, callback);
 ```
 
 ### Parameters
@@ -412,7 +404,7 @@ apiInstance.sendTestEmail(campaignId, emailTo, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| Id of the campaign | 
- **emailTo** | [**EmailTo**](EmailTo.md)|  | 
+ **emailTo** | [**SendTestEmail**](SendTestEmail.md)|  | 
 
 ### Return type
 
@@ -435,28 +427,27 @@ Update a campaign status
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
-var status = new SendinBlueApi.Status(); // Status | Status of the campaign
+var status = new SendinBlueApi.UpdateCampaignStatus(); // UpdateCampaignStatus | Status of the campaign
 
+apiInstance.updateCampaignStatus(campaignId, status).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateCampaignStatus(campaignId, status, callback);
 ```
 
 ### Parameters
@@ -464,7 +455,7 @@ apiInstance.updateCampaignStatus(campaignId, status, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| Id of the campaign | 
- **status** | [**Status**](Status.md)| Status of the campaign | 
+ **status** | [**UpdateCampaignStatus**](UpdateCampaignStatus.md)| Status of the campaign | 
 
 ### Return type
 
@@ -487,28 +478,27 @@ Update a campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
-var emailCampaign = new SendinBlueApi.EmailCampaign(); // EmailCampaign | Values to update a campaign
+var emailCampaign = new SendinBlueApi.UpdateEmailCampaign(); // UpdateEmailCampaign | Values to update a campaign
 
+apiInstance.updateEmailCampaigns(campaignId, emailCampaign).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateEmailCampaigns(campaignId, emailCampaign, callback);
 ```
 
 ### Parameters
@@ -516,7 +506,7 @@ apiInstance.updateEmailCampaigns(campaignId, emailCampaign, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **String**| Id of the campaign | 
- **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Values to update a campaign | 
+ **emailCampaign** | [**UpdateEmailCampaign**](UpdateEmailCampaign.md)| Values to update a campaign | 
 
 ### Return type
 

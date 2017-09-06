@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20017Folders'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20017Folders'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetFolders = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20017Folders);
+    root.SendinBlueApi.GetFolders = factory(root.SendinBlueApi.ApiClient);
   }
-}(this, function(ApiClient, InlineResponse20017Folders) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -64,7 +64,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('folders')) {
-        obj['folders'] = ApiClient.convertToType(data['folders'], [InlineResponse20017Folders]);
+        obj['folders'] = ApiClient.convertToType(data['folders'], [Object]);
       }
       if (data.hasOwnProperty('count')) {
         obj['count'] = ApiClient.convertToType(data['count'], 'Number');
@@ -74,7 +74,7 @@
   }
 
   /**
-   * @member {Array.<module:model/InlineResponse20017Folders>} folders
+   * @member {Array.<Object>} folders
    */
   exports.prototype['folders'] = undefined;
   /**

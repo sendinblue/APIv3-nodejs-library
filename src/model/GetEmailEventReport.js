@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20011Events'], factory);
+    define(['ApiClient', 'model/GetEmailEventReportEvents'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20011Events'));
+    module.exports = factory(require('../ApiClient'), require('./GetEmailEventReportEvents'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetEmailEventReport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20011Events);
+    root.SendinBlueApi.GetEmailEventReport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetEmailEventReportEvents);
   }
-}(this, function(ApiClient, InlineResponse20011Events) {
+}(this, function(ApiClient, GetEmailEventReportEvents) {
   'use strict';
 
 
@@ -63,14 +63,14 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('events')) {
-        obj['events'] = ApiClient.convertToType(data['events'], [InlineResponse20011Events]);
+        obj['events'] = ApiClient.convertToType(data['events'], [GetEmailEventReportEvents]);
       }
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/InlineResponse20011Events>} events
+   * @member {Array.<module:model/GetEmailEventReportEvents>} events
    */
   exports.prototype['events'] = undefined;
 

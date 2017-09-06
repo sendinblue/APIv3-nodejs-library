@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddCredits', 'model/AddCredits1', 'model/AddRemoveContactToList', 'model/ContactEmails', 'model/ContactEmails1', 'model/ContactsattributesEnumemaration', 'model/ContactsimportNewList', 'model/CreaUpdateFolder', 'model/CreateAttribute', 'model/CreateAttribute1', 'model/CreateChild', 'model/CreateContact', 'model/CreateContact1', 'model/CreateEmailCampaign', 'model/CreateList', 'model/CreateList1', 'model/CreateModel', 'model/CreateSender', 'model/CreateSenderModel', 'model/CreateSmsCampaign', 'model/CreateSmsCampaign1', 'model/CreateSmtpEmail', 'model/CreateSmtpTemplate', 'model/CreateWebhook', 'model/CreateWebhook1', 'model/CreatedProcessId', 'model/DeleteHardbounces', 'model/DeleteHardbounces1', 'model/EmailCampaign', 'model/EmailCampaigns', 'model/EmailCampaignsRecipients', 'model/EmailCampaignsSender', 'model/EmailCampaignscampaignIdRecipients', 'model/EmailCampaignscampaignIdSender', 'model/EmailCampaignscampaignIdsendReportEmail', 'model/EmailExportRecipients', 'model/EmailTo', 'model/ErrorModel', 'model/GetAccount', 'model/GetAggregatedReport', 'model/GetAttributes', 'model/GetCampaignOverview', 'model/GetCampaignRecipients', 'model/GetCampaignStats', 'model/GetChildInfo', 'model/GetChildrenList', 'model/GetClient', 'model/GetContactCampaignStats', 'model/GetContactDetails', 'model/GetContacts', 'model/GetEmailCampaign', 'model/GetEmailCampaigns', 'model/GetEmailEventReport', 'model/GetExtendedCampaignOverview', 'model/GetExtendedCampaignStats', 'model/GetExtendedClient', 'model/GetExtendedContactDetails', 'model/GetExtendedList', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders', 'model/GetIp', 'model/GetIpFromSender', 'model/GetIps', 'model/GetIpsFromSender', 'model/GetList', 'model/GetLists', 'model/GetPlan', 'model/GetProcess', 'model/GetProcesses', 'model/GetReports', 'model/GetSendersList', 'model/GetSmsCampaign', 'model/GetSmsCampaign1', 'model/GetSmsCampaignOverview', 'model/GetSmsCampaignStats', 'model/GetSmsCampaigns', 'model/GetSmsEventReport', 'model/GetSmtpTemplateOverview', 'model/GetSmtpTemplates', 'model/GetStatsByDomain', 'model/GetTransacAggregatedSmsReport', 'model/GetTransacSmsReport', 'model/GetWebhook', 'model/GetWebhooks', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse20010', 'model/InlineResponse20011', 'model/InlineResponse20011Events', 'model/InlineResponse20012', 'model/InlineResponse20012Sender', 'model/InlineResponse20012Templates', 'model/InlineResponse20013', 'model/InlineResponse20013Webhooks', 'model/InlineResponse20014', 'model/InlineResponse20014Contacts', 'model/InlineResponse20015', 'model/InlineResponse20015Clicked', 'model/InlineResponse20015Links', 'model/InlineResponse20015MessagesSent', 'model/InlineResponse20015Opened', 'model/InlineResponse20015TransacAttributes', 'model/InlineResponse20015Unsubscriptions', 'model/InlineResponse20015UnsubscriptionsAdminUnsubscription', 'model/InlineResponse20015UnsubscriptionsUserUnsubscription', 'model/InlineResponse20016', 'model/InlineResponse20016Attributes', 'model/InlineResponse20016Enumeration', 'model/InlineResponse20017', 'model/InlineResponse20017Folders', 'model/InlineResponse20018', 'model/InlineResponse20018Lists', 'model/InlineResponse20019', 'model/InlineResponse2001ApiKeys', 'model/InlineResponse2001Children', 'model/InlineResponse2001Credits', 'model/InlineResponse2001Ips', 'model/InlineResponse2001Statistics', 'model/InlineResponse2002', 'model/InlineResponse20020', 'model/InlineResponse20020CampaignStats', 'model/InlineResponse20021', 'model/InlineResponse20021Campaigns', 'model/InlineResponse20021Statistics', 'model/InlineResponse20022', 'model/InlineResponse20022Events', 'model/InlineResponse20023', 'model/InlineResponse20024', 'model/InlineResponse20024Reports', 'model/InlineResponse2003', 'model/InlineResponse2003Child', 'model/InlineResponse2003Reseller', 'model/InlineResponse2004', 'model/InlineResponse2004Ips', 'model/InlineResponse2004Senders', 'model/InlineResponse2005', 'model/InlineResponse2005Ips', 'model/InlineResponse2006', 'model/InlineResponse2006Ips', 'model/InlineResponse2007', 'model/InlineResponse2007Processes', 'model/InlineResponse2008', 'model/InlineResponse2008Campaigns', 'model/InlineResponse2008Recipients', 'model/InlineResponse2008RecipientsExclusionLists', 'model/InlineResponse2008RecipientsLists', 'model/InlineResponse2008Sender', 'model/InlineResponse2008Statistics', 'model/InlineResponse2008StatisticsCampaignStats', 'model/InlineResponse2008StatisticsLinksStats', 'model/InlineResponse2009', 'model/InlineResponse2009Reports', 'model/InlineResponse200Address', 'model/InlineResponse200MarketingAutomation', 'model/InlineResponse200Plan', 'model/InlineResponse200Relay', 'model/InlineResponse200RelayData', 'model/InlineResponse201', 'model/InlineResponse2011', 'model/InlineResponse2012', 'model/InlineResponse2013', 'model/InlineResponse2014', 'model/InlineResponse2014Contacts', 'model/InlineResponse2015', 'model/InlineResponse202', 'model/InlineResponse400', 'model/InlineResponse4001', 'model/InlineResponse403', 'model/IpId', 'model/IpId1', 'model/ManageIp', 'model/Name', 'model/Name1', 'model/PostContactInfo', 'model/PostSendFailed', 'model/PostSendSmsTestFailed', 'model/RecipientExport', 'model/RecipientExport1', 'model/RemainingCreditModel', 'model/RemoveCredits', 'model/RemoveCredits1', 'model/RequestContactExport', 'model/RequestContactExport1', 'model/RequestContactImport', 'model/RequestContactImport1', 'model/RequestSMSRecipientExport', 'model/ResellerChild', 'model/ResellerChild1', 'model/SendEmail', 'model/SendEmail1', 'model/SendReport', 'model/SendReport1', 'model/SendReport2', 'model/SendSms', 'model/SendSmtpEmail', 'model/SendSmtpEmail1', 'model/SendTemplateEmail', 'model/SendTestEmail', 'model/SendTestEmail1', 'model/SendTestSms', 'model/SendTestSms1', 'model/SendTransacSms', 'model/SendTransacSms1', 'model/Sender', 'model/Sender1', 'model/SendersIps', 'model/SmsCampaignsRecipients', 'model/SmtpTemplate', 'model/SmtpTemplate1', 'model/SmtpemailAttachment', 'model/SmtpemailBcc', 'model/SmtpemailCc', 'model/SmtpemailReplyTo', 'model/SmtpemailSender', 'model/SmtpemailTo', 'model/SmtptemplatesSender', 'model/SmtptemplatestemplateIdSender', 'model/SmtptemplatestemplateIdsendAttachment', 'model/Status', 'model/Status1', 'model/UpdateCampaignStatus', 'model/UpdateChild', 'model/UpdateContact', 'model/UpdateContact1', 'model/UpdateEmailCampaign', 'model/UpdateList', 'model/UpdateList1', 'model/UpdateSender', 'model/UpdateSmsCampaign', 'model/UpdateSmsCampaign1', 'model/UpdateSmtpTemplate', 'model/UpdateWebhook', 'model/UpdateWebhook1', 'api/AccountApi', 'api/AttributesApi', 'api/ContactsApi', 'api/EmailCampaignsApi', 'api/FoldersApi', 'api/ListsApi', 'api/ProcessApi', 'api/ResellerApi', 'api/SMSCampaignsApi', 'api/SMTPApi', 'api/SendersApi', 'api/TransactionalSMSApi', 'api/WebhooksApi'], factory);
+    define(['ApiClient', 'model/AddCredits', 'model/AddRemoveContactToList', 'model/CreaUpdateFolder', 'model/CreateAttribute', 'model/CreateAttributeEnumemaration', 'model/CreateChild', 'model/CreateContact', 'model/CreateEmailCampaign', 'model/CreateEmailCampaignRecipients', 'model/CreateEmailCampaignSender', 'model/CreateList', 'model/CreateModel', 'model/CreateSender', 'model/CreateSenderIps', 'model/CreateSenderModel', 'model/CreateSmsCampaign', 'model/CreateSmsCampaignRecipients', 'model/CreateSmtpEmail', 'model/CreateSmtpTemplate', 'model/CreateSmtpTemplateSender', 'model/CreateWebhook', 'model/CreatedProcessId', 'model/DeleteHardbounces', 'model/EmailExportRecipients', 'model/ErrorModel', 'model/GetAccountMarketingAutomation', 'model/GetAccountPlan', 'model/GetAccountRelay', 'model/GetAccountRelayData', 'model/GetAggregatedReport', 'model/GetAttributes', 'model/GetAttributesAttributes', 'model/GetAttributesEnumeration', 'model/GetCampaignOverview', 'model/GetCampaignRecipients', 'model/GetCampaignRecipientsExclusionLists', 'model/GetCampaignRecipientsLists', 'model/GetCampaignStats', 'model/GetChildInfoApiKeys', 'model/GetChildInfoCredits', 'model/GetChildInfoIps', 'model/GetChildInfoStatistics', 'model/GetChildrenList', 'model/GetClient', 'model/GetContactCampaignStats', 'model/GetContactCampaignStatsClicked', 'model/GetContactCampaignStatsLinks', 'model/GetContactCampaignStatsMessagesSent', 'model/GetContactCampaignStatsOpened', 'model/GetContactCampaignStatsTransacAttributes', 'model/GetContactCampaignStatsUnsubscriptions', 'model/GetContactCampaignStatsUnsubscriptionsAdminUnsubscription', 'model/GetContactCampaignStatsUnsubscriptionsUserUnsubscription', 'model/GetContactDetails', 'model/GetContacts', 'model/GetEmailCampaigns', 'model/GetEmailEventReport', 'model/GetEmailEventReportEvents', 'model/GetExtendedCampaignOverviewSender', 'model/GetExtendedCampaignStats', 'model/GetExtendedCampaignStatsLinksStats', 'model/GetExtendedClientAddress', 'model/GetExtendedListCampaignStats', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders', 'model/GetIp', 'model/GetIpFromSender', 'model/GetIps', 'model/GetIpsFromSender', 'model/GetList', 'model/GetLists', 'model/GetListsFolder', 'model/GetListsLists', 'model/GetProcess', 'model/GetProcesses', 'model/GetReports', 'model/GetReportsReports', 'model/GetSendersList', 'model/GetSendersListIps', 'model/GetSendersListSenders', 'model/GetSmsCampaignOverview', 'model/GetSmsCampaignStats', 'model/GetSmsCampaigns', 'model/GetSmsEventReport', 'model/GetSmsEventReportEvents', 'model/GetSmtpTemplateOverview', 'model/GetSmtpTemplateOverviewSender', 'model/GetSmtpTemplates', 'model/GetStatsByDomain', 'model/GetTransacAggregatedSmsReport', 'model/GetTransacSmsReport', 'model/GetTransacSmsReportReports', 'model/GetWebhook', 'model/GetWebhooks', 'model/ManageIp', 'model/PostContactInfo', 'model/PostContactInfoContacts', 'model/PostSendFailed', 'model/PostSendSmsTestFailed', 'model/RemainingCreditModel', 'model/RemainingCreditModelChild', 'model/RemainingCreditModelReseller', 'model/RemoveCredits', 'model/RequestContactExport', 'model/RequestContactImport', 'model/RequestContactImportNewList', 'model/RequestSMSRecipientExport', 'model/SendEmail', 'model/SendEmailAttachment', 'model/SendReport', 'model/SendReportEmail', 'model/SendSms', 'model/SendSmtpEmail', 'model/SendSmtpEmailAttachment', 'model/SendSmtpEmailBcc', 'model/SendSmtpEmailCc', 'model/SendSmtpEmailReplyTo', 'model/SendSmtpEmailSender', 'model/SendSmtpEmailTo', 'model/SendTemplateEmail', 'model/SendTestEmail', 'model/SendTestSms', 'model/SendTransacSms', 'model/UpdateCampaignStatus', 'model/UpdateChild', 'model/UpdateContact', 'model/UpdateEmailCampaign', 'model/UpdateEmailCampaignRecipients', 'model/UpdateEmailCampaignSender', 'model/UpdateList', 'model/UpdateSender', 'model/UpdateSmsCampaign', 'model/UpdateSmtpTemplate', 'model/UpdateSmtpTemplateSender', 'model/UpdateWebhook', 'model/GetChildInfo', 'model/GetExtendedCampaignOverview', 'model/GetExtendedClient', 'model/GetExtendedContactDetails', 'model/GetExtendedList', 'model/GetSmsCampaign', 'model/GetAccount', 'model/GetEmailCampaign', 'api/AccountApi', 'api/AttributesApi', 'api/ContactsApi', 'api/EmailCampaignsApi', 'api/FoldersApi', 'api/ListsApi', 'api/ProcessApi', 'api/ResellerApi', 'api/SMSCampaignsApi', 'api/SMTPApi', 'api/SendersApi', 'api/TransactionalSMSApi', 'api/WebhooksApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AddCredits'), require('./model/AddCredits1'), require('./model/AddRemoveContactToList'), require('./model/ContactEmails'), require('./model/ContactEmails1'), require('./model/ContactsattributesEnumemaration'), require('./model/ContactsimportNewList'), require('./model/CreaUpdateFolder'), require('./model/CreateAttribute'), require('./model/CreateAttribute1'), require('./model/CreateChild'), require('./model/CreateContact'), require('./model/CreateContact1'), require('./model/CreateEmailCampaign'), require('./model/CreateList'), require('./model/CreateList1'), require('./model/CreateModel'), require('./model/CreateSender'), require('./model/CreateSenderModel'), require('./model/CreateSmsCampaign'), require('./model/CreateSmsCampaign1'), require('./model/CreateSmtpEmail'), require('./model/CreateSmtpTemplate'), require('./model/CreateWebhook'), require('./model/CreateWebhook1'), require('./model/CreatedProcessId'), require('./model/DeleteHardbounces'), require('./model/DeleteHardbounces1'), require('./model/EmailCampaign'), require('./model/EmailCampaigns'), require('./model/EmailCampaignsRecipients'), require('./model/EmailCampaignsSender'), require('./model/EmailCampaignscampaignIdRecipients'), require('./model/EmailCampaignscampaignIdSender'), require('./model/EmailCampaignscampaignIdsendReportEmail'), require('./model/EmailExportRecipients'), require('./model/EmailTo'), require('./model/ErrorModel'), require('./model/GetAccount'), require('./model/GetAggregatedReport'), require('./model/GetAttributes'), require('./model/GetCampaignOverview'), require('./model/GetCampaignRecipients'), require('./model/GetCampaignStats'), require('./model/GetChildInfo'), require('./model/GetChildrenList'), require('./model/GetClient'), require('./model/GetContactCampaignStats'), require('./model/GetContactDetails'), require('./model/GetContacts'), require('./model/GetEmailCampaign'), require('./model/GetEmailCampaigns'), require('./model/GetEmailEventReport'), require('./model/GetExtendedCampaignOverview'), require('./model/GetExtendedCampaignStats'), require('./model/GetExtendedClient'), require('./model/GetExtendedContactDetails'), require('./model/GetExtendedList'), require('./model/GetFolder'), require('./model/GetFolderLists'), require('./model/GetFolders'), require('./model/GetIp'), require('./model/GetIpFromSender'), require('./model/GetIps'), require('./model/GetIpsFromSender'), require('./model/GetList'), require('./model/GetLists'), require('./model/GetPlan'), require('./model/GetProcess'), require('./model/GetProcesses'), require('./model/GetReports'), require('./model/GetSendersList'), require('./model/GetSmsCampaign'), require('./model/GetSmsCampaign1'), require('./model/GetSmsCampaignOverview'), require('./model/GetSmsCampaignStats'), require('./model/GetSmsCampaigns'), require('./model/GetSmsEventReport'), require('./model/GetSmtpTemplateOverview'), require('./model/GetSmtpTemplates'), require('./model/GetStatsByDomain'), require('./model/GetTransacAggregatedSmsReport'), require('./model/GetTransacSmsReport'), require('./model/GetWebhook'), require('./model/GetWebhooks'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse20010'), require('./model/InlineResponse20011'), require('./model/InlineResponse20011Events'), require('./model/InlineResponse20012'), require('./model/InlineResponse20012Sender'), require('./model/InlineResponse20012Templates'), require('./model/InlineResponse20013'), require('./model/InlineResponse20013Webhooks'), require('./model/InlineResponse20014'), require('./model/InlineResponse20014Contacts'), require('./model/InlineResponse20015'), require('./model/InlineResponse20015Clicked'), require('./model/InlineResponse20015Links'), require('./model/InlineResponse20015MessagesSent'), require('./model/InlineResponse20015Opened'), require('./model/InlineResponse20015TransacAttributes'), require('./model/InlineResponse20015Unsubscriptions'), require('./model/InlineResponse20015UnsubscriptionsAdminUnsubscription'), require('./model/InlineResponse20015UnsubscriptionsUserUnsubscription'), require('./model/InlineResponse20016'), require('./model/InlineResponse20016Attributes'), require('./model/InlineResponse20016Enumeration'), require('./model/InlineResponse20017'), require('./model/InlineResponse20017Folders'), require('./model/InlineResponse20018'), require('./model/InlineResponse20018Lists'), require('./model/InlineResponse20019'), require('./model/InlineResponse2001ApiKeys'), require('./model/InlineResponse2001Children'), require('./model/InlineResponse2001Credits'), require('./model/InlineResponse2001Ips'), require('./model/InlineResponse2001Statistics'), require('./model/InlineResponse2002'), require('./model/InlineResponse20020'), require('./model/InlineResponse20020CampaignStats'), require('./model/InlineResponse20021'), require('./model/InlineResponse20021Campaigns'), require('./model/InlineResponse20021Statistics'), require('./model/InlineResponse20022'), require('./model/InlineResponse20022Events'), require('./model/InlineResponse20023'), require('./model/InlineResponse20024'), require('./model/InlineResponse20024Reports'), require('./model/InlineResponse2003'), require('./model/InlineResponse2003Child'), require('./model/InlineResponse2003Reseller'), require('./model/InlineResponse2004'), require('./model/InlineResponse2004Ips'), require('./model/InlineResponse2004Senders'), require('./model/InlineResponse2005'), require('./model/InlineResponse2005Ips'), require('./model/InlineResponse2006'), require('./model/InlineResponse2006Ips'), require('./model/InlineResponse2007'), require('./model/InlineResponse2007Processes'), require('./model/InlineResponse2008'), require('./model/InlineResponse2008Campaigns'), require('./model/InlineResponse2008Recipients'), require('./model/InlineResponse2008RecipientsExclusionLists'), require('./model/InlineResponse2008RecipientsLists'), require('./model/InlineResponse2008Sender'), require('./model/InlineResponse2008Statistics'), require('./model/InlineResponse2008StatisticsCampaignStats'), require('./model/InlineResponse2008StatisticsLinksStats'), require('./model/InlineResponse2009'), require('./model/InlineResponse2009Reports'), require('./model/InlineResponse200Address'), require('./model/InlineResponse200MarketingAutomation'), require('./model/InlineResponse200Plan'), require('./model/InlineResponse200Relay'), require('./model/InlineResponse200RelayData'), require('./model/InlineResponse201'), require('./model/InlineResponse2011'), require('./model/InlineResponse2012'), require('./model/InlineResponse2013'), require('./model/InlineResponse2014'), require('./model/InlineResponse2014Contacts'), require('./model/InlineResponse2015'), require('./model/InlineResponse202'), require('./model/InlineResponse400'), require('./model/InlineResponse4001'), require('./model/InlineResponse403'), require('./model/IpId'), require('./model/IpId1'), require('./model/ManageIp'), require('./model/Name'), require('./model/Name1'), require('./model/PostContactInfo'), require('./model/PostSendFailed'), require('./model/PostSendSmsTestFailed'), require('./model/RecipientExport'), require('./model/RecipientExport1'), require('./model/RemainingCreditModel'), require('./model/RemoveCredits'), require('./model/RemoveCredits1'), require('./model/RequestContactExport'), require('./model/RequestContactExport1'), require('./model/RequestContactImport'), require('./model/RequestContactImport1'), require('./model/RequestSMSRecipientExport'), require('./model/ResellerChild'), require('./model/ResellerChild1'), require('./model/SendEmail'), require('./model/SendEmail1'), require('./model/SendReport'), require('./model/SendReport1'), require('./model/SendReport2'), require('./model/SendSms'), require('./model/SendSmtpEmail'), require('./model/SendSmtpEmail1'), require('./model/SendTemplateEmail'), require('./model/SendTestEmail'), require('./model/SendTestEmail1'), require('./model/SendTestSms'), require('./model/SendTestSms1'), require('./model/SendTransacSms'), require('./model/SendTransacSms1'), require('./model/Sender'), require('./model/Sender1'), require('./model/SendersIps'), require('./model/SmsCampaignsRecipients'), require('./model/SmtpTemplate'), require('./model/SmtpTemplate1'), require('./model/SmtpemailAttachment'), require('./model/SmtpemailBcc'), require('./model/SmtpemailCc'), require('./model/SmtpemailReplyTo'), require('./model/SmtpemailSender'), require('./model/SmtpemailTo'), require('./model/SmtptemplatesSender'), require('./model/SmtptemplatestemplateIdSender'), require('./model/SmtptemplatestemplateIdsendAttachment'), require('./model/Status'), require('./model/Status1'), require('./model/UpdateCampaignStatus'), require('./model/UpdateChild'), require('./model/UpdateContact'), require('./model/UpdateContact1'), require('./model/UpdateEmailCampaign'), require('./model/UpdateList'), require('./model/UpdateList1'), require('./model/UpdateSender'), require('./model/UpdateSmsCampaign'), require('./model/UpdateSmsCampaign1'), require('./model/UpdateSmtpTemplate'), require('./model/UpdateWebhook'), require('./model/UpdateWebhook1'), require('./api/AccountApi'), require('./api/AttributesApi'), require('./api/ContactsApi'), require('./api/EmailCampaignsApi'), require('./api/FoldersApi'), require('./api/ListsApi'), require('./api/ProcessApi'), require('./api/ResellerApi'), require('./api/SMSCampaignsApi'), require('./api/SMTPApi'), require('./api/SendersApi'), require('./api/TransactionalSMSApi'), require('./api/WebhooksApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AddCredits'), require('./model/AddRemoveContactToList'), require('./model/CreaUpdateFolder'), require('./model/CreateAttribute'), require('./model/CreateAttributeEnumemaration'), require('./model/CreateChild'), require('./model/CreateContact'), require('./model/CreateEmailCampaign'), require('./model/CreateEmailCampaignRecipients'), require('./model/CreateEmailCampaignSender'), require('./model/CreateList'), require('./model/CreateModel'), require('./model/CreateSender'), require('./model/CreateSenderIps'), require('./model/CreateSenderModel'), require('./model/CreateSmsCampaign'), require('./model/CreateSmsCampaignRecipients'), require('./model/CreateSmtpEmail'), require('./model/CreateSmtpTemplate'), require('./model/CreateSmtpTemplateSender'), require('./model/CreateWebhook'), require('./model/CreatedProcessId'), require('./model/DeleteHardbounces'), require('./model/EmailExportRecipients'), require('./model/ErrorModel'), require('./model/GetAccountMarketingAutomation'), require('./model/GetAccountPlan'), require('./model/GetAccountRelay'), require('./model/GetAccountRelayData'), require('./model/GetAggregatedReport'), require('./model/GetAttributes'), require('./model/GetAttributesAttributes'), require('./model/GetAttributesEnumeration'), require('./model/GetCampaignOverview'), require('./model/GetCampaignRecipients'), require('./model/GetCampaignRecipientsExclusionLists'), require('./model/GetCampaignRecipientsLists'), require('./model/GetCampaignStats'), require('./model/GetChildInfoApiKeys'), require('./model/GetChildInfoCredits'), require('./model/GetChildInfoIps'), require('./model/GetChildInfoStatistics'), require('./model/GetChildrenList'), require('./model/GetClient'), require('./model/GetContactCampaignStats'), require('./model/GetContactCampaignStatsClicked'), require('./model/GetContactCampaignStatsLinks'), require('./model/GetContactCampaignStatsMessagesSent'), require('./model/GetContactCampaignStatsOpened'), require('./model/GetContactCampaignStatsTransacAttributes'), require('./model/GetContactCampaignStatsUnsubscriptions'), require('./model/GetContactCampaignStatsUnsubscriptionsAdminUnsubscription'), require('./model/GetContactCampaignStatsUnsubscriptionsUserUnsubscription'), require('./model/GetContactDetails'), require('./model/GetContacts'), require('./model/GetEmailCampaigns'), require('./model/GetEmailEventReport'), require('./model/GetEmailEventReportEvents'), require('./model/GetExtendedCampaignOverviewSender'), require('./model/GetExtendedCampaignStats'), require('./model/GetExtendedCampaignStatsLinksStats'), require('./model/GetExtendedClientAddress'), require('./model/GetExtendedListCampaignStats'), require('./model/GetFolder'), require('./model/GetFolderLists'), require('./model/GetFolders'), require('./model/GetIp'), require('./model/GetIpFromSender'), require('./model/GetIps'), require('./model/GetIpsFromSender'), require('./model/GetList'), require('./model/GetLists'), require('./model/GetListsFolder'), require('./model/GetListsLists'), require('./model/GetProcess'), require('./model/GetProcesses'), require('./model/GetReports'), require('./model/GetReportsReports'), require('./model/GetSendersList'), require('./model/GetSendersListIps'), require('./model/GetSendersListSenders'), require('./model/GetSmsCampaignOverview'), require('./model/GetSmsCampaignStats'), require('./model/GetSmsCampaigns'), require('./model/GetSmsEventReport'), require('./model/GetSmsEventReportEvents'), require('./model/GetSmtpTemplateOverview'), require('./model/GetSmtpTemplateOverviewSender'), require('./model/GetSmtpTemplates'), require('./model/GetStatsByDomain'), require('./model/GetTransacAggregatedSmsReport'), require('./model/GetTransacSmsReport'), require('./model/GetTransacSmsReportReports'), require('./model/GetWebhook'), require('./model/GetWebhooks'), require('./model/ManageIp'), require('./model/PostContactInfo'), require('./model/PostContactInfoContacts'), require('./model/PostSendFailed'), require('./model/PostSendSmsTestFailed'), require('./model/RemainingCreditModel'), require('./model/RemainingCreditModelChild'), require('./model/RemainingCreditModelReseller'), require('./model/RemoveCredits'), require('./model/RequestContactExport'), require('./model/RequestContactImport'), require('./model/RequestContactImportNewList'), require('./model/RequestSMSRecipientExport'), require('./model/SendEmail'), require('./model/SendEmailAttachment'), require('./model/SendReport'), require('./model/SendReportEmail'), require('./model/SendSms'), require('./model/SendSmtpEmail'), require('./model/SendSmtpEmailAttachment'), require('./model/SendSmtpEmailBcc'), require('./model/SendSmtpEmailCc'), require('./model/SendSmtpEmailReplyTo'), require('./model/SendSmtpEmailSender'), require('./model/SendSmtpEmailTo'), require('./model/SendTemplateEmail'), require('./model/SendTestEmail'), require('./model/SendTestSms'), require('./model/SendTransacSms'), require('./model/UpdateCampaignStatus'), require('./model/UpdateChild'), require('./model/UpdateContact'), require('./model/UpdateEmailCampaign'), require('./model/UpdateEmailCampaignRecipients'), require('./model/UpdateEmailCampaignSender'), require('./model/UpdateList'), require('./model/UpdateSender'), require('./model/UpdateSmsCampaign'), require('./model/UpdateSmtpTemplate'), require('./model/UpdateSmtpTemplateSender'), require('./model/UpdateWebhook'), require('./model/GetChildInfo'), require('./model/GetExtendedCampaignOverview'), require('./model/GetExtendedClient'), require('./model/GetExtendedContactDetails'), require('./model/GetExtendedList'), require('./model/GetSmsCampaign'), require('./model/GetAccount'), require('./model/GetEmailCampaign'), require('./api/AccountApi'), require('./api/AttributesApi'), require('./api/ContactsApi'), require('./api/EmailCampaignsApi'), require('./api/FoldersApi'), require('./api/ListsApi'), require('./api/ProcessApi'), require('./api/ResellerApi'), require('./api/SMSCampaignsApi'), require('./api/SMTPApi'), require('./api/SendersApi'), require('./api/TransactionalSMSApi'), require('./api/WebhooksApi'));
   }
-}(function(ApiClient, AddCredits, AddCredits1, AddRemoveContactToList, ContactEmails, ContactEmails1, ContactsattributesEnumemaration, ContactsimportNewList, CreaUpdateFolder, CreateAttribute, CreateAttribute1, CreateChild, CreateContact, CreateContact1, CreateEmailCampaign, CreateList, CreateList1, CreateModel, CreateSender, CreateSenderModel, CreateSmsCampaign, CreateSmsCampaign1, CreateSmtpEmail, CreateSmtpTemplate, CreateWebhook, CreateWebhook1, CreatedProcessId, DeleteHardbounces, DeleteHardbounces1, EmailCampaign, EmailCampaigns, EmailCampaignsRecipients, EmailCampaignsSender, EmailCampaignscampaignIdRecipients, EmailCampaignscampaignIdSender, EmailCampaignscampaignIdsendReportEmail, EmailExportRecipients, EmailTo, ErrorModel, GetAccount, GetAggregatedReport, GetAttributes, GetCampaignOverview, GetCampaignRecipients, GetCampaignStats, GetChildInfo, GetChildrenList, GetClient, GetContactCampaignStats, GetContactDetails, GetContacts, GetEmailCampaign, GetEmailCampaigns, GetEmailEventReport, GetExtendedCampaignOverview, GetExtendedCampaignStats, GetExtendedClient, GetExtendedContactDetails, GetExtendedList, GetFolder, GetFolderLists, GetFolders, GetIp, GetIpFromSender, GetIps, GetIpsFromSender, GetList, GetLists, GetPlan, GetProcess, GetProcesses, GetReports, GetSendersList, GetSmsCampaign, GetSmsCampaign1, GetSmsCampaignOverview, GetSmsCampaignStats, GetSmsCampaigns, GetSmsEventReport, GetSmtpTemplateOverview, GetSmtpTemplates, GetStatsByDomain, GetTransacAggregatedSmsReport, GetTransacSmsReport, GetWebhook, GetWebhooks, InlineResponse200, InlineResponse2001, InlineResponse20010, InlineResponse20011, InlineResponse20011Events, InlineResponse20012, InlineResponse20012Sender, InlineResponse20012Templates, InlineResponse20013, InlineResponse20013Webhooks, InlineResponse20014, InlineResponse20014Contacts, InlineResponse20015, InlineResponse20015Clicked, InlineResponse20015Links, InlineResponse20015MessagesSent, InlineResponse20015Opened, InlineResponse20015TransacAttributes, InlineResponse20015Unsubscriptions, InlineResponse20015UnsubscriptionsAdminUnsubscription, InlineResponse20015UnsubscriptionsUserUnsubscription, InlineResponse20016, InlineResponse20016Attributes, InlineResponse20016Enumeration, InlineResponse20017, InlineResponse20017Folders, InlineResponse20018, InlineResponse20018Lists, InlineResponse20019, InlineResponse2001ApiKeys, InlineResponse2001Children, InlineResponse2001Credits, InlineResponse2001Ips, InlineResponse2001Statistics, InlineResponse2002, InlineResponse20020, InlineResponse20020CampaignStats, InlineResponse20021, InlineResponse20021Campaigns, InlineResponse20021Statistics, InlineResponse20022, InlineResponse20022Events, InlineResponse20023, InlineResponse20024, InlineResponse20024Reports, InlineResponse2003, InlineResponse2003Child, InlineResponse2003Reseller, InlineResponse2004, InlineResponse2004Ips, InlineResponse2004Senders, InlineResponse2005, InlineResponse2005Ips, InlineResponse2006, InlineResponse2006Ips, InlineResponse2007, InlineResponse2007Processes, InlineResponse2008, InlineResponse2008Campaigns, InlineResponse2008Recipients, InlineResponse2008RecipientsExclusionLists, InlineResponse2008RecipientsLists, InlineResponse2008Sender, InlineResponse2008Statistics, InlineResponse2008StatisticsCampaignStats, InlineResponse2008StatisticsLinksStats, InlineResponse2009, InlineResponse2009Reports, InlineResponse200Address, InlineResponse200MarketingAutomation, InlineResponse200Plan, InlineResponse200Relay, InlineResponse200RelayData, InlineResponse201, InlineResponse2011, InlineResponse2012, InlineResponse2013, InlineResponse2014, InlineResponse2014Contacts, InlineResponse2015, InlineResponse202, InlineResponse400, InlineResponse4001, InlineResponse403, IpId, IpId1, ManageIp, Name, Name1, PostContactInfo, PostSendFailed, PostSendSmsTestFailed, RecipientExport, RecipientExport1, RemainingCreditModel, RemoveCredits, RemoveCredits1, RequestContactExport, RequestContactExport1, RequestContactImport, RequestContactImport1, RequestSMSRecipientExport, ResellerChild, ResellerChild1, SendEmail, SendEmail1, SendReport, SendReport1, SendReport2, SendSms, SendSmtpEmail, SendSmtpEmail1, SendTemplateEmail, SendTestEmail, SendTestEmail1, SendTestSms, SendTestSms1, SendTransacSms, SendTransacSms1, Sender, Sender1, SendersIps, SmsCampaignsRecipients, SmtpTemplate, SmtpTemplate1, SmtpemailAttachment, SmtpemailBcc, SmtpemailCc, SmtpemailReplyTo, SmtpemailSender, SmtpemailTo, SmtptemplatesSender, SmtptemplatestemplateIdSender, SmtptemplatestemplateIdsendAttachment, Status, Status1, UpdateCampaignStatus, UpdateChild, UpdateContact, UpdateContact1, UpdateEmailCampaign, UpdateList, UpdateList1, UpdateSender, UpdateSmsCampaign, UpdateSmsCampaign1, UpdateSmtpTemplate, UpdateWebhook, UpdateWebhook1, AccountApi, AttributesApi, ContactsApi, EmailCampaignsApi, FoldersApi, ListsApi, ProcessApi, ResellerApi, SMSCampaignsApi, SMTPApi, SendersApi, TransactionalSMSApi, WebhooksApi) {
+}(function(ApiClient, AddCredits, AddRemoveContactToList, CreaUpdateFolder, CreateAttribute, CreateAttributeEnumemaration, CreateChild, CreateContact, CreateEmailCampaign, CreateEmailCampaignRecipients, CreateEmailCampaignSender, CreateList, CreateModel, CreateSender, CreateSenderIps, CreateSenderModel, CreateSmsCampaign, CreateSmsCampaignRecipients, CreateSmtpEmail, CreateSmtpTemplate, CreateSmtpTemplateSender, CreateWebhook, CreatedProcessId, DeleteHardbounces, EmailExportRecipients, ErrorModel, GetAccountMarketingAutomation, GetAccountPlan, GetAccountRelay, GetAccountRelayData, GetAggregatedReport, GetAttributes, GetAttributesAttributes, GetAttributesEnumeration, GetCampaignOverview, GetCampaignRecipients, GetCampaignRecipientsExclusionLists, GetCampaignRecipientsLists, GetCampaignStats, GetChildInfoApiKeys, GetChildInfoCredits, GetChildInfoIps, GetChildInfoStatistics, GetChildrenList, GetClient, GetContactCampaignStats, GetContactCampaignStatsClicked, GetContactCampaignStatsLinks, GetContactCampaignStatsMessagesSent, GetContactCampaignStatsOpened, GetContactCampaignStatsTransacAttributes, GetContactCampaignStatsUnsubscriptions, GetContactCampaignStatsUnsubscriptionsAdminUnsubscription, GetContactCampaignStatsUnsubscriptionsUserUnsubscription, GetContactDetails, GetContacts, GetEmailCampaigns, GetEmailEventReport, GetEmailEventReportEvents, GetExtendedCampaignOverviewSender, GetExtendedCampaignStats, GetExtendedCampaignStatsLinksStats, GetExtendedClientAddress, GetExtendedListCampaignStats, GetFolder, GetFolderLists, GetFolders, GetIp, GetIpFromSender, GetIps, GetIpsFromSender, GetList, GetLists, GetListsFolder, GetListsLists, GetProcess, GetProcesses, GetReports, GetReportsReports, GetSendersList, GetSendersListIps, GetSendersListSenders, GetSmsCampaignOverview, GetSmsCampaignStats, GetSmsCampaigns, GetSmsEventReport, GetSmsEventReportEvents, GetSmtpTemplateOverview, GetSmtpTemplateOverviewSender, GetSmtpTemplates, GetStatsByDomain, GetTransacAggregatedSmsReport, GetTransacSmsReport, GetTransacSmsReportReports, GetWebhook, GetWebhooks, ManageIp, PostContactInfo, PostContactInfoContacts, PostSendFailed, PostSendSmsTestFailed, RemainingCreditModel, RemainingCreditModelChild, RemainingCreditModelReseller, RemoveCredits, RequestContactExport, RequestContactImport, RequestContactImportNewList, RequestSMSRecipientExport, SendEmail, SendEmailAttachment, SendReport, SendReportEmail, SendSms, SendSmtpEmail, SendSmtpEmailAttachment, SendSmtpEmailBcc, SendSmtpEmailCc, SendSmtpEmailReplyTo, SendSmtpEmailSender, SendSmtpEmailTo, SendTemplateEmail, SendTestEmail, SendTestSms, SendTransacSms, UpdateCampaignStatus, UpdateChild, UpdateContact, UpdateEmailCampaign, UpdateEmailCampaignRecipients, UpdateEmailCampaignSender, UpdateList, UpdateSender, UpdateSmsCampaign, UpdateSmtpTemplate, UpdateSmtpTemplateSender, UpdateWebhook, GetChildInfo, GetExtendedCampaignOverview, GetExtendedClient, GetExtendedContactDetails, GetExtendedList, GetSmsCampaign, GetAccount, GetEmailCampaign, AccountApi, AttributesApi, ContactsApi, EmailCampaignsApi, FoldersApi, ListsApi, ProcessApi, ResellerApi, SMSCampaignsApi, SMTPApi, SendersApi, TransactionalSMSApi, WebhooksApi) {
   'use strict';
 
   /**
@@ -68,35 +68,10 @@
      */
     AddCredits: AddCredits,
     /**
-     * The AddCredits1 model constructor.
-     * @property {module:model/AddCredits1}
-     */
-    AddCredits1: AddCredits1,
-    /**
      * The AddRemoveContactToList model constructor.
      * @property {module:model/AddRemoveContactToList}
      */
     AddRemoveContactToList: AddRemoveContactToList,
-    /**
-     * The ContactEmails model constructor.
-     * @property {module:model/ContactEmails}
-     */
-    ContactEmails: ContactEmails,
-    /**
-     * The ContactEmails1 model constructor.
-     * @property {module:model/ContactEmails1}
-     */
-    ContactEmails1: ContactEmails1,
-    /**
-     * The ContactsattributesEnumemaration model constructor.
-     * @property {module:model/ContactsattributesEnumemaration}
-     */
-    ContactsattributesEnumemaration: ContactsattributesEnumemaration,
-    /**
-     * The ContactsimportNewList model constructor.
-     * @property {module:model/ContactsimportNewList}
-     */
-    ContactsimportNewList: ContactsimportNewList,
     /**
      * The CreaUpdateFolder model constructor.
      * @property {module:model/CreaUpdateFolder}
@@ -108,10 +83,10 @@
      */
     CreateAttribute: CreateAttribute,
     /**
-     * The CreateAttribute1 model constructor.
-     * @property {module:model/CreateAttribute1}
+     * The CreateAttributeEnumemaration model constructor.
+     * @property {module:model/CreateAttributeEnumemaration}
      */
-    CreateAttribute1: CreateAttribute1,
+    CreateAttributeEnumemaration: CreateAttributeEnumemaration,
     /**
      * The CreateChild model constructor.
      * @property {module:model/CreateChild}
@@ -123,25 +98,25 @@
      */
     CreateContact: CreateContact,
     /**
-     * The CreateContact1 model constructor.
-     * @property {module:model/CreateContact1}
-     */
-    CreateContact1: CreateContact1,
-    /**
      * The CreateEmailCampaign model constructor.
      * @property {module:model/CreateEmailCampaign}
      */
     CreateEmailCampaign: CreateEmailCampaign,
     /**
+     * The CreateEmailCampaignRecipients model constructor.
+     * @property {module:model/CreateEmailCampaignRecipients}
+     */
+    CreateEmailCampaignRecipients: CreateEmailCampaignRecipients,
+    /**
+     * The CreateEmailCampaignSender model constructor.
+     * @property {module:model/CreateEmailCampaignSender}
+     */
+    CreateEmailCampaignSender: CreateEmailCampaignSender,
+    /**
      * The CreateList model constructor.
      * @property {module:model/CreateList}
      */
     CreateList: CreateList,
-    /**
-     * The CreateList1 model constructor.
-     * @property {module:model/CreateList1}
-     */
-    CreateList1: CreateList1,
     /**
      * The CreateModel model constructor.
      * @property {module:model/CreateModel}
@@ -153,6 +128,11 @@
      */
     CreateSender: CreateSender,
     /**
+     * The CreateSenderIps model constructor.
+     * @property {module:model/CreateSenderIps}
+     */
+    CreateSenderIps: CreateSenderIps,
+    /**
      * The CreateSenderModel model constructor.
      * @property {module:model/CreateSenderModel}
      */
@@ -163,10 +143,10 @@
      */
     CreateSmsCampaign: CreateSmsCampaign,
     /**
-     * The CreateSmsCampaign1 model constructor.
-     * @property {module:model/CreateSmsCampaign1}
+     * The CreateSmsCampaignRecipients model constructor.
+     * @property {module:model/CreateSmsCampaignRecipients}
      */
-    CreateSmsCampaign1: CreateSmsCampaign1,
+    CreateSmsCampaignRecipients: CreateSmsCampaignRecipients,
     /**
      * The CreateSmtpEmail model constructor.
      * @property {module:model/CreateSmtpEmail}
@@ -178,15 +158,15 @@
      */
     CreateSmtpTemplate: CreateSmtpTemplate,
     /**
+     * The CreateSmtpTemplateSender model constructor.
+     * @property {module:model/CreateSmtpTemplateSender}
+     */
+    CreateSmtpTemplateSender: CreateSmtpTemplateSender,
+    /**
      * The CreateWebhook model constructor.
      * @property {module:model/CreateWebhook}
      */
     CreateWebhook: CreateWebhook,
-    /**
-     * The CreateWebhook1 model constructor.
-     * @property {module:model/CreateWebhook1}
-     */
-    CreateWebhook1: CreateWebhook1,
     /**
      * The CreatedProcessId model constructor.
      * @property {module:model/CreatedProcessId}
@@ -198,65 +178,35 @@
      */
     DeleteHardbounces: DeleteHardbounces,
     /**
-     * The DeleteHardbounces1 model constructor.
-     * @property {module:model/DeleteHardbounces1}
-     */
-    DeleteHardbounces1: DeleteHardbounces1,
-    /**
-     * The EmailCampaign model constructor.
-     * @property {module:model/EmailCampaign}
-     */
-    EmailCampaign: EmailCampaign,
-    /**
-     * The EmailCampaigns model constructor.
-     * @property {module:model/EmailCampaigns}
-     */
-    EmailCampaigns: EmailCampaigns,
-    /**
-     * The EmailCampaignsRecipients model constructor.
-     * @property {module:model/EmailCampaignsRecipients}
-     */
-    EmailCampaignsRecipients: EmailCampaignsRecipients,
-    /**
-     * The EmailCampaignsSender model constructor.
-     * @property {module:model/EmailCampaignsSender}
-     */
-    EmailCampaignsSender: EmailCampaignsSender,
-    /**
-     * The EmailCampaignscampaignIdRecipients model constructor.
-     * @property {module:model/EmailCampaignscampaignIdRecipients}
-     */
-    EmailCampaignscampaignIdRecipients: EmailCampaignscampaignIdRecipients,
-    /**
-     * The EmailCampaignscampaignIdSender model constructor.
-     * @property {module:model/EmailCampaignscampaignIdSender}
-     */
-    EmailCampaignscampaignIdSender: EmailCampaignscampaignIdSender,
-    /**
-     * The EmailCampaignscampaignIdsendReportEmail model constructor.
-     * @property {module:model/EmailCampaignscampaignIdsendReportEmail}
-     */
-    EmailCampaignscampaignIdsendReportEmail: EmailCampaignscampaignIdsendReportEmail,
-    /**
      * The EmailExportRecipients model constructor.
      * @property {module:model/EmailExportRecipients}
      */
     EmailExportRecipients: EmailExportRecipients,
-    /**
-     * The EmailTo model constructor.
-     * @property {module:model/EmailTo}
-     */
-    EmailTo: EmailTo,
     /**
      * The ErrorModel model constructor.
      * @property {module:model/ErrorModel}
      */
     ErrorModel: ErrorModel,
     /**
-     * The GetAccount model constructor.
-     * @property {module:model/GetAccount}
+     * The GetAccountMarketingAutomation model constructor.
+     * @property {module:model/GetAccountMarketingAutomation}
      */
-    GetAccount: GetAccount,
+    GetAccountMarketingAutomation: GetAccountMarketingAutomation,
+    /**
+     * The GetAccountPlan model constructor.
+     * @property {module:model/GetAccountPlan}
+     */
+    GetAccountPlan: GetAccountPlan,
+    /**
+     * The GetAccountRelay model constructor.
+     * @property {module:model/GetAccountRelay}
+     */
+    GetAccountRelay: GetAccountRelay,
+    /**
+     * The GetAccountRelayData model constructor.
+     * @property {module:model/GetAccountRelayData}
+     */
+    GetAccountRelayData: GetAccountRelayData,
     /**
      * The GetAggregatedReport model constructor.
      * @property {module:model/GetAggregatedReport}
@@ -268,6 +218,16 @@
      */
     GetAttributes: GetAttributes,
     /**
+     * The GetAttributesAttributes model constructor.
+     * @property {module:model/GetAttributesAttributes}
+     */
+    GetAttributesAttributes: GetAttributesAttributes,
+    /**
+     * The GetAttributesEnumeration model constructor.
+     * @property {module:model/GetAttributesEnumeration}
+     */
+    GetAttributesEnumeration: GetAttributesEnumeration,
+    /**
      * The GetCampaignOverview model constructor.
      * @property {module:model/GetCampaignOverview}
      */
@@ -278,15 +238,40 @@
      */
     GetCampaignRecipients: GetCampaignRecipients,
     /**
+     * The GetCampaignRecipientsExclusionLists model constructor.
+     * @property {module:model/GetCampaignRecipientsExclusionLists}
+     */
+    GetCampaignRecipientsExclusionLists: GetCampaignRecipientsExclusionLists,
+    /**
+     * The GetCampaignRecipientsLists model constructor.
+     * @property {module:model/GetCampaignRecipientsLists}
+     */
+    GetCampaignRecipientsLists: GetCampaignRecipientsLists,
+    /**
      * The GetCampaignStats model constructor.
      * @property {module:model/GetCampaignStats}
      */
     GetCampaignStats: GetCampaignStats,
     /**
-     * The GetChildInfo model constructor.
-     * @property {module:model/GetChildInfo}
+     * The GetChildInfoApiKeys model constructor.
+     * @property {module:model/GetChildInfoApiKeys}
      */
-    GetChildInfo: GetChildInfo,
+    GetChildInfoApiKeys: GetChildInfoApiKeys,
+    /**
+     * The GetChildInfoCredits model constructor.
+     * @property {module:model/GetChildInfoCredits}
+     */
+    GetChildInfoCredits: GetChildInfoCredits,
+    /**
+     * The GetChildInfoIps model constructor.
+     * @property {module:model/GetChildInfoIps}
+     */
+    GetChildInfoIps: GetChildInfoIps,
+    /**
+     * The GetChildInfoStatistics model constructor.
+     * @property {module:model/GetChildInfoStatistics}
+     */
+    GetChildInfoStatistics: GetChildInfoStatistics,
     /**
      * The GetChildrenList model constructor.
      * @property {module:model/GetChildrenList}
@@ -303,6 +288,46 @@
      */
     GetContactCampaignStats: GetContactCampaignStats,
     /**
+     * The GetContactCampaignStatsClicked model constructor.
+     * @property {module:model/GetContactCampaignStatsClicked}
+     */
+    GetContactCampaignStatsClicked: GetContactCampaignStatsClicked,
+    /**
+     * The GetContactCampaignStatsLinks model constructor.
+     * @property {module:model/GetContactCampaignStatsLinks}
+     */
+    GetContactCampaignStatsLinks: GetContactCampaignStatsLinks,
+    /**
+     * The GetContactCampaignStatsMessagesSent model constructor.
+     * @property {module:model/GetContactCampaignStatsMessagesSent}
+     */
+    GetContactCampaignStatsMessagesSent: GetContactCampaignStatsMessagesSent,
+    /**
+     * The GetContactCampaignStatsOpened model constructor.
+     * @property {module:model/GetContactCampaignStatsOpened}
+     */
+    GetContactCampaignStatsOpened: GetContactCampaignStatsOpened,
+    /**
+     * The GetContactCampaignStatsTransacAttributes model constructor.
+     * @property {module:model/GetContactCampaignStatsTransacAttributes}
+     */
+    GetContactCampaignStatsTransacAttributes: GetContactCampaignStatsTransacAttributes,
+    /**
+     * The GetContactCampaignStatsUnsubscriptions model constructor.
+     * @property {module:model/GetContactCampaignStatsUnsubscriptions}
+     */
+    GetContactCampaignStatsUnsubscriptions: GetContactCampaignStatsUnsubscriptions,
+    /**
+     * The GetContactCampaignStatsUnsubscriptionsAdminUnsubscription model constructor.
+     * @property {module:model/GetContactCampaignStatsUnsubscriptionsAdminUnsubscription}
+     */
+    GetContactCampaignStatsUnsubscriptionsAdminUnsubscription: GetContactCampaignStatsUnsubscriptionsAdminUnsubscription,
+    /**
+     * The GetContactCampaignStatsUnsubscriptionsUserUnsubscription model constructor.
+     * @property {module:model/GetContactCampaignStatsUnsubscriptionsUserUnsubscription}
+     */
+    GetContactCampaignStatsUnsubscriptionsUserUnsubscription: GetContactCampaignStatsUnsubscriptionsUserUnsubscription,
+    /**
      * The GetContactDetails model constructor.
      * @property {module:model/GetContactDetails}
      */
@@ -312,11 +337,6 @@
      * @property {module:model/GetContacts}
      */
     GetContacts: GetContacts,
-    /**
-     * The GetEmailCampaign model constructor.
-     * @property {module:model/GetEmailCampaign}
-     */
-    GetEmailCampaign: GetEmailCampaign,
     /**
      * The GetEmailCampaigns model constructor.
      * @property {module:model/GetEmailCampaigns}
@@ -328,30 +348,35 @@
      */
     GetEmailEventReport: GetEmailEventReport,
     /**
-     * The GetExtendedCampaignOverview model constructor.
-     * @property {module:model/GetExtendedCampaignOverview}
+     * The GetEmailEventReportEvents model constructor.
+     * @property {module:model/GetEmailEventReportEvents}
      */
-    GetExtendedCampaignOverview: GetExtendedCampaignOverview,
+    GetEmailEventReportEvents: GetEmailEventReportEvents,
+    /**
+     * The GetExtendedCampaignOverviewSender model constructor.
+     * @property {module:model/GetExtendedCampaignOverviewSender}
+     */
+    GetExtendedCampaignOverviewSender: GetExtendedCampaignOverviewSender,
     /**
      * The GetExtendedCampaignStats model constructor.
      * @property {module:model/GetExtendedCampaignStats}
      */
     GetExtendedCampaignStats: GetExtendedCampaignStats,
     /**
-     * The GetExtendedClient model constructor.
-     * @property {module:model/GetExtendedClient}
+     * The GetExtendedCampaignStatsLinksStats model constructor.
+     * @property {module:model/GetExtendedCampaignStatsLinksStats}
      */
-    GetExtendedClient: GetExtendedClient,
+    GetExtendedCampaignStatsLinksStats: GetExtendedCampaignStatsLinksStats,
     /**
-     * The GetExtendedContactDetails model constructor.
-     * @property {module:model/GetExtendedContactDetails}
+     * The GetExtendedClientAddress model constructor.
+     * @property {module:model/GetExtendedClientAddress}
      */
-    GetExtendedContactDetails: GetExtendedContactDetails,
+    GetExtendedClientAddress: GetExtendedClientAddress,
     /**
-     * The GetExtendedList model constructor.
-     * @property {module:model/GetExtendedList}
+     * The GetExtendedListCampaignStats model constructor.
+     * @property {module:model/GetExtendedListCampaignStats}
      */
-    GetExtendedList: GetExtendedList,
+    GetExtendedListCampaignStats: GetExtendedListCampaignStats,
     /**
      * The GetFolder model constructor.
      * @property {module:model/GetFolder}
@@ -398,10 +423,15 @@
      */
     GetLists: GetLists,
     /**
-     * The GetPlan model constructor.
-     * @property {module:model/GetPlan}
+     * The GetListsFolder model constructor.
+     * @property {module:model/GetListsFolder}
      */
-    GetPlan: GetPlan,
+    GetListsFolder: GetListsFolder,
+    /**
+     * The GetListsLists model constructor.
+     * @property {module:model/GetListsLists}
+     */
+    GetListsLists: GetListsLists,
     /**
      * The GetProcess model constructor.
      * @property {module:model/GetProcess}
@@ -418,20 +448,25 @@
      */
     GetReports: GetReports,
     /**
+     * The GetReportsReports model constructor.
+     * @property {module:model/GetReportsReports}
+     */
+    GetReportsReports: GetReportsReports,
+    /**
      * The GetSendersList model constructor.
      * @property {module:model/GetSendersList}
      */
     GetSendersList: GetSendersList,
     /**
-     * The GetSmsCampaign model constructor.
-     * @property {module:model/GetSmsCampaign}
+     * The GetSendersListIps model constructor.
+     * @property {module:model/GetSendersListIps}
      */
-    GetSmsCampaign: GetSmsCampaign,
+    GetSendersListIps: GetSendersListIps,
     /**
-     * The GetSmsCampaign1 model constructor.
-     * @property {module:model/GetSmsCampaign1}
+     * The GetSendersListSenders model constructor.
+     * @property {module:model/GetSendersListSenders}
      */
-    GetSmsCampaign1: GetSmsCampaign1,
+    GetSendersListSenders: GetSendersListSenders,
     /**
      * The GetSmsCampaignOverview model constructor.
      * @property {module:model/GetSmsCampaignOverview}
@@ -453,10 +488,20 @@
      */
     GetSmsEventReport: GetSmsEventReport,
     /**
+     * The GetSmsEventReportEvents model constructor.
+     * @property {module:model/GetSmsEventReportEvents}
+     */
+    GetSmsEventReportEvents: GetSmsEventReportEvents,
+    /**
      * The GetSmtpTemplateOverview model constructor.
      * @property {module:model/GetSmtpTemplateOverview}
      */
     GetSmtpTemplateOverview: GetSmtpTemplateOverview,
+    /**
+     * The GetSmtpTemplateOverviewSender model constructor.
+     * @property {module:model/GetSmtpTemplateOverviewSender}
+     */
+    GetSmtpTemplateOverviewSender: GetSmtpTemplateOverviewSender,
     /**
      * The GetSmtpTemplates model constructor.
      * @property {module:model/GetSmtpTemplates}
@@ -478,6 +523,11 @@
      */
     GetTransacSmsReport: GetTransacSmsReport,
     /**
+     * The GetTransacSmsReportReports model constructor.
+     * @property {module:model/GetTransacSmsReportReports}
+     */
+    GetTransacSmsReportReports: GetTransacSmsReportReports,
+    /**
      * The GetWebhook model constructor.
      * @property {module:model/GetWebhook}
      */
@@ -488,455 +538,20 @@
      */
     GetWebhooks: GetWebhooks,
     /**
-     * The InlineResponse200 model constructor.
-     * @property {module:model/InlineResponse200}
-     */
-    InlineResponse200: InlineResponse200,
-    /**
-     * The InlineResponse2001 model constructor.
-     * @property {module:model/InlineResponse2001}
-     */
-    InlineResponse2001: InlineResponse2001,
-    /**
-     * The InlineResponse20010 model constructor.
-     * @property {module:model/InlineResponse20010}
-     */
-    InlineResponse20010: InlineResponse20010,
-    /**
-     * The InlineResponse20011 model constructor.
-     * @property {module:model/InlineResponse20011}
-     */
-    InlineResponse20011: InlineResponse20011,
-    /**
-     * The InlineResponse20011Events model constructor.
-     * @property {module:model/InlineResponse20011Events}
-     */
-    InlineResponse20011Events: InlineResponse20011Events,
-    /**
-     * The InlineResponse20012 model constructor.
-     * @property {module:model/InlineResponse20012}
-     */
-    InlineResponse20012: InlineResponse20012,
-    /**
-     * The InlineResponse20012Sender model constructor.
-     * @property {module:model/InlineResponse20012Sender}
-     */
-    InlineResponse20012Sender: InlineResponse20012Sender,
-    /**
-     * The InlineResponse20012Templates model constructor.
-     * @property {module:model/InlineResponse20012Templates}
-     */
-    InlineResponse20012Templates: InlineResponse20012Templates,
-    /**
-     * The InlineResponse20013 model constructor.
-     * @property {module:model/InlineResponse20013}
-     */
-    InlineResponse20013: InlineResponse20013,
-    /**
-     * The InlineResponse20013Webhooks model constructor.
-     * @property {module:model/InlineResponse20013Webhooks}
-     */
-    InlineResponse20013Webhooks: InlineResponse20013Webhooks,
-    /**
-     * The InlineResponse20014 model constructor.
-     * @property {module:model/InlineResponse20014}
-     */
-    InlineResponse20014: InlineResponse20014,
-    /**
-     * The InlineResponse20014Contacts model constructor.
-     * @property {module:model/InlineResponse20014Contacts}
-     */
-    InlineResponse20014Contacts: InlineResponse20014Contacts,
-    /**
-     * The InlineResponse20015 model constructor.
-     * @property {module:model/InlineResponse20015}
-     */
-    InlineResponse20015: InlineResponse20015,
-    /**
-     * The InlineResponse20015Clicked model constructor.
-     * @property {module:model/InlineResponse20015Clicked}
-     */
-    InlineResponse20015Clicked: InlineResponse20015Clicked,
-    /**
-     * The InlineResponse20015Links model constructor.
-     * @property {module:model/InlineResponse20015Links}
-     */
-    InlineResponse20015Links: InlineResponse20015Links,
-    /**
-     * The InlineResponse20015MessagesSent model constructor.
-     * @property {module:model/InlineResponse20015MessagesSent}
-     */
-    InlineResponse20015MessagesSent: InlineResponse20015MessagesSent,
-    /**
-     * The InlineResponse20015Opened model constructor.
-     * @property {module:model/InlineResponse20015Opened}
-     */
-    InlineResponse20015Opened: InlineResponse20015Opened,
-    /**
-     * The InlineResponse20015TransacAttributes model constructor.
-     * @property {module:model/InlineResponse20015TransacAttributes}
-     */
-    InlineResponse20015TransacAttributes: InlineResponse20015TransacAttributes,
-    /**
-     * The InlineResponse20015Unsubscriptions model constructor.
-     * @property {module:model/InlineResponse20015Unsubscriptions}
-     */
-    InlineResponse20015Unsubscriptions: InlineResponse20015Unsubscriptions,
-    /**
-     * The InlineResponse20015UnsubscriptionsAdminUnsubscription model constructor.
-     * @property {module:model/InlineResponse20015UnsubscriptionsAdminUnsubscription}
-     */
-    InlineResponse20015UnsubscriptionsAdminUnsubscription: InlineResponse20015UnsubscriptionsAdminUnsubscription,
-    /**
-     * The InlineResponse20015UnsubscriptionsUserUnsubscription model constructor.
-     * @property {module:model/InlineResponse20015UnsubscriptionsUserUnsubscription}
-     */
-    InlineResponse20015UnsubscriptionsUserUnsubscription: InlineResponse20015UnsubscriptionsUserUnsubscription,
-    /**
-     * The InlineResponse20016 model constructor.
-     * @property {module:model/InlineResponse20016}
-     */
-    InlineResponse20016: InlineResponse20016,
-    /**
-     * The InlineResponse20016Attributes model constructor.
-     * @property {module:model/InlineResponse20016Attributes}
-     */
-    InlineResponse20016Attributes: InlineResponse20016Attributes,
-    /**
-     * The InlineResponse20016Enumeration model constructor.
-     * @property {module:model/InlineResponse20016Enumeration}
-     */
-    InlineResponse20016Enumeration: InlineResponse20016Enumeration,
-    /**
-     * The InlineResponse20017 model constructor.
-     * @property {module:model/InlineResponse20017}
-     */
-    InlineResponse20017: InlineResponse20017,
-    /**
-     * The InlineResponse20017Folders model constructor.
-     * @property {module:model/InlineResponse20017Folders}
-     */
-    InlineResponse20017Folders: InlineResponse20017Folders,
-    /**
-     * The InlineResponse20018 model constructor.
-     * @property {module:model/InlineResponse20018}
-     */
-    InlineResponse20018: InlineResponse20018,
-    /**
-     * The InlineResponse20018Lists model constructor.
-     * @property {module:model/InlineResponse20018Lists}
-     */
-    InlineResponse20018Lists: InlineResponse20018Lists,
-    /**
-     * The InlineResponse20019 model constructor.
-     * @property {module:model/InlineResponse20019}
-     */
-    InlineResponse20019: InlineResponse20019,
-    /**
-     * The InlineResponse2001ApiKeys model constructor.
-     * @property {module:model/InlineResponse2001ApiKeys}
-     */
-    InlineResponse2001ApiKeys: InlineResponse2001ApiKeys,
-    /**
-     * The InlineResponse2001Children model constructor.
-     * @property {module:model/InlineResponse2001Children}
-     */
-    InlineResponse2001Children: InlineResponse2001Children,
-    /**
-     * The InlineResponse2001Credits model constructor.
-     * @property {module:model/InlineResponse2001Credits}
-     */
-    InlineResponse2001Credits: InlineResponse2001Credits,
-    /**
-     * The InlineResponse2001Ips model constructor.
-     * @property {module:model/InlineResponse2001Ips}
-     */
-    InlineResponse2001Ips: InlineResponse2001Ips,
-    /**
-     * The InlineResponse2001Statistics model constructor.
-     * @property {module:model/InlineResponse2001Statistics}
-     */
-    InlineResponse2001Statistics: InlineResponse2001Statistics,
-    /**
-     * The InlineResponse2002 model constructor.
-     * @property {module:model/InlineResponse2002}
-     */
-    InlineResponse2002: InlineResponse2002,
-    /**
-     * The InlineResponse20020 model constructor.
-     * @property {module:model/InlineResponse20020}
-     */
-    InlineResponse20020: InlineResponse20020,
-    /**
-     * The InlineResponse20020CampaignStats model constructor.
-     * @property {module:model/InlineResponse20020CampaignStats}
-     */
-    InlineResponse20020CampaignStats: InlineResponse20020CampaignStats,
-    /**
-     * The InlineResponse20021 model constructor.
-     * @property {module:model/InlineResponse20021}
-     */
-    InlineResponse20021: InlineResponse20021,
-    /**
-     * The InlineResponse20021Campaigns model constructor.
-     * @property {module:model/InlineResponse20021Campaigns}
-     */
-    InlineResponse20021Campaigns: InlineResponse20021Campaigns,
-    /**
-     * The InlineResponse20021Statistics model constructor.
-     * @property {module:model/InlineResponse20021Statistics}
-     */
-    InlineResponse20021Statistics: InlineResponse20021Statistics,
-    /**
-     * The InlineResponse20022 model constructor.
-     * @property {module:model/InlineResponse20022}
-     */
-    InlineResponse20022: InlineResponse20022,
-    /**
-     * The InlineResponse20022Events model constructor.
-     * @property {module:model/InlineResponse20022Events}
-     */
-    InlineResponse20022Events: InlineResponse20022Events,
-    /**
-     * The InlineResponse20023 model constructor.
-     * @property {module:model/InlineResponse20023}
-     */
-    InlineResponse20023: InlineResponse20023,
-    /**
-     * The InlineResponse20024 model constructor.
-     * @property {module:model/InlineResponse20024}
-     */
-    InlineResponse20024: InlineResponse20024,
-    /**
-     * The InlineResponse20024Reports model constructor.
-     * @property {module:model/InlineResponse20024Reports}
-     */
-    InlineResponse20024Reports: InlineResponse20024Reports,
-    /**
-     * The InlineResponse2003 model constructor.
-     * @property {module:model/InlineResponse2003}
-     */
-    InlineResponse2003: InlineResponse2003,
-    /**
-     * The InlineResponse2003Child model constructor.
-     * @property {module:model/InlineResponse2003Child}
-     */
-    InlineResponse2003Child: InlineResponse2003Child,
-    /**
-     * The InlineResponse2003Reseller model constructor.
-     * @property {module:model/InlineResponse2003Reseller}
-     */
-    InlineResponse2003Reseller: InlineResponse2003Reseller,
-    /**
-     * The InlineResponse2004 model constructor.
-     * @property {module:model/InlineResponse2004}
-     */
-    InlineResponse2004: InlineResponse2004,
-    /**
-     * The InlineResponse2004Ips model constructor.
-     * @property {module:model/InlineResponse2004Ips}
-     */
-    InlineResponse2004Ips: InlineResponse2004Ips,
-    /**
-     * The InlineResponse2004Senders model constructor.
-     * @property {module:model/InlineResponse2004Senders}
-     */
-    InlineResponse2004Senders: InlineResponse2004Senders,
-    /**
-     * The InlineResponse2005 model constructor.
-     * @property {module:model/InlineResponse2005}
-     */
-    InlineResponse2005: InlineResponse2005,
-    /**
-     * The InlineResponse2005Ips model constructor.
-     * @property {module:model/InlineResponse2005Ips}
-     */
-    InlineResponse2005Ips: InlineResponse2005Ips,
-    /**
-     * The InlineResponse2006 model constructor.
-     * @property {module:model/InlineResponse2006}
-     */
-    InlineResponse2006: InlineResponse2006,
-    /**
-     * The InlineResponse2006Ips model constructor.
-     * @property {module:model/InlineResponse2006Ips}
-     */
-    InlineResponse2006Ips: InlineResponse2006Ips,
-    /**
-     * The InlineResponse2007 model constructor.
-     * @property {module:model/InlineResponse2007}
-     */
-    InlineResponse2007: InlineResponse2007,
-    /**
-     * The InlineResponse2007Processes model constructor.
-     * @property {module:model/InlineResponse2007Processes}
-     */
-    InlineResponse2007Processes: InlineResponse2007Processes,
-    /**
-     * The InlineResponse2008 model constructor.
-     * @property {module:model/InlineResponse2008}
-     */
-    InlineResponse2008: InlineResponse2008,
-    /**
-     * The InlineResponse2008Campaigns model constructor.
-     * @property {module:model/InlineResponse2008Campaigns}
-     */
-    InlineResponse2008Campaigns: InlineResponse2008Campaigns,
-    /**
-     * The InlineResponse2008Recipients model constructor.
-     * @property {module:model/InlineResponse2008Recipients}
-     */
-    InlineResponse2008Recipients: InlineResponse2008Recipients,
-    /**
-     * The InlineResponse2008RecipientsExclusionLists model constructor.
-     * @property {module:model/InlineResponse2008RecipientsExclusionLists}
-     */
-    InlineResponse2008RecipientsExclusionLists: InlineResponse2008RecipientsExclusionLists,
-    /**
-     * The InlineResponse2008RecipientsLists model constructor.
-     * @property {module:model/InlineResponse2008RecipientsLists}
-     */
-    InlineResponse2008RecipientsLists: InlineResponse2008RecipientsLists,
-    /**
-     * The InlineResponse2008Sender model constructor.
-     * @property {module:model/InlineResponse2008Sender}
-     */
-    InlineResponse2008Sender: InlineResponse2008Sender,
-    /**
-     * The InlineResponse2008Statistics model constructor.
-     * @property {module:model/InlineResponse2008Statistics}
-     */
-    InlineResponse2008Statistics: InlineResponse2008Statistics,
-    /**
-     * The InlineResponse2008StatisticsCampaignStats model constructor.
-     * @property {module:model/InlineResponse2008StatisticsCampaignStats}
-     */
-    InlineResponse2008StatisticsCampaignStats: InlineResponse2008StatisticsCampaignStats,
-    /**
-     * The InlineResponse2008StatisticsLinksStats model constructor.
-     * @property {module:model/InlineResponse2008StatisticsLinksStats}
-     */
-    InlineResponse2008StatisticsLinksStats: InlineResponse2008StatisticsLinksStats,
-    /**
-     * The InlineResponse2009 model constructor.
-     * @property {module:model/InlineResponse2009}
-     */
-    InlineResponse2009: InlineResponse2009,
-    /**
-     * The InlineResponse2009Reports model constructor.
-     * @property {module:model/InlineResponse2009Reports}
-     */
-    InlineResponse2009Reports: InlineResponse2009Reports,
-    /**
-     * The InlineResponse200Address model constructor.
-     * @property {module:model/InlineResponse200Address}
-     */
-    InlineResponse200Address: InlineResponse200Address,
-    /**
-     * The InlineResponse200MarketingAutomation model constructor.
-     * @property {module:model/InlineResponse200MarketingAutomation}
-     */
-    InlineResponse200MarketingAutomation: InlineResponse200MarketingAutomation,
-    /**
-     * The InlineResponse200Plan model constructor.
-     * @property {module:model/InlineResponse200Plan}
-     */
-    InlineResponse200Plan: InlineResponse200Plan,
-    /**
-     * The InlineResponse200Relay model constructor.
-     * @property {module:model/InlineResponse200Relay}
-     */
-    InlineResponse200Relay: InlineResponse200Relay,
-    /**
-     * The InlineResponse200RelayData model constructor.
-     * @property {module:model/InlineResponse200RelayData}
-     */
-    InlineResponse200RelayData: InlineResponse200RelayData,
-    /**
-     * The InlineResponse201 model constructor.
-     * @property {module:model/InlineResponse201}
-     */
-    InlineResponse201: InlineResponse201,
-    /**
-     * The InlineResponse2011 model constructor.
-     * @property {module:model/InlineResponse2011}
-     */
-    InlineResponse2011: InlineResponse2011,
-    /**
-     * The InlineResponse2012 model constructor.
-     * @property {module:model/InlineResponse2012}
-     */
-    InlineResponse2012: InlineResponse2012,
-    /**
-     * The InlineResponse2013 model constructor.
-     * @property {module:model/InlineResponse2013}
-     */
-    InlineResponse2013: InlineResponse2013,
-    /**
-     * The InlineResponse2014 model constructor.
-     * @property {module:model/InlineResponse2014}
-     */
-    InlineResponse2014: InlineResponse2014,
-    /**
-     * The InlineResponse2014Contacts model constructor.
-     * @property {module:model/InlineResponse2014Contacts}
-     */
-    InlineResponse2014Contacts: InlineResponse2014Contacts,
-    /**
-     * The InlineResponse2015 model constructor.
-     * @property {module:model/InlineResponse2015}
-     */
-    InlineResponse2015: InlineResponse2015,
-    /**
-     * The InlineResponse202 model constructor.
-     * @property {module:model/InlineResponse202}
-     */
-    InlineResponse202: InlineResponse202,
-    /**
-     * The InlineResponse400 model constructor.
-     * @property {module:model/InlineResponse400}
-     */
-    InlineResponse400: InlineResponse400,
-    /**
-     * The InlineResponse4001 model constructor.
-     * @property {module:model/InlineResponse4001}
-     */
-    InlineResponse4001: InlineResponse4001,
-    /**
-     * The InlineResponse403 model constructor.
-     * @property {module:model/InlineResponse403}
-     */
-    InlineResponse403: InlineResponse403,
-    /**
-     * The IpId model constructor.
-     * @property {module:model/IpId}
-     */
-    IpId: IpId,
-    /**
-     * The IpId1 model constructor.
-     * @property {module:model/IpId1}
-     */
-    IpId1: IpId1,
-    /**
      * The ManageIp model constructor.
      * @property {module:model/ManageIp}
      */
     ManageIp: ManageIp,
     /**
-     * The Name model constructor.
-     * @property {module:model/Name}
-     */
-    Name: Name,
-    /**
-     * The Name1 model constructor.
-     * @property {module:model/Name1}
-     */
-    Name1: Name1,
-    /**
      * The PostContactInfo model constructor.
      * @property {module:model/PostContactInfo}
      */
     PostContactInfo: PostContactInfo,
+    /**
+     * The PostContactInfoContacts model constructor.
+     * @property {module:model/PostContactInfoContacts}
+     */
+    PostContactInfoContacts: PostContactInfoContacts,
     /**
      * The PostSendFailed model constructor.
      * @property {module:model/PostSendFailed}
@@ -948,90 +563,65 @@
      */
     PostSendSmsTestFailed: PostSendSmsTestFailed,
     /**
-     * The RecipientExport model constructor.
-     * @property {module:model/RecipientExport}
-     */
-    RecipientExport: RecipientExport,
-    /**
-     * The RecipientExport1 model constructor.
-     * @property {module:model/RecipientExport1}
-     */
-    RecipientExport1: RecipientExport1,
-    /**
      * The RemainingCreditModel model constructor.
      * @property {module:model/RemainingCreditModel}
      */
     RemainingCreditModel: RemainingCreditModel,
+    /**
+     * The RemainingCreditModelChild model constructor.
+     * @property {module:model/RemainingCreditModelChild}
+     */
+    RemainingCreditModelChild: RemainingCreditModelChild,
+    /**
+     * The RemainingCreditModelReseller model constructor.
+     * @property {module:model/RemainingCreditModelReseller}
+     */
+    RemainingCreditModelReseller: RemainingCreditModelReseller,
     /**
      * The RemoveCredits model constructor.
      * @property {module:model/RemoveCredits}
      */
     RemoveCredits: RemoveCredits,
     /**
-     * The RemoveCredits1 model constructor.
-     * @property {module:model/RemoveCredits1}
-     */
-    RemoveCredits1: RemoveCredits1,
-    /**
      * The RequestContactExport model constructor.
      * @property {module:model/RequestContactExport}
      */
     RequestContactExport: RequestContactExport,
-    /**
-     * The RequestContactExport1 model constructor.
-     * @property {module:model/RequestContactExport1}
-     */
-    RequestContactExport1: RequestContactExport1,
     /**
      * The RequestContactImport model constructor.
      * @property {module:model/RequestContactImport}
      */
     RequestContactImport: RequestContactImport,
     /**
-     * The RequestContactImport1 model constructor.
-     * @property {module:model/RequestContactImport1}
+     * The RequestContactImportNewList model constructor.
+     * @property {module:model/RequestContactImportNewList}
      */
-    RequestContactImport1: RequestContactImport1,
+    RequestContactImportNewList: RequestContactImportNewList,
     /**
      * The RequestSMSRecipientExport model constructor.
      * @property {module:model/RequestSMSRecipientExport}
      */
     RequestSMSRecipientExport: RequestSMSRecipientExport,
     /**
-     * The ResellerChild model constructor.
-     * @property {module:model/ResellerChild}
-     */
-    ResellerChild: ResellerChild,
-    /**
-     * The ResellerChild1 model constructor.
-     * @property {module:model/ResellerChild1}
-     */
-    ResellerChild1: ResellerChild1,
-    /**
      * The SendEmail model constructor.
      * @property {module:model/SendEmail}
      */
     SendEmail: SendEmail,
     /**
-     * The SendEmail1 model constructor.
-     * @property {module:model/SendEmail1}
+     * The SendEmailAttachment model constructor.
+     * @property {module:model/SendEmailAttachment}
      */
-    SendEmail1: SendEmail1,
+    SendEmailAttachment: SendEmailAttachment,
     /**
      * The SendReport model constructor.
      * @property {module:model/SendReport}
      */
     SendReport: SendReport,
     /**
-     * The SendReport1 model constructor.
-     * @property {module:model/SendReport1}
+     * The SendReportEmail model constructor.
+     * @property {module:model/SendReportEmail}
      */
-    SendReport1: SendReport1,
-    /**
-     * The SendReport2 model constructor.
-     * @property {module:model/SendReport2}
-     */
-    SendReport2: SendReport2,
+    SendReportEmail: SendReportEmail,
     /**
      * The SendSms model constructor.
      * @property {module:model/SendSms}
@@ -1043,10 +633,35 @@
      */
     SendSmtpEmail: SendSmtpEmail,
     /**
-     * The SendSmtpEmail1 model constructor.
-     * @property {module:model/SendSmtpEmail1}
+     * The SendSmtpEmailAttachment model constructor.
+     * @property {module:model/SendSmtpEmailAttachment}
      */
-    SendSmtpEmail1: SendSmtpEmail1,
+    SendSmtpEmailAttachment: SendSmtpEmailAttachment,
+    /**
+     * The SendSmtpEmailBcc model constructor.
+     * @property {module:model/SendSmtpEmailBcc}
+     */
+    SendSmtpEmailBcc: SendSmtpEmailBcc,
+    /**
+     * The SendSmtpEmailCc model constructor.
+     * @property {module:model/SendSmtpEmailCc}
+     */
+    SendSmtpEmailCc: SendSmtpEmailCc,
+    /**
+     * The SendSmtpEmailReplyTo model constructor.
+     * @property {module:model/SendSmtpEmailReplyTo}
+     */
+    SendSmtpEmailReplyTo: SendSmtpEmailReplyTo,
+    /**
+     * The SendSmtpEmailSender model constructor.
+     * @property {module:model/SendSmtpEmailSender}
+     */
+    SendSmtpEmailSender: SendSmtpEmailSender,
+    /**
+     * The SendSmtpEmailTo model constructor.
+     * @property {module:model/SendSmtpEmailTo}
+     */
+    SendSmtpEmailTo: SendSmtpEmailTo,
     /**
      * The SendTemplateEmail model constructor.
      * @property {module:model/SendTemplateEmail}
@@ -1058,115 +673,15 @@
      */
     SendTestEmail: SendTestEmail,
     /**
-     * The SendTestEmail1 model constructor.
-     * @property {module:model/SendTestEmail1}
-     */
-    SendTestEmail1: SendTestEmail1,
-    /**
      * The SendTestSms model constructor.
      * @property {module:model/SendTestSms}
      */
     SendTestSms: SendTestSms,
     /**
-     * The SendTestSms1 model constructor.
-     * @property {module:model/SendTestSms1}
-     */
-    SendTestSms1: SendTestSms1,
-    /**
      * The SendTransacSms model constructor.
      * @property {module:model/SendTransacSms}
      */
     SendTransacSms: SendTransacSms,
-    /**
-     * The SendTransacSms1 model constructor.
-     * @property {module:model/SendTransacSms1}
-     */
-    SendTransacSms1: SendTransacSms1,
-    /**
-     * The Sender model constructor.
-     * @property {module:model/Sender}
-     */
-    Sender: Sender,
-    /**
-     * The Sender1 model constructor.
-     * @property {module:model/Sender1}
-     */
-    Sender1: Sender1,
-    /**
-     * The SendersIps model constructor.
-     * @property {module:model/SendersIps}
-     */
-    SendersIps: SendersIps,
-    /**
-     * The SmsCampaignsRecipients model constructor.
-     * @property {module:model/SmsCampaignsRecipients}
-     */
-    SmsCampaignsRecipients: SmsCampaignsRecipients,
-    /**
-     * The SmtpTemplate model constructor.
-     * @property {module:model/SmtpTemplate}
-     */
-    SmtpTemplate: SmtpTemplate,
-    /**
-     * The SmtpTemplate1 model constructor.
-     * @property {module:model/SmtpTemplate1}
-     */
-    SmtpTemplate1: SmtpTemplate1,
-    /**
-     * The SmtpemailAttachment model constructor.
-     * @property {module:model/SmtpemailAttachment}
-     */
-    SmtpemailAttachment: SmtpemailAttachment,
-    /**
-     * The SmtpemailBcc model constructor.
-     * @property {module:model/SmtpemailBcc}
-     */
-    SmtpemailBcc: SmtpemailBcc,
-    /**
-     * The SmtpemailCc model constructor.
-     * @property {module:model/SmtpemailCc}
-     */
-    SmtpemailCc: SmtpemailCc,
-    /**
-     * The SmtpemailReplyTo model constructor.
-     * @property {module:model/SmtpemailReplyTo}
-     */
-    SmtpemailReplyTo: SmtpemailReplyTo,
-    /**
-     * The SmtpemailSender model constructor.
-     * @property {module:model/SmtpemailSender}
-     */
-    SmtpemailSender: SmtpemailSender,
-    /**
-     * The SmtpemailTo model constructor.
-     * @property {module:model/SmtpemailTo}
-     */
-    SmtpemailTo: SmtpemailTo,
-    /**
-     * The SmtptemplatesSender model constructor.
-     * @property {module:model/SmtptemplatesSender}
-     */
-    SmtptemplatesSender: SmtptemplatesSender,
-    /**
-     * The SmtptemplatestemplateIdSender model constructor.
-     * @property {module:model/SmtptemplatestemplateIdSender}
-     */
-    SmtptemplatestemplateIdSender: SmtptemplatestemplateIdSender,
-    /**
-     * The SmtptemplatestemplateIdsendAttachment model constructor.
-     * @property {module:model/SmtptemplatestemplateIdsendAttachment}
-     */
-    SmtptemplatestemplateIdsendAttachment: SmtptemplatestemplateIdsendAttachment,
-    /**
-     * The Status model constructor.
-     * @property {module:model/Status}
-     */
-    Status: Status,
-    /**
-     * The Status1 model constructor.
-     * @property {module:model/Status1}
-     */
-    Status1: Status1,
     /**
      * The UpdateCampaignStatus model constructor.
      * @property {module:model/UpdateCampaignStatus}
@@ -1183,25 +698,25 @@
      */
     UpdateContact: UpdateContact,
     /**
-     * The UpdateContact1 model constructor.
-     * @property {module:model/UpdateContact1}
-     */
-    UpdateContact1: UpdateContact1,
-    /**
      * The UpdateEmailCampaign model constructor.
      * @property {module:model/UpdateEmailCampaign}
      */
     UpdateEmailCampaign: UpdateEmailCampaign,
     /**
+     * The UpdateEmailCampaignRecipients model constructor.
+     * @property {module:model/UpdateEmailCampaignRecipients}
+     */
+    UpdateEmailCampaignRecipients: UpdateEmailCampaignRecipients,
+    /**
+     * The UpdateEmailCampaignSender model constructor.
+     * @property {module:model/UpdateEmailCampaignSender}
+     */
+    UpdateEmailCampaignSender: UpdateEmailCampaignSender,
+    /**
      * The UpdateList model constructor.
      * @property {module:model/UpdateList}
      */
     UpdateList: UpdateList,
-    /**
-     * The UpdateList1 model constructor.
-     * @property {module:model/UpdateList1}
-     */
-    UpdateList1: UpdateList1,
     /**
      * The UpdateSender model constructor.
      * @property {module:model/UpdateSender}
@@ -1213,25 +728,60 @@
      */
     UpdateSmsCampaign: UpdateSmsCampaign,
     /**
-     * The UpdateSmsCampaign1 model constructor.
-     * @property {module:model/UpdateSmsCampaign1}
-     */
-    UpdateSmsCampaign1: UpdateSmsCampaign1,
-    /**
      * The UpdateSmtpTemplate model constructor.
      * @property {module:model/UpdateSmtpTemplate}
      */
     UpdateSmtpTemplate: UpdateSmtpTemplate,
+    /**
+     * The UpdateSmtpTemplateSender model constructor.
+     * @property {module:model/UpdateSmtpTemplateSender}
+     */
+    UpdateSmtpTemplateSender: UpdateSmtpTemplateSender,
     /**
      * The UpdateWebhook model constructor.
      * @property {module:model/UpdateWebhook}
      */
     UpdateWebhook: UpdateWebhook,
     /**
-     * The UpdateWebhook1 model constructor.
-     * @property {module:model/UpdateWebhook1}
+     * The GetChildInfo model constructor.
+     * @property {module:model/GetChildInfo}
      */
-    UpdateWebhook1: UpdateWebhook1,
+    GetChildInfo: GetChildInfo,
+    /**
+     * The GetExtendedCampaignOverview model constructor.
+     * @property {module:model/GetExtendedCampaignOverview}
+     */
+    GetExtendedCampaignOverview: GetExtendedCampaignOverview,
+    /**
+     * The GetExtendedClient model constructor.
+     * @property {module:model/GetExtendedClient}
+     */
+    GetExtendedClient: GetExtendedClient,
+    /**
+     * The GetExtendedContactDetails model constructor.
+     * @property {module:model/GetExtendedContactDetails}
+     */
+    GetExtendedContactDetails: GetExtendedContactDetails,
+    /**
+     * The GetExtendedList model constructor.
+     * @property {module:model/GetExtendedList}
+     */
+    GetExtendedList: GetExtendedList,
+    /**
+     * The GetSmsCampaign model constructor.
+     * @property {module:model/GetSmsCampaign}
+     */
+    GetSmsCampaign: GetSmsCampaign,
+    /**
+     * The GetAccount model constructor.
+     * @property {module:model/GetAccount}
+     */
+    GetAccount: GetAccount,
+    /**
+     * The GetEmailCampaign model constructor.
+     * @property {module:model/GetEmailCampaign}
+     */
+    GetEmailCampaign: GetEmailCampaign,
     /**
      * The AccountApi service constructor.
      * @property {module:api/AccountApi}

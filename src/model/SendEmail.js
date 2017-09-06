@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SmtptemplatestemplateIdsendAttachment'], factory);
+    define(['ApiClient', 'model/SendEmailAttachment'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./SmtptemplatestemplateIdsendAttachment'));
+    module.exports = factory(require('../ApiClient'), require('./SendEmailAttachment'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.SendEmail = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SmtptemplatestemplateIdsendAttachment);
+    root.SendinBlueApi.SendEmail = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SendEmailAttachment);
   }
-}(this, function(ApiClient, SmtptemplatestemplateIdsendAttachment) {
+}(this, function(ApiClient, SendEmailAttachment) {
   'use strict';
 
 
@@ -86,7 +86,7 @@
         obj['attachmentUrl'] = ApiClient.convertToType(data['attachmentUrl'], 'String');
       }
       if (data.hasOwnProperty('attachment')) {
-        obj['attachment'] = ApiClient.convertToType(data['attachment'], [SmtptemplatestemplateIdsendAttachment]);
+        obj['attachment'] = ApiClient.convertToType(data['attachment'], [SendEmailAttachment]);
       }
       if (data.hasOwnProperty('headers')) {
         obj['headers'] = ApiClient.convertToType(data['headers'], {'String': 'String'});
@@ -125,7 +125,7 @@
   exports.prototype['attachmentUrl'] = undefined;
   /**
    * Pass the base64 content of the attachment. Extension allowed: gif, png, bmp, cgm, jpg, jpeg, tif, tiff, rtf, txt, css, shtml, html, htm, csv, zip, pdf, xml, ods, doc, docx, docm, ics, xls, xlsx, ppt, tar, and ez
-   * @member {Array.<module:model/SmtptemplatestemplateIdsendAttachment>} attachment
+   * @member {Array.<module:model/SendEmailAttachment>} attachment
    */
   exports.prototype['attachment'] = undefined;
   /**

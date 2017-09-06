@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **fileBody** | **String** | Mandatory if fileUrl is not defined. CSV content to be imported. Use semicolon to separate multiple attributes | [optional] 
 **listIds** | **[Number]** | Manadatory if newList is not defined. Ids of the lists in which to add the contacts | [optional] 
 **notifyUrl** | **String** | URL that will be called once the export process is finished | [optional] 
-**newList** | [**ContactsimportNewList**](ContactsimportNewList.md) |  | [optional] 
+**newList** | [**RequestContactImportNewList**](RequestContactImportNewList.md) |  | [optional] 
 
 

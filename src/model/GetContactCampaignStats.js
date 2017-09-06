@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20015Clicked', 'model/InlineResponse20015MessagesSent', 'model/InlineResponse20015Opened', 'model/InlineResponse20015TransacAttributes', 'model/InlineResponse20015Unsubscriptions'], factory);
+    define(['ApiClient', 'model/GetContactCampaignStatsClicked', 'model/GetContactCampaignStatsMessagesSent', 'model/GetContactCampaignStatsOpened', 'model/GetContactCampaignStatsTransacAttributes', 'model/GetContactCampaignStatsUnsubscriptions'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20015Clicked'), require('./InlineResponse20015MessagesSent'), require('./InlineResponse20015Opened'), require('./InlineResponse20015TransacAttributes'), require('./InlineResponse20015Unsubscriptions'));
+    module.exports = factory(require('../ApiClient'), require('./GetContactCampaignStatsClicked'), require('./GetContactCampaignStatsMessagesSent'), require('./GetContactCampaignStatsOpened'), require('./GetContactCampaignStatsTransacAttributes'), require('./GetContactCampaignStatsUnsubscriptions'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetContactCampaignStats = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20015Clicked, root.SendinBlueApi.InlineResponse20015MessagesSent, root.SendinBlueApi.InlineResponse20015Opened, root.SendinBlueApi.InlineResponse20015TransacAttributes, root.SendinBlueApi.InlineResponse20015Unsubscriptions);
+    root.SendinBlueApi.GetContactCampaignStats = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetContactCampaignStatsClicked, root.SendinBlueApi.GetContactCampaignStatsMessagesSent, root.SendinBlueApi.GetContactCampaignStatsOpened, root.SendinBlueApi.GetContactCampaignStatsTransacAttributes, root.SendinBlueApi.GetContactCampaignStatsUnsubscriptions);
   }
-}(this, function(ApiClient, InlineResponse20015Clicked, InlineResponse20015MessagesSent, InlineResponse20015Opened, InlineResponse20015TransacAttributes, InlineResponse20015Unsubscriptions) {
+}(this, function(ApiClient, GetContactCampaignStatsClicked, GetContactCampaignStatsMessagesSent, GetContactCampaignStatsOpened, GetContactCampaignStatsTransacAttributes, GetContactCampaignStatsUnsubscriptions) {
   'use strict';
 
 
@@ -71,63 +71,63 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('messagesSent')) {
-        obj['messagesSent'] = ApiClient.convertToType(data['messagesSent'], [InlineResponse20015MessagesSent]);
+        obj['messagesSent'] = ApiClient.convertToType(data['messagesSent'], [GetContactCampaignStatsMessagesSent]);
       }
       if (data.hasOwnProperty('hardBounces')) {
-        obj['hardBounces'] = ApiClient.convertToType(data['hardBounces'], [InlineResponse20015MessagesSent]);
+        obj['hardBounces'] = ApiClient.convertToType(data['hardBounces'], [GetContactCampaignStatsMessagesSent]);
       }
       if (data.hasOwnProperty('softBounces')) {
-        obj['softBounces'] = ApiClient.convertToType(data['softBounces'], [InlineResponse20015MessagesSent]);
+        obj['softBounces'] = ApiClient.convertToType(data['softBounces'], [GetContactCampaignStatsMessagesSent]);
       }
       if (data.hasOwnProperty('complaints')) {
-        obj['complaints'] = ApiClient.convertToType(data['complaints'], [InlineResponse20015MessagesSent]);
+        obj['complaints'] = ApiClient.convertToType(data['complaints'], [GetContactCampaignStatsMessagesSent]);
       }
       if (data.hasOwnProperty('unsubscriptions')) {
-        obj['unsubscriptions'] = InlineResponse20015Unsubscriptions.constructFromObject(data['unsubscriptions']);
+        obj['unsubscriptions'] = GetContactCampaignStatsUnsubscriptions.constructFromObject(data['unsubscriptions']);
       }
       if (data.hasOwnProperty('opened')) {
-        obj['opened'] = ApiClient.convertToType(data['opened'], [InlineResponse20015Opened]);
+        obj['opened'] = ApiClient.convertToType(data['opened'], [GetContactCampaignStatsOpened]);
       }
       if (data.hasOwnProperty('clicked')) {
-        obj['clicked'] = ApiClient.convertToType(data['clicked'], [InlineResponse20015Clicked]);
+        obj['clicked'] = ApiClient.convertToType(data['clicked'], [GetContactCampaignStatsClicked]);
       }
       if (data.hasOwnProperty('transacAttributes')) {
-        obj['transacAttributes'] = ApiClient.convertToType(data['transacAttributes'], [InlineResponse20015TransacAttributes]);
+        obj['transacAttributes'] = ApiClient.convertToType(data['transacAttributes'], [GetContactCampaignStatsTransacAttributes]);
       }
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/InlineResponse20015MessagesSent>} messagesSent
+   * @member {Array.<module:model/GetContactCampaignStatsMessagesSent>} messagesSent
    */
   exports.prototype['messagesSent'] = undefined;
   /**
-   * @member {Array.<module:model/InlineResponse20015MessagesSent>} hardBounces
+   * @member {Array.<module:model/GetContactCampaignStatsMessagesSent>} hardBounces
    */
   exports.prototype['hardBounces'] = undefined;
   /**
-   * @member {Array.<module:model/InlineResponse20015MessagesSent>} softBounces
+   * @member {Array.<module:model/GetContactCampaignStatsMessagesSent>} softBounces
    */
   exports.prototype['softBounces'] = undefined;
   /**
-   * @member {Array.<module:model/InlineResponse20015MessagesSent>} complaints
+   * @member {Array.<module:model/GetContactCampaignStatsMessagesSent>} complaints
    */
   exports.prototype['complaints'] = undefined;
   /**
-   * @member {module:model/InlineResponse20015Unsubscriptions} unsubscriptions
+   * @member {module:model/GetContactCampaignStatsUnsubscriptions} unsubscriptions
    */
   exports.prototype['unsubscriptions'] = undefined;
   /**
-   * @member {Array.<module:model/InlineResponse20015Opened>} opened
+   * @member {Array.<module:model/GetContactCampaignStatsOpened>} opened
    */
   exports.prototype['opened'] = undefined;
   /**
-   * @member {Array.<module:model/InlineResponse20015Clicked>} clicked
+   * @member {Array.<module:model/GetContactCampaignStatsClicked>} clicked
    */
   exports.prototype['clicked'] = undefined;
   /**
-   * @member {Array.<module:model/InlineResponse20015TransacAttributes>} transacAttributes
+   * @member {Array.<module:model/GetContactCampaignStatsTransacAttributes>} transacAttributes
    */
   exports.prototype['transacAttributes'] = undefined;
 

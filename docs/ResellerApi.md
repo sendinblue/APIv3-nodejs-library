@@ -17,34 +17,33 @@ Method | HTTP request | Description
 
 <a name="addCredits"></a>
 # **addCredits**
-> InlineResponse2003 addCredits(childId, addCredits)
+> RemainingCreditModel addCredits(childId, addCredits)
 
 Add Email and/or SMS credits to a specific child account
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
-var addCredits = new SendinBlueApi.AddCredits1(); // AddCredits1 | Values to post to add credit to a specific child account
+var addCredits = new SendinBlueApi.AddCredits(); // AddCredits | Values to post to add credit to a specific child account
 
+apiInstance.addCredits(childId, addCredits).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.addCredits(childId, addCredits, callback);
 ```
 
 ### Parameters
@@ -52,11 +51,11 @@ apiInstance.addCredits(childId, addCredits, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **childId** | **Number**| id of reseller&#39;s child | 
- **addCredits** | [**AddCredits1**](AddCredits1.md)| Values to post to add credit to a specific child account | 
+ **addCredits** | [**AddCredits**](AddCredits.md)| Values to post to add credit to a specific child account | 
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**RemainingCreditModel**](RemainingCreditModel.md)
 
 ### Authorization
 
@@ -75,28 +74,27 @@ Associate a dedicated IP to the child
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
-var ipId = new SendinBlueApi.IpId(); // IpId | IP's id
+var ipId = new SendinBlueApi.ManageIp(); // ManageIp | IP's id
 
+apiInstance.associateIpToChild(childId, ipId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.associateIpToChild(childId, ipId, callback);
 ```
 
 ### Parameters
@@ -104,7 +102,7 @@ apiInstance.associateIpToChild(childId, ipId, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **childId** | **Number**| id of reseller&#39;s child | 
- **ipId** | [**IpId**](IpId.md)| IP&#39;s id | 
+ **ipId** | [**ManageIp**](ManageIp.md)| IP&#39;s id | 
 
 ### Return type
 
@@ -121,44 +119,43 @@ null (empty response body)
 
 <a name="createResellerChild"></a>
 # **createResellerChild**
-> InlineResponse201 createResellerChild(opts)
+> CreateModel createResellerChild(opts)
 
 Creates a reseller child
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ResellerApi();
 
 var opts = { 
-  'resellerChild': new SendinBlueApi.ResellerChild() // ResellerChild | reseller child to add
+  'resellerChild': new SendinBlueApi.CreateChild() // CreateChild | reseller child to add
 };
+apiInstance.createResellerChild(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createResellerChild(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resellerChild** | [**ResellerChild**](ResellerChild.md)| reseller child to add | [optional] 
+ **resellerChild** | [**CreateChild**](CreateChild.md)| reseller child to add | [optional] 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateModel**](CreateModel.md)
 
 ### Authorization
 
@@ -177,26 +174,25 @@ Deletes a single reseller child based on the childId supplied
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
+apiInstance.deleteResellerChild(childId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteResellerChild(childId, callback);
 ```
 
 ### Parameters
@@ -226,28 +222,27 @@ Dissociate a dedicated IP to the child
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
-var ipId = new SendinBlueApi.IpId1(); // IpId1 | IP's id
+var ipId = new SendinBlueApi.ManageIp(); // ManageIp | IP's id
 
+apiInstance.dissociateIpFromChild(childId, ipId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.dissociateIpFromChild(childId, ipId, callback);
 ```
 
 ### Parameters
@@ -255,7 +250,7 @@ apiInstance.dissociateIpFromChild(childId, ipId, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **childId** | **Number**| id of reseller&#39;s child | 
- **ipId** | [**IpId1**](IpId1.md)| IP&#39;s id | 
+ **ipId** | [**ManageIp**](ManageIp.md)| IP&#39;s id | 
 
 ### Return type
 
@@ -272,32 +267,31 @@ null (empty response body)
 
 <a name="getChildInfo"></a>
 # **getChildInfo**
-> InlineResponse2002 getChildInfo(childId)
+> GetChildInfo getChildInfo(childId)
 
 Gets the info about a specific child account
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
+apiInstance.getChildInfo(childId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getChildInfo(childId, callback);
 ```
 
 ### Parameters
@@ -308,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**GetChildInfo**](GetChildInfo.md)
 
 ### Authorization
 
@@ -321,29 +315,28 @@ Name | Type | Description  | Notes
 
 <a name="getResellerChilds"></a>
 # **getResellerChilds**
-> InlineResponse2001 getResellerChilds()
+> GetChildrenList getResellerChilds()
 
 Gets the list of all reseller&#39;s children accounts
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ResellerApi();
+apiInstance.getResellerChilds().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getResellerChilds(callback);
 ```
 
 ### Parameters
@@ -351,7 +344,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetChildrenList**](GetChildrenList.md)
 
 ### Authorization
 
@@ -364,34 +357,33 @@ This endpoint does not need any parameter.
 
 <a name="removeCredits"></a>
 # **removeCredits**
-> InlineResponse2003 removeCredits(childId, removeCredits)
+> RemainingCreditModel removeCredits(childId, removeCredits)
 
 Remove Email and/or SMS credits from a specific child account
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
-var removeCredits = new SendinBlueApi.RemoveCredits1(); // RemoveCredits1 | Values to post to remove email or SMS credits from a specific child account
+var removeCredits = new SendinBlueApi.RemoveCredits(); // RemoveCredits | Values to post to remove email or SMS credits from a specific child account
 
+apiInstance.removeCredits(childId, removeCredits).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.removeCredits(childId, removeCredits, callback);
 ```
 
 ### Parameters
@@ -399,11 +391,11 @@ apiInstance.removeCredits(childId, removeCredits, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **childId** | **Number**| id of reseller&#39;s child | 
- **removeCredits** | [**RemoveCredits1**](RemoveCredits1.md)| Values to post to remove email or SMS credits from a specific child account | 
+ **removeCredits** | [**RemoveCredits**](RemoveCredits.md)| Values to post to remove email or SMS credits from a specific child account | 
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**RemainingCreditModel**](RemainingCreditModel.md)
 
 ### Authorization
 
@@ -422,28 +414,27 @@ Updates infos of reseller&#39;s child based on the childId supplied
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
-var resellerChild = new SendinBlueApi.ResellerChild1(); // ResellerChild1 | values to update in child profile
+var resellerChild = new SendinBlueApi.UpdateChild(); // UpdateChild | values to update in child profile
 
+apiInstance.updateResellerChild(childId, resellerChild).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateResellerChild(childId, resellerChild, callback);
 ```
 
 ### Parameters
@@ -451,7 +442,7 @@ apiInstance.updateResellerChild(childId, resellerChild, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **childId** | **Number**| id of reseller&#39;s child | 
- **resellerChild** | [**ResellerChild1**](ResellerChild1.md)| values to update in child profile | 
+ **resellerChild** | [**UpdateChild**](UpdateChild.md)| values to update in child profile | 
 
 ### Return type
 

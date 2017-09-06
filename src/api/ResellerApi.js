@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddCredits1', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse201', 'model/InlineResponse403', 'model/IpId', 'model/IpId1', 'model/RemoveCredits1', 'model/ResellerChild', 'model/ResellerChild1'], factory);
+    define(['ApiClient', 'model/AddCredits', 'model/CreateChild', 'model/CreateModel', 'model/ErrorModel', 'model/GetChildInfo', 'model/GetChildrenList', 'model/ManageIp', 'model/RemainingCreditModel', 'model/RemoveCredits', 'model/UpdateChild'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AddCredits1'), require('../model/InlineResponse2001'), require('../model/InlineResponse2002'), require('../model/InlineResponse2003'), require('../model/InlineResponse201'), require('../model/InlineResponse403'), require('../model/IpId'), require('../model/IpId1'), require('../model/RemoveCredits1'), require('../model/ResellerChild'), require('../model/ResellerChild1'));
+    module.exports = factory(require('../ApiClient'), require('../model/AddCredits'), require('../model/CreateChild'), require('../model/CreateModel'), require('../model/ErrorModel'), require('../model/GetChildInfo'), require('../model/GetChildrenList'), require('../model/ManageIp'), require('../model/RemainingCreditModel'), require('../model/RemoveCredits'), require('../model/UpdateChild'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.ResellerApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.AddCredits1, root.SendinBlueApi.InlineResponse2001, root.SendinBlueApi.InlineResponse2002, root.SendinBlueApi.InlineResponse2003, root.SendinBlueApi.InlineResponse201, root.SendinBlueApi.InlineResponse403, root.SendinBlueApi.IpId, root.SendinBlueApi.IpId1, root.SendinBlueApi.RemoveCredits1, root.SendinBlueApi.ResellerChild, root.SendinBlueApi.ResellerChild1);
+    root.SendinBlueApi.ResellerApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.AddCredits, root.SendinBlueApi.CreateChild, root.SendinBlueApi.CreateModel, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetChildInfo, root.SendinBlueApi.GetChildrenList, root.SendinBlueApi.ManageIp, root.SendinBlueApi.RemainingCreditModel, root.SendinBlueApi.RemoveCredits, root.SendinBlueApi.UpdateChild);
   }
-}(this, function(ApiClient, AddCredits1, InlineResponse2001, InlineResponse2002, InlineResponse2003, InlineResponse201, InlineResponse403, IpId, IpId1, RemoveCredits1, ResellerChild, ResellerChild1) {
+}(this, function(ApiClient, AddCredits, CreateChild, CreateModel, ErrorModel, GetChildInfo, GetChildrenList, ManageIp, RemainingCreditModel, RemoveCredits, UpdateChild) {
   'use strict';
 
   /**
@@ -48,22 +48,14 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the addCredits operation.
-     * @callback module:api/ResellerApi~addCreditsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2003} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add Email and/or SMS credits to a specific child account
      * @param {Number} childId id of reseller&#39;s child
-     * @param {module:model/AddCredits1} addCredits Values to post to add credit to a specific child account
-     * @param {module:api/ResellerApi~addCreditsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2003}
+     * @param {module:model/AddCredits} addCredits Values to post to add credit to a specific child account
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemainingCreditModel} and HTTP response
      */
-    this.addCredits = function(childId, addCredits, callback) {
+    this.addCreditsWithHttpInfo = function(childId, addCredits) {
       var postBody = addCredits;
 
       // verify the required parameter 'childId' is set
@@ -90,30 +82,36 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2003;
+      var returnType = RemainingCreditModel;
 
       return this.apiClient.callApi(
         '/reseller/children/{childId}/credits/add', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the associateIpToChild operation.
-     * @callback module:api/ResellerApi~associateIpToChildCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Add Email and/or SMS credits to a specific child account
+     * @param {Number} childId id of reseller&#39;s child
+     * @param {module:model/AddCredits} addCredits Values to post to add credit to a specific child account
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemainingCreditModel}
      */
+    this.addCredits = function(childId, addCredits) {
+      return this.addCreditsWithHttpInfo(childId, addCredits)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Associate a dedicated IP to the child
      * @param {Number} childId id of reseller&#39;s child
-     * @param {module:model/IpId} ipId IP&#39;s id
-     * @param {module:api/ResellerApi~associateIpToChildCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/ManageIp} ipId IP&#39;s id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.associateIpToChild = function(childId, ipId, callback) {
+    this.associateIpToChildWithHttpInfo = function(childId, ipId) {
       var postBody = ipId;
 
       // verify the required parameter 'childId' is set
@@ -145,26 +143,31 @@
       return this.apiClient.callApi(
         '/reseller/children/{childId}/ips/associate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the createResellerChild operation.
-     * @callback module:api/ResellerApi~createResellerChildCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Associate a dedicated IP to the child
+     * @param {Number} childId id of reseller&#39;s child
+     * @param {module:model/ManageIp} ipId IP&#39;s id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.associateIpToChild = function(childId, ipId) {
+      return this.associateIpToChildWithHttpInfo(childId, ipId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Creates a reseller child
      * @param {Object} opts Optional parameters
-     * @param {module:model/ResellerChild} opts.resellerChild reseller child to add
-     * @param {module:api/ResellerApi~createResellerChildCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @param {module:model/CreateChild} opts.resellerChild reseller child to add
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
      */
-    this.createResellerChild = function(opts, callback) {
+    this.createResellerChildWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = opts['resellerChild'];
 
@@ -181,29 +184,35 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse201;
+      var returnType = CreateModel;
 
       return this.apiClient.callApi(
         '/reseller/children', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteResellerChild operation.
-     * @callback module:api/ResellerApi~deleteResellerChildCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Creates a reseller child
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateChild} opts.resellerChild reseller child to add
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
      */
+    this.createResellerChild = function(opts) {
+      return this.createResellerChildWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Deletes a single reseller child based on the childId supplied
      * @param {Number} childId id of reseller&#39;s child
-     * @param {module:api/ResellerApi~deleteResellerChildCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.deleteResellerChild = function(childId, callback) {
+    this.deleteResellerChildWithHttpInfo = function(childId) {
       var postBody = null;
 
       // verify the required parameter 'childId' is set
@@ -230,25 +239,30 @@
       return this.apiClient.callApi(
         '/reseller/children/{childId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the dissociateIpFromChild operation.
-     * @callback module:api/ResellerApi~dissociateIpFromChildCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Deletes a single reseller child based on the childId supplied
+     * @param {Number} childId id of reseller&#39;s child
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.deleteResellerChild = function(childId) {
+      return this.deleteResellerChildWithHttpInfo(childId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Dissociate a dedicated IP to the child
      * @param {Number} childId id of reseller&#39;s child
-     * @param {module:model/IpId1} ipId IP&#39;s id
-     * @param {module:api/ResellerApi~dissociateIpFromChildCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/ManageIp} ipId IP&#39;s id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.dissociateIpFromChild = function(childId, ipId, callback) {
+    this.dissociateIpFromChildWithHttpInfo = function(childId, ipId) {
       var postBody = ipId;
 
       // verify the required parameter 'childId' is set
@@ -280,25 +294,30 @@
       return this.apiClient.callApi(
         '/reseller/children/{childId}/ips/dissociate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getChildInfo operation.
-     * @callback module:api/ResellerApi~getChildInfoCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Dissociate a dedicated IP to the child
+     * @param {Number} childId id of reseller&#39;s child
+     * @param {module:model/ManageIp} ipId IP&#39;s id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.dissociateIpFromChild = function(childId, ipId) {
+      return this.dissociateIpFromChildWithHttpInfo(childId, ipId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Gets the info about a specific child account
      * @param {Number} childId id of reseller&#39;s child
-     * @param {module:api/ResellerApi~getChildInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2002}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildInfo} and HTTP response
      */
-    this.getChildInfo = function(childId, callback) {
+    this.getChildInfoWithHttpInfo = function(childId) {
       var postBody = null;
 
       // verify the required parameter 'childId' is set
@@ -320,29 +339,33 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2002;
+      var returnType = GetChildInfo;
 
       return this.apiClient.callApi(
         '/reseller/children/{childId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getResellerChilds operation.
-     * @callback module:api/ResellerApi~getResellerChildsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Gets the info about a specific child account
+     * @param {Number} childId id of reseller&#39;s child
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChildInfo}
      */
+    this.getChildInfo = function(childId) {
+      return this.getChildInfoWithHttpInfo(childId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Gets the list of all reseller&#39;s children accounts
-     * @param {module:api/ResellerApi~getResellerChildsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildrenList} and HTTP response
      */
-    this.getResellerChilds = function(callback) {
+    this.getResellerChildsWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -358,31 +381,34 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2001;
+      var returnType = GetChildrenList;
 
       return this.apiClient.callApi(
         '/reseller/children', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the removeCredits operation.
-     * @callback module:api/ResellerApi~removeCreditsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2003} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Gets the list of all reseller&#39;s children accounts
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChildrenList}
      */
+    this.getResellerChilds = function() {
+      return this.getResellerChildsWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Remove Email and/or SMS credits from a specific child account
      * @param {Number} childId id of reseller&#39;s child
-     * @param {module:model/RemoveCredits1} removeCredits Values to post to remove email or SMS credits from a specific child account
-     * @param {module:api/ResellerApi~removeCreditsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2003}
+     * @param {module:model/RemoveCredits} removeCredits Values to post to remove email or SMS credits from a specific child account
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemainingCreditModel} and HTTP response
      */
-    this.removeCredits = function(childId, removeCredits, callback) {
+    this.removeCreditsWithHttpInfo = function(childId, removeCredits) {
       var postBody = removeCredits;
 
       // verify the required parameter 'childId' is set
@@ -409,30 +435,36 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2003;
+      var returnType = RemainingCreditModel;
 
       return this.apiClient.callApi(
         '/reseller/children/{childId}/credits/remove', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the updateResellerChild operation.
-     * @callback module:api/ResellerApi~updateResellerChildCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Remove Email and/or SMS credits from a specific child account
+     * @param {Number} childId id of reseller&#39;s child
+     * @param {module:model/RemoveCredits} removeCredits Values to post to remove email or SMS credits from a specific child account
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemainingCreditModel}
      */
+    this.removeCredits = function(childId, removeCredits) {
+      return this.removeCreditsWithHttpInfo(childId, removeCredits)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Updates infos of reseller&#39;s child based on the childId supplied
      * @param {Number} childId id of reseller&#39;s child
-     * @param {module:model/ResellerChild1} resellerChild values to update in child profile
-     * @param {module:api/ResellerApi~updateResellerChildCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/UpdateChild} resellerChild values to update in child profile
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.updateResellerChild = function(childId, resellerChild, callback) {
+    this.updateResellerChildWithHttpInfo = function(childId, resellerChild) {
       var postBody = resellerChild;
 
       // verify the required parameter 'childId' is set
@@ -464,8 +496,21 @@
       return this.apiClient.callApi(
         '/reseller/children/{childId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Updates infos of reseller&#39;s child based on the childId supplied
+     * @param {Number} childId id of reseller&#39;s child
+     * @param {module:model/UpdateChild} resellerChild values to update in child profile
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.updateResellerChild = function(childId, resellerChild) {
+      return this.updateResellerChildWithHttpInfo(childId, resellerChild)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

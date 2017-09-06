@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20018Lists'], factory);
+    define(['ApiClient', 'model/GetListsLists'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20018Lists'));
+    module.exports = factory(require('../ApiClient'), require('./GetListsLists'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetLists = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20018Lists);
+    root.SendinBlueApi.GetLists = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetListsLists);
   }
-}(this, function(ApiClient, InlineResponse20018Lists) {
+}(this, function(ApiClient, GetListsLists) {
   'use strict';
 
 
@@ -45,7 +45,7 @@
    * @alias module:model/GetLists
    * @class
    * @param count {Number} Number of lists in your account
-   * @param lists {Array.<module:model/InlineResponse20018Lists>} Listing of all the lists available in your account
+   * @param lists {Array.<module:model/GetListsLists>} Listing of all the lists available in your account
    */
   var exports = function(count, lists) {
     var _this = this;
@@ -69,7 +69,7 @@
         obj['count'] = ApiClient.convertToType(data['count'], 'Number');
       }
       if (data.hasOwnProperty('lists')) {
-        obj['lists'] = ApiClient.convertToType(data['lists'], [InlineResponse20018Lists]);
+        obj['lists'] = ApiClient.convertToType(data['lists'], [GetListsLists]);
       }
     }
     return obj;
@@ -82,7 +82,7 @@
   exports.prototype['count'] = undefined;
   /**
    * Listing of all the lists available in your account
-   * @member {Array.<module:model/InlineResponse20018Lists>} lists
+   * @member {Array.<module:model/GetListsLists>} lists
    */
   exports.prototype['lists'] = undefined;
 

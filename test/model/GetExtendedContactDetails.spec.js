@@ -57,54 +57,6 @@
       //expect(instance).to.be.a(SendinBlueApi.GetExtendedContactDetails);
     });
 
-    it('should have the property email (base name: "email")', function() {
-      // uncomment below and update the code to test the property email
-      //var instane = new SendinBlueApi.GetExtendedContactDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instane = new SendinBlueApi.GetExtendedContactDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property emailBlacklisted (base name: "emailBlacklisted")', function() {
-      // uncomment below and update the code to test the property emailBlacklisted
-      //var instane = new SendinBlueApi.GetExtendedContactDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property smsBlacklisted (base name: "smsBlacklisted")', function() {
-      // uncomment below and update the code to test the property smsBlacklisted
-      //var instane = new SendinBlueApi.GetExtendedContactDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property modifiedAt (base name: "modifiedAt")', function() {
-      // uncomment below and update the code to test the property modifiedAt
-      //var instane = new SendinBlueApi.GetExtendedContactDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property listIds (base name: "listIds")', function() {
-      // uncomment below and update the code to test the property listIds
-      //var instane = new SendinBlueApi.GetExtendedContactDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property listUnsubscribed (base name: "listUnsubscribed")', function() {
-      // uncomment below and update the code to test the property listUnsubscribed
-      //var instane = new SendinBlueApi.GetExtendedContactDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property attributes (base name: "attributes")', function() {
-      // uncomment below and update the code to test the property attributes
-      //var instane = new SendinBlueApi.GetExtendedContactDetails();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

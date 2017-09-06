@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DeleteHardbounces1', 'model/InlineResponse20010', 'model/InlineResponse20011', 'model/InlineResponse20012', 'model/InlineResponse20012Templates', 'model/InlineResponse2009', 'model/InlineResponse201', 'model/InlineResponse2012', 'model/InlineResponse2013', 'model/InlineResponse400', 'model/InlineResponse403', 'model/SendEmail1', 'model/SendSmtpEmail1', 'model/SendTestEmail1', 'model/SmtpTemplate', 'model/SmtpTemplate1'], factory);
+    define(['ApiClient', 'model/CreateModel', 'model/CreateSmtpEmail', 'model/CreateSmtpTemplate', 'model/DeleteHardbounces', 'model/ErrorModel', 'model/GetAggregatedReport', 'model/GetEmailEventReport', 'model/GetReports', 'model/GetSmtpTemplateOverview', 'model/GetSmtpTemplates', 'model/PostSendFailed', 'model/SendEmail', 'model/SendSmtpEmail', 'model/SendTemplateEmail', 'model/SendTestEmail', 'model/UpdateSmtpTemplate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/DeleteHardbounces1'), require('../model/InlineResponse20010'), require('../model/InlineResponse20011'), require('../model/InlineResponse20012'), require('../model/InlineResponse20012Templates'), require('../model/InlineResponse2009'), require('../model/InlineResponse201'), require('../model/InlineResponse2012'), require('../model/InlineResponse2013'), require('../model/InlineResponse400'), require('../model/InlineResponse403'), require('../model/SendEmail1'), require('../model/SendSmtpEmail1'), require('../model/SendTestEmail1'), require('../model/SmtpTemplate'), require('../model/SmtpTemplate1'));
+    module.exports = factory(require('../ApiClient'), require('../model/CreateModel'), require('../model/CreateSmtpEmail'), require('../model/CreateSmtpTemplate'), require('../model/DeleteHardbounces'), require('../model/ErrorModel'), require('../model/GetAggregatedReport'), require('../model/GetEmailEventReport'), require('../model/GetReports'), require('../model/GetSmtpTemplateOverview'), require('../model/GetSmtpTemplates'), require('../model/PostSendFailed'), require('../model/SendEmail'), require('../model/SendSmtpEmail'), require('../model/SendTemplateEmail'), require('../model/SendTestEmail'), require('../model/UpdateSmtpTemplate'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.SMTPApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.DeleteHardbounces1, root.SendinBlueApi.InlineResponse20010, root.SendinBlueApi.InlineResponse20011, root.SendinBlueApi.InlineResponse20012, root.SendinBlueApi.InlineResponse20012Templates, root.SendinBlueApi.InlineResponse2009, root.SendinBlueApi.InlineResponse201, root.SendinBlueApi.InlineResponse2012, root.SendinBlueApi.InlineResponse2013, root.SendinBlueApi.InlineResponse400, root.SendinBlueApi.InlineResponse403, root.SendinBlueApi.SendEmail1, root.SendinBlueApi.SendSmtpEmail1, root.SendinBlueApi.SendTestEmail1, root.SendinBlueApi.SmtpTemplate, root.SendinBlueApi.SmtpTemplate1);
+    root.SendinBlueApi.SMTPApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateModel, root.SendinBlueApi.CreateSmtpEmail, root.SendinBlueApi.CreateSmtpTemplate, root.SendinBlueApi.DeleteHardbounces, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetAggregatedReport, root.SendinBlueApi.GetEmailEventReport, root.SendinBlueApi.GetReports, root.SendinBlueApi.GetSmtpTemplateOverview, root.SendinBlueApi.GetSmtpTemplates, root.SendinBlueApi.PostSendFailed, root.SendinBlueApi.SendEmail, root.SendinBlueApi.SendSmtpEmail, root.SendinBlueApi.SendTemplateEmail, root.SendinBlueApi.SendTestEmail, root.SendinBlueApi.UpdateSmtpTemplate);
   }
-}(this, function(ApiClient, DeleteHardbounces1, InlineResponse20010, InlineResponse20011, InlineResponse20012, InlineResponse20012Templates, InlineResponse2009, InlineResponse201, InlineResponse2012, InlineResponse2013, InlineResponse400, InlineResponse403, SendEmail1, SendSmtpEmail1, SendTestEmail1, SmtpTemplate, SmtpTemplate1) {
+}(this, function(ApiClient, CreateModel, CreateSmtpEmail, CreateSmtpTemplate, DeleteHardbounces, ErrorModel, GetAggregatedReport, GetEmailEventReport, GetReports, GetSmtpTemplateOverview, GetSmtpTemplates, PostSendFailed, SendEmail, SendSmtpEmail, SendTemplateEmail, SendTestEmail, UpdateSmtpTemplate) {
   'use strict';
 
   /**
@@ -48,21 +48,13 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the createSmtpTemplate operation.
-     * @callback module:api/SMTPApi~createSmtpTemplateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create an smtp template
-     * @param {module:model/SmtpTemplate} smtpTemplate values to update in smtp template
-     * @param {module:api/SMTPApi~createSmtpTemplateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @param {module:model/CreateSmtpTemplate} smtpTemplate values to update in smtp template
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
      */
-    this.createSmtpTemplate = function(smtpTemplate, callback) {
+    this.createSmtpTemplateWithHttpInfo = function(smtpTemplate) {
       var postBody = smtpTemplate;
 
       // verify the required parameter 'smtpTemplate' is set
@@ -83,31 +75,36 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse201;
+      var returnType = CreateModel;
 
       return this.apiClient.callApi(
         '/smtp/templates', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteHardbounces operation.
-     * @callback module:api/SMTPApi~deleteHardbouncesCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create an smtp template
+     * @param {module:model/CreateSmtpTemplate} smtpTemplate values to update in smtp template
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
      */
+    this.createSmtpTemplate = function(smtpTemplate) {
+      return this.createSmtpTemplateWithHttpInfo(smtpTemplate)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete hardbounces
      * Delete hardbounces. To use carefully (e.g. in case of temporary ISP failures)
      * @param {Object} opts Optional parameters
-     * @param {module:model/DeleteHardbounces1} opts.deleteHardbounces values to delete hardbounces
-     * @param {module:api/SMTPApi~deleteHardbouncesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/DeleteHardbounces} opts.deleteHardbounces values to delete hardbounces
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.deleteHardbounces = function(opts, callback) {
+    this.deleteHardbouncesWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = opts['deleteHardbounces'];
 
@@ -129,17 +126,24 @@
       return this.apiClient.callApi(
         '/smtp/deleteHardbounces', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getAggregatedSmtpReport operation.
-     * @callback module:api/SMTPApi~getAggregatedSmtpReportCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20010} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete hardbounces
+     * Delete hardbounces. To use carefully (e.g. in case of temporary ISP failures)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/DeleteHardbounces} opts.deleteHardbounces values to delete hardbounces
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.deleteHardbounces = function(opts) {
+      return this.deleteHardbouncesWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get your SMTP activity aggregated over a period of time
@@ -148,10 +152,9 @@
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Tag of the emails
-     * @param {module:api/SMTPApi~getAggregatedSmtpReportCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20010}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAggregatedReport} and HTTP response
      */
-    this.getAggregatedSmtpReport = function(opts, callback) {
+    this.getAggregatedSmtpReportWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -172,22 +175,31 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse20010;
+      var returnType = GetAggregatedReport;
 
       return this.apiClient.callApi(
         '/smtp/statistics/aggregatedReport', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getEmailEventReport operation.
-     * @callback module:api/SMTPApi~getEmailEventReportCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20011} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get your SMTP activity aggregated over a period of time
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
+     * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
+     * @param {String} opts.tag Tag of the emails
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAggregatedReport}
      */
+    this.getAggregatedSmtpReport = function(opts) {
+      return this.getAggregatedSmtpReportWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all your SMTP activity (unaggregated events)
@@ -202,10 +214,9 @@
      * @param {String} opts.tags Filter the report for tags (serialized and urlencoded array)
      * @param {String} opts.messageId Filter on a specific message id
      * @param {String} opts.templateId Filter on a specific template id
-     * @param {module:api/SMTPApi~getEmailEventReportCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20011}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetEmailEventReport} and HTTP response
      */
-    this.getEmailEventReport = function(opts, callback) {
+    this.getEmailEventReportWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -232,22 +243,37 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse20011;
+      var returnType = GetEmailEventReport;
 
       return this.apiClient.callApi(
         '/smtp/statistics/events', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getSmtpReport operation.
-     * @callback module:api/SMTPApi~getSmtpReportCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2009} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all your SMTP activity (unaggregated events)
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit Number limitation for the result returned (default to 50)
+     * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
+     * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
+     * @param {String} opts.email Filter the report for a specific email addresses
+     * @param {module:model/String} opts.event Filter the report for a specific event type
+     * @param {String} opts.tags Filter the report for tags (serialized and urlencoded array)
+     * @param {String} opts.messageId Filter on a specific message id
+     * @param {String} opts.templateId Filter on a specific template id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetEmailEventReport}
      */
+    this.getEmailEventReport = function(opts) {
+      return this.getEmailEventReportWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get your SMTP activity aggregated per day
@@ -258,10 +284,9 @@
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Tag of the emails
-     * @param {module:api/SMTPApi~getSmtpReportCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2009}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetReports} and HTTP response
      */
-    this.getSmtpReport = function(opts, callback) {
+    this.getSmtpReportWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -284,30 +309,40 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2009;
+      var returnType = GetReports;
 
       return this.apiClient.callApi(
         '/smtp/statistics/reports', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getSmtpTemplate operation.
-     * @callback module:api/SMTPApi~getSmtpTemplateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20012Templates} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get your SMTP activity aggregated per day
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit Number of documents returned per page (default to 50)
+     * @param {Number} opts.offset Index of the first document on the page (default to 0)
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD)
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
+     * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
+     * @param {String} opts.tag Tag of the emails
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetReports}
      */
+    this.getSmtpReport = function(opts) {
+      return this.getSmtpReportWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Returns the template informations
      * @param {String} templateId id of the template
-     * @param {module:api/SMTPApi~getSmtpTemplateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20012Templates}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmtpTemplateOverview} and HTTP response
      */
-    this.getSmtpTemplate = function(templateId, callback) {
+    this.getSmtpTemplateWithHttpInfo = function(templateId) {
       var postBody = null;
 
       // verify the required parameter 'templateId' is set
@@ -329,22 +364,27 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse20012Templates;
+      var returnType = GetSmtpTemplateOverview;
 
       return this.apiClient.callApi(
         '/smtp/templates/{templateId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getSmtpTemplates operation.
-     * @callback module:api/SMTPApi~getSmtpTemplatesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20012} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Returns the template informations
+     * @param {String} templateId id of the template
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmtpTemplateOverview}
      */
+    this.getSmtpTemplate = function(templateId) {
+      return this.getSmtpTemplateWithHttpInfo(templateId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get the list of SMTP templates
@@ -352,10 +392,9 @@
      * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
-     * @param {module:api/SMTPApi~getSmtpTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20012}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmtpTemplates} and HTTP response
      */
-    this.getSmtpTemplates = function(opts, callback) {
+    this.getSmtpTemplatesWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -375,31 +414,38 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse20012;
+      var returnType = GetSmtpTemplates;
 
       return this.apiClient.callApi(
         '/smtp/templates', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the sendTemplate operation.
-     * @callback module:api/SMTPApi~sendTemplateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2012} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get the list of SMTP templates
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false
+     * @param {Number} opts.limit Number of documents returned per page (default to 50)
+     * @param {Number} opts.offset Index of the first document in the page (default to 0)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmtpTemplates}
      */
+    this.getSmtpTemplates = function(opts) {
+      return this.getSmtpTemplatesWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Send a template
      * @param {String} templateId Id of the template
-     * @param {module:model/SendEmail1} sendEmail 
-     * @param {module:api/SMTPApi~sendTemplateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2012}
+     * @param {module:model/SendEmail} sendEmail 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendTemplateEmail} and HTTP response
      */
-    this.sendTemplate = function(templateId, sendEmail, callback) {
+    this.sendTemplateWithHttpInfo = function(templateId, sendEmail) {
       var postBody = sendEmail;
 
       // verify the required parameter 'templateId' is set
@@ -426,30 +472,36 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2012;
+      var returnType = SendTemplateEmail;
 
       return this.apiClient.callApi(
         '/smtp/templates/{templateId}/send', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the sendTestTemplate operation.
-     * @callback module:api/SMTPApi~sendTestTemplateCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Send a template
+     * @param {String} templateId Id of the template
+     * @param {module:model/SendEmail} sendEmail 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendTemplateEmail}
      */
+    this.sendTemplate = function(templateId, sendEmail) {
+      return this.sendTemplateWithHttpInfo(templateId, sendEmail)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Send a template to your test list
      * @param {String} templateId Id of the template
-     * @param {module:model/SendTestEmail1} sendTestEmail 
-     * @param {module:api/SMTPApi~sendTestTemplateCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/SendTestEmail} sendTestEmail 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.sendTestTemplate = function(templateId, sendTestEmail, callback) {
+    this.sendTestTemplateWithHttpInfo = function(templateId, sendTestEmail) {
       var postBody = sendTestEmail;
 
       // verify the required parameter 'templateId' is set
@@ -481,25 +533,30 @@
       return this.apiClient.callApi(
         '/smtp/templates/{templateId}/sendTest', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the sendTransacEmail operation.
-     * @callback module:api/SMTPApi~sendTransacEmailCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2013} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Send a template to your test list
+     * @param {String} templateId Id of the template
+     * @param {module:model/SendTestEmail} sendTestEmail 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.sendTestTemplate = function(templateId, sendTestEmail) {
+      return this.sendTestTemplateWithHttpInfo(templateId, sendTestEmail)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Send a transactional email
-     * @param {module:model/SendSmtpEmail1} sendSmtpEmail Values to send a transactional email
-     * @param {module:api/SMTPApi~sendTransacEmailCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2013}
+     * @param {module:model/SendSmtpEmail} sendSmtpEmail Values to send a transactional email
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateSmtpEmail} and HTTP response
      */
-    this.sendTransacEmail = function(sendSmtpEmail, callback) {
+    this.sendTransacEmailWithHttpInfo = function(sendSmtpEmail) {
       var postBody = sendSmtpEmail;
 
       // verify the required parameter 'sendSmtpEmail' is set
@@ -520,30 +577,35 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2013;
+      var returnType = CreateSmtpEmail;
 
       return this.apiClient.callApi(
         '/smtp/email', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the updateSmtpTemplate operation.
-     * @callback module:api/SMTPApi~updateSmtpTemplateCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Send a transactional email
+     * @param {module:model/SendSmtpEmail} sendSmtpEmail Values to send a transactional email
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateSmtpEmail}
      */
+    this.sendTransacEmail = function(sendSmtpEmail) {
+      return this.sendTransacEmailWithHttpInfo(sendSmtpEmail)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Updates an smtp templates
      * @param {String} templateId id of the template
-     * @param {module:model/SmtpTemplate1} smtpTemplate values to update in smtp template
-     * @param {module:api/SMTPApi~updateSmtpTemplateCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/UpdateSmtpTemplate} smtpTemplate values to update in smtp template
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.updateSmtpTemplate = function(templateId, smtpTemplate, callback) {
+    this.updateSmtpTemplateWithHttpInfo = function(templateId, smtpTemplate) {
       var postBody = smtpTemplate;
 
       // verify the required parameter 'templateId' is set
@@ -575,8 +637,21 @@
       return this.apiClient.callApi(
         '/smtp/templates/{templateId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Updates an smtp templates
+     * @param {String} templateId id of the template
+     * @param {module:model/UpdateSmtpTemplate} smtpTemplate values to update in smtp template
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.updateSmtpTemplate = function(templateId, smtpTemplate) {
+      return this.updateSmtpTemplateWithHttpInfo(templateId, smtpTemplate)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

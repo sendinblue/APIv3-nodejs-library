@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **count** | **Number** | Number of lists in your account | 
-**lists** | [**[InlineResponse20018Lists]**](InlineResponse20018Lists.md) | Listing of all the lists available in your account | 
+**lists** | [**[GetListsLists]**](GetListsLists.md) | Listing of all the lists available in your account | 
 
 

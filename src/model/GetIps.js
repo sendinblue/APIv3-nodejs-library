@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2006Ips'], factory);
+    define(['ApiClient', 'model/GetIp'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2006Ips'));
+    module.exports = factory(require('../ApiClient'), require('./GetIp'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetIps = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2006Ips);
+    root.SendinBlueApi.GetIps = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetIp);
   }
-}(this, function(ApiClient, InlineResponse2006Ips) {
+}(this, function(ApiClient, GetIp) {
   'use strict';
 
 
@@ -44,7 +44,7 @@
    * Constructs a new <code>GetIps</code>.
    * @alias module:model/GetIps
    * @class
-   * @param ips {Array.<module:model/InlineResponse2006Ips>} Dedicated IP(s) available on your account
+   * @param ips {Array.<module:model/GetIp>} Dedicated IP(s) available on your account
    */
   var exports = function(ips) {
     var _this = this;
@@ -64,7 +64,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('ips')) {
-        obj['ips'] = ApiClient.convertToType(data['ips'], [InlineResponse2006Ips]);
+        obj['ips'] = ApiClient.convertToType(data['ips'], [GetIp]);
       }
     }
     return obj;
@@ -72,7 +72,7 @@
 
   /**
    * Dedicated IP(s) available on your account
-   * @member {Array.<module:model/InlineResponse2006Ips>} ips
+   * @member {Array.<module:model/GetIp>} ips
    */
   exports.prototype['ips'] = undefined;
 

@@ -11,43 +11,42 @@ Method | HTTP request | Description
 
 <a name="createAttribute"></a>
 # **createAttribute**
-> InlineResponse201 createAttribute(createAttribute)
+> CreateModel createAttribute(createAttribute)
 
 Creates contact attributes
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.AttributesApi();
 
-var createAttribute = new SendinBlueApi.CreateAttribute1(); // CreateAttribute1 | Values to create an attribute
+var createAttribute = new SendinBlueApi.CreateAttribute(); // CreateAttribute | Values to create an attribute
 
+apiInstance.createAttribute(createAttribute).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createAttribute(createAttribute, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createAttribute** | [**CreateAttribute1**](CreateAttribute1.md)| Values to create an attribute | 
+ **createAttribute** | [**CreateAttribute**](CreateAttribute.md)| Values to create an attribute | 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateModel**](CreateModel.md)
 
 ### Authorization
 
@@ -66,26 +65,25 @@ Deletes an attribute
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.AttributesApi();
 
 var attributeId = "attributeId_example"; // String | id of the attribute
 
+apiInstance.deleteAttribute(attributeId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteAttribute(attributeId, callback);
 ```
 
 ### Parameters
@@ -109,29 +107,28 @@ null (empty response body)
 
 <a name="getAttributes"></a>
 # **getAttributes**
-> InlineResponse20016 getAttributes()
+> GetAttributes getAttributes()
 
 Lists all attributes
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.AttributesApi();
+apiInstance.getAttributes().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getAttributes(callback);
 ```
 
 ### Parameters
@@ -139,7 +136,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**GetAttributes**](GetAttributes.md)
 
 ### Authorization
 

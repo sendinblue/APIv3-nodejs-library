@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/EmailCampaign', 'model/EmailCampaigns', 'model/EmailTo', 'model/InlineResponse2008', 'model/InlineResponse2008Campaigns', 'model/InlineResponse201', 'model/InlineResponse202', 'model/InlineResponse400', 'model/InlineResponse403', 'model/RecipientExport', 'model/SendReport1', 'model/Status'], factory);
+    define(['ApiClient', 'model/CreateEmailCampaign', 'model/CreateModel', 'model/CreatedProcessId', 'model/EmailExportRecipients', 'model/ErrorModel', 'model/GetEmailCampaign', 'model/GetEmailCampaigns', 'model/PostSendFailed', 'model/SendReport', 'model/SendTestEmail', 'model/UpdateCampaignStatus', 'model/UpdateEmailCampaign'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/EmailCampaign'), require('../model/EmailCampaigns'), require('../model/EmailTo'), require('../model/InlineResponse2008'), require('../model/InlineResponse2008Campaigns'), require('../model/InlineResponse201'), require('../model/InlineResponse202'), require('../model/InlineResponse400'), require('../model/InlineResponse403'), require('../model/RecipientExport'), require('../model/SendReport1'), require('../model/Status'));
+    module.exports = factory(require('../ApiClient'), require('../model/CreateEmailCampaign'), require('../model/CreateModel'), require('../model/CreatedProcessId'), require('../model/EmailExportRecipients'), require('../model/ErrorModel'), require('../model/GetEmailCampaign'), require('../model/GetEmailCampaigns'), require('../model/PostSendFailed'), require('../model/SendReport'), require('../model/SendTestEmail'), require('../model/UpdateCampaignStatus'), require('../model/UpdateEmailCampaign'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.EmailCampaignsApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.EmailCampaign, root.SendinBlueApi.EmailCampaigns, root.SendinBlueApi.EmailTo, root.SendinBlueApi.InlineResponse2008, root.SendinBlueApi.InlineResponse2008Campaigns, root.SendinBlueApi.InlineResponse201, root.SendinBlueApi.InlineResponse202, root.SendinBlueApi.InlineResponse400, root.SendinBlueApi.InlineResponse403, root.SendinBlueApi.RecipientExport, root.SendinBlueApi.SendReport1, root.SendinBlueApi.Status);
+    root.SendinBlueApi.EmailCampaignsApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateEmailCampaign, root.SendinBlueApi.CreateModel, root.SendinBlueApi.CreatedProcessId, root.SendinBlueApi.EmailExportRecipients, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetEmailCampaign, root.SendinBlueApi.GetEmailCampaigns, root.SendinBlueApi.PostSendFailed, root.SendinBlueApi.SendReport, root.SendinBlueApi.SendTestEmail, root.SendinBlueApi.UpdateCampaignStatus, root.SendinBlueApi.UpdateEmailCampaign);
   }
-}(this, function(ApiClient, EmailCampaign, EmailCampaigns, EmailTo, InlineResponse2008, InlineResponse2008Campaigns, InlineResponse201, InlineResponse202, InlineResponse400, InlineResponse403, RecipientExport, SendReport1, Status) {
+}(this, function(ApiClient, CreateEmailCampaign, CreateModel, CreatedProcessId, EmailExportRecipients, ErrorModel, GetEmailCampaign, GetEmailCampaigns, PostSendFailed, SendReport, SendTestEmail, UpdateCampaignStatus, UpdateEmailCampaign) {
   'use strict';
 
   /**
@@ -48,21 +48,13 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the createEmailCampaign operation.
-     * @callback module:api/EmailCampaignsApi~createEmailCampaignCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create an email campaign
-     * @param {module:model/EmailCampaigns} emailCampaigns Values to create a campaign
-     * @param {module:api/EmailCampaignsApi~createEmailCampaignCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @param {module:model/CreateEmailCampaign} emailCampaigns Values to create a campaign
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
      */
-    this.createEmailCampaign = function(emailCampaigns, callback) {
+    this.createEmailCampaignWithHttpInfo = function(emailCampaigns) {
       var postBody = emailCampaigns;
 
       // verify the required parameter 'emailCampaigns' is set
@@ -83,29 +75,34 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse201;
+      var returnType = CreateModel;
 
       return this.apiClient.callApi(
         '/emailCampaigns', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteEmailCampaigns operation.
-     * @callback module:api/EmailCampaignsApi~deleteEmailCampaignsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create an email campaign
+     * @param {module:model/CreateEmailCampaign} emailCampaigns Values to create a campaign
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
      */
+    this.createEmailCampaign = function(emailCampaigns) {
+      return this.createEmailCampaignWithHttpInfo(emailCampaigns)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete an email campaign
      * @param {String} campaignId id of the campaign
-     * @param {module:api/EmailCampaignsApi~deleteEmailCampaignsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.deleteEmailCampaigns = function(campaignId, callback) {
+    this.deleteEmailCampaignsWithHttpInfo = function(campaignId) {
       var postBody = null;
 
       // verify the required parameter 'campaignId' is set
@@ -132,27 +129,31 @@
       return this.apiClient.callApi(
         '/emailCampaigns/{campaignId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the emailExportRecipients operation.
-     * @callback module:api/EmailCampaignsApi~emailExportRecipientsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse202} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete an email campaign
+     * @param {String} campaignId id of the campaign
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.deleteEmailCampaigns = function(campaignId) {
+      return this.deleteEmailCampaignsWithHttpInfo(campaignId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Export the recipients of a campaign
      * @param {String} campaignId Id of the campaign
      * @param {Object} opts Optional parameters
-     * @param {module:model/RecipientExport} opts.recipientExport Values to send for a recipient export request
-     * @param {module:api/EmailCampaignsApi~emailExportRecipientsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse202}
+     * @param {module:model/EmailExportRecipients} opts.recipientExport Values to send for a recipient export request
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreatedProcessId} and HTTP response
      */
-    this.emailExportRecipients = function(campaignId, opts, callback) {
+    this.emailExportRecipientsWithHttpInfo = function(campaignId, opts) {
       opts = opts || {};
       var postBody = opts['recipientExport'];
 
@@ -175,30 +176,36 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse202;
+      var returnType = CreatedProcessId;
 
       return this.apiClient.callApi(
         '/emailCampaigns/{campaignId}/exportRecipients', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getEmailCampaign operation.
-     * @callback module:api/EmailCampaignsApi~getEmailCampaignCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2008Campaigns} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Export the recipients of a campaign
+     * @param {String} campaignId Id of the campaign
+     * @param {Object} opts Optional parameters
+     * @param {module:model/EmailExportRecipients} opts.recipientExport Values to send for a recipient export request
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreatedProcessId}
      */
+    this.emailExportRecipients = function(campaignId, opts) {
+      return this.emailExportRecipientsWithHttpInfo(campaignId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get campaign informations
      * @param {String} campaignId Id of the campaign
-     * @param {module:api/EmailCampaignsApi~getEmailCampaignCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2008Campaigns}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetEmailCampaign} and HTTP response
      */
-    this.getEmailCampaign = function(campaignId, callback) {
+    this.getEmailCampaignWithHttpInfo = function(campaignId) {
       var postBody = null;
 
       // verify the required parameter 'campaignId' is set
@@ -220,22 +227,27 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2008Campaigns;
+      var returnType = GetEmailCampaign;
 
       return this.apiClient.callApi(
         '/emailCampaigns/{campaignId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getEmailCampaigns operation.
-     * @callback module:api/EmailCampaignsApi~getEmailCampaignsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2008} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get campaign informations
+     * @param {String} campaignId Id of the campaign
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetEmailCampaign}
      */
+    this.getEmailCampaign = function(campaignId) {
+      return this.getEmailCampaignWithHttpInfo(campaignId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Return all your created campaigns
@@ -244,10 +256,9 @@
      * @param {module:model/String} opts.status Filter on the status of the campaign
      * @param {Number} opts.limit Number of documents per page (default to 500)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
-     * @param {module:api/EmailCampaignsApi~getEmailCampaignsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2008}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetEmailCampaigns} and HTTP response
      */
-    this.getEmailCampaigns = function(opts, callback) {
+    this.getEmailCampaignsWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -268,29 +279,38 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2008;
+      var returnType = GetEmailCampaigns;
 
       return this.apiClient.callApi(
         '/emailCampaigns', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the sendEmailCampaignNow operation.
-     * @callback module:api/EmailCampaignsApi~sendEmailCampaignNowCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Return all your created campaigns
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.type Filter on the type of the campaigns
+     * @param {module:model/String} opts.status Filter on the status of the campaign
+     * @param {Number} opts.limit Number of documents per page (default to 500)
+     * @param {Number} opts.offset Index of the first document in the page (default to 0)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetEmailCampaigns}
      */
+    this.getEmailCampaigns = function(opts) {
+      return this.getEmailCampaignsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Send an email campaign id of the campaign immediately
      * @param {String} campaignId Id of the campaign
-     * @param {module:api/EmailCampaignsApi~sendEmailCampaignNowCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.sendEmailCampaignNow = function(campaignId, callback) {
+    this.sendEmailCampaignNowWithHttpInfo = function(campaignId) {
       var postBody = null;
 
       // verify the required parameter 'campaignId' is set
@@ -317,26 +337,31 @@
       return this.apiClient.callApi(
         '/emailCampaigns/{campaignId}/sendNow', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the sendReport operation.
-     * @callback module:api/EmailCampaignsApi~sendReportCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Send an email campaign id of the campaign immediately
+     * @param {String} campaignId Id of the campaign
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.sendEmailCampaignNow = function(campaignId) {
+      return this.sendEmailCampaignNowWithHttpInfo(campaignId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Send the report of a campaigns
      * A PDF will be sent to the specified email addresses
      * @param {String} campaignId Id of the campaign
-     * @param {module:model/SendReport1} sendReport Values for send a report
-     * @param {module:api/EmailCampaignsApi~sendReportCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/SendReport} sendReport Values for send a report
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.sendReport = function(campaignId, sendReport, callback) {
+    this.sendReportWithHttpInfo = function(campaignId, sendReport) {
       var postBody = sendReport;
 
       // verify the required parameter 'campaignId' is set
@@ -368,25 +393,32 @@
       return this.apiClient.callApi(
         '/emailCampaigns/{campaignId}/sendReport', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the sendTestEmail operation.
-     * @callback module:api/EmailCampaignsApi~sendTestEmailCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Send the report of a campaigns
+     * A PDF will be sent to the specified email addresses
+     * @param {String} campaignId Id of the campaign
+     * @param {module:model/SendReport} sendReport Values for send a report
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.sendReport = function(campaignId, sendReport) {
+      return this.sendReportWithHttpInfo(campaignId, sendReport)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Send an email campaign to your test list
      * @param {String} campaignId Id of the campaign
-     * @param {module:model/EmailTo} emailTo 
-     * @param {module:api/EmailCampaignsApi~sendTestEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/SendTestEmail} emailTo 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.sendTestEmail = function(campaignId, emailTo, callback) {
+    this.sendTestEmailWithHttpInfo = function(campaignId, emailTo) {
       var postBody = emailTo;
 
       // verify the required parameter 'campaignId' is set
@@ -418,25 +450,31 @@
       return this.apiClient.callApi(
         '/emailCampaigns/{campaignId}/sendTest', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the updateCampaignStatus operation.
-     * @callback module:api/EmailCampaignsApi~updateCampaignStatusCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Send an email campaign to your test list
+     * @param {String} campaignId Id of the campaign
+     * @param {module:model/SendTestEmail} emailTo 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.sendTestEmail = function(campaignId, emailTo) {
+      return this.sendTestEmailWithHttpInfo(campaignId, emailTo)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a campaign status
      * @param {String} campaignId Id of the campaign
-     * @param {module:model/Status} status Status of the campaign
-     * @param {module:api/EmailCampaignsApi~updateCampaignStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/UpdateCampaignStatus} status Status of the campaign
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.updateCampaignStatus = function(campaignId, status, callback) {
+    this.updateCampaignStatusWithHttpInfo = function(campaignId, status) {
       var postBody = status;
 
       // verify the required parameter 'campaignId' is set
@@ -468,25 +506,31 @@
       return this.apiClient.callApi(
         '/emailCampaigns/{campaignId}/status', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the updateEmailCampaigns operation.
-     * @callback module:api/EmailCampaignsApi~updateEmailCampaignsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Update a campaign status
+     * @param {String} campaignId Id of the campaign
+     * @param {module:model/UpdateCampaignStatus} status Status of the campaign
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.updateCampaignStatus = function(campaignId, status) {
+      return this.updateCampaignStatusWithHttpInfo(campaignId, status)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a campaign
      * @param {String} campaignId Id of the campaign
-     * @param {module:model/EmailCampaign} emailCampaign Values to update a campaign
-     * @param {module:api/EmailCampaignsApi~updateEmailCampaignsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/UpdateEmailCampaign} emailCampaign Values to update a campaign
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.updateEmailCampaigns = function(campaignId, emailCampaign, callback) {
+    this.updateEmailCampaignsWithHttpInfo = function(campaignId, emailCampaign) {
       var postBody = emailCampaign;
 
       // verify the required parameter 'campaignId' is set
@@ -518,8 +562,21 @@
       return this.apiClient.callApi(
         '/emailCampaigns/{campaignId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Update a campaign
+     * @param {String} campaignId Id of the campaign
+     * @param {module:model/UpdateEmailCampaign} emailCampaign Values to update a campaign
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.updateEmailCampaigns = function(campaignId, emailCampaign) {
+      return this.updateEmailCampaignsWithHttpInfo(campaignId, emailCampaign)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

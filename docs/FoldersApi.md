@@ -14,43 +14,42 @@ Method | HTTP request | Description
 
 <a name="createFolder"></a>
 # **createFolder**
-> InlineResponse201 createFolder(name)
+> CreateModel createFolder(name)
 
 Create a folder
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.FoldersApi();
 
-var name = new SendinBlueApi.Name(); // Name | Name of the folder
+var name = new SendinBlueApi.CreaUpdateFolder(); // CreaUpdateFolder | Name of the folder
 
+apiInstance.createFolder(name).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createFolder(name, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | [**Name**](Name.md)| Name of the folder | 
+ **name** | [**CreaUpdateFolder**](CreaUpdateFolder.md)| Name of the folder | 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateModel**](CreateModel.md)
 
 ### Authorization
 
@@ -69,26 +68,25 @@ Delete a folder (and all its lists)
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.FoldersApi();
 
 var folderId = "folderId_example"; // String | Id of the folder
 
+apiInstance.deleteFolder(folderId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteFolder(folderId, callback);
 ```
 
 ### Parameters
@@ -112,32 +110,31 @@ null (empty response body)
 
 <a name="getFolder"></a>
 # **getFolder**
-> InlineResponse20017Folders getFolder(folderId)
+> GetFolder getFolder(folderId)
 
 Returns folder details
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.FoldersApi();
 
 var folderId = "folderId_example"; // String | id of the folder
 
+apiInstance.getFolder(folderId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getFolder(folderId, callback);
 ```
 
 ### Parameters
@@ -148,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017Folders**](InlineResponse20017Folders.md)
+[**GetFolder**](GetFolder.md)
 
 ### Authorization
 
@@ -161,18 +158,20 @@ Name | Type | Description  | Notes
 
 <a name="getFolderLists"></a>
 # **getFolderLists**
-> InlineResponse20018 getFolderLists(folderId, opts)
+> GetFolderLists getFolderLists(folderId, opts)
 
 Get the lists in a folder
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.FoldersApi();
 
@@ -182,15 +181,12 @@ var opts = {
   'limit': 10, // Number | Number of documents per page
   'offset': 0 // Number | Index of the first document of the page
 };
+apiInstance.getFolderLists(folderId, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getFolderLists(folderId, opts, callback);
 ```
 
 ### Parameters
@@ -203,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**GetFolderLists**](GetFolderLists.md)
 
 ### Authorization
 
@@ -216,18 +212,20 @@ Name | Type | Description  | Notes
 
 <a name="getFolders"></a>
 # **getFolders**
-> InlineResponse20017 getFolders(limit, offset)
+> GetFolders getFolders(limit, offset)
 
 Get all the folders
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.FoldersApi();
 
@@ -235,15 +233,12 @@ var limit = 10; // Number | Number of documents per page
 
 var offset = 0; // Number | Index of the first document of the page
 
+apiInstance.getFolders(limit, offset).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getFolders(limit, offset, callback);
 ```
 
 ### Parameters
@@ -255,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**GetFolders**](GetFolders.md)
 
 ### Authorization
 
@@ -274,28 +269,27 @@ Update a contact folder
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.FoldersApi();
 
 var folderId = "folderId_example"; // String | Id of the folder
 
-var name = new SendinBlueApi.Name1(); // Name1 | Name of the folder
+var name = new SendinBlueApi.CreaUpdateFolder(); // CreaUpdateFolder | Name of the folder
 
+apiInstance.updateFolder(folderId, name).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateFolder(folderId, name, callback);
 ```
 
 ### Parameters
@@ -303,7 +297,7 @@ apiInstance.updateFolder(folderId, name, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **folderId** | **String**| Id of the folder | 
- **name** | [**Name1**](Name1.md)| Name of the folder | 
+ **name** | [**CreaUpdateFolder**](CreaUpdateFolder.md)| Name of the folder | 
 
 ### Return type
 

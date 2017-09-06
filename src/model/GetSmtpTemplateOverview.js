@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20012Sender'], factory);
+    define(['ApiClient', 'model/GetSmtpTemplateOverviewSender'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20012Sender'));
+    module.exports = factory(require('../ApiClient'), require('./GetSmtpTemplateOverviewSender'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetSmtpTemplateOverview = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20012Sender);
+    root.SendinBlueApi.GetSmtpTemplateOverview = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetSmtpTemplateOverviewSender);
   }
-}(this, function(ApiClient, InlineResponse20012Sender) {
+}(this, function(ApiClient, GetSmtpTemplateOverviewSender) {
   'use strict';
 
 
@@ -100,7 +100,7 @@
         obj['testSent'] = ApiClient.convertToType(data['testSent'], 'Boolean');
       }
       if (data.hasOwnProperty('sender')) {
-        obj['sender'] = InlineResponse20012Sender.constructFromObject(data['sender']);
+        obj['sender'] = GetSmtpTemplateOverviewSender.constructFromObject(data['sender']);
       }
       if (data.hasOwnProperty('replyTo')) {
         obj['replyTo'] = ApiClient.convertToType(data['replyTo'], 'String');
@@ -150,7 +150,7 @@
    */
   exports.prototype['testSent'] = undefined;
   /**
-   * @member {module:model/InlineResponse20012Sender} sender
+   * @member {module:model/GetSmtpTemplateOverviewSender} sender
    */
   exports.prototype['sender'] = undefined;
   /**

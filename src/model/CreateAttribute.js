@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ContactsattributesEnumemaration'], factory);
+    define(['ApiClient', 'model/CreateAttributeEnumemaration'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ContactsattributesEnumemaration'));
+    module.exports = factory(require('../ApiClient'), require('./CreateAttributeEnumemaration'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.CreateAttribute = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.ContactsattributesEnumemaration);
+    root.SendinBlueApi.CreateAttribute = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateAttributeEnumemaration);
   }
-}(this, function(ApiClient, ContactsattributesEnumemaration) {
+}(this, function(ApiClient, CreateAttributeEnumemaration) {
   'use strict';
 
 
@@ -79,7 +79,7 @@
         obj['value'] = ApiClient.convertToType(data['value'], 'String');
       }
       if (data.hasOwnProperty('enumemaration')) {
-        obj['enumemaration'] = ApiClient.convertToType(data['enumemaration'], [ContactsattributesEnumemaration]);
+        obj['enumemaration'] = ApiClient.convertToType(data['enumemaration'], [CreateAttributeEnumemaration]);
       }
       if (data.hasOwnProperty('type')) {
         obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -105,7 +105,7 @@
   exports.prototype['value'] = undefined;
   /**
    * Values that the attribute can take. Use only if the attribute's category is category
-   * @member {Array.<module:model/ContactsattributesEnumemaration>} enumemaration
+   * @member {Array.<module:model/CreateAttributeEnumemaration>} enumemaration
    */
   exports.prototype['enumemaration'] = undefined;
   /**

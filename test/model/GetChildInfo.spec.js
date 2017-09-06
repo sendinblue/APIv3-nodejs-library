@@ -57,30 +57,6 @@
       //expect(instance).to.be.a(SendinBlueApi.GetChildInfo);
     });
 
-    it('should have the property email (base name: "email")', function() {
-      // uncomment below and update the code to test the property email
-      //var instane = new SendinBlueApi.GetChildInfo();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property firstName (base name: "firstName")', function() {
-      // uncomment below and update the code to test the property firstName
-      //var instane = new SendinBlueApi.GetChildInfo();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property lastName (base name: "lastName")', function() {
-      // uncomment below and update the code to test the property lastName
-      //var instane = new SendinBlueApi.GetChildInfo();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property companyName (base name: "companyName")', function() {
-      // uncomment below and update the code to test the property companyName
-      //var instane = new SendinBlueApi.GetChildInfo();
-      //expect(instance).to.be();
-    });
-
     it('should have the property credits (base name: "credits")', function() {
       // uncomment below and update the code to test the property credits
       //var instane = new SendinBlueApi.GetChildInfo();

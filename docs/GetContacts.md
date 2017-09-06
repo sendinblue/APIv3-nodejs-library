@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**contacts** | [**[InlineResponse20014Contacts]**](InlineResponse20014Contacts.md) |  | 
+**contacts** | **[Object]** |  | 
 **count** | **Number** | Number of contacts | 
 
 

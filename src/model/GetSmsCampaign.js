@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20021Statistics', 'model/InlineResponse2008Recipients'], factory);
+    define(['ApiClient', 'model/GetSmsCampaignOverview'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20021Statistics'), require('./InlineResponse2008Recipients'));
+    module.exports = factory(require('../ApiClient'), require('./GetSmsCampaignOverview'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetSmsCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20021Statistics, root.SendinBlueApi.InlineResponse2008Recipients);
+    root.SendinBlueApi.GetSmsCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetSmsCampaignOverview);
   }
-}(this, function(ApiClient, InlineResponse20021Statistics, InlineResponse2008Recipients) {
+}(this, function(ApiClient, GetSmsCampaignOverview) {
   'use strict';
 
 
@@ -44,9 +44,10 @@
    * Constructs a new <code>GetSmsCampaign</code>.
    * @alias module:model/GetSmsCampaign
    * @class
+   * @implements module:model/GetSmsCampaignOverview
    * @param id {Number} ID of the SMS Campaign
    * @param name {String} Name of the SMS Campaign
-   * @param status {module:model/GetSmsCampaign.StatusEnum} Status of the SMS Campaign
+   * @param status {module:model/GetSmsCampaignOverview.StatusEnum} Status of the SMS Campaign
    * @param content {String} Content of the SMS Campaign
    * @param scheduledAt {String} Date on which SMS campaign is scheduled
    * @param testSent {Boolean} Retrieved the status of test SMS sending. (true=Test SMS has been sent  false=Test SMS has not been sent)
@@ -57,17 +58,7 @@
   var exports = function(id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt) {
     var _this = this;
 
-    _this['id'] = id;
-    _this['name'] = name;
-    _this['status'] = status;
-    _this['content'] = content;
-    _this['scheduledAt'] = scheduledAt;
-    _this['testSent'] = testSent;
-    _this['sender'] = sender;
-    _this['createdAt'] = createdAt;
-    _this['modifiedAt'] = modifiedAt;
-
-
+    GetSmsCampaignOverview.call(_this, id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt);
   };
 
   /**
@@ -81,134 +72,67 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-      }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'String');
-      }
-      if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], 'String');
-      }
-      if (data.hasOwnProperty('scheduledAt')) {
-        obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'String');
-      }
-      if (data.hasOwnProperty('testSent')) {
-        obj['testSent'] = ApiClient.convertToType(data['testSent'], 'Boolean');
-      }
-      if (data.hasOwnProperty('sender')) {
-        obj['sender'] = ApiClient.convertToType(data['sender'], 'String');
-      }
-      if (data.hasOwnProperty('createdAt')) {
-        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'String');
-      }
-      if (data.hasOwnProperty('modifiedAt')) {
-        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'String');
-      }
-      if (data.hasOwnProperty('recipients')) {
-        obj['recipients'] = InlineResponse2008Recipients.constructFromObject(data['recipients']);
-      }
-      if (data.hasOwnProperty('statistics')) {
-        obj['statistics'] = InlineResponse20021Statistics.constructFromObject(data['statistics']);
-      }
+      GetSmsCampaignOverview.constructFromObject(data, obj);
     }
     return obj;
   }
 
+
+  // Implement GetSmsCampaignOverview interface:
   /**
    * ID of the SMS Campaign
    * @member {Number} id
    */
-  exports.prototype['id'] = undefined;
+exports.prototype['id'] = undefined;
+
   /**
    * Name of the SMS Campaign
    * @member {String} name
    */
-  exports.prototype['name'] = undefined;
+exports.prototype['name'] = undefined;
+
   /**
    * Status of the SMS Campaign
-   * @member {module:model/GetSmsCampaign.StatusEnum} status
+   * @member {module:model/GetSmsCampaignOverview.StatusEnum} status
    */
-  exports.prototype['status'] = undefined;
+exports.prototype['status'] = undefined;
+
   /**
    * Content of the SMS Campaign
    * @member {String} content
    */
-  exports.prototype['content'] = undefined;
+exports.prototype['content'] = undefined;
+
   /**
    * Date on which SMS campaign is scheduled
    * @member {String} scheduledAt
    */
-  exports.prototype['scheduledAt'] = undefined;
+exports.prototype['scheduledAt'] = undefined;
+
   /**
    * Retrieved the status of test SMS sending. (true=Test SMS has been sent  false=Test SMS has not been sent)
    * @member {Boolean} testSent
    */
-  exports.prototype['testSent'] = undefined;
+exports.prototype['testSent'] = undefined;
+
   /**
    * Sender of the SMS Campaign
    * @member {String} sender
    */
-  exports.prototype['sender'] = undefined;
+exports.prototype['sender'] = undefined;
+
   /**
    * Creation date of the SMS campaign
    * @member {String} createdAt
    */
-  exports.prototype['createdAt'] = undefined;
+exports.prototype['createdAt'] = undefined;
+
   /**
    * Date of last modification of the SMS campaign
    * @member {String} modifiedAt
    */
-  exports.prototype['modifiedAt'] = undefined;
-  /**
-   * @member {module:model/InlineResponse2008Recipients} recipients
-   */
-  exports.prototype['recipients'] = undefined;
-  /**
-   * @member {module:model/InlineResponse20021Statistics} statistics
-   */
-  exports.prototype['statistics'] = undefined;
+exports.prototype['modifiedAt'] = undefined;
 
-
-  /**
-   * Allowed values for the <code>status</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.StatusEnum = {
-    /**
-     * value: "draft"
-     * @const
-     */
-    "draft": "draft",
-    /**
-     * value: "sent"
-     * @const
-     */
-    "sent": "sent",
-    /**
-     * value: "archive"
-     * @const
-     */
-    "archive": "archive",
-    /**
-     * value: "queued"
-     * @const
-     */
-    "queued": "queued",
-    /**
-     * value: "suspended"
-     * @const
-     */
-    "suspended": "suspended",
-    /**
-     * value: "in_process"
-     * @const
-     */
-    "in_process": "in_process"  };
 
 
   return exports;

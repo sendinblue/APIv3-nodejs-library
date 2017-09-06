@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2008Sender'], factory);
+    define(['ApiClient', 'model/GetCampaignOverview', 'model/GetExtendedCampaignOverviewSender'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2008Sender'));
+    module.exports = factory(require('../ApiClient'), require('./GetCampaignOverview'), require('./GetExtendedCampaignOverviewSender'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetExtendedCampaignOverview = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2008Sender);
+    root.SendinBlueApi.GetExtendedCampaignOverview = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetCampaignOverview, root.SendinBlueApi.GetExtendedCampaignOverviewSender);
   }
-}(this, function(ApiClient, InlineResponse2008Sender) {
+}(this, function(ApiClient, GetCampaignOverview, GetExtendedCampaignOverviewSender) {
   'use strict';
 
 
@@ -44,11 +44,12 @@
    * Constructs a new <code>GetExtendedCampaignOverview</code>.
    * @alias module:model/GetExtendedCampaignOverview
    * @class
+   * @implements module:model/GetCampaignOverview
    * @param id {Number} ID of the campaign
    * @param name {String} Name of the campaign
    * @param subject {String} Subject of the campaign
-   * @param type {module:model/GetExtendedCampaignOverview.TypeEnum} Type of campaign
-   * @param status {module:model/GetExtendedCampaignOverview.StatusEnum} Status of the campaign
+   * @param type {module:model/GetCampaignOverview.TypeEnum} Type of campaign
+   * @param status {module:model/GetCampaignOverview.StatusEnum} Status of the campaign
    * @param scheduledAt {String} Date on which campaign is scheduled
    * @param testSent {Boolean} Retrieved the status of test email sending. (true=Test email has been sent  false=Test email has not been sent)
    * @param header {String} Header of the campaign
@@ -64,12 +65,7 @@
   var exports = function(id, name, subject, type, status, scheduledAt, testSent, header, footer, replyTo, toField, htmlContent, shareLink, tag, createdAt, modifiedAt) {
     var _this = this;
 
-    _this['id'] = id;
-    _this['name'] = name;
-    _this['subject'] = subject;
-    _this['type'] = type;
-    _this['status'] = status;
-    _this['scheduledAt'] = scheduledAt;
+    GetCampaignOverview.call(_this, id, name, subject, type, status, scheduledAt);
     _this['testSent'] = testSent;
     _this['header'] = header;
     _this['footer'] = footer;
@@ -97,24 +93,7 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-      }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('subject')) {
-        obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
-      }
-      if (data.hasOwnProperty('type')) {
-        obj['type'] = ApiClient.convertToType(data['type'], 'String');
-      }
-      if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'String');
-      }
-      if (data.hasOwnProperty('scheduledAt')) {
-        obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'String');
-      }
+      GetCampaignOverview.constructFromObject(data, obj);
       if (data.hasOwnProperty('testSent')) {
         obj['testSent'] = ApiClient.convertToType(data['testSent'], 'Boolean');
       }
@@ -125,7 +104,7 @@
         obj['footer'] = ApiClient.convertToType(data['footer'], 'String');
       }
       if (data.hasOwnProperty('sender')) {
-        obj['sender'] = InlineResponse2008Sender.constructFromObject(data['sender']);
+        obj['sender'] = GetExtendedCampaignOverviewSender.constructFromObject(data['sender']);
       }
       if (data.hasOwnProperty('replyTo')) {
         obj['replyTo'] = ApiClient.convertToType(data['replyTo'], 'String');
@@ -162,36 +141,6 @@
   }
 
   /**
-   * ID of the campaign
-   * @member {Number} id
-   */
-  exports.prototype['id'] = undefined;
-  /**
-   * Name of the campaign
-   * @member {String} name
-   */
-  exports.prototype['name'] = undefined;
-  /**
-   * Subject of the campaign
-   * @member {String} subject
-   */
-  exports.prototype['subject'] = undefined;
-  /**
-   * Type of campaign
-   * @member {module:model/GetExtendedCampaignOverview.TypeEnum} type
-   */
-  exports.prototype['type'] = undefined;
-  /**
-   * Status of the campaign
-   * @member {module:model/GetExtendedCampaignOverview.StatusEnum} status
-   */
-  exports.prototype['status'] = undefined;
-  /**
-   * Date on which campaign is scheduled
-   * @member {String} scheduledAt
-   */
-  exports.prototype['scheduledAt'] = undefined;
-  /**
    * Retrieved the status of test email sending. (true=Test email has been sent  false=Test email has not been sent)
    * @member {Boolean} testSent
    */
@@ -207,7 +156,7 @@
    */
   exports.prototype['footer'] = undefined;
   /**
-   * @member {module:model/InlineResponse2008Sender} sender
+   * @member {module:model/GetExtendedCampaignOverviewSender} sender
    */
   exports.prototype['sender'] = undefined;
   /**
@@ -261,60 +210,43 @@
    */
   exports.prototype['recurring'] = undefined;
 
+  // Implement GetCampaignOverview interface:
+  /**
+   * ID of the campaign
+   * @member {Number} id
+   */
+exports.prototype['id'] = undefined;
 
   /**
-   * Allowed values for the <code>type</code> property.
-   * @enum {String}
-   * @readonly
+   * Name of the campaign
+   * @member {String} name
    */
-  exports.TypeEnum = {
-    /**
-     * value: "classic"
-     * @const
-     */
-    "classic": "classic",
-    /**
-     * value: "trigger"
-     * @const
-     */
-    "trigger": "trigger"  };
+exports.prototype['name'] = undefined;
 
   /**
-   * Allowed values for the <code>status</code> property.
-   * @enum {String}
-   * @readonly
+   * Subject of the campaign
+   * @member {String} subject
    */
-  exports.StatusEnum = {
-    /**
-     * value: "draft"
-     * @const
-     */
-    "draft": "draft",
-    /**
-     * value: "sent"
-     * @const
-     */
-    "sent": "sent",
-    /**
-     * value: "archive"
-     * @const
-     */
-    "archive": "archive",
-    /**
-     * value: "queued"
-     * @const
-     */
-    "queued": "queued",
-    /**
-     * value: "suspended"
-     * @const
-     */
-    "suspended": "suspended",
-    /**
-     * value: "in_process"
-     * @const
-     */
-    "in_process": "in_process"  };
+exports.prototype['subject'] = undefined;
+
+  /**
+   * Type of campaign
+   * @member {module:model/GetCampaignOverview.TypeEnum} type
+   */
+exports.prototype['type'] = undefined;
+
+  /**
+   * Status of the campaign
+   * @member {module:model/GetCampaignOverview.StatusEnum} status
+   */
+exports.prototype['status'] = undefined;
+
+  /**
+   * Date on which campaign is scheduled
+   * @member {String} scheduledAt
+   */
+exports.prototype['scheduledAt'] = undefined;
+
 
 
   return exports;

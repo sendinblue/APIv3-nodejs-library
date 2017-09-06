@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2008StatisticsCampaignStats', 'model/InlineResponse2008StatisticsLinksStats'], factory);
+    define(['ApiClient', 'model/GetExtendedCampaignStatsLinksStats', 'model/GetStatsByDomain'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2008StatisticsCampaignStats'), require('./InlineResponse2008StatisticsLinksStats'));
+    module.exports = factory(require('../ApiClient'), require('./GetExtendedCampaignStatsLinksStats'), require('./GetStatsByDomain'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetExtendedCampaignStats = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2008StatisticsCampaignStats, root.SendinBlueApi.InlineResponse2008StatisticsLinksStats);
+    root.SendinBlueApi.GetExtendedCampaignStats = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetExtendedCampaignStatsLinksStats, root.SendinBlueApi.GetStatsByDomain);
   }
-}(this, function(ApiClient, InlineResponse2008StatisticsCampaignStats, InlineResponse2008StatisticsLinksStats) {
+}(this, function(ApiClient, GetExtendedCampaignStatsLinksStats, GetStatsByDomain) {
   'use strict';
 
 
@@ -44,11 +44,11 @@
    * Constructs a new <code>GetExtendedCampaignStats</code>.
    * @alias module:model/GetExtendedCampaignStats
    * @class
-   * @param campaignStats {Array.<module:model/InlineResponse2008StatisticsCampaignStats>} 
+   * @param campaignStats {Array.<Object>} 
    * @param mirrorClick {Number} Number of clicks on mirror link
    * @param remaining {Number} Number of remaning emails to send
-   * @param linksStats {Object.<String, module:model/InlineResponse2008StatisticsLinksStats>} 
-   * @param statsByDomain {Object.<String, module:model/InlineResponse2008StatisticsCampaignStats>} 
+   * @param linksStats {Object.<String, module:model/GetExtendedCampaignStatsLinksStats>} 
+   * @param statsByDomain {module:model/GetStatsByDomain} 
    */
   var exports = function(campaignStats, mirrorClick, remaining, linksStats, statsByDomain) {
     var _this = this;
@@ -72,7 +72,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('campaignStats')) {
-        obj['campaignStats'] = ApiClient.convertToType(data['campaignStats'], [InlineResponse2008StatisticsCampaignStats]);
+        obj['campaignStats'] = ApiClient.convertToType(data['campaignStats'], [Object]);
       }
       if (data.hasOwnProperty('mirrorClick')) {
         obj['mirrorClick'] = ApiClient.convertToType(data['mirrorClick'], 'Number');
@@ -81,17 +81,17 @@
         obj['remaining'] = ApiClient.convertToType(data['remaining'], 'Number');
       }
       if (data.hasOwnProperty('linksStats')) {
-        obj['linksStats'] = ApiClient.convertToType(data['linksStats'], {'String': InlineResponse2008StatisticsLinksStats});
+        obj['linksStats'] = ApiClient.convertToType(data['linksStats'], {'String': GetExtendedCampaignStatsLinksStats});
       }
       if (data.hasOwnProperty('statsByDomain')) {
-        obj['statsByDomain'] = ApiClient.convertToType(data['statsByDomain'], {'String': InlineResponse2008StatisticsCampaignStats});
+        obj['statsByDomain'] = GetStatsByDomain.constructFromObject(data['statsByDomain']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/InlineResponse2008StatisticsCampaignStats>} campaignStats
+   * @member {Array.<Object>} campaignStats
    */
   exports.prototype['campaignStats'] = undefined;
   /**
@@ -105,11 +105,11 @@
    */
   exports.prototype['remaining'] = undefined;
   /**
-   * @member {Object.<String, module:model/InlineResponse2008StatisticsLinksStats>} linksStats
+   * @member {Object.<String, module:model/GetExtendedCampaignStatsLinksStats>} linksStats
    */
   exports.prototype['linksStats'] = undefined;
   /**
-   * @member {Object.<String, module:model/InlineResponse2008StatisticsCampaignStats>} statsByDomain
+   * @member {module:model/GetStatsByDomain} statsByDomain
    */
   exports.prototype['statsByDomain'] = undefined;
 

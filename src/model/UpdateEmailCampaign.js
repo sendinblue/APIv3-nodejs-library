@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/EmailCampaignscampaignIdRecipients', 'model/EmailCampaignscampaignIdSender'], factory);
+    define(['ApiClient', 'model/UpdateEmailCampaignRecipients', 'model/UpdateEmailCampaignSender'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EmailCampaignscampaignIdRecipients'), require('./EmailCampaignscampaignIdSender'));
+    module.exports = factory(require('../ApiClient'), require('./UpdateEmailCampaignRecipients'), require('./UpdateEmailCampaignSender'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.UpdateEmailCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.EmailCampaignscampaignIdRecipients, root.SendinBlueApi.EmailCampaignscampaignIdSender);
+    root.SendinBlueApi.UpdateEmailCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.UpdateEmailCampaignRecipients, root.SendinBlueApi.UpdateEmailCampaignSender);
   }
-}(this, function(ApiClient, EmailCampaignscampaignIdRecipients, EmailCampaignscampaignIdSender) {
+}(this, function(ApiClient, UpdateEmailCampaignRecipients, UpdateEmailCampaignSender) {
   'use strict';
 
 
@@ -82,7 +82,7 @@
         obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
       }
       if (data.hasOwnProperty('sender')) {
-        obj['sender'] = EmailCampaignscampaignIdSender.constructFromObject(data['sender']);
+        obj['sender'] = UpdateEmailCampaignSender.constructFromObject(data['sender']);
       }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -106,7 +106,7 @@
         obj['toField'] = ApiClient.convertToType(data['toField'], 'String');
       }
       if (data.hasOwnProperty('recipients')) {
-        obj['recipients'] = EmailCampaignscampaignIdRecipients.constructFromObject(data['recipients']);
+        obj['recipients'] = UpdateEmailCampaignRecipients.constructFromObject(data['recipients']);
       }
       if (data.hasOwnProperty('attachmentUrl')) {
         obj['attachmentUrl'] = ApiClient.convertToType(data['attachmentUrl'], 'String');
@@ -139,7 +139,7 @@
    */
   exports.prototype['tag'] = undefined;
   /**
-   * @member {module:model/EmailCampaignscampaignIdSender} sender
+   * @member {module:model/UpdateEmailCampaignSender} sender
    */
   exports.prototype['sender'] = undefined;
   /**
@@ -178,7 +178,7 @@
    */
   exports.prototype['toField'] = undefined;
   /**
-   * @member {module:model/EmailCampaignscampaignIdRecipients} recipients
+   * @member {module:model/UpdateEmailCampaignRecipients} recipients
    */
   exports.prototype['recipients'] = undefined;
   /**

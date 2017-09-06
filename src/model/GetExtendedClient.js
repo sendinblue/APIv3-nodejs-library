@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse200Address'], factory);
+    define(['ApiClient', 'model/GetClient', 'model/GetExtendedClientAddress'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse200Address'));
+    module.exports = factory(require('../ApiClient'), require('./GetClient'), require('./GetExtendedClientAddress'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetExtendedClient = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse200Address);
+    root.SendinBlueApi.GetExtendedClient = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetClient, root.SendinBlueApi.GetExtendedClientAddress);
   }
-}(this, function(ApiClient, InlineResponse200Address) {
+}(this, function(ApiClient, GetClient, GetExtendedClientAddress) {
   'use strict';
 
 
@@ -44,6 +44,7 @@
    * Constructs a new <code>GetExtendedClient</code>.
    * @alias module:model/GetExtendedClient
    * @class
+   * @implements module:model/GetClient
    * @param email {String} Login Email
    * @param firstName {String} First Name
    * @param lastName {String} Last Name
@@ -52,10 +53,7 @@
   var exports = function(email, firstName, lastName, companyName) {
     var _this = this;
 
-    _this['email'] = email;
-    _this['firstName'] = firstName;
-    _this['lastName'] = lastName;
-    _this['companyName'] = companyName;
+    GetClient.call(_this, email, firstName, lastName, companyName);
 
   };
 
@@ -70,49 +68,43 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('email')) {
-        obj['email'] = ApiClient.convertToType(data['email'], 'String');
-      }
-      if (data.hasOwnProperty('firstName')) {
-        obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
-      }
-      if (data.hasOwnProperty('lastName')) {
-        obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
-      }
-      if (data.hasOwnProperty('companyName')) {
-        obj['companyName'] = ApiClient.convertToType(data['companyName'], 'String');
-      }
+      GetClient.constructFromObject(data, obj);
       if (data.hasOwnProperty('address')) {
-        obj['address'] = InlineResponse200Address.constructFromObject(data['address']);
+        obj['address'] = GetExtendedClientAddress.constructFromObject(data['address']);
       }
     }
     return obj;
   }
 
   /**
+   * @member {module:model/GetExtendedClientAddress} address
+   */
+  exports.prototype['address'] = undefined;
+
+  // Implement GetClient interface:
+  /**
    * Login Email
    * @member {String} email
    */
-  exports.prototype['email'] = undefined;
+exports.prototype['email'] = undefined;
+
   /**
    * First Name
    * @member {String} firstName
    */
-  exports.prototype['firstName'] = undefined;
+exports.prototype['firstName'] = undefined;
+
   /**
    * Last Name
    * @member {String} lastName
    */
-  exports.prototype['lastName'] = undefined;
+exports.prototype['lastName'] = undefined;
+
   /**
    * Name of the company
    * @member {String} companyName
    */
-  exports.prototype['companyName'] = undefined;
-  /**
-   * @member {module:model/InlineResponse200Address} address
-   */
-  exports.prototype['address'] = undefined;
+exports.prototype['companyName'] = undefined;
 
 
 

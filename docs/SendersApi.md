@@ -14,44 +14,43 @@ Method | HTTP request | Description
 
 <a name="createSender"></a>
 # **createSender**
-> InlineResponse2011 createSender(opts)
+> CreateSenderModel createSender(opts)
 
 Create a new sender
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SendersApi();
 
 var opts = { 
-  'sender': new SendinBlueApi.Sender() // Sender | sender's name
+  'sender': new SendinBlueApi.CreateSender() // CreateSender | sender's name
 };
+apiInstance.createSender(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createSender(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sender** | [**Sender**](Sender.md)| sender&#39;s name | [optional] 
+ **sender** | [**CreateSender**](CreateSender.md)| sender&#39;s name | [optional] 
 
 ### Return type
 
-[**InlineResponse2011**](InlineResponse2011.md)
+[**CreateSenderModel**](CreateSenderModel.md)
 
 ### Authorization
 
@@ -70,26 +69,25 @@ Delete a sender
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SendersApi();
 
 var senderId = "senderId_example"; // String | Id of the sender
 
+apiInstance.deleteSender(senderId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteSender(senderId, callback);
 ```
 
 ### Parameters
@@ -113,29 +111,28 @@ null (empty response body)
 
 <a name="getIps"></a>
 # **getIps**
-> InlineResponse2006 getIps()
+> GetIps getIps()
 
 Return all the dedicated IPs for your account
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SendersApi();
+apiInstance.getIps().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getIps(callback);
 ```
 
 ### Parameters
@@ -143,7 +140,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**GetIps**](GetIps.md)
 
 ### Authorization
 
@@ -156,32 +153,31 @@ This endpoint does not need any parameter.
 
 <a name="getIpsFromSender"></a>
 # **getIpsFromSender**
-> InlineResponse2005 getIpsFromSender(senderId)
+> GetIpsFromSender getIpsFromSender(senderId)
 
 Return all the dedicated IPs for a sender
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SendersApi();
 
 var senderId = "senderId_example"; // String | Id of the sender
 
+apiInstance.getIpsFromSender(senderId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getIpsFromSender(senderId, callback);
 ```
 
 ### Parameters
@@ -192,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**GetIpsFromSender**](GetIpsFromSender.md)
 
 ### Authorization
 
@@ -205,18 +201,20 @@ Name | Type | Description  | Notes
 
 <a name="getSenders"></a>
 # **getSenders**
-> InlineResponse2004 getSenders(opts)
+> GetSendersList getSenders(opts)
 
 Get the list of all your senders
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SendersApi();
 
@@ -224,15 +222,12 @@ var opts = {
   'ip': "ip_example", // String | Filter your senders for a specific ip (available for dedicated IP usage only)
   'domain': "domain_example" // String | Filter your senders for a specific domain
 };
+apiInstance.getSenders(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getSenders(opts, callback);
 ```
 
 ### Parameters
@@ -244,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**GetSendersList**](GetSendersList.md)
 
 ### Authorization
 
@@ -263,29 +258,28 @@ Update a sender
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SendersApi();
 
 var senderId = "senderId_example"; // String | Id of the sender
 
 var opts = { 
-  'sender': new SendinBlueApi.Sender1() // Sender1 | sender's name
+  'sender': new SendinBlueApi.UpdateSender() // UpdateSender | sender's name
 };
+apiInstance.updateSender(senderId, opts).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateSender(senderId, opts, callback);
 ```
 
 ### Parameters
@@ -293,7 +287,7 @@ apiInstance.updateSender(senderId, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **senderId** | **String**| Id of the sender | 
- **sender** | [**Sender1**](Sender1.md)| sender&#39;s name | [optional] 
+ **sender** | [**UpdateSender**](UpdateSender.md)| sender&#39;s name | [optional] 
 
 ### Return type
 

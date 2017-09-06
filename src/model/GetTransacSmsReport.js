@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20024Reports'], factory);
+    define(['ApiClient', 'model/GetTransacSmsReportReports'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20024Reports'));
+    module.exports = factory(require('../ApiClient'), require('./GetTransacSmsReportReports'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetTransacSmsReport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20024Reports);
+    root.SendinBlueApi.GetTransacSmsReport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetTransacSmsReportReports);
   }
-}(this, function(ApiClient, InlineResponse20024Reports) {
+}(this, function(ApiClient, GetTransacSmsReportReports) {
   'use strict';
 
 
@@ -63,14 +63,14 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('reports')) {
-        obj['reports'] = ApiClient.convertToType(data['reports'], [InlineResponse20024Reports]);
+        obj['reports'] = ApiClient.convertToType(data['reports'], [GetTransacSmsReportReports]);
       }
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/InlineResponse20024Reports>} reports
+   * @member {Array.<module:model/GetTransacSmsReportReports>} reports
    */
   exports.prototype['reports'] = undefined;
 

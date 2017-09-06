@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20014Contacts'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20014Contacts'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetContacts = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20014Contacts);
+    root.SendinBlueApi.GetContacts = factory(root.SendinBlueApi.ApiClient);
   }
-}(this, function(ApiClient, InlineResponse20014Contacts) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -44,7 +44,7 @@
    * Constructs a new <code>GetContacts</code>.
    * @alias module:model/GetContacts
    * @class
-   * @param contacts {Array.<module:model/InlineResponse20014Contacts>} 
+   * @param contacts {Array.<Object>} 
    * @param count {Number} Number of contacts
    */
   var exports = function(contacts, count) {
@@ -66,7 +66,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('contacts')) {
-        obj['contacts'] = ApiClient.convertToType(data['contacts'], [InlineResponse20014Contacts]);
+        obj['contacts'] = ApiClient.convertToType(data['contacts'], [Object]);
       }
       if (data.hasOwnProperty('count')) {
         obj['count'] = ApiClient.convertToType(data['count'], 'Number');
@@ -76,7 +76,7 @@
   }
 
   /**
-   * @member {Array.<module:model/InlineResponse20014Contacts>} contacts
+   * @member {Array.<Object>} contacts
    */
   exports.prototype['contacts'] = undefined;
   /**
