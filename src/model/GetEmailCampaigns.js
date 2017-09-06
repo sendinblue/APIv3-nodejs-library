@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2008Campaigns'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2008Campaigns'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetEmailCampaigns = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2008Campaigns);
+    root.SendinBlueApi.GetEmailCampaigns = factory(root.SendinBlueApi.ApiClient);
   }
-}(this, function(ApiClient, InlineResponse2008Campaigns) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -65,7 +65,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('campaigns')) {
-        obj['campaigns'] = ApiClient.convertToType(data['campaigns'], [InlineResponse2008Campaigns]);
+        obj['campaigns'] = ApiClient.convertToType(data['campaigns'], [Object]);
       }
       if (data.hasOwnProperty('count')) {
         obj['count'] = ApiClient.convertToType(data['count'], 'Number');
@@ -75,7 +75,7 @@
   }
 
   /**
-   * @member {Array.<module:model/InlineResponse2008Campaigns>} campaigns
+   * @member {Array.<Object>} campaigns
    */
   exports.prototype['campaigns'] = undefined;
   /**

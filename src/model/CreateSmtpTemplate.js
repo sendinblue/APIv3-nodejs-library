@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SmtptemplatesSender'], factory);
+    define(['ApiClient', 'model/CreateSmtpTemplateSender'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./SmtptemplatesSender'));
+    module.exports = factory(require('../ApiClient'), require('./CreateSmtpTemplateSender'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.CreateSmtpTemplate = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SmtptemplatesSender);
+    root.SendinBlueApi.CreateSmtpTemplate = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateSmtpTemplateSender);
   }
-}(this, function(ApiClient, SmtptemplatesSender) {
+}(this, function(ApiClient, CreateSmtpTemplateSender) {
   'use strict';
 
 
@@ -77,7 +77,7 @@
         obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
       }
       if (data.hasOwnProperty('sender')) {
-        obj['sender'] = SmtptemplatesSender.constructFromObject(data['sender']);
+        obj['sender'] = CreateSmtpTemplateSender.constructFromObject(data['sender']);
       }
       if (data.hasOwnProperty('templateName')) {
         obj['templateName'] = ApiClient.convertToType(data['templateName'], 'String');
@@ -113,7 +113,7 @@
    */
   exports.prototype['tag'] = undefined;
   /**
-   * @member {module:model/SmtptemplatesSender} sender
+   * @member {module:model/CreateSmtpTemplateSender} sender
    */
   exports.prototype['sender'] = undefined;
   /**

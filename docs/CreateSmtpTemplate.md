@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tag** | **String** | Tag of the template | [optional] 
-**sender** | [**SmtptemplatesSender**](SmtptemplatesSender.md) |  | [optional] 
+**sender** | [**CreateSmtpTemplateSender**](CreateSmtpTemplateSender.md) |  | [optional] 
 **templateName** | **String** | Name of the template | 
 **htmlContent** | **String** | Body of the message (HTML version). The field must have more than 10 characters. REQUIRED if htmlUrl is empty | [optional] 
 **htmlUrl** | **String** | Url which contents the body of the email message. REQUIRED if htmlContent is empty | [optional] 

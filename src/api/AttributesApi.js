@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CreateAttribute1', 'model/InlineResponse20016', 'model/InlineResponse201', 'model/InlineResponse403'], factory);
+    define(['ApiClient', 'model/CreateAttribute', 'model/CreateModel', 'model/ErrorModel', 'model/GetAttributes'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CreateAttribute1'), require('../model/InlineResponse20016'), require('../model/InlineResponse201'), require('../model/InlineResponse403'));
+    module.exports = factory(require('../ApiClient'), require('../model/CreateAttribute'), require('../model/CreateModel'), require('../model/ErrorModel'), require('../model/GetAttributes'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.AttributesApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateAttribute1, root.SendinBlueApi.InlineResponse20016, root.SendinBlueApi.InlineResponse201, root.SendinBlueApi.InlineResponse403);
+    root.SendinBlueApi.AttributesApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateAttribute, root.SendinBlueApi.CreateModel, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetAttributes);
   }
-}(this, function(ApiClient, CreateAttribute1, InlineResponse20016, InlineResponse201, InlineResponse403) {
+}(this, function(ApiClient, CreateAttribute, CreateModel, ErrorModel, GetAttributes) {
   'use strict';
 
   /**
@@ -48,21 +48,13 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the createAttribute operation.
-     * @callback module:api/AttributesApi~createAttributeCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Creates contact attributes
-     * @param {module:model/CreateAttribute1} createAttribute Values to create an attribute
-     * @param {module:api/AttributesApi~createAttributeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @param {module:model/CreateAttribute} createAttribute Values to create an attribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
      */
-    this.createAttribute = function(createAttribute, callback) {
+    this.createAttributeWithHttpInfo = function(createAttribute) {
       var postBody = createAttribute;
 
       // verify the required parameter 'createAttribute' is set
@@ -83,29 +75,34 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse201;
+      var returnType = CreateModel;
 
       return this.apiClient.callApi(
         '/contacts/attributes', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteAttribute operation.
-     * @callback module:api/AttributesApi~deleteAttributeCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Creates contact attributes
+     * @param {module:model/CreateAttribute} createAttribute Values to create an attribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
      */
+    this.createAttribute = function(createAttribute) {
+      return this.createAttributeWithHttpInfo(createAttribute)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Deletes an attribute
      * @param {String} attributeId id of the attribute
-     * @param {module:api/AttributesApi~deleteAttributeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.deleteAttribute = function(attributeId, callback) {
+    this.deleteAttributeWithHttpInfo = function(attributeId) {
       var postBody = null;
 
       // verify the required parameter 'attributeId' is set
@@ -132,24 +129,28 @@
       return this.apiClient.callApi(
         '/contacts/attributes/{attributeId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getAttributes operation.
-     * @callback module:api/AttributesApi~getAttributesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20016} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Deletes an attribute
+     * @param {String} attributeId id of the attribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    this.deleteAttribute = function(attributeId) {
+      return this.deleteAttributeWithHttpInfo(attributeId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Lists all attributes
-     * @param {module:api/AttributesApi~getAttributesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20016}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAttributes} and HTTP response
      */
-    this.getAttributes = function(callback) {
+    this.getAttributesWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -165,13 +166,24 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse20016;
+      var returnType = GetAttributes;
 
       return this.apiClient.callApi(
         '/contacts/attributes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Lists all attributes
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAttributes}
+     */
+    this.getAttributes = function() {
+      return this.getAttributesWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

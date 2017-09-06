@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2007Processes'], factory);
+    define(['ApiClient', 'model/GetProcess'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2007Processes'));
+    module.exports = factory(require('../ApiClient'), require('./GetProcess'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetProcesses = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2007Processes);
+    root.SendinBlueApi.GetProcesses = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetProcess);
   }
-}(this, function(ApiClient, InlineResponse2007Processes) {
+}(this, function(ApiClient, GetProcess) {
   'use strict';
 
 
@@ -65,7 +65,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('processes')) {
-        obj['processes'] = ApiClient.convertToType(data['processes'], [InlineResponse2007Processes]);
+        obj['processes'] = ApiClient.convertToType(data['processes'], [GetProcess]);
       }
       if (data.hasOwnProperty('count')) {
         obj['count'] = ApiClient.convertToType(data['count'], 'Number');
@@ -76,7 +76,7 @@
 
   /**
    * List of processes available on your account
-   * @member {Array.<module:model/InlineResponse2007Processes>} processes
+   * @member {Array.<module:model/GetProcess>} processes
    */
   exports.prototype['processes'] = undefined;
   /**

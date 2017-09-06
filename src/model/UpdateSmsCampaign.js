@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SmsCampaignsRecipients'], factory);
+    define(['ApiClient', 'model/CreateSmsCampaignRecipients'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./SmsCampaignsRecipients'));
+    module.exports = factory(require('../ApiClient'), require('./CreateSmsCampaignRecipients'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.UpdateSmsCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SmsCampaignsRecipients);
+    root.SendinBlueApi.UpdateSmsCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateSmsCampaignRecipients);
   }
-}(this, function(ApiClient, SmsCampaignsRecipients) {
+}(this, function(ApiClient, CreateSmsCampaignRecipients) {
   'use strict';
 
 
@@ -76,7 +76,7 @@
         obj['content'] = ApiClient.convertToType(data['content'], 'String');
       }
       if (data.hasOwnProperty('recipients')) {
-        obj['recipients'] = SmsCampaignsRecipients.constructFromObject(data['recipients']);
+        obj['recipients'] = CreateSmsCampaignRecipients.constructFromObject(data['recipients']);
       }
       if (data.hasOwnProperty('scheduledAt')) {
         obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'String');
@@ -101,7 +101,7 @@
    */
   exports.prototype['content'] = undefined;
   /**
-   * @member {module:model/SmsCampaignsRecipients} recipients
+   * @member {module:model/CreateSmsCampaignRecipients} recipients
    */
   exports.prototype['recipients'] = undefined;
   /**

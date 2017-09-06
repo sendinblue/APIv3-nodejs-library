@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SmtpemailAttachment', 'model/SmtpemailBcc', 'model/SmtpemailCc', 'model/SmtpemailReplyTo', 'model/SmtpemailSender', 'model/SmtpemailTo'], factory);
+    define(['ApiClient', 'model/SendSmtpEmailAttachment', 'model/SendSmtpEmailBcc', 'model/SendSmtpEmailCc', 'model/SendSmtpEmailReplyTo', 'model/SendSmtpEmailSender', 'model/SendSmtpEmailTo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./SmtpemailAttachment'), require('./SmtpemailBcc'), require('./SmtpemailCc'), require('./SmtpemailReplyTo'), require('./SmtpemailSender'), require('./SmtpemailTo'));
+    module.exports = factory(require('../ApiClient'), require('./SendSmtpEmailAttachment'), require('./SendSmtpEmailBcc'), require('./SendSmtpEmailCc'), require('./SendSmtpEmailReplyTo'), require('./SendSmtpEmailSender'), require('./SendSmtpEmailTo'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.SendSmtpEmail = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SmtpemailAttachment, root.SendinBlueApi.SmtpemailBcc, root.SendinBlueApi.SmtpemailCc, root.SendinBlueApi.SmtpemailReplyTo, root.SendinBlueApi.SmtpemailSender, root.SendinBlueApi.SmtpemailTo);
+    root.SendinBlueApi.SendSmtpEmail = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SendSmtpEmailAttachment, root.SendinBlueApi.SendSmtpEmailBcc, root.SendinBlueApi.SendSmtpEmailCc, root.SendinBlueApi.SendSmtpEmailReplyTo, root.SendinBlueApi.SendSmtpEmailSender, root.SendinBlueApi.SendSmtpEmailTo);
   }
-}(this, function(ApiClient, SmtpemailAttachment, SmtpemailBcc, SmtpemailCc, SmtpemailReplyTo, SmtpemailSender, SmtpemailTo) {
+}(this, function(ApiClient, SendSmtpEmailAttachment, SendSmtpEmailBcc, SendSmtpEmailCc, SendSmtpEmailReplyTo, SendSmtpEmailSender, SendSmtpEmailTo) {
   'use strict';
 
 
@@ -44,7 +44,7 @@
    * Constructs a new <code>SendSmtpEmail</code>.
    * @alias module:model/SendSmtpEmail
    * @class
-   * @param to {Array.<module:model/SmtpemailTo>} Email addresses and names of the recipients
+   * @param to {Array.<module:model/SendSmtpEmailTo>} Email addresses and names of the recipients
    * @param htmlContent {String} HTML body of the message
    * @param subject {String} Subject of the message
    */
@@ -75,16 +75,16 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('sender')) {
-        obj['sender'] = SmtpemailSender.constructFromObject(data['sender']);
+        obj['sender'] = SendSmtpEmailSender.constructFromObject(data['sender']);
       }
       if (data.hasOwnProperty('to')) {
-        obj['to'] = ApiClient.convertToType(data['to'], [SmtpemailTo]);
+        obj['to'] = ApiClient.convertToType(data['to'], [SendSmtpEmailTo]);
       }
       if (data.hasOwnProperty('bcc')) {
-        obj['bcc'] = ApiClient.convertToType(data['bcc'], [SmtpemailBcc]);
+        obj['bcc'] = ApiClient.convertToType(data['bcc'], [SendSmtpEmailBcc]);
       }
       if (data.hasOwnProperty('cc')) {
-        obj['cc'] = ApiClient.convertToType(data['cc'], [SmtpemailCc]);
+        obj['cc'] = ApiClient.convertToType(data['cc'], [SendSmtpEmailCc]);
       }
       if (data.hasOwnProperty('htmlContent')) {
         obj['htmlContent'] = ApiClient.convertToType(data['htmlContent'], 'String');
@@ -96,10 +96,10 @@
         obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
       }
       if (data.hasOwnProperty('replyTo')) {
-        obj['replyTo'] = SmtpemailReplyTo.constructFromObject(data['replyTo']);
+        obj['replyTo'] = SendSmtpEmailReplyTo.constructFromObject(data['replyTo']);
       }
       if (data.hasOwnProperty('attachment')) {
-        obj['attachment'] = ApiClient.convertToType(data['attachment'], [SmtpemailAttachment]);
+        obj['attachment'] = ApiClient.convertToType(data['attachment'], [SendSmtpEmailAttachment]);
       }
       if (data.hasOwnProperty('headers')) {
         obj['headers'] = ApiClient.convertToType(data['headers'], {'String': 'String'});
@@ -109,22 +109,22 @@
   }
 
   /**
-   * @member {module:model/SmtpemailSender} sender
+   * @member {module:model/SendSmtpEmailSender} sender
    */
   exports.prototype['sender'] = undefined;
   /**
    * Email addresses and names of the recipients
-   * @member {Array.<module:model/SmtpemailTo>} to
+   * @member {Array.<module:model/SendSmtpEmailTo>} to
    */
   exports.prototype['to'] = undefined;
   /**
    * Email addresses and names of the recipients in bcc
-   * @member {Array.<module:model/SmtpemailBcc>} bcc
+   * @member {Array.<module:model/SendSmtpEmailBcc>} bcc
    */
   exports.prototype['bcc'] = undefined;
   /**
    * Email addresses and names of the recipients in cc
-   * @member {Array.<module:model/SmtpemailCc>} cc
+   * @member {Array.<module:model/SendSmtpEmailCc>} cc
    */
   exports.prototype['cc'] = undefined;
   /**
@@ -143,12 +143,12 @@
    */
   exports.prototype['subject'] = undefined;
   /**
-   * @member {module:model/SmtpemailReplyTo} replyTo
+   * @member {module:model/SendSmtpEmailReplyTo} replyTo
    */
   exports.prototype['replyTo'] = undefined;
   /**
    * Pass the absolute URL (no local file) or the base64 content of the attachment. Name can be used in both cases to define the attachment name. It is mandatory in case of content. Extension allowed: gif, png, bmp, cgm, jpg, jpeg, tif, tiff, rtf, txt, css, shtml, html, htm, csv, zip, pdf, xml, ods, doc, docx, docm, ics, xls, xlsx, ppt, tar, and ez
-   * @member {Array.<module:model/SmtpemailAttachment>} attachment
+   * @member {Array.<module:model/SendSmtpEmailAttachment>} attachment
    */
   exports.prototype['attachment'] = undefined;
   /**

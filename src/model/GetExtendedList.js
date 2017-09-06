@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20020CampaignStats'], factory);
+    define(['ApiClient', 'model/GetExtendedListCampaignStats', 'model/GetList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20020CampaignStats'));
+    module.exports = factory(require('../ApiClient'), require('./GetExtendedListCampaignStats'), require('./GetList'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetExtendedList = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20020CampaignStats);
+    root.SendinBlueApi.GetExtendedList = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetExtendedListCampaignStats, root.SendinBlueApi.GetList);
   }
-}(this, function(ApiClient, InlineResponse20020CampaignStats) {
+}(this, function(ApiClient, GetExtendedListCampaignStats, GetList) {
   'use strict';
 
 
@@ -44,6 +44,7 @@
    * Constructs a new <code>GetExtendedList</code>.
    * @alias module:model/GetExtendedList
    * @class
+   * @implements module:model/GetList
    * @param id {Number} ID of the list
    * @param name {String} Name of the list
    * @param totalBlacklisted {Number} Number of blacklisted contacts in the list
@@ -54,10 +55,7 @@
   var exports = function(id, name, totalBlacklisted, totalSubscribers, folderId, createdAt) {
     var _this = this;
 
-    _this['id'] = id;
-    _this['name'] = name;
-    _this['totalBlacklisted'] = totalBlacklisted;
-    _this['totalSubscribers'] = totalSubscribers;
+    GetList.call(_this, id, name, totalBlacklisted, totalSubscribers);
     _this['folderId'] = folderId;
     _this['createdAt'] = createdAt;
 
@@ -75,18 +73,7 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-      }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('totalBlacklisted')) {
-        obj['totalBlacklisted'] = ApiClient.convertToType(data['totalBlacklisted'], 'Number');
-      }
-      if (data.hasOwnProperty('totalSubscribers')) {
-        obj['totalSubscribers'] = ApiClient.convertToType(data['totalSubscribers'], 'Number');
-      }
+      GetList.constructFromObject(data, obj);
       if (data.hasOwnProperty('folderId')) {
         obj['folderId'] = ApiClient.convertToType(data['folderId'], 'Number');
       }
@@ -94,7 +81,7 @@
         obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
       }
       if (data.hasOwnProperty('campaignStats')) {
-        obj['campaignStats'] = ApiClient.convertToType(data['campaignStats'], [InlineResponse20020CampaignStats]);
+        obj['campaignStats'] = ApiClient.convertToType(data['campaignStats'], [GetExtendedListCampaignStats]);
       }
       if (data.hasOwnProperty('dynamicList')) {
         obj['dynamicList'] = ApiClient.convertToType(data['dynamicList'], 'Boolean');
@@ -103,26 +90,6 @@
     return obj;
   }
 
-  /**
-   * ID of the list
-   * @member {Number} id
-   */
-  exports.prototype['id'] = undefined;
-  /**
-   * Name of the list
-   * @member {String} name
-   */
-  exports.prototype['name'] = undefined;
-  /**
-   * Number of blacklisted contacts in the list
-   * @member {Number} totalBlacklisted
-   */
-  exports.prototype['totalBlacklisted'] = undefined;
-  /**
-   * Number of contacts in the list
-   * @member {Number} totalSubscribers
-   */
-  exports.prototype['totalSubscribers'] = undefined;
   /**
    * ID of the folder
    * @member {Number} folderId
@@ -134,7 +101,7 @@
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * @member {Array.<module:model/InlineResponse20020CampaignStats>} campaignStats
+   * @member {Array.<module:model/GetExtendedListCampaignStats>} campaignStats
    */
   exports.prototype['campaignStats'] = undefined;
   /**
@@ -142,6 +109,31 @@
    * @member {Boolean} dynamicList
    */
   exports.prototype['dynamicList'] = undefined;
+
+  // Implement GetList interface:
+  /**
+   * ID of the list
+   * @member {Number} id
+   */
+exports.prototype['id'] = undefined;
+
+  /**
+   * Name of the list
+   * @member {String} name
+   */
+exports.prototype['name'] = undefined;
+
+  /**
+   * Number of blacklisted contacts in the list
+   * @member {Number} totalBlacklisted
+   */
+exports.prototype['totalBlacklisted'] = undefined;
+
+  /**
+   * Number of contacts in the list
+   * @member {Number} totalSubscribers
+   */
+exports.prototype['totalSubscribers'] = undefined;
 
 
 

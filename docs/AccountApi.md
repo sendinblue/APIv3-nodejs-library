@@ -9,29 +9,28 @@ Method | HTTP request | Description
 
 <a name="getAccount"></a>
 # **getAccount**
-> InlineResponse200 getAccount()
+> GetAccount getAccount()
 
 Get your account informations, plans and credits details
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.AccountApi();
+apiInstance.getAccount().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getAccount(callback);
 ```
 
 ### Parameters
@@ -39,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**GetAccount**](GetAccount.md)
 
 ### Authorization
 

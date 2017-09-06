@@ -17,34 +17,33 @@ Method | HTTP request | Description
 
 <a name="addContactToList"></a>
 # **addContactToList**
-> InlineResponse2014 addContactToList(listId, contactEmails)
+> PostContactInfo addContactToList(listId, contactEmails)
 
 Add existing contacts to a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
-var contactEmails = new SendinBlueApi.ContactEmails(); // ContactEmails | Emails addresses of the contacts
+var contactEmails = new SendinBlueApi.AddRemoveContactToList(); // AddRemoveContactToList | Emails addresses of the contacts
 
+apiInstance.addContactToList(listId, contactEmails).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.addContactToList(listId, contactEmails, callback);
 ```
 
 ### Parameters
@@ -52,11 +51,11 @@ apiInstance.addContactToList(listId, contactEmails, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **String**| Id of the list | 
- **contactEmails** | [**ContactEmails**](ContactEmails.md)| Emails addresses of the contacts | 
+ **contactEmails** | [**AddRemoveContactToList**](AddRemoveContactToList.md)| Emails addresses of the contacts | 
 
 ### Return type
 
-[**InlineResponse2014**](InlineResponse2014.md)
+[**PostContactInfo**](PostContactInfo.md)
 
 ### Authorization
 
@@ -69,43 +68,42 @@ Name | Type | Description  | Notes
 
 <a name="createList"></a>
 # **createList**
-> InlineResponse201 createList(createList)
+> CreateModel createList(createList)
 
 Create a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ListsApi();
 
-var createList = new SendinBlueApi.CreateList1(); // CreateList1 | Values to create a list
+var createList = new SendinBlueApi.CreateList(); // CreateList | Values to create a list
 
+apiInstance.createList(createList).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createList(createList, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createList** | [**CreateList1**](CreateList1.md)| Values to create a list | 
+ **createList** | [**CreateList**](CreateList.md)| Values to create a list | 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateModel**](CreateModel.md)
 
 ### Authorization
 
@@ -124,26 +122,25 @@ Delete a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
+apiInstance.deleteList(listId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteList(listId, callback);
 ```
 
 ### Parameters
@@ -167,18 +164,20 @@ null (empty response body)
 
 <a name="getContactsFromList"></a>
 # **getContactsFromList**
-> InlineResponse20014 getContactsFromList(listId, opts)
+> GetContacts getContactsFromList(listId, opts)
 
 Get the contacts in a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ListsApi();
 
@@ -189,15 +188,12 @@ var opts = {
   'limit': 50, // Number | Number of documents per page
   'offset': 0 // Number | Index of the first document of the page
 };
+apiInstance.getContactsFromList(listId, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getContactsFromList(listId, opts, callback);
 ```
 
 ### Parameters
@@ -211,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**GetContacts**](GetContacts.md)
 
 ### Authorization
 
@@ -224,18 +220,20 @@ Name | Type | Description  | Notes
 
 <a name="getFolderLists"></a>
 # **getFolderLists**
-> InlineResponse20018 getFolderLists(folderId, opts)
+> GetFolderLists getFolderLists(folderId, opts)
 
 Get the lists in a folder
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ListsApi();
 
@@ -245,15 +243,12 @@ var opts = {
   'limit': 10, // Number | Number of documents per page
   'offset': 0 // Number | Index of the first document of the page
 };
+apiInstance.getFolderLists(folderId, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getFolderLists(folderId, opts, callback);
 ```
 
 ### Parameters
@@ -266,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**GetFolderLists**](GetFolderLists.md)
 
 ### Authorization
 
@@ -279,32 +274,31 @@ Name | Type | Description  | Notes
 
 <a name="getList"></a>
 # **getList**
-> InlineResponse20020 getList(listId)
+> GetExtendedList getList(listId)
 
 Get the details of a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
+apiInstance.getList(listId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getList(listId, callback);
 ```
 
 ### Parameters
@@ -315,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**GetExtendedList**](GetExtendedList.md)
 
 ### Authorization
 
@@ -328,18 +322,20 @@ Name | Type | Description  | Notes
 
 <a name="getLists"></a>
 # **getLists**
-> InlineResponse20019 getLists(opts)
+> GetLists getLists(opts)
 
 Get all the lists
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ListsApi();
 
@@ -347,15 +343,12 @@ var opts = {
   'limit': 10, // Number | Number of documents per page
   'offset': 0 // Number | Index of the first document of the page
 };
+apiInstance.getLists(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getLists(opts, callback);
 ```
 
 ### Parameters
@@ -367,7 +360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**GetLists**](GetLists.md)
 
 ### Authorization
 
@@ -380,34 +373,33 @@ Name | Type | Description  | Notes
 
 <a name="removeContactToList"></a>
 # **removeContactToList**
-> InlineResponse2014 removeContactToList(listId, contactEmails)
+> PostContactInfo removeContactToList(listId, contactEmails)
 
 Remove existing contacts from a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
-var contactEmails = new SendinBlueApi.ContactEmails1(); // ContactEmails1 | Emails adresses of the contact
+var contactEmails = new SendinBlueApi.AddRemoveContactToList(); // AddRemoveContactToList | Emails adresses of the contact
 
+apiInstance.removeContactToList(listId, contactEmails).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.removeContactToList(listId, contactEmails, callback);
 ```
 
 ### Parameters
@@ -415,11 +407,11 @@ apiInstance.removeContactToList(listId, contactEmails, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **String**| Id of the list | 
- **contactEmails** | [**ContactEmails1**](ContactEmails1.md)| Emails adresses of the contact | 
+ **contactEmails** | [**AddRemoveContactToList**](AddRemoveContactToList.md)| Emails adresses of the contact | 
 
 ### Return type
 
-[**InlineResponse2014**](InlineResponse2014.md)
+[**PostContactInfo**](PostContactInfo.md)
 
 ### Authorization
 
@@ -438,28 +430,27 @@ Update a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
-var updateList = new SendinBlueApi.UpdateList1(); // UpdateList1 | Values to update a list
+var updateList = new SendinBlueApi.UpdateList(); // UpdateList | Values to update a list
 
+apiInstance.updateList(listId, updateList).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateList(listId, updateList, callback);
 ```
 
 ### Parameters
@@ -467,7 +458,7 @@ apiInstance.updateList(listId, updateList, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **String**| Id of the list | 
- **updateList** | [**UpdateList1**](UpdateList1.md)| Values to update a list | 
+ **updateList** | [**UpdateList**](UpdateList.md)| Values to update a list | 
 
 ### Return type
 

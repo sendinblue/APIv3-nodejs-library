@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2001ApiKeys', 'model/InlineResponse2001Credits', 'model/InlineResponse2001Ips', 'model/InlineResponse2001Statistics'], factory);
+    define(['ApiClient', 'model/GetChildInfoApiKeys', 'model/GetChildInfoCredits', 'model/GetChildInfoIps', 'model/GetChildInfoStatistics', 'model/GetClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2001ApiKeys'), require('./InlineResponse2001Credits'), require('./InlineResponse2001Ips'), require('./InlineResponse2001Statistics'));
+    module.exports = factory(require('../ApiClient'), require('./GetChildInfoApiKeys'), require('./GetChildInfoCredits'), require('./GetChildInfoIps'), require('./GetChildInfoStatistics'), require('./GetClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetChildInfo = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2001ApiKeys, root.SendinBlueApi.InlineResponse2001Credits, root.SendinBlueApi.InlineResponse2001Ips, root.SendinBlueApi.InlineResponse2001Statistics);
+    root.SendinBlueApi.GetChildInfo = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetChildInfoApiKeys, root.SendinBlueApi.GetChildInfoCredits, root.SendinBlueApi.GetChildInfoIps, root.SendinBlueApi.GetChildInfoStatistics, root.SendinBlueApi.GetClient);
   }
-}(this, function(ApiClient, InlineResponse2001ApiKeys, InlineResponse2001Credits, InlineResponse2001Ips, InlineResponse2001Statistics) {
+}(this, function(ApiClient, GetChildInfoApiKeys, GetChildInfoCredits, GetChildInfoIps, GetChildInfoStatistics, GetClient) {
   'use strict';
 
 
@@ -44,6 +44,7 @@
    * Constructs a new <code>GetChildInfo</code>.
    * @alias module:model/GetChildInfo
    * @class
+   * @implements module:model/GetClient
    * @param email {String} Login Email
    * @param firstName {String} First Name
    * @param lastName {String} Last Name
@@ -53,10 +54,7 @@
   var exports = function(email, firstName, lastName, companyName, password) {
     var _this = this;
 
-    _this['email'] = email;
-    _this['firstName'] = firstName;
-    _this['lastName'] = lastName;
-    _this['companyName'] = companyName;
+    GetClient.call(_this, email, firstName, lastName, companyName);
 
 
     _this['password'] = password;
@@ -75,63 +73,32 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('email')) {
-        obj['email'] = ApiClient.convertToType(data['email'], 'String');
-      }
-      if (data.hasOwnProperty('firstName')) {
-        obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
-      }
-      if (data.hasOwnProperty('lastName')) {
-        obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
-      }
-      if (data.hasOwnProperty('companyName')) {
-        obj['companyName'] = ApiClient.convertToType(data['companyName'], 'String');
-      }
+      GetClient.constructFromObject(data, obj);
       if (data.hasOwnProperty('credits')) {
-        obj['credits'] = InlineResponse2001Credits.constructFromObject(data['credits']);
+        obj['credits'] = GetChildInfoCredits.constructFromObject(data['credits']);
       }
       if (data.hasOwnProperty('statistics')) {
-        obj['statistics'] = InlineResponse2001Statistics.constructFromObject(data['statistics']);
+        obj['statistics'] = GetChildInfoStatistics.constructFromObject(data['statistics']);
       }
       if (data.hasOwnProperty('password')) {
         obj['password'] = ApiClient.convertToType(data['password'], 'String');
       }
       if (data.hasOwnProperty('ips')) {
-        obj['ips'] = ApiClient.convertToType(data['ips'], [InlineResponse2001Ips]);
+        obj['ips'] = ApiClient.convertToType(data['ips'], [GetChildInfoIps]);
       }
       if (data.hasOwnProperty('apiKeys')) {
-        obj['apiKeys'] = ApiClient.convertToType(data['apiKeys'], [InlineResponse2001ApiKeys]);
+        obj['apiKeys'] = ApiClient.convertToType(data['apiKeys'], [GetChildInfoApiKeys]);
       }
     }
     return obj;
   }
 
   /**
-   * Login Email
-   * @member {String} email
-   */
-  exports.prototype['email'] = undefined;
-  /**
-   * First Name
-   * @member {String} firstName
-   */
-  exports.prototype['firstName'] = undefined;
-  /**
-   * Last Name
-   * @member {String} lastName
-   */
-  exports.prototype['lastName'] = undefined;
-  /**
-   * Name of the company
-   * @member {String} companyName
-   */
-  exports.prototype['companyName'] = undefined;
-  /**
-   * @member {module:model/InlineResponse2001Credits} credits
+   * @member {module:model/GetChildInfoCredits} credits
    */
   exports.prototype['credits'] = undefined;
   /**
-   * @member {module:model/InlineResponse2001Statistics} statistics
+   * @member {module:model/GetChildInfoStatistics} statistics
    */
   exports.prototype['statistics'] = undefined;
   /**
@@ -141,14 +108,39 @@
   exports.prototype['password'] = undefined;
   /**
    * IP(s) associated to a child account user
-   * @member {Array.<module:model/InlineResponse2001Ips>} ips
+   * @member {Array.<module:model/GetChildInfoIps>} ips
    */
   exports.prototype['ips'] = undefined;
   /**
    * API Keys associated to child account
-   * @member {Array.<module:model/InlineResponse2001ApiKeys>} apiKeys
+   * @member {Array.<module:model/GetChildInfoApiKeys>} apiKeys
    */
   exports.prototype['apiKeys'] = undefined;
+
+  // Implement GetClient interface:
+  /**
+   * Login Email
+   * @member {String} email
+   */
+exports.prototype['email'] = undefined;
+
+  /**
+   * First Name
+   * @member {String} firstName
+   */
+exports.prototype['firstName'] = undefined;
+
+  /**
+   * Last Name
+   * @member {String} lastName
+   */
+exports.prototype['lastName'] = undefined;
+
+  /**
+   * Name of the company
+   * @member {String} companyName
+   */
+exports.prototype['companyName'] = undefined;
 
 
 

@@ -57,42 +57,6 @@
       //expect(instance).to.be.a(SendinBlueApi.GetExtendedCampaignOverview);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instane = new SendinBlueApi.GetExtendedCampaignOverview();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.GetExtendedCampaignOverview();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property subject (base name: "subject")', function() {
-      // uncomment below and update the code to test the property subject
-      //var instane = new SendinBlueApi.GetExtendedCampaignOverview();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instane = new SendinBlueApi.GetExtendedCampaignOverview();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instane = new SendinBlueApi.GetExtendedCampaignOverview();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property scheduledAt (base name: "scheduledAt")', function() {
-      // uncomment below and update the code to test the property scheduledAt
-      //var instane = new SendinBlueApi.GetExtendedCampaignOverview();
-      //expect(instance).to.be();
-    });
-
     it('should have the property testSent (base name: "testSent")', function() {
       // uncomment below and update the code to test the property testSent
       //var instane = new SendinBlueApi.GetExtendedCampaignOverview();

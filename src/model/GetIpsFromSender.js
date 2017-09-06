@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2005Ips'], factory);
+    define(['ApiClient', 'model/GetIpFromSender'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2005Ips'));
+    module.exports = factory(require('../ApiClient'), require('./GetIpFromSender'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetIpsFromSender = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2005Ips);
+    root.SendinBlueApi.GetIpsFromSender = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetIpFromSender);
   }
-}(this, function(ApiClient, InlineResponse2005Ips) {
+}(this, function(ApiClient, GetIpFromSender) {
   'use strict';
 
 
@@ -44,7 +44,7 @@
    * Constructs a new <code>GetIpsFromSender</code>.
    * @alias module:model/GetIpsFromSender
    * @class
-   * @param ips {Array.<module:model/InlineResponse2005Ips>} Dedicated IP(s) linked to a sender
+   * @param ips {Array.<module:model/GetIpFromSender>} Dedicated IP(s) linked to a sender
    */
   var exports = function(ips) {
     var _this = this;
@@ -64,7 +64,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('ips')) {
-        obj['ips'] = ApiClient.convertToType(data['ips'], [InlineResponse2005Ips]);
+        obj['ips'] = ApiClient.convertToType(data['ips'], [GetIpFromSender]);
       }
     }
     return obj;
@@ -72,7 +72,7 @@
 
   /**
    * Dedicated IP(s) linked to a sender
-   * @member {Array.<module:model/InlineResponse2005Ips>} ips
+   * @member {Array.<module:model/GetIpFromSender>} ips
    */
   exports.prototype['ips'] = undefined;
 

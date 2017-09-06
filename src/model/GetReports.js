@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2009Reports'], factory);
+    define(['ApiClient', 'model/GetReportsReports'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2009Reports'));
+    module.exports = factory(require('../ApiClient'), require('./GetReportsReports'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetReports = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2009Reports);
+    root.SendinBlueApi.GetReports = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetReportsReports);
   }
-}(this, function(ApiClient, InlineResponse2009Reports) {
+}(this, function(ApiClient, GetReportsReports) {
   'use strict';
 
 
@@ -63,14 +63,14 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('reports')) {
-        obj['reports'] = ApiClient.convertToType(data['reports'], [InlineResponse2009Reports]);
+        obj['reports'] = ApiClient.convertToType(data['reports'], [GetReportsReports]);
       }
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/InlineResponse2009Reports>} reports
+   * @member {Array.<module:model/GetReportsReports>} reports
    */
   exports.prototype['reports'] = undefined;
 

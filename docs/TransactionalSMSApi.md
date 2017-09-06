@@ -12,18 +12,20 @@ Method | HTTP request | Description
 
 <a name="getSmsEvents"></a>
 # **getSmsEvents**
-> InlineResponse20022 getSmsEvents(opts)
+> GetSmsEventReport getSmsEvents(opts)
 
 Get all the SMS activity (unaggregated events)
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.TransactionalSMSApi();
 
@@ -37,15 +39,12 @@ var opts = {
   'event': "event_example", // String | Filter the report for specific events
   'tags': "tags_example" // String | Filter the report for specific tags passed as a serialized urlencoded array
 };
+apiInstance.getSmsEvents(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getSmsEvents(opts, callback);
 ```
 
 ### Parameters
@@ -63,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022**](InlineResponse20022.md)
+[**GetSmsEventReport**](GetSmsEventReport.md)
 
 ### Authorization
 
@@ -76,18 +75,20 @@ Name | Type | Description  | Notes
 
 <a name="getTransacAggregatedSmsReport"></a>
 # **getTransacAggregatedSmsReport**
-> InlineResponse20023 getTransacAggregatedSmsReport(opts)
+> GetTransacAggregatedSmsReport getTransacAggregatedSmsReport(opts)
 
 Get your SMS activity aggregated over a period of time
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.TransactionalSMSApi();
 
@@ -97,15 +98,12 @@ var opts = {
   'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with startDate and endDate
   'tag': "tag_example" // String | Filter on a tag
 };
+apiInstance.getTransacAggregatedSmsReport(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getTransacAggregatedSmsReport(opts, callback);
 ```
 
 ### Parameters
@@ -119,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**GetTransacAggregatedSmsReport**](GetTransacAggregatedSmsReport.md)
 
 ### Authorization
 
@@ -132,18 +130,20 @@ Name | Type | Description  | Notes
 
 <a name="getTransacSmsReport"></a>
 # **getTransacSmsReport**
-> InlineResponse20024 getTransacSmsReport(opts)
+> GetTransacSmsReport getTransacSmsReport(opts)
 
 Get your SMS activity aggregated per day
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.TransactionalSMSApi();
 
@@ -153,15 +153,12 @@ var opts = {
   'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate'
   'tag': "tag_example" // String | Filter on a tag
 };
+apiInstance.getTransacSmsReport(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getTransacSmsReport(opts, callback);
 ```
 
 ### Parameters
@@ -175,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**GetTransacSmsReport**](GetTransacSmsReport.md)
 
 ### Authorization
 
@@ -188,43 +185,42 @@ Name | Type | Description  | Notes
 
 <a name="sendTransacSms"></a>
 # **sendTransacSms**
-> InlineResponse2015 sendTransacSms(sendTransacSms)
+> SendSms sendTransacSms(sendTransacSms)
 
 Send the SMS campaign to the specified mobile number
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.TransactionalSMSApi();
 
-var sendTransacSms = new SendinBlueApi.SendTransacSms1(); // SendTransacSms1 | Values to send a transactional SMS
+var sendTransacSms = new SendinBlueApi.SendTransacSms(); // SendTransacSms | Values to send a transactional SMS
 
+apiInstance.sendTransacSms(sendTransacSms).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.sendTransacSms(sendTransacSms, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendTransacSms** | [**SendTransacSms1**](SendTransacSms1.md)| Values to send a transactional SMS | 
+ **sendTransacSms** | [**SendTransacSms**](SendTransacSms.md)| Values to send a transactional SMS | 
 
 ### Return type
 
-[**InlineResponse2015**](InlineResponse2015.md)
+[**SendSms**](SendSms.md)
 
 ### Authorization
 

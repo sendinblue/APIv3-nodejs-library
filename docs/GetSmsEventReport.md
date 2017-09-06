@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**events** | [**[InlineResponse20022Events]**](InlineResponse20022Events.md) |  | [optional] 
+**events** | [**[GetSmsEventReportEvents]**](GetSmsEventReportEvents.md) |  | [optional] 
 
 

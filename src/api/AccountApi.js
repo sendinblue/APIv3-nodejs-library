@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse200'], factory);
+    define(['ApiClient', 'model/GetAccount'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse200'));
+    module.exports = factory(require('../ApiClient'), require('../model/GetAccount'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.AccountApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse200);
+    root.SendinBlueApi.AccountApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetAccount);
   }
-}(this, function(ApiClient, InlineResponse200) {
+}(this, function(ApiClient, GetAccount) {
   'use strict';
 
   /**
@@ -48,20 +48,12 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the getAccount operation.
-     * @callback module:api/AccountApi~getAccountCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get your account informations, plans and credits details
-     * @param {module:api/AccountApi~getAccountCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAccount} and HTTP response
      */
-    this.getAccount = function(callback) {
+    this.getAccountWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -77,13 +69,24 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse200;
+      var returnType = GetAccount;
 
       return this.apiClient.callApi(
         '/account', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Get your account informations, plans and credits details
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAccount}
+     */
+    this.getAccount = function() {
+      return this.getAccountWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

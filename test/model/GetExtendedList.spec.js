@@ -57,30 +57,6 @@
       //expect(instance).to.be.a(SendinBlueApi.GetExtendedList);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instane = new SendinBlueApi.GetExtendedList();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.GetExtendedList();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property totalBlacklisted (base name: "totalBlacklisted")', function() {
-      // uncomment below and update the code to test the property totalBlacklisted
-      //var instane = new SendinBlueApi.GetExtendedList();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property totalSubscribers (base name: "totalSubscribers")', function() {
-      // uncomment below and update the code to test the property totalSubscribers
-      //var instane = new SendinBlueApi.GetExtendedList();
-      //expect(instance).to.be();
-    });
-
     it('should have the property folderId (base name: "folderId")', function() {
       // uncomment below and update the code to test the property folderId
       //var instane = new SendinBlueApi.GetExtendedList();

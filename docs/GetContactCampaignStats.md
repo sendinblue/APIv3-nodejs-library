@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**messagesSent** | [**[InlineResponse20015MessagesSent]**](InlineResponse20015MessagesSent.md) |  | [optional] 
-**hardBounces** | [**[InlineResponse20015MessagesSent]**](InlineResponse20015MessagesSent.md) |  | [optional] 
-**softBounces** | [**[InlineResponse20015MessagesSent]**](InlineResponse20015MessagesSent.md) |  | [optional] 
-**complaints** | [**[InlineResponse20015MessagesSent]**](InlineResponse20015MessagesSent.md) |  | [optional] 
-**unsubscriptions** | [**InlineResponse20015Unsubscriptions**](InlineResponse20015Unsubscriptions.md) |  | [optional] 
-**opened** | [**[InlineResponse20015Opened]**](InlineResponse20015Opened.md) |  | [optional] 
-**clicked** | [**[InlineResponse20015Clicked]**](InlineResponse20015Clicked.md) |  | [optional] 
-**transacAttributes** | [**[InlineResponse20015TransacAttributes]**](InlineResponse20015TransacAttributes.md) |  | [optional] 
+**messagesSent** | [**[GetContactCampaignStatsMessagesSent]**](GetContactCampaignStatsMessagesSent.md) |  | [optional] 
+**hardBounces** | [**[GetContactCampaignStatsMessagesSent]**](GetContactCampaignStatsMessagesSent.md) |  | [optional] 
+**softBounces** | [**[GetContactCampaignStatsMessagesSent]**](GetContactCampaignStatsMessagesSent.md) |  | [optional] 
+**complaints** | [**[GetContactCampaignStatsMessagesSent]**](GetContactCampaignStatsMessagesSent.md) |  | [optional] 
+**unsubscriptions** | [**GetContactCampaignStatsUnsubscriptions**](GetContactCampaignStatsUnsubscriptions.md) |  | [optional] 
+**opened** | [**[GetContactCampaignStatsOpened]**](GetContactCampaignStatsOpened.md) |  | [optional] 
+**clicked** | [**[GetContactCampaignStatsClicked]**](GetContactCampaignStatsClicked.md) |  | [optional] 
+**transacAttributes** | [**[GetContactCampaignStatsTransacAttributes]**](GetContactCampaignStatsTransacAttributes.md) |  | [optional] 
 
 

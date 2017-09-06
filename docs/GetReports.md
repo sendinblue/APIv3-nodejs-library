@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reports** | [**[InlineResponse2009Reports]**](InlineResponse2009Reports.md) |  | [optional] 
+**reports** | [**[GetReportsReports]**](GetReportsReports.md) |  | [optional] 
 
 

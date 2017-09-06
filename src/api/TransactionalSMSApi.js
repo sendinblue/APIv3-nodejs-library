@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20022', 'model/InlineResponse20023', 'model/InlineResponse20024', 'model/InlineResponse2015', 'model/InlineResponse403', 'model/SendTransacSms1'], factory);
+    define(['ApiClient', 'model/ErrorModel', 'model/GetSmsEventReport', 'model/GetTransacAggregatedSmsReport', 'model/GetTransacSmsReport', 'model/SendSms', 'model/SendTransacSms'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse20022'), require('../model/InlineResponse20023'), require('../model/InlineResponse20024'), require('../model/InlineResponse2015'), require('../model/InlineResponse403'), require('../model/SendTransacSms1'));
+    module.exports = factory(require('../ApiClient'), require('../model/ErrorModel'), require('../model/GetSmsEventReport'), require('../model/GetTransacAggregatedSmsReport'), require('../model/GetTransacSmsReport'), require('../model/SendSms'), require('../model/SendTransacSms'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.TransactionalSMSApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20022, root.SendinBlueApi.InlineResponse20023, root.SendinBlueApi.InlineResponse20024, root.SendinBlueApi.InlineResponse2015, root.SendinBlueApi.InlineResponse403, root.SendinBlueApi.SendTransacSms1);
+    root.SendinBlueApi.TransactionalSMSApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetSmsEventReport, root.SendinBlueApi.GetTransacAggregatedSmsReport, root.SendinBlueApi.GetTransacSmsReport, root.SendinBlueApi.SendSms, root.SendinBlueApi.SendTransacSms);
   }
-}(this, function(ApiClient, InlineResponse20022, InlineResponse20023, InlineResponse20024, InlineResponse2015, InlineResponse403, SendTransacSms1) {
+}(this, function(ApiClient, ErrorModel, GetSmsEventReport, GetTransacAggregatedSmsReport, GetTransacSmsReport, SendSms, SendTransacSms) {
   'use strict';
 
   /**
@@ -48,13 +48,6 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the getSmsEvents operation.
-     * @callback module:api/TransactionalSMSApi~getSmsEventsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20022} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get all the SMS activity (unaggregated events)
@@ -67,10 +60,9 @@
      * @param {String} opts.phoneNumber Filter the report for a specific phone number
      * @param {module:model/String} opts.event Filter the report for specific events
      * @param {String} opts.tags Filter the report for specific tags passed as a serialized urlencoded array
-     * @param {module:api/TransactionalSMSApi~getSmsEventsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20022}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmsEventReport} and HTTP response
      */
-    this.getSmsEvents = function(opts, callback) {
+    this.getSmsEventsWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -95,22 +87,35 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse20022;
+      var returnType = GetSmsEventReport;
 
       return this.apiClient.callApi(
         '/transactionalSMS/statistics/events', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getTransacAggregatedSmsReport operation.
-     * @callback module:api/TransactionalSMSApi~getTransacAggregatedSmsReportCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20023} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all the SMS activity (unaggregated events)
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit Number of documents per page (default to 50)
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+     * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
+     * @param {String} opts.phoneNumber Filter the report for a specific phone number
+     * @param {module:model/String} opts.event Filter the report for specific events
+     * @param {String} opts.tags Filter the report for specific tags passed as a serialized urlencoded array
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmsEventReport}
      */
+    this.getSmsEvents = function(opts) {
+      return this.getSmsEventsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get your SMS activity aggregated over a period of time
@@ -119,10 +124,9 @@
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with startDate and endDate
      * @param {String} opts.tag Filter on a tag
-     * @param {module:api/TransactionalSMSApi~getTransacAggregatedSmsReportCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20023}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTransacAggregatedSmsReport} and HTTP response
      */
-    this.getTransacAggregatedSmsReport = function(opts, callback) {
+    this.getTransacAggregatedSmsReportWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -143,22 +147,31 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse20023;
+      var returnType = GetTransacAggregatedSmsReport;
 
       return this.apiClient.callApi(
         '/transactionalSMS/statistics/aggregatedReport', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the getTransacSmsReport operation.
-     * @callback module:api/TransactionalSMSApi~getTransacSmsReportCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20024} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get your SMS activity aggregated over a period of time
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+     * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with startDate and endDate
+     * @param {String} opts.tag Filter on a tag
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTransacAggregatedSmsReport}
      */
+    this.getTransacAggregatedSmsReport = function(opts) {
+      return this.getTransacAggregatedSmsReportWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get your SMS activity aggregated per day
@@ -167,10 +180,9 @@
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Filter on a tag
-     * @param {module:api/TransactionalSMSApi~getTransacSmsReportCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20024}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTransacSmsReport} and HTTP response
      */
-    this.getTransacSmsReport = function(opts, callback) {
+    this.getTransacSmsReportWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -191,30 +203,38 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse20024;
+      var returnType = GetTransacSmsReport;
 
       return this.apiClient.callApi(
         '/transactionalSMS/statistics/reports', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the sendTransacSms operation.
-     * @callback module:api/TransactionalSMSApi~sendTransacSmsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2015} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get your SMS activity aggregated per day
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+     * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
+     * @param {String} opts.tag Filter on a tag
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTransacSmsReport}
      */
+    this.getTransacSmsReport = function(opts) {
+      return this.getTransacSmsReportWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Send the SMS campaign to the specified mobile number
-     * @param {module:model/SendTransacSms1} sendTransacSms Values to send a transactional SMS
-     * @param {module:api/TransactionalSMSApi~sendTransacSmsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2015}
+     * @param {module:model/SendTransacSms} sendTransacSms Values to send a transactional SMS
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendSms} and HTTP response
      */
-    this.sendTransacSms = function(sendTransacSms, callback) {
+    this.sendTransacSmsWithHttpInfo = function(sendTransacSms) {
       var postBody = sendTransacSms;
 
       // verify the required parameter 'sendTransacSms' is set
@@ -235,13 +255,25 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2015;
+      var returnType = SendSms;
 
       return this.apiClient.callApi(
         '/transactionalSMS/sms', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Send the SMS campaign to the specified mobile number
+     * @param {module:model/SendTransacSms} sendTransacSms Values to send a transactional SMS
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendSms}
+     */
+    this.sendTransacSms = function(sendTransacSms) {
+      return this.sendTransacSmsWithHttpInfo(sendTransacSms)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

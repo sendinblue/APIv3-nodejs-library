@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20016Attributes'], factory);
+    define(['ApiClient', 'model/GetAttributesAttributes'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20016Attributes'));
+    module.exports = factory(require('../ApiClient'), require('./GetAttributesAttributes'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetAttributes = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20016Attributes);
+    root.SendinBlueApi.GetAttributes = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetAttributesAttributes);
   }
-}(this, function(ApiClient, InlineResponse20016Attributes) {
+}(this, function(ApiClient, GetAttributesAttributes) {
   'use strict';
 
 
@@ -44,7 +44,7 @@
    * Constructs a new <code>GetAttributes</code>.
    * @alias module:model/GetAttributes
    * @class
-   * @param attributes {Array.<module:model/InlineResponse20016Attributes>} Listing of available contact attributes in your account
+   * @param attributes {Array.<module:model/GetAttributesAttributes>} Listing of available contact attributes in your account
    */
   var exports = function(attributes) {
     var _this = this;
@@ -64,7 +64,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('attributes')) {
-        obj['attributes'] = ApiClient.convertToType(data['attributes'], [InlineResponse20016Attributes]);
+        obj['attributes'] = ApiClient.convertToType(data['attributes'], [GetAttributesAttributes]);
       }
     }
     return obj;
@@ -72,7 +72,7 @@
 
   /**
    * Listing of available contact attributes in your account
-   * @member {Array.<module:model/InlineResponse20016Attributes>} attributes
+   * @member {Array.<module:model/GetAttributesAttributes>} attributes
    */
   exports.prototype['attributes'] = undefined;
 

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/EmailCampaignscampaignIdsendReportEmail'], factory);
+    define(['ApiClient', 'model/SendReportEmail'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EmailCampaignscampaignIdsendReportEmail'));
+    module.exports = factory(require('../ApiClient'), require('./SendReportEmail'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.SendReport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.EmailCampaignscampaignIdsendReportEmail);
+    root.SendinBlueApi.SendReport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SendReportEmail);
   }
-}(this, function(ApiClient, EmailCampaignscampaignIdsendReportEmail) {
+}(this, function(ApiClient, SendReportEmail) {
   'use strict';
 
 
@@ -67,7 +67,7 @@
         obj['language'] = ApiClient.convertToType(data['language'], 'String');
       }
       if (data.hasOwnProperty('email')) {
-        obj['email'] = EmailCampaignscampaignIdsendReportEmail.constructFromObject(data['email']);
+        obj['email'] = SendReportEmail.constructFromObject(data['email']);
       }
     }
     return obj;
@@ -80,7 +80,7 @@
    */
   exports.prototype['language'] = 'fr';
   /**
-   * @member {module:model/EmailCampaignscampaignIdsendReportEmail} email
+   * @member {module:model/SendReportEmail} email
    */
   exports.prototype['email'] = undefined;
 

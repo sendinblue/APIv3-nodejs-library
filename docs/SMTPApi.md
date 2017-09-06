@@ -19,43 +19,42 @@ Method | HTTP request | Description
 
 <a name="createSmtpTemplate"></a>
 # **createSmtpTemplate**
-> InlineResponse201 createSmtpTemplate(smtpTemplate)
+> CreateModel createSmtpTemplate(smtpTemplate)
 
 Create an smtp template
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
-var smtpTemplate = new SendinBlueApi.SmtpTemplate(); // SmtpTemplate | values to update in smtp template
+var smtpTemplate = new SendinBlueApi.CreateSmtpTemplate(); // CreateSmtpTemplate | values to update in smtp template
 
+apiInstance.createSmtpTemplate(smtpTemplate).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createSmtpTemplate(smtpTemplate, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **smtpTemplate** | [**SmtpTemplate**](SmtpTemplate.md)| values to update in smtp template | 
+ **smtpTemplate** | [**CreateSmtpTemplate**](CreateSmtpTemplate.md)| values to update in smtp template | 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateModel**](CreateModel.md)
 
 ### Authorization
 
@@ -76,34 +75,33 @@ Delete hardbounces. To use carefully (e.g. in case of temporary ISP failures)
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
 var opts = { 
-  'deleteHardbounces': new SendinBlueApi.DeleteHardbounces1() // DeleteHardbounces1 | values to delete hardbounces
+  'deleteHardbounces': new SendinBlueApi.DeleteHardbounces() // DeleteHardbounces | values to delete hardbounces
 };
+apiInstance.deleteHardbounces(opts).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteHardbounces(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteHardbounces** | [**DeleteHardbounces1**](DeleteHardbounces1.md)| values to delete hardbounces | [optional] 
+ **deleteHardbounces** | [**DeleteHardbounces**](DeleteHardbounces.md)| values to delete hardbounces | [optional] 
 
 ### Return type
 
@@ -120,18 +118,20 @@ null (empty response body)
 
 <a name="getAggregatedSmtpReport"></a>
 # **getAggregatedSmtpReport**
-> InlineResponse20010 getAggregatedSmtpReport(opts)
+> GetAggregatedReport getAggregatedSmtpReport(opts)
 
 Get your SMTP activity aggregated over a period of time
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
@@ -141,15 +141,12 @@ var opts = {
   'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate'
   'tag': "tag_example" // String | Tag of the emails
 };
+apiInstance.getAggregatedSmtpReport(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getAggregatedSmtpReport(opts, callback);
 ```
 
 ### Parameters
@@ -163,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**GetAggregatedReport**](GetAggregatedReport.md)
 
 ### Authorization
 
@@ -176,18 +173,20 @@ Name | Type | Description  | Notes
 
 <a name="getEmailEventReport"></a>
 # **getEmailEventReport**
-> InlineResponse20011 getEmailEventReport(opts)
+> GetEmailEventReport getEmailEventReport(opts)
 
 Get all your SMTP activity (unaggregated events)
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
@@ -203,15 +202,12 @@ var opts = {
   'messageId': "messageId_example", // String | Filter on a specific message id
   'templateId': "templateId_example" // String | Filter on a specific template id
 };
+apiInstance.getEmailEventReport(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getEmailEventReport(opts, callback);
 ```
 
 ### Parameters
@@ -231,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**GetEmailEventReport**](GetEmailEventReport.md)
 
 ### Authorization
 
@@ -244,18 +240,20 @@ Name | Type | Description  | Notes
 
 <a name="getSmtpReport"></a>
 # **getSmtpReport**
-> InlineResponse2009 getSmtpReport(opts)
+> GetReports getSmtpReport(opts)
 
 Get your SMTP activity aggregated per day
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
@@ -267,15 +265,12 @@ var opts = {
   'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate'
   'tag': "tag_example" // String | Tag of the emails
 };
+apiInstance.getSmtpReport(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getSmtpReport(opts, callback);
 ```
 
 ### Parameters
@@ -291,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**GetReports**](GetReports.md)
 
 ### Authorization
 
@@ -304,32 +299,31 @@ Name | Type | Description  | Notes
 
 <a name="getSmtpTemplate"></a>
 # **getSmtpTemplate**
-> InlineResponse20012Templates getSmtpTemplate(templateId)
+> GetSmtpTemplateOverview getSmtpTemplate(templateId)
 
 Returns the template informations
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
 var templateId = "templateId_example"; // String | id of the template
 
+apiInstance.getSmtpTemplate(templateId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getSmtpTemplate(templateId, callback);
 ```
 
 ### Parameters
@@ -340,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012Templates**](InlineResponse20012Templates.md)
+[**GetSmtpTemplateOverview**](GetSmtpTemplateOverview.md)
 
 ### Authorization
 
@@ -353,18 +347,20 @@ Name | Type | Description  | Notes
 
 <a name="getSmtpTemplates"></a>
 # **getSmtpTemplates**
-> InlineResponse20012 getSmtpTemplates(opts)
+> GetSmtpTemplates getSmtpTemplates(opts)
 
 Get the list of SMTP templates
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
@@ -373,15 +369,12 @@ var opts = {
   'limit': 50, // Number | Number of documents returned per page
   'offset': 0 // Number | Index of the first document in the page
 };
+apiInstance.getSmtpTemplates(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getSmtpTemplates(opts, callback);
 ```
 
 ### Parameters
@@ -394,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**GetSmtpTemplates**](GetSmtpTemplates.md)
 
 ### Authorization
 
@@ -407,34 +400,33 @@ Name | Type | Description  | Notes
 
 <a name="sendTemplate"></a>
 # **sendTemplate**
-> InlineResponse2012 sendTemplate(templateId, sendEmail)
+> SendTemplateEmail sendTemplate(templateId, sendEmail)
 
 Send a template
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
 var templateId = "templateId_example"; // String | Id of the template
 
-var sendEmail = new SendinBlueApi.SendEmail1(); // SendEmail1 | 
+var sendEmail = new SendinBlueApi.SendEmail(); // SendEmail | 
 
+apiInstance.sendTemplate(templateId, sendEmail).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.sendTemplate(templateId, sendEmail, callback);
 ```
 
 ### Parameters
@@ -442,11 +434,11 @@ apiInstance.sendTemplate(templateId, sendEmail, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **templateId** | **String**| Id of the template | 
- **sendEmail** | [**SendEmail1**](SendEmail1.md)|  | 
+ **sendEmail** | [**SendEmail**](SendEmail.md)|  | 
 
 ### Return type
 
-[**InlineResponse2012**](InlineResponse2012.md)
+[**SendTemplateEmail**](SendTemplateEmail.md)
 
 ### Authorization
 
@@ -465,28 +457,27 @@ Send a template to your test list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
 var templateId = "templateId_example"; // String | Id of the template
 
-var sendTestEmail = new SendinBlueApi.SendTestEmail1(); // SendTestEmail1 | 
+var sendTestEmail = new SendinBlueApi.SendTestEmail(); // SendTestEmail | 
 
+apiInstance.sendTestTemplate(templateId, sendTestEmail).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.sendTestTemplate(templateId, sendTestEmail, callback);
 ```
 
 ### Parameters
@@ -494,7 +485,7 @@ apiInstance.sendTestTemplate(templateId, sendTestEmail, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **templateId** | **String**| Id of the template | 
- **sendTestEmail** | [**SendTestEmail1**](SendTestEmail1.md)|  | 
+ **sendTestEmail** | [**SendTestEmail**](SendTestEmail.md)|  | 
 
 ### Return type
 
@@ -511,43 +502,42 @@ null (empty response body)
 
 <a name="sendTransacEmail"></a>
 # **sendTransacEmail**
-> InlineResponse2013 sendTransacEmail(sendSmtpEmail)
+> CreateSmtpEmail sendTransacEmail(sendSmtpEmail)
 
 Send a transactional email
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
-var sendSmtpEmail = new SendinBlueApi.SendSmtpEmail1(); // SendSmtpEmail1 | Values to send a transactional email
+var sendSmtpEmail = new SendinBlueApi.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
 
+apiInstance.sendTransacEmail(sendSmtpEmail).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.sendTransacEmail(sendSmtpEmail, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendSmtpEmail** | [**SendSmtpEmail1**](SendSmtpEmail1.md)| Values to send a transactional email | 
+ **sendSmtpEmail** | [**SendSmtpEmail**](SendSmtpEmail.md)| Values to send a transactional email | 
 
 ### Return type
 
-[**InlineResponse2013**](InlineResponse2013.md)
+[**CreateSmtpEmail**](CreateSmtpEmail.md)
 
 ### Authorization
 
@@ -566,28 +556,27 @@ Updates an smtp templates
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.SMTPApi();
 
 var templateId = "templateId_example"; // String | id of the template
 
-var smtpTemplate = new SendinBlueApi.SmtpTemplate1(); // SmtpTemplate1 | values to update in smtp template
+var smtpTemplate = new SendinBlueApi.UpdateSmtpTemplate(); // UpdateSmtpTemplate | values to update in smtp template
 
+apiInstance.updateSmtpTemplate(templateId, smtpTemplate).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateSmtpTemplate(templateId, smtpTemplate, callback);
 ```
 
 ### Parameters
@@ -595,7 +584,7 @@ apiInstance.updateSmtpTemplate(templateId, smtpTemplate, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **templateId** | **String**| id of the template | 
- **smtpTemplate** | [**SmtpTemplate1**](SmtpTemplate1.md)| values to update in smtp template | 
+ **smtpTemplate** | [**UpdateSmtpTemplate**](UpdateSmtpTemplate.md)| values to update in smtp template | 
 
 ### Return type
 

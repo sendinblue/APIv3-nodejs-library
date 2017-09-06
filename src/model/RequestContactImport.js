@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ContactsimportNewList'], factory);
+    define(['ApiClient', 'model/RequestContactImportNewList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ContactsimportNewList'));
+    module.exports = factory(require('../ApiClient'), require('./RequestContactImportNewList'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.RequestContactImport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.ContactsimportNewList);
+    root.SendinBlueApi.RequestContactImport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.RequestContactImportNewList);
   }
-}(this, function(ApiClient, ContactsimportNewList) {
+}(this, function(ApiClient, RequestContactImportNewList) {
   'use strict';
 
 
@@ -79,7 +79,7 @@
         obj['notifyUrl'] = ApiClient.convertToType(data['notifyUrl'], 'String');
       }
       if (data.hasOwnProperty('newList')) {
-        obj['newList'] = ContactsimportNewList.constructFromObject(data['newList']);
+        obj['newList'] = RequestContactImportNewList.constructFromObject(data['newList']);
       }
     }
     return obj;
@@ -106,7 +106,7 @@
    */
   exports.prototype['notifyUrl'] = undefined;
   /**
-   * @member {module:model/ContactsimportNewList} newList
+   * @member {module:model/RequestContactImportNewList} newList
    */
   exports.prototype['newList'] = undefined;
 

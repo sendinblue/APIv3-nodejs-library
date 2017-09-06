@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SendersIps'], factory);
+    define(['ApiClient', 'model/CreateSenderIps'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./SendersIps'));
+    module.exports = factory(require('../ApiClient'), require('./CreateSenderIps'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.CreateSender = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SendersIps);
+    root.SendinBlueApi.CreateSender = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateSenderIps);
   }
-}(this, function(ApiClient, SendersIps) {
+}(this, function(ApiClient, CreateSenderIps) {
   'use strict';
 
 
@@ -73,7 +73,7 @@
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
       if (data.hasOwnProperty('ips')) {
-        obj['ips'] = ApiClient.convertToType(data['ips'], [SendersIps]);
+        obj['ips'] = ApiClient.convertToType(data['ips'], [CreateSenderIps]);
       }
     }
     return obj;
@@ -91,7 +91,7 @@
   exports.prototype['email'] = undefined;
   /**
    * Mandatory in case of dedicated IP, IPs to associate to the sender
-   * @member {Array.<module:model/SendersIps>} ips
+   * @member {Array.<module:model/CreateSenderIps>} ips
    */
   exports.prototype['ips'] = undefined;
 

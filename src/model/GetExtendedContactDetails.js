@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/GetContactDetails'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./GetContactDetails'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetExtendedContactDetails = factory(root.SendinBlueApi.ApiClient);
+    root.SendinBlueApi.GetExtendedContactDetails = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetContactDetails);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, GetContactDetails) {
   'use strict';
 
 
@@ -44,6 +44,7 @@
    * Constructs a new <code>GetExtendedContactDetails</code>.
    * @alias module:model/GetExtendedContactDetails
    * @class
+   * @implements module:model/GetContactDetails
    * @param email {String} Email address of the contact for which you requested the details
    * @param id {Number} ID of the contact for which you requested the details
    * @param emailBlacklisted {Boolean} Blacklist status for email campaigns (true=blacklisted, false=not blacklisted)
@@ -55,14 +56,7 @@
   var exports = function(email, id, emailBlacklisted, smsBlacklisted, modifiedAt, listIds, attributes) {
     var _this = this;
 
-    _this['email'] = email;
-    _this['id'] = id;
-    _this['emailBlacklisted'] = emailBlacklisted;
-    _this['smsBlacklisted'] = smsBlacklisted;
-    _this['modifiedAt'] = modifiedAt;
-    _this['listIds'] = listIds;
-
-    _this['attributes'] = attributes;
+    GetContactDetails.call(_this, email, id, emailBlacklisted, smsBlacklisted, modifiedAt, listIds, attributes);
   };
 
   /**
@@ -76,71 +70,57 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('email')) {
-        obj['email'] = ApiClient.convertToType(data['email'], 'String');
-      }
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-      }
-      if (data.hasOwnProperty('emailBlacklisted')) {
-        obj['emailBlacklisted'] = ApiClient.convertToType(data['emailBlacklisted'], 'Boolean');
-      }
-      if (data.hasOwnProperty('smsBlacklisted')) {
-        obj['smsBlacklisted'] = ApiClient.convertToType(data['smsBlacklisted'], 'Boolean');
-      }
-      if (data.hasOwnProperty('modifiedAt')) {
-        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'Date');
-      }
-      if (data.hasOwnProperty('listIds')) {
-        obj['listIds'] = ApiClient.convertToType(data['listIds'], ['Number']);
-      }
-      if (data.hasOwnProperty('listUnsubscribed')) {
-        obj['listUnsubscribed'] = ApiClient.convertToType(data['listUnsubscribed'], ['Number']);
-      }
-      if (data.hasOwnProperty('attributes')) {
-        obj['attributes'] = ApiClient.convertToType(data['attributes'], {'String': 'String'});
-      }
+      GetContactDetails.constructFromObject(data, obj);
     }
     return obj;
   }
 
+
+  // Implement GetContactDetails interface:
   /**
    * Email address of the contact for which you requested the details
    * @member {String} email
    */
-  exports.prototype['email'] = undefined;
+exports.prototype['email'] = undefined;
+
   /**
    * ID of the contact for which you requested the details
    * @member {Number} id
    */
-  exports.prototype['id'] = undefined;
+exports.prototype['id'] = undefined;
+
   /**
    * Blacklist status for email campaigns (true=blacklisted, false=not blacklisted)
    * @member {Boolean} emailBlacklisted
    */
-  exports.prototype['emailBlacklisted'] = undefined;
+exports.prototype['emailBlacklisted'] = undefined;
+
   /**
    * Blacklist status for SMS campaigns (true=blacklisted, false=not blacklisted)
    * @member {Boolean} smsBlacklisted
    */
-  exports.prototype['smsBlacklisted'] = undefined;
+exports.prototype['smsBlacklisted'] = undefined;
+
   /**
    * Last modification date of the contact
    * @member {Date} modifiedAt
    */
-  exports.prototype['modifiedAt'] = undefined;
+exports.prototype['modifiedAt'] = undefined;
+
   /**
    * @member {Array.<Number>} listIds
    */
-  exports.prototype['listIds'] = undefined;
+exports.prototype['listIds'] = undefined;
+
   /**
    * @member {Array.<Number>} listUnsubscribed
    */
-  exports.prototype['listUnsubscribed'] = undefined;
+exports.prototype['listUnsubscribed'] = undefined;
+
   /**
    * @member {Object.<String, String>} attributes
    */
-  exports.prototype['attributes'] = undefined;
+exports.prototype['attributes'] = undefined;
 
 
 

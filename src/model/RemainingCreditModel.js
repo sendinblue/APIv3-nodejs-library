@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2003Child', 'model/InlineResponse2003Reseller'], factory);
+    define(['ApiClient', 'model/RemainingCreditModelChild', 'model/RemainingCreditModelReseller'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2003Child'), require('./InlineResponse2003Reseller'));
+    module.exports = factory(require('../ApiClient'), require('./RemainingCreditModelChild'), require('./RemainingCreditModelReseller'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.RemainingCreditModel = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2003Child, root.SendinBlueApi.InlineResponse2003Reseller);
+    root.SendinBlueApi.RemainingCreditModel = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.RemainingCreditModelChild, root.SendinBlueApi.RemainingCreditModelReseller);
   }
-}(this, function(ApiClient, InlineResponse2003Child, InlineResponse2003Reseller) {
+}(this, function(ApiClient, RemainingCreditModelChild, RemainingCreditModelReseller) {
   'use strict';
 
 
@@ -64,21 +64,21 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('child')) {
-        obj['child'] = InlineResponse2003Child.constructFromObject(data['child']);
+        obj['child'] = RemainingCreditModelChild.constructFromObject(data['child']);
       }
       if (data.hasOwnProperty('reseller')) {
-        obj['reseller'] = InlineResponse2003Reseller.constructFromObject(data['reseller']);
+        obj['reseller'] = RemainingCreditModelReseller.constructFromObject(data['reseller']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {module:model/InlineResponse2003Child} child
+   * @member {module:model/RemainingCreditModelChild} child
    */
   exports.prototype['child'] = undefined;
   /**
-   * @member {module:model/InlineResponse2003Reseller} reseller
+   * @member {module:model/RemainingCreditModelReseller} reseller
    */
   exports.prototype['reseller'] = undefined;
 

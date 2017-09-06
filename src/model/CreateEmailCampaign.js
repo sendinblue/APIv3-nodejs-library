@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/EmailCampaignsRecipients', 'model/EmailCampaignsSender'], factory);
+    define(['ApiClient', 'model/CreateEmailCampaignRecipients', 'model/CreateEmailCampaignSender'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EmailCampaignsRecipients'), require('./EmailCampaignsSender'));
+    module.exports = factory(require('../ApiClient'), require('./CreateEmailCampaignRecipients'), require('./CreateEmailCampaignSender'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.CreateEmailCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.EmailCampaignsRecipients, root.SendinBlueApi.EmailCampaignsSender);
+    root.SendinBlueApi.CreateEmailCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateEmailCampaignRecipients, root.SendinBlueApi.CreateEmailCampaignSender);
   }
-}(this, function(ApiClient, EmailCampaignsRecipients, EmailCampaignsSender) {
+}(this, function(ApiClient, CreateEmailCampaignRecipients, CreateEmailCampaignSender) {
   'use strict';
 
 
@@ -86,7 +86,7 @@
         obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
       }
       if (data.hasOwnProperty('sender')) {
-        obj['sender'] = EmailCampaignsSender.constructFromObject(data['sender']);
+        obj['sender'] = CreateEmailCampaignSender.constructFromObject(data['sender']);
       }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -110,7 +110,7 @@
         obj['toField'] = ApiClient.convertToType(data['toField'], 'String');
       }
       if (data.hasOwnProperty('recipients')) {
-        obj['recipients'] = EmailCampaignsRecipients.constructFromObject(data['recipients']);
+        obj['recipients'] = CreateEmailCampaignRecipients.constructFromObject(data['recipients']);
       }
       if (data.hasOwnProperty('attachmentUrl')) {
         obj['attachmentUrl'] = ApiClient.convertToType(data['attachmentUrl'], 'String');
@@ -146,7 +146,7 @@
    */
   exports.prototype['tag'] = undefined;
   /**
-   * @member {module:model/EmailCampaignsSender} sender
+   * @member {module:model/CreateEmailCampaignSender} sender
    */
   exports.prototype['sender'] = undefined;
   /**
@@ -185,7 +185,7 @@
    */
   exports.prototype['toField'] = undefined;
   /**
-   * @member {module:model/EmailCampaignsRecipients} recipients
+   * @member {module:model/CreateEmailCampaignRecipients} recipients
    */
   exports.prototype['recipients'] = undefined;
   /**

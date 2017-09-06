@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2001Children'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2001Children'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetChildrenList = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2001Children);
+    root.SendinBlueApi.GetChildrenList = factory(root.SendinBlueApi.ApiClient);
   }
-}(this, function(ApiClient, InlineResponse2001Children) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -63,7 +63,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('children')) {
-        obj['children'] = ApiClient.convertToType(data['children'], [InlineResponse2001Children]);
+        obj['children'] = ApiClient.convertToType(data['children'], [Object]);
       }
     }
     return obj;
@@ -71,7 +71,7 @@
 
   /**
    * Your children's account information
-   * @member {Array.<module:model/InlineResponse2001Children>} children
+   * @member {Array.<Object>} children
    */
   exports.prototype['children'] = undefined;
 

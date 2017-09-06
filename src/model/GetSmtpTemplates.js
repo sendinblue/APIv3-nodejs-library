@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse20012Templates'], factory);
+    define(['ApiClient', 'model/GetSmtpTemplateOverview'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse20012Templates'));
+    module.exports = factory(require('../ApiClient'), require('./GetSmtpTemplateOverview'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetSmtpTemplates = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse20012Templates);
+    root.SendinBlueApi.GetSmtpTemplates = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetSmtpTemplateOverview);
   }
-}(this, function(ApiClient, InlineResponse20012Templates) {
+}(this, function(ApiClient, GetSmtpTemplateOverview) {
   'use strict';
 
 
@@ -67,7 +67,7 @@
         obj['count'] = ApiClient.convertToType(data['count'], 'Number');
       }
       if (data.hasOwnProperty('templates')) {
-        obj['templates'] = ApiClient.convertToType(data['templates'], [InlineResponse20012Templates]);
+        obj['templates'] = ApiClient.convertToType(data['templates'], [GetSmtpTemplateOverview]);
       }
     }
     return obj;
@@ -79,7 +79,7 @@
    */
   exports.prototype['count'] = undefined;
   /**
-   * @member {Array.<module:model/InlineResponse20012Templates>} templates
+   * @member {Array.<module:model/GetSmtpTemplateOverview>} templates
    */
   exports.prototype['templates'] = undefined;
 

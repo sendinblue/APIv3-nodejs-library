@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2008RecipientsExclusionLists', 'model/InlineResponse2008RecipientsLists'], factory);
+    define(['ApiClient', 'model/GetCampaignRecipientsExclusionLists', 'model/GetCampaignRecipientsLists'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2008RecipientsExclusionLists'), require('./InlineResponse2008RecipientsLists'));
+    module.exports = factory(require('../ApiClient'), require('./GetCampaignRecipientsExclusionLists'), require('./GetCampaignRecipientsLists'));
   } else {
     // Browser globals (root is window)
     if (!root.SendinBlueApi) {
       root.SendinBlueApi = {};
     }
-    root.SendinBlueApi.GetCampaignRecipients = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.InlineResponse2008RecipientsExclusionLists, root.SendinBlueApi.InlineResponse2008RecipientsLists);
+    root.SendinBlueApi.GetCampaignRecipients = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetCampaignRecipientsExclusionLists, root.SendinBlueApi.GetCampaignRecipientsLists);
   }
-}(this, function(ApiClient, InlineResponse2008RecipientsExclusionLists, InlineResponse2008RecipientsLists) {
+}(this, function(ApiClient, GetCampaignRecipientsExclusionLists, GetCampaignRecipientsLists) {
   'use strict';
 
 
@@ -44,8 +44,8 @@
    * Constructs a new <code>GetCampaignRecipients</code>.
    * @alias module:model/GetCampaignRecipients
    * @class
-   * @param lists {Array.<module:model/InlineResponse2008RecipientsLists>} Lists included in the campaign
-   * @param exclusionLists {Array.<module:model/InlineResponse2008RecipientsExclusionLists>} Lists excluded of the campaign
+   * @param lists {Array.<module:model/GetCampaignRecipientsLists>} Lists included in the campaign
+   * @param exclusionLists {Array.<module:model/GetCampaignRecipientsExclusionLists>} Lists excluded of the campaign
    */
   var exports = function(lists, exclusionLists) {
     var _this = this;
@@ -66,10 +66,10 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('lists')) {
-        obj['lists'] = ApiClient.convertToType(data['lists'], [InlineResponse2008RecipientsLists]);
+        obj['lists'] = ApiClient.convertToType(data['lists'], [GetCampaignRecipientsLists]);
       }
       if (data.hasOwnProperty('exclusionLists')) {
-        obj['exclusionLists'] = ApiClient.convertToType(data['exclusionLists'], [InlineResponse2008RecipientsExclusionLists]);
+        obj['exclusionLists'] = ApiClient.convertToType(data['exclusionLists'], [GetCampaignRecipientsExclusionLists]);
       }
     }
     return obj;
@@ -77,12 +77,12 @@
 
   /**
    * Lists included in the campaign
-   * @member {Array.<module:model/InlineResponse2008RecipientsLists>} lists
+   * @member {Array.<module:model/GetCampaignRecipientsLists>} lists
    */
   exports.prototype['lists'] = undefined;
   /**
    * Lists excluded of the campaign
-   * @member {Array.<module:model/InlineResponse2008RecipientsExclusionLists>} exclusionLists
+   * @member {Array.<module:model/GetCampaignRecipientsExclusionLists>} exclusionLists
    */
   exports.prototype['exclusionLists'] = undefined;
 

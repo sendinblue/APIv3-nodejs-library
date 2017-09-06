@@ -13,43 +13,42 @@ Method | HTTP request | Description
 
 <a name="createWebhook"></a>
 # **createWebhook**
-> InlineResponse201 createWebhook(createWebhook)
+> CreateModel createWebhook(createWebhook)
 
 Create a webhook
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.WebhooksApi();
 
-var createWebhook = new SendinBlueApi.CreateWebhook1(); // CreateWebhook1 | Values to create a webhook
+var createWebhook = new SendinBlueApi.CreateWebhook(); // CreateWebhook | Values to create a webhook
 
+apiInstance.createWebhook(createWebhook).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createWebhook(createWebhook, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createWebhook** | [**CreateWebhook1**](CreateWebhook1.md)| Values to create a webhook | 
+ **createWebhook** | [**CreateWebhook**](CreateWebhook.md)| Values to create a webhook | 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateModel**](CreateModel.md)
 
 ### Authorization
 
@@ -68,26 +67,25 @@ Delete a webhook
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.WebhooksApi();
 
 var webhookId = "webhookId_example"; // String | Id of the webhook
 
+apiInstance.deleteWebhook(webhookId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteWebhook(webhookId, callback);
 ```
 
 ### Parameters
@@ -111,32 +109,31 @@ null (empty response body)
 
 <a name="getWebhook"></a>
 # **getWebhook**
-> InlineResponse20013Webhooks getWebhook(webhookId)
+> GetWebhook getWebhook(webhookId)
 
 Get a webhook details
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.WebhooksApi();
 
 var webhookId = "webhookId_example"; // String | Id of the webhook
 
+apiInstance.getWebhook(webhookId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getWebhook(webhookId, callback);
 ```
 
 ### Parameters
@@ -147,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013Webhooks**](InlineResponse20013Webhooks.md)
+[**GetWebhook**](GetWebhook.md)
 
 ### Authorization
 
@@ -160,33 +157,32 @@ Name | Type | Description  | Notes
 
 <a name="getWebhooks"></a>
 # **getWebhooks**
-> InlineResponse20013 getWebhooks(opts)
+> GetWebhooks getWebhooks(opts)
 
 Get all webhooks
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.WebhooksApi();
 
 var opts = { 
   'type': "transactional" // String | Filter on webhook type
 };
+apiInstance.getWebhooks(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getWebhooks(opts, callback);
 ```
 
 ### Parameters
@@ -197,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**GetWebhooks**](GetWebhooks.md)
 
 ### Authorization
 
@@ -216,28 +212,27 @@ Update a webhook
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendinblue-apiv3');
+var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SendinBlueApi.WebhooksApi();
 
 var webhookId = "webhookId_example"; // String | Id of the webhook
 
-var updateWebhook = new SendinBlueApi.UpdateWebhook1(); // UpdateWebhook1 | Values to update a webhook
+var updateWebhook = new SendinBlueApi.UpdateWebhook(); // UpdateWebhook | Values to update a webhook
 
+apiInstance.updateWebhook(webhookId, updateWebhook).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateWebhook(webhookId, updateWebhook, callback);
 ```
 
 ### Parameters
@@ -245,7 +240,7 @@ apiInstance.updateWebhook(webhookId, updateWebhook, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhookId** | **String**| Id of the webhook | 
- **updateWebhook** | [**UpdateWebhook1**](UpdateWebhook1.md)| Values to update a webhook | 
+ **updateWebhook** | [**UpdateWebhook**](UpdateWebhook.md)| Values to update a webhook | 
 
 ### Return type
 
