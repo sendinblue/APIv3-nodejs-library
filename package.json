@@ -1,6 +1,6 @@
 {
   "name": "sendinblue-apiv3",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Official SendinBlue provided RESTFul API V3 nodejs library",
   "license": "ISC",
   "main": "src/index.js",

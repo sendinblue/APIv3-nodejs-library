@@ -28,10 +28,8 @@ var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
@@ -76,10 +74,8 @@ var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
@@ -124,10 +120,8 @@ var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
@@ -176,10 +170,8 @@ var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
@@ -224,10 +216,8 @@ var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
@@ -279,10 +269,8 @@ var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
@@ -329,10 +317,8 @@ var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
@@ -380,10 +366,8 @@ var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
@@ -431,10 +415,8 @@ var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
@@ -482,10 +464,8 @@ var SendinBlueApi = require('sendin_blue_api');
 var defaultClient = SendinBlueApi.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SendinBlueApi.EmailCampaignsApi();
 
