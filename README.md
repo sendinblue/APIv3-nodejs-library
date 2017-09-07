@@ -2,7 +2,7 @@
 
 SendinBlue's API exposes the entire SendinBlue features via a standardized programmatic interface. Please refer to the full [documentation](https://developers.sendinblue.com) to learn more.
 
-This is the wrapper for the API. It implements all the features of the API v3. It supports callbacks.
+This is the wrapper for the API. It implements all the features of the API v3. It supports promises.
 
 SendinBlue's API matches the [OpenAPI v2 definition](https://www.openapis.org/). The specification can be downloaded [here](https://api.sendinblue.com/v3/swagger_definition.yml).
 
