@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.ErrorModel = factory(root.SendinBlueApi.ApiClient);
+    root.SibApiV3Sdk.ErrorModel = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -152,7 +152,17 @@
      * value: "unauthorized"
      * @const
      */
-    "unauthorized": "unauthorized"  };
+    "unauthorized": "unauthorized",
+    /**
+     * value: "account_under_validation"
+     * @const
+     */
+    "account_under_validation": "account_under_validation",
+    /**
+     * value: "not_acceptable"
+     * @const
+     */
+    "not_acceptable": "not_acceptable"  };
 
 
   return exports;

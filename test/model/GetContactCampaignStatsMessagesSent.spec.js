@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetContactCampaignStatsMessagesSent();
+    instance = new SibApiV3Sdk.GetContactCampaignStatsMessagesSent();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetContactCampaignStatsMessagesSent', function() {
     it('should create an instance of GetContactCampaignStatsMessagesSent', function() {
       // uncomment below and update the code to test GetContactCampaignStatsMessagesSent
-      //var instane = new SendinBlueApi.GetContactCampaignStatsMessagesSent();
-      //expect(instance).to.be.a(SendinBlueApi.GetContactCampaignStatsMessagesSent);
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsMessagesSent();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetContactCampaignStatsMessagesSent);
     });
 
     it('should have the property campaignId (base name: "campaignId")', function() {
       // uncomment below and update the code to test the property campaignId
-      //var instane = new SendinBlueApi.GetContactCampaignStatsMessagesSent();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsMessagesSent();
       //expect(instance).to.be();
     });
 
     it('should have the property eventTime (base name: "eventTime")', function() {
       // uncomment below and update the code to test the property eventTime
-      //var instane = new SendinBlueApi.GetContactCampaignStatsMessagesSent();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsMessagesSent();
       //expect(instance).to.be();
     });
 

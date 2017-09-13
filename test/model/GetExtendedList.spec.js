@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetExtendedList();
+    instance = new SibApiV3Sdk.GetExtendedList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetExtendedList', function() {
     it('should create an instance of GetExtendedList', function() {
       // uncomment below and update the code to test GetExtendedList
-      //var instane = new SendinBlueApi.GetExtendedList();
-      //expect(instance).to.be.a(SendinBlueApi.GetExtendedList);
+      //var instane = new SibApiV3Sdk.GetExtendedList();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedList);
     });
 
     it('should have the property folderId (base name: "folderId")', function() {
       // uncomment below and update the code to test the property folderId
-      //var instane = new SendinBlueApi.GetExtendedList();
+      //var instane = new SibApiV3Sdk.GetExtendedList();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "createdAt")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instane = new SendinBlueApi.GetExtendedList();
+      //var instane = new SibApiV3Sdk.GetExtendedList();
       //expect(instance).to.be();
     });
 
     it('should have the property campaignStats (base name: "campaignStats")', function() {
       // uncomment below and update the code to test the property campaignStats
-      //var instane = new SendinBlueApi.GetExtendedList();
+      //var instane = new SibApiV3Sdk.GetExtendedList();
       //expect(instance).to.be();
     });
 
     it('should have the property dynamicList (base name: "dynamicList")', function() {
       // uncomment below and update the code to test the property dynamicList
-      //var instane = new SendinBlueApi.GetExtendedList();
+      //var instane = new SibApiV3Sdk.GetExtendedList();
       //expect(instance).to.be();
     });
 

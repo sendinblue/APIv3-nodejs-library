@@ -1,4 +1,4 @@
-# SendinBlueApi.AddCredits
+# SibApiV3Sdk.AddCredits
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.SendSmtpEmail();
+    instance = new SibApiV3Sdk.SendSmtpEmail();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,67 +53,67 @@
   describe('SendSmtpEmail', function() {
     it('should create an instance of SendSmtpEmail', function() {
       // uncomment below and update the code to test SendSmtpEmail
-      //var instane = new SendinBlueApi.SendSmtpEmail();
-      //expect(instance).to.be.a(SendinBlueApi.SendSmtpEmail);
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //expect(instance).to.be.a(SibApiV3Sdk.SendSmtpEmail);
     });
 
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
-      //var instane = new SendinBlueApi.SendSmtpEmail();
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property to (base name: "to")', function() {
       // uncomment below and update the code to test the property to
-      //var instane = new SendinBlueApi.SendSmtpEmail();
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property bcc (base name: "bcc")', function() {
       // uncomment below and update the code to test the property bcc
-      //var instane = new SendinBlueApi.SendSmtpEmail();
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property cc (base name: "cc")', function() {
       // uncomment below and update the code to test the property cc
-      //var instane = new SendinBlueApi.SendSmtpEmail();
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property htmlContent (base name: "htmlContent")', function() {
       // uncomment below and update the code to test the property htmlContent
-      //var instane = new SendinBlueApi.SendSmtpEmail();
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property textContent (base name: "textContent")', function() {
       // uncomment below and update the code to test the property textContent
-      //var instane = new SendinBlueApi.SendSmtpEmail();
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property subject (base name: "subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instane = new SendinBlueApi.SendSmtpEmail();
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property replyTo (base name: "replyTo")', function() {
       // uncomment below and update the code to test the property replyTo
-      //var instane = new SendinBlueApi.SendSmtpEmail();
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property attachment (base name: "attachment")', function() {
       // uncomment below and update the code to test the property attachment
-      //var instane = new SendinBlueApi.SendSmtpEmail();
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property headers (base name: "headers")', function() {
       // uncomment below and update the code to test the property headers
-      //var instane = new SendinBlueApi.SendSmtpEmail();
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 

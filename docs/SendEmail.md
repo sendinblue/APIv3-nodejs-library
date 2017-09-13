@@ -1,4 +1,4 @@
-# SendinBlueApi.SendEmail
+# SibApiV3Sdk.SendEmail
 
 ## Properties
 Name | Type | Description | Notes

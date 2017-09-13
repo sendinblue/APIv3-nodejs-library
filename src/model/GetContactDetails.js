@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetContactDetails = factory(root.SendinBlueApi.ApiClient);
+    root.SibApiV3Sdk.GetContactDetails = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -48,7 +48,7 @@
    * @param id {Number} ID of the contact for which you requested the details
    * @param emailBlacklisted {Boolean} Blacklist status for email campaigns (true=blacklisted, false=not blacklisted)
    * @param smsBlacklisted {Boolean} Blacklist status for SMS campaigns (true=blacklisted, false=not blacklisted)
-   * @param modifiedAt {Date} Last modification date of the contact
+   * @param modifiedAt {String} Last modification date of the contact (YYYY-MM-DD HH:mm:ss)
    * @param listIds {Array.<Number>} 
    * @param attributes {Object.<String, String>} 
    */
@@ -89,7 +89,7 @@
         obj['smsBlacklisted'] = ApiClient.convertToType(data['smsBlacklisted'], 'Boolean');
       }
       if (data.hasOwnProperty('modifiedAt')) {
-        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'Date');
+        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'String');
       }
       if (data.hasOwnProperty('listIds')) {
         obj['listIds'] = ApiClient.convertToType(data['listIds'], ['Number']);
@@ -125,8 +125,8 @@
    */
   exports.prototype['smsBlacklisted'] = undefined;
   /**
-   * Last modification date of the contact
-   * @member {Date} modifiedAt
+   * Last modification date of the contact (YYYY-MM-DD HH:mm:ss)
+   * @member {String} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;
   /**

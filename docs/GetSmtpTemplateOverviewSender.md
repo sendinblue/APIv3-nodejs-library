@@ -1,4 +1,4 @@
-# SendinBlueApi.GetSmtpTemplateOverviewSender
+# SibApiV3Sdk.GetSmtpTemplateOverviewSender
 
 ## Properties
 Name | Type | Description | Notes

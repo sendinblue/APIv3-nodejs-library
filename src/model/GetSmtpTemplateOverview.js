@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetSmtpTemplateOverviewSender'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetSmtpTemplateOverview = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetSmtpTemplateOverviewSender);
+    root.SibApiV3Sdk.GetSmtpTemplateOverview = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetSmtpTemplateOverviewSender);
   }
 }(this, function(ApiClient, GetSmtpTemplateOverviewSender) {
   'use strict';
@@ -53,8 +53,8 @@
    * @param toField {String} Customisation of the \"to\" field for the template
    * @param tag {String} Tag of the template
    * @param htmlContent {String} HTML content of the template
-   * @param createdAt {String} Creation date of the template
-   * @param modifiedAt {String} Last modification date of the template
+   * @param createdAt {String} Creation date of the template (YYYY-MM-DD HH:mm:ss)
+   * @param modifiedAt {String} Last modification date of the template (YYYY-MM-DD HH:mm:ss)
    */
   var exports = function(id, name, subject, isActive, testSent, replyTo, toField, tag, htmlContent, createdAt, modifiedAt) {
     var _this = this;
@@ -174,12 +174,12 @@
    */
   exports.prototype['htmlContent'] = undefined;
   /**
-   * Creation date of the template
+   * Creation date of the template (YYYY-MM-DD HH:mm:ss)
    * @member {String} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Last modification date of the template
+   * Last modification date of the template (YYYY-MM-DD HH:mm:ss)
    * @member {String} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;

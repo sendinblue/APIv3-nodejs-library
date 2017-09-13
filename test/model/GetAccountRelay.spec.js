@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetAccountRelay();
+    instance = new SibApiV3Sdk.GetAccountRelay();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetAccountRelay', function() {
     it('should create an instance of GetAccountRelay', function() {
       // uncomment below and update the code to test GetAccountRelay
-      //var instane = new SendinBlueApi.GetAccountRelay();
-      //expect(instance).to.be.a(SendinBlueApi.GetAccountRelay);
+      //var instane = new SibApiV3Sdk.GetAccountRelay();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetAccountRelay);
     });
 
     it('should have the property enabled (base name: "enabled")', function() {
       // uncomment below and update the code to test the property enabled
-      //var instane = new SendinBlueApi.GetAccountRelay();
+      //var instane = new SibApiV3Sdk.GetAccountRelay();
       //expect(instance).to.be();
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instane = new SendinBlueApi.GetAccountRelay();
+      //var instane = new SibApiV3Sdk.GetAccountRelay();
       //expect(instance).to.be();
     });
 

@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetSmtpTemplateOverview'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetSmtpTemplates = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetSmtpTemplateOverview);
+    root.SibApiV3Sdk.GetSmtpTemplates = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetSmtpTemplateOverview);
   }
 }(this, function(ApiClient, GetSmtpTemplateOverview) {
   'use strict';

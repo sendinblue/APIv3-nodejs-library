@@ -1,4 +1,4 @@
-# SendinBlueApi.CreatedProcessId
+# SibApiV3Sdk.CreatedProcessId
 
 ## Properties
 Name | Type | Description | Notes

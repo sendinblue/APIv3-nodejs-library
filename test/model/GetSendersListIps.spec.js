@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetSendersListIps();
+    instance = new SibApiV3Sdk.GetSendersListIps();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('GetSendersListIps', function() {
     it('should create an instance of GetSendersListIps', function() {
       // uncomment below and update the code to test GetSendersListIps
-      //var instane = new SendinBlueApi.GetSendersListIps();
-      //expect(instance).to.be.a(SendinBlueApi.GetSendersListIps);
+      //var instane = new SibApiV3Sdk.GetSendersListIps();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetSendersListIps);
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SendinBlueApi.GetSendersListIps();
+      //var instane = new SibApiV3Sdk.GetSendersListIps();
       //expect(instance).to.be();
     });
 
     it('should have the property domain (base name: "domain")', function() {
       // uncomment below and update the code to test the property domain
-      //var instane = new SendinBlueApi.GetSendersListIps();
+      //var instane = new SibApiV3Sdk.GetSendersListIps();
       //expect(instance).to.be();
     });
 
     it('should have the property weight (base name: "weight")', function() {
       // uncomment below and update the code to test the property weight
-      //var instane = new SendinBlueApi.GetSendersListIps();
+      //var instane = new SibApiV3Sdk.GetSendersListIps();
       //expect(instance).to.be();
     });
 

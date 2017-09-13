@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./CreateSenderIps'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.CreateSender = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateSenderIps);
+    root.SibApiV3Sdk.CreateSender = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateSenderIps);
   }
 }(this, function(ApiClient, CreateSenderIps) {
   'use strict';

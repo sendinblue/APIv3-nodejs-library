@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetSmsCampaignOverview();
+    instance = new SibApiV3Sdk.GetSmsCampaignOverview();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,61 +53,61 @@
   describe('GetSmsCampaignOverview', function() {
     it('should create an instance of GetSmsCampaignOverview', function() {
       // uncomment below and update the code to test GetSmsCampaignOverview
-      //var instane = new SendinBlueApi.GetSmsCampaignOverview();
-      //expect(instance).to.be.a(SendinBlueApi.GetSmsCampaignOverview);
+      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetSmsCampaignOverview);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SendinBlueApi.GetSmsCampaignOverview();
+      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.GetSmsCampaignOverview();
+      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new SendinBlueApi.GetSmsCampaignOverview();
+      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property content (base name: "content")', function() {
       // uncomment below and update the code to test the property content
-      //var instane = new SendinBlueApi.GetSmsCampaignOverview();
+      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property scheduledAt (base name: "scheduledAt")', function() {
       // uncomment below and update the code to test the property scheduledAt
-      //var instane = new SendinBlueApi.GetSmsCampaignOverview();
+      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property testSent (base name: "testSent")', function() {
       // uncomment below and update the code to test the property testSent
-      //var instane = new SendinBlueApi.GetSmsCampaignOverview();
+      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
-      //var instane = new SendinBlueApi.GetSmsCampaignOverview();
+      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "createdAt")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instane = new SendinBlueApi.GetSmsCampaignOverview();
+      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property modifiedAt (base name: "modifiedAt")', function() {
       // uncomment below and update the code to test the property modifiedAt
-      //var instane = new SendinBlueApi.GetSmsCampaignOverview();
+      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
       //expect(instance).to.be();
     });
 

@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetCampaignOverview = factory(root.SendinBlueApi.ApiClient);
+    root.SibApiV3Sdk.GetCampaignOverview = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -49,9 +49,8 @@
    * @param subject {String} Subject of the campaign
    * @param type {module:model/GetCampaignOverview.TypeEnum} Type of campaign
    * @param status {module:model/GetCampaignOverview.StatusEnum} Status of the campaign
-   * @param scheduledAt {String} Date on which campaign is scheduled
    */
-  var exports = function(id, name, subject, type, status, scheduledAt) {
+  var exports = function(id, name, subject, type, status) {
     var _this = this;
 
     _this['id'] = id;
@@ -59,7 +58,7 @@
     _this['subject'] = subject;
     _this['type'] = type;
     _this['status'] = status;
-    _this['scheduledAt'] = scheduledAt;
+
   };
 
   /**
@@ -121,7 +120,7 @@
    */
   exports.prototype['status'] = undefined;
   /**
-   * Date on which campaign is scheduled
+   * Date on which campaign is scheduled (YYYY-MM-DD HH:mm:ss)
    * @member {String} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;

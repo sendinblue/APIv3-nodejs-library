@@ -1,4 +1,4 @@
-# SendinBlueApi.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription
+# SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription
 
 ## Properties
 Name | Type | Description | Notes

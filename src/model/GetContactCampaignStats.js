@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetContactCampaignStatsClicked'), require('./GetContactCampaignStatsMessagesSent'), require('./GetContactCampaignStatsOpened'), require('./GetContactCampaignStatsTransacAttributes'), require('./GetContactCampaignStatsUnsubscriptions'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetContactCampaignStats = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetContactCampaignStatsClicked, root.SendinBlueApi.GetContactCampaignStatsMessagesSent, root.SendinBlueApi.GetContactCampaignStatsOpened, root.SendinBlueApi.GetContactCampaignStatsTransacAttributes, root.SendinBlueApi.GetContactCampaignStatsUnsubscriptions);
+    root.SibApiV3Sdk.GetContactCampaignStats = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetContactCampaignStatsClicked, root.SibApiV3Sdk.GetContactCampaignStatsMessagesSent, root.SibApiV3Sdk.GetContactCampaignStatsOpened, root.SibApiV3Sdk.GetContactCampaignStatsTransacAttributes, root.SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions);
   }
 }(this, function(ApiClient, GetContactCampaignStatsClicked, GetContactCampaignStatsMessagesSent, GetContactCampaignStatsOpened, GetContactCampaignStatsTransacAttributes, GetContactCampaignStatsUnsubscriptions) {
   'use strict';

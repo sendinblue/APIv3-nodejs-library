@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetChildrenList();
+    instance = new SibApiV3Sdk.GetChildrenList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetChildrenList', function() {
     it('should create an instance of GetChildrenList', function() {
       // uncomment below and update the code to test GetChildrenList
-      //var instane = new SendinBlueApi.GetChildrenList();
-      //expect(instance).to.be.a(SendinBlueApi.GetChildrenList);
+      //var instane = new SibApiV3Sdk.GetChildrenList();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetChildrenList);
     });
 
     it('should have the property children (base name: "children")', function() {
       // uncomment below and update the code to test the property children
-      //var instane = new SendinBlueApi.GetChildrenList();
+      //var instane = new SibApiV3Sdk.GetChildrenList();
       //expect(instance).to.be();
     });
 

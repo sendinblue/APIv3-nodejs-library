@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.AddRemoveContactToList();
+    instance = new SibApiV3Sdk.AddRemoveContactToList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('AddRemoveContactToList', function() {
     it('should create an instance of AddRemoveContactToList', function() {
       // uncomment below and update the code to test AddRemoveContactToList
-      //var instane = new SendinBlueApi.AddRemoveContactToList();
-      //expect(instance).to.be.a(SendinBlueApi.AddRemoveContactToList);
+      //var instane = new SibApiV3Sdk.AddRemoveContactToList();
+      //expect(instance).to.be.a(SibApiV3Sdk.AddRemoveContactToList);
     });
 
     it('should have the property emails (base name: "emails")', function() {
       // uncomment below and update the code to test the property emails
-      //var instane = new SendinBlueApi.AddRemoveContactToList();
+      //var instane = new SibApiV3Sdk.AddRemoveContactToList();
       //expect(instance).to.be();
     });
 

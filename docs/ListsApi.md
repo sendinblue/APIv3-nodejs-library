@@ -1,4 +1,4 @@
-# SendinBlueApi.ListsApi
+# SibApiV3Sdk.ListsApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -23,18 +23,20 @@ Add existing contacts to a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ListsApi();
+var apiInstance = new SibApiV3Sdk.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
-var contactEmails = new SendinBlueApi.AddRemoveContactToList(); // AddRemoveContactToList | Emails addresses of the contacts
+var contactEmails = new SibApiV3Sdk.AddRemoveContactToList(); // AddRemoveContactToList | Emails addresses of the contacts
 
 apiInstance.addContactToList(listId, contactEmails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -72,16 +74,18 @@ Create a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ListsApi();
+var apiInstance = new SibApiV3Sdk.ListsApi();
 
-var createList = new SendinBlueApi.CreateList(); // CreateList | Values to create a list
+var createList = new SibApiV3Sdk.CreateList(); // CreateList | Values to create a list
 
 apiInstance.createList(createList).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -118,14 +122,16 @@ Delete a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ListsApi();
+var apiInstance = new SibApiV3Sdk.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
@@ -164,14 +170,16 @@ Get the contacts in a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ListsApi();
+var apiInstance = new SibApiV3Sdk.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
@@ -218,14 +226,16 @@ Get the lists in a folder
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ListsApi();
+var apiInstance = new SibApiV3Sdk.ListsApi();
 
 var folderId = "folderId_example"; // String | Id of the folder
 
@@ -270,14 +280,16 @@ Get the details of a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ListsApi();
+var apiInstance = new SibApiV3Sdk.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
@@ -316,14 +328,16 @@ Get all the lists
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ListsApi();
+var apiInstance = new SibApiV3Sdk.ListsApi();
 
 var opts = { 
   'limit': 10, // Number | Number of documents per page
@@ -365,18 +379,20 @@ Remove existing contacts from a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ListsApi();
+var apiInstance = new SibApiV3Sdk.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
-var contactEmails = new SendinBlueApi.AddRemoveContactToList(); // AddRemoveContactToList | Emails adresses of the contact
+var contactEmails = new SibApiV3Sdk.AddRemoveContactToList(); // AddRemoveContactToList | Emails adresses of the contact
 
 apiInstance.removeContactToList(listId, contactEmails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -414,18 +430,20 @@ Update a list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ListsApi();
+var apiInstance = new SibApiV3Sdk.ListsApi();
 
 var listId = "listId_example"; // String | Id of the list
 
-var updateList = new SendinBlueApi.UpdateList(); // UpdateList | Values to update a list
+var updateList = new SibApiV3Sdk.UpdateList(); // UpdateList | Values to update a list
 
 apiInstance.updateList(listId, updateList).then(function() {
   console.log('API called successfully.');

@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/AddCredits'), require('../model/CreateChild'), require('../model/CreateModel'), require('../model/ErrorModel'), require('../model/GetChildInfo'), require('../model/GetChildrenList'), require('../model/ManageIp'), require('../model/RemainingCreditModel'), require('../model/RemoveCredits'), require('../model/UpdateChild'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.ResellerApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.AddCredits, root.SendinBlueApi.CreateChild, root.SendinBlueApi.CreateModel, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetChildInfo, root.SendinBlueApi.GetChildrenList, root.SendinBlueApi.ManageIp, root.SendinBlueApi.RemainingCreditModel, root.SendinBlueApi.RemoveCredits, root.SendinBlueApi.UpdateChild);
+    root.SibApiV3Sdk.ResellerApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddCredits, root.SibApiV3Sdk.CreateChild, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetChildInfo, root.SibApiV3Sdk.GetChildrenList, root.SibApiV3Sdk.ManageIp, root.SibApiV3Sdk.RemainingCreditModel, root.SibApiV3Sdk.RemoveCredits, root.SibApiV3Sdk.UpdateChild);
   }
 }(this, function(ApiClient, AddCredits, CreateChild, CreateModel, ErrorModel, GetChildInfo, GetChildrenList, ManageIp, RemainingCreditModel, RemoveCredits, UpdateChild) {
   'use strict';

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.CreateEmailCampaignSender();
+    instance = new SibApiV3Sdk.CreateEmailCampaignSender();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('CreateEmailCampaignSender', function() {
     it('should create an instance of CreateEmailCampaignSender', function() {
       // uncomment below and update the code to test CreateEmailCampaignSender
-      //var instane = new SendinBlueApi.CreateEmailCampaignSender();
-      //expect(instance).to.be.a(SendinBlueApi.CreateEmailCampaignSender);
+      //var instane = new SibApiV3Sdk.CreateEmailCampaignSender();
+      //expect(instance).to.be.a(SibApiV3Sdk.CreateEmailCampaignSender);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.CreateEmailCampaignSender();
+      //var instane = new SibApiV3Sdk.CreateEmailCampaignSender();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SendinBlueApi.CreateEmailCampaignSender();
+      //var instane = new SibApiV3Sdk.CreateEmailCampaignSender();
       //expect(instance).to.be();
     });
 

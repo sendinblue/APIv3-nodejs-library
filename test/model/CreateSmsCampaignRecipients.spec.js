@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.CreateSmsCampaignRecipients();
+    instance = new SibApiV3Sdk.CreateSmsCampaignRecipients();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('CreateSmsCampaignRecipients', function() {
     it('should create an instance of CreateSmsCampaignRecipients', function() {
       // uncomment below and update the code to test CreateSmsCampaignRecipients
-      //var instane = new SendinBlueApi.CreateSmsCampaignRecipients();
-      //expect(instance).to.be.a(SendinBlueApi.CreateSmsCampaignRecipients);
+      //var instane = new SibApiV3Sdk.CreateSmsCampaignRecipients();
+      //expect(instance).to.be.a(SibApiV3Sdk.CreateSmsCampaignRecipients);
     });
 
     it('should have the property listIds (base name: "listIds")', function() {
       // uncomment below and update the code to test the property listIds
-      //var instane = new SendinBlueApi.CreateSmsCampaignRecipients();
+      //var instane = new SibApiV3Sdk.CreateSmsCampaignRecipients();
       //expect(instance).to.be();
     });
 
     it('should have the property exclusionListIds (base name: "exclusionListIds")', function() {
       // uncomment below and update the code to test the property exclusionListIds
-      //var instane = new SendinBlueApi.CreateSmsCampaignRecipients();
+      //var instane = new SibApiV3Sdk.CreateSmsCampaignRecipients();
       //expect(instance).to.be();
     });
 

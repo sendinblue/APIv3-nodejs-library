@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./SendReportEmail'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.SendReport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SendReportEmail);
+    root.SibApiV3Sdk.SendReport = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.SendReportEmail);
   }
 }(this, function(ApiClient, SendReportEmail) {
   'use strict';

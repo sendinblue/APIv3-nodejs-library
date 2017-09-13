@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.CreateAttribute();
+    instance = new SibApiV3Sdk.CreateAttribute();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,37 +53,37 @@
   describe('CreateAttribute', function() {
     it('should create an instance of CreateAttribute', function() {
       // uncomment below and update the code to test CreateAttribute
-      //var instane = new SendinBlueApi.CreateAttribute();
-      //expect(instance).to.be.a(SendinBlueApi.CreateAttribute);
+      //var instane = new SibApiV3Sdk.CreateAttribute();
+      //expect(instance).to.be.a(SibApiV3Sdk.CreateAttribute);
     });
 
     it('should have the property category (base name: "category")', function() {
       // uncomment below and update the code to test the property category
-      //var instane = new SendinBlueApi.CreateAttribute();
+      //var instane = new SibApiV3Sdk.CreateAttribute();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.CreateAttribute();
+      //var instane = new SibApiV3Sdk.CreateAttribute();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new SendinBlueApi.CreateAttribute();
+      //var instane = new SibApiV3Sdk.CreateAttribute();
       //expect(instance).to.be();
     });
 
     it('should have the property enumemaration (base name: "enumemaration")', function() {
       // uncomment below and update the code to test the property enumemaration
-      //var instane = new SendinBlueApi.CreateAttribute();
+      //var instane = new SibApiV3Sdk.CreateAttribute();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new SendinBlueApi.CreateAttribute();
+      //var instane = new SibApiV3Sdk.CreateAttribute();
       //expect(instance).to.be();
     });
 

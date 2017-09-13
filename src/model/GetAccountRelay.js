@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetAccountRelayData'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetAccountRelay = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetAccountRelayData);
+    root.SibApiV3Sdk.GetAccountRelay = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetAccountRelayData);
   }
 }(this, function(ApiClient, GetAccountRelayData) {
   'use strict';

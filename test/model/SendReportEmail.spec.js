@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.SendReportEmail();
+    instance = new SibApiV3Sdk.SendReportEmail();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,43 +53,43 @@
   describe('SendReportEmail', function() {
     it('should create an instance of SendReportEmail', function() {
       // uncomment below and update the code to test SendReportEmail
-      //var instane = new SendinBlueApi.SendReportEmail();
-      //expect(instance).to.be.a(SendinBlueApi.SendReportEmail);
+      //var instane = new SibApiV3Sdk.SendReportEmail();
+      //expect(instance).to.be.a(SibApiV3Sdk.SendReportEmail);
     });
 
     it('should have the property subject (base name: "subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instane = new SendinBlueApi.SendReportEmail();
+      //var instane = new SibApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property to (base name: "to")', function() {
       // uncomment below and update the code to test the property to
-      //var instane = new SendinBlueApi.SendReportEmail();
+      //var instane = new SibApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property contentType (base name: "contentType")', function() {
       // uncomment below and update the code to test the property contentType
-      //var instane = new SendinBlueApi.SendReportEmail();
+      //var instane = new SibApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property bcc (base name: "bcc")', function() {
       // uncomment below and update the code to test the property bcc
-      //var instane = new SendinBlueApi.SendReportEmail();
+      //var instane = new SibApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property cc (base name: "cc")', function() {
       // uncomment below and update the code to test the property cc
-      //var instane = new SendinBlueApi.SendReportEmail();
+      //var instane = new SibApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property body (base name: "body")', function() {
       // uncomment below and update the code to test the property body
-      //var instane = new SendinBlueApi.SendReportEmail();
+      //var instane = new SibApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 

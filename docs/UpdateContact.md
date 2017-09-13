@@ -1,4 +1,4 @@
-# SendinBlueApi.UpdateContact
+# SibApiV3Sdk.UpdateContact
 
 ## Properties
 Name | Type | Description | Notes

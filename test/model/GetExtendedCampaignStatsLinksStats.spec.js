@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetExtendedCampaignStatsLinksStats();
+    instance = new SibApiV3Sdk.GetExtendedCampaignStatsLinksStats();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetExtendedCampaignStatsLinksStats', function() {
     it('should create an instance of GetExtendedCampaignStatsLinksStats', function() {
       // uncomment below and update the code to test GetExtendedCampaignStatsLinksStats
-      //var instane = new SendinBlueApi.GetExtendedCampaignStatsLinksStats();
-      //expect(instance).to.be.a(SendinBlueApi.GetExtendedCampaignStatsLinksStats);
+      //var instane = new SibApiV3Sdk.GetExtendedCampaignStatsLinksStats();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedCampaignStatsLinksStats);
     });
 
     it('should have the property nbClick (base name: "nbClick")', function() {
       // uncomment below and update the code to test the property nbClick
-      //var instane = new SendinBlueApi.GetExtendedCampaignStatsLinksStats();
+      //var instane = new SibApiV3Sdk.GetExtendedCampaignStatsLinksStats();
       //expect(instance).to.be();
     });
 

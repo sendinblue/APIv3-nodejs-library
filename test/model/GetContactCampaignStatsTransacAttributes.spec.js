@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetContactCampaignStatsTransacAttributes();
+    instance = new SibApiV3Sdk.GetContactCampaignStatsTransacAttributes();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('GetContactCampaignStatsTransacAttributes', function() {
     it('should create an instance of GetContactCampaignStatsTransacAttributes', function() {
       // uncomment below and update the code to test GetContactCampaignStatsTransacAttributes
-      //var instane = new SendinBlueApi.GetContactCampaignStatsTransacAttributes();
-      //expect(instance).to.be.a(SendinBlueApi.GetContactCampaignStatsTransacAttributes);
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsTransacAttributes();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetContactCampaignStatsTransacAttributes);
     });
 
     it('should have the property orderDate (base name: "orderDate")', function() {
       // uncomment below and update the code to test the property orderDate
-      //var instane = new SendinBlueApi.GetContactCampaignStatsTransacAttributes();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsTransacAttributes();
       //expect(instance).to.be();
     });
 
     it('should have the property orderPrice (base name: "orderPrice")', function() {
       // uncomment below and update the code to test the property orderPrice
-      //var instane = new SendinBlueApi.GetContactCampaignStatsTransacAttributes();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsTransacAttributes();
       //expect(instance).to.be();
     });
 
     it('should have the property orderId (base name: "orderId")', function() {
       // uncomment below and update the code to test the property orderId
-      //var instane = new SendinBlueApi.GetContactCampaignStatsTransacAttributes();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsTransacAttributes();
       //expect(instance).to.be();
     });
 

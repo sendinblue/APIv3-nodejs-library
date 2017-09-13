@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetProcess'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetProcesses = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetProcess);
+    root.SibApiV3Sdk.GetProcesses = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetProcess);
   }
 }(this, function(ApiClient, GetProcess) {
   'use strict';

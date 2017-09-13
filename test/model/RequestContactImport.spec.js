@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.RequestContactImport();
+    instance = new SibApiV3Sdk.RequestContactImport();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,37 +53,37 @@
   describe('RequestContactImport', function() {
     it('should create an instance of RequestContactImport', function() {
       // uncomment below and update the code to test RequestContactImport
-      //var instane = new SendinBlueApi.RequestContactImport();
-      //expect(instance).to.be.a(SendinBlueApi.RequestContactImport);
+      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //expect(instance).to.be.a(SibApiV3Sdk.RequestContactImport);
     });
 
     it('should have the property fileUrl (base name: "fileUrl")', function() {
       // uncomment below and update the code to test the property fileUrl
-      //var instane = new SendinBlueApi.RequestContactImport();
+      //var instane = new SibApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property fileBody (base name: "fileBody")', function() {
       // uncomment below and update the code to test the property fileBody
-      //var instane = new SendinBlueApi.RequestContactImport();
+      //var instane = new SibApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property listIds (base name: "listIds")', function() {
       // uncomment below and update the code to test the property listIds
-      //var instane = new SendinBlueApi.RequestContactImport();
+      //var instane = new SibApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property notifyUrl (base name: "notifyUrl")', function() {
       // uncomment below and update the code to test the property notifyUrl
-      //var instane = new SendinBlueApi.RequestContactImport();
+      //var instane = new SibApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property newList (base name: "newList")', function() {
       // uncomment below and update the code to test the property newList
-      //var instane = new SendinBlueApi.RequestContactImport();
+      //var instane = new SibApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 

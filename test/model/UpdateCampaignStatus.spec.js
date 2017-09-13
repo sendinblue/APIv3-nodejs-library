@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.UpdateCampaignStatus();
+    instance = new SibApiV3Sdk.UpdateCampaignStatus();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('UpdateCampaignStatus', function() {
     it('should create an instance of UpdateCampaignStatus', function() {
       // uncomment below and update the code to test UpdateCampaignStatus
-      //var instane = new SendinBlueApi.UpdateCampaignStatus();
-      //expect(instance).to.be.a(SendinBlueApi.UpdateCampaignStatus);
+      //var instane = new SibApiV3Sdk.UpdateCampaignStatus();
+      //expect(instance).to.be.a(SibApiV3Sdk.UpdateCampaignStatus);
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new SendinBlueApi.UpdateCampaignStatus();
+      //var instane = new SibApiV3Sdk.UpdateCampaignStatus();
       //expect(instance).to.be();
     });
 

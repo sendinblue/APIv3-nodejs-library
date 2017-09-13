@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreateEmailCampaign'), require('../model/CreateModel'), require('../model/CreatedProcessId'), require('../model/EmailExportRecipients'), require('../model/ErrorModel'), require('../model/GetEmailCampaign'), require('../model/GetEmailCampaigns'), require('../model/PostSendFailed'), require('../model/SendReport'), require('../model/SendTestEmail'), require('../model/UpdateCampaignStatus'), require('../model/UpdateEmailCampaign'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.EmailCampaignsApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateEmailCampaign, root.SendinBlueApi.CreateModel, root.SendinBlueApi.CreatedProcessId, root.SendinBlueApi.EmailExportRecipients, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetEmailCampaign, root.SendinBlueApi.GetEmailCampaigns, root.SendinBlueApi.PostSendFailed, root.SendinBlueApi.SendReport, root.SendinBlueApi.SendTestEmail, root.SendinBlueApi.UpdateCampaignStatus, root.SendinBlueApi.UpdateEmailCampaign);
+    root.SibApiV3Sdk.EmailCampaignsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateEmailCampaign, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.EmailExportRecipients, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetEmailCampaign, root.SibApiV3Sdk.GetEmailCampaigns, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendReport, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateCampaignStatus, root.SibApiV3Sdk.UpdateEmailCampaign);
   }
 }(this, function(ApiClient, CreateEmailCampaign, CreateModel, CreatedProcessId, EmailExportRecipients, ErrorModel, GetEmailCampaign, GetEmailCampaigns, PostSendFailed, SendReport, SendTestEmail, UpdateCampaignStatus, UpdateEmailCampaign) {
   'use strict';

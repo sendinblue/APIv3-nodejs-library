@@ -1,4 +1,4 @@
-# SendinBlueApi.GetContactDetails
+# SibApiV3Sdk.GetContactDetails
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **Number** | ID of the contact for which you requested the details | 
 **emailBlacklisted** | **Boolean** | Blacklist status for email campaigns (true&#x3D;blacklisted, false&#x3D;not blacklisted) | 
 **smsBlacklisted** | **Boolean** | Blacklist status for SMS campaigns (true&#x3D;blacklisted, false&#x3D;not blacklisted) | 
-**modifiedAt** | **Date** | Last modification date of the contact | 
+**modifiedAt** | **String** | Last modification date of the contact (YYYY-MM-DD HH:mm:ss) | 
 **listIds** | **[Number]** |  | 
 **listUnsubscribed** | **[Number]** |  | [optional] 
 **attributes** | **{String: String}** |  | 

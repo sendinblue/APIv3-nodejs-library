@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreaUpdateFolder'), require('../model/CreateModel'), require('../model/ErrorModel'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.FoldersApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreaUpdateFolder, root.SendinBlueApi.CreateModel, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetFolder, root.SendinBlueApi.GetFolderLists, root.SendinBlueApi.GetFolders);
+    root.SibApiV3Sdk.FoldersApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreaUpdateFolder, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders);
   }
 }(this, function(ApiClient, CreaUpdateFolder, CreateModel, ErrorModel, GetFolder, GetFolderLists, GetFolders) {
   'use strict';

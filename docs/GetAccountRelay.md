@@ -1,4 +1,4 @@
-# SendinBlueApi.GetAccountRelay
+# SibApiV3Sdk.GetAccountRelay
 
 ## Properties
 Name | Type | Description | Notes

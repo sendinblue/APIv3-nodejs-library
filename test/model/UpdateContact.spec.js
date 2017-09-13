@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.UpdateContact();
+    instance = new SibApiV3Sdk.UpdateContact();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,37 +53,37 @@
   describe('UpdateContact', function() {
     it('should create an instance of UpdateContact', function() {
       // uncomment below and update the code to test UpdateContact
-      //var instane = new SendinBlueApi.UpdateContact();
-      //expect(instance).to.be.a(SendinBlueApi.UpdateContact);
+      //var instane = new SibApiV3Sdk.UpdateContact();
+      //expect(instance).to.be.a(SibApiV3Sdk.UpdateContact);
     });
 
     it('should have the property attributes (base name: "attributes")', function() {
       // uncomment below and update the code to test the property attributes
-      //var instane = new SendinBlueApi.UpdateContact();
+      //var instane = new SibApiV3Sdk.UpdateContact();
       //expect(instance).to.be();
     });
 
     it('should have the property emailBlacklisted (base name: "emailBlacklisted")', function() {
       // uncomment below and update the code to test the property emailBlacklisted
-      //var instane = new SendinBlueApi.UpdateContact();
+      //var instane = new SibApiV3Sdk.UpdateContact();
       //expect(instance).to.be();
     });
 
     it('should have the property smsBlacklisted (base name: "smsBlacklisted")', function() {
       // uncomment below and update the code to test the property smsBlacklisted
-      //var instane = new SendinBlueApi.UpdateContact();
+      //var instane = new SibApiV3Sdk.UpdateContact();
       //expect(instance).to.be();
     });
 
     it('should have the property listIds (base name: "listIds")', function() {
       // uncomment below and update the code to test the property listIds
-      //var instane = new SendinBlueApi.UpdateContact();
+      //var instane = new SibApiV3Sdk.UpdateContact();
       //expect(instance).to.be();
     });
 
     it('should have the property unlinkListIds (base name: "unlinkListIds")', function() {
       // uncomment below and update the code to test the property unlinkListIds
-      //var instane = new SendinBlueApi.UpdateContact();
+      //var instane = new SibApiV3Sdk.UpdateContact();
       //expect(instance).to.be();
     });
 

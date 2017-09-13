@@ -1,4 +1,4 @@
-# SendinBlueApi.CreateSmtpEmail
+# SibApiV3Sdk.CreateSmtpEmail
 
 ## Properties
 Name | Type | Description | Notes

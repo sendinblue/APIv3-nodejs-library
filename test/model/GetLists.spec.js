@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetLists();
+    instance = new SibApiV3Sdk.GetLists();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetLists', function() {
     it('should create an instance of GetLists', function() {
       // uncomment below and update the code to test GetLists
-      //var instane = new SendinBlueApi.GetLists();
-      //expect(instance).to.be.a(SendinBlueApi.GetLists);
+      //var instane = new SibApiV3Sdk.GetLists();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetLists);
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new SendinBlueApi.GetLists();
+      //var instane = new SibApiV3Sdk.GetLists();
       //expect(instance).to.be();
     });
 
     it('should have the property lists (base name: "lists")', function() {
       // uncomment below and update the code to test the property lists
-      //var instane = new SendinBlueApi.GetLists();
+      //var instane = new SibApiV3Sdk.GetLists();
       //expect(instance).to.be();
     });
 

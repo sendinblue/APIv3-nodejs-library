@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.RemainingCreditModel();
+    instance = new SibApiV3Sdk.RemainingCreditModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('RemainingCreditModel', function() {
     it('should create an instance of RemainingCreditModel', function() {
       // uncomment below and update the code to test RemainingCreditModel
-      //var instane = new SendinBlueApi.RemainingCreditModel();
-      //expect(instance).to.be.a(SendinBlueApi.RemainingCreditModel);
+      //var instane = new SibApiV3Sdk.RemainingCreditModel();
+      //expect(instance).to.be.a(SibApiV3Sdk.RemainingCreditModel);
     });
 
     it('should have the property child (base name: "child")', function() {
       // uncomment below and update the code to test the property child
-      //var instane = new SendinBlueApi.RemainingCreditModel();
+      //var instane = new SibApiV3Sdk.RemainingCreditModel();
       //expect(instance).to.be();
     });
 
     it('should have the property reseller (base name: "reseller")', function() {
       // uncomment below and update the code to test the property reseller
-      //var instane = new SendinBlueApi.RemainingCreditModel();
+      //var instane = new SibApiV3Sdk.RemainingCreditModel();
       //expect(instance).to.be();
     });
 

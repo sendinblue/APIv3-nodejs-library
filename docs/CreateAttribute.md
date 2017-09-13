@@ -1,4 +1,4 @@
-# SendinBlueApi.CreateAttribute
+# SibApiV3Sdk.CreateAttribute
 
 ## Properties
 Name | Type | Description | Notes

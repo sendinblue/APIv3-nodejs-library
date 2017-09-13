@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./CreateAttributeEnumemaration'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.CreateAttribute = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateAttributeEnumemaration);
+    root.SibApiV3Sdk.CreateAttribute = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateAttributeEnumemaration);
   }
 }(this, function(ApiClient, CreateAttributeEnumemaration) {
   'use strict';

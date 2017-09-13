@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetAccountMarketingAutomation'), require('./GetAccountPlan'), require('./GetAccountRelay'), require('./GetExtendedClient'), require('./GetExtendedClientAddress'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetAccount = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetAccountMarketingAutomation, root.SendinBlueApi.GetAccountPlan, root.SendinBlueApi.GetAccountRelay, root.SendinBlueApi.GetExtendedClient, root.SendinBlueApi.GetExtendedClientAddress);
+    root.SibApiV3Sdk.GetAccount = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetAccountMarketingAutomation, root.SibApiV3Sdk.GetAccountPlan, root.SibApiV3Sdk.GetAccountRelay, root.SibApiV3Sdk.GetExtendedClient, root.SibApiV3Sdk.GetExtendedClientAddress);
   }
 }(this, function(ApiClient, GetAccountMarketingAutomation, GetAccountPlan, GetAccountRelay, GetExtendedClient, GetExtendedClientAddress) {
   'use strict';

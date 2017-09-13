@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetSmsCampaigns();
+    instance = new SibApiV3Sdk.GetSmsCampaigns();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetSmsCampaigns', function() {
     it('should create an instance of GetSmsCampaigns', function() {
       // uncomment below and update the code to test GetSmsCampaigns
-      //var instane = new SendinBlueApi.GetSmsCampaigns();
-      //expect(instance).to.be.a(SendinBlueApi.GetSmsCampaigns);
+      //var instane = new SibApiV3Sdk.GetSmsCampaigns();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetSmsCampaigns);
     });
 
     it('should have the property campaigns (base name: "campaigns")', function() {
       // uncomment below and update the code to test the property campaigns
-      //var instane = new SendinBlueApi.GetSmsCampaigns();
+      //var instane = new SibApiV3Sdk.GetSmsCampaigns();
       //expect(instance).to.be();
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new SendinBlueApi.GetSmsCampaigns();
+      //var instane = new SibApiV3Sdk.GetSmsCampaigns();
       //expect(instance).to.be();
     });
 

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetContactDetails();
+    instance = new SibApiV3Sdk.GetContactDetails();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,55 +53,55 @@
   describe('GetContactDetails', function() {
     it('should create an instance of GetContactDetails', function() {
       // uncomment below and update the code to test GetContactDetails
-      //var instane = new SendinBlueApi.GetContactDetails();
-      //expect(instance).to.be.a(SendinBlueApi.GetContactDetails);
+      //var instane = new SibApiV3Sdk.GetContactDetails();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetContactDetails);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SendinBlueApi.GetContactDetails();
+      //var instane = new SibApiV3Sdk.GetContactDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SendinBlueApi.GetContactDetails();
+      //var instane = new SibApiV3Sdk.GetContactDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property emailBlacklisted (base name: "emailBlacklisted")', function() {
       // uncomment below and update the code to test the property emailBlacklisted
-      //var instane = new SendinBlueApi.GetContactDetails();
+      //var instane = new SibApiV3Sdk.GetContactDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property smsBlacklisted (base name: "smsBlacklisted")', function() {
       // uncomment below and update the code to test the property smsBlacklisted
-      //var instane = new SendinBlueApi.GetContactDetails();
+      //var instane = new SibApiV3Sdk.GetContactDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property modifiedAt (base name: "modifiedAt")', function() {
       // uncomment below and update the code to test the property modifiedAt
-      //var instane = new SendinBlueApi.GetContactDetails();
+      //var instane = new SibApiV3Sdk.GetContactDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property listIds (base name: "listIds")', function() {
       // uncomment below and update the code to test the property listIds
-      //var instane = new SendinBlueApi.GetContactDetails();
+      //var instane = new SibApiV3Sdk.GetContactDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property listUnsubscribed (base name: "listUnsubscribed")', function() {
       // uncomment below and update the code to test the property listUnsubscribed
-      //var instane = new SendinBlueApi.GetContactDetails();
+      //var instane = new SibApiV3Sdk.GetContactDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property attributes (base name: "attributes")', function() {
       // uncomment below and update the code to test the property attributes
-      //var instane = new SendinBlueApi.GetContactDetails();
+      //var instane = new SibApiV3Sdk.GetContactDetails();
       //expect(instance).to.be();
     });
 

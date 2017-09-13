@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreateModel'), require('../model/CreateSmtpEmail'), require('../model/CreateSmtpTemplate'), require('../model/DeleteHardbounces'), require('../model/ErrorModel'), require('../model/GetAggregatedReport'), require('../model/GetEmailEventReport'), require('../model/GetReports'), require('../model/GetSmtpTemplateOverview'), require('../model/GetSmtpTemplates'), require('../model/PostSendFailed'), require('../model/SendEmail'), require('../model/SendSmtpEmail'), require('../model/SendTemplateEmail'), require('../model/SendTestEmail'), require('../model/UpdateSmtpTemplate'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.SMTPApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateModel, root.SendinBlueApi.CreateSmtpEmail, root.SendinBlueApi.CreateSmtpTemplate, root.SendinBlueApi.DeleteHardbounces, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetAggregatedReport, root.SendinBlueApi.GetEmailEventReport, root.SendinBlueApi.GetReports, root.SendinBlueApi.GetSmtpTemplateOverview, root.SendinBlueApi.GetSmtpTemplates, root.SendinBlueApi.PostSendFailed, root.SendinBlueApi.SendEmail, root.SendinBlueApi.SendSmtpEmail, root.SendinBlueApi.SendTemplateEmail, root.SendinBlueApi.SendTestEmail, root.SendinBlueApi.UpdateSmtpTemplate);
+    root.SibApiV3Sdk.SMTPApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSmtpEmail, root.SibApiV3Sdk.CreateSmtpTemplate, root.SibApiV3Sdk.DeleteHardbounces, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAggregatedReport, root.SibApiV3Sdk.GetEmailEventReport, root.SibApiV3Sdk.GetReports, root.SibApiV3Sdk.GetSmtpTemplateOverview, root.SibApiV3Sdk.GetSmtpTemplates, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendEmail, root.SibApiV3Sdk.SendSmtpEmail, root.SibApiV3Sdk.SendTemplateEmail, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateSmtpTemplate);
   }
 }(this, function(ApiClient, CreateModel, CreateSmtpEmail, CreateSmtpTemplate, DeleteHardbounces, ErrorModel, GetAggregatedReport, GetEmailEventReport, GetReports, GetSmtpTemplateOverview, GetSmtpTemplates, PostSendFailed, SendEmail, SendSmtpEmail, SendTemplateEmail, SendTestEmail, UpdateSmtpTemplate) {
   'use strict';

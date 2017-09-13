@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./PostContactInfoContacts'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.PostContactInfo = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.PostContactInfoContacts);
+    root.SibApiV3Sdk.PostContactInfo = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.PostContactInfoContacts);
   }
 }(this, function(ApiClient, PostContactInfoContacts) {
   'use strict';

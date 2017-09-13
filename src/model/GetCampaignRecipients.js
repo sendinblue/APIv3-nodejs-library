@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetCampaignRecipientsExclusionLists'), require('./GetCampaignRecipientsLists'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetCampaignRecipients = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetCampaignRecipientsExclusionLists, root.SendinBlueApi.GetCampaignRecipientsLists);
+    root.SibApiV3Sdk.GetCampaignRecipients = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetCampaignRecipientsExclusionLists, root.SibApiV3Sdk.GetCampaignRecipientsLists);
   }
 }(this, function(ApiClient, GetCampaignRecipientsExclusionLists, GetCampaignRecipientsLists) {
   'use strict';

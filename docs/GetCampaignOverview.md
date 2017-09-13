@@ -1,4 +1,4 @@
-# SendinBlueApi.GetCampaignOverview
+# SibApiV3Sdk.GetCampaignOverview
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **subject** | **String** | Subject of the campaign | 
 **type** | **String** | Type of campaign | 
 **status** | **String** | Status of the campaign | 
-**scheduledAt** | **String** | Date on which campaign is scheduled | 
+**scheduledAt** | **String** | Date on which campaign is scheduled (YYYY-MM-DD HH:mm:ss) | [optional] 
 
 
 <a name="TypeEnum"></a>

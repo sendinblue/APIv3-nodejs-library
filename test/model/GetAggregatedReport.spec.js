@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetAggregatedReport();
+    instance = new SibApiV3Sdk.GetAggregatedReport();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,79 +53,79 @@
   describe('GetAggregatedReport', function() {
     it('should create an instance of GetAggregatedReport', function() {
       // uncomment below and update the code to test GetAggregatedReport
-      //var instane = new SendinBlueApi.GetAggregatedReport();
-      //expect(instance).to.be.a(SendinBlueApi.GetAggregatedReport);
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetAggregatedReport);
     });
 
     it('should have the property range (base name: "range")', function() {
       // uncomment below and update the code to test the property range
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property requests (base name: "requests")', function() {
       // uncomment below and update the code to test the property requests
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property delivered (base name: "delivered")', function() {
       // uncomment below and update the code to test the property delivered
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property hardBounces (base name: "hardBounces")', function() {
       // uncomment below and update the code to test the property hardBounces
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property softBounces (base name: "softBounces")', function() {
       // uncomment below and update the code to test the property softBounces
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property clicks (base name: "clicks")', function() {
       // uncomment below and update the code to test the property clicks
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property uniqueClicks (base name: "uniqueClicks")', function() {
       // uncomment below and update the code to test the property uniqueClicks
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property opens (base name: "opens")', function() {
       // uncomment below and update the code to test the property opens
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property uniqueOpens (base name: "uniqueOpens")', function() {
       // uncomment below and update the code to test the property uniqueOpens
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property spamReports (base name: "spamReports")', function() {
       // uncomment below and update the code to test the property spamReports
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property blocked (base name: "blocked")', function() {
       // uncomment below and update the code to test the property blocked
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 
     it('should have the property invalid (base name: "invalid")', function() {
       // uncomment below and update the code to test the property invalid
-      //var instane = new SendinBlueApi.GetAggregatedReport();
+      //var instane = new SibApiV3Sdk.GetAggregatedReport();
       //expect(instance).to.be();
     });
 

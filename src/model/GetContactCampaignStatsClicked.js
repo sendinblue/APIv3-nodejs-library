@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetContactCampaignStatsLinks'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetContactCampaignStatsClicked = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetContactCampaignStatsLinks);
+    root.SibApiV3Sdk.GetContactCampaignStatsClicked = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetContactCampaignStatsLinks);
   }
 }(this, function(ApiClient, GetContactCampaignStatsLinks) {
   'use strict';

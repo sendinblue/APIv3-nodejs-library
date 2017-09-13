@@ -1,4 +1,4 @@
-# SendinBlueApi.GetChildInfoIps
+# SibApiV3Sdk.GetChildInfoIps
 
 ## Properties
 Name | Type | Description | Notes

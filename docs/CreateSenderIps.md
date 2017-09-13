@@ -1,4 +1,4 @@
-# SendinBlueApi.CreateSenderIps
+# SibApiV3Sdk.CreateSenderIps
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetList();
+    instance = new SibApiV3Sdk.GetList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetList', function() {
     it('should create an instance of GetList', function() {
       // uncomment below and update the code to test GetList
-      //var instane = new SendinBlueApi.GetList();
-      //expect(instance).to.be.a(SendinBlueApi.GetList);
+      //var instane = new SibApiV3Sdk.GetList();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetList);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SendinBlueApi.GetList();
+      //var instane = new SibApiV3Sdk.GetList();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.GetList();
+      //var instane = new SibApiV3Sdk.GetList();
       //expect(instance).to.be();
     });
 
     it('should have the property totalBlacklisted (base name: "totalBlacklisted")', function() {
       // uncomment below and update the code to test the property totalBlacklisted
-      //var instane = new SendinBlueApi.GetList();
+      //var instane = new SibApiV3Sdk.GetList();
       //expect(instance).to.be();
     });
 
     it('should have the property totalSubscribers (base name: "totalSubscribers")', function() {
       // uncomment below and update the code to test the property totalSubscribers
-      //var instane = new SendinBlueApi.GetList();
+      //var instane = new SibApiV3Sdk.GetList();
       //expect(instance).to.be();
     });
 

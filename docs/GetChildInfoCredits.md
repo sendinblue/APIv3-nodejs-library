@@ -1,4 +1,4 @@
-# SendinBlueApi.GetChildInfoCredits
+# SibApiV3Sdk.GetChildInfoCredits
 
 ## Properties
 Name | Type | Description | Notes

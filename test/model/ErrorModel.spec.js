@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.ErrorModel();
+    instance = new SibApiV3Sdk.ErrorModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('ErrorModel', function() {
     it('should create an instance of ErrorModel', function() {
       // uncomment below and update the code to test ErrorModel
-      //var instane = new SendinBlueApi.ErrorModel();
-      //expect(instance).to.be.a(SendinBlueApi.ErrorModel);
+      //var instane = new SibApiV3Sdk.ErrorModel();
+      //expect(instance).to.be.a(SibApiV3Sdk.ErrorModel);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instane = new SendinBlueApi.ErrorModel();
+      //var instane = new SibApiV3Sdk.ErrorModel();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new SendinBlueApi.ErrorModel();
+      //var instane = new SibApiV3Sdk.ErrorModel();
       //expect(instance).to.be();
     });
 

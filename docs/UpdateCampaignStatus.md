@@ -1,4 +1,4 @@
-# SendinBlueApi.UpdateCampaignStatus
+# SibApiV3Sdk.UpdateCampaignStatus
 
 ## Properties
 Name | Type | Description | Notes

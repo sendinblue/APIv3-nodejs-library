@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetEmailEventReportEvents();
+    instance = new SibApiV3Sdk.GetEmailEventReportEvents();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,49 +53,49 @@
   describe('GetEmailEventReportEvents', function() {
     it('should create an instance of GetEmailEventReportEvents', function() {
       // uncomment below and update the code to test GetEmailEventReportEvents
-      //var instane = new SendinBlueApi.GetEmailEventReportEvents();
-      //expect(instance).to.be.a(SendinBlueApi.GetEmailEventReportEvents);
+      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetEmailEventReportEvents);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SendinBlueApi.GetEmailEventReportEvents();
+      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
       //expect(instance).to.be();
     });
 
     it('should have the property _date (base name: "date")', function() {
       // uncomment below and update the code to test the property _date
-      //var instane = new SendinBlueApi.GetEmailEventReportEvents();
+      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
       //expect(instance).to.be();
     });
 
     it('should have the property messageId (base name: "messageId")', function() {
       // uncomment below and update the code to test the property messageId
-      //var instane = new SendinBlueApi.GetEmailEventReportEvents();
+      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
       //expect(instance).to.be();
     });
 
     it('should have the property event (base name: "event")', function() {
       // uncomment below and update the code to test the property event
-      //var instane = new SendinBlueApi.GetEmailEventReportEvents();
+      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
       //expect(instance).to.be();
     });
 
     it('should have the property reason (base name: "reason")', function() {
       // uncomment below and update the code to test the property reason
-      //var instane = new SendinBlueApi.GetEmailEventReportEvents();
+      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
       //expect(instance).to.be();
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instane = new SendinBlueApi.GetEmailEventReportEvents();
+      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
       //expect(instance).to.be();
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SendinBlueApi.GetEmailEventReportEvents();
+      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
       //expect(instance).to.be();
     });
 

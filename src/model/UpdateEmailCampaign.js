@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./UpdateEmailCampaignRecipients'), require('./UpdateEmailCampaignSender'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.UpdateEmailCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.UpdateEmailCampaignRecipients, root.SendinBlueApi.UpdateEmailCampaignSender);
+    root.SibApiV3Sdk.UpdateEmailCampaign = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.UpdateEmailCampaignRecipients, root.SibApiV3Sdk.UpdateEmailCampaignSender);
   }
 }(this, function(ApiClient, UpdateEmailCampaignRecipients, UpdateEmailCampaignSender) {
   'use strict';
@@ -158,7 +158,7 @@
    */
   exports.prototype['htmlUrl'] = undefined;
   /**
-   * Date and time on which the campaign has to run
+   * Date and time on which the campaign has to run (YYYY-MM-DD HH:mm:ss)
    * @member {String} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;

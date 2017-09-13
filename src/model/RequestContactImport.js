@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./RequestContactImportNewList'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.RequestContactImport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.RequestContactImportNewList);
+    root.SibApiV3Sdk.RequestContactImport = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.RequestContactImportNewList);
   }
 }(this, function(ApiClient, RequestContactImportNewList) {
   'use strict';

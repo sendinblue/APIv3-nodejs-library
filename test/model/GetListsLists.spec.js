@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetListsLists();
+    instance = new SibApiV3Sdk.GetListsLists();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetListsLists', function() {
     it('should create an instance of GetListsLists', function() {
       // uncomment below and update the code to test GetListsLists
-      //var instane = new SendinBlueApi.GetListsLists();
-      //expect(instance).to.be.a(SendinBlueApi.GetListsLists);
+      //var instane = new SibApiV3Sdk.GetListsLists();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetListsLists);
     });
 
     it('should have the property folder (base name: "folder")', function() {
       // uncomment below and update the code to test the property folder
-      //var instane = new SendinBlueApi.GetListsLists();
+      //var instane = new SibApiV3Sdk.GetListsLists();
       //expect(instance).to.be();
     });
 

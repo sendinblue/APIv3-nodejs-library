@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetSmsCampaign();
+    instance = new SibApiV3Sdk.GetSmsCampaign();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,8 +53,8 @@
   describe('GetSmsCampaign', function() {
     it('should create an instance of GetSmsCampaign', function() {
       // uncomment below and update the code to test GetSmsCampaign
-      //var instane = new SendinBlueApi.GetSmsCampaign();
-      //expect(instance).to.be.a(SendinBlueApi.GetSmsCampaign);
+      //var instane = new SibApiV3Sdk.GetSmsCampaign();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetSmsCampaign);
     });
 
   });

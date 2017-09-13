@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.RequestSMSRecipientExport();
+    instance = new SibApiV3Sdk.RequestSMSRecipientExport();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('RequestSMSRecipientExport', function() {
     it('should create an instance of RequestSMSRecipientExport', function() {
       // uncomment below and update the code to test RequestSMSRecipientExport
-      //var instane = new SendinBlueApi.RequestSMSRecipientExport();
-      //expect(instance).to.be.a(SendinBlueApi.RequestSMSRecipientExport);
+      //var instane = new SibApiV3Sdk.RequestSMSRecipientExport();
+      //expect(instance).to.be.a(SibApiV3Sdk.RequestSMSRecipientExport);
     });
 
     it('should have the property notifyURL (base name: "notifyURL")', function() {
       // uncomment below and update the code to test the property notifyURL
-      //var instane = new SendinBlueApi.RequestSMSRecipientExport();
+      //var instane = new SibApiV3Sdk.RequestSMSRecipientExport();
       //expect(instance).to.be();
     });
 
     it('should have the property recipientsType (base name: "recipientsType")', function() {
       // uncomment below and update the code to test the property recipientsType
-      //var instane = new SendinBlueApi.RequestSMSRecipientExport();
+      //var instane = new SibApiV3Sdk.RequestSMSRecipientExport();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# SendinBlueApi.SMTPApi
+# SibApiV3Sdk.SMTPApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -25,16 +25,18 @@ Create an smtp template
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
-var smtpTemplate = new SendinBlueApi.CreateSmtpTemplate(); // CreateSmtpTemplate | values to update in smtp template
+var smtpTemplate = new SibApiV3Sdk.CreateSmtpTemplate(); // CreateSmtpTemplate | values to update in smtp template
 
 apiInstance.createSmtpTemplate(smtpTemplate).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -73,17 +75,19 @@ Delete hardbounces. To use carefully (e.g. in case of temporary ISP failures)
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
 var opts = { 
-  'deleteHardbounces': new SendinBlueApi.DeleteHardbounces() // DeleteHardbounces | values to delete hardbounces
+  'deleteHardbounces': new SibApiV3Sdk.DeleteHardbounces() // DeleteHardbounces | values to delete hardbounces
 };
 apiInstance.deleteHardbounces(opts).then(function() {
   console.log('API called successfully.');
@@ -120,14 +124,16 @@ Get your SMTP activity aggregated over a period of time
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
 var opts = { 
   'startDate': new Date("2013-10-20"), // Date | Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
@@ -173,14 +179,16 @@ Get all your SMTP activity (unaggregated events)
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
 var opts = { 
   'limit': 50, // Number | Number limitation for the result returned
@@ -238,14 +246,16 @@ Get your SMTP activity aggregated per day
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
 var opts = { 
   'limit': 50, // Number | Number of documents returned per page
@@ -295,14 +305,16 @@ Returns the template informations
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
 var templateId = "templateId_example"; // String | id of the template
 
@@ -341,14 +353,16 @@ Get the list of SMTP templates
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
 var opts = { 
   'templateStatus': true, // Boolean | Filter on the status of the template. Active = true, inactive = false
@@ -392,18 +406,20 @@ Send a template
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
 var templateId = "templateId_example"; // String | Id of the template
 
-var sendEmail = new SendinBlueApi.SendEmail(); // SendEmail | 
+var sendEmail = new SibApiV3Sdk.SendEmail(); // SendEmail | 
 
 apiInstance.sendTemplate(templateId, sendEmail).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -441,18 +457,20 @@ Send a template to your test list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
 var templateId = "templateId_example"; // String | Id of the template
 
-var sendTestEmail = new SendinBlueApi.SendTestEmail(); // SendTestEmail | 
+var sendTestEmail = new SibApiV3Sdk.SendTestEmail(); // SendTestEmail | 
 
 apiInstance.sendTestTemplate(templateId, sendTestEmail).then(function() {
   console.log('API called successfully.');
@@ -490,16 +508,18 @@ Send a transactional email
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
-var sendSmtpEmail = new SendinBlueApi.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
+var sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
 
 apiInstance.sendTransacEmail(sendSmtpEmail).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -536,18 +556,20 @@ Updates an smtp templates
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.SMTPApi();
+var apiInstance = new SibApiV3Sdk.SMTPApi();
 
 var templateId = "templateId_example"; // String | id of the template
 
-var smtpTemplate = new SendinBlueApi.UpdateSmtpTemplate(); // UpdateSmtpTemplate | values to update in smtp template
+var smtpTemplate = new SibApiV3Sdk.UpdateSmtpTemplate(); // UpdateSmtpTemplate | values to update in smtp template
 
 apiInstance.updateSmtpTemplate(templateId, smtpTemplate).then(function() {
   console.log('API called successfully.');

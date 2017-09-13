@@ -1,4 +1,4 @@
-# SendinBlueApi.ResellerApi
+# SibApiV3Sdk.ResellerApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -23,18 +23,20 @@ Add Email and/or SMS credits to a specific child account
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ResellerApi();
+var apiInstance = new SibApiV3Sdk.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
-var addCredits = new SendinBlueApi.AddCredits(); // AddCredits | Values to post to add credit to a specific child account
+var addCredits = new SibApiV3Sdk.AddCredits(); // AddCredits | Values to post to add credit to a specific child account
 
 apiInstance.addCredits(childId, addCredits).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -72,18 +74,20 @@ Associate a dedicated IP to the child
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ResellerApi();
+var apiInstance = new SibApiV3Sdk.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
-var ipId = new SendinBlueApi.ManageIp(); // ManageIp | IP's id
+var ipId = new SibApiV3Sdk.ManageIp(); // ManageIp | IP's id
 
 apiInstance.associateIpToChild(childId, ipId).then(function() {
   console.log('API called successfully.');
@@ -121,17 +125,19 @@ Creates a reseller child
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ResellerApi();
+var apiInstance = new SibApiV3Sdk.ResellerApi();
 
 var opts = { 
-  'resellerChild': new SendinBlueApi.CreateChild() // CreateChild | reseller child to add
+  'resellerChild': new SibApiV3Sdk.CreateChild() // CreateChild | reseller child to add
 };
 apiInstance.createResellerChild(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -168,14 +174,16 @@ Deletes a single reseller child based on the childId supplied
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ResellerApi();
+var apiInstance = new SibApiV3Sdk.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
@@ -214,18 +222,20 @@ Dissociate a dedicated IP to the child
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ResellerApi();
+var apiInstance = new SibApiV3Sdk.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
-var ipId = new SendinBlueApi.ManageIp(); // ManageIp | IP's id
+var ipId = new SibApiV3Sdk.ManageIp(); // ManageIp | IP's id
 
 apiInstance.dissociateIpFromChild(childId, ipId).then(function() {
   console.log('API called successfully.');
@@ -263,14 +273,16 @@ Gets the info about a specific child account
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ResellerApi();
+var apiInstance = new SibApiV3Sdk.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
@@ -309,14 +321,16 @@ Gets the list of all reseller&#39;s children accounts
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ResellerApi();
+var apiInstance = new SibApiV3Sdk.ResellerApi();
 apiInstance.getResellerChilds().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -349,18 +363,20 @@ Remove Email and/or SMS credits from a specific child account
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ResellerApi();
+var apiInstance = new SibApiV3Sdk.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
-var removeCredits = new SendinBlueApi.RemoveCredits(); // RemoveCredits | Values to post to remove email or SMS credits from a specific child account
+var removeCredits = new SibApiV3Sdk.RemoveCredits(); // RemoveCredits | Values to post to remove email or SMS credits from a specific child account
 
 apiInstance.removeCredits(childId, removeCredits).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -398,18 +414,20 @@ Updates infos of reseller&#39;s child based on the childId supplied
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ResellerApi();
+var apiInstance = new SibApiV3Sdk.ResellerApi();
 
 var childId = 56; // Number | id of reseller's child
 
-var resellerChild = new SendinBlueApi.UpdateChild(); // UpdateChild | values to update in child profile
+var resellerChild = new SibApiV3Sdk.UpdateChild(); // UpdateChild | values to update in child profile
 
 apiInstance.updateResellerChild(childId, resellerChild).then(function() {
   console.log('API called successfully.');

@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreateSender'), require('../model/CreateSenderModel'), require('../model/ErrorModel'), require('../model/GetIps'), require('../model/GetIpsFromSender'), require('../model/GetSendersList'), require('../model/UpdateSender'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.SendersApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateSender, root.SendinBlueApi.CreateSenderModel, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetIps, root.SendinBlueApi.GetIpsFromSender, root.SendinBlueApi.GetSendersList, root.SendinBlueApi.UpdateSender);
+    root.SibApiV3Sdk.SendersApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateSender, root.SibApiV3Sdk.CreateSenderModel, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetIps, root.SibApiV3Sdk.GetIpsFromSender, root.SibApiV3Sdk.GetSendersList, root.SibApiV3Sdk.UpdateSender);
   }
 }(this, function(ApiClient, CreateSender, CreateSenderModel, ErrorModel, GetIps, GetIpsFromSender, GetSendersList, UpdateSender) {
   'use strict';
