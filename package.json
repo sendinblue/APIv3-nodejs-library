@@ -1,9 +1,9 @@
 {
-  "name": "sendinblue-apiv3",
-  "version": "2.0.2",
+  "name": "sib-api-v3-sdk",
+  "version": "3.0.0",
   "description": "Official SendinBlue provided RESTFul API V3 nodejs library",
   "license": "ISC",
-  "main": "src/index.js",
+  "main": "src/SendinBlue/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },

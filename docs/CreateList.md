@@ -1,4 +1,4 @@
-# SendinBlueApi.CreateList
+# SibApiV3Sdk.CreateList
 
 ## Properties
 Name | Type | Description | Notes

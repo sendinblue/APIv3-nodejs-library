@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.RemoveCredits();
+    instance = new SibApiV3Sdk.RemoveCredits();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('RemoveCredits', function() {
     it('should create an instance of RemoveCredits', function() {
       // uncomment below and update the code to test RemoveCredits
-      //var instane = new SendinBlueApi.RemoveCredits();
-      //expect(instance).to.be.a(SendinBlueApi.RemoveCredits);
+      //var instane = new SibApiV3Sdk.RemoveCredits();
+      //expect(instance).to.be.a(SibApiV3Sdk.RemoveCredits);
     });
 
     it('should have the property sms (base name: "sms")', function() {
       // uncomment below and update the code to test the property sms
-      //var instane = new SendinBlueApi.RemoveCredits();
+      //var instane = new SibApiV3Sdk.RemoveCredits();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SendinBlueApi.RemoveCredits();
+      //var instane = new SibApiV3Sdk.RemoveCredits();
       //expect(instance).to.be();
     });
 

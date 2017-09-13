@@ -1,4 +1,4 @@
-# SendinBlueApi.EmailCampaignsApi
+# SibApiV3Sdk.EmailCampaignsApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -24,16 +24,18 @@ Create an email campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.EmailCampaignsApi();
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
-var emailCampaigns = new SendinBlueApi.CreateEmailCampaign(); // CreateEmailCampaign | Values to create a campaign
+var emailCampaigns = new SibApiV3Sdk.CreateEmailCampaign(); // CreateEmailCampaign | Values to create a campaign
 
 apiInstance.createEmailCampaign(emailCampaigns).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -70,14 +72,16 @@ Delete an email campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.EmailCampaignsApi();
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | id of the campaign
 
@@ -116,19 +120,21 @@ Export the recipients of a campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.EmailCampaignsApi();
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
 var opts = { 
-  'recipientExport': new SendinBlueApi.EmailExportRecipients() // EmailExportRecipients | Values to send for a recipient export request
+  'recipientExport': new SibApiV3Sdk.EmailExportRecipients() // EmailExportRecipients | Values to send for a recipient export request
 };
 apiInstance.emailExportRecipients(campaignId, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -166,14 +172,16 @@ Get campaign informations
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.EmailCampaignsApi();
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
@@ -212,14 +220,16 @@ Return all your created campaigns
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.EmailCampaignsApi();
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var opts = { 
   'type': "type_example", // String | Filter on the type of the campaigns
@@ -265,14 +275,16 @@ Send an email campaign id of the campaign immediately
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.EmailCampaignsApi();
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
@@ -313,18 +325,20 @@ A PDF will be sent to the specified email addresses
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.EmailCampaignsApi();
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
-var sendReport = new SendinBlueApi.SendReport(); // SendReport | Values for send a report
+var sendReport = new SibApiV3Sdk.SendReport(); // SendReport | Values for send a report
 
 apiInstance.sendReport(campaignId, sendReport).then(function() {
   console.log('API called successfully.');
@@ -362,18 +376,20 @@ Send an email campaign to your test list
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.EmailCampaignsApi();
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
-var emailTo = new SendinBlueApi.SendTestEmail(); // SendTestEmail | 
+var emailTo = new SibApiV3Sdk.SendTestEmail(); // SendTestEmail | 
 
 apiInstance.sendTestEmail(campaignId, emailTo).then(function() {
   console.log('API called successfully.');
@@ -411,18 +427,20 @@ Update a campaign status
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.EmailCampaignsApi();
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
-var status = new SendinBlueApi.UpdateCampaignStatus(); // UpdateCampaignStatus | Status of the campaign
+var status = new SibApiV3Sdk.UpdateCampaignStatus(); // UpdateCampaignStatus | Status of the campaign
 
 apiInstance.updateCampaignStatus(campaignId, status).then(function() {
   console.log('API called successfully.');
@@ -460,18 +478,20 @@ Update a campaign
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.EmailCampaignsApi();
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = "campaignId_example"; // String | Id of the campaign
 
-var emailCampaign = new SendinBlueApi.UpdateEmailCampaign(); // UpdateEmailCampaign | Values to update a campaign
+var emailCampaign = new SibApiV3Sdk.UpdateEmailCampaign(); // UpdateEmailCampaign | Values to update a campaign
 
 apiInstance.updateEmailCampaigns(campaignId, emailCampaign).then(function() {
   console.log('API called successfully.');

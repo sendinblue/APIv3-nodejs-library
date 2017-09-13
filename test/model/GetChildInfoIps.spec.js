@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetChildInfoIps();
+    instance = new SibApiV3Sdk.GetChildInfoIps();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetChildInfoIps', function() {
     it('should create an instance of GetChildInfoIps', function() {
       // uncomment below and update the code to test GetChildInfoIps
-      //var instane = new SendinBlueApi.GetChildInfoIps();
-      //expect(instance).to.be.a(SendinBlueApi.GetChildInfoIps);
+      //var instane = new SibApiV3Sdk.GetChildInfoIps();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetChildInfoIps);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SendinBlueApi.GetChildInfoIps();
+      //var instane = new SibApiV3Sdk.GetChildInfoIps();
       //expect(instance).to.be();
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SendinBlueApi.GetChildInfoIps();
+      //var instane = new SibApiV3Sdk.GetChildInfoIps();
       //expect(instance).to.be();
     });
 

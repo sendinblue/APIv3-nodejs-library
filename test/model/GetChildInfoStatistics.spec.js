@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetChildInfoStatistics();
+    instance = new SibApiV3Sdk.GetChildInfoStatistics();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('GetChildInfoStatistics', function() {
     it('should create an instance of GetChildInfoStatistics', function() {
       // uncomment below and update the code to test GetChildInfoStatistics
-      //var instane = new SendinBlueApi.GetChildInfoStatistics();
-      //expect(instance).to.be.a(SendinBlueApi.GetChildInfoStatistics);
+      //var instane = new SibApiV3Sdk.GetChildInfoStatistics();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetChildInfoStatistics);
     });
 
     it('should have the property previousMonthTotalSent (base name: "previousMonthTotalSent")', function() {
       // uncomment below and update the code to test the property previousMonthTotalSent
-      //var instane = new SendinBlueApi.GetChildInfoStatistics();
+      //var instane = new SibApiV3Sdk.GetChildInfoStatistics();
       //expect(instance).to.be();
     });
 
     it('should have the property currentMonthTotalSent (base name: "currentMonthTotalSent")', function() {
       // uncomment below and update the code to test the property currentMonthTotalSent
-      //var instane = new SendinBlueApi.GetChildInfoStatistics();
+      //var instane = new SibApiV3Sdk.GetChildInfoStatistics();
       //expect(instance).to.be();
     });
 
     it('should have the property totalSent (base name: "totalSent")', function() {
       // uncomment below and update the code to test the property totalSent
-      //var instane = new SendinBlueApi.GetChildInfoStatistics();
+      //var instane = new SibApiV3Sdk.GetChildInfoStatistics();
       //expect(instance).to.be();
     });
 

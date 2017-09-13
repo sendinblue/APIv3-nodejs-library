@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetAccountPlan();
+    instance = new SibApiV3Sdk.GetAccountPlan();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('GetAccountPlan', function() {
     it('should create an instance of GetAccountPlan', function() {
       // uncomment below and update the code to test GetAccountPlan
-      //var instane = new SendinBlueApi.GetAccountPlan();
-      //expect(instance).to.be.a(SendinBlueApi.GetAccountPlan);
+      //var instane = new SibApiV3Sdk.GetAccountPlan();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetAccountPlan);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new SendinBlueApi.GetAccountPlan();
+      //var instane = new SibApiV3Sdk.GetAccountPlan();
       //expect(instance).to.be();
     });
 
     it('should have the property creditsType (base name: "creditsType")', function() {
       // uncomment below and update the code to test the property creditsType
-      //var instane = new SendinBlueApi.GetAccountPlan();
+      //var instane = new SibApiV3Sdk.GetAccountPlan();
       //expect(instance).to.be();
     });
 
     it('should have the property credits (base name: "credits")', function() {
       // uncomment below and update the code to test the property credits
-      //var instane = new SendinBlueApi.GetAccountPlan();
+      //var instane = new SibApiV3Sdk.GetAccountPlan();
       //expect(instance).to.be();
     });
 

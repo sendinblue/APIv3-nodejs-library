@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetAccountMarketingAutomation();
+    instance = new SibApiV3Sdk.GetAccountMarketingAutomation();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetAccountMarketingAutomation', function() {
     it('should create an instance of GetAccountMarketingAutomation', function() {
       // uncomment below and update the code to test GetAccountMarketingAutomation
-      //var instane = new SendinBlueApi.GetAccountMarketingAutomation();
-      //expect(instance).to.be.a(SendinBlueApi.GetAccountMarketingAutomation);
+      //var instane = new SibApiV3Sdk.GetAccountMarketingAutomation();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetAccountMarketingAutomation);
     });
 
     it('should have the property key (base name: "key")', function() {
       // uncomment below and update the code to test the property key
-      //var instane = new SendinBlueApi.GetAccountMarketingAutomation();
+      //var instane = new SibApiV3Sdk.GetAccountMarketingAutomation();
       //expect(instance).to.be();
     });
 
     it('should have the property enabled (base name: "enabled")', function() {
       // uncomment below and update the code to test the property enabled
-      //var instane = new SendinBlueApi.GetAccountMarketingAutomation();
+      //var instane = new SibApiV3Sdk.GetAccountMarketingAutomation();
       //expect(instance).to.be();
     });
 

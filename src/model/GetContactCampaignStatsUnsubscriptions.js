@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetContactCampaignStatsUnsubscriptionsAdminUnsubscription'), require('./GetContactCampaignStatsUnsubscriptionsUserUnsubscription'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetContactCampaignStatsUnsubscriptions = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription, root.SendinBlueApi.GetContactCampaignStatsUnsubscriptionsUserUnsubscription);
+    root.SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription, root.SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsUserUnsubscription);
   }
 }(this, function(ApiClient, GetContactCampaignStatsUnsubscriptionsAdminUnsubscription, GetContactCampaignStatsUnsubscriptionsUserUnsubscription) {
   'use strict';

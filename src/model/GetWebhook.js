@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetWebhook = factory(root.SendinBlueApi.ApiClient);
+    root.SibApiV3Sdk.GetWebhook = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -49,8 +49,8 @@
    * @param description {String} Description of the webhook
    * @param events {Array.<String>} 
    * @param type {module:model/GetWebhook.TypeEnum} Type of webhook (marketing or transac)
-   * @param createdAt {Date} Creation date of the webhook
-   * @param modifiedAt {Date} Last modification date of the webhook
+   * @param createdAt {String} Creation date of the webhook (YYYY-MM-DD)
+   * @param modifiedAt {String} Last modification date of the webhook (YYYY-MM-DD)
    */
   var exports = function(url, id, description, events, type, createdAt, modifiedAt) {
     var _this = this;
@@ -91,10 +91,10 @@
         obj['type'] = ApiClient.convertToType(data['type'], 'String');
       }
       if (data.hasOwnProperty('createdAt')) {
-        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
+        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'String');
       }
       if (data.hasOwnProperty('modifiedAt')) {
-        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'Date');
+        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'String');
       }
     }
     return obj;
@@ -125,13 +125,13 @@
    */
   exports.prototype['type'] = undefined;
   /**
-   * Creation date of the webhook
-   * @member {Date} createdAt
+   * Creation date of the webhook (YYYY-MM-DD)
+   * @member {String} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Last modification date of the webhook
-   * @member {Date} modifiedAt
+   * Last modification date of the webhook (YYYY-MM-DD)
+   * @member {String} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;
 

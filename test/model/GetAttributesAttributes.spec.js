@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetAttributesAttributes();
+    instance = new SibApiV3Sdk.GetAttributesAttributes();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,43 +53,43 @@
   describe('GetAttributesAttributes', function() {
     it('should create an instance of GetAttributesAttributes', function() {
       // uncomment below and update the code to test GetAttributesAttributes
-      //var instane = new SendinBlueApi.GetAttributesAttributes();
-      //expect(instance).to.be.a(SendinBlueApi.GetAttributesAttributes);
+      //var instane = new SibApiV3Sdk.GetAttributesAttributes();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetAttributesAttributes);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SendinBlueApi.GetAttributesAttributes();
+      //var instane = new SibApiV3Sdk.GetAttributesAttributes();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.GetAttributesAttributes();
+      //var instane = new SibApiV3Sdk.GetAttributesAttributes();
       //expect(instance).to.be();
     });
 
     it('should have the property category (base name: "category")', function() {
       // uncomment below and update the code to test the property category
-      //var instane = new SendinBlueApi.GetAttributesAttributes();
+      //var instane = new SibApiV3Sdk.GetAttributesAttributes();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new SendinBlueApi.GetAttributesAttributes();
+      //var instane = new SibApiV3Sdk.GetAttributesAttributes();
       //expect(instance).to.be();
     });
 
     it('should have the property enumeration (base name: "enumeration")', function() {
       // uncomment below and update the code to test the property enumeration
-      //var instane = new SendinBlueApi.GetAttributesAttributes();
+      //var instane = new SibApiV3Sdk.GetAttributesAttributes();
       //expect(instance).to.be();
     });
 
     it('should have the property calculatedValue (base name: "calculatedValue")', function() {
       // uncomment below and update the code to test the property calculatedValue
-      //var instane = new SendinBlueApi.GetAttributesAttributes();
+      //var instane = new SibApiV3Sdk.GetAttributesAttributes();
       //expect(instance).to.be();
     });
 

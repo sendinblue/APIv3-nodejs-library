@@ -1,4 +1,4 @@
-# SendinBlueApi.GetReports
+# SibApiV3Sdk.GetReports
 
 ## Properties
 Name | Type | Description | Notes

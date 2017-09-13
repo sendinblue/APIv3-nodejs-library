@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/AddRemoveContactToList'), require('../model/CreateList'), require('../model/CreateModel'), require('../model/ErrorModel'), require('../model/GetContacts'), require('../model/GetExtendedList'), require('../model/GetFolderLists'), require('../model/GetLists'), require('../model/PostContactInfo'), require('../model/UpdateList'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.ListsApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.AddRemoveContactToList, root.SendinBlueApi.CreateList, root.SendinBlueApi.CreateModel, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetContacts, root.SendinBlueApi.GetExtendedList, root.SendinBlueApi.GetFolderLists, root.SendinBlueApi.GetLists, root.SendinBlueApi.PostContactInfo, root.SendinBlueApi.UpdateList);
+    root.SibApiV3Sdk.ListsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddRemoveContactToList, root.SibApiV3Sdk.CreateList, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetContacts, root.SibApiV3Sdk.GetExtendedList, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetLists, root.SibApiV3Sdk.PostContactInfo, root.SibApiV3Sdk.UpdateList);
   }
 }(this, function(ApiClient, AddRemoveContactToList, CreateList, CreateModel, ErrorModel, GetContacts, GetExtendedList, GetFolderLists, GetLists, PostContactInfo, UpdateList) {
   'use strict';

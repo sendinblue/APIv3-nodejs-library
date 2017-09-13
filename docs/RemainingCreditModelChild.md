@@ -1,4 +1,4 @@
-# SendinBlueApi.RemainingCreditModelChild
+# SibApiV3Sdk.RemainingCreditModelChild
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetExtendedListCampaignStats();
+    instance = new SibApiV3Sdk.GetExtendedListCampaignStats();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetExtendedListCampaignStats', function() {
     it('should create an instance of GetExtendedListCampaignStats', function() {
       // uncomment below and update the code to test GetExtendedListCampaignStats
-      //var instane = new SendinBlueApi.GetExtendedListCampaignStats();
-      //expect(instance).to.be.a(SendinBlueApi.GetExtendedListCampaignStats);
+      //var instane = new SibApiV3Sdk.GetExtendedListCampaignStats();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedListCampaignStats);
     });
 
     it('should have the property campaignId (base name: "campaignId")', function() {
       // uncomment below and update the code to test the property campaignId
-      //var instane = new SendinBlueApi.GetExtendedListCampaignStats();
+      //var instane = new SibApiV3Sdk.GetExtendedListCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property stats (base name: "stats")', function() {
       // uncomment below and update the code to test the property stats
-      //var instane = new SendinBlueApi.GetExtendedListCampaignStats();
+      //var instane = new SibApiV3Sdk.GetExtendedListCampaignStats();
       //expect(instance).to.be();
     });
 

@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetListsLists'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetLists = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetListsLists);
+    root.SibApiV3Sdk.GetLists = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetListsLists);
   }
 }(this, function(ApiClient, GetListsLists) {
   'use strict';

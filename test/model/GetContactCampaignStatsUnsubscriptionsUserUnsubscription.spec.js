@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetContactCampaignStatsUnsubscriptionsUserUnsubscription();
+    instance = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsUserUnsubscription();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('GetContactCampaignStatsUnsubscriptionsUserUnsubscription', function() {
     it('should create an instance of GetContactCampaignStatsUnsubscriptionsUserUnsubscription', function() {
       // uncomment below and update the code to test GetContactCampaignStatsUnsubscriptionsUserUnsubscription
-      //var instane = new SendinBlueApi.GetContactCampaignStatsUnsubscriptionsUserUnsubscription();
-      //expect(instance).to.be.a(SendinBlueApi.GetContactCampaignStatsUnsubscriptionsUserUnsubscription);
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsUserUnsubscription();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsUserUnsubscription);
     });
 
     it('should have the property campaignId (base name: "campaignId")', function() {
       // uncomment below and update the code to test the property campaignId
-      //var instane = new SendinBlueApi.GetContactCampaignStatsUnsubscriptionsUserUnsubscription();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsUserUnsubscription();
       //expect(instance).to.be();
     });
 
     it('should have the property eventTime (base name: "eventTime")', function() {
       // uncomment below and update the code to test the property eventTime
-      //var instane = new SendinBlueApi.GetContactCampaignStatsUnsubscriptionsUserUnsubscription();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsUserUnsubscription();
       //expect(instance).to.be();
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SendinBlueApi.GetContactCampaignStatsUnsubscriptionsUserUnsubscription();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsUserUnsubscription();
       //expect(instance).to.be();
     });
 

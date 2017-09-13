@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetChildInfoApiKeys'), require('./GetChildInfoCredits'), require('./GetChildInfoIps'), require('./GetChildInfoStatistics'), require('./GetClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetChildInfo = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetChildInfoApiKeys, root.SendinBlueApi.GetChildInfoCredits, root.SendinBlueApi.GetChildInfoIps, root.SendinBlueApi.GetChildInfoStatistics, root.SendinBlueApi.GetClient);
+    root.SibApiV3Sdk.GetChildInfo = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetChildInfoApiKeys, root.SibApiV3Sdk.GetChildInfoCredits, root.SibApiV3Sdk.GetChildInfoIps, root.SibApiV3Sdk.GetChildInfoStatistics, root.SibApiV3Sdk.GetClient);
   }
 }(this, function(ApiClient, GetChildInfoApiKeys, GetChildInfoCredits, GetChildInfoIps, GetChildInfoStatistics, GetClient) {
   'use strict';

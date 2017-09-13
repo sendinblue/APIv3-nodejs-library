@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetChildInfoApiKeys();
+    instance = new SibApiV3Sdk.GetChildInfoApiKeys();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('GetChildInfoApiKeys', function() {
     it('should create an instance of GetChildInfoApiKeys', function() {
       // uncomment below and update the code to test GetChildInfoApiKeys
-      //var instane = new SendinBlueApi.GetChildInfoApiKeys();
-      //expect(instance).to.be.a(SendinBlueApi.GetChildInfoApiKeys);
+      //var instane = new SibApiV3Sdk.GetChildInfoApiKeys();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetChildInfoApiKeys);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.GetChildInfoApiKeys();
+      //var instane = new SibApiV3Sdk.GetChildInfoApiKeys();
       //expect(instance).to.be();
     });
 
     it('should have the property key (base name: "key")', function() {
       // uncomment below and update the code to test the property key
-      //var instane = new SendinBlueApi.GetChildInfoApiKeys();
+      //var instane = new SibApiV3Sdk.GetChildInfoApiKeys();
       //expect(instance).to.be();
     });
 
     it('should have the property secret (base name: "secret")', function() {
       // uncomment below and update the code to test the property secret
-      //var instane = new SendinBlueApi.GetChildInfoApiKeys();
+      //var instane = new SibApiV3Sdk.GetChildInfoApiKeys();
       //expect(instance).to.be();
     });
 

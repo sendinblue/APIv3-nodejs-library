@@ -1,4 +1,4 @@
-# SendinBlueApi.GetAggregatedReport
+# SibApiV3Sdk.GetAggregatedReport
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetAttributesEnumeration();
+    instance = new SibApiV3Sdk.GetAttributesEnumeration();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetAttributesEnumeration', function() {
     it('should create an instance of GetAttributesEnumeration', function() {
       // uncomment below and update the code to test GetAttributesEnumeration
-      //var instane = new SendinBlueApi.GetAttributesEnumeration();
-      //expect(instance).to.be.a(SendinBlueApi.GetAttributesEnumeration);
+      //var instane = new SibApiV3Sdk.GetAttributesEnumeration();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetAttributesEnumeration);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new SendinBlueApi.GetAttributesEnumeration();
+      //var instane = new SibApiV3Sdk.GetAttributesEnumeration();
       //expect(instance).to.be();
     });
 
     it('should have the property label (base name: "label")', function() {
       // uncomment below and update the code to test the property label
-      //var instane = new SendinBlueApi.GetAttributesEnumeration();
+      //var instane = new SibApiV3Sdk.GetAttributesEnumeration();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# SendinBlueApi.GetClient
+# SibApiV3Sdk.GetClient
 
 ## Properties
 Name | Type | Description | Notes

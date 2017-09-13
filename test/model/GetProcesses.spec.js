@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetProcesses();
+    instance = new SibApiV3Sdk.GetProcesses();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetProcesses', function() {
     it('should create an instance of GetProcesses', function() {
       // uncomment below and update the code to test GetProcesses
-      //var instane = new SendinBlueApi.GetProcesses();
-      //expect(instance).to.be.a(SendinBlueApi.GetProcesses);
+      //var instane = new SibApiV3Sdk.GetProcesses();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetProcesses);
     });
 
     it('should have the property processes (base name: "processes")', function() {
       // uncomment below and update the code to test the property processes
-      //var instane = new SendinBlueApi.GetProcesses();
+      //var instane = new SibApiV3Sdk.GetProcesses();
       //expect(instance).to.be();
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new SendinBlueApi.GetProcesses();
+      //var instane = new SibApiV3Sdk.GetProcesses();
       //expect(instance).to.be();
     });
 

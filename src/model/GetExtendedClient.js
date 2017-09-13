@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetClient'), require('./GetExtendedClientAddress'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetExtendedClient = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetClient, root.SendinBlueApi.GetExtendedClientAddress);
+    root.SibApiV3Sdk.GetExtendedClient = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetClient, root.SibApiV3Sdk.GetExtendedClientAddress);
   }
 }(this, function(ApiClient, GetClient, GetExtendedClientAddress) {
   'use strict';

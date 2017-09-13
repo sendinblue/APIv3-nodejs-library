@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetChildInfo();
+    instance = new SibApiV3Sdk.GetChildInfo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,37 +53,37 @@
   describe('GetChildInfo', function() {
     it('should create an instance of GetChildInfo', function() {
       // uncomment below and update the code to test GetChildInfo
-      //var instane = new SendinBlueApi.GetChildInfo();
-      //expect(instance).to.be.a(SendinBlueApi.GetChildInfo);
+      //var instane = new SibApiV3Sdk.GetChildInfo();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetChildInfo);
     });
 
     it('should have the property credits (base name: "credits")', function() {
       // uncomment below and update the code to test the property credits
-      //var instane = new SendinBlueApi.GetChildInfo();
+      //var instane = new SibApiV3Sdk.GetChildInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property statistics (base name: "statistics")', function() {
       // uncomment below and update the code to test the property statistics
-      //var instane = new SendinBlueApi.GetChildInfo();
+      //var instane = new SibApiV3Sdk.GetChildInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property password (base name: "password")', function() {
       // uncomment below and update the code to test the property password
-      //var instane = new SendinBlueApi.GetChildInfo();
+      //var instane = new SibApiV3Sdk.GetChildInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property ips (base name: "ips")', function() {
       // uncomment below and update the code to test the property ips
-      //var instane = new SendinBlueApi.GetChildInfo();
+      //var instane = new SibApiV3Sdk.GetChildInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property apiKeys (base name: "apiKeys")', function() {
       // uncomment below and update the code to test the property apiKeys
-      //var instane = new SendinBlueApi.GetChildInfo();
+      //var instane = new SibApiV3Sdk.GetChildInfo();
       //expect(instance).to.be();
     });
 

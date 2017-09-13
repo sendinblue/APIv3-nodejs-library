@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.UpdateList();
+    instance = new SibApiV3Sdk.UpdateList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('UpdateList', function() {
     it('should create an instance of UpdateList', function() {
       // uncomment below and update the code to test UpdateList
-      //var instane = new SendinBlueApi.UpdateList();
-      //expect(instance).to.be.a(SendinBlueApi.UpdateList);
+      //var instane = new SibApiV3Sdk.UpdateList();
+      //expect(instance).to.be.a(SibApiV3Sdk.UpdateList);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.UpdateList();
+      //var instane = new SibApiV3Sdk.UpdateList();
       //expect(instance).to.be();
     });
 
     it('should have the property folderId (base name: "folderId")', function() {
       // uncomment below and update the code to test the property folderId
-      //var instane = new SendinBlueApi.UpdateList();
+      //var instane = new SibApiV3Sdk.UpdateList();
       //expect(instance).to.be();
     });
 

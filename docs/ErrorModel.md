@@ -1,4 +1,4 @@
-# SendinBlueApi.ErrorModel
+# SibApiV3Sdk.ErrorModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -34,6 +34,10 @@ Name | Type | Description | Notes
 * `method_not_allowed` (value: `"method_not_allowed"`)
 
 * `unauthorized` (value: `"unauthorized"`)
+
+* `account_under_validation` (value: `"account_under_validation"`)
+
+* `not_acceptable` (value: `"not_acceptable"`)
 
 
 

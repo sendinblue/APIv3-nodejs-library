@@ -1,4 +1,4 @@
-# SendinBlueApi.CreateContact
+# SibApiV3Sdk.CreateContact
 
 ## Properties
 Name | Type | Description | Notes

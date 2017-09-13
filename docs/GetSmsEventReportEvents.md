@@ -1,4 +1,4 @@
-# SendinBlueApi.GetSmsEventReportEvents
+# SibApiV3Sdk.GetSmsEventReportEvents
 
 ## Properties
 Name | Type | Description | Notes

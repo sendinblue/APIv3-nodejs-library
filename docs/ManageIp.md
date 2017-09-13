@@ -1,4 +1,4 @@
-# SendinBlueApi.ManageIp
+# SibApiV3Sdk.ManageIp
 
 ## Properties
 Name | Type | Description | Notes

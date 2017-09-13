@@ -1,4 +1,4 @@
-# SendinBlueApi.EmailExportRecipients
+# SibApiV3Sdk.EmailExportRecipients
 
 ## Properties
 Name | Type | Description | Notes

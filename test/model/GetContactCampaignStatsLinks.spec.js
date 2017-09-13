@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetContactCampaignStatsLinks();
+    instance = new SibApiV3Sdk.GetContactCampaignStatsLinks();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetContactCampaignStatsLinks', function() {
     it('should create an instance of GetContactCampaignStatsLinks', function() {
       // uncomment below and update the code to test GetContactCampaignStatsLinks
-      //var instane = new SendinBlueApi.GetContactCampaignStatsLinks();
-      //expect(instance).to.be.a(SendinBlueApi.GetContactCampaignStatsLinks);
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsLinks();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetContactCampaignStatsLinks);
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new SendinBlueApi.GetContactCampaignStatsLinks();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsLinks();
       //expect(instance).to.be();
     });
 
     it('should have the property eventTime (base name: "eventTime")', function() {
       // uncomment below and update the code to test the property eventTime
-      //var instane = new SendinBlueApi.GetContactCampaignStatsLinks();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsLinks();
       //expect(instance).to.be();
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SendinBlueApi.GetContactCampaignStatsLinks();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsLinks();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new SendinBlueApi.GetContactCampaignStatsLinks();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsLinks();
       //expect(instance).to.be();
     });
 

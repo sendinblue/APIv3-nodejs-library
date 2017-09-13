@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.CreateWebhook();
+    instance = new SibApiV3Sdk.CreateWebhook();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('CreateWebhook', function() {
     it('should create an instance of CreateWebhook', function() {
       // uncomment below and update the code to test CreateWebhook
-      //var instane = new SendinBlueApi.CreateWebhook();
-      //expect(instance).to.be.a(SendinBlueApi.CreateWebhook);
+      //var instane = new SibApiV3Sdk.CreateWebhook();
+      //expect(instance).to.be.a(SibApiV3Sdk.CreateWebhook);
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new SendinBlueApi.CreateWebhook();
+      //var instane = new SibApiV3Sdk.CreateWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new SendinBlueApi.CreateWebhook();
+      //var instane = new SibApiV3Sdk.CreateWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property events (base name: "events")', function() {
       // uncomment below and update the code to test the property events
-      //var instane = new SendinBlueApi.CreateWebhook();
+      //var instane = new SibApiV3Sdk.CreateWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new SendinBlueApi.CreateWebhook();
+      //var instane = new SibApiV3Sdk.CreateWebhook();
       //expect(instance).to.be();
     });
 

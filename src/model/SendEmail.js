@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./SendEmailAttachment'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.SendEmail = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.SendEmailAttachment);
+    root.SibApiV3Sdk.SendEmail = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.SendEmailAttachment);
   }
 }(this, function(ApiClient, SendEmailAttachment) {
   'use strict';

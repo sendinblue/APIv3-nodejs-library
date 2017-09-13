@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./CreateSmsCampaignRecipients'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.CreateSmsCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateSmsCampaignRecipients);
+    root.SibApiV3Sdk.CreateSmsCampaign = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateSmsCampaignRecipients);
   }
 }(this, function(ApiClient, CreateSmsCampaignRecipients) {
   'use strict';
@@ -107,7 +107,7 @@
    */
   exports.prototype['recipients'] = undefined;
   /**
-   * Date and time on which the campaign has to run
+   * Date and time on which the campaign has to run (YYYY-MM-DD HH:mm:ss)
    * @member {String} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;

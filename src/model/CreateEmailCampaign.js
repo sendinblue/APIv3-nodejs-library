@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./CreateEmailCampaignRecipients'), require('./CreateEmailCampaignSender'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.CreateEmailCampaign = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateEmailCampaignRecipients, root.SendinBlueApi.CreateEmailCampaignSender);
+    root.SibApiV3Sdk.CreateEmailCampaign = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateEmailCampaignRecipients, root.SibApiV3Sdk.CreateEmailCampaignSender);
   }
 }(this, function(ApiClient, CreateEmailCampaignRecipients, CreateEmailCampaignSender) {
   'use strict';

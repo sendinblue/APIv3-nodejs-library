@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetContactDetails'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetExtendedContactDetails = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetContactDetails);
+    root.SibApiV3Sdk.GetExtendedContactDetails = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetContactDetails);
   }
 }(this, function(ApiClient, GetContactDetails) {
   'use strict';
@@ -49,7 +49,7 @@
    * @param id {Number} ID of the contact for which you requested the details
    * @param emailBlacklisted {Boolean} Blacklist status for email campaigns (true=blacklisted, false=not blacklisted)
    * @param smsBlacklisted {Boolean} Blacklist status for SMS campaigns (true=blacklisted, false=not blacklisted)
-   * @param modifiedAt {Date} Last modification date of the contact
+   * @param modifiedAt {String} Last modification date of the contact (YYYY-MM-DD HH:mm:ss)
    * @param listIds {Array.<Number>} 
    * @param attributes {Object.<String, String>} 
    */
@@ -102,8 +102,8 @@ exports.prototype['emailBlacklisted'] = undefined;
 exports.prototype['smsBlacklisted'] = undefined;
 
   /**
-   * Last modification date of the contact
-   * @member {Date} modifiedAt
+   * Last modification date of the contact (YYYY-MM-DD HH:mm:ss)
+   * @member {String} modifiedAt
    */
 exports.prototype['modifiedAt'] = undefined;
 

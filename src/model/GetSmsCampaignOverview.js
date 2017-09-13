@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetSmsCampaignOverview = factory(root.SendinBlueApi.ApiClient);
+    root.SibApiV3Sdk.GetSmsCampaignOverview = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -48,11 +48,11 @@
    * @param name {String} Name of the SMS Campaign
    * @param status {module:model/GetSmsCampaignOverview.StatusEnum} Status of the SMS Campaign
    * @param content {String} Content of the SMS Campaign
-   * @param scheduledAt {String} Date on which SMS campaign is scheduled
+   * @param scheduledAt {String} Date on which SMS campaign is scheduled. Should be in YYYY-MM-DD HH:mm:ss format
    * @param testSent {Boolean} Retrieved the status of test SMS sending. (true=Test SMS has been sent  false=Test SMS has not been sent)
    * @param sender {String} Sender of the SMS Campaign
-   * @param createdAt {String} Creation date of the SMS campaign
-   * @param modifiedAt {String} Date of last modification of the SMS campaign
+   * @param createdAt {String} Creation date of the SMS campaign (YYYY-MM-DD HH:mm:ss)
+   * @param modifiedAt {String} Date of last modification of the SMS campaign (YYYY-MM-DD HH:mm:ss)
    */
   var exports = function(id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt) {
     var _this = this;
@@ -131,7 +131,7 @@
    */
   exports.prototype['content'] = undefined;
   /**
-   * Date on which SMS campaign is scheduled
+   * Date on which SMS campaign is scheduled. Should be in YYYY-MM-DD HH:mm:ss format
    * @member {String} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
@@ -146,12 +146,12 @@
    */
   exports.prototype['sender'] = undefined;
   /**
-   * Creation date of the SMS campaign
+   * Creation date of the SMS campaign (YYYY-MM-DD HH:mm:ss)
    * @member {String} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Date of last modification of the SMS campaign
+   * Date of last modification of the SMS campaign (YYYY-MM-DD HH:mm:ss)
    * @member {String} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;

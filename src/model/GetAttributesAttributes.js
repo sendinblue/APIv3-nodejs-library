@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetAttributesEnumeration'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetAttributesAttributes = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetAttributesEnumeration);
+    root.SibApiV3Sdk.GetAttributesAttributes = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetAttributesEnumeration);
   }
 }(this, function(ApiClient, GetAttributesEnumeration) {
   'use strict';

@@ -1,4 +1,4 @@
-# SendinBlueApi.TransactionalSMSApi
+# SibApiV3Sdk.TransactionalSMSApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -18,14 +18,16 @@ Get all the SMS activity (unaggregated events)
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.TransactionalSMSApi();
+var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
 var opts = { 
   'limit': 50, // Number | Number of documents per page
@@ -79,14 +81,16 @@ Get your SMS activity aggregated over a period of time
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.TransactionalSMSApi();
+var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
 var opts = { 
   'startDate': new Date("2013-10-20"), // Date | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
@@ -132,14 +136,16 @@ Get your SMS activity aggregated per day
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.TransactionalSMSApi();
+var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
 var opts = { 
   'startDate': new Date("2013-10-20"), // Date | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
@@ -185,16 +191,18 @@ Send the SMS campaign to the specified mobile number
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.TransactionalSMSApi();
+var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
-var sendTransacSms = new SendinBlueApi.SendTransacSms(); // SendTransacSms | Values to send a transactional SMS
+var sendTransacSms = new SibApiV3Sdk.SendTransacSms(); // SendTransacSms | Values to send a transactional SMS
 
 apiInstance.sendTransacSms(sendTransacSms).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);

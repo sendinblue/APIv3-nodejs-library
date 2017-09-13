@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetCampaignOverview'), require('./GetExtendedCampaignOverviewSender'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetExtendedCampaignOverview = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetCampaignOverview, root.SendinBlueApi.GetExtendedCampaignOverviewSender);
+    root.SibApiV3Sdk.GetExtendedCampaignOverview = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetCampaignOverview, root.SibApiV3Sdk.GetExtendedCampaignOverviewSender);
   }
 }(this, function(ApiClient, GetCampaignOverview, GetExtendedCampaignOverviewSender) {
   'use strict';
@@ -50,7 +50,6 @@
    * @param subject {String} Subject of the campaign
    * @param type {module:model/GetCampaignOverview.TypeEnum} Type of campaign
    * @param status {module:model/GetCampaignOverview.StatusEnum} Status of the campaign
-   * @param scheduledAt {String} Date on which campaign is scheduled
    * @param testSent {Boolean} Retrieved the status of test email sending. (true=Test email has been sent  false=Test email has not been sent)
    * @param header {String} Header of the campaign
    * @param footer {String} Footer of the campaign
@@ -59,13 +58,13 @@
    * @param htmlContent {String} HTML content of the campaign
    * @param shareLink {String} Link to share the campaign on social medias
    * @param tag {String} Tag of the campaign
-   * @param createdAt {String} Creation date of the campaign
-   * @param modifiedAt {String} Date of last modification of the campaign
+   * @param createdAt {String} Creation date of the campaign (YYYY-MM-DD HH:mm:ss)
+   * @param modifiedAt {String} Date of last modification of the campaign (YYYY-MM-DD HH:mm:ss)
    */
-  var exports = function(id, name, subject, type, status, scheduledAt, testSent, header, footer, replyTo, toField, htmlContent, shareLink, tag, createdAt, modifiedAt) {
+  var exports = function(id, name, subject, type, status, testSent, header, footer, replyTo, toField, htmlContent, shareLink, tag, createdAt, modifiedAt) {
     var _this = this;
 
-    GetCampaignOverview.call(_this, id, name, subject, type, status, scheduledAt);
+    GetCampaignOverview.call(_this, id, name, subject, type, status);
     _this['testSent'] = testSent;
     _this['header'] = header;
     _this['footer'] = footer;
@@ -185,12 +184,12 @@
    */
   exports.prototype['tag'] = undefined;
   /**
-   * Creation date of the campaign
+   * Creation date of the campaign (YYYY-MM-DD HH:mm:ss)
    * @member {String} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Date of last modification of the campaign
+   * Date of last modification of the campaign (YYYY-MM-DD HH:mm:ss)
    * @member {String} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;
@@ -242,7 +241,7 @@ exports.prototype['type'] = undefined;
 exports.prototype['status'] = undefined;
 
   /**
-   * Date on which campaign is scheduled
+   * Date on which campaign is scheduled (YYYY-MM-DD HH:mm:ss)
    * @member {String} scheduledAt
    */
 exports.prototype['scheduledAt'] = undefined;

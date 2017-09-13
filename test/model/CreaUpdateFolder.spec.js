@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.CreaUpdateFolder();
+    instance = new SibApiV3Sdk.CreaUpdateFolder();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('CreaUpdateFolder', function() {
     it('should create an instance of CreaUpdateFolder', function() {
       // uncomment below and update the code to test CreaUpdateFolder
-      //var instane = new SendinBlueApi.CreaUpdateFolder();
-      //expect(instance).to.be.a(SendinBlueApi.CreaUpdateFolder);
+      //var instane = new SibApiV3Sdk.CreaUpdateFolder();
+      //expect(instance).to.be.a(SibApiV3Sdk.CreaUpdateFolder);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.CreaUpdateFolder();
+      //var instane = new SibApiV3Sdk.CreaUpdateFolder();
       //expect(instance).to.be();
     });
 

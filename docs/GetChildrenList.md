@@ -1,4 +1,4 @@
-# SendinBlueApi.GetChildrenList
+# SibApiV3Sdk.GetChildrenList
 
 ## Properties
 Name | Type | Description | Notes

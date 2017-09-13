@@ -1,4 +1,4 @@
-# SendinBlueApi.AttributesApi
+# SibApiV3Sdk.AttributesApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -17,16 +17,18 @@ Creates contact attributes
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.AttributesApi();
+var apiInstance = new SibApiV3Sdk.AttributesApi();
 
-var createAttribute = new SendinBlueApi.CreateAttribute(); // CreateAttribute | Values to create an attribute
+var createAttribute = new SibApiV3Sdk.CreateAttribute(); // CreateAttribute | Values to create an attribute
 
 apiInstance.createAttribute(createAttribute).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -63,14 +65,16 @@ Deletes an attribute
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.AttributesApi();
+var apiInstance = new SibApiV3Sdk.AttributesApi();
 
 var attributeId = "attributeId_example"; // String | id of the attribute
 
@@ -109,14 +113,16 @@ Lists all attributes
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.AttributesApi();
+var apiInstance = new SibApiV3Sdk.AttributesApi();
 apiInstance.getAttributes().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {

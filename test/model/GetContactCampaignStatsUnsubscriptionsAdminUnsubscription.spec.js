@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription();
+    instance = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetContactCampaignStatsUnsubscriptionsAdminUnsubscription', function() {
     it('should create an instance of GetContactCampaignStatsUnsubscriptionsAdminUnsubscription', function() {
       // uncomment below and update the code to test GetContactCampaignStatsUnsubscriptionsAdminUnsubscription
-      //var instane = new SendinBlueApi.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription();
-      //expect(instance).to.be.a(SendinBlueApi.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription);
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription);
     });
 
     it('should have the property eventTime (base name: "eventTime")', function() {
       // uncomment below and update the code to test the property eventTime
-      //var instane = new SendinBlueApi.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription();
       //expect(instance).to.be();
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SendinBlueApi.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsAdminUnsubscription();
       //expect(instance).to.be();
     });
 

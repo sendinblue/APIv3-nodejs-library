@@ -1,4 +1,4 @@
-# SendinBlueApi.GetContactCampaignStatsTransacAttributes
+# SibApiV3Sdk.GetContactCampaignStatsTransacAttributes
 
 ## Properties
 Name | Type | Description | Notes

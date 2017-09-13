@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.UpdateWebhook();
+    instance = new SibApiV3Sdk.UpdateWebhook();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('UpdateWebhook', function() {
     it('should create an instance of UpdateWebhook', function() {
       // uncomment below and update the code to test UpdateWebhook
-      //var instane = new SendinBlueApi.UpdateWebhook();
-      //expect(instance).to.be.a(SendinBlueApi.UpdateWebhook);
+      //var instane = new SibApiV3Sdk.UpdateWebhook();
+      //expect(instance).to.be.a(SibApiV3Sdk.UpdateWebhook);
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new SendinBlueApi.UpdateWebhook();
+      //var instane = new SibApiV3Sdk.UpdateWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new SendinBlueApi.UpdateWebhook();
+      //var instane = new SibApiV3Sdk.UpdateWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property events (base name: "events")', function() {
       // uncomment below and update the code to test the property events
-      //var instane = new SendinBlueApi.UpdateWebhook();
+      //var instane = new SibApiV3Sdk.UpdateWebhook();
       //expect(instance).to.be();
     });
 

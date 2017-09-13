@@ -1,4 +1,4 @@
-# SendinBlueApi.CreateChild
+# SibApiV3Sdk.CreateChild
 
 ## Properties
 Name | Type | Description | Notes

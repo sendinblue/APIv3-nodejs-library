@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetExtendedCampaignStatsLinksStats'), require('./GetStatsByDomain'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetExtendedCampaignStats = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetExtendedCampaignStatsLinksStats, root.SendinBlueApi.GetStatsByDomain);
+    root.SibApiV3Sdk.GetExtendedCampaignStats = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetExtendedCampaignStatsLinksStats, root.SibApiV3Sdk.GetStatsByDomain);
   }
 }(this, function(ApiClient, GetExtendedCampaignStatsLinksStats, GetStatsByDomain) {
   'use strict';

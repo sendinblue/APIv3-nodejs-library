@@ -1,4 +1,4 @@
-# SendinBlueApi.FoldersApi
+# SibApiV3Sdk.FoldersApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -20,16 +20,18 @@ Create a folder
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.FoldersApi();
+var apiInstance = new SibApiV3Sdk.FoldersApi();
 
-var name = new SendinBlueApi.CreaUpdateFolder(); // CreaUpdateFolder | Name of the folder
+var name = new SibApiV3Sdk.CreaUpdateFolder(); // CreaUpdateFolder | Name of the folder
 
 apiInstance.createFolder(name).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -66,14 +68,16 @@ Delete a folder (and all its lists)
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.FoldersApi();
+var apiInstance = new SibApiV3Sdk.FoldersApi();
 
 var folderId = "folderId_example"; // String | Id of the folder
 
@@ -112,14 +116,16 @@ Returns folder details
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.FoldersApi();
+var apiInstance = new SibApiV3Sdk.FoldersApi();
 
 var folderId = "folderId_example"; // String | id of the folder
 
@@ -158,14 +164,16 @@ Get the lists in a folder
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.FoldersApi();
+var apiInstance = new SibApiV3Sdk.FoldersApi();
 
 var folderId = "folderId_example"; // String | Id of the folder
 
@@ -210,14 +218,16 @@ Get all the folders
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.FoldersApi();
+var apiInstance = new SibApiV3Sdk.FoldersApi();
 
 var limit = 10; // Number | Number of documents per page
 
@@ -259,18 +269,20 @@ Update a contact folder
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.FoldersApi();
+var apiInstance = new SibApiV3Sdk.FoldersApi();
 
 var folderId = "folderId_example"; // String | Id of the folder
 
-var name = new SendinBlueApi.CreaUpdateFolder(); // CreaUpdateFolder | Name of the folder
+var name = new SibApiV3Sdk.CreaUpdateFolder(); // CreaUpdateFolder | Name of the folder
 
 apiInstance.updateFolder(folderId, name).then(function() {
   console.log('API called successfully.');

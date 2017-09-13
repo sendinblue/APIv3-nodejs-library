@@ -1,4 +1,4 @@
-# SendinBlueApi.ProcessApi
+# SibApiV3Sdk.ProcessApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -16,14 +16,16 @@ Return the informations for a process
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ProcessApi();
+var apiInstance = new SibApiV3Sdk.ProcessApi();
 
 var processId = "processId_example"; // String | Id of the process
 
@@ -62,14 +64,16 @@ Return all the processes for your account
 
 ### Example
 ```javascript
-var SendinBlueApi = require('sendin_blue_api');
-var defaultClient = SendinBlueApi.ApiClient.instance;
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SendinBlueApi.ProcessApi();
+var apiInstance = new SibApiV3Sdk.ProcessApi();
 
 var opts = { 
   'limit': 10, // Number | Number limitation for the result returned

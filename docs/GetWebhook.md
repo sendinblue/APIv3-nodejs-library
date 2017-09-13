@@ -1,4 +1,4 @@
-# SendinBlueApi.GetWebhook
+# SibApiV3Sdk.GetWebhook
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **description** | **String** | Description of the webhook | 
 **events** | **[String]** |  | 
 **type** | **String** | Type of webhook (marketing or transac) | 
-**createdAt** | **Date** | Creation date of the webhook | 
-**modifiedAt** | **Date** | Last modification date of the webhook | 
+**createdAt** | **String** | Creation date of the webhook (YYYY-MM-DD) | 
+**modifiedAt** | **String** | Last modification date of the webhook (YYYY-MM-DD) | 
 
 
 <a name="TypeEnum"></a>

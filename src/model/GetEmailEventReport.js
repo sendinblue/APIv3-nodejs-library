@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetEmailEventReportEvents'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetEmailEventReport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetEmailEventReportEvents);
+    root.SibApiV3Sdk.GetEmailEventReport = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetEmailEventReportEvents);
   }
 }(this, function(ApiClient, GetEmailEventReportEvents) {
   'use strict';

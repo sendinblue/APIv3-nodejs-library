@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.CreateSenderModel();
+    instance = new SibApiV3Sdk.CreateSenderModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('CreateSenderModel', function() {
     it('should create an instance of CreateSenderModel', function() {
       // uncomment below and update the code to test CreateSenderModel
-      //var instane = new SendinBlueApi.CreateSenderModel();
-      //expect(instance).to.be.a(SendinBlueApi.CreateSenderModel);
+      //var instane = new SibApiV3Sdk.CreateSenderModel();
+      //expect(instance).to.be.a(SibApiV3Sdk.CreateSenderModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SendinBlueApi.CreateSenderModel();
+      //var instane = new SibApiV3Sdk.CreateSenderModel();
       //expect(instance).to.be();
     });
 
     it('should have the property spfError (base name: "spfError")', function() {
       // uncomment below and update the code to test the property spfError
-      //var instane = new SendinBlueApi.CreateSenderModel();
+      //var instane = new SibApiV3Sdk.CreateSenderModel();
       //expect(instance).to.be();
     });
 
     it('should have the property dkimError (base name: "dkimError")', function() {
       // uncomment below and update the code to test the property dkimError
-      //var instane = new SendinBlueApi.CreateSenderModel();
+      //var instane = new SibApiV3Sdk.CreateSenderModel();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# SendinBlueApi.GetAccountPlan
+# SibApiV3Sdk.GetAccountPlan
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/GetAccount'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.AccountApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetAccount);
+    root.SibApiV3Sdk.AccountApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetAccount);
   }
 }(this, function(ApiClient, GetAccount) {
   'use strict';

@@ -1,4 +1,4 @@
-# SendinBlueApi.PostSendFailed
+# SibApiV3Sdk.PostSendFailed
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetTransacSmsReportReports'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.GetTransacSmsReport = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.GetTransacSmsReportReports);
+    root.SibApiV3Sdk.GetTransacSmsReport = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetTransacSmsReportReports);
   }
 }(this, function(ApiClient, GetTransacSmsReportReports) {
   'use strict';

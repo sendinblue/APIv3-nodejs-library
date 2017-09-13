@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetWebhooks();
+    instance = new SibApiV3Sdk.GetWebhooks();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetWebhooks', function() {
     it('should create an instance of GetWebhooks', function() {
       // uncomment below and update the code to test GetWebhooks
-      //var instane = new SendinBlueApi.GetWebhooks();
-      //expect(instance).to.be.a(SendinBlueApi.GetWebhooks);
+      //var instane = new SibApiV3Sdk.GetWebhooks();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetWebhooks);
     });
 
     it('should have the property webhooks (base name: "webhooks")', function() {
       // uncomment below and update the code to test the property webhooks
-      //var instane = new SendinBlueApi.GetWebhooks();
+      //var instane = new SibApiV3Sdk.GetWebhooks();
       //expect(instance).to.be();
     });
 

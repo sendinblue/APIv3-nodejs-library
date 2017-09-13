@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetContacts();
+    instance = new SibApiV3Sdk.GetContacts();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetContacts', function() {
     it('should create an instance of GetContacts', function() {
       // uncomment below and update the code to test GetContacts
-      //var instane = new SendinBlueApi.GetContacts();
-      //expect(instance).to.be.a(SendinBlueApi.GetContacts);
+      //var instane = new SibApiV3Sdk.GetContacts();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetContacts);
     });
 
     it('should have the property contacts (base name: "contacts")', function() {
       // uncomment below and update the code to test the property contacts
-      //var instane = new SendinBlueApi.GetContacts();
+      //var instane = new SibApiV3Sdk.GetContacts();
       //expect(instance).to.be();
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new SendinBlueApi.GetContacts();
+      //var instane = new SibApiV3Sdk.GetContacts();
       //expect(instance).to.be();
     });
 

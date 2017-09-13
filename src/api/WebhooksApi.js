@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreateModel'), require('../model/CreateWebhook'), require('../model/ErrorModel'), require('../model/GetWebhook'), require('../model/GetWebhooks'), require('../model/UpdateWebhook'));
   } else {
     // Browser globals (root is window)
-    if (!root.SendinBlueApi) {
-      root.SendinBlueApi = {};
+    if (!root.SibApiV3Sdk) {
+      root.SibApiV3Sdk = {};
     }
-    root.SendinBlueApi.WebhooksApi = factory(root.SendinBlueApi.ApiClient, root.SendinBlueApi.CreateModel, root.SendinBlueApi.CreateWebhook, root.SendinBlueApi.ErrorModel, root.SendinBlueApi.GetWebhook, root.SendinBlueApi.GetWebhooks, root.SendinBlueApi.UpdateWebhook);
+    root.SibApiV3Sdk.WebhooksApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateWebhook, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetWebhook, root.SibApiV3Sdk.GetWebhooks, root.SibApiV3Sdk.UpdateWebhook);
   }
 }(this, function(ApiClient, CreateModel, CreateWebhook, ErrorModel, GetWebhook, GetWebhooks, UpdateWebhook) {
   'use strict';

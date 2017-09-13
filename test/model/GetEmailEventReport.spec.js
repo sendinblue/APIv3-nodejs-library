@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetEmailEventReport();
+    instance = new SibApiV3Sdk.GetEmailEventReport();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetEmailEventReport', function() {
     it('should create an instance of GetEmailEventReport', function() {
       // uncomment below and update the code to test GetEmailEventReport
-      //var instane = new SendinBlueApi.GetEmailEventReport();
-      //expect(instance).to.be.a(SendinBlueApi.GetEmailEventReport);
+      //var instane = new SibApiV3Sdk.GetEmailEventReport();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetEmailEventReport);
     });
 
     it('should have the property events (base name: "events")', function() {
       // uncomment below and update the code to test the property events
-      //var instane = new SendinBlueApi.GetEmailEventReport();
+      //var instane = new SibApiV3Sdk.GetEmailEventReport();
       //expect(instance).to.be();
     });
 

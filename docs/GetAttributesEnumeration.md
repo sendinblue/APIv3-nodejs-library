@@ -1,4 +1,4 @@
-# SendinBlueApi.GetAttributesEnumeration
+# SibApiV3Sdk.GetAttributesEnumeration
 
 ## Properties
 Name | Type | Description | Notes

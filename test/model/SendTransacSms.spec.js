@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.SendTransacSms();
+    instance = new SibApiV3Sdk.SendTransacSms();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,37 +53,37 @@
   describe('SendTransacSms', function() {
     it('should create an instance of SendTransacSms', function() {
       // uncomment below and update the code to test SendTransacSms
-      //var instane = new SendinBlueApi.SendTransacSms();
-      //expect(instance).to.be.a(SendinBlueApi.SendTransacSms);
+      //var instane = new SibApiV3Sdk.SendTransacSms();
+      //expect(instance).to.be.a(SibApiV3Sdk.SendTransacSms);
     });
 
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
-      //var instane = new SendinBlueApi.SendTransacSms();
+      //var instane = new SibApiV3Sdk.SendTransacSms();
       //expect(instance).to.be();
     });
 
     it('should have the property recipient (base name: "recipient")', function() {
       // uncomment below and update the code to test the property recipient
-      //var instane = new SendinBlueApi.SendTransacSms();
+      //var instane = new SibApiV3Sdk.SendTransacSms();
       //expect(instance).to.be();
     });
 
     it('should have the property content (base name: "content")', function() {
       // uncomment below and update the code to test the property content
-      //var instane = new SendinBlueApi.SendTransacSms();
+      //var instane = new SibApiV3Sdk.SendTransacSms();
       //expect(instance).to.be();
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instane = new SendinBlueApi.SendTransacSms();
+      //var instane = new SibApiV3Sdk.SendTransacSms();
       //expect(instance).to.be();
     });
 
     it('should have the property webUrl (base name: "webUrl")', function() {
       // uncomment below and update the code to test the property webUrl
-      //var instane = new SendinBlueApi.SendTransacSms();
+      //var instane = new SibApiV3Sdk.SendTransacSms();
       //expect(instance).to.be();
     });
 

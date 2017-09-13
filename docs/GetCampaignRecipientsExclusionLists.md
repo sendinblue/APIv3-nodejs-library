@@ -1,4 +1,4 @@
-# SendinBlueApi.GetCampaignRecipientsExclusionLists
+# SibApiV3Sdk.GetCampaignRecipientsExclusionLists
 
 ## Properties
 Name | Type | Description | Notes

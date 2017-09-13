@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetFolder();
+    instance = new SibApiV3Sdk.GetFolder();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,37 +53,37 @@
   describe('GetFolder', function() {
     it('should create an instance of GetFolder', function() {
       // uncomment below and update the code to test GetFolder
-      //var instane = new SendinBlueApi.GetFolder();
-      //expect(instance).to.be.a(SendinBlueApi.GetFolder);
+      //var instane = new SibApiV3Sdk.GetFolder();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetFolder);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SendinBlueApi.GetFolder();
+      //var instane = new SibApiV3Sdk.GetFolder();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SendinBlueApi.GetFolder();
+      //var instane = new SibApiV3Sdk.GetFolder();
       //expect(instance).to.be();
     });
 
     it('should have the property totalBlacklisted (base name: "totalBlacklisted")', function() {
       // uncomment below and update the code to test the property totalBlacklisted
-      //var instane = new SendinBlueApi.GetFolder();
+      //var instane = new SibApiV3Sdk.GetFolder();
       //expect(instance).to.be();
     });
 
     it('should have the property totalSubscribers (base name: "totalSubscribers")', function() {
       // uncomment below and update the code to test the property totalSubscribers
-      //var instane = new SendinBlueApi.GetFolder();
+      //var instane = new SibApiV3Sdk.GetFolder();
       //expect(instance).to.be();
     });
 
     it('should have the property uniqueSubscribers (base name: "uniqueSubscribers")', function() {
       // uncomment below and update the code to test the property uniqueSubscribers
-      //var instane = new SendinBlueApi.GetFolder();
+      //var instane = new SibApiV3Sdk.GetFolder();
       //expect(instance).to.be();
     });
 

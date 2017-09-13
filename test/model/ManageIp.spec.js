@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.ManageIp();
+    instance = new SibApiV3Sdk.ManageIp();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('ManageIp', function() {
     it('should create an instance of ManageIp', function() {
       // uncomment below and update the code to test ManageIp
-      //var instane = new SendinBlueApi.ManageIp();
-      //expect(instance).to.be.a(SendinBlueApi.ManageIp);
+      //var instane = new SibApiV3Sdk.ManageIp();
+      //expect(instance).to.be.a(SibApiV3Sdk.ManageIp);
     });
 
     it('should have the property ipId (base name: "ipId")', function() {
       // uncomment below and update the code to test the property ipId
-      //var instane = new SendinBlueApi.ManageIp();
+      //var instane = new SibApiV3Sdk.ManageIp();
       //expect(instance).to.be();
     });
 

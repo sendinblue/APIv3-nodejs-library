@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetClient();
+    instance = new SibApiV3Sdk.GetClient();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetClient', function() {
     it('should create an instance of GetClient', function() {
       // uncomment below and update the code to test GetClient
-      //var instane = new SendinBlueApi.GetClient();
-      //expect(instance).to.be.a(SendinBlueApi.GetClient);
+      //var instane = new SibApiV3Sdk.GetClient();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetClient);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SendinBlueApi.GetClient();
+      //var instane = new SibApiV3Sdk.GetClient();
       //expect(instance).to.be();
     });
 
     it('should have the property firstName (base name: "firstName")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instane = new SendinBlueApi.GetClient();
+      //var instane = new SibApiV3Sdk.GetClient();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "lastName")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instane = new SendinBlueApi.GetClient();
+      //var instane = new SibApiV3Sdk.GetClient();
       //expect(instance).to.be();
     });
 
     it('should have the property companyName (base name: "companyName")', function() {
       // uncomment below and update the code to test the property companyName
-      //var instane = new SendinBlueApi.GetClient();
+      //var instane = new SibApiV3Sdk.GetClient();
       //expect(instance).to.be();
     });
 

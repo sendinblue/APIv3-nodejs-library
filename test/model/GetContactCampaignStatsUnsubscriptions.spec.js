@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetContactCampaignStatsUnsubscriptions();
+    instance = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetContactCampaignStatsUnsubscriptions', function() {
     it('should create an instance of GetContactCampaignStatsUnsubscriptions', function() {
       // uncomment below and update the code to test GetContactCampaignStatsUnsubscriptions
-      //var instane = new SendinBlueApi.GetContactCampaignStatsUnsubscriptions();
-      //expect(instance).to.be.a(SendinBlueApi.GetContactCampaignStatsUnsubscriptions);
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions);
     });
 
     it('should have the property userUnsubscription (base name: "userUnsubscription")', function() {
       // uncomment below and update the code to test the property userUnsubscription
-      //var instane = new SendinBlueApi.GetContactCampaignStatsUnsubscriptions();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions();
       //expect(instance).to.be();
     });
 
     it('should have the property adminUnsubscription (base name: "adminUnsubscription")', function() {
       // uncomment below and update the code to test the property adminUnsubscription
-      //var instane = new SendinBlueApi.GetContactCampaignStatsUnsubscriptions();
+      //var instane = new SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions();
       //expect(instance).to.be();
     });
 

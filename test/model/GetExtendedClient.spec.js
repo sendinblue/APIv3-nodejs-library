@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.GetExtendedClient();
+    instance = new SibApiV3Sdk.GetExtendedClient();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetExtendedClient', function() {
     it('should create an instance of GetExtendedClient', function() {
       // uncomment below and update the code to test GetExtendedClient
-      //var instane = new SendinBlueApi.GetExtendedClient();
-      //expect(instance).to.be.a(SendinBlueApi.GetExtendedClient);
+      //var instane = new SibApiV3Sdk.GetExtendedClient();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedClient);
     });
 
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
-      //var instane = new SendinBlueApi.GetExtendedClient();
+      //var instane = new SibApiV3Sdk.GetExtendedClient();
       //expect(instance).to.be();
     });
 

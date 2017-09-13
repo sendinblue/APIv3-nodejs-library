@@ -1,4 +1,4 @@
-# SendinBlueApi.CreateWebhook
+# SibApiV3Sdk.CreateWebhook
 
 ## Properties
 Name | Type | Description | Notes

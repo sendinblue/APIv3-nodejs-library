@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.UpdateSmtpTemplate();
+    instance = new SibApiV3Sdk.UpdateSmtpTemplate();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,67 +53,67 @@
   describe('UpdateSmtpTemplate', function() {
     it('should create an instance of UpdateSmtpTemplate', function() {
       // uncomment below and update the code to test UpdateSmtpTemplate
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
-      //expect(instance).to.be.a(SendinBlueApi.UpdateSmtpTemplate);
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
+      //expect(instance).to.be.a(SibApiV3Sdk.UpdateSmtpTemplate);
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property templateName (base name: "templateName")', function() {
       // uncomment below and update the code to test the property templateName
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property htmlContent (base name: "htmlContent")', function() {
       // uncomment below and update the code to test the property htmlContent
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property htmlUrl (base name: "htmlUrl")', function() {
       // uncomment below and update the code to test the property htmlUrl
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property subject (base name: "subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property replyTo (base name: "replyTo")', function() {
       // uncomment below and update the code to test the property replyTo
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property toField (base name: "toField")', function() {
       // uncomment below and update the code to test the property toField
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property attachmentUrl (base name: "attachmentUrl")', function() {
       // uncomment below and update the code to test the property attachmentUrl
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property isActive (base name: "isActive")', function() {
       // uncomment below and update the code to test the property isActive
-      //var instane = new SendinBlueApi.UpdateSmtpTemplate();
+      //var instane = new SibApiV3Sdk.UpdateSmtpTemplate();
       //expect(instance).to.be();
     });
 

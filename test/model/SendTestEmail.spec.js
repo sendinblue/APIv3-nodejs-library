@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SendinBlueApi);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(expect, SendinBlueApi) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SendinBlueApi.SendTestEmail();
+    instance = new SibApiV3Sdk.SendTestEmail();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('SendTestEmail', function() {
     it('should create an instance of SendTestEmail', function() {
       // uncomment below and update the code to test SendTestEmail
-      //var instane = new SendinBlueApi.SendTestEmail();
-      //expect(instance).to.be.a(SendinBlueApi.SendTestEmail);
+      //var instane = new SibApiV3Sdk.SendTestEmail();
+      //expect(instance).to.be.a(SibApiV3Sdk.SendTestEmail);
     });
 
     it('should have the property emailTo (base name: "emailTo")', function() {
       // uncomment below and update the code to test the property emailTo
-      //var instane = new SendinBlueApi.SendTestEmail();
+      //var instane = new SibApiV3Sdk.SendTestEmail();
       //expect(instance).to.be();
     });
 
