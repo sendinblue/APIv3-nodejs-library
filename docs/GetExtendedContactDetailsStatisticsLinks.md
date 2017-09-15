@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetContactCampaignStatsLinks
+# SibApiV3Sdk.GetExtendedContactDetailsStatisticsLinks
 
 ## Properties
 Name | Type | Description | Notes

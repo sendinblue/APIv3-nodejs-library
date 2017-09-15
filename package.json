@@ -1,6 +1,6 @@
 {
   "name": "sib-api-v3-sdk",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Official SendinBlue provided RESTFul API V3 nodejs library",
   "license": "ISC",
   "main": "src/index.js",

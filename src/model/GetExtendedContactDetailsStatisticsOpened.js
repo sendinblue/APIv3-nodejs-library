@@ -26,7 +26,7 @@
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetContactCampaignStatsUnsubscriptionsUserUnsubscription = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsOpened = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,33 +35,35 @@
 
 
   /**
-   * The GetContactCampaignStatsUnsubscriptionsUserUnsubscription model module.
-   * @module model/GetContactCampaignStatsUnsubscriptionsUserUnsubscription
+   * The GetExtendedContactDetailsStatisticsOpened model module.
+   * @module model/GetExtendedContactDetailsStatisticsOpened
    * @version 3.0.0
    */
 
   /**
-   * Constructs a new <code>GetContactCampaignStatsUnsubscriptionsUserUnsubscription</code>.
-   * @alias module:model/GetContactCampaignStatsUnsubscriptionsUserUnsubscription
+   * Constructs a new <code>GetExtendedContactDetailsStatisticsOpened</code>.
+   * @alias module:model/GetExtendedContactDetailsStatisticsOpened
    * @class
    * @param campaignId {Number} ID of the campaign which generated the event
+   * @param count {Number} Number of openings for the campaign
    * @param eventTime {Date} Date of the event
-   * @param ip {String} IP from which the user has unsubscribed
+   * @param ip {String} IP from which the user has opened the email
    */
-  var exports = function(campaignId, eventTime, ip) {
+  var exports = function(campaignId, count, eventTime, ip) {
     var _this = this;
 
     _this['campaignId'] = campaignId;
+    _this['count'] = count;
     _this['eventTime'] = eventTime;
     _this['ip'] = ip;
   };
 
   /**
-   * Constructs a <code>GetContactCampaignStatsUnsubscriptionsUserUnsubscription</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetExtendedContactDetailsStatisticsOpened</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetContactCampaignStatsUnsubscriptionsUserUnsubscription} obj Optional instance to populate.
-   * @return {module:model/GetContactCampaignStatsUnsubscriptionsUserUnsubscription} The populated <code>GetContactCampaignStatsUnsubscriptionsUserUnsubscription</code> instance.
+   * @param {module:model/GetExtendedContactDetailsStatisticsOpened} obj Optional instance to populate.
+   * @return {module:model/GetExtendedContactDetailsStatisticsOpened} The populated <code>GetExtendedContactDetailsStatisticsOpened</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -69,6 +71,9 @@
 
       if (data.hasOwnProperty('campaignId')) {
         obj['campaignId'] = ApiClient.convertToType(data['campaignId'], 'Number');
+      }
+      if (data.hasOwnProperty('count')) {
+        obj['count'] = ApiClient.convertToType(data['count'], 'Number');
       }
       if (data.hasOwnProperty('eventTime')) {
         obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date');
@@ -86,12 +91,17 @@
    */
   exports.prototype['campaignId'] = undefined;
   /**
+   * Number of openings for the campaign
+   * @member {Number} count
+   */
+  exports.prototype['count'] = undefined;
+  /**
    * Date of the event
    * @member {Date} eventTime
    */
   exports.prototype['eventTime'] = undefined;
   /**
-   * IP from which the user has unsubscribed
+   * IP from which the user has opened the email
    * @member {String} ip
    */
   exports.prototype['ip'] = undefined;

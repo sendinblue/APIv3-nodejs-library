@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetEmailEventReportEvents();
+    instance = new SibApiV3Sdk.GetExtendedContactDetailsStatistics();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,64 +50,58 @@
       object[property] = value;
   }
 
-  describe('GetEmailEventReportEvents', function() {
-    it('should create an instance of GetEmailEventReportEvents', function() {
-      // uncomment below and update the code to test GetEmailEventReportEvents
-      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetEmailEventReportEvents);
+  describe('GetExtendedContactDetailsStatistics', function() {
+    it('should create an instance of GetExtendedContactDetailsStatistics', function() {
+      // uncomment below and update the code to test GetExtendedContactDetailsStatistics
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatistics();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedContactDetailsStatistics);
     });
 
-    it('should have the property email (base name: "email")', function() {
-      // uncomment below and update the code to test the property email
-      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+    it('should have the property messagesSent (base name: "messagesSent")', function() {
+      // uncomment below and update the code to test the property messagesSent
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatistics();
       //expect(instance).to.be();
     });
 
-    it('should have the property _date (base name: "date")', function() {
-      // uncomment below and update the code to test the property _date
-      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+    it('should have the property hardBounces (base name: "hardBounces")', function() {
+      // uncomment below and update the code to test the property hardBounces
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatistics();
       //expect(instance).to.be();
     });
 
-    it('should have the property subject (base name: "subject")', function() {
-      // uncomment below and update the code to test the property subject
-      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+    it('should have the property softBounces (base name: "softBounces")', function() {
+      // uncomment below and update the code to test the property softBounces
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatistics();
       //expect(instance).to.be();
     });
 
-    it('should have the property messageId (base name: "messageId")', function() {
-      // uncomment below and update the code to test the property messageId
-      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+    it('should have the property complaints (base name: "complaints")', function() {
+      // uncomment below and update the code to test the property complaints
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatistics();
       //expect(instance).to.be();
     });
 
-    it('should have the property event (base name: "event")', function() {
-      // uncomment below and update the code to test the property event
-      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+    it('should have the property unsubscriptions (base name: "unsubscriptions")', function() {
+      // uncomment below and update the code to test the property unsubscriptions
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatistics();
       //expect(instance).to.be();
     });
 
-    it('should have the property reason (base name: "reason")', function() {
-      // uncomment below and update the code to test the property reason
-      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+    it('should have the property opened (base name: "opened")', function() {
+      // uncomment below and update the code to test the property opened
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatistics();
       //expect(instance).to.be();
     });
 
-    it('should have the property tag (base name: "tag")', function() {
-      // uncomment below and update the code to test the property tag
-      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+    it('should have the property clicked (base name: "clicked")', function() {
+      // uncomment below and update the code to test the property clicked
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatistics();
       //expect(instance).to.be();
     });
 
-    it('should have the property ip (base name: "ip")', function() {
-      // uncomment below and update the code to test the property ip
-      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property link (base name: "link")', function() {
-      // uncomment below and update the code to test the property link
-      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+    it('should have the property transacAttributes (base name: "transacAttributes")', function() {
+      // uncomment below and update the code to test the property transacAttributes
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatistics();
       //expect(instance).to.be();
     });
 

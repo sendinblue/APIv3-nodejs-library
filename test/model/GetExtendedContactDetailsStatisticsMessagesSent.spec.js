@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetExtendedContactDetails();
+    instance = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,16 +50,22 @@
       object[property] = value;
   }
 
-  describe('GetExtendedContactDetails', function() {
-    it('should create an instance of GetExtendedContactDetails', function() {
-      // uncomment below and update the code to test GetExtendedContactDetails
-      //var instane = new SibApiV3Sdk.GetExtendedContactDetails();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedContactDetails);
+  describe('GetExtendedContactDetailsStatisticsMessagesSent', function() {
+    it('should create an instance of GetExtendedContactDetailsStatisticsMessagesSent', function() {
+      // uncomment below and update the code to test GetExtendedContactDetailsStatisticsMessagesSent
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent);
     });
 
-    it('should have the property statistics (base name: "statistics")', function() {
-      // uncomment below and update the code to test the property statistics
-      //var instane = new SibApiV3Sdk.GetExtendedContactDetails();
+    it('should have the property campaignId (base name: "campaignId")', function() {
+      // uncomment below and update the code to test the property campaignId
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property eventTime (base name: "eventTime")', function() {
+      // uncomment below and update the code to test the property eventTime
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent();
       //expect(instance).to.be();
     });
 

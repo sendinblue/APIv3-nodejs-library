@@ -17,49 +17,51 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetExtendedContactDetailsStatisticsLinks'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GetExtendedContactDetailsStatisticsLinks'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetContactCampaignStatsClicked = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsLinks);
+    root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription = factory(root.SibApiV3Sdk.ApiClient);
   }
-}(this, function(ApiClient, GetExtendedContactDetailsStatisticsLinks) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The GetContactCampaignStatsClicked model module.
-   * @module model/GetContactCampaignStatsClicked
+   * The GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription model module.
+   * @module model/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription
    * @version 3.0.0
    */
 
   /**
-   * Constructs a new <code>GetContactCampaignStatsClicked</code>.
-   * @alias module:model/GetContactCampaignStatsClicked
+   * Constructs a new <code>GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription</code>.
+   * @alias module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription
    * @class
    * @param campaignId {Number} ID of the campaign which generated the event
-   * @param links {Array.<module:model/GetExtendedContactDetailsStatisticsLinks>} 
+   * @param eventTime {Date} Date of the event
+   * @param ip {String} IP from which the user has unsubscribed
    */
-  var exports = function(campaignId, links) {
+  var exports = function(campaignId, eventTime, ip) {
     var _this = this;
 
     _this['campaignId'] = campaignId;
-    _this['links'] = links;
+    _this['eventTime'] = eventTime;
+    _this['ip'] = ip;
   };
 
   /**
-   * Constructs a <code>GetContactCampaignStatsClicked</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetContactCampaignStatsClicked} obj Optional instance to populate.
-   * @return {module:model/GetContactCampaignStatsClicked} The populated <code>GetContactCampaignStatsClicked</code> instance.
+   * @param {module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription} obj Optional instance to populate.
+   * @return {module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription} The populated <code>GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -68,8 +70,11 @@
       if (data.hasOwnProperty('campaignId')) {
         obj['campaignId'] = ApiClient.convertToType(data['campaignId'], 'Number');
       }
-      if (data.hasOwnProperty('links')) {
-        obj['links'] = ApiClient.convertToType(data['links'], [GetExtendedContactDetailsStatisticsLinks]);
+      if (data.hasOwnProperty('eventTime')) {
+        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date');
+      }
+      if (data.hasOwnProperty('ip')) {
+        obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
       }
     }
     return obj;
@@ -81,9 +86,15 @@
    */
   exports.prototype['campaignId'] = undefined;
   /**
-   * @member {Array.<module:model/GetExtendedContactDetailsStatisticsLinks>} links
+   * Date of the event
+   * @member {Date} eventTime
    */
-  exports.prototype['links'] = undefined;
+  exports.prototype['eventTime'] = undefined;
+  /**
+   * IP from which the user has unsubscribed
+   * @member {String} ip
+   */
+  exports.prototype['ip'] = undefined;
 
 
 

@@ -26,7 +26,7 @@
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription);
+    root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription);
   }
 }(this, function(ApiClient, GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription, GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription) {
   'use strict';
@@ -35,16 +35,17 @@
 
 
   /**
-   * The GetContactCampaignStatsUnsubscriptions model module.
-   * @module model/GetContactCampaignStatsUnsubscriptions
+   * The GetExtendedContactDetailsStatisticsUnsubscriptions model module.
+   * @module model/GetExtendedContactDetailsStatisticsUnsubscriptions
    * @version 3.0.0
    */
 
   /**
-   * Constructs a new <code>GetContactCampaignStatsUnsubscriptions</code>.
-   * @alias module:model/GetContactCampaignStatsUnsubscriptions
+   * Constructs a new <code>GetExtendedContactDetailsStatisticsUnsubscriptions</code>.
+   * Listing of the unsubscription for the contact
+   * @alias module:model/GetExtendedContactDetailsStatisticsUnsubscriptions
    * @class
-   * @param userUnsubscription {Array.<module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription>} Contact has unsubscribed via the unsubscription link in the email
+   * @param userUnsubscription {Array.<module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription>} Contact unsubscribe via unsubscription link in a campaign
    * @param adminUnsubscription {Array.<module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription>} Contact has been unsubscribed from the administrator
    */
   var exports = function(userUnsubscription, adminUnsubscription) {
@@ -55,11 +56,11 @@
   };
 
   /**
-   * Constructs a <code>GetContactCampaignStatsUnsubscriptions</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetExtendedContactDetailsStatisticsUnsubscriptions</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetContactCampaignStatsUnsubscriptions} obj Optional instance to populate.
-   * @return {module:model/GetContactCampaignStatsUnsubscriptions} The populated <code>GetContactCampaignStatsUnsubscriptions</code> instance.
+   * @param {module:model/GetExtendedContactDetailsStatisticsUnsubscriptions} obj Optional instance to populate.
+   * @return {module:model/GetExtendedContactDetailsStatisticsUnsubscriptions} The populated <code>GetExtendedContactDetailsStatisticsUnsubscriptions</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -76,7 +77,7 @@
   }
 
   /**
-   * Contact has unsubscribed via the unsubscription link in the email
+   * Contact unsubscribe via unsubscription link in a campaign
    * @member {Array.<module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription>} userUnsubscription
    */
   exports.prototype['userUnsubscription'] = undefined;

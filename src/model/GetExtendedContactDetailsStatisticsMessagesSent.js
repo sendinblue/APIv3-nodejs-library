@@ -17,49 +17,49 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetExtendedContactDetailsStatisticsLinks'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GetExtendedContactDetailsStatisticsLinks'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetContactCampaignStatsClicked = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsLinks);
+    root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent = factory(root.SibApiV3Sdk.ApiClient);
   }
-}(this, function(ApiClient, GetExtendedContactDetailsStatisticsLinks) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The GetContactCampaignStatsClicked model module.
-   * @module model/GetContactCampaignStatsClicked
+   * The GetExtendedContactDetailsStatisticsMessagesSent model module.
+   * @module model/GetExtendedContactDetailsStatisticsMessagesSent
    * @version 3.0.0
    */
 
   /**
-   * Constructs a new <code>GetContactCampaignStatsClicked</code>.
-   * @alias module:model/GetContactCampaignStatsClicked
+   * Constructs a new <code>GetExtendedContactDetailsStatisticsMessagesSent</code>.
+   * @alias module:model/GetExtendedContactDetailsStatisticsMessagesSent
    * @class
    * @param campaignId {Number} ID of the campaign which generated the event
-   * @param links {Array.<module:model/GetExtendedContactDetailsStatisticsLinks>} 
+   * @param eventTime {Date} Date of the event
    */
-  var exports = function(campaignId, links) {
+  var exports = function(campaignId, eventTime) {
     var _this = this;
 
     _this['campaignId'] = campaignId;
-    _this['links'] = links;
+    _this['eventTime'] = eventTime;
   };
 
   /**
-   * Constructs a <code>GetContactCampaignStatsClicked</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetExtendedContactDetailsStatisticsMessagesSent</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetContactCampaignStatsClicked} obj Optional instance to populate.
-   * @return {module:model/GetContactCampaignStatsClicked} The populated <code>GetContactCampaignStatsClicked</code> instance.
+   * @param {module:model/GetExtendedContactDetailsStatisticsMessagesSent} obj Optional instance to populate.
+   * @return {module:model/GetExtendedContactDetailsStatisticsMessagesSent} The populated <code>GetExtendedContactDetailsStatisticsMessagesSent</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -68,8 +68,8 @@
       if (data.hasOwnProperty('campaignId')) {
         obj['campaignId'] = ApiClient.convertToType(data['campaignId'], 'Number');
       }
-      if (data.hasOwnProperty('links')) {
-        obj['links'] = ApiClient.convertToType(data['links'], [GetExtendedContactDetailsStatisticsLinks]);
+      if (data.hasOwnProperty('eventTime')) {
+        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date');
       }
     }
     return obj;
@@ -81,9 +81,10 @@
    */
   exports.prototype['campaignId'] = undefined;
   /**
-   * @member {Array.<module:model/GetExtendedContactDetailsStatisticsLinks>} links
+   * Date of the event
+   * @member {Date} eventTime
    */
-  exports.prototype['links'] = undefined;
+  exports.prototype['eventTime'] = undefined;
 
 
 
