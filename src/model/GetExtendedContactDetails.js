@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetContactDetails'], factory);
+    define(['ApiClient', 'model/GetContactDetails', 'model/GetExtendedContactDetailsStatistics'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GetContactDetails'));
+    module.exports = factory(require('../ApiClient'), require('./GetContactDetails'), require('./GetExtendedContactDetailsStatistics'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetExtendedContactDetails = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetContactDetails);
+    root.SibApiV3Sdk.GetExtendedContactDetails = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetContactDetails, root.SibApiV3Sdk.GetExtendedContactDetailsStatistics);
   }
-}(this, function(ApiClient, GetContactDetails) {
+}(this, function(ApiClient, GetContactDetails, GetExtendedContactDetailsStatistics) {
   'use strict';
 
 
@@ -57,6 +57,7 @@
     var _this = this;
 
     GetContactDetails.call(_this, email, id, emailBlacklisted, smsBlacklisted, modifiedAt, listIds, attributes);
+
   };
 
   /**
@@ -71,10 +72,17 @@
       obj = obj || new exports();
 
       GetContactDetails.constructFromObject(data, obj);
+      if (data.hasOwnProperty('statistics')) {
+        obj['statistics'] = GetExtendedContactDetailsStatistics.constructFromObject(data['statistics']);
+      }
     }
     return obj;
   }
 
+  /**
+   * @member {module:model/GetExtendedContactDetailsStatistics} statistics
+   */
+  exports.prototype['statistics'] = undefined;
 
   // Implement GetContactDetails interface:
   /**

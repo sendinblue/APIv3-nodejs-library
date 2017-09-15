@@ -56,10 +56,12 @@
 
     _this['email'] = email;
     _this['date'] = _date;
+
     _this['messageId'] = messageId;
     _this['event'] = event;
     _this['reason'] = reason;
     _this['tag'] = tag;
+
 
   };
 
@@ -80,6 +82,9 @@
       if (data.hasOwnProperty('date')) {
         obj['date'] = ApiClient.convertToType(data['date'], 'Date');
       }
+      if (data.hasOwnProperty('subject')) {
+        obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
+      }
       if (data.hasOwnProperty('messageId')) {
         obj['messageId'] = ApiClient.convertToType(data['messageId'], 'String');
       }
@@ -95,6 +100,9 @@
       if (data.hasOwnProperty('ip')) {
         obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
       }
+      if (data.hasOwnProperty('link')) {
+        obj['link'] = ApiClient.convertToType(data['link'], 'String');
+      }
     }
     return obj;
   }
@@ -109,6 +117,11 @@
    * @member {Date} date
    */
   exports.prototype['date'] = undefined;
+  /**
+   * Subject of the event
+   * @member {String} subject
+   */
+  exports.prototype['subject'] = undefined;
   /**
    * Message ID which generated the event
    * @member {String} messageId
@@ -134,6 +147,11 @@
    * @member {String} ip
    */
   exports.prototype['ip'] = undefined;
+  /**
+   * The link which is sent to the user (only availble if the event is requests or opened or clicks)
+   * @member {String} link
+   */
+  exports.prototype['link'] = undefined;
 
 
   /**

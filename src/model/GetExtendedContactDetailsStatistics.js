@@ -17,33 +17,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetContactCampaignStatsClicked', 'model/GetContactCampaignStatsOpened', 'model/GetContactCampaignStatsTransacAttributes', 'model/GetContactCampaignStatsUnsubscriptions', 'model/GetExtendedContactDetailsStatisticsMessagesSent'], factory);
+    define(['ApiClient', 'model/GetExtendedContactDetailsStatisticsClicked', 'model/GetExtendedContactDetailsStatisticsMessagesSent', 'model/GetExtendedContactDetailsStatisticsOpened', 'model/GetExtendedContactDetailsStatisticsUnsubscriptions'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GetContactCampaignStatsClicked'), require('./GetContactCampaignStatsOpened'), require('./GetContactCampaignStatsTransacAttributes'), require('./GetContactCampaignStatsUnsubscriptions'), require('./GetExtendedContactDetailsStatisticsMessagesSent'));
+    module.exports = factory(require('../ApiClient'), require('./GetExtendedContactDetailsStatisticsClicked'), require('./GetExtendedContactDetailsStatisticsMessagesSent'), require('./GetExtendedContactDetailsStatisticsOpened'), require('./GetExtendedContactDetailsStatisticsUnsubscriptions'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetContactCampaignStats = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetContactCampaignStatsClicked, root.SibApiV3Sdk.GetContactCampaignStatsOpened, root.SibApiV3Sdk.GetContactCampaignStatsTransacAttributes, root.SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent);
+    root.SibApiV3Sdk.GetExtendedContactDetailsStatistics = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsClicked, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsOpened, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions);
   }
-}(this, function(ApiClient, GetContactCampaignStatsClicked, GetContactCampaignStatsOpened, GetContactCampaignStatsTransacAttributes, GetContactCampaignStatsUnsubscriptions, GetExtendedContactDetailsStatisticsMessagesSent) {
+}(this, function(ApiClient, GetExtendedContactDetailsStatisticsClicked, GetExtendedContactDetailsStatisticsMessagesSent, GetExtendedContactDetailsStatisticsOpened, GetExtendedContactDetailsStatisticsUnsubscriptions) {
   'use strict';
 
 
 
 
   /**
-   * The GetContactCampaignStats model module.
-   * @module model/GetContactCampaignStats
+   * The GetExtendedContactDetailsStatistics model module.
+   * @module model/GetExtendedContactDetailsStatistics
    * @version 3.0.0
    */
 
   /**
-   * Constructs a new <code>GetContactCampaignStats</code>.
-   * Campaign Statistics for the contact
-   * @alias module:model/GetContactCampaignStats
+   * Constructs a new <code>GetExtendedContactDetailsStatistics</code>.
+   * Campaign statistics of the contact
+   * @alias module:model/GetExtendedContactDetailsStatistics
    * @class
    */
   var exports = function() {
@@ -60,11 +60,11 @@
   };
 
   /**
-   * Constructs a <code>GetContactCampaignStats</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetExtendedContactDetailsStatistics</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetContactCampaignStats} obj Optional instance to populate.
-   * @return {module:model/GetContactCampaignStats} The populated <code>GetContactCampaignStats</code> instance.
+   * @param {module:model/GetExtendedContactDetailsStatistics} obj Optional instance to populate.
+   * @return {module:model/GetExtendedContactDetailsStatistics} The populated <code>GetExtendedContactDetailsStatistics</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -83,51 +83,58 @@
         obj['complaints'] = ApiClient.convertToType(data['complaints'], [GetExtendedContactDetailsStatisticsMessagesSent]);
       }
       if (data.hasOwnProperty('unsubscriptions')) {
-        obj['unsubscriptions'] = GetContactCampaignStatsUnsubscriptions.constructFromObject(data['unsubscriptions']);
+        obj['unsubscriptions'] = GetExtendedContactDetailsStatisticsUnsubscriptions.constructFromObject(data['unsubscriptions']);
       }
       if (data.hasOwnProperty('opened')) {
-        obj['opened'] = ApiClient.convertToType(data['opened'], [GetContactCampaignStatsOpened]);
+        obj['opened'] = ApiClient.convertToType(data['opened'], [GetExtendedContactDetailsStatisticsOpened]);
       }
       if (data.hasOwnProperty('clicked')) {
-        obj['clicked'] = ApiClient.convertToType(data['clicked'], [GetContactCampaignStatsClicked]);
+        obj['clicked'] = ApiClient.convertToType(data['clicked'], [GetExtendedContactDetailsStatisticsClicked]);
       }
       if (data.hasOwnProperty('transacAttributes')) {
-        obj['transacAttributes'] = ApiClient.convertToType(data['transacAttributes'], [GetContactCampaignStatsTransacAttributes]);
+        obj['transacAttributes'] = ApiClient.convertToType(data['transacAttributes'], [Object]);
       }
     }
     return obj;
   }
 
   /**
+   * Listing of the sent campaign for the contact
    * @member {Array.<module:model/GetExtendedContactDetailsStatisticsMessagesSent>} messagesSent
    */
   exports.prototype['messagesSent'] = undefined;
   /**
+   * Listing of the hardbounes generated by the contact
    * @member {Array.<module:model/GetExtendedContactDetailsStatisticsMessagesSent>} hardBounces
    */
   exports.prototype['hardBounces'] = undefined;
   /**
+   * Listing of the softbounes generated by the contact
    * @member {Array.<module:model/GetExtendedContactDetailsStatisticsMessagesSent>} softBounces
    */
   exports.prototype['softBounces'] = undefined;
   /**
+   * Listing of the complaints generated by the contact
    * @member {Array.<module:model/GetExtendedContactDetailsStatisticsMessagesSent>} complaints
    */
   exports.prototype['complaints'] = undefined;
   /**
-   * @member {module:model/GetContactCampaignStatsUnsubscriptions} unsubscriptions
+   * @member {module:model/GetExtendedContactDetailsStatisticsUnsubscriptions} unsubscriptions
    */
   exports.prototype['unsubscriptions'] = undefined;
   /**
-   * @member {Array.<module:model/GetContactCampaignStatsOpened>} opened
+   * Listing of the openings generated by the contact
+   * @member {Array.<module:model/GetExtendedContactDetailsStatisticsOpened>} opened
    */
   exports.prototype['opened'] = undefined;
   /**
-   * @member {Array.<module:model/GetContactCampaignStatsClicked>} clicked
+   * Listing of the clicks generated by the contact
+   * @member {Array.<module:model/GetExtendedContactDetailsStatisticsClicked>} clicked
    */
   exports.prototype['clicked'] = undefined;
   /**
-   * @member {Array.<module:model/GetContactCampaignStatsTransacAttributes>} transacAttributes
+   * Listing of the transactional attributes for the contact
+   * @member {Array.<Object>} transacAttributes
    */
   exports.prototype['transacAttributes'] = undefined;
 

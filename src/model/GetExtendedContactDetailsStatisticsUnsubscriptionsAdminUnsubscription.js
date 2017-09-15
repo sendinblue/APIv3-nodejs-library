@@ -26,7 +26,7 @@
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetContactCampaignStatsLinks = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,76 +35,56 @@
 
 
   /**
-   * The GetContactCampaignStatsLinks model module.
-   * @module model/GetContactCampaignStatsLinks
+   * The GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription model module.
+   * @module model/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription
    * @version 3.0.0
    */
 
   /**
-   * Constructs a new <code>GetContactCampaignStatsLinks</code>.
-   * @alias module:model/GetContactCampaignStatsLinks
+   * Constructs a new <code>GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription</code>.
+   * @alias module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription
    * @class
-   * @param count {Number} Number of clicks on this link for the campaign
    * @param eventTime {Date} Date of the event
-   * @param ip {String} IP from which the user has clicked on the link
-   * @param url {String} URL of the clicked link
+   * @param ip {String} IP from which the user has been unsubscribed
    */
-  var exports = function(count, eventTime, ip, url) {
+  var exports = function(eventTime, ip) {
     var _this = this;
 
-    _this['count'] = count;
     _this['eventTime'] = eventTime;
     _this['ip'] = ip;
-    _this['url'] = url;
   };
 
   /**
-   * Constructs a <code>GetContactCampaignStatsLinks</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetContactCampaignStatsLinks} obj Optional instance to populate.
-   * @return {module:model/GetContactCampaignStatsLinks} The populated <code>GetContactCampaignStatsLinks</code> instance.
+   * @param {module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription} obj Optional instance to populate.
+   * @return {module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription} The populated <code>GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('count')) {
-        obj['count'] = ApiClient.convertToType(data['count'], 'Number');
-      }
       if (data.hasOwnProperty('eventTime')) {
         obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date');
       }
       if (data.hasOwnProperty('ip')) {
         obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
       }
-      if (data.hasOwnProperty('url')) {
-        obj['url'] = ApiClient.convertToType(data['url'], 'String');
-      }
     }
     return obj;
   }
 
-  /**
-   * Number of clicks on this link for the campaign
-   * @member {Number} count
-   */
-  exports.prototype['count'] = undefined;
   /**
    * Date of the event
    * @member {Date} eventTime
    */
   exports.prototype['eventTime'] = undefined;
   /**
-   * IP from which the user has clicked on the link
+   * IP from which the user has been unsubscribed
    * @member {String} ip
    */
   exports.prototype['ip'] = undefined;
-  /**
-   * URL of the clicked link
-   * @member {String} url
-   */
-  exports.prototype['url'] = undefined;
 
 
 

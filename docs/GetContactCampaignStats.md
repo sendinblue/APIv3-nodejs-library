@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**messagesSent** | [**[GetContactCampaignStatsMessagesSent]**](GetContactCampaignStatsMessagesSent.md) |  | [optional] 
-**hardBounces** | [**[GetContactCampaignStatsMessagesSent]**](GetContactCampaignStatsMessagesSent.md) |  | [optional] 
-**softBounces** | [**[GetContactCampaignStatsMessagesSent]**](GetContactCampaignStatsMessagesSent.md) |  | [optional] 
-**complaints** | [**[GetContactCampaignStatsMessagesSent]**](GetContactCampaignStatsMessagesSent.md) |  | [optional] 
+**messagesSent** | [**[GetExtendedContactDetailsStatisticsMessagesSent]**](GetExtendedContactDetailsStatisticsMessagesSent.md) |  | [optional] 
+**hardBounces** | [**[GetExtendedContactDetailsStatisticsMessagesSent]**](GetExtendedContactDetailsStatisticsMessagesSent.md) |  | [optional] 
+**softBounces** | [**[GetExtendedContactDetailsStatisticsMessagesSent]**](GetExtendedContactDetailsStatisticsMessagesSent.md) |  | [optional] 
+**complaints** | [**[GetExtendedContactDetailsStatisticsMessagesSent]**](GetExtendedContactDetailsStatisticsMessagesSent.md) |  | [optional] 
 **unsubscriptions** | [**GetContactCampaignStatsUnsubscriptions**](GetContactCampaignStatsUnsubscriptions.md) |  | [optional] 
 **opened** | [**[GetContactCampaignStatsOpened]**](GetContactCampaignStatsOpened.md) |  | [optional] 
 **clicked** | [**[GetContactCampaignStatsClicked]**](GetContactCampaignStatsClicked.md) |  | [optional] 

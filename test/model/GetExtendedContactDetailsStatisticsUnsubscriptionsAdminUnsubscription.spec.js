@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetContactCampaignStatsLinks();
+    instance = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,34 +50,22 @@
       object[property] = value;
   }
 
-  describe('GetContactCampaignStatsLinks', function() {
-    it('should create an instance of GetContactCampaignStatsLinks', function() {
-      // uncomment below and update the code to test GetContactCampaignStatsLinks
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsLinks();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetContactCampaignStatsLinks);
-    });
-
-    it('should have the property count (base name: "count")', function() {
-      // uncomment below and update the code to test the property count
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsLinks();
-      //expect(instance).to.be();
+  describe('GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription', function() {
+    it('should create an instance of GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription', function() {
+      // uncomment below and update the code to test GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription);
     });
 
     it('should have the property eventTime (base name: "eventTime")', function() {
       // uncomment below and update the code to test the property eventTime
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsLinks();
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
       //expect(instance).to.be();
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsLinks();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property url (base name: "url")', function() {
-      // uncomment below and update the code to test the property url
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsLinks();
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
       //expect(instance).to.be();
     });
 

@@ -1,9 +1,9 @@
-# SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions
+# SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userUnsubscription** | [**[GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription]**](GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription.md) | Contact has unsubscribed via the unsubscription link in the email | 
+**userUnsubscription** | [**[GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription]**](GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription.md) | Contact unsubscribe via unsubscription link in a campaign | 
 **adminUnsubscription** | [**[GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription]**](GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription.md) | Contact has been unsubscribed from the administrator | 
 
 

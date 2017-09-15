@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetContactCampaignStatsMessagesSent();
+    instance = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,22 +50,22 @@
       object[property] = value;
   }
 
-  describe('GetContactCampaignStatsMessagesSent', function() {
-    it('should create an instance of GetContactCampaignStatsMessagesSent', function() {
-      // uncomment below and update the code to test GetContactCampaignStatsMessagesSent
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsMessagesSent();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetContactCampaignStatsMessagesSent);
+  describe('GetExtendedContactDetailsStatisticsUnsubscriptions', function() {
+    it('should create an instance of GetExtendedContactDetailsStatisticsUnsubscriptions', function() {
+      // uncomment below and update the code to test GetExtendedContactDetailsStatisticsUnsubscriptions
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions);
     });
 
-    it('should have the property campaignId (base name: "campaignId")', function() {
-      // uncomment below and update the code to test the property campaignId
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsMessagesSent();
+    it('should have the property userUnsubscription (base name: "userUnsubscription")', function() {
+      // uncomment below and update the code to test the property userUnsubscription
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions();
       //expect(instance).to.be();
     });
 
-    it('should have the property eventTime (base name: "eventTime")', function() {
-      // uncomment below and update the code to test the property eventTime
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsMessagesSent();
+    it('should have the property adminUnsubscription (base name: "adminUnsubscription")', function() {
+      // uncomment below and update the code to test the property adminUnsubscription
+      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions();
       //expect(instance).to.be();
     });
 
