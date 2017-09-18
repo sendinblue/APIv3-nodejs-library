@@ -289,8 +289,6 @@ Class | Method | HTTP request | Description
  - [SibApiV3Sdk.GetIpsFromSender](docs/GetIpsFromSender.md)
  - [SibApiV3Sdk.GetList](docs/GetList.md)
  - [SibApiV3Sdk.GetLists](docs/GetLists.md)
- - [SibApiV3Sdk.GetListsFolder](docs/GetListsFolder.md)
- - [SibApiV3Sdk.GetListsLists](docs/GetListsLists.md)
  - [SibApiV3Sdk.GetProcess](docs/GetProcess.md)
  - [SibApiV3Sdk.GetProcesses](docs/GetProcesses.md)
  - [SibApiV3Sdk.GetReports](docs/GetReports.md)

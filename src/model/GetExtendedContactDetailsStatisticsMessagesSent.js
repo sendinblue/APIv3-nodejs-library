@@ -45,7 +45,7 @@
    * @alias module:model/GetExtendedContactDetailsStatisticsMessagesSent
    * @class
    * @param campaignId {Number} ID of the campaign which generated the event
-   * @param eventTime {Date} Date of the event
+   * @param eventTime {String} Date of the event
    */
   var exports = function(campaignId, eventTime) {
     var _this = this;
@@ -69,7 +69,7 @@
         obj['campaignId'] = ApiClient.convertToType(data['campaignId'], 'Number');
       }
       if (data.hasOwnProperty('eventTime')) {
-        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date');
+        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'String');
       }
     }
     return obj;
@@ -82,7 +82,7 @@
   exports.prototype['campaignId'] = undefined;
   /**
    * Date of the event
-   * @member {Date} eventTime
+   * @member {String} eventTime
    */
   exports.prototype['eventTime'] = undefined;
 

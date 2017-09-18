@@ -56,15 +56,14 @@
    * @param replyTo {String} Email defined as the \"Reply to\" of the campaign
    * @param toField {String} Customisation of the \"to\" field of the campaign
    * @param htmlContent {String} HTML content of the campaign
-   * @param shareLink {String} Link to share the campaign on social medias
    * @param tag {String} Tag of the campaign
    * @param createdAt {String} Creation date of the campaign (YYYY-MM-DD HH:mm:ss)
    * @param modifiedAt {String} Date of last modification of the campaign (YYYY-MM-DD HH:mm:ss)
    */
-  var exports = function(id, name, subject, type, status, testSent, header, footer, replyTo, toField, htmlContent, shareLink, tag, createdAt, modifiedAt) {
+  var exports = function(id, name, subject, type, status, testSent, header, footer, replyTo, toField, htmlContent, tag, createdAt, modifiedAt) {
     var _this = this;
 
-    GetExtendedCampaignOverview.call(_this, id, name, subject, type, status, testSent, header, footer, replyTo, toField, htmlContent, shareLink, tag, createdAt, modifiedAt);
+    GetExtendedCampaignOverview.call(_this, id, name, subject, type, status, testSent, header, footer, replyTo, toField, htmlContent, tag, createdAt, modifiedAt);
   };
 
   /**

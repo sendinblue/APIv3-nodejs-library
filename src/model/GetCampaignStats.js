@@ -44,7 +44,6 @@
    * Constructs a new <code>GetCampaignStats</code>.
    * @alias module:model/GetCampaignStats
    * @class
-   * @param listId {Number} List Id of email campaign (only in case of get email campaign(s))
    * @param uniqueClicks {Number} Number of unique clicks for the campaign
    * @param clickers {Number} Number of clicks for the campaign
    * @param complaints {Number} Number of complaints (Spam reports) for the campaign
@@ -57,10 +56,10 @@
    * @param viewed {Number} Number of openings for the campaign
    * @param deferred {Number} Number of deferred emails for the campaign
    */
-  var exports = function(listId, uniqueClicks, clickers, complaints, delivered, sent, softBounces, hardBounces, uniqueViews, unsubscriptions, viewed, deferred) {
+  var exports = function(uniqueClicks, clickers, complaints, delivered, sent, softBounces, hardBounces, uniqueViews, unsubscriptions, viewed, deferred) {
     var _this = this;
 
-    _this['listId'] = listId;
+
     _this['uniqueClicks'] = uniqueClicks;
     _this['clickers'] = clickers;
     _this['complaints'] = complaints;

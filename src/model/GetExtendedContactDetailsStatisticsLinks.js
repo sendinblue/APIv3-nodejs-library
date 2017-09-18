@@ -45,7 +45,7 @@
    * @alias module:model/GetExtendedContactDetailsStatisticsLinks
    * @class
    * @param count {Number} Number of clicks on this link for the campaign
-   * @param eventTime {Date} Date of the event
+   * @param eventTime {String} Date of the event
    * @param ip {String} IP from which the user has clicked on the link
    * @param url {String} URL of the clicked link
    */
@@ -73,7 +73,7 @@
         obj['count'] = ApiClient.convertToType(data['count'], 'Number');
       }
       if (data.hasOwnProperty('eventTime')) {
-        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date');
+        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'String');
       }
       if (data.hasOwnProperty('ip')) {
         obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
@@ -92,7 +92,7 @@
   exports.prototype['count'] = undefined;
   /**
    * Date of the event
-   * @member {Date} eventTime
+   * @member {String} eventTime
    */
   exports.prototype['eventTime'] = undefined;
   /**

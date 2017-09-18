@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetListsLists'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GetListsLists'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetLists = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetListsLists);
+    root.SibApiV3Sdk.GetLists = factory(root.SibApiV3Sdk.ApiClient);
   }
-}(this, function(ApiClient, GetListsLists) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -44,14 +44,14 @@
    * Constructs a new <code>GetLists</code>.
    * @alias module:model/GetLists
    * @class
+   * @param lists {Array.<Object>} Listing of all the lists available in your account
    * @param count {Number} Number of lists in your account
-   * @param lists {Array.<module:model/GetListsLists>} Listing of all the lists available in your account
    */
-  var exports = function(count, lists) {
+  var exports = function(lists, count) {
     var _this = this;
 
-    _this['count'] = count;
     _this['lists'] = lists;
+    _this['count'] = count;
   };
 
   /**
@@ -65,26 +65,26 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('lists')) {
+        obj['lists'] = ApiClient.convertToType(data['lists'], [Object]);
+      }
       if (data.hasOwnProperty('count')) {
         obj['count'] = ApiClient.convertToType(data['count'], 'Number');
-      }
-      if (data.hasOwnProperty('lists')) {
-        obj['lists'] = ApiClient.convertToType(data['lists'], [GetListsLists]);
       }
     }
     return obj;
   }
 
   /**
+   * Listing of all the lists available in your account
+   * @member {Array.<Object>} lists
+   */
+  exports.prototype['lists'] = undefined;
+  /**
    * Number of lists in your account
    * @member {Number} count
    */
   exports.prototype['count'] = undefined;
-  /**
-   * Listing of all the lists available in your account
-   * @member {Array.<module:model/GetListsLists>} lists
-   */
-  exports.prototype['lists'] = undefined;
 
 
 
