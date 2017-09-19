@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **replyTo** | **String** | Email defined as the \&quot;Reply to\&quot; of the campaign | 
 **toField** | **String** | Customisation of the \&quot;to\&quot; field of the campaign | 
 **htmlContent** | **String** | HTML content of the campaign | 
-**shareLink** | **String** | Link to share the campaign on social medias | 
+**shareLink** | **String** | Link to share the campaign on social medias | [optional] 
 **tag** | **String** | Tag of the campaign | 
 **createdAt** | **String** | Creation date of the campaign (YYYY-MM-DD HH:mm:ss) | 
 **modifiedAt** | **String** | Date of last modification of the campaign (YYYY-MM-DD HH:mm:ss) | 

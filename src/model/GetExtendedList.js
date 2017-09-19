@@ -50,7 +50,7 @@
    * @param totalBlacklisted {Number} Number of blacklisted contacts in the list
    * @param totalSubscribers {Number} Number of contacts in the list
    * @param folderId {Number} ID of the folder
-   * @param createdAt {String} Creation Date of the list (YYYY-MM-DD)
+   * @param createdAt {String} Creation Date of the list (YYYY-MM-DD HH:mm:ss)
    */
   var exports = function(id, name, totalBlacklisted, totalSubscribers, folderId, createdAt) {
     var _this = this;
@@ -96,7 +96,7 @@
    */
   exports.prototype['folderId'] = undefined;
   /**
-   * Creation Date of the list (YYYY-MM-DD)
+   * Creation Date of the list (YYYY-MM-DD HH:mm:ss)
    * @member {String} createdAt
    */
   exports.prototype['createdAt'] = undefined;

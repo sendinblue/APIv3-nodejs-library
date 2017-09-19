@@ -44,7 +44,7 @@
    * Constructs a new <code>GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription</code>.
    * @alias module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription
    * @class
-   * @param eventTime {Date} Date of the event
+   * @param eventTime {String} Date of the event
    * @param ip {String} IP from which the user has been unsubscribed
    */
   var exports = function(eventTime, ip) {
@@ -66,7 +66,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('eventTime')) {
-        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date');
+        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'String');
       }
       if (data.hasOwnProperty('ip')) {
         obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
@@ -77,7 +77,7 @@
 
   /**
    * Date of the event
-   * @member {Date} eventTime
+   * @member {String} eventTime
    */
   exports.prototype['eventTime'] = undefined;
   /**

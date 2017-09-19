@@ -57,14 +57,14 @@
       //expect(instance).to.be.a(SibApiV3Sdk.GetLists);
     });
 
-    it('should have the property count (base name: "count")', function() {
-      // uncomment below and update the code to test the property count
+    it('should have the property lists (base name: "lists")', function() {
+      // uncomment below and update the code to test the property lists
       //var instane = new SibApiV3Sdk.GetLists();
       //expect(instance).to.be();
     });
 
-    it('should have the property lists (base name: "lists")', function() {
-      // uncomment below and update the code to test the property lists
+    it('should have the property count (base name: "count")', function() {
+      // uncomment below and update the code to test the property count
       //var instane = new SibApiV3Sdk.GetLists();
       //expect(instance).to.be();
     });
