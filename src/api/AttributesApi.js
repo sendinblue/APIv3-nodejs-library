@@ -99,7 +99,7 @@
 
     /**
      * Deletes an attribute
-     * @param {String} attributeId id of the attribute
+     * @param {Number} attributeId id of the attribute
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteAttributeWithHttpInfo = function(attributeId) {
@@ -135,7 +135,7 @@
 
     /**
      * Deletes an attribute
-     * @param {String} attributeId id of the attribute
+     * @param {Number} attributeId id of the attribute
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteAttribute = function(attributeId) {

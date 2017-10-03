@@ -46,7 +46,7 @@
    * @class
    * @param campaignId {Number} ID of the campaign which generated the event
    * @param count {Number} Number of openings of the campaign
-   * @param eventTime {String} Date of the event
+   * @param eventTime {Date} Date of the event
    * @param ip {String} IP from which the user has opened the campaign
    */
   var exports = function(campaignId, count, eventTime, ip) {
@@ -76,7 +76,7 @@
         obj['count'] = ApiClient.convertToType(data['count'], 'Number');
       }
       if (data.hasOwnProperty('eventTime')) {
-        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'String');
+        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date');
       }
       if (data.hasOwnProperty('ip')) {
         obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
@@ -97,7 +97,7 @@
   exports.prototype['count'] = undefined;
   /**
    * Date of the event
-   * @member {String} eventTime
+   * @member {Date} eventTime
    */
   exports.prototype['eventTime'] = undefined;
   /**

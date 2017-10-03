@@ -45,7 +45,7 @@
    * @alias module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription
    * @class
    * @param campaignId {Number} ID of the campaign which generated the event
-   * @param eventTime {String} Date of the event
+   * @param eventTime {Date} Date of the event
    * @param ip {String} IP from which the user has unsubscribed
    */
   var exports = function(campaignId, eventTime, ip) {
@@ -71,7 +71,7 @@
         obj['campaignId'] = ApiClient.convertToType(data['campaignId'], 'Number');
       }
       if (data.hasOwnProperty('eventTime')) {
-        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'String');
+        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date');
       }
       if (data.hasOwnProperty('ip')) {
         obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
@@ -87,7 +87,7 @@
   exports.prototype['campaignId'] = undefined;
   /**
    * Date of the event
-   * @member {String} eventTime
+   * @member {Date} eventTime
    */
   exports.prototype['eventTime'] = undefined;
   /**

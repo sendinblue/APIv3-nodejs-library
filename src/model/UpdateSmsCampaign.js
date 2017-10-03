@@ -79,7 +79,7 @@
         obj['recipients'] = CreateSmsCampaignRecipients.constructFromObject(data['recipients']);
       }
       if (data.hasOwnProperty('scheduledAt')) {
-        obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'String');
+        obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'Date');
       }
     }
     return obj;
@@ -105,8 +105,8 @@
    */
   exports.prototype['recipients'] = undefined;
   /**
-   * Date and time on which the campaign has to run (YYYY-MM-DD HH:mm:ss)
-   * @member {String} scheduledAt
+   * Date and time on which the campaign has to run (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
 

@@ -83,7 +83,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | id of the SMS campaign
+var campaignId = 789; // Number | id of the SMS campaign
 
 apiInstance.deleteSMSCampaigns(campaignId).then(function() {
   console.log('API called successfully.');
@@ -97,7 +97,7 @@ apiInstance.deleteSMSCampaigns(campaignId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| id of the SMS campaign | 
+ **campaignId** | **Number**| id of the SMS campaign | 
 
 ### Return type
 
@@ -184,7 +184,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | id of the SMS campaign
+var campaignId = 789; // Number | id of the SMS campaign
 
 var getSmsCampaign = new SibApiV3Sdk.GetSmsCampaign(); // GetSmsCampaign | Values to update an SMS Campaign
 
@@ -200,7 +200,7 @@ apiInstance.getSmsCampaign(campaignId, getSmsCampaign).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| id of the SMS campaign | 
+ **campaignId** | **Number**| id of the SMS campaign | 
  **getSmsCampaign** | [**GetSmsCampaign**](GetSmsCampaign.md)| Values to update an SMS Campaign | 
 
 ### Return type
@@ -237,7 +237,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | id of the campaign
+var campaignId = 789; // Number | id of the campaign
 
 var opts = { 
   'recipientExport': new SibApiV3Sdk.RequestSMSRecipientExport() // RequestSMSRecipientExport | Values to send for a recipient export request
@@ -254,7 +254,7 @@ apiInstance.requestSMSRecipientExport(campaignId, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| id of the campaign | 
+ **campaignId** | **Number**| id of the campaign | 
  **recipientExport** | [**RequestSMSRecipientExport**](RequestSMSRecipientExport.md)| Values to send for a recipient export request | [optional] 
 
 ### Return type
@@ -289,7 +289,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | id of the campaign
+var campaignId = 789; // Number | id of the campaign
 
 apiInstance.sendSMSCampaignNow(campaignId).then(function() {
   console.log('API called successfully.');
@@ -303,7 +303,7 @@ apiInstance.sendSMSCampaignNow(campaignId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| id of the campaign | 
+ **campaignId** | **Number**| id of the campaign | 
 
 ### Return type
 
@@ -339,7 +339,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | id of the campaign
+var campaignId = 789; // Number | id of the campaign
 
 var sendReport = new SibApiV3Sdk.SendReport(); // SendReport | Values for send a report
 
@@ -355,7 +355,7 @@ apiInstance.sendSMSReport(campaignId, sendReport).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| id of the campaign | 
+ **campaignId** | **Number**| id of the campaign | 
  **sendReport** | [**SendReport**](SendReport.md)| Values for send a report | 
 
 ### Return type
@@ -390,7 +390,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | Id of the SMS campaign
+var campaignId = 789; // Number | Id of the SMS campaign
 
 var sendTestSms = new SibApiV3Sdk.SendTestSms(); // SendTestSms | Mobile number to which send the test
 
@@ -406,7 +406,7 @@ apiInstance.sendTestSms(campaignId, sendTestSms).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| Id of the SMS campaign | 
+ **campaignId** | **Number**| Id of the SMS campaign | 
  **sendTestSms** | [**SendTestSms**](SendTestSms.md)| Mobile number to which send the test | 
 
 ### Return type
@@ -441,7 +441,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | id of the campaign
+var campaignId = 789; // Number | id of the campaign
 
 var status = new SibApiV3Sdk.UpdateCampaignStatus(); // UpdateCampaignStatus | Status of the campaign.
 
@@ -457,7 +457,7 @@ apiInstance.updateSMSCampaignStatus(campaignId, status).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| id of the campaign | 
+ **campaignId** | **Number**| id of the campaign | 
  **status** | [**UpdateCampaignStatus**](UpdateCampaignStatus.md)| Status of the campaign. | 
 
 ### Return type
@@ -492,7 +492,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | id of the SMS campaign
+var campaignId = 789; // Number | id of the SMS campaign
 
 var updateSmsCampaign = new SibApiV3Sdk.UpdateSmsCampaign(); // UpdateSmsCampaign | Values to update an SMS Campaign
 
@@ -508,7 +508,7 @@ apiInstance.updateSmsCampaign(campaignId, updateSmsCampaign).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| id of the SMS campaign | 
+ **campaignId** | **Number**| id of the SMS campaign | 
  **updateSmsCampaign** | [**UpdateSmsCampaign**](UpdateSmsCampaign.md)| Values to update an SMS Campaign | 
 
 ### Return type

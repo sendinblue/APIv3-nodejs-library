@@ -51,7 +51,7 @@
 
     /**
      * Return the informations for a process
-     * @param {String} processId Id of the process
+     * @param {Number} processId Id of the process
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetProcess} and HTTP response
      */
     this.getProcessWithHttpInfo = function(processId) {
@@ -87,7 +87,7 @@
 
     /**
      * Return the informations for a process
-     * @param {String} processId Id of the process
+     * @param {Number} processId Id of the process
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetProcess}
      */
     this.getProcess = function(processId) {

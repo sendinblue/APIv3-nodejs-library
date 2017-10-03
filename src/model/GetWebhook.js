@@ -49,8 +49,8 @@
    * @param description {String} Description of the webhook
    * @param events {Array.<String>} 
    * @param type {module:model/GetWebhook.TypeEnum} Type of webhook (marketing or transac)
-   * @param createdAt {String} Creation date of the webhook (YYYY-MM-DD HH:mm:ss)
-   * @param modifiedAt {String} Last modification date of the webhook (YYYY-MM-DD HH:mm:ss)
+   * @param createdAt {Date} Creation date of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param modifiedAt {Date} Last modification date of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
   var exports = function(url, id, description, events, type, createdAt, modifiedAt) {
     var _this = this;
@@ -91,10 +91,10 @@
         obj['type'] = ApiClient.convertToType(data['type'], 'String');
       }
       if (data.hasOwnProperty('createdAt')) {
-        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'String');
+        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
       }
       if (data.hasOwnProperty('modifiedAt')) {
-        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'String');
+        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'Date');
       }
     }
     return obj;
@@ -125,13 +125,13 @@
    */
   exports.prototype['type'] = undefined;
   /**
-   * Creation date of the webhook (YYYY-MM-DD HH:mm:ss)
-   * @member {String} createdAt
+   * Creation date of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Last modification date of the webhook (YYYY-MM-DD HH:mm:ss)
-   * @member {String} modifiedAt
+   * Last modification date of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;
 

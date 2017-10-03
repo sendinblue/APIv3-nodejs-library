@@ -47,8 +47,8 @@
    * @param email {String} Email address which generates the event
    * @param _date {Date} Date on which the event has been generated
    * @param messageId {String} Message ID which generated the event
-   * @param event {module:model/GetEmailEventReportEvents.EventEnum} Event which occured
-   * @param reason {String} Reason of bounce (only availble if the event is hardbounce or softbounce)
+   * @param event {module:model/GetEmailEventReportEvents.EventEnum} Event which occurred
+   * @param reason {String} Reason of bounce (only available if the event is hardbounce or softbounce)
    * @param tag {String} Tag of the email which generated the event
    */
   var exports = function(email, _date, messageId, event, reason, tag) {
@@ -128,12 +128,12 @@
    */
   exports.prototype['messageId'] = undefined;
   /**
-   * Event which occured
+   * Event which occurred
    * @member {module:model/GetEmailEventReportEvents.EventEnum} event
    */
   exports.prototype['event'] = undefined;
   /**
-   * Reason of bounce (only availble if the event is hardbounce or softbounce)
+   * Reason of bounce (only available if the event is hardbounce or softbounce)
    * @member {String} reason
    */
   exports.prototype['reason'] = undefined;
@@ -143,12 +143,12 @@
    */
   exports.prototype['tag'] = undefined;
   /**
-   * IP from which the user has opened the email or clicked on the link (only availble if the event is opened or clicks)
+   * IP from which the user has opened the email or clicked on the link (only available if the event is opened or clicks)
    * @member {String} ip
    */
   exports.prototype['ip'] = undefined;
   /**
-   * The link which is sent to the user (only availble if the event is requests or opened or clicks)
+   * The link which is sent to the user (only available if the event is requests or opened or clicks)
    * @member {String} link
    */
   exports.prototype['link'] = undefined;

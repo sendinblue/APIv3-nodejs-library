@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **htmlContent** | **String** | HTML content of the campaign | 
 **shareLink** | **String** | Link to share the campaign on social medias | [optional] 
 **tag** | **String** | Tag of the campaign | 
-**createdAt** | **String** | Creation date of the campaign (YYYY-MM-DD HH:mm:ss) | 
-**modifiedAt** | **String** | Date of last modification of the campaign (YYYY-MM-DD HH:mm:ss) | 
+**createdAt** | **Date** | Creation date of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
+**modifiedAt** | **Date** | Date of last modification of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
 **inlineImageActivation** | **Boolean** | Status of inline image. inlineImageActivation &#x3D; false means image can’t be embedded, &amp; inlineImageActivation &#x3D; true means image can be embedded, in the email. | [optional] 
 **mirrorActive** | **Boolean** | Status of mirror links in campaign. mirrorActive &#x3D; false means mirror links are deactivated, &amp; mirrorActive &#x3D; true means mirror links are activated, in the campaign | [optional] 
 **recurring** | **Boolean** | FOR TRIGGER ONLY ! Type of trigger campaign.recurring &#x3D; false means contact can receive the same Trigger campaign only once, &amp; recurring &#x3D; true means contact can receive the same Trigger campaign several times | [optional] 

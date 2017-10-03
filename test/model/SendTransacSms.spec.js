@@ -75,6 +75,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instane = new SibApiV3Sdk.SendTransacSms();
+      //expect(instance).to.be();
+    });
+
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
       //var instane = new SibApiV3Sdk.SendTransacSms();

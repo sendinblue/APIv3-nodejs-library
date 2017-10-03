@@ -54,6 +54,8 @@
     _this['type'] = type;
     _this['creditsType'] = creditsType;
     _this['credits'] = credits;
+
+
   };
 
   /**
@@ -76,6 +78,12 @@
       if (data.hasOwnProperty('credits')) {
         obj['credits'] = ApiClient.convertToType(data['credits'], 'Number');
       }
+      if (data.hasOwnProperty('startDate')) {
+        obj['startDate'] = ApiClient.convertToType(data['startDate'], 'Date');
+      }
+      if (data.hasOwnProperty('endDate')) {
+        obj['endDate'] = ApiClient.convertToType(data['endDate'], 'Date');
+      }
     }
     return obj;
   }
@@ -95,6 +103,16 @@
    * @member {Number} credits
    */
   exports.prototype['credits'] = undefined;
+  /**
+   * Date of the period from which the plan will start (only available for \"subscription\", \"unlimited\" and \"reseller\" plan type)
+   * @member {Date} startDate
+   */
+  exports.prototype['startDate'] = undefined;
+  /**
+   * Date of the period from which the plan will end (only available for \"subscription\", \"unlimited\" and \"reseller\" plan type)
+   * @member {Date} endDate
+   */
+  exports.prototype['endDate'] = undefined;
 
 
   /**

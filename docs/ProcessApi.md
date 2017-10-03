@@ -27,7 +27,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ProcessApi();
 
-var processId = "processId_example"; // String | Id of the process
+var processId = 789; // Number | Id of the process
 
 apiInstance.getProcess(processId).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -41,7 +41,7 @@ apiInstance.getProcess(processId).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **processId** | **String**| Id of the process | 
+ **processId** | **Number**| Id of the process | 
 
 ### Return type
 

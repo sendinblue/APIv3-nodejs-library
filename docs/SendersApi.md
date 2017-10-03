@@ -80,7 +80,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SendersApi();
 
-var senderId = "senderId_example"; // String | Id of the sender
+var senderId = 789; // Number | Id of the sender
 
 apiInstance.deleteSender(senderId).then(function() {
   console.log('API called successfully.');
@@ -94,7 +94,7 @@ apiInstance.deleteSender(senderId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **senderId** | **String**| Id of the sender | 
+ **senderId** | **Number**| Id of the sender | 
 
 ### Return type
 
@@ -170,7 +170,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SendersApi();
 
-var senderId = "senderId_example"; // String | Id of the sender
+var senderId = 789; // Number | Id of the sender
 
 apiInstance.getIpsFromSender(senderId).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -184,7 +184,7 @@ apiInstance.getIpsFromSender(senderId).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **senderId** | **String**| Id of the sender | 
+ **senderId** | **Number**| Id of the sender | 
 
 ### Return type
 
@@ -269,7 +269,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SendersApi();
 
-var senderId = "senderId_example"; // String | Id of the sender
+var senderId = 789; // Number | Id of the sender
 
 var opts = { 
   'sender': new SibApiV3Sdk.UpdateSender() // UpdateSender | sender's name
@@ -286,7 +286,7 @@ apiInstance.updateSender(senderId, opts).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **senderId** | **String**| Id of the sender | 
+ **senderId** | **Number**| Id of the sender | 
  **sender** | [**UpdateSender**](UpdateSender.md)| sender&#39;s name | [optional] 
 
 ### Return type

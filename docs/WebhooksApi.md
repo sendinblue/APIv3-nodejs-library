@@ -78,7 +78,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.WebhooksApi();
 
-var webhookId = "webhookId_example"; // String | Id of the webhook
+var webhookId = 789; // Number | Id of the webhook
 
 apiInstance.deleteWebhook(webhookId).then(function() {
   console.log('API called successfully.');
@@ -92,7 +92,7 @@ apiInstance.deleteWebhook(webhookId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webhookId** | **String**| Id of the webhook | 
+ **webhookId** | **Number**| Id of the webhook | 
 
 ### Return type
 
@@ -126,7 +126,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.WebhooksApi();
 
-var webhookId = "webhookId_example"; // String | Id of the webhook
+var webhookId = 789; // Number | Id of the webhook
 
 apiInstance.getWebhook(webhookId).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -140,7 +140,7 @@ apiInstance.getWebhook(webhookId).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webhookId** | **String**| Id of the webhook | 
+ **webhookId** | **Number**| Id of the webhook | 
 
 ### Return type
 
@@ -223,7 +223,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.WebhooksApi();
 
-var webhookId = "webhookId_example"; // String | Id of the webhook
+var webhookId = 789; // Number | Id of the webhook
 
 var updateWebhook = new SibApiV3Sdk.UpdateWebhook(); // UpdateWebhook | Values to update a webhook
 
@@ -239,7 +239,7 @@ apiInstance.updateWebhook(webhookId, updateWebhook).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webhookId** | **String**| Id of the webhook | 
+ **webhookId** | **Number**| Id of the webhook | 
  **updateWebhook** | [**UpdateWebhook**](UpdateWebhook.md)| Values to update a webhook | 
 
 ### Return type

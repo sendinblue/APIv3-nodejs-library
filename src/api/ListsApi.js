@@ -51,7 +51,7 @@
 
     /**
      * Add existing contacts to a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/AddRemoveContactToList} contactEmails Emails addresses of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostContactInfo} and HTTP response
      */
@@ -93,7 +93,7 @@
 
     /**
      * Add existing contacts to a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/AddRemoveContactToList} contactEmails Emails addresses of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostContactInfo}
      */
@@ -155,7 +155,7 @@
 
     /**
      * Delete a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteListWithHttpInfo = function(listId) {
@@ -191,7 +191,7 @@
 
     /**
      * Delete a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteList = function(listId) {
@@ -204,9 +204,9 @@
 
     /**
      * Get the contacts in a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {Object} opts Optional parameters
-     * @param {String} opts.modifiedSince Filter the contacts modified after a given date (YYYY-MM-DD HH:mm:ss)
+     * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContacts} and HTTP response
@@ -248,9 +248,9 @@
 
     /**
      * Get the contacts in a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {Object} opts Optional parameters
-     * @param {String} opts.modifiedSince Filter the contacts modified after a given date (YYYY-MM-DD HH:mm:ss)
+     * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContacts}
@@ -265,7 +265,7 @@
 
     /**
      * Get the lists in a folder
-     * @param {String} folderId Id of the folder
+     * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
@@ -307,7 +307,7 @@
 
     /**
      * Get the lists in a folder
-     * @param {String} folderId Id of the folder
+     * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
@@ -323,7 +323,7 @@
 
     /**
      * Get the details of a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetExtendedList} and HTTP response
      */
     this.getListWithHttpInfo = function(listId) {
@@ -359,7 +359,7 @@
 
     /**
      * Get the details of a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetExtendedList}
      */
     this.getList = function(listId) {
@@ -422,7 +422,7 @@
 
     /**
      * Remove existing contacts from a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/AddRemoveContactToList} contactEmails Emails adresses of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostContactInfo} and HTTP response
      */
@@ -464,7 +464,7 @@
 
     /**
      * Remove existing contacts from a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/AddRemoveContactToList} contactEmails Emails adresses of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostContactInfo}
      */
@@ -478,7 +478,7 @@
 
     /**
      * Update a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/UpdateList} updateList Values to update a list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -520,7 +520,7 @@
 
     /**
      * Update a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/UpdateList} updateList Values to update a list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */

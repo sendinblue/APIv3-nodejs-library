@@ -34,7 +34,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
-var childId = 56; // Number | id of reseller's child
+var childId = 789; // Number | id of reseller's child
 
 var addCredits = new SibApiV3Sdk.AddCredits(); // AddCredits | Values to post to add credit to a specific child account
 
@@ -85,7 +85,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
-var childId = 56; // Number | id of reseller's child
+var childId = 789; // Number | id of reseller's child
 
 var ipId = new SibApiV3Sdk.ManageIp(); // ManageIp | IP's id
 
@@ -185,7 +185,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
-var childId = 56; // Number | id of reseller's child
+var childId = 789; // Number | id of reseller's child
 
 apiInstance.deleteResellerChild(childId).then(function() {
   console.log('API called successfully.');
@@ -233,7 +233,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
-var childId = 56; // Number | id of reseller's child
+var childId = 789; // Number | id of reseller's child
 
 var ipId = new SibApiV3Sdk.ManageIp(); // ManageIp | IP's id
 
@@ -284,7 +284,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
-var childId = 56; // Number | id of reseller's child
+var childId = 789; // Number | id of reseller's child
 
 apiInstance.getChildInfo(childId).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -374,7 +374,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
-var childId = 56; // Number | id of reseller's child
+var childId = 789; // Number | id of reseller's child
 
 var removeCredits = new SibApiV3Sdk.RemoveCredits(); // RemoveCredits | Values to post to remove email or SMS credits from a specific child account
 
@@ -425,7 +425,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
-var childId = 56; // Number | id of reseller's child
+var childId = 789; // Number | id of reseller's child
 
 var resellerChild = new SibApiV3Sdk.UpdateChild(); // UpdateChild | values to update in child profile
 

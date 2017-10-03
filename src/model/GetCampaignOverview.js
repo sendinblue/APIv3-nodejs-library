@@ -88,7 +88,7 @@
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
       if (data.hasOwnProperty('scheduledAt')) {
-        obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'String');
+        obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'Date');
       }
     }
     return obj;
@@ -120,8 +120,8 @@
    */
   exports.prototype['status'] = undefined;
   /**
-   * Date on which campaign is scheduled (YYYY-MM-DD HH:mm:ss)
-   * @member {String} scheduledAt
+   * Date on which campaign is scheduled (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
 

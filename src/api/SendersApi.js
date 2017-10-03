@@ -97,7 +97,7 @@
 
     /**
      * Delete a sender
-     * @param {String} senderId Id of the sender
+     * @param {Number} senderId Id of the sender
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteSenderWithHttpInfo = function(senderId) {
@@ -133,7 +133,7 @@
 
     /**
      * Delete a sender
-     * @param {String} senderId Id of the sender
+     * @param {Number} senderId Id of the sender
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteSender = function(senderId) {
@@ -187,7 +187,7 @@
 
     /**
      * Return all the dedicated IPs for a sender
-     * @param {String} senderId Id of the sender
+     * @param {Number} senderId Id of the sender
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetIpsFromSender} and HTTP response
      */
     this.getIpsFromSenderWithHttpInfo = function(senderId) {
@@ -223,7 +223,7 @@
 
     /**
      * Return all the dedicated IPs for a sender
-     * @param {String} senderId Id of the sender
+     * @param {Number} senderId Id of the sender
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetIpsFromSender}
      */
     this.getIpsFromSender = function(senderId) {
@@ -286,7 +286,7 @@
 
     /**
      * Update a sender
-     * @param {String} senderId Id of the sender
+     * @param {Number} senderId Id of the sender
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateSender} opts.sender sender&#39;s name
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -325,7 +325,7 @@
 
     /**
      * Update a sender
-     * @param {String} senderId Id of the sender
+     * @param {Number} senderId Id of the sender
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateSender} opts.sender sender&#39;s name
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

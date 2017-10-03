@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddRemoveContactToList', 'model/CreaUpdateFolder', 'model/CreateAttribute', 'model/CreateContact', 'model/CreateList', 'model/CreateModel', 'model/CreatedProcessId', 'model/ErrorModel', 'model/GetAttributes', 'model/GetContactCampaignStats', 'model/GetContacts', 'model/GetExtendedContactDetails', 'model/GetExtendedList', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders', 'model/GetLists', 'model/PostContactInfo', 'model/RequestContactExport', 'model/RequestContactImport', 'model/UpdateContact', 'model/UpdateList'], factory);
+    define(['ApiClient', 'model/AddRemoveContactToList', 'model/CreateAttribute', 'model/CreateContact', 'model/CreateList', 'model/CreateModel', 'model/CreateUpdateFolder', 'model/CreatedProcessId', 'model/ErrorModel', 'model/GetAttributes', 'model/GetContactCampaignStats', 'model/GetContacts', 'model/GetExtendedContactDetails', 'model/GetExtendedList', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders', 'model/GetLists', 'model/PostContactInfo', 'model/RequestContactExport', 'model/RequestContactImport', 'model/UpdateContact', 'model/UpdateList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AddRemoveContactToList'), require('../model/CreaUpdateFolder'), require('../model/CreateAttribute'), require('../model/CreateContact'), require('../model/CreateList'), require('../model/CreateModel'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetAttributes'), require('../model/GetContactCampaignStats'), require('../model/GetContacts'), require('../model/GetExtendedContactDetails'), require('../model/GetExtendedList'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'), require('../model/GetLists'), require('../model/PostContactInfo'), require('../model/RequestContactExport'), require('../model/RequestContactImport'), require('../model/UpdateContact'), require('../model/UpdateList'));
+    module.exports = factory(require('../ApiClient'), require('../model/AddRemoveContactToList'), require('../model/CreateAttribute'), require('../model/CreateContact'), require('../model/CreateList'), require('../model/CreateModel'), require('../model/CreateUpdateFolder'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetAttributes'), require('../model/GetContactCampaignStats'), require('../model/GetContacts'), require('../model/GetExtendedContactDetails'), require('../model/GetExtendedList'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'), require('../model/GetLists'), require('../model/PostContactInfo'), require('../model/RequestContactExport'), require('../model/RequestContactImport'), require('../model/UpdateContact'), require('../model/UpdateList'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.ContactsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddRemoveContactToList, root.SibApiV3Sdk.CreaUpdateFolder, root.SibApiV3Sdk.CreateAttribute, root.SibApiV3Sdk.CreateContact, root.SibApiV3Sdk.CreateList, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAttributes, root.SibApiV3Sdk.GetContactCampaignStats, root.SibApiV3Sdk.GetContacts, root.SibApiV3Sdk.GetExtendedContactDetails, root.SibApiV3Sdk.GetExtendedList, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders, root.SibApiV3Sdk.GetLists, root.SibApiV3Sdk.PostContactInfo, root.SibApiV3Sdk.RequestContactExport, root.SibApiV3Sdk.RequestContactImport, root.SibApiV3Sdk.UpdateContact, root.SibApiV3Sdk.UpdateList);
+    root.SibApiV3Sdk.ContactsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddRemoveContactToList, root.SibApiV3Sdk.CreateAttribute, root.SibApiV3Sdk.CreateContact, root.SibApiV3Sdk.CreateList, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateUpdateFolder, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAttributes, root.SibApiV3Sdk.GetContactCampaignStats, root.SibApiV3Sdk.GetContacts, root.SibApiV3Sdk.GetExtendedContactDetails, root.SibApiV3Sdk.GetExtendedList, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders, root.SibApiV3Sdk.GetLists, root.SibApiV3Sdk.PostContactInfo, root.SibApiV3Sdk.RequestContactExport, root.SibApiV3Sdk.RequestContactImport, root.SibApiV3Sdk.UpdateContact, root.SibApiV3Sdk.UpdateList);
   }
-}(this, function(ApiClient, AddRemoveContactToList, CreaUpdateFolder, CreateAttribute, CreateContact, CreateList, CreateModel, CreatedProcessId, ErrorModel, GetAttributes, GetContactCampaignStats, GetContacts, GetExtendedContactDetails, GetExtendedList, GetFolder, GetFolderLists, GetFolders, GetLists, PostContactInfo, RequestContactExport, RequestContactImport, UpdateContact, UpdateList) {
+}(this, function(ApiClient, AddRemoveContactToList, CreateAttribute, CreateContact, CreateList, CreateModel, CreateUpdateFolder, CreatedProcessId, ErrorModel, GetAttributes, GetContactCampaignStats, GetContacts, GetExtendedContactDetails, GetExtendedList, GetFolder, GetFolderLists, GetFolders, GetLists, PostContactInfo, RequestContactExport, RequestContactImport, UpdateContact, UpdateList) {
   'use strict';
 
   /**
@@ -51,7 +51,7 @@
 
     /**
      * Add existing contacts to a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/AddRemoveContactToList} contactEmails Emails addresses of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostContactInfo} and HTTP response
      */
@@ -93,7 +93,7 @@
 
     /**
      * Add existing contacts to a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/AddRemoveContactToList} contactEmails Emails addresses of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostContactInfo}
      */
@@ -203,15 +203,15 @@
 
     /**
      * Create a folder
-     * @param {module:model/CreaUpdateFolder} name Name of the folder
+     * @param {module:model/CreateUpdateFolder} createFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
      */
-    this.createFolderWithHttpInfo = function(name) {
-      var postBody = name;
+    this.createFolderWithHttpInfo = function(createFolder) {
+      var postBody = createFolder;
 
-      // verify the required parameter 'name' is set
-      if (name === undefined || name === null) {
-        throw new Error("Missing the required parameter 'name' when calling createFolder");
+      // verify the required parameter 'createFolder' is set
+      if (createFolder === undefined || createFolder === null) {
+        throw new Error("Missing the required parameter 'createFolder' when calling createFolder");
       }
 
 
@@ -238,11 +238,11 @@
 
     /**
      * Create a folder
-     * @param {module:model/CreaUpdateFolder} name Name of the folder
+     * @param {module:model/CreateUpdateFolder} createFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
      */
-    this.createFolder = function(name) {
-      return this.createFolderWithHttpInfo(name)
+    this.createFolder = function(createFolder) {
+      return this.createFolderWithHttpInfo(createFolder)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -299,7 +299,7 @@
 
     /**
      * Deletes an attribute
-     * @param {String} attributeId id of the attribute
+     * @param {Number} attributeId id of the attribute
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteAttributeWithHttpInfo = function(attributeId) {
@@ -335,7 +335,7 @@
 
     /**
      * Deletes an attribute
-     * @param {String} attributeId id of the attribute
+     * @param {Number} attributeId id of the attribute
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteAttribute = function(attributeId) {
@@ -348,7 +348,7 @@
 
     /**
      * Delete a folder (and all its lists)
-     * @param {String} folderId Id of the folder
+     * @param {Number} folderId Id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteFolderWithHttpInfo = function(folderId) {
@@ -384,7 +384,7 @@
 
     /**
      * Delete a folder (and all its lists)
-     * @param {String} folderId Id of the folder
+     * @param {Number} folderId Id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteFolder = function(folderId) {
@@ -397,7 +397,7 @@
 
     /**
      * Delete a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteListWithHttpInfo = function(listId) {
@@ -433,7 +433,7 @@
 
     /**
      * Delete a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteList = function(listId) {
@@ -635,9 +635,9 @@
 
     /**
      * Get the contacts in a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {Object} opts Optional parameters
-     * @param {String} opts.modifiedSince Filter the contacts modified after a given date (YYYY-MM-DD HH:mm:ss)
+     * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContacts} and HTTP response
@@ -679,9 +679,9 @@
 
     /**
      * Get the contacts in a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {Object} opts Optional parameters
-     * @param {String} opts.modifiedSince Filter the contacts modified after a given date (YYYY-MM-DD HH:mm:ss)
+     * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContacts}
@@ -696,7 +696,7 @@
 
     /**
      * Returns folder details
-     * @param {String} folderId id of the folder
+     * @param {Number} folderId id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolder} and HTTP response
      */
     this.getFolderWithHttpInfo = function(folderId) {
@@ -732,7 +732,7 @@
 
     /**
      * Returns folder details
-     * @param {String} folderId id of the folder
+     * @param {Number} folderId id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolder}
      */
     this.getFolder = function(folderId) {
@@ -745,7 +745,7 @@
 
     /**
      * Get the lists in a folder
-     * @param {String} folderId Id of the folder
+     * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
@@ -787,7 +787,7 @@
 
     /**
      * Get the lists in a folder
-     * @param {String} folderId Id of the folder
+     * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
@@ -860,7 +860,7 @@
 
     /**
      * Get the details of a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetExtendedList} and HTTP response
      */
     this.getListWithHttpInfo = function(listId) {
@@ -896,7 +896,7 @@
 
     /**
      * Get the details of a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetExtendedList}
      */
     this.getList = function(listId) {
@@ -1009,7 +1009,7 @@
 
     /**
      * Remove existing contacts from a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/AddRemoveContactToList} contactEmails Emails adresses of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostContactInfo} and HTTP response
      */
@@ -1051,7 +1051,7 @@
 
     /**
      * Remove existing contacts from a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/AddRemoveContactToList} contactEmails Emails adresses of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostContactInfo}
      */
@@ -1171,21 +1171,21 @@
 
     /**
      * Update a contact folder
-     * @param {String} folderId Id of the folder
-     * @param {module:model/CreaUpdateFolder} name Name of the folder
+     * @param {Number} folderId Id of the folder
+     * @param {module:model/CreateUpdateFolder} updateFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.updateFolderWithHttpInfo = function(folderId, name) {
-      var postBody = name;
+    this.updateFolderWithHttpInfo = function(folderId, updateFolder) {
+      var postBody = updateFolder;
 
       // verify the required parameter 'folderId' is set
       if (folderId === undefined || folderId === null) {
         throw new Error("Missing the required parameter 'folderId' when calling updateFolder");
       }
 
-      // verify the required parameter 'name' is set
-      if (name === undefined || name === null) {
-        throw new Error("Missing the required parameter 'name' when calling updateFolder");
+      // verify the required parameter 'updateFolder' is set
+      if (updateFolder === undefined || updateFolder === null) {
+        throw new Error("Missing the required parameter 'updateFolder' when calling updateFolder");
       }
 
 
@@ -1213,12 +1213,12 @@
 
     /**
      * Update a contact folder
-     * @param {String} folderId Id of the folder
-     * @param {module:model/CreaUpdateFolder} name Name of the folder
+     * @param {Number} folderId Id of the folder
+     * @param {module:model/CreateUpdateFolder} updateFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.updateFolder = function(folderId, name) {
-      return this.updateFolderWithHttpInfo(folderId, name)
+    this.updateFolder = function(folderId, updateFolder) {
+      return this.updateFolderWithHttpInfo(folderId, updateFolder)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1227,7 +1227,7 @@
 
     /**
      * Update a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/UpdateList} updateList Values to update a list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1269,7 +1269,7 @@
 
     /**
      * Update a list
-     * @param {String} listId Id of the list
+     * @param {Number} listId Id of the list
      * @param {module:model/UpdateList} updateList Values to update a list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */

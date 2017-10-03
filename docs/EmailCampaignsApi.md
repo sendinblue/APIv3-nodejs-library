@@ -83,7 +83,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | id of the campaign
+var campaignId = 789; // Number | id of the campaign
 
 apiInstance.deleteEmailCampaigns(campaignId).then(function() {
   console.log('API called successfully.');
@@ -97,7 +97,7 @@ apiInstance.deleteEmailCampaigns(campaignId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| id of the campaign | 
+ **campaignId** | **Number**| id of the campaign | 
 
 ### Return type
 
@@ -131,7 +131,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | Id of the campaign
+var campaignId = 789; // Number | Id of the campaign
 
 var opts = { 
   'recipientExport': new SibApiV3Sdk.EmailExportRecipients() // EmailExportRecipients | Values to send for a recipient export request
@@ -148,7 +148,7 @@ apiInstance.emailExportRecipients(campaignId, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| Id of the campaign | 
+ **campaignId** | **Number**| Id of the campaign | 
  **recipientExport** | [**EmailExportRecipients**](EmailExportRecipients.md)| Values to send for a recipient export request | [optional] 
 
 ### Return type
@@ -183,7 +183,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | Id of the campaign
+var campaignId = 789; // Number | Id of the campaign
 
 apiInstance.getEmailCampaign(campaignId).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -197,7 +197,7 @@ apiInstance.getEmailCampaign(campaignId).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| Id of the campaign | 
+ **campaignId** | **Number**| Id of the campaign | 
 
 ### Return type
 
@@ -286,7 +286,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | Id of the campaign
+var campaignId = 789; // Number | Id of the campaign
 
 apiInstance.sendEmailCampaignNow(campaignId).then(function() {
   console.log('API called successfully.');
@@ -300,7 +300,7 @@ apiInstance.sendEmailCampaignNow(campaignId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| Id of the campaign | 
+ **campaignId** | **Number**| Id of the campaign | 
 
 ### Return type
 
@@ -336,7 +336,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | Id of the campaign
+var campaignId = 789; // Number | Id of the campaign
 
 var sendReport = new SibApiV3Sdk.SendReport(); // SendReport | Values for send a report
 
@@ -352,7 +352,7 @@ apiInstance.sendReport(campaignId, sendReport).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| Id of the campaign | 
+ **campaignId** | **Number**| Id of the campaign | 
  **sendReport** | [**SendReport**](SendReport.md)| Values for send a report | 
 
 ### Return type
@@ -387,7 +387,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | Id of the campaign
+var campaignId = 789; // Number | Id of the campaign
 
 var emailTo = new SibApiV3Sdk.SendTestEmail(); // SendTestEmail | 
 
@@ -403,7 +403,7 @@ apiInstance.sendTestEmail(campaignId, emailTo).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| Id of the campaign | 
+ **campaignId** | **Number**| Id of the campaign | 
  **emailTo** | [**SendTestEmail**](SendTestEmail.md)|  | 
 
 ### Return type
@@ -438,7 +438,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | Id of the campaign
+var campaignId = 789; // Number | Id of the campaign
 
 var status = new SibApiV3Sdk.UpdateCampaignStatus(); // UpdateCampaignStatus | Status of the campaign
 
@@ -454,7 +454,7 @@ apiInstance.updateCampaignStatus(campaignId, status).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| Id of the campaign | 
+ **campaignId** | **Number**| Id of the campaign | 
  **status** | [**UpdateCampaignStatus**](UpdateCampaignStatus.md)| Status of the campaign | 
 
 ### Return type
@@ -489,7 +489,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
-var campaignId = "campaignId_example"; // String | Id of the campaign
+var campaignId = 789; // Number | Id of the campaign
 
 var emailCampaign = new SibApiV3Sdk.UpdateEmailCampaign(); // UpdateEmailCampaign | Values to update a campaign
 
@@ -505,7 +505,7 @@ apiInstance.updateEmailCampaigns(campaignId, emailCampaign).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaignId** | **String**| Id of the campaign | 
+ **campaignId** | **Number**| Id of the campaign | 
  **emailCampaign** | [**UpdateEmailCampaign**](UpdateEmailCampaign.md)| Values to update a campaign | 
 
 ### Return type

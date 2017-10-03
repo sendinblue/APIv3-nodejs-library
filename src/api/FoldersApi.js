@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CreaUpdateFolder', 'model/CreateModel', 'model/ErrorModel', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders'], factory);
+    define(['ApiClient', 'model/CreateModel', 'model/CreateUpdateFolder', 'model/ErrorModel', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CreaUpdateFolder'), require('../model/CreateModel'), require('../model/ErrorModel'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'));
+    module.exports = factory(require('../ApiClient'), require('../model/CreateModel'), require('../model/CreateUpdateFolder'), require('../model/ErrorModel'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.FoldersApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreaUpdateFolder, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders);
+    root.SibApiV3Sdk.FoldersApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateUpdateFolder, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders);
   }
-}(this, function(ApiClient, CreaUpdateFolder, CreateModel, ErrorModel, GetFolder, GetFolderLists, GetFolders) {
+}(this, function(ApiClient, CreateModel, CreateUpdateFolder, ErrorModel, GetFolder, GetFolderLists, GetFolders) {
   'use strict';
 
   /**
@@ -51,15 +51,15 @@
 
     /**
      * Create a folder
-     * @param {module:model/CreaUpdateFolder} name Name of the folder
+     * @param {module:model/CreateUpdateFolder} createFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
      */
-    this.createFolderWithHttpInfo = function(name) {
-      var postBody = name;
+    this.createFolderWithHttpInfo = function(createFolder) {
+      var postBody = createFolder;
 
-      // verify the required parameter 'name' is set
-      if (name === undefined || name === null) {
-        throw new Error("Missing the required parameter 'name' when calling createFolder");
+      // verify the required parameter 'createFolder' is set
+      if (createFolder === undefined || createFolder === null) {
+        throw new Error("Missing the required parameter 'createFolder' when calling createFolder");
       }
 
 
@@ -86,11 +86,11 @@
 
     /**
      * Create a folder
-     * @param {module:model/CreaUpdateFolder} name Name of the folder
+     * @param {module:model/CreateUpdateFolder} createFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
      */
-    this.createFolder = function(name) {
-      return this.createFolderWithHttpInfo(name)
+    this.createFolder = function(createFolder) {
+      return this.createFolderWithHttpInfo(createFolder)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -99,7 +99,7 @@
 
     /**
      * Delete a folder (and all its lists)
-     * @param {String} folderId Id of the folder
+     * @param {Number} folderId Id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteFolderWithHttpInfo = function(folderId) {
@@ -135,7 +135,7 @@
 
     /**
      * Delete a folder (and all its lists)
-     * @param {String} folderId Id of the folder
+     * @param {Number} folderId Id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteFolder = function(folderId) {
@@ -148,7 +148,7 @@
 
     /**
      * Returns folder details
-     * @param {String} folderId id of the folder
+     * @param {Number} folderId id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolder} and HTTP response
      */
     this.getFolderWithHttpInfo = function(folderId) {
@@ -184,7 +184,7 @@
 
     /**
      * Returns folder details
-     * @param {String} folderId id of the folder
+     * @param {Number} folderId id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolder}
      */
     this.getFolder = function(folderId) {
@@ -197,7 +197,7 @@
 
     /**
      * Get the lists in a folder
-     * @param {String} folderId Id of the folder
+     * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
@@ -239,7 +239,7 @@
 
     /**
      * Get the lists in a folder
-     * @param {String} folderId Id of the folder
+     * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
@@ -312,21 +312,21 @@
 
     /**
      * Update a contact folder
-     * @param {String} folderId Id of the folder
-     * @param {module:model/CreaUpdateFolder} name Name of the folder
+     * @param {Number} folderId Id of the folder
+     * @param {module:model/CreateUpdateFolder} updateFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.updateFolderWithHttpInfo = function(folderId, name) {
-      var postBody = name;
+    this.updateFolderWithHttpInfo = function(folderId, updateFolder) {
+      var postBody = updateFolder;
 
       // verify the required parameter 'folderId' is set
       if (folderId === undefined || folderId === null) {
         throw new Error("Missing the required parameter 'folderId' when calling updateFolder");
       }
 
-      // verify the required parameter 'name' is set
-      if (name === undefined || name === null) {
-        throw new Error("Missing the required parameter 'name' when calling updateFolder");
+      // verify the required parameter 'updateFolder' is set
+      if (updateFolder === undefined || updateFolder === null) {
+        throw new Error("Missing the required parameter 'updateFolder' when calling updateFolder");
       }
 
 
@@ -354,12 +354,12 @@
 
     /**
      * Update a contact folder
-     * @param {String} folderId Id of the folder
-     * @param {module:model/CreaUpdateFolder} name Name of the folder
+     * @param {Number} folderId Id of the folder
+     * @param {module:model/CreateUpdateFolder} updateFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.updateFolder = function(folderId, name) {
-      return this.updateFolderWithHttpInfo(folderId, name)
+    this.updateFolder = function(folderId, updateFolder) {
+      return this.updateFolderWithHttpInfo(folderId, updateFolder)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

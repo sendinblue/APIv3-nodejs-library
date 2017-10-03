@@ -76,7 +76,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.AttributesApi();
 
-var attributeId = "attributeId_example"; // String | id of the attribute
+var attributeId = 789; // Number | id of the attribute
 
 apiInstance.deleteAttribute(attributeId).then(function() {
   console.log('API called successfully.');
@@ -90,7 +90,7 @@ apiInstance.deleteAttribute(attributeId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attributeId** | **String**| id of the attribute | 
+ **attributeId** | **Number**| id of the attribute | 
 
 ### Return type
 
