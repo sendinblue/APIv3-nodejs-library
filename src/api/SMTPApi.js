@@ -213,7 +213,7 @@
      * @param {module:model/String} opts.event Filter the report for a specific event type
      * @param {String} opts.tags Filter the report for tags (serialized and urlencoded array)
      * @param {String} opts.messageId Filter on a specific message id
-     * @param {String} opts.templateId Filter on a specific template id
+     * @param {Number} opts.templateId Filter on a specific template id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetEmailEventReport} and HTTP response
      */
     this.getEmailEventReportWithHttpInfo = function(opts) {
@@ -264,7 +264,7 @@
      * @param {module:model/String} opts.event Filter the report for a specific event type
      * @param {String} opts.tags Filter the report for tags (serialized and urlencoded array)
      * @param {String} opts.messageId Filter on a specific message id
-     * @param {String} opts.templateId Filter on a specific template id
+     * @param {Number} opts.templateId Filter on a specific template id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetEmailEventReport}
      */
     this.getEmailEventReport = function(opts) {
@@ -339,7 +339,7 @@
 
     /**
      * Returns the template informations
-     * @param {String} templateId id of the template
+     * @param {Number} templateId id of the template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmtpTemplateOverview} and HTTP response
      */
     this.getSmtpTemplateWithHttpInfo = function(templateId) {
@@ -375,7 +375,7 @@
 
     /**
      * Returns the template informations
-     * @param {String} templateId id of the template
+     * @param {Number} templateId id of the template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmtpTemplateOverview}
      */
     this.getSmtpTemplate = function(templateId) {
@@ -441,7 +441,7 @@
 
     /**
      * Send a template
-     * @param {String} templateId Id of the template
+     * @param {Number} templateId Id of the template
      * @param {module:model/SendEmail} sendEmail 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendTemplateEmail} and HTTP response
      */
@@ -483,7 +483,7 @@
 
     /**
      * Send a template
-     * @param {String} templateId Id of the template
+     * @param {Number} templateId Id of the template
      * @param {module:model/SendEmail} sendEmail 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendTemplateEmail}
      */
@@ -497,7 +497,7 @@
 
     /**
      * Send a template to your test list
-     * @param {String} templateId Id of the template
+     * @param {Number} templateId Id of the template
      * @param {module:model/SendTestEmail} sendTestEmail 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -539,7 +539,7 @@
 
     /**
      * Send a template to your test list
-     * @param {String} templateId Id of the template
+     * @param {Number} templateId Id of the template
      * @param {module:model/SendTestEmail} sendTestEmail 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -601,7 +601,7 @@
 
     /**
      * Updates an smtp templates
-     * @param {String} templateId id of the template
+     * @param {Number} templateId id of the template
      * @param {module:model/UpdateSmtpTemplate} smtpTemplate values to update in smtp template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -643,7 +643,7 @@
 
     /**
      * Updates an smtp templates
-     * @param {String} templateId id of the template
+     * @param {Number} templateId id of the template
      * @param {module:model/UpdateSmtpTemplate} smtpTemplate values to update in smtp template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */

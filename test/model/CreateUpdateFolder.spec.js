@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.CreaUpdateFolder();
+    instance = new SibApiV3Sdk.CreateUpdateFolder();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,16 +50,16 @@
       object[property] = value;
   }
 
-  describe('CreaUpdateFolder', function() {
-    it('should create an instance of CreaUpdateFolder', function() {
-      // uncomment below and update the code to test CreaUpdateFolder
-      //var instane = new SibApiV3Sdk.CreaUpdateFolder();
-      //expect(instance).to.be.a(SibApiV3Sdk.CreaUpdateFolder);
+  describe('CreateUpdateFolder', function() {
+    it('should create an instance of CreateUpdateFolder', function() {
+      // uncomment below and update the code to test CreateUpdateFolder
+      //var instane = new SibApiV3Sdk.CreateUpdateFolder();
+      //expect(instance).to.be.a(SibApiV3Sdk.CreateUpdateFolder);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SibApiV3Sdk.CreaUpdateFolder();
+      //var instane = new SibApiV3Sdk.CreateUpdateFolder();
       //expect(instance).to.be();
     });
 

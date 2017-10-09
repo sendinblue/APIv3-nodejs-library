@@ -200,7 +200,7 @@ var opts = {
   'event': "event_example", // String | Filter the report for a specific event type
   'tags': "tags_example", // String | Filter the report for tags (serialized and urlencoded array)
   'messageId': "messageId_example", // String | Filter on a specific message id
-  'templateId': "templateId_example" // String | Filter on a specific template id
+  'templateId': 789 // Number | Filter on a specific template id
 };
 apiInstance.getEmailEventReport(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
  **event** | **String**| Filter the report for a specific event type | [optional] 
  **tags** | **String**| Filter the report for tags (serialized and urlencoded array) | [optional] 
  **messageId** | **String**| Filter on a specific message id | [optional] 
- **templateId** | **String**| Filter on a specific template id | [optional] 
+ **templateId** | **Number**| Filter on a specific template id | [optional] 
 
 ### Return type
 
@@ -316,7 +316,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMTPApi();
 
-var templateId = "templateId_example"; // String | id of the template
+var templateId = 789; // Number | id of the template
 
 apiInstance.getSmtpTemplate(templateId).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -330,7 +330,7 @@ apiInstance.getSmtpTemplate(templateId).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateId** | **String**| id of the template | 
+ **templateId** | **Number**| id of the template | 
 
 ### Return type
 
@@ -417,7 +417,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMTPApi();
 
-var templateId = "templateId_example"; // String | Id of the template
+var templateId = 789; // Number | Id of the template
 
 var sendEmail = new SibApiV3Sdk.SendEmail(); // SendEmail | 
 
@@ -433,7 +433,7 @@ apiInstance.sendTemplate(templateId, sendEmail).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateId** | **String**| Id of the template | 
+ **templateId** | **Number**| Id of the template | 
  **sendEmail** | [**SendEmail**](SendEmail.md)|  | 
 
 ### Return type
@@ -468,7 +468,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMTPApi();
 
-var templateId = "templateId_example"; // String | Id of the template
+var templateId = 789; // Number | Id of the template
 
 var sendTestEmail = new SibApiV3Sdk.SendTestEmail(); // SendTestEmail | 
 
@@ -484,7 +484,7 @@ apiInstance.sendTestTemplate(templateId, sendTestEmail).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateId** | **String**| Id of the template | 
+ **templateId** | **Number**| Id of the template | 
  **sendTestEmail** | [**SendTestEmail**](SendTestEmail.md)|  | 
 
 ### Return type
@@ -567,7 +567,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.SMTPApi();
 
-var templateId = "templateId_example"; // String | id of the template
+var templateId = 789; // Number | id of the template
 
 var smtpTemplate = new SibApiV3Sdk.UpdateSmtpTemplate(); // UpdateSmtpTemplate | values to update in smtp template
 
@@ -583,7 +583,7 @@ apiInstance.updateSmtpTemplate(templateId, smtpTemplate).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateId** | **String**| id of the template | 
+ **templateId** | **Number**| id of the template | 
  **smtpTemplate** | [**UpdateSmtpTemplate**](UpdateSmtpTemplate.md)| values to update in smtp template | 
 
 ### Return type

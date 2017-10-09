@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **description** | **String** | Description of the webhook | 
 **events** | **[String]** |  | 
 **type** | **String** | Type of webhook (marketing or transac) | 
-**createdAt** | **String** | Creation date of the webhook (YYYY-MM-DD HH:mm:ss) | 
-**modifiedAt** | **String** | Last modification date of the webhook (YYYY-MM-DD HH:mm:ss) | 
+**createdAt** | **Date** | Creation date of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
+**modifiedAt** | **Date** | Last modification date of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
 
 
 <a name="TypeEnum"></a>

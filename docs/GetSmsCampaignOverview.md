@@ -7,11 +7,11 @@ Name | Type | Description | Notes
 **name** | **String** | Name of the SMS Campaign | 
 **status** | **String** | Status of the SMS Campaign | 
 **content** | **String** | Content of the SMS Campaign | 
-**scheduledAt** | **String** | Date on which SMS campaign is scheduled. Should be in YYYY-MM-DD HH:mm:ss format | 
+**scheduledAt** | **Date** | Date on which SMS campaign is scheduled. Should be in YYYY-MM-DDTHH:mm:ss.SSSZ format | 
 **testSent** | **Boolean** | Retrieved the status of test SMS sending. (true&#x3D;Test SMS has been sent  false&#x3D;Test SMS has not been sent) | 
 **sender** | **String** | Sender of the SMS Campaign | 
-**createdAt** | **String** | Creation date of the SMS campaign (YYYY-MM-DD HH:mm:ss) | 
-**modifiedAt** | **String** | Date of last modification of the SMS campaign (YYYY-MM-DD HH:mm:ss) | 
+**createdAt** | **Date** | Creation date of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
+**modifiedAt** | **Date** | Date of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
 
 
 <a name="StatusEnum"></a>

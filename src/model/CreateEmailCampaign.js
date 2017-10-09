@@ -98,7 +98,7 @@
         obj['htmlUrl'] = ApiClient.convertToType(data['htmlUrl'], 'String');
       }
       if (data.hasOwnProperty('scheduledAt')) {
-        obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'String');
+        obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'Date');
       }
       if (data.hasOwnProperty('subject')) {
         obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
@@ -165,8 +165,8 @@
    */
   exports.prototype['htmlUrl'] = undefined;
   /**
-   * Sending date and time (YYYY-MM-DD HH:mm:ss)
-   * @member {String} scheduledAt
+   * Sending date and time (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
   /**

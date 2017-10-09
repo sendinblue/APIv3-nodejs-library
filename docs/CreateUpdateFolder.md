@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreaUpdateFolder
+# SibApiV3Sdk.CreateUpdateFolder
 
 ## Properties
 Name | Type | Description | Notes

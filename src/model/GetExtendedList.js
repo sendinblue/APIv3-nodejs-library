@@ -50,7 +50,7 @@
    * @param totalBlacklisted {Number} Number of blacklisted contacts in the list
    * @param totalSubscribers {Number} Number of contacts in the list
    * @param folderId {Number} ID of the folder
-   * @param createdAt {String} Creation Date of the list (YYYY-MM-DD HH:mm:ss)
+   * @param createdAt {Date} Creation Date of the list (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
   var exports = function(id, name, totalBlacklisted, totalSubscribers, folderId, createdAt) {
     var _this = this;
@@ -78,7 +78,7 @@
         obj['folderId'] = ApiClient.convertToType(data['folderId'], 'Number');
       }
       if (data.hasOwnProperty('createdAt')) {
-        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'String');
+        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
       }
       if (data.hasOwnProperty('campaignStats')) {
         obj['campaignStats'] = ApiClient.convertToType(data['campaignStats'], [GetExtendedListCampaignStats]);
@@ -96,8 +96,8 @@
    */
   exports.prototype['folderId'] = undefined;
   /**
-   * Creation Date of the list (YYYY-MM-DD HH:mm:ss)
-   * @member {String} createdAt
+   * Creation Date of the list (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**

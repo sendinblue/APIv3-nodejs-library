@@ -34,7 +34,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ListsApi();
 
-var listId = "listId_example"; // String | Id of the list
+var listId = 789; // Number | Id of the list
 
 var contactEmails = new SibApiV3Sdk.AddRemoveContactToList(); // AddRemoveContactToList | Emails addresses of the contacts
 
@@ -50,7 +50,7 @@ apiInstance.addContactToList(listId, contactEmails).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **listId** | **String**| Id of the list | 
+ **listId** | **Number**| Id of the list | 
  **contactEmails** | [**AddRemoveContactToList**](AddRemoveContactToList.md)| Emails addresses of the contacts | 
 
 ### Return type
@@ -133,7 +133,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ListsApi();
 
-var listId = "listId_example"; // String | Id of the list
+var listId = 789; // Number | Id of the list
 
 apiInstance.deleteList(listId).then(function() {
   console.log('API called successfully.');
@@ -147,7 +147,7 @@ apiInstance.deleteList(listId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **listId** | **String**| Id of the list | 
+ **listId** | **Number**| Id of the list | 
 
 ### Return type
 
@@ -181,10 +181,10 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ListsApi();
 
-var listId = "listId_example"; // String | Id of the list
+var listId = 789; // Number | Id of the list
 
 var opts = { 
-  'modifiedSince': "modifiedSince_example", // String | Filter the contacts modified after a given date (YYYY-MM-DD HH:mm:ss)
+  'modifiedSince': new Date("2013-10-20T19:20:30+01:00"), // Date | Filter (urlencoded) the contacts modified after a given date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
   'limit': 50, // Number | Number of documents per page
   'offset': 0 // Number | Index of the first document of the page
 };
@@ -200,8 +200,8 @@ apiInstance.getContactsFromList(listId, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **listId** | **String**| Id of the list | 
- **modifiedSince** | **String**| Filter the contacts modified after a given date (YYYY-MM-DD HH:mm:ss) | [optional] 
+ **listId** | **Number**| Id of the list | 
+ **modifiedSince** | **Date**| Filter (urlencoded) the contacts modified after a given date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) | [optional] 
  **limit** | **Number**| Number of documents per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
 
@@ -237,7 +237,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ListsApi();
 
-var folderId = "folderId_example"; // String | Id of the folder
+var folderId = 789; // Number | Id of the folder
 
 var opts = { 
   'limit': 10, // Number | Number of documents per page
@@ -255,7 +255,7 @@ apiInstance.getFolderLists(folderId, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folderId** | **String**| Id of the folder | 
+ **folderId** | **Number**| Id of the folder | 
  **limit** | **Number**| Number of documents per page | [optional] [default to 10]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
 
@@ -291,7 +291,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ListsApi();
 
-var listId = "listId_example"; // String | Id of the list
+var listId = 789; // Number | Id of the list
 
 apiInstance.getList(listId).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -305,7 +305,7 @@ apiInstance.getList(listId).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **listId** | **String**| Id of the list | 
+ **listId** | **Number**| Id of the list | 
 
 ### Return type
 
@@ -390,7 +390,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ListsApi();
 
-var listId = "listId_example"; // String | Id of the list
+var listId = 789; // Number | Id of the list
 
 var contactEmails = new SibApiV3Sdk.AddRemoveContactToList(); // AddRemoveContactToList | Emails adresses of the contact
 
@@ -406,7 +406,7 @@ apiInstance.removeContactToList(listId, contactEmails).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **listId** | **String**| Id of the list | 
+ **listId** | **Number**| Id of the list | 
  **contactEmails** | [**AddRemoveContactToList**](AddRemoveContactToList.md)| Emails adresses of the contact | 
 
 ### Return type
@@ -441,7 +441,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ListsApi();
 
-var listId = "listId_example"; // String | Id of the list
+var listId = 789; // Number | Id of the list
 
 var updateList = new SibApiV3Sdk.UpdateList(); // UpdateList | Values to update a list
 
@@ -457,7 +457,7 @@ apiInstance.updateList(listId, updateList).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **listId** | **String**| Id of the list | 
+ **listId** | **Number**| Id of the list | 
  **updateList** | [**UpdateList**](UpdateList.md)| Values to update a list | 
 
 ### Return type

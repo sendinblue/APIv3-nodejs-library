@@ -215,7 +215,6 @@ Class | Method | HTTP request | Description
 
  - [SibApiV3Sdk.AddCredits](docs/AddCredits.md)
  - [SibApiV3Sdk.AddRemoveContactToList](docs/AddRemoveContactToList.md)
- - [SibApiV3Sdk.CreaUpdateFolder](docs/CreaUpdateFolder.md)
  - [SibApiV3Sdk.CreateAttribute](docs/CreateAttribute.md)
  - [SibApiV3Sdk.CreateAttributeEnumemaration](docs/CreateAttributeEnumemaration.md)
  - [SibApiV3Sdk.CreateChild](docs/CreateChild.md)
@@ -233,6 +232,7 @@ Class | Method | HTTP request | Description
  - [SibApiV3Sdk.CreateSmtpEmail](docs/CreateSmtpEmail.md)
  - [SibApiV3Sdk.CreateSmtpTemplate](docs/CreateSmtpTemplate.md)
  - [SibApiV3Sdk.CreateSmtpTemplateSender](docs/CreateSmtpTemplateSender.md)
+ - [SibApiV3Sdk.CreateUpdateFolder](docs/CreateUpdateFolder.md)
  - [SibApiV3Sdk.CreateWebhook](docs/CreateWebhook.md)
  - [SibApiV3Sdk.CreatedProcessId](docs/CreatedProcessId.md)
  - [SibApiV3Sdk.DeleteHardbounces](docs/DeleteHardbounces.md)

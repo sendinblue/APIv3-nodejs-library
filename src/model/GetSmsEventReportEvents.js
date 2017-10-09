@@ -47,8 +47,8 @@
    * @param phoneNumber {String} Phone number which has generated the event
    * @param _date {Date} Date on which the event has been generated
    * @param messageId {String} Message ID which generated the event
-   * @param event {module:model/GetSmsEventReportEvents.EventEnum} Event which occured
-   * @param reason {String} Reason of bounce (only availble if the event is hardbounce or softbounce)
+   * @param event {module:model/GetSmsEventReportEvents.EventEnum} Event which occurred
+   * @param reason {String} Reason of bounce (only available if the event is hardbounce or softbounce)
    * @param tag {String} Tag of the SMS which generated the event
    */
   var exports = function(phoneNumber, _date, messageId, event, reason, tag) {
@@ -115,12 +115,12 @@
    */
   exports.prototype['messageId'] = undefined;
   /**
-   * Event which occured
+   * Event which occurred
    * @member {module:model/GetSmsEventReportEvents.EventEnum} event
    */
   exports.prototype['event'] = undefined;
   /**
-   * Reason of bounce (only availble if the event is hardbounce or softbounce)
+   * Reason of bounce (only available if the event is hardbounce or softbounce)
    * @member {String} reason
    */
   exports.prototype['reason'] = undefined;

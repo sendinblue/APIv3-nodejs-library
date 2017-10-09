@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **sender** | **String** | Name of the sender. The number of characters is limited to 11 | [optional] 
 **content** | **String** | Content of the message. The maximum characters used per SMS is 160, if used more than that, it will be counted as more than one SMS | [optional] 
 **recipients** | [**CreateSmsCampaignRecipients**](CreateSmsCampaignRecipients.md) |  | [optional] 
-**scheduledAt** | **String** | Date and time on which the campaign has to run (YYYY-MM-DD HH:mm:ss) | [optional] 
+**scheduledAt** | **Date** | Date and time on which the campaign has to run (YYYY-MM-DDTHH:mm:ss.SSSZ) | [optional] 
 
 

@@ -99,7 +99,7 @@
 
     /**
      * Delete the SMS campaign
-     * @param {String} campaignId id of the SMS campaign
+     * @param {Number} campaignId id of the SMS campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteSMSCampaignsWithHttpInfo = function(campaignId) {
@@ -135,7 +135,7 @@
 
     /**
      * Delete the SMS campaign
-     * @param {String} campaignId id of the SMS campaign
+     * @param {Number} campaignId id of the SMS campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteSMSCampaigns = function(campaignId) {
@@ -201,7 +201,7 @@
 
     /**
      * Get a SMS campaign
-     * @param {String} campaignId id of the SMS campaign
+     * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/GetSmsCampaign} getSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmsCampaign} and HTTP response
      */
@@ -243,7 +243,7 @@
 
     /**
      * Get a SMS campaign
-     * @param {String} campaignId id of the SMS campaign
+     * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/GetSmsCampaign} getSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmsCampaign}
      */
@@ -258,7 +258,7 @@
     /**
      * Exports the recipients of the specified campaign.
      * It returns the background process ID which on completion calls the notify URL that you have set in the input.
-     * @param {String} campaignId id of the campaign
+     * @param {Number} campaignId id of the campaign
      * @param {Object} opts Optional parameters
      * @param {module:model/RequestSMSRecipientExport} opts.recipientExport Values to send for a recipient export request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreatedProcessId} and HTTP response
@@ -298,7 +298,7 @@
     /**
      * Exports the recipients of the specified campaign.
      * It returns the background process ID which on completion calls the notify URL that you have set in the input.
-     * @param {String} campaignId id of the campaign
+     * @param {Number} campaignId id of the campaign
      * @param {Object} opts Optional parameters
      * @param {module:model/RequestSMSRecipientExport} opts.recipientExport Values to send for a recipient export request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreatedProcessId}
@@ -313,7 +313,7 @@
 
     /**
      * Send your SMS campaign immediately
-     * @param {String} campaignId id of the campaign
+     * @param {Number} campaignId id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.sendSMSCampaignNowWithHttpInfo = function(campaignId) {
@@ -349,7 +349,7 @@
 
     /**
      * Send your SMS campaign immediately
-     * @param {String} campaignId id of the campaign
+     * @param {Number} campaignId id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.sendSMSCampaignNow = function(campaignId) {
@@ -363,7 +363,7 @@
     /**
      * Send report of SMS campaigns
      * Send report of Sent and Archived campaign, to the specified email addresses, with respective data and a pdf attachment in detail.
-     * @param {String} campaignId id of the campaign
+     * @param {Number} campaignId id of the campaign
      * @param {module:model/SendReport} sendReport Values for send a report
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -406,7 +406,7 @@
     /**
      * Send report of SMS campaigns
      * Send report of Sent and Archived campaign, to the specified email addresses, with respective data and a pdf attachment in detail.
-     * @param {String} campaignId id of the campaign
+     * @param {Number} campaignId id of the campaign
      * @param {module:model/SendReport} sendReport Values for send a report
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -420,7 +420,7 @@
 
     /**
      * Send an SMS
-     * @param {String} campaignId Id of the SMS campaign
+     * @param {Number} campaignId Id of the SMS campaign
      * @param {module:model/SendTestSms} sendTestSms Mobile number to which send the test
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -462,7 +462,7 @@
 
     /**
      * Send an SMS
-     * @param {String} campaignId Id of the SMS campaign
+     * @param {Number} campaignId Id of the SMS campaign
      * @param {module:model/SendTestSms} sendTestSms Mobile number to which send the test
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -476,7 +476,7 @@
 
     /**
      * Update the campaign status
-     * @param {String} campaignId id of the campaign
+     * @param {Number} campaignId id of the campaign
      * @param {module:model/UpdateCampaignStatus} status Status of the campaign.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -518,7 +518,7 @@
 
     /**
      * Update the campaign status
-     * @param {String} campaignId id of the campaign
+     * @param {Number} campaignId id of the campaign
      * @param {module:model/UpdateCampaignStatus} status Status of the campaign.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -532,7 +532,7 @@
 
     /**
      * Updates a SMS campaign
-     * @param {String} campaignId id of the SMS campaign
+     * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/UpdateSmsCampaign} updateSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -574,7 +574,7 @@
 
     /**
      * Updates a SMS campaign
-     * @param {String} campaignId id of the SMS campaign
+     * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/UpdateSmsCampaign} updateSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */

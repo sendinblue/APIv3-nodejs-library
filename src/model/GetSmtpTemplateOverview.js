@@ -53,8 +53,8 @@
    * @param toField {String} Customisation of the \"to\" field for the template
    * @param tag {String} Tag of the template
    * @param htmlContent {String} HTML content of the template
-   * @param createdAt {String} Creation date of the template (YYYY-MM-DD HH:mm:ss)
-   * @param modifiedAt {String} Last modification date of the template (YYYY-MM-DD HH:mm:ss)
+   * @param createdAt {Date} Creation date of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param modifiedAt {Date} Last modification date of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
   var exports = function(id, name, subject, isActive, testSent, replyTo, toField, tag, htmlContent, createdAt, modifiedAt) {
     var _this = this;
@@ -115,10 +115,10 @@
         obj['htmlContent'] = ApiClient.convertToType(data['htmlContent'], 'String');
       }
       if (data.hasOwnProperty('createdAt')) {
-        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'String');
+        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
       }
       if (data.hasOwnProperty('modifiedAt')) {
-        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'String');
+        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'Date');
       }
     }
     return obj;
@@ -174,13 +174,13 @@
    */
   exports.prototype['htmlContent'] = undefined;
   /**
-   * Creation date of the template (YYYY-MM-DD HH:mm:ss)
-   * @member {String} createdAt
+   * Creation date of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Last modification date of the template (YYYY-MM-DD HH:mm:ss)
-   * @member {String} modifiedAt
+   * Last modification date of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;
 

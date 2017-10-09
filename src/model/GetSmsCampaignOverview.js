@@ -48,11 +48,11 @@
    * @param name {String} Name of the SMS Campaign
    * @param status {module:model/GetSmsCampaignOverview.StatusEnum} Status of the SMS Campaign
    * @param content {String} Content of the SMS Campaign
-   * @param scheduledAt {String} Date on which SMS campaign is scheduled. Should be in YYYY-MM-DD HH:mm:ss format
+   * @param scheduledAt {Date} Date on which SMS campaign is scheduled. Should be in YYYY-MM-DDTHH:mm:ss.SSSZ format
    * @param testSent {Boolean} Retrieved the status of test SMS sending. (true=Test SMS has been sent  false=Test SMS has not been sent)
    * @param sender {String} Sender of the SMS Campaign
-   * @param createdAt {String} Creation date of the SMS campaign (YYYY-MM-DD HH:mm:ss)
-   * @param modifiedAt {String} Date of last modification of the SMS campaign (YYYY-MM-DD HH:mm:ss)
+   * @param createdAt {Date} Creation date of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param modifiedAt {Date} Date of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
   var exports = function(id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt) {
     var _this = this;
@@ -92,7 +92,7 @@
         obj['content'] = ApiClient.convertToType(data['content'], 'String');
       }
       if (data.hasOwnProperty('scheduledAt')) {
-        obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'String');
+        obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'Date');
       }
       if (data.hasOwnProperty('testSent')) {
         obj['testSent'] = ApiClient.convertToType(data['testSent'], 'Boolean');
@@ -101,10 +101,10 @@
         obj['sender'] = ApiClient.convertToType(data['sender'], 'String');
       }
       if (data.hasOwnProperty('createdAt')) {
-        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'String');
+        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
       }
       if (data.hasOwnProperty('modifiedAt')) {
-        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'String');
+        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'Date');
       }
     }
     return obj;
@@ -131,8 +131,8 @@
    */
   exports.prototype['content'] = undefined;
   /**
-   * Date on which SMS campaign is scheduled. Should be in YYYY-MM-DD HH:mm:ss format
-   * @member {String} scheduledAt
+   * Date on which SMS campaign is scheduled. Should be in YYYY-MM-DDTHH:mm:ss.SSSZ format
+   * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
   /**
@@ -146,13 +146,13 @@
    */
   exports.prototype['sender'] = undefined;
   /**
-   * Creation date of the SMS campaign (YYYY-MM-DD HH:mm:ss)
-   * @member {String} createdAt
+   * Creation date of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Date of last modification of the SMS campaign (YYYY-MM-DD HH:mm:ss)
-   * @member {String} modifiedAt
+   * Date of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;
 

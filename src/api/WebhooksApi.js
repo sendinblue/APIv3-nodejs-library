@@ -99,7 +99,7 @@
 
     /**
      * Delete a webhook
-     * @param {String} webhookId Id of the webhook
+     * @param {Number} webhookId Id of the webhook
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteWebhookWithHttpInfo = function(webhookId) {
@@ -135,7 +135,7 @@
 
     /**
      * Delete a webhook
-     * @param {String} webhookId Id of the webhook
+     * @param {Number} webhookId Id of the webhook
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteWebhook = function(webhookId) {
@@ -148,7 +148,7 @@
 
     /**
      * Get a webhook details
-     * @param {String} webhookId Id of the webhook
+     * @param {Number} webhookId Id of the webhook
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetWebhook} and HTTP response
      */
     this.getWebhookWithHttpInfo = function(webhookId) {
@@ -184,7 +184,7 @@
 
     /**
      * Get a webhook details
-     * @param {String} webhookId Id of the webhook
+     * @param {Number} webhookId Id of the webhook
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetWebhook}
      */
     this.getWebhook = function(webhookId) {
@@ -244,7 +244,7 @@
 
     /**
      * Update a webhook
-     * @param {String} webhookId Id of the webhook
+     * @param {Number} webhookId Id of the webhook
      * @param {module:model/UpdateWebhook} updateWebhook Values to update a webhook
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -286,7 +286,7 @@
 
     /**
      * Update a webhook
-     * @param {String} webhookId Id of the webhook
+     * @param {Number} webhookId Id of the webhook
      * @param {module:model/UpdateWebhook} updateWebhook Values to update a webhook
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */

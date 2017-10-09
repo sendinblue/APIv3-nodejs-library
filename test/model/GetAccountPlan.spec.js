@@ -75,6 +75,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property startDate (base name: "startDate")', function() {
+      // uncomment below and update the code to test the property startDate
+      //var instane = new SibApiV3Sdk.GetAccountPlan();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property endDate (base name: "endDate")', function() {
+      // uncomment below and update the code to test the property endDate
+      //var instane = new SibApiV3Sdk.GetAccountPlan();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="createFolder"></a>
 # **createFolder**
-> CreateModel createFolder(name)
+> CreateModel createFolder(createFolder)
 
 Create a folder
 
@@ -31,9 +31,9 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.FoldersApi();
 
-var name = new SibApiV3Sdk.CreaUpdateFolder(); // CreaUpdateFolder | Name of the folder
+var createFolder = new SibApiV3Sdk.CreateUpdateFolder(); // CreateUpdateFolder | Name of the folder
 
-apiInstance.createFolder(name).then(function(data) {
+apiInstance.createFolder(createFolder).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -45,7 +45,7 @@ apiInstance.createFolder(name).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | [**CreaUpdateFolder**](CreaUpdateFolder.md)| Name of the folder | 
+ **createFolder** | [**CreateUpdateFolder**](CreateUpdateFolder.md)| Name of the folder | 
 
 ### Return type
 
@@ -79,7 +79,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.FoldersApi();
 
-var folderId = "folderId_example"; // String | Id of the folder
+var folderId = 789; // Number | Id of the folder
 
 apiInstance.deleteFolder(folderId).then(function() {
   console.log('API called successfully.');
@@ -93,7 +93,7 @@ apiInstance.deleteFolder(folderId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folderId** | **String**| Id of the folder | 
+ **folderId** | **Number**| Id of the folder | 
 
 ### Return type
 
@@ -127,7 +127,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.FoldersApi();
 
-var folderId = "folderId_example"; // String | id of the folder
+var folderId = 789; // Number | id of the folder
 
 apiInstance.getFolder(folderId).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -141,7 +141,7 @@ apiInstance.getFolder(folderId).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folderId** | **String**| id of the folder | 
+ **folderId** | **Number**| id of the folder | 
 
 ### Return type
 
@@ -175,7 +175,7 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.FoldersApi();
 
-var folderId = "folderId_example"; // String | Id of the folder
+var folderId = 789; // Number | Id of the folder
 
 var opts = { 
   'limit': 10, // Number | Number of documents per page
@@ -193,7 +193,7 @@ apiInstance.getFolderLists(folderId, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folderId** | **String**| Id of the folder | 
+ **folderId** | **Number**| Id of the folder | 
  **limit** | **Number**| Number of documents per page | [optional] [default to 10]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 <a name="updateFolder"></a>
 # **updateFolder**
-> updateFolder(folderId, name)
+> updateFolder(folderId, updateFolder)
 
 Update a contact folder
 
@@ -280,11 +280,11 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.FoldersApi();
 
-var folderId = "folderId_example"; // String | Id of the folder
+var folderId = 789; // Number | Id of the folder
 
-var name = new SibApiV3Sdk.CreaUpdateFolder(); // CreaUpdateFolder | Name of the folder
+var updateFolder = new SibApiV3Sdk.CreateUpdateFolder(); // CreateUpdateFolder | Name of the folder
 
-apiInstance.updateFolder(folderId, name).then(function() {
+apiInstance.updateFolder(folderId, updateFolder).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);
@@ -296,8 +296,8 @@ apiInstance.updateFolder(folderId, name).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folderId** | **String**| Id of the folder | 
- **name** | [**CreaUpdateFolder**](CreaUpdateFolder.md)| Name of the folder | 
+ **folderId** | **Number**| Id of the folder | 
+ **updateFolder** | [**CreateUpdateFolder**](CreateUpdateFolder.md)| Name of the folder | 
 
 ### Return type
 

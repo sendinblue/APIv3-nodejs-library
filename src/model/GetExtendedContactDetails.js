@@ -49,7 +49,7 @@
    * @param id {Number} ID of the contact for which you requested the details
    * @param emailBlacklisted {Boolean} Blacklist status for email campaigns (true=blacklisted, false=not blacklisted)
    * @param smsBlacklisted {Boolean} Blacklist status for SMS campaigns (true=blacklisted, false=not blacklisted)
-   * @param modifiedAt {String} Last modification date of the contact (YYYY-MM-DD HH:mm:ss)
+   * @param modifiedAt {Date} Last modification date of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param listIds {Array.<Number>} 
    * @param attributes {Object.<String, String>} 
    */
@@ -110,8 +110,8 @@ exports.prototype['emailBlacklisted'] = undefined;
 exports.prototype['smsBlacklisted'] = undefined;
 
   /**
-   * Last modification date of the contact (YYYY-MM-DD HH:mm:ss)
-   * @member {String} modifiedAt
+   * Last modification date of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} modifiedAt
    */
 exports.prototype['modifiedAt'] = undefined;
 

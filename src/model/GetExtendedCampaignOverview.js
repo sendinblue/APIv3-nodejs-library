@@ -57,8 +57,8 @@
    * @param toField {String} Customisation of the \"to\" field of the campaign
    * @param htmlContent {String} HTML content of the campaign
    * @param tag {String} Tag of the campaign
-   * @param createdAt {String} Creation date of the campaign (YYYY-MM-DD HH:mm:ss)
-   * @param modifiedAt {String} Date of last modification of the campaign (YYYY-MM-DD HH:mm:ss)
+   * @param createdAt {Date} Creation date of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param modifiedAt {Date} Date of last modification of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
   var exports = function(id, name, subject, type, status, testSent, header, footer, replyTo, toField, htmlContent, tag, createdAt, modifiedAt) {
     var _this = this;
@@ -120,10 +120,10 @@
         obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
       }
       if (data.hasOwnProperty('createdAt')) {
-        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'String');
+        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
       }
       if (data.hasOwnProperty('modifiedAt')) {
-        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'String');
+        obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'Date');
       }
       if (data.hasOwnProperty('inlineImageActivation')) {
         obj['inlineImageActivation'] = ApiClient.convertToType(data['inlineImageActivation'], 'Boolean');
@@ -183,13 +183,13 @@
    */
   exports.prototype['tag'] = undefined;
   /**
-   * Creation date of the campaign (YYYY-MM-DD HH:mm:ss)
-   * @member {String} createdAt
+   * Creation date of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Date of last modification of the campaign (YYYY-MM-DD HH:mm:ss)
-   * @member {String} modifiedAt
+   * Date of last modification of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;
   /**
@@ -240,8 +240,8 @@ exports.prototype['type'] = undefined;
 exports.prototype['status'] = undefined;
 
   /**
-   * Date on which campaign is scheduled (YYYY-MM-DD HH:mm:ss)
-   * @member {String} scheduledAt
+   * Date on which campaign is scheduled (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} scheduledAt
    */
 exports.prototype['scheduledAt'] = undefined;
 

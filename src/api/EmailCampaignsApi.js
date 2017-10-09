@@ -99,7 +99,7 @@
 
     /**
      * Delete an email campaign
-     * @param {String} campaignId id of the campaign
+     * @param {Number} campaignId id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteEmailCampaignsWithHttpInfo = function(campaignId) {
@@ -135,7 +135,7 @@
 
     /**
      * Delete an email campaign
-     * @param {String} campaignId id of the campaign
+     * @param {Number} campaignId id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteEmailCampaigns = function(campaignId) {
@@ -148,7 +148,7 @@
 
     /**
      * Export the recipients of a campaign
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @param {Object} opts Optional parameters
      * @param {module:model/EmailExportRecipients} opts.recipientExport Values to send for a recipient export request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreatedProcessId} and HTTP response
@@ -187,7 +187,7 @@
 
     /**
      * Export the recipients of a campaign
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @param {Object} opts Optional parameters
      * @param {module:model/EmailExportRecipients} opts.recipientExport Values to send for a recipient export request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreatedProcessId}
@@ -202,7 +202,7 @@
 
     /**
      * Get campaign informations
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetEmailCampaign} and HTTP response
      */
     this.getEmailCampaignWithHttpInfo = function(campaignId) {
@@ -238,7 +238,7 @@
 
     /**
      * Get campaign informations
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetEmailCampaign}
      */
     this.getEmailCampaign = function(campaignId) {
@@ -307,7 +307,7 @@
 
     /**
      * Send an email campaign id of the campaign immediately
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.sendEmailCampaignNowWithHttpInfo = function(campaignId) {
@@ -343,7 +343,7 @@
 
     /**
      * Send an email campaign id of the campaign immediately
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.sendEmailCampaignNow = function(campaignId) {
@@ -357,7 +357,7 @@
     /**
      * Send the report of a campaigns
      * A PDF will be sent to the specified email addresses
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @param {module:model/SendReport} sendReport Values for send a report
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -400,7 +400,7 @@
     /**
      * Send the report of a campaigns
      * A PDF will be sent to the specified email addresses
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @param {module:model/SendReport} sendReport Values for send a report
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -414,7 +414,7 @@
 
     /**
      * Send an email campaign to your test list
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @param {module:model/SendTestEmail} emailTo 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -456,7 +456,7 @@
 
     /**
      * Send an email campaign to your test list
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @param {module:model/SendTestEmail} emailTo 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -470,7 +470,7 @@
 
     /**
      * Update a campaign status
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @param {module:model/UpdateCampaignStatus} status Status of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -512,7 +512,7 @@
 
     /**
      * Update a campaign status
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @param {module:model/UpdateCampaignStatus} status Status of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -526,7 +526,7 @@
 
     /**
      * Update a campaign
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @param {module:model/UpdateEmailCampaign} emailCampaign Values to update a campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -568,7 +568,7 @@
 
     /**
      * Update a campaign
-     * @param {String} campaignId Id of the campaign
+     * @param {Number} campaignId Id of the campaign
      * @param {module:model/UpdateEmailCampaign} emailCampaign Values to update a campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */

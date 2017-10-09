@@ -56,6 +56,7 @@
     _this['content'] = content;
 
 
+
   };
 
   /**
@@ -77,6 +78,9 @@
       }
       if (data.hasOwnProperty('content')) {
         obj['content'] = ApiClient.convertToType(data['content'], 'String');
+      }
+      if (data.hasOwnProperty('type')) {
+        obj['type'] = ApiClient.convertToType(data['type'], 'String');
       }
       if (data.hasOwnProperty('tag')) {
         obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
@@ -104,6 +108,12 @@
    */
   exports.prototype['content'] = undefined;
   /**
+   * Type of the SMS
+   * @member {module:model/SendTransacSms.TypeEnum} type
+   * @default 'transactional'
+   */
+  exports.prototype['type'] = 'transactional';
+  /**
    * Tag of the message
    * @member {String} tag
    */
@@ -114,6 +124,23 @@
    */
   exports.prototype['webUrl'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TypeEnum = {
+    /**
+     * value: "transactional"
+     * @const
+     */
+    "transactional": "transactional",
+    /**
+     * value: "marketing"
+     * @const
+     */
+    "marketing": "marketing"  };
 
 
   return exports;
