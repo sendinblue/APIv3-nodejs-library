@@ -89,10 +89,82 @@
   exports.prototype['description'] = undefined;
   /**
    * Events triggering the webhook. Possible values for Transactional type webhook – request, delivered, hardBounce, softBounce, blocked, spam, invalid, deferred, click, opened, uniqueOpened and unsubscribed and possible values for Marketing type webhook – spam, opened, click, hardBounce, softBounce, unsubscribed, listAddition and delivered
-   * @member {Array.<String>} events
+   * @member {Array.<module:model/UpdateWebhook.EventsEnum>} events
    */
   exports.prototype['events'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>events</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.EventsEnum = {
+    /**
+     * value: "hardBounce"
+     * @const
+     */
+    "hardBounce": "hardBounce",
+    /**
+     * value: "softBounce"
+     * @const
+     */
+    "softBounce": "softBounce",
+    /**
+     * value: "blocked"
+     * @const
+     */
+    "blocked": "blocked",
+    /**
+     * value: "spam"
+     * @const
+     */
+    "spam": "spam",
+    /**
+     * value: "delivered"
+     * @const
+     */
+    "delivered": "delivered",
+    /**
+     * value: "request"
+     * @const
+     */
+    "request": "request",
+    /**
+     * value: "click"
+     * @const
+     */
+    "click": "click",
+    /**
+     * value: "invalid"
+     * @const
+     */
+    "invalid": "invalid",
+    /**
+     * value: "deferred"
+     * @const
+     */
+    "deferred": "deferred",
+    /**
+     * value: "opened"
+     * @const
+     */
+    "opened": "opened",
+    /**
+     * value: "uniqueOpened"
+     * @const
+     */
+    "uniqueOpened": "uniqueOpened",
+    /**
+     * value: "unsubscribed"
+     * @const
+     */
+    "unsubscribed": "unsubscribed",
+    /**
+     * value: "listAddition"
+     * @const
+     */
+    "listAddition": "listAddition"  };
 
 
   return exports;

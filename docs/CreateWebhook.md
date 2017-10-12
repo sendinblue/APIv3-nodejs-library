@@ -9,6 +9,39 @@ Name | Type | Description | Notes
 **type** | **String** | Type of the webhook | [optional] [default to &#39;transactional&#39;]
 
 
+<a name="[EventsEnum]"></a>
+## Enum: [EventsEnum]
+
+
+* `hardBounce` (value: `"hardBounce"`)
+
+* `softBounce` (value: `"softBounce"`)
+
+* `blocked` (value: `"blocked"`)
+
+* `spam` (value: `"spam"`)
+
+* `delivered` (value: `"delivered"`)
+
+* `request` (value: `"request"`)
+
+* `click` (value: `"click"`)
+
+* `invalid` (value: `"invalid"`)
+
+* `deferred` (value: `"deferred"`)
+
+* `opened` (value: `"opened"`)
+
+* `uniqueOpened` (value: `"uniqueOpened"`)
+
+* `unsubscribed` (value: `"unsubscribed"`)
+
+* `listAddition` (value: `"listAddition"`)
+
+
+
+
 <a name="TypeEnum"></a>
 ## Enum: TypeEnum
 
