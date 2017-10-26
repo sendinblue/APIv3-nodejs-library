@@ -111,6 +111,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property from (base name: "from")', function() {
+      // uncomment below and update the code to test the property from
+      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
