@@ -48,10 +48,10 @@
    * @param _date {Date} Date on which the event has been generated
    * @param messageId {String} Message ID which generated the event
    * @param event {module:model/GetEmailEventReportEvents.EventEnum} Event which occurred
-   * @param reason {String} Reason of bounce (only available if the event is hardbounce or softbounce)
    * @param tag {String} Tag of the email which generated the event
+   * @param from {String} Sender email from which the emails are sent
    */
-  var exports = function(email, _date, messageId, event, reason, tag) {
+  var exports = function(email, _date, messageId, event, tag, from) {
     var _this = this;
 
     _this['email'] = email;
@@ -59,10 +59,11 @@
 
     _this['messageId'] = messageId;
     _this['event'] = event;
-    _this['reason'] = reason;
+
     _this['tag'] = tag;
 
 
+    _this['from'] = from;
   };
 
   /**
@@ -102,6 +103,9 @@
       }
       if (data.hasOwnProperty('link')) {
         obj['link'] = ApiClient.convertToType(data['link'], 'String');
+      }
+      if (data.hasOwnProperty('from')) {
+        obj['from'] = ApiClient.convertToType(data['from'], 'String');
       }
     }
     return obj;
@@ -152,6 +156,11 @@
    * @member {String} link
    */
   exports.prototype['link'] = undefined;
+  /**
+   * Sender email from which the emails are sent
+   * @member {String} from
+   */
+  exports.prototype['from'] = undefined;
 
 
   /**
