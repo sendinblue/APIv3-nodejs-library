@@ -146,6 +146,55 @@
 
 
     /**
+     * Delete an inactive smtp template
+     * @param {Number} templateId id of the template
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.deleteSmtpTemplateWithHttpInfo = function(templateId) {
+      var postBody = null;
+
+      // verify the required parameter 'templateId' is set
+      if (templateId === undefined || templateId === null) {
+        throw new Error("Missing the required parameter 'templateId' when calling deleteSmtpTemplate");
+      }
+
+
+      var pathParams = {
+        'templateId': templateId
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/smtp/templates/{templateId}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Delete an inactive smtp template
+     * @param {Number} templateId id of the template
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.deleteSmtpTemplate = function(templateId) {
+      return this.deleteSmtpTemplateWithHttpInfo(templateId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Get your SMTP activity aggregated over a period of time
      * @param {Object} opts Optional parameters
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate

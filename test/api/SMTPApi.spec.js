@@ -71,6 +71,16 @@
         done();
       });
     });
+    describe('deleteSmtpTemplate', function() {
+      it('should call deleteSmtpTemplate successfully', function(done) {
+        //uncomment below and update the code to test deleteSmtpTemplate
+        //instance.deleteSmtpTemplate(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getAggregatedSmtpReport', function() {
       it('should call getAggregatedSmtpReport successfully', function(done) {
         //uncomment below and update the code to test getAggregatedSmtpReport

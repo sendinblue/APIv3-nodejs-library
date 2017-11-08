@@ -50,7 +50,7 @@
 
 
     /**
-     * Creates a SMS campaign
+     * Creates an SMS campaign
      * @param {module:model/CreateSmsCampaign} createSmsCampaign Values to create an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
      */
@@ -85,7 +85,7 @@
     }
 
     /**
-     * Creates a SMS campaign
+     * Creates an SMS campaign
      * @param {module:model/CreateSmsCampaign} createSmsCampaign Values to create an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
      */
@@ -200,7 +200,7 @@
 
 
     /**
-     * Get a SMS campaign
+     * Get an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/GetSmsCampaign} getSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmsCampaign} and HTTP response
@@ -242,7 +242,7 @@
     }
 
     /**
-     * Get a SMS campaign
+     * Get an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/GetSmsCampaign} getSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmsCampaign}
@@ -531,7 +531,7 @@
 
 
     /**
-     * Updates a SMS campaign
+     * Updates an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/UpdateSmsCampaign} updateSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -573,7 +573,7 @@
     }
 
     /**
-     * Updates a SMS campaign
+     * Updates an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/UpdateSmsCampaign} updateSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

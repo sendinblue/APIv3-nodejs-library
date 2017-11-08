@@ -588,6 +588,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContacts} and HTTP response
      */
     this.getContactsWithHttpInfo = function(opts) {
@@ -599,7 +600,8 @@
       };
       var queryParams = {
         'limit': opts['limit'],
-        'offset': opts['offset']
+        'offset': opts['offset'],
+        'modifiedSince': opts['modifiedSince']
       };
       var headerParams = {
       };
@@ -623,6 +625,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContacts}
      */
     this.getContacts = function(opts) {

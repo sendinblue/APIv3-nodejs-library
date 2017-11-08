@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **emailBlacklisted** | **Boolean** | Blacklist the contact for emails (emailBlacklisted &#x3D; true) | [optional] 
 **smsBlacklisted** | **Boolean** | Blacklist the contact for SMS (smsBlacklisted &#x3D; true) | [optional] 
 **listIds** | **[Number]** | Ids of the lists to add the contact to | [optional] 
+**updateEnabled** | **Boolean** | Facilitate to update existing contact in same request (updateEnabled &#x3D; true) | [optional] [default to false]
 
 
