@@ -592,6 +592,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| Number of documents per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
+ **modifiedSince** | **Date**| Filter (urlencoded) the contacts modified after a given date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) | [optional] 
 
 ### Return type
 

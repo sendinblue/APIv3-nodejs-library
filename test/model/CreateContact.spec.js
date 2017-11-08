@@ -87,6 +87,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property updateEnabled (base name: "updateEnabled")', function() {
+      // uncomment below and update the code to test the property updateEnabled
+      //var instane = new SibApiV3Sdk.CreateContact();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

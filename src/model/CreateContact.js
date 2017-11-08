@@ -53,6 +53,7 @@
 
 
 
+
   };
 
   /**
@@ -80,6 +81,9 @@
       }
       if (data.hasOwnProperty('listIds')) {
         obj['listIds'] = ApiClient.convertToType(data['listIds'], ['Number']);
+      }
+      if (data.hasOwnProperty('updateEnabled')) {
+        obj['updateEnabled'] = ApiClient.convertToType(data['updateEnabled'], 'Boolean');
       }
     }
     return obj;
@@ -110,6 +114,12 @@
    * @member {Array.<Number>} listIds
    */
   exports.prototype['listIds'] = undefined;
+  /**
+   * Facilitate to update existing contact in same request (updateEnabled = true)
+   * @member {Boolean} updateEnabled
+   * @default false
+   */
+  exports.prototype['updateEnabled'] = false;
 
 
 

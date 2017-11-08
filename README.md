@@ -173,18 +173,19 @@ Class | Method | HTTP request | Description
 *SibApiV3Sdk.ResellerApi* | [**getResellerChilds**](docs/ResellerApi.md#getResellerChilds) | **GET** /reseller/children | Gets the list of all reseller&#39;s children accounts
 *SibApiV3Sdk.ResellerApi* | [**removeCredits**](docs/ResellerApi.md#removeCredits) | **POST** /reseller/children/{childId}/credits/remove | Remove Email and/or SMS credits from a specific child account
 *SibApiV3Sdk.ResellerApi* | [**updateResellerChild**](docs/ResellerApi.md#updateResellerChild) | **PUT** /reseller/children/{childId} | Updates infos of reseller&#39;s child based on the childId supplied
-*SibApiV3Sdk.SMSCampaignsApi* | [**createSMSCampaign**](docs/SMSCampaignsApi.md#createSMSCampaign) | **POST** /smsCampaigns | Creates a SMS campaign
+*SibApiV3Sdk.SMSCampaignsApi* | [**createSMSCampaign**](docs/SMSCampaignsApi.md#createSMSCampaign) | **POST** /smsCampaigns | Creates an SMS campaign
 *SibApiV3Sdk.SMSCampaignsApi* | [**deleteSMSCampaigns**](docs/SMSCampaignsApi.md#deleteSMSCampaigns) | **DELETE** /smsCampaigns/{campaignId} | Delete the SMS campaign
 *SibApiV3Sdk.SMSCampaignsApi* | [**getSMSCampaigns**](docs/SMSCampaignsApi.md#getSMSCampaigns) | **GET** /smsCampaigns | Returns the informations for all your created SMS campaigns
-*SibApiV3Sdk.SMSCampaignsApi* | [**getSmsCampaign**](docs/SMSCampaignsApi.md#getSmsCampaign) | **GET** /smsCampaigns/{campaignId} | Get a SMS campaign
+*SibApiV3Sdk.SMSCampaignsApi* | [**getSmsCampaign**](docs/SMSCampaignsApi.md#getSmsCampaign) | **GET** /smsCampaigns/{campaignId} | Get an SMS campaign
 *SibApiV3Sdk.SMSCampaignsApi* | [**requestSMSRecipientExport**](docs/SMSCampaignsApi.md#requestSMSRecipientExport) | **POST** /smsCampaigns/{campaignId}/exportRecipients | Exports the recipients of the specified campaign.
 *SibApiV3Sdk.SMSCampaignsApi* | [**sendSMSCampaignNow**](docs/SMSCampaignsApi.md#sendSMSCampaignNow) | **POST** /smsCampaigns/{campaignId}/sendNow | Send your SMS campaign immediately
 *SibApiV3Sdk.SMSCampaignsApi* | [**sendSMSReport**](docs/SMSCampaignsApi.md#sendSMSReport) | **POST** /smsCampaigns/{campaignId}/sendReport | Send report of SMS campaigns
 *SibApiV3Sdk.SMSCampaignsApi* | [**sendTestSms**](docs/SMSCampaignsApi.md#sendTestSms) | **POST** /smsCampaigns/{campaignId}/sendTest | Send an SMS
 *SibApiV3Sdk.SMSCampaignsApi* | [**updateSMSCampaignStatus**](docs/SMSCampaignsApi.md#updateSMSCampaignStatus) | **PUT** /smsCampaigns/{campaignId}/status | Update the campaign status
-*SibApiV3Sdk.SMSCampaignsApi* | [**updateSmsCampaign**](docs/SMSCampaignsApi.md#updateSmsCampaign) | **PUT** /smsCampaigns/{campaignId} | Updates a SMS campaign
+*SibApiV3Sdk.SMSCampaignsApi* | [**updateSmsCampaign**](docs/SMSCampaignsApi.md#updateSmsCampaign) | **PUT** /smsCampaigns/{campaignId} | Updates an SMS campaign
 *SibApiV3Sdk.SMTPApi* | [**createSmtpTemplate**](docs/SMTPApi.md#createSmtpTemplate) | **POST** /smtp/templates | Create an smtp template
 *SibApiV3Sdk.SMTPApi* | [**deleteHardbounces**](docs/SMTPApi.md#deleteHardbounces) | **POST** /smtp/deleteHardbounces | Delete hardbounces
+*SibApiV3Sdk.SMTPApi* | [**deleteSmtpTemplate**](docs/SMTPApi.md#deleteSmtpTemplate) | **DELETE** /smtp/templates/{templateId} | Delete an inactive smtp template
 *SibApiV3Sdk.SMTPApi* | [**getAggregatedSmtpReport**](docs/SMTPApi.md#getAggregatedSmtpReport) | **GET** /smtp/statistics/aggregatedReport | Get your SMTP activity aggregated over a period of time
 *SibApiV3Sdk.SMTPApi* | [**getEmailEventReport**](docs/SMTPApi.md#getEmailEventReport) | **GET** /smtp/statistics/events | Get all your SMTP activity (unaggregated events)
 *SibApiV3Sdk.SMTPApi* | [**getSmtpReport**](docs/SMTPApi.md#getSmtpReport) | **GET** /smtp/statistics/reports | Get your SMTP activity aggregated per day
