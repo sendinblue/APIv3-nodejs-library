@@ -37,7 +37,7 @@
   /**
    * The PostSendFailed model module.
    * @module model/PostSendFailed
-   * @version 3.0.0
+   * @version 3.x.x
    */
 
   /**

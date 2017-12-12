@@ -57,26 +57,14 @@
       //expect(instance).to.be.a(SibApiV3Sdk.CreateAttribute);
     });
 
-    it('should have the property category (base name: "category")', function() {
-      // uncomment below and update the code to test the property category
-      //var instane = new SibApiV3Sdk.CreateAttribute();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instane = new SibApiV3Sdk.CreateAttribute();
-      //expect(instance).to.be();
-    });
-
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
       //var instane = new SibApiV3Sdk.CreateAttribute();
       //expect(instance).to.be();
     });
 
-    it('should have the property enumemaration (base name: "enumemaration")', function() {
-      // uncomment below and update the code to test the property enumemaration
+    it('should have the property enumeration (base name: "enumeration")', function() {
+      // uncomment below and update the code to test the property enumeration
       //var instane = new SibApiV3Sdk.CreateAttribute();
       //expect(instance).to.be();
     });

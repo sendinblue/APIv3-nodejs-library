@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddRemoveContactToList', 'model/CreateAttribute', 'model/CreateContact', 'model/CreateList', 'model/CreateModel', 'model/CreateUpdateFolder', 'model/CreatedProcessId', 'model/ErrorModel', 'model/GetAttributes', 'model/GetContactCampaignStats', 'model/GetContacts', 'model/GetExtendedContactDetails', 'model/GetExtendedList', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders', 'model/GetLists', 'model/PostContactInfo', 'model/RequestContactExport', 'model/RequestContactImport', 'model/UpdateContact', 'model/UpdateList'], factory);
+    define(['ApiClient', 'model/AddRemoveContactToList', 'model/CreateAttribute', 'model/CreateContact', 'model/CreateList', 'model/CreateModel', 'model/CreateUpdateFolder', 'model/CreatedProcessId', 'model/ErrorModel', 'model/GetAttributes', 'model/GetContactCampaignStats', 'model/GetContacts', 'model/GetExtendedContactDetails', 'model/GetExtendedList', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders', 'model/GetLists', 'model/PostContactInfo', 'model/RequestContactExport', 'model/RequestContactImport', 'model/UpdateAttribute', 'model/UpdateContact', 'model/UpdateList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AddRemoveContactToList'), require('../model/CreateAttribute'), require('../model/CreateContact'), require('../model/CreateList'), require('../model/CreateModel'), require('../model/CreateUpdateFolder'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetAttributes'), require('../model/GetContactCampaignStats'), require('../model/GetContacts'), require('../model/GetExtendedContactDetails'), require('../model/GetExtendedList'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'), require('../model/GetLists'), require('../model/PostContactInfo'), require('../model/RequestContactExport'), require('../model/RequestContactImport'), require('../model/UpdateContact'), require('../model/UpdateList'));
+    module.exports = factory(require('../ApiClient'), require('../model/AddRemoveContactToList'), require('../model/CreateAttribute'), require('../model/CreateContact'), require('../model/CreateList'), require('../model/CreateModel'), require('../model/CreateUpdateFolder'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetAttributes'), require('../model/GetContactCampaignStats'), require('../model/GetContacts'), require('../model/GetExtendedContactDetails'), require('../model/GetExtendedList'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'), require('../model/GetLists'), require('../model/PostContactInfo'), require('../model/RequestContactExport'), require('../model/RequestContactImport'), require('../model/UpdateAttribute'), require('../model/UpdateContact'), require('../model/UpdateList'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.ContactsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddRemoveContactToList, root.SibApiV3Sdk.CreateAttribute, root.SibApiV3Sdk.CreateContact, root.SibApiV3Sdk.CreateList, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateUpdateFolder, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAttributes, root.SibApiV3Sdk.GetContactCampaignStats, root.SibApiV3Sdk.GetContacts, root.SibApiV3Sdk.GetExtendedContactDetails, root.SibApiV3Sdk.GetExtendedList, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders, root.SibApiV3Sdk.GetLists, root.SibApiV3Sdk.PostContactInfo, root.SibApiV3Sdk.RequestContactExport, root.SibApiV3Sdk.RequestContactImport, root.SibApiV3Sdk.UpdateContact, root.SibApiV3Sdk.UpdateList);
+    root.SibApiV3Sdk.ContactsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddRemoveContactToList, root.SibApiV3Sdk.CreateAttribute, root.SibApiV3Sdk.CreateContact, root.SibApiV3Sdk.CreateList, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateUpdateFolder, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAttributes, root.SibApiV3Sdk.GetContactCampaignStats, root.SibApiV3Sdk.GetContacts, root.SibApiV3Sdk.GetExtendedContactDetails, root.SibApiV3Sdk.GetExtendedList, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders, root.SibApiV3Sdk.GetLists, root.SibApiV3Sdk.PostContactInfo, root.SibApiV3Sdk.RequestContactExport, root.SibApiV3Sdk.RequestContactImport, root.SibApiV3Sdk.UpdateAttribute, root.SibApiV3Sdk.UpdateContact, root.SibApiV3Sdk.UpdateList);
   }
-}(this, function(ApiClient, AddRemoveContactToList, CreateAttribute, CreateContact, CreateList, CreateModel, CreateUpdateFolder, CreatedProcessId, ErrorModel, GetAttributes, GetContactCampaignStats, GetContacts, GetExtendedContactDetails, GetExtendedList, GetFolder, GetFolderLists, GetFolders, GetLists, PostContactInfo, RequestContactExport, RequestContactImport, UpdateContact, UpdateList) {
+}(this, function(ApiClient, AddRemoveContactToList, CreateAttribute, CreateContact, CreateList, CreateModel, CreateUpdateFolder, CreatedProcessId, ErrorModel, GetAttributes, GetContactCampaignStats, GetContacts, GetExtendedContactDetails, GetExtendedList, GetFolder, GetFolderLists, GetFolders, GetLists, PostContactInfo, RequestContactExport, RequestContactImport, UpdateAttribute, UpdateContact, UpdateList) {
   'use strict';
 
   /**
    * Contacts service.
    * @module api/ContactsApi
-   * @version 3.0.0
+   * @version 3.x.x
    */
 
   /**
@@ -106,12 +106,24 @@
 
 
     /**
-     * Creates contact attributes
+     * Creates contact attribute
+     * @param {module:model/String} attributeCategory Category of the attribute
+     * @param {String} attributeName Name of the attribute
      * @param {module:model/CreateAttribute} createAttribute Values to create an attribute
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.createAttributeWithHttpInfo = function(createAttribute) {
+    this.createAttributeWithHttpInfo = function(attributeCategory, attributeName, createAttribute) {
       var postBody = createAttribute;
+
+      // verify the required parameter 'attributeCategory' is set
+      if (attributeCategory === undefined || attributeCategory === null) {
+        throw new Error("Missing the required parameter 'attributeCategory' when calling createAttribute");
+      }
+
+      // verify the required parameter 'attributeName' is set
+      if (attributeName === undefined || attributeName === null) {
+        throw new Error("Missing the required parameter 'attributeName' when calling createAttribute");
+      }
 
       // verify the required parameter 'createAttribute' is set
       if (createAttribute === undefined || createAttribute === null) {
@@ -120,6 +132,8 @@
 
 
       var pathParams = {
+        'attributeCategory': attributeCategory,
+        'attributeName': attributeName
       };
       var queryParams = {
       };
@@ -131,22 +145,24 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = CreateModel;
+      var returnType = null;
 
       return this.apiClient.callApi(
-        '/contacts/attributes', 'POST',
+        '/contacts/attributes/{attributeCategory}/{attributeName}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Creates contact attributes
+     * Creates contact attribute
+     * @param {module:model/String} attributeCategory Category of the attribute
+     * @param {String} attributeName Name of the attribute
      * @param {module:model/CreateAttribute} createAttribute Values to create an attribute
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.createAttribute = function(createAttribute) {
-      return this.createAttributeWithHttpInfo(createAttribute)
+    this.createAttribute = function(attributeCategory, attributeName, createAttribute) {
+      return this.createAttributeWithHttpInfo(attributeCategory, attributeName, createAttribute)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -299,20 +315,27 @@
 
     /**
      * Deletes an attribute
-     * @param {Number} attributeId id of the attribute
+     * @param {module:model/String} attributeCategory Category of the attribute
+     * @param {String} attributeName Name of the existing attribute
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.deleteAttributeWithHttpInfo = function(attributeId) {
+    this.deleteAttributeWithHttpInfo = function(attributeCategory, attributeName) {
       var postBody = null;
 
-      // verify the required parameter 'attributeId' is set
-      if (attributeId === undefined || attributeId === null) {
-        throw new Error("Missing the required parameter 'attributeId' when calling deleteAttribute");
+      // verify the required parameter 'attributeCategory' is set
+      if (attributeCategory === undefined || attributeCategory === null) {
+        throw new Error("Missing the required parameter 'attributeCategory' when calling deleteAttribute");
+      }
+
+      // verify the required parameter 'attributeName' is set
+      if (attributeName === undefined || attributeName === null) {
+        throw new Error("Missing the required parameter 'attributeName' when calling deleteAttribute");
       }
 
 
       var pathParams = {
-        'attributeId': attributeId
+        'attributeCategory': attributeCategory,
+        'attributeName': attributeName
       };
       var queryParams = {
       };
@@ -327,7 +350,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/contacts/attributes/{attributeId}', 'DELETE',
+        '/contacts/attributes/{attributeCategory}/{attributeName}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -335,11 +358,12 @@
 
     /**
      * Deletes an attribute
-     * @param {Number} attributeId id of the attribute
+     * @param {module:model/String} attributeCategory Category of the attribute
+     * @param {String} attributeName Name of the existing attribute
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.deleteAttribute = function(attributeId) {
-      return this.deleteAttributeWithHttpInfo(attributeId)
+    this.deleteAttribute = function(attributeCategory, attributeName) {
+      return this.deleteAttributeWithHttpInfo(attributeCategory, attributeName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1110,6 +1134,70 @@
      */
     this.requestContactExport = function(requestContactExport) {
       return this.requestContactExportWithHttpInfo(requestContactExport)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Updates contact attribute
+     * @param {module:model/String} attributeCategory Category of the attribute
+     * @param {String} attributeName Name of the existing attribute
+     * @param {module:model/UpdateAttribute} updateAttribute Values to update an attribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.updateAttributeWithHttpInfo = function(attributeCategory, attributeName, updateAttribute) {
+      var postBody = updateAttribute;
+
+      // verify the required parameter 'attributeCategory' is set
+      if (attributeCategory === undefined || attributeCategory === null) {
+        throw new Error("Missing the required parameter 'attributeCategory' when calling updateAttribute");
+      }
+
+      // verify the required parameter 'attributeName' is set
+      if (attributeName === undefined || attributeName === null) {
+        throw new Error("Missing the required parameter 'attributeName' when calling updateAttribute");
+      }
+
+      // verify the required parameter 'updateAttribute' is set
+      if (updateAttribute === undefined || updateAttribute === null) {
+        throw new Error("Missing the required parameter 'updateAttribute' when calling updateAttribute");
+      }
+
+
+      var pathParams = {
+        'attributeCategory': attributeCategory,
+        'attributeName': attributeName
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/contacts/attributes/{attributeCategory}/{attributeName}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Updates contact attribute
+     * @param {module:model/String} attributeCategory Category of the attribute
+     * @param {String} attributeName Name of the existing attribute
+     * @param {module:model/UpdateAttribute} updateAttribute Values to update an attribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.updateAttribute = function(attributeCategory, attributeName, updateAttribute) {
+      return this.updateAttributeWithHttpInfo(attributeCategory, attributeName, updateAttribute)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

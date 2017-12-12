@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CreateAttributeEnumemaration'], factory);
+    define(['ApiClient', 'model/CreateAttributeEnumeration'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CreateAttributeEnumemaration'));
+    module.exports = factory(require('../ApiClient'), require('./CreateAttributeEnumeration'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.CreateAttribute = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateAttributeEnumemaration);
+    root.SibApiV3Sdk.CreateAttribute = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateAttributeEnumeration);
   }
-}(this, function(ApiClient, CreateAttributeEnumemaration) {
+}(this, function(ApiClient, CreateAttributeEnumeration) {
   'use strict';
 
 
@@ -37,23 +37,18 @@
   /**
    * The CreateAttribute model module.
    * @module model/CreateAttribute
-   * @version 3.0.0
+   * @version 3.x.x
    */
 
   /**
    * Constructs a new <code>CreateAttribute</code>.
    * @alias module:model/CreateAttribute
    * @class
-   * @param category {module:model/CreateAttribute.CategoryEnum} Attribute categorisation.
-   * @param name {String} Name of the attribute
-   * @param value {String} Value of the attribute
    */
-  var exports = function(category, name, value) {
+  var exports = function() {
     var _this = this;
 
-    _this['category'] = category;
-    _this['name'] = name;
-    _this['value'] = value;
+
 
 
   };
@@ -69,17 +64,11 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('category')) {
-        obj['category'] = ApiClient.convertToType(data['category'], 'String');
-      }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
       if (data.hasOwnProperty('value')) {
         obj['value'] = ApiClient.convertToType(data['value'], 'String');
       }
-      if (data.hasOwnProperty('enumemaration')) {
-        obj['enumemaration'] = ApiClient.convertToType(data['enumemaration'], [CreateAttributeEnumemaration]);
+      if (data.hasOwnProperty('enumeration')) {
+        obj['enumeration'] = ApiClient.convertToType(data['enumeration'], [CreateAttributeEnumeration]);
       }
       if (data.hasOwnProperty('type')) {
         obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -89,63 +78,21 @@
   }
 
   /**
-   * Attribute categorisation.
-   * @member {module:model/CreateAttribute.CategoryEnum} category
-   */
-  exports.prototype['category'] = undefined;
-  /**
-   * Name of the attribute
-   * @member {String} name
-   */
-  exports.prototype['name'] = undefined;
-  /**
-   * Value of the attribute
+   * Value of the attribute. Use only if the attribute's category is calculated or global
    * @member {String} value
    */
   exports.prototype['value'] = undefined;
   /**
    * Values that the attribute can take. Use only if the attribute's category is category
-   * @member {Array.<module:model/CreateAttributeEnumemaration>} enumemaration
+   * @member {Array.<module:model/CreateAttributeEnumeration>} enumeration
    */
-  exports.prototype['enumemaration'] = undefined;
+  exports.prototype['enumeration'] = undefined;
   /**
-   * Type of the attribute
+   * Type of the attribute. Use only if the attribute's category is normal, category or transactional ( type 'id' only available if the category is 'transactional' attribute & type 'category' only available if the category is 'category' attribute )
    * @member {module:model/CreateAttribute.TypeEnum} type
    */
   exports.prototype['type'] = undefined;
 
-
-  /**
-   * Allowed values for the <code>category</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.CategoryEnum = {
-    /**
-     * value: "normal"
-     * @const
-     */
-    "normal": "normal",
-    /**
-     * value: "transactional"
-     * @const
-     */
-    "transactional": "transactional",
-    /**
-     * value: "category"
-     * @const
-     */
-    "category": "category",
-    /**
-     * value: "calculated"
-     * @const
-     */
-    "calculated": "calculated",
-    /**
-     * value: "global"
-     * @const
-     */
-    "global": "global"  };
 
   /**
    * Allowed values for the <code>type</code> property.
@@ -172,7 +119,12 @@
      * value: "id"
      * @const
      */
-    "id": "id"  };
+    "id": "id",
+    /**
+     * value: "category"
+     * @const
+     */
+    "category": "category"  };
 
 
   return exports;

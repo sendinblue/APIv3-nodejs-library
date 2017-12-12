@@ -3,28 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**category** | **String** | Attribute categorisation. | 
-**name** | **String** | Name of the attribute | 
-**value** | **String** | Value of the attribute | 
-**enumemaration** | [**[CreateAttributeEnumemaration]**](CreateAttributeEnumemaration.md) | Values that the attribute can take. Use only if the attribute&#39;s category is category | [optional] 
-**type** | **String** | Type of the attribute | [optional] 
-
-
-<a name="CategoryEnum"></a>
-## Enum: CategoryEnum
-
-
-* `normal` (value: `"normal"`)
-
-* `transactional` (value: `"transactional"`)
-
-* `category` (value: `"category"`)
-
-* `calculated` (value: `"calculated"`)
-
-* `global` (value: `"global"`)
-
-
+**value** | **String** | Value of the attribute. Use only if the attribute&#39;s category is calculated or global | [optional] 
+**enumeration** | [**[CreateAttributeEnumeration]**](CreateAttributeEnumeration.md) | Values that the attribute can take. Use only if the attribute&#39;s category is category | [optional] 
+**type** | **String** | Type of the attribute. Use only if the attribute&#39;s category is normal, category or transactional ( type &#39;id&#39; only available if the category is &#39;transactional&#39; attribute &amp; type &#39;category&#39; only available if the category is &#39;category&#39; attribute ) | [optional] 
 
 
 <a name="TypeEnum"></a>
@@ -38,6 +19,8 @@ Name | Type | Description | Notes
 * `float` (value: `"float"`)
 
 * `id` (value: `"id"`)
+
+* `category` (value: `"category"`)
 
 
 

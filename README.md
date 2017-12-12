@@ -110,15 +110,16 @@ All URIs are relative to *https://api.sendinblue.com/v3*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SibApiV3Sdk.AccountApi* | [**getAccount**](docs/AccountApi.md#getAccount) | **GET** /account | Get your account informations, plans and credits details
-*SibApiV3Sdk.AttributesApi* | [**createAttribute**](docs/AttributesApi.md#createAttribute) | **POST** /contacts/attributes | Creates contact attributes
-*SibApiV3Sdk.AttributesApi* | [**deleteAttribute**](docs/AttributesApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeId} | Deletes an attribute
+*SibApiV3Sdk.AttributesApi* | [**createAttribute**](docs/AttributesApi.md#createAttribute) | **POST** /contacts/attributes/{attributeCategory}/{attributeName} | Creates contact attribute
+*SibApiV3Sdk.AttributesApi* | [**deleteAttribute**](docs/AttributesApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Deletes an attribute
 *SibApiV3Sdk.AttributesApi* | [**getAttributes**](docs/AttributesApi.md#getAttributes) | **GET** /contacts/attributes | Lists all attributes
+*SibApiV3Sdk.AttributesApi* | [**updateAttribute**](docs/AttributesApi.md#updateAttribute) | **PUT** /contacts/attributes/{attributeCategory}/{attributeName} | Updates contact attribute
 *SibApiV3Sdk.ContactsApi* | [**addContactToList**](docs/ContactsApi.md#addContactToList) | **POST** /contacts/lists/{listId}/contacts/add | Add existing contacts to a list
-*SibApiV3Sdk.ContactsApi* | [**createAttribute**](docs/ContactsApi.md#createAttribute) | **POST** /contacts/attributes | Creates contact attributes
+*SibApiV3Sdk.ContactsApi* | [**createAttribute**](docs/ContactsApi.md#createAttribute) | **POST** /contacts/attributes/{attributeCategory}/{attributeName} | Creates contact attribute
 *SibApiV3Sdk.ContactsApi* | [**createContact**](docs/ContactsApi.md#createContact) | **POST** /contacts | Create a contact
 *SibApiV3Sdk.ContactsApi* | [**createFolder**](docs/ContactsApi.md#createFolder) | **POST** /contacts/folders | Create a folder
 *SibApiV3Sdk.ContactsApi* | [**createList**](docs/ContactsApi.md#createList) | **POST** /contacts/lists | Create a list
-*SibApiV3Sdk.ContactsApi* | [**deleteAttribute**](docs/ContactsApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeId} | Deletes an attribute
+*SibApiV3Sdk.ContactsApi* | [**deleteAttribute**](docs/ContactsApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Deletes an attribute
 *SibApiV3Sdk.ContactsApi* | [**deleteFolder**](docs/ContactsApi.md#deleteFolder) | **DELETE** /contacts/folders/{folderId} | Delete a folder (and all its lists)
 *SibApiV3Sdk.ContactsApi* | [**deleteList**](docs/ContactsApi.md#deleteList) | **DELETE** /contacts/lists/{listId} | Delete a list
 *SibApiV3Sdk.ContactsApi* | [**getAttributes**](docs/ContactsApi.md#getAttributes) | **GET** /contacts/attributes | Lists all attributes
@@ -134,6 +135,7 @@ Class | Method | HTTP request | Description
 *SibApiV3Sdk.ContactsApi* | [**importContacts**](docs/ContactsApi.md#importContacts) | **POST** /contacts/import | Import contacts
 *SibApiV3Sdk.ContactsApi* | [**removeContactToList**](docs/ContactsApi.md#removeContactToList) | **POST** /contacts/lists/{listId}/contacts/remove | Remove existing contacts from a list
 *SibApiV3Sdk.ContactsApi* | [**requestContactExport**](docs/ContactsApi.md#requestContactExport) | **POST** /contacts/export | Export contacts
+*SibApiV3Sdk.ContactsApi* | [**updateAttribute**](docs/ContactsApi.md#updateAttribute) | **PUT** /contacts/attributes/{attributeCategory}/{attributeName} | Updates contact attribute
 *SibApiV3Sdk.ContactsApi* | [**updateContact**](docs/ContactsApi.md#updateContact) | **PUT** /contacts/{email} | Updates a contact
 *SibApiV3Sdk.ContactsApi* | [**updateFolder**](docs/ContactsApi.md#updateFolder) | **PUT** /contacts/folders/{folderId} | Update a contact folder
 *SibApiV3Sdk.ContactsApi* | [**updateList**](docs/ContactsApi.md#updateList) | **PUT** /contacts/lists/{listId} | Update a list
@@ -217,7 +219,7 @@ Class | Method | HTTP request | Description
  - [SibApiV3Sdk.AddCredits](docs/AddCredits.md)
  - [SibApiV3Sdk.AddRemoveContactToList](docs/AddRemoveContactToList.md)
  - [SibApiV3Sdk.CreateAttribute](docs/CreateAttribute.md)
- - [SibApiV3Sdk.CreateAttributeEnumemaration](docs/CreateAttributeEnumemaration.md)
+ - [SibApiV3Sdk.CreateAttributeEnumeration](docs/CreateAttributeEnumeration.md)
  - [SibApiV3Sdk.CreateChild](docs/CreateChild.md)
  - [SibApiV3Sdk.CreateContact](docs/CreateContact.md)
  - [SibApiV3Sdk.CreateEmailCampaign](docs/CreateEmailCampaign.md)
@@ -340,6 +342,8 @@ Class | Method | HTTP request | Description
  - [SibApiV3Sdk.SendTestEmail](docs/SendTestEmail.md)
  - [SibApiV3Sdk.SendTestSms](docs/SendTestSms.md)
  - [SibApiV3Sdk.SendTransacSms](docs/SendTransacSms.md)
+ - [SibApiV3Sdk.UpdateAttribute](docs/UpdateAttribute.md)
+ - [SibApiV3Sdk.UpdateAttributeEnumeration](docs/UpdateAttributeEnumeration.md)
  - [SibApiV3Sdk.UpdateCampaignStatus](docs/UpdateCampaignStatus.md)
  - [SibApiV3Sdk.UpdateChild](docs/UpdateChild.md)
  - [SibApiV3Sdk.UpdateContact](docs/UpdateContact.md)

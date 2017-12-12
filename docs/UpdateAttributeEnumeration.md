@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateAttributeEnumemaration
+# SibApiV3Sdk.UpdateAttributeEnumeration
 
 ## Properties
 Name | Type | Description | Notes

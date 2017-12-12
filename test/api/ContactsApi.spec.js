@@ -261,6 +261,16 @@
         done();
       });
     });
+    describe('updateAttribute', function() {
+      it('should call updateAttribute successfully', function(done) {
+        //uncomment below and update the code to test updateAttribute
+        //instance.updateAttribute(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('updateContact', function() {
       it('should call updateContact successfully', function(done) {
         //uncomment below and update the code to test updateContact
