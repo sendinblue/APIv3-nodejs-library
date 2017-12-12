@@ -37,7 +37,7 @@
   /**
    * The SendSms model module.
    * @module model/SendSms
-   * @version 3.0.0
+   * @version 3.x.x
    */
 
   /**
@@ -45,11 +45,13 @@
    * @alias module:model/SendSms
    * @class
    * @param reference {String} 
+   * @param messageId {Number} 
    */
-  var exports = function(reference) {
+  var exports = function(reference, messageId) {
     var _this = this;
 
     _this['reference'] = reference;
+    _this['messageId'] = messageId;
   };
 
   /**
@@ -66,6 +68,9 @@
       if (data.hasOwnProperty('reference')) {
         obj['reference'] = ApiClient.convertToType(data['reference'], 'String');
       }
+      if (data.hasOwnProperty('messageId')) {
+        obj['messageId'] = ApiClient.convertToType(data['messageId'], 'Number');
+      }
     }
     return obj;
   }
@@ -74,6 +79,10 @@
    * @member {String} reference
    */
   exports.prototype['reference'] = undefined;
+  /**
+   * @member {Number} messageId
+   */
+  exports.prototype['messageId'] = undefined;
 
 
 

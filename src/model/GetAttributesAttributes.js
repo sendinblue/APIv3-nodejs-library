@@ -37,21 +37,19 @@
   /**
    * The GetAttributesAttributes model module.
    * @module model/GetAttributesAttributes
-   * @version 3.0.0
+   * @version 3.x.x
    */
 
   /**
    * Constructs a new <code>GetAttributesAttributes</code>.
    * @alias module:model/GetAttributesAttributes
    * @class
-   * @param id {Number} ID of the attribute
    * @param name {String} Name of the attribute
    * @param category {module:model/GetAttributesAttributes.CategoryEnum} Category of the attribute
    */
-  var exports = function(id, name, category) {
+  var exports = function(name, category) {
     var _this = this;
 
-    _this['id'] = id;
     _this['name'] = name;
     _this['category'] = category;
 
@@ -70,9 +68,6 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-      }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
@@ -92,11 +87,6 @@
     return obj;
   }
 
-  /**
-   * ID of the attribute
-   * @member {Number} id
-   */
-  exports.prototype['id'] = undefined;
   /**
    * Name of the attribute
    * @member {String} name

@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.CreateAttributeEnumemaration();
+    instance = new SibApiV3Sdk.CreateAttributeEnumeration();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,22 +50,22 @@
       object[property] = value;
   }
 
-  describe('CreateAttributeEnumemaration', function() {
-    it('should create an instance of CreateAttributeEnumemaration', function() {
-      // uncomment below and update the code to test CreateAttributeEnumemaration
-      //var instane = new SibApiV3Sdk.CreateAttributeEnumemaration();
-      //expect(instance).to.be.a(SibApiV3Sdk.CreateAttributeEnumemaration);
+  describe('CreateAttributeEnumeration', function() {
+    it('should create an instance of CreateAttributeEnumeration', function() {
+      // uncomment below and update the code to test CreateAttributeEnumeration
+      //var instane = new SibApiV3Sdk.CreateAttributeEnumeration();
+      //expect(instance).to.be.a(SibApiV3Sdk.CreateAttributeEnumeration);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instane = new SibApiV3Sdk.CreateAttributeEnumemaration();
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
+      //var instane = new SibApiV3Sdk.CreateAttributeEnumeration();
       //expect(instance).to.be();
     });
 
     it('should have the property label (base name: "label")', function() {
       // uncomment below and update the code to test the property label
-      //var instane = new SibApiV3Sdk.CreateAttributeEnumemaration();
+      //var instane = new SibApiV3Sdk.CreateAttributeEnumeration();
       //expect(instance).to.be();
     });
 

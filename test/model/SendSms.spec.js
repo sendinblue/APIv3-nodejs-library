@@ -63,6 +63,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property messageId (base name: "messageId")', function() {
+      // uncomment below and update the code to test the property messageId
+      //var instane = new SibApiV3Sdk.SendSms();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

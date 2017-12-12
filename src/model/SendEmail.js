@@ -37,7 +37,7 @@
   /**
    * The SendEmail model module.
    * @module model/SendEmail
-   * @version 3.0.0
+   * @version 3.x.x
    */
 
   /**

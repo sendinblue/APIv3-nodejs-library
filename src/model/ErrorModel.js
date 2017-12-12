@@ -37,7 +37,7 @@
   /**
    * The ErrorModel model module.
    * @module model/ErrorModel
-   * @version 3.0.0
+   * @version 3.x.x
    */
 
   /**
@@ -143,6 +143,11 @@
      * @const
      */
     "duplicate_parameter": "duplicate_parameter",
+    /**
+     * value: "duplicate_request"
+     * @const
+     */
+    "duplicate_request": "duplicate_request",
     /**
      * value: "method_not_allowed"
      * @const

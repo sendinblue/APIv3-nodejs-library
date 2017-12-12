@@ -34,7 +34,7 @@
   /**
    * Process service.
    * @module api/ProcessApi
-   * @version 3.0.0
+   * @version 3.x.x
    */
 
   /**

@@ -17,32 +17,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/UpdateAttributeEnumeration'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./UpdateAttributeEnumeration'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.CreateAttributeEnumemaration = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.UpdateAttribute = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.UpdateAttributeEnumeration);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, UpdateAttributeEnumeration) {
   'use strict';
 
 
 
 
   /**
-   * The CreateAttributeEnumemaration model module.
-   * @module model/CreateAttributeEnumemaration
-   * @version 3.0.0
+   * The UpdateAttribute model module.
+   * @module model/UpdateAttribute
+   * @version 3.x.x
    */
 
   /**
-   * Constructs a new <code>CreateAttributeEnumemaration</code>.
-   * @alias module:model/CreateAttributeEnumemaration
+   * Constructs a new <code>UpdateAttribute</code>.
+   * @alias module:model/UpdateAttribute
    * @class
    */
   var exports = function() {
@@ -53,36 +53,36 @@
   };
 
   /**
-   * Constructs a <code>CreateAttributeEnumemaration</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>UpdateAttribute</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CreateAttributeEnumemaration} obj Optional instance to populate.
-   * @return {module:model/CreateAttributeEnumemaration} The populated <code>CreateAttributeEnumemaration</code> instance.
+   * @param {module:model/UpdateAttribute} obj Optional instance to populate.
+   * @return {module:model/UpdateAttribute} The populated <code>UpdateAttribute</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('value')) {
+        obj['value'] = ApiClient.convertToType(data['value'], 'String');
       }
-      if (data.hasOwnProperty('label')) {
-        obj['label'] = ApiClient.convertToType(data['label'], 'String');
+      if (data.hasOwnProperty('enumeration')) {
+        obj['enumeration'] = ApiClient.convertToType(data['enumeration'], [UpdateAttributeEnumeration]);
       }
     }
     return obj;
   }
 
   /**
-   * Id of the value
-   * @member {Number} id
+   * Value of the attribute. Use only if the attribute's category is calculated or global
+   * @member {String} value
    */
-  exports.prototype['id'] = undefined;
+  exports.prototype['value'] = undefined;
   /**
-   * Label of the value
-   * @member {String} label
+   * Values that the attribute can take. Use only if the attribute's category is category
+   * @member {Array.<module:model/UpdateAttributeEnumeration>} enumeration
    */
-  exports.prototype['label'] = undefined;
+  exports.prototype['enumeration'] = undefined;
 
 
 

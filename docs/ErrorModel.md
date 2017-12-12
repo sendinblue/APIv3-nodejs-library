@@ -31,6 +31,8 @@ Name | Type | Description | Notes
 
 * `duplicate_parameter` (value: `"duplicate_parameter"`)
 
+* `duplicate_request` (value: `"duplicate_request"`)
+
 * `method_not_allowed` (value: `"method_not_allowed"`)
 
 * `unauthorized` (value: `"unauthorized"`)

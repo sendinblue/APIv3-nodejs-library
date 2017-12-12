@@ -4,5 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **reference** | **String** |  | 
+**messageId** | **Number** |  | 
 
 

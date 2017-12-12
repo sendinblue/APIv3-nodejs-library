@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Number** | ID of the attribute | 
 **name** | **String** | Name of the attribute | 
 **category** | **String** | Category of the attribute | 
 **type** | **String** | Type of the attribute | [optional] 

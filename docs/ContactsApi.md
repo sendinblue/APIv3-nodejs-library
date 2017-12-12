@@ -5,11 +5,11 @@ All URIs are relative to *https://api.sendinblue.com/v3*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addContactToList**](ContactsApi.md#addContactToList) | **POST** /contacts/lists/{listId}/contacts/add | Add existing contacts to a list
-[**createAttribute**](ContactsApi.md#createAttribute) | **POST** /contacts/attributes | Creates contact attributes
+[**createAttribute**](ContactsApi.md#createAttribute) | **POST** /contacts/attributes/{attributeCategory}/{attributeName} | Creates contact attribute
 [**createContact**](ContactsApi.md#createContact) | **POST** /contacts | Create a contact
 [**createFolder**](ContactsApi.md#createFolder) | **POST** /contacts/folders | Create a folder
 [**createList**](ContactsApi.md#createList) | **POST** /contacts/lists | Create a list
-[**deleteAttribute**](ContactsApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeId} | Deletes an attribute
+[**deleteAttribute**](ContactsApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Deletes an attribute
 [**deleteFolder**](ContactsApi.md#deleteFolder) | **DELETE** /contacts/folders/{folderId} | Delete a folder (and all its lists)
 [**deleteList**](ContactsApi.md#deleteList) | **DELETE** /contacts/lists/{listId} | Delete a list
 [**getAttributes**](ContactsApi.md#getAttributes) | **GET** /contacts/attributes | Lists all attributes
@@ -25,6 +25,7 @@ Method | HTTP request | Description
 [**importContacts**](ContactsApi.md#importContacts) | **POST** /contacts/import | Import contacts
 [**removeContactToList**](ContactsApi.md#removeContactToList) | **POST** /contacts/lists/{listId}/contacts/remove | Remove existing contacts from a list
 [**requestContactExport**](ContactsApi.md#requestContactExport) | **POST** /contacts/export | Export contacts
+[**updateAttribute**](ContactsApi.md#updateAttribute) | **PUT** /contacts/attributes/{attributeCategory}/{attributeName} | Updates contact attribute
 [**updateContact**](ContactsApi.md#updateContact) | **PUT** /contacts/{email} | Updates a contact
 [**updateFolder**](ContactsApi.md#updateFolder) | **PUT** /contacts/folders/{folderId} | Update a contact folder
 [**updateList**](ContactsApi.md#updateList) | **PUT** /contacts/lists/{listId} | Update a list
@@ -83,9 +84,9 @@ Name | Type | Description  | Notes
 
 <a name="createAttribute"></a>
 # **createAttribute**
-> CreateModel createAttribute(createAttribute)
+> createAttribute(attributeCategory, attributeName, createAttribute)
 
-Creates contact attributes
+Creates contact attribute
 
 ### Example
 ```javascript
@@ -100,10 +101,14 @@ apiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
+var attributeCategory = "attributeCategory_example"; // String | Category of the attribute
+
+var attributeName = "attributeName_example"; // String | Name of the attribute
+
 var createAttribute = new SibApiV3Sdk.CreateAttribute(); // CreateAttribute | Values to create an attribute
 
-apiInstance.createAttribute(createAttribute).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
+apiInstance.createAttribute(attributeCategory, attributeName, createAttribute).then(function() {
+  console.log('API called successfully.');
 }, function(error) {
   console.error(error);
 });
@@ -114,11 +119,13 @@ apiInstance.createAttribute(createAttribute).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **attributeCategory** | **String**| Category of the attribute | 
+ **attributeName** | **String**| Name of the attribute | 
  **createAttribute** | [**CreateAttribute**](CreateAttribute.md)| Values to create an attribute | 
 
 ### Return type
 
-[**CreateModel**](CreateModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -275,7 +282,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteAttribute"></a>
 # **deleteAttribute**
-> deleteAttribute(attributeId)
+> deleteAttribute(attributeCategory, attributeName)
 
 Deletes an attribute
 
@@ -288,13 +295,15 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
-var attributeId = 789; // Number | id of the attribute
+var attributeCategory = "attributeCategory_example"; // String | Category of the attribute
 
-apiInstance.deleteAttribute(attributeId).then(function() {
+var attributeName = "attributeName_example"; // String | Name of the existing attribute
+
+apiInstance.deleteAttribute(attributeCategory, attributeName).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);
@@ -306,7 +315,8 @@ apiInstance.deleteAttribute(attributeId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attributeId** | **Number**| id of the attribute | 
+ **attributeCategory** | **String**| Category of the attribute | 
+ **attributeName** | **String**| Name of the existing attribute | 
 
 ### Return type
 
@@ -576,7 +586,8 @@ var apiInstance = new SibApiV3Sdk.ContactsApi();
 
 var opts = { 
   'limit': 50, // Number | Number of documents per page
-  'offset': 0 // Number | Index of the first document of the page
+  'offset': 0, // Number | Index of the first document of the page
+  'modifiedSince': new Date("2013-10-20T19:20:30+01:00") // Date | Filter (urlencoded) the contacts modified after a given date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
 };
 apiInstance.getContacts(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1056,6 +1067,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CreatedProcessId**](CreatedProcessId.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="updateAttribute"></a>
+# **updateAttribute**
+> updateAttribute(attributeCategory, attributeName, updateAttribute)
+
+Updates contact attribute
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.ContactsApi();
+
+var attributeCategory = "attributeCategory_example"; // String | Category of the attribute
+
+var attributeName = "attributeName_example"; // String | Name of the existing attribute
+
+var updateAttribute = new SibApiV3Sdk.UpdateAttribute(); // UpdateAttribute | Values to update an attribute
+
+apiInstance.updateAttribute(attributeCategory, attributeName, updateAttribute).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **attributeCategory** | **String**| Category of the attribute | 
+ **attributeName** | **String**| Name of the existing attribute | 
+ **updateAttribute** | [**UpdateAttribute**](UpdateAttribute.md)| Values to update an attribute | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
