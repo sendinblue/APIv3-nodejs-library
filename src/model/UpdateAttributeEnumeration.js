@@ -44,12 +44,14 @@
    * Constructs a new <code>UpdateAttributeEnumeration</code>.
    * @alias module:model/UpdateAttributeEnumeration
    * @class
+   * @param value {Number} Id of the value
+   * @param label {String} Label of the value
    */
-  var exports = function() {
+  var exports = function(value, label) {
     var _this = this;
 
-
-
+    _this['value'] = value;
+    _this['label'] = label;
   };
 
   /**
@@ -63,8 +65,8 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('value')) {
+        obj['value'] = ApiClient.convertToType(data['value'], 'Number');
       }
       if (data.hasOwnProperty('label')) {
         obj['label'] = ApiClient.convertToType(data['label'], 'String');
@@ -75,9 +77,9 @@
 
   /**
    * Id of the value
-   * @member {Number} id
+   * @member {Number} value
    */
-  exports.prototype['id'] = undefined;
+  exports.prototype['value'] = undefined;
   /**
    * Label of the value
    * @member {String} label

@@ -53,8 +53,8 @@
    * @param toField {String} Customisation of the \"to\" field for the template
    * @param tag {String} Tag of the template
    * @param htmlContent {String} HTML content of the template
-   * @param createdAt {Date} Creation date of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
-   * @param modifiedAt {Date} Last modification date of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param createdAt {Date} Creation UTC date-time of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param modifiedAt {Date} Last modification UTC date-time of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
   var exports = function(id, name, subject, isActive, testSent, replyTo, toField, tag, htmlContent, createdAt, modifiedAt) {
     var _this = this;
@@ -174,12 +174,12 @@
    */
   exports.prototype['htmlContent'] = undefined;
   /**
-   * Creation date of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * Creation UTC date-time of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Last modification date of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * Last modification UTC date-time of the template (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;

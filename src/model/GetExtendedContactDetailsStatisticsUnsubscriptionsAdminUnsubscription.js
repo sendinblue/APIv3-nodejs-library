@@ -44,7 +44,7 @@
    * Constructs a new <code>GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription</code>.
    * @alias module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription
    * @class
-   * @param eventTime {Date} Date of the event
+   * @param eventTime {Date} UTC date-time of the event
    * @param ip {String} IP from which the user has been unsubscribed
    */
   var exports = function(eventTime, ip) {
@@ -76,7 +76,7 @@
   }
 
   /**
-   * Date of the event
+   * UTC date-time of the event
    * @member {Date} eventTime
    */
   exports.prototype['eventTime'] = undefined;

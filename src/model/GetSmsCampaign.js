@@ -49,11 +49,11 @@
    * @param name {String} Name of the SMS Campaign
    * @param status {module:model/GetSmsCampaignOverview.StatusEnum} Status of the SMS Campaign
    * @param content {String} Content of the SMS Campaign
-   * @param scheduledAt {Date} Date on which SMS campaign is scheduled. Should be in YYYY-MM-DDTHH:mm:ss.SSSZ format
+   * @param scheduledAt {Date} UTC date-time on which SMS campaign is scheduled. Should be in YYYY-MM-DDTHH:mm:ss.SSSZ format
    * @param testSent {Boolean} Retrieved the status of test SMS sending. (true=Test SMS has been sent  false=Test SMS has not been sent)
    * @param sender {String} Sender of the SMS Campaign
-   * @param createdAt {Date} Creation date of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
-   * @param modifiedAt {Date} Date of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param createdAt {Date} Creation UTC date-time of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param modifiedAt {Date} UTC date-time of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
   var exports = function(id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt) {
     var _this = this;
@@ -104,7 +104,7 @@ exports.prototype['status'] = undefined;
 exports.prototype['content'] = undefined;
 
   /**
-   * Date on which SMS campaign is scheduled. Should be in YYYY-MM-DDTHH:mm:ss.SSSZ format
+   * UTC date-time on which SMS campaign is scheduled. Should be in YYYY-MM-DDTHH:mm:ss.SSSZ format
    * @member {Date} scheduledAt
    */
 exports.prototype['scheduledAt'] = undefined;
@@ -122,13 +122,13 @@ exports.prototype['testSent'] = undefined;
 exports.prototype['sender'] = undefined;
 
   /**
-   * Creation date of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * Creation UTC date-time of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} createdAt
    */
 exports.prototype['createdAt'] = undefined;
 
   /**
-   * Date of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * UTC date-time of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} modifiedAt
    */
 exports.prototype['modifiedAt'] = undefined;

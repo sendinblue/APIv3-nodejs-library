@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **toField** | **String** | Customisation of the \&quot;to\&quot; field for the template | 
 **tag** | **String** | Tag of the template | 
 **htmlContent** | **String** | HTML content of the template | 
-**createdAt** | **Date** | Creation date of the template (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
-**modifiedAt** | **Date** | Last modification date of the template (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
+**createdAt** | **Date** | Creation UTC date-time of the template (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
+**modifiedAt** | **Date** | Last modification UTC date-time of the template (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
 
 

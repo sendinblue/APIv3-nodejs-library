@@ -120,7 +120,7 @@
    */
   exports.prototype['status'] = undefined;
   /**
-   * Date on which campaign is scheduled (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * UTC date-time on which campaign is scheduled (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;

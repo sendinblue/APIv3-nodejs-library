@@ -45,7 +45,7 @@
    * @alias module:model/GetEmailEventReportEvents
    * @class
    * @param email {String} Email address which generates the event
-   * @param _date {Date} Date on which the event has been generated
+   * @param _date {Date} UTC date-time on which the event has been generated
    * @param messageId {String} Message ID which generated the event
    * @param event {module:model/GetEmailEventReportEvents.EventEnum} Event which occurred
    * @param tag {String} Tag of the email which generated the event
@@ -117,7 +117,7 @@
    */
   exports.prototype['email'] = undefined;
   /**
-   * Date on which the event has been generated
+   * UTC date-time on which the event has been generated
    * @member {Date} date
    */
   exports.prototype['date'] = undefined;

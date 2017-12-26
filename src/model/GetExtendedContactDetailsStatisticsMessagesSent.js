@@ -45,7 +45,7 @@
    * @alias module:model/GetExtendedContactDetailsStatisticsMessagesSent
    * @class
    * @param campaignId {Number} ID of the campaign which generated the event
-   * @param eventTime {Date} Date of the event
+   * @param eventTime {Date} UTC date-time of the event
    */
   var exports = function(campaignId, eventTime) {
     var _this = this;
@@ -81,7 +81,7 @@
    */
   exports.prototype['campaignId'] = undefined;
   /**
-   * Date of the event
+   * UTC date-time of the event
    * @member {Date} eventTime
    */
   exports.prototype['eventTime'] = undefined;
