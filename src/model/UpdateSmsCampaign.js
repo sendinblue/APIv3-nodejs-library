@@ -105,7 +105,7 @@
    */
   exports.prototype['recipients'] = undefined;
   /**
-   * Date and time on which the campaign has to run (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * UTC date-time on which the campaign has to run (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;

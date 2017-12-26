@@ -45,7 +45,7 @@
    * @alias module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription
    * @class
    * @param campaignId {Number} ID of the campaign which generated the event
-   * @param eventTime {Date} Date of the event
+   * @param eventTime {Date} UTC date-time of the event
    * @param ip {String} IP from which the user has unsubscribed
    */
   var exports = function(campaignId, eventTime, ip) {
@@ -86,7 +86,7 @@
    */
   exports.prototype['campaignId'] = undefined;
   /**
-   * Date of the event
+   * UTC date-time of the event
    * @member {Date} eventTime
    */
   exports.prototype['eventTime'] = undefined;

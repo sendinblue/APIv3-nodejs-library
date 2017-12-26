@@ -57,8 +57,8 @@
    * @param toField {String} Customisation of the \"to\" field of the campaign
    * @param htmlContent {String} HTML content of the campaign
    * @param tag {String} Tag of the campaign
-   * @param createdAt {Date} Creation date of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
-   * @param modifiedAt {Date} Date of last modification of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param createdAt {Date} Creation UTC date-time of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param modifiedAt {Date} UTC date-time of last modification of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
   var exports = function(id, name, subject, type, status, testSent, header, footer, replyTo, toField, htmlContent, tag, createdAt, modifiedAt) {
     var _this = this;
@@ -183,12 +183,12 @@
    */
   exports.prototype['tag'] = undefined;
   /**
-   * Creation date of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * Creation UTC date-time of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Date of last modification of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * UTC date-time of last modification of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;
@@ -240,7 +240,7 @@ exports.prototype['type'] = undefined;
 exports.prototype['status'] = undefined;
 
   /**
-   * Date on which campaign is scheduled (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * UTC date-time on which campaign is scheduled (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} scheduledAt
    */
 exports.prototype['scheduledAt'] = undefined;

@@ -46,7 +46,7 @@
    * @class
    * @param campaignId {Number} ID of the campaign which generated the event
    * @param count {Number} Number of openings of the campaign
-   * @param eventTime {Date} Date of the event
+   * @param eventTime {Date} UTC date-time of the event
    * @param ip {String} IP from which the user has opened the campaign
    */
   var exports = function(campaignId, count, eventTime, ip) {
@@ -96,7 +96,7 @@
    */
   exports.prototype['count'] = undefined;
   /**
-   * Date of the event
+   * UTC date-time of the event
    * @member {Date} eventTime
    */
   exports.prototype['eventTime'] = undefined;

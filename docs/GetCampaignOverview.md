@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **subject** | **String** | Subject of the campaign | 
 **type** | **String** | Type of campaign | 
 **status** | **String** | Status of the campaign | 
-**scheduledAt** | **Date** | Date on which campaign is scheduled (YYYY-MM-DDTHH:mm:ss.SSSZ) | [optional] 
+**scheduledAt** | **Date** | UTC date-time on which campaign is scheduled (YYYY-MM-DDTHH:mm:ss.SSSZ) | [optional] 
 
 
 <a name="TypeEnum"></a>

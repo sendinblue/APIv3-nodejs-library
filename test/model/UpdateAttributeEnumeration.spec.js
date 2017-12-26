@@ -57,8 +57,8 @@
       //expect(instance).to.be.a(SibApiV3Sdk.UpdateAttributeEnumeration);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
       //var instane = new SibApiV3Sdk.UpdateAttributeEnumeration();
       //expect(instance).to.be();
     });

@@ -45,7 +45,7 @@
    * @alias module:model/GetExtendedContactDetailsStatisticsLinks
    * @class
    * @param count {Number} Number of clicks on this link for the campaign
-   * @param eventTime {Date} Date of the event
+   * @param eventTime {Date} UTC date-time of the event
    * @param ip {String} IP from which the user has clicked on the link
    * @param url {String} URL of the clicked link
    */
@@ -91,7 +91,7 @@
    */
   exports.prototype['count'] = undefined;
   /**
-   * Date of the event
+   * UTC date-time of the event
    * @member {Date} eventTime
    */
   exports.prototype['eventTime'] = undefined;

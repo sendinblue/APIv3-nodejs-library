@@ -49,8 +49,8 @@
    * @param description {String} Description of the webhook
    * @param events {Array.<String>} 
    * @param type {module:model/GetWebhook.TypeEnum} Type of webhook (marketing or transac)
-   * @param createdAt {Date} Creation date of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
-   * @param modifiedAt {Date} Last modification date of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param createdAt {Date} Creation UTC date-time of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param modifiedAt {Date} Last modification UTC date-time of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
   var exports = function(url, id, description, events, type, createdAt, modifiedAt) {
     var _this = this;
@@ -125,12 +125,12 @@
    */
   exports.prototype['type'] = undefined;
   /**
-   * Creation date of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * Creation UTC date-time of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} createdAt
    */
   exports.prototype['createdAt'] = undefined;
   /**
-   * Last modification date of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * Last modification UTC date-time of the webhook (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;

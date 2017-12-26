@@ -165,7 +165,7 @@
    */
   exports.prototype['htmlUrl'] = undefined;
   /**
-   * Sending date and time (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * Sending UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
