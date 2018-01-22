@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CreateModel', 'model/CreateSmsCampaign', 'model/CreatedProcessId', 'model/ErrorModel', 'model/GetSmsCampaign', 'model/GetSmsCampaigns', 'model/PostSendSmsTestFailed', 'model/RequestSMSRecipientExport', 'model/SendReport', 'model/SendTestSms', 'model/UpdateCampaignStatus', 'model/UpdateSmsCampaign'], factory);
+    define(['ApiClient', 'model/CreateModel', 'model/CreateSmsCampaign', 'model/CreatedProcessId', 'model/ErrorModel', 'model/GetSmsCampaign', 'model/GetSmsCampaigns', 'model/PostSendSmsTestFailed', 'model/RequestSmsRecipientExport', 'model/SendReport', 'model/SendTestSms', 'model/UpdateCampaignStatus', 'model/UpdateSmsCampaign'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CreateModel'), require('../model/CreateSmsCampaign'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetSmsCampaign'), require('../model/GetSmsCampaigns'), require('../model/PostSendSmsTestFailed'), require('../model/RequestSMSRecipientExport'), require('../model/SendReport'), require('../model/SendTestSms'), require('../model/UpdateCampaignStatus'), require('../model/UpdateSmsCampaign'));
+    module.exports = factory(require('../ApiClient'), require('../model/CreateModel'), require('../model/CreateSmsCampaign'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetSmsCampaign'), require('../model/GetSmsCampaigns'), require('../model/PostSendSmsTestFailed'), require('../model/RequestSmsRecipientExport'), require('../model/SendReport'), require('../model/SendTestSms'), require('../model/UpdateCampaignStatus'), require('../model/UpdateSmsCampaign'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.SMSCampaignsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSmsCampaign, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetSmsCampaign, root.SibApiV3Sdk.GetSmsCampaigns, root.SibApiV3Sdk.PostSendSmsTestFailed, root.SibApiV3Sdk.RequestSMSRecipientExport, root.SibApiV3Sdk.SendReport, root.SibApiV3Sdk.SendTestSms, root.SibApiV3Sdk.UpdateCampaignStatus, root.SibApiV3Sdk.UpdateSmsCampaign);
+    root.SibApiV3Sdk.SMSCampaignsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSmsCampaign, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetSmsCampaign, root.SibApiV3Sdk.GetSmsCampaigns, root.SibApiV3Sdk.PostSendSmsTestFailed, root.SibApiV3Sdk.RequestSmsRecipientExport, root.SibApiV3Sdk.SendReport, root.SibApiV3Sdk.SendTestSms, root.SibApiV3Sdk.UpdateCampaignStatus, root.SibApiV3Sdk.UpdateSmsCampaign);
   }
-}(this, function(ApiClient, CreateModel, CreateSmsCampaign, CreatedProcessId, ErrorModel, GetSmsCampaign, GetSmsCampaigns, PostSendSmsTestFailed, RequestSMSRecipientExport, SendReport, SendTestSms, UpdateCampaignStatus, UpdateSmsCampaign) {
+}(this, function(ApiClient, CreateModel, CreateSmsCampaign, CreatedProcessId, ErrorModel, GetSmsCampaign, GetSmsCampaigns, PostSendSmsTestFailed, RequestSmsRecipientExport, SendReport, SendTestSms, UpdateCampaignStatus, UpdateSmsCampaign) {
   'use strict';
 
   /**
@@ -54,12 +54,12 @@
      * @param {module:model/CreateSmsCampaign} createSmsCampaign Values to create an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
      */
-    this.createSMSCampaignWithHttpInfo = function(createSmsCampaign) {
+    this.createSmsCampaignWithHttpInfo = function(createSmsCampaign) {
       var postBody = createSmsCampaign;
 
       // verify the required parameter 'createSmsCampaign' is set
       if (createSmsCampaign === undefined || createSmsCampaign === null) {
-        throw new Error("Missing the required parameter 'createSmsCampaign' when calling createSMSCampaign");
+        throw new Error("Missing the required parameter 'createSmsCampaign' when calling createSmsCampaign");
       }
 
 
@@ -89,8 +89,8 @@
      * @param {module:model/CreateSmsCampaign} createSmsCampaign Values to create an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
      */
-    this.createSMSCampaign = function(createSmsCampaign) {
-      return this.createSMSCampaignWithHttpInfo(createSmsCampaign)
+    this.createSmsCampaign = function(createSmsCampaign) {
+      return this.createSmsCampaignWithHttpInfo(createSmsCampaign)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -102,12 +102,12 @@
      * @param {Number} campaignId id of the SMS campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.deleteSMSCampaignsWithHttpInfo = function(campaignId) {
+    this.deleteSmsCampaignWithHttpInfo = function(campaignId) {
       var postBody = null;
 
       // verify the required parameter 'campaignId' is set
       if (campaignId === undefined || campaignId === null) {
-        throw new Error("Missing the required parameter 'campaignId' when calling deleteSMSCampaigns");
+        throw new Error("Missing the required parameter 'campaignId' when calling deleteSmsCampaign");
       }
 
 
@@ -138,61 +138,8 @@
      * @param {Number} campaignId id of the SMS campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.deleteSMSCampaigns = function(campaignId) {
-      return this.deleteSMSCampaignsWithHttpInfo(campaignId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Returns the informations for all your created SMS campaigns
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.status Status of campaign.
-     * @param {Number} opts.limit Number limitation for the result returned (default to 500)
-     * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmsCampaigns} and HTTP response
-     */
-    this.getSMSCampaignsWithHttpInfo = function(opts) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'status': opts['status'],
-        'limit': opts['limit'],
-        'offset': opts['offset']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['api-key'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = GetSmsCampaigns;
-
-      return this.apiClient.callApi(
-        '/smsCampaigns', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Returns the informations for all your created SMS campaigns
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.status Status of campaign.
-     * @param {Number} opts.limit Number limitation for the result returned (default to 500)
-     * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmsCampaigns}
-     */
-    this.getSMSCampaigns = function(opts) {
-      return this.getSMSCampaignsWithHttpInfo(opts)
+    this.deleteSmsCampaign = function(campaignId) {
+      return this.deleteSmsCampaignWithHttpInfo(campaignId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -256,20 +203,73 @@
 
 
     /**
+     * Returns the informations for all your created SMS campaigns
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.status Status of campaign.
+     * @param {Number} opts.limit Number limitation for the result returned (default to 500)
+     * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmsCampaigns} and HTTP response
+     */
+    this.getSmsCampaignsWithHttpInfo = function(opts) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'status': opts['status'],
+        'limit': opts['limit'],
+        'offset': opts['offset']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = GetSmsCampaigns;
+
+      return this.apiClient.callApi(
+        '/smsCampaigns', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Returns the informations for all your created SMS campaigns
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.status Status of campaign.
+     * @param {Number} opts.limit Number limitation for the result returned (default to 500)
+     * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmsCampaigns}
+     */
+    this.getSmsCampaigns = function(opts) {
+      return this.getSmsCampaignsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Exports the recipients of the specified campaign.
      * It returns the background process ID which on completion calls the notify URL that you have set in the input.
      * @param {Number} campaignId id of the campaign
      * @param {Object} opts Optional parameters
-     * @param {module:model/RequestSMSRecipientExport} opts.recipientExport Values to send for a recipient export request
+     * @param {module:model/RequestSmsRecipientExport} opts.recipientExport Values to send for a recipient export request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreatedProcessId} and HTTP response
      */
-    this.requestSMSRecipientExportWithHttpInfo = function(campaignId, opts) {
+    this.requestSmsRecipientExportWithHttpInfo = function(campaignId, opts) {
       opts = opts || {};
       var postBody = opts['recipientExport'];
 
       // verify the required parameter 'campaignId' is set
       if (campaignId === undefined || campaignId === null) {
-        throw new Error("Missing the required parameter 'campaignId' when calling requestSMSRecipientExport");
+        throw new Error("Missing the required parameter 'campaignId' when calling requestSmsRecipientExport");
       }
 
 
@@ -300,11 +300,11 @@
      * It returns the background process ID which on completion calls the notify URL that you have set in the input.
      * @param {Number} campaignId id of the campaign
      * @param {Object} opts Optional parameters
-     * @param {module:model/RequestSMSRecipientExport} opts.recipientExport Values to send for a recipient export request
+     * @param {module:model/RequestSmsRecipientExport} opts.recipientExport Values to send for a recipient export request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreatedProcessId}
      */
-    this.requestSMSRecipientExport = function(campaignId, opts) {
-      return this.requestSMSRecipientExportWithHttpInfo(campaignId, opts)
+    this.requestSmsRecipientExport = function(campaignId, opts) {
+      return this.requestSmsRecipientExportWithHttpInfo(campaignId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -316,12 +316,12 @@
      * @param {Number} campaignId id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.sendSMSCampaignNowWithHttpInfo = function(campaignId) {
+    this.sendSmsCampaignNowWithHttpInfo = function(campaignId) {
       var postBody = null;
 
       // verify the required parameter 'campaignId' is set
       if (campaignId === undefined || campaignId === null) {
-        throw new Error("Missing the required parameter 'campaignId' when calling sendSMSCampaignNow");
+        throw new Error("Missing the required parameter 'campaignId' when calling sendSmsCampaignNow");
       }
 
 
@@ -352,8 +352,8 @@
      * @param {Number} campaignId id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.sendSMSCampaignNow = function(campaignId) {
-      return this.sendSMSCampaignNowWithHttpInfo(campaignId)
+    this.sendSmsCampaignNow = function(campaignId) {
+      return this.sendSmsCampaignNowWithHttpInfo(campaignId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -367,17 +367,17 @@
      * @param {module:model/SendReport} sendReport Values for send a report
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.sendSMSReportWithHttpInfo = function(campaignId, sendReport) {
+    this.sendSmsReportWithHttpInfo = function(campaignId, sendReport) {
       var postBody = sendReport;
 
       // verify the required parameter 'campaignId' is set
       if (campaignId === undefined || campaignId === null) {
-        throw new Error("Missing the required parameter 'campaignId' when calling sendSMSReport");
+        throw new Error("Missing the required parameter 'campaignId' when calling sendSmsReport");
       }
 
       // verify the required parameter 'sendReport' is set
       if (sendReport === undefined || sendReport === null) {
-        throw new Error("Missing the required parameter 'sendReport' when calling sendSMSReport");
+        throw new Error("Missing the required parameter 'sendReport' when calling sendSmsReport");
       }
 
 
@@ -410,8 +410,8 @@
      * @param {module:model/SendReport} sendReport Values for send a report
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.sendSMSReport = function(campaignId, sendReport) {
-      return this.sendSMSReportWithHttpInfo(campaignId, sendReport)
+    this.sendSmsReport = function(campaignId, sendReport) {
+      return this.sendSmsReportWithHttpInfo(campaignId, sendReport)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -475,62 +475,6 @@
 
 
     /**
-     * Update the campaign status
-     * @param {Number} campaignId id of the campaign
-     * @param {module:model/UpdateCampaignStatus} status Status of the campaign.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    this.updateSMSCampaignStatusWithHttpInfo = function(campaignId, status) {
-      var postBody = status;
-
-      // verify the required parameter 'campaignId' is set
-      if (campaignId === undefined || campaignId === null) {
-        throw new Error("Missing the required parameter 'campaignId' when calling updateSMSCampaignStatus");
-      }
-
-      // verify the required parameter 'status' is set
-      if (status === undefined || status === null) {
-        throw new Error("Missing the required parameter 'status' when calling updateSMSCampaignStatus");
-      }
-
-
-      var pathParams = {
-        'campaignId': campaignId
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['api-key'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/smsCampaigns/{campaignId}/status', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Update the campaign status
-     * @param {Number} campaignId id of the campaign
-     * @param {module:model/UpdateCampaignStatus} status Status of the campaign.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    this.updateSMSCampaignStatus = function(campaignId, status) {
-      return this.updateSMSCampaignStatusWithHttpInfo(campaignId, status)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
      * Updates an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/UpdateSmsCampaign} updateSmsCampaign Values to update an SMS Campaign
@@ -580,6 +524,62 @@
      */
     this.updateSmsCampaign = function(campaignId, updateSmsCampaign) {
       return this.updateSmsCampaignWithHttpInfo(campaignId, updateSmsCampaign)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Update the campaign status
+     * @param {Number} campaignId id of the campaign
+     * @param {module:model/UpdateCampaignStatus} status Status of the campaign.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.updateSmsCampaignStatusWithHttpInfo = function(campaignId, status) {
+      var postBody = status;
+
+      // verify the required parameter 'campaignId' is set
+      if (campaignId === undefined || campaignId === null) {
+        throw new Error("Missing the required parameter 'campaignId' when calling updateSmsCampaignStatus");
+      }
+
+      // verify the required parameter 'status' is set
+      if (status === undefined || status === null) {
+        throw new Error("Missing the required parameter 'status' when calling updateSmsCampaignStatus");
+      }
+
+
+      var pathParams = {
+        'campaignId': campaignId
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/smsCampaigns/{campaignId}/status', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Update the campaign status
+     * @param {Number} campaignId id of the campaign
+     * @param {module:model/UpdateCampaignStatus} status Status of the campaign.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.updateSmsCampaignStatus = function(campaignId, status) {
+      return this.updateSmsCampaignStatusWithHttpInfo(campaignId, status)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

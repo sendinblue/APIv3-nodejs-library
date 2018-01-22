@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.RequestSMSRecipientExport();
+    instance = new SibApiV3Sdk.RequestSmsRecipientExport();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,22 +50,22 @@
       object[property] = value;
   }
 
-  describe('RequestSMSRecipientExport', function() {
-    it('should create an instance of RequestSMSRecipientExport', function() {
-      // uncomment below and update the code to test RequestSMSRecipientExport
-      //var instane = new SibApiV3Sdk.RequestSMSRecipientExport();
-      //expect(instance).to.be.a(SibApiV3Sdk.RequestSMSRecipientExport);
+  describe('RequestSmsRecipientExport', function() {
+    it('should create an instance of RequestSmsRecipientExport', function() {
+      // uncomment below and update the code to test RequestSmsRecipientExport
+      //var instane = new SibApiV3Sdk.RequestSmsRecipientExport();
+      //expect(instance).to.be.a(SibApiV3Sdk.RequestSmsRecipientExport);
     });
 
     it('should have the property notifyURL (base name: "notifyURL")', function() {
       // uncomment below and update the code to test the property notifyURL
-      //var instane = new SibApiV3Sdk.RequestSMSRecipientExport();
+      //var instane = new SibApiV3Sdk.RequestSmsRecipientExport();
       //expect(instance).to.be();
     });
 
     it('should have the property recipientsType (base name: "recipientsType")', function() {
       // uncomment below and update the code to test the property recipientsType
-      //var instane = new SibApiV3Sdk.RequestSMSRecipientExport();
+      //var instane = new SibApiV3Sdk.RequestSmsRecipientExport();
       //expect(instance).to.be();
     });
 

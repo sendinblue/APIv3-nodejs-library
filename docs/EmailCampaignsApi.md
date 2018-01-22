@@ -5,7 +5,7 @@ All URIs are relative to *https://api.sendinblue.com/v3*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createEmailCampaign**](EmailCampaignsApi.md#createEmailCampaign) | **POST** /emailCampaigns | Create an email campaign
-[**deleteEmailCampaigns**](EmailCampaignsApi.md#deleteEmailCampaigns) | **DELETE** /emailCampaigns/{campaignId} | Delete an email campaign
+[**deleteEmailCampaign**](EmailCampaignsApi.md#deleteEmailCampaign) | **DELETE** /emailCampaigns/{campaignId} | Delete an email campaign
 [**emailExportRecipients**](EmailCampaignsApi.md#emailExportRecipients) | **POST** /emailCampaigns/{campaignId}/exportRecipients | Export the recipients of a campaign
 [**getEmailCampaign**](EmailCampaignsApi.md#getEmailCampaign) | **GET** /emailCampaigns/{campaignId} | Get campaign informations
 [**getEmailCampaigns**](EmailCampaignsApi.md#getEmailCampaigns) | **GET** /emailCampaigns | Return all your created campaigns
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**sendReport**](EmailCampaignsApi.md#sendReport) | **POST** /emailCampaigns/{campaignId}/sendReport | Send the report of a campaigns
 [**sendTestEmail**](EmailCampaignsApi.md#sendTestEmail) | **POST** /emailCampaigns/{campaignId}/sendTest | Send an email campaign to your test list
 [**updateCampaignStatus**](EmailCampaignsApi.md#updateCampaignStatus) | **PUT** /emailCampaigns/{campaignId}/status | Update a campaign status
-[**updateEmailCampaigns**](EmailCampaignsApi.md#updateEmailCampaigns) | **PUT** /emailCampaigns/{campaignId} | Update a campaign
+[**updateEmailCampaign**](EmailCampaignsApi.md#updateEmailCampaign) | **PUT** /emailCampaigns/{campaignId} | Update a campaign
 
 
 <a name="createEmailCampaign"></a>
@@ -64,9 +64,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="deleteEmailCampaigns"></a>
-# **deleteEmailCampaigns**
-> deleteEmailCampaigns(campaignId)
+<a name="deleteEmailCampaign"></a>
+# **deleteEmailCampaign**
+> deleteEmailCampaign(campaignId)
 
 Delete an email campaign
 
@@ -85,7 +85,7 @@ var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | id of the campaign
 
-apiInstance.deleteEmailCampaigns(campaignId).then(function() {
+apiInstance.deleteEmailCampaign(campaignId).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);
@@ -470,9 +470,9 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="updateEmailCampaigns"></a>
-# **updateEmailCampaigns**
-> updateEmailCampaigns(campaignId, emailCampaign)
+<a name="updateEmailCampaign"></a>
+# **updateEmailCampaign**
+> updateEmailCampaign(campaignId, emailCampaign)
 
 Update a campaign
 
@@ -493,7 +493,7 @@ var campaignId = 789; // Number | Id of the campaign
 
 var emailCampaign = new SibApiV3Sdk.UpdateEmailCampaign(); // UpdateEmailCampaign | Values to update a campaign
 
-apiInstance.updateEmailCampaigns(campaignId, emailCampaign).then(function() {
+apiInstance.updateEmailCampaign(campaignId, emailCampaign).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);

@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_date** | **Date** | Date for which statistics are retrieved | 
-**tag** | **String** | Tag specified in request | 
 **requests** | **Number** | Number of requests for the date | 
 **delivered** | **Number** | Number of delivered SMS for the date | 
 **hardBounces** | **Number** | Number of hardbounces for the date | 

@@ -48,19 +48,17 @@
    * @param _date {Date} Date on which the event has been generated
    * @param messageId {String} Message ID which generated the event
    * @param event {module:model/GetSmsEventReportEvents.EventEnum} Event which occurred
-   * @param reason {String} Reason of bounce (only available if the event is hardbounce or softbounce)
-   * @param tag {String} Tag of the SMS which generated the event
    */
-  var exports = function(phoneNumber, _date, messageId, event, reason, tag) {
+  var exports = function(phoneNumber, _date, messageId, event) {
     var _this = this;
 
     _this['phoneNumber'] = phoneNumber;
     _this['date'] = _date;
     _this['messageId'] = messageId;
     _this['event'] = event;
-    _this['reason'] = reason;
 
-    _this['tag'] = tag;
+
+
   };
 
   /**

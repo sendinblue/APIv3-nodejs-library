@@ -102,12 +102,12 @@
      * @param {Number} campaignId id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.deleteEmailCampaignsWithHttpInfo = function(campaignId) {
+    this.deleteEmailCampaignWithHttpInfo = function(campaignId) {
       var postBody = null;
 
       // verify the required parameter 'campaignId' is set
       if (campaignId === undefined || campaignId === null) {
-        throw new Error("Missing the required parameter 'campaignId' when calling deleteEmailCampaigns");
+        throw new Error("Missing the required parameter 'campaignId' when calling deleteEmailCampaign");
       }
 
 
@@ -138,8 +138,8 @@
      * @param {Number} campaignId id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.deleteEmailCampaigns = function(campaignId) {
-      return this.deleteEmailCampaignsWithHttpInfo(campaignId)
+    this.deleteEmailCampaign = function(campaignId) {
+      return this.deleteEmailCampaignWithHttpInfo(campaignId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -530,17 +530,17 @@
      * @param {module:model/UpdateEmailCampaign} emailCampaign Values to update a campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.updateEmailCampaignsWithHttpInfo = function(campaignId, emailCampaign) {
+    this.updateEmailCampaignWithHttpInfo = function(campaignId, emailCampaign) {
       var postBody = emailCampaign;
 
       // verify the required parameter 'campaignId' is set
       if (campaignId === undefined || campaignId === null) {
-        throw new Error("Missing the required parameter 'campaignId' when calling updateEmailCampaigns");
+        throw new Error("Missing the required parameter 'campaignId' when calling updateEmailCampaign");
       }
 
       // verify the required parameter 'emailCampaign' is set
       if (emailCampaign === undefined || emailCampaign === null) {
-        throw new Error("Missing the required parameter 'emailCampaign' when calling updateEmailCampaigns");
+        throw new Error("Missing the required parameter 'emailCampaign' when calling updateEmailCampaign");
       }
 
 
@@ -572,8 +572,8 @@
      * @param {module:model/UpdateEmailCampaign} emailCampaign Values to update a campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.updateEmailCampaigns = function(campaignId, emailCampaign) {
-      return this.updateEmailCampaignsWithHttpInfo(campaignId, emailCampaign)
+    this.updateEmailCampaign = function(campaignId, emailCampaign) {
+      return this.updateEmailCampaignWithHttpInfo(campaignId, emailCampaign)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

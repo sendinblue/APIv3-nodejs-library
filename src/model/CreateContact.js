@@ -54,6 +54,7 @@
 
 
 
+
   };
 
   /**
@@ -84,6 +85,9 @@
       }
       if (data.hasOwnProperty('updateEnabled')) {
         obj['updateEnabled'] = ApiClient.convertToType(data['updateEnabled'], 'Boolean');
+      }
+      if (data.hasOwnProperty('smtpBlacklistSender')) {
+        obj['smtpBlacklistSender'] = ApiClient.convertToType(data['smtpBlacklistSender'], ['String']);
       }
     }
     return obj;
@@ -120,6 +124,11 @@
    * @default false
    */
   exports.prototype['updateEnabled'] = false;
+  /**
+   * SMTP forbidden sender for contact. Use only for email Contact ( only available if updateEnabled = true )
+   * @member {Array.<String>} smtpBlacklistSender
+   */
+  exports.prototype['smtpBlacklistSender'] = undefined;
 
 
 

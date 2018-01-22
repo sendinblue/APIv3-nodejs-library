@@ -87,6 +87,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property smtpBlacklistSender (base name: "smtpBlacklistSender")', function() {
+      // uncomment below and update the code to test the property smtpBlacklistSender
+      //var instane = new SibApiV3Sdk.UpdateContact();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

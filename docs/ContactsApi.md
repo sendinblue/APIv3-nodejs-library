@@ -587,7 +587,7 @@ var apiInstance = new SibApiV3Sdk.ContactsApi();
 var opts = { 
   'limit': 50, // Number | Number of documents per page
   'offset': 0, // Number | Index of the first document of the page
-  'modifiedSince': new Date("2013-10-20T19:20:30+01:00") // Date | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
+  'modifiedSince': new Date("2013-10-20T19:20:30+01:00") // Date | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
 };
 apiInstance.getContacts(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -603,7 +603,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| Number of documents per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
- **modifiedSince** | **Date**| Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) | [optional] 
+ **modifiedSince** | **Date**| Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result. | [optional] 
 
 ### Return type
 
@@ -640,7 +640,7 @@ var apiInstance = new SibApiV3Sdk.ContactsApi();
 var listId = 789; // Number | Id of the list
 
 var opts = { 
-  'modifiedSince': new Date("2013-10-20T19:20:30+01:00"), // Date | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
+  'modifiedSince': new Date("2013-10-20T19:20:30+01:00"), // Date | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
   'limit': 50, // Number | Number of documents per page
   'offset': 0 // Number | Index of the first document of the page
 };
@@ -657,7 +657,7 @@ apiInstance.getContactsFromList(listId, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **Number**| Id of the list | 
- **modifiedSince** | **Date**| Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) | [optional] 
+ **modifiedSince** | **Date**| Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result. | [optional] 
  **limit** | **Number**| Number of documents per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
 

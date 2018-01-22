@@ -61,10 +61,10 @@
         done();
       });
     });
-    describe('deleteEmailCampaigns', function() {
-      it('should call deleteEmailCampaigns successfully', function(done) {
-        //uncomment below and update the code to test deleteEmailCampaigns
-        //instance.deleteEmailCampaigns(function(error) {
+    describe('deleteEmailCampaign', function() {
+      it('should call deleteEmailCampaign successfully', function(done) {
+        //uncomment below and update the code to test deleteEmailCampaign
+        //instance.deleteEmailCampaign(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -141,10 +141,10 @@
         done();
       });
     });
-    describe('updateEmailCampaigns', function() {
-      it('should call updateEmailCampaigns successfully', function(done) {
-        //uncomment below and update the code to test updateEmailCampaigns
-        //instance.updateEmailCampaigns(function(error) {
+    describe('updateEmailCampaign', function() {
+      it('should call updateEmailCampaign successfully', function(done) {
+        //uncomment below and update the code to test updateEmailCampaign
+        //instance.updateEmailCampaign(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -45,7 +45,6 @@
    * @alias module:model/GetReportsReports
    * @class
    * @param _date {Date} Date of the statistics
-   * @param tag {String} Reminder of the specified tag (only available if a specific tag has been specified in the request)
    * @param requests {Number} Number of requests for the date
    * @param delivered {Number} Number of delivered emails for the date
    * @param hardBounces {Number} Number of hardbounces for the date
@@ -58,11 +57,10 @@
    * @param blocked {Number} Number of blocked emails for the date
    * @param invalid {Number} Number of invalid emails for the date
    */
-  var exports = function(_date, tag, requests, delivered, hardBounces, softBounces, clicks, uniqueClicks, opens, uniqueOpens, spamReports, blocked, invalid) {
+  var exports = function(_date, requests, delivered, hardBounces, softBounces, clicks, uniqueClicks, opens, uniqueOpens, spamReports, blocked, invalid) {
     var _this = this;
 
     _this['date'] = _date;
-    _this['tag'] = tag;
     _this['requests'] = requests;
     _this['delivered'] = delivered;
     _this['hardBounces'] = hardBounces;
@@ -89,9 +87,6 @@
 
       if (data.hasOwnProperty('date')) {
         obj['date'] = ApiClient.convertToType(data['date'], 'Date');
-      }
-      if (data.hasOwnProperty('tag')) {
-        obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
       }
       if (data.hasOwnProperty('requests')) {
         obj['requests'] = ApiClient.convertToType(data['requests'], 'Number');
@@ -135,11 +130,6 @@
    * @member {Date} date
    */
   exports.prototype['date'] = undefined;
-  /**
-   * Reminder of the specified tag (only available if a specific tag has been specified in the request)
-   * @member {String} tag
-   */
-  exports.prototype['tag'] = undefined;
   /**
    * Number of requests for the date
    * @member {Number} requests

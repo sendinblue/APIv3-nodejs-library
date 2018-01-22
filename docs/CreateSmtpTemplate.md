@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **subject** | **String** | Subject of the template | 
 **replyTo** | **String** | Email on which campaign recipients will be able to reply to | [optional] 
 **toField** | **String** | This is to personalize the «To» Field. If you want to include the first name and last name of your recipient, add [FNAME] [LNAME]. To use the contact attributes here, these must already exist in SendinBlue account | [optional] 
-**attachmentUrl** | **String** | Absolute url of the attachment (no local file). Extensions allowed xlsx, xls, ods, docx, docm, doc, csv, pdf, txt, gif, jpg, jpeg, png, tif, tiff and rtf | [optional] 
+**attachmentUrl** | **String** | Absolute url of the attachment (no local file). Extension allowed: xlsx, xls, ods, docx, docm, doc, csv, pdf, txt, gif, jpg, jpeg, png, tif, tiff, rtf, bmp, cgm, css, shtml, html, htm, zip, xml, ppt, pptx, tar, ez, ics, mobi, msg, pub and eps | [optional] 
 **isActive** | **Boolean** | Status of template. isActive &#x3D; true means template is active and isActive &#x3D; false means template is inactive | [optional] 
 
 

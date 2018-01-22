@@ -63,12 +63,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property tag (base name: "tag")', function() {
-      // uncomment below and update the code to test the property tag
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
-      //expect(instance).to.be();
-    });
-
     it('should have the property requests (base name: "requests")', function() {
       // uncomment below and update the code to test the property requests
       //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
