@@ -51,30 +51,20 @@
   }
 
   describe('SMSCampaignsApi', function() {
-    describe('createSMSCampaign', function() {
-      it('should call createSMSCampaign successfully', function(done) {
-        //uncomment below and update the code to test createSMSCampaign
-        //instance.createSMSCampaign(function(error) {
+    describe('createSmsCampaign', function() {
+      it('should call createSmsCampaign successfully', function(done) {
+        //uncomment below and update the code to test createSmsCampaign
+        //instance.createSmsCampaign(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('deleteSMSCampaigns', function() {
-      it('should call deleteSMSCampaigns successfully', function(done) {
-        //uncomment below and update the code to test deleteSMSCampaigns
-        //instance.deleteSMSCampaigns(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getSMSCampaigns', function() {
-      it('should call getSMSCampaigns successfully', function(done) {
-        //uncomment below and update the code to test getSMSCampaigns
-        //instance.getSMSCampaigns(function(error) {
+    describe('deleteSmsCampaign', function() {
+      it('should call deleteSmsCampaign successfully', function(done) {
+        //uncomment below and update the code to test deleteSmsCampaign
+        //instance.deleteSmsCampaign(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -91,30 +81,40 @@
         done();
       });
     });
-    describe('requestSMSRecipientExport', function() {
-      it('should call requestSMSRecipientExport successfully', function(done) {
-        //uncomment below and update the code to test requestSMSRecipientExport
-        //instance.requestSMSRecipientExport(function(error) {
+    describe('getSmsCampaigns', function() {
+      it('should call getSmsCampaigns successfully', function(done) {
+        //uncomment below and update the code to test getSmsCampaigns
+        //instance.getSmsCampaigns(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('sendSMSCampaignNow', function() {
-      it('should call sendSMSCampaignNow successfully', function(done) {
-        //uncomment below and update the code to test sendSMSCampaignNow
-        //instance.sendSMSCampaignNow(function(error) {
+    describe('requestSmsRecipientExport', function() {
+      it('should call requestSmsRecipientExport successfully', function(done) {
+        //uncomment below and update the code to test requestSmsRecipientExport
+        //instance.requestSmsRecipientExport(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('sendSMSReport', function() {
-      it('should call sendSMSReport successfully', function(done) {
-        //uncomment below and update the code to test sendSMSReport
-        //instance.sendSMSReport(function(error) {
+    describe('sendSmsCampaignNow', function() {
+      it('should call sendSmsCampaignNow successfully', function(done) {
+        //uncomment below and update the code to test sendSmsCampaignNow
+        //instance.sendSmsCampaignNow(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sendSmsReport', function() {
+      it('should call sendSmsReport successfully', function(done) {
+        //uncomment below and update the code to test sendSmsReport
+        //instance.sendSmsReport(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -131,20 +131,20 @@
         done();
       });
     });
-    describe('updateSMSCampaignStatus', function() {
-      it('should call updateSMSCampaignStatus successfully', function(done) {
-        //uncomment below and update the code to test updateSMSCampaignStatus
-        //instance.updateSMSCampaignStatus(function(error) {
+    describe('updateSmsCampaign', function() {
+      it('should call updateSmsCampaign successfully', function(done) {
+        //uncomment below and update the code to test updateSmsCampaign
+        //instance.updateSmsCampaign(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('updateSmsCampaign', function() {
-      it('should call updateSmsCampaign successfully', function(done) {
-        //uncomment below and update the code to test updateSmsCampaign
-        //instance.updateSmsCampaign(function(error) {
+    describe('updateSmsCampaignStatus', function() {
+      it('should call updateSmsCampaignStatus successfully', function(done) {
+        //uncomment below and update the code to test updateSmsCampaignStatus
+        //instance.updateSmsCampaignStatus(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

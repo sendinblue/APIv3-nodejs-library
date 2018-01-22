@@ -165,7 +165,7 @@
    */
   exports.prototype['htmlUrl'] = undefined;
   /**
-   * Sending UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * Sending UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
    * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
@@ -189,7 +189,7 @@
    */
   exports.prototype['recipients'] = undefined;
   /**
-   * Absolute url of the attachment (no local file). Extensions allowed xlsx, xls, ods, docx, docm, doc, csv, pdf, txt, gif, jpg, jpeg, png, tif, tiff and rtf
+   * Absolute url of the attachment (no local file). Extension allowed: xlsx, xls, ods, docx, docm, doc, csv, pdf, txt, gif, jpg, jpeg, png, tif, tiff, rtf, bmp, cgm, css, shtml, html, htm, zip, xml, ppt, pptx, tar, ez, ics, mobi, msg, pub and eps
    * @member {String} attachmentUrl
    */
   exports.prototype['attachmentUrl'] = undefined;

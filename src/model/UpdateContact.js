@@ -53,6 +53,7 @@
 
 
 
+
   };
 
   /**
@@ -80,6 +81,9 @@
       }
       if (data.hasOwnProperty('unlinkListIds')) {
         obj['unlinkListIds'] = ApiClient.convertToType(data['unlinkListIds'], ['Number']);
+      }
+      if (data.hasOwnProperty('smtpBlacklistSender')) {
+        obj['smtpBlacklistSender'] = ApiClient.convertToType(data['smtpBlacklistSender'], ['String']);
       }
     }
     return obj;
@@ -109,6 +113,11 @@
    * @member {Array.<Number>} unlinkListIds
    */
   exports.prototype['unlinkListIds'] = undefined;
+  /**
+   * SMTP forbidden sender for contact. Use only for email Contact
+   * @member {Array.<String>} smtpBlacklistSender
+   */
+  exports.prototype['smtpBlacklistSender'] = undefined;
 
 
 

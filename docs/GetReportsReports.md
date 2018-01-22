@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_date** | **Date** | Date of the statistics | 
-**tag** | **String** | Reminder of the specified tag (only available if a specific tag has been specified in the request) | 
 **requests** | **Number** | Number of requests for the date | 
 **delivered** | **Number** | Number of delivered emails for the date | 
 **hardBounces** | **Number** | Number of hardbounces for the date | 

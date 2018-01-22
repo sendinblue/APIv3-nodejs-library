@@ -45,7 +45,6 @@
    * @alias module:model/GetTransacSmsReportReports
    * @class
    * @param _date {Date} Date for which statistics are retrieved
-   * @param tag {String} Tag specified in request
    * @param requests {Number} Number of requests for the date
    * @param delivered {Number} Number of delivered SMS for the date
    * @param hardBounces {Number} Number of hardbounces for the date
@@ -56,11 +55,10 @@
    * @param accepted {Number} Number of accepted for the date
    * @param rejected {Number} Number of rejected for the date
    */
-  var exports = function(_date, tag, requests, delivered, hardBounces, softBounces, blocked, unsubscribed, replied, accepted, rejected) {
+  var exports = function(_date, requests, delivered, hardBounces, softBounces, blocked, unsubscribed, replied, accepted, rejected) {
     var _this = this;
 
     _this['date'] = _date;
-    _this['tag'] = tag;
     _this['requests'] = requests;
     _this['delivered'] = delivered;
     _this['hardBounces'] = hardBounces;
@@ -85,9 +83,6 @@
 
       if (data.hasOwnProperty('date')) {
         obj['date'] = ApiClient.convertToType(data['date'], 'Date');
-      }
-      if (data.hasOwnProperty('tag')) {
-        obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
       }
       if (data.hasOwnProperty('requests')) {
         obj['requests'] = ApiClient.convertToType(data['requests'], 'Number');
@@ -125,11 +120,6 @@
    * @member {Date} date
    */
   exports.prototype['date'] = undefined;
-  /**
-   * Tag specified in request
-   * @member {String} tag
-   */
-  exports.prototype['tag'] = undefined;
   /**
    * Number of requests for the date
    * @member {Number} requests

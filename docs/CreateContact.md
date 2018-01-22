@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **smsBlacklisted** | **Boolean** | Blacklist the contact for SMS (smsBlacklisted &#x3D; true) | [optional] 
 **listIds** | **[Number]** | Ids of the lists to add the contact to | [optional] 
 **updateEnabled** | **Boolean** | Facilitate to update existing contact in same request (updateEnabled &#x3D; true) | [optional] [default to false]
+**smtpBlacklistSender** | **[String]** | SMTP forbidden sender for contact. Use only for email Contact ( only available if updateEnabled &#x3D; true ) | [optional] 
 
 

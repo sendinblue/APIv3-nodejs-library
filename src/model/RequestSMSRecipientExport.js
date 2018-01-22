@@ -26,7 +26,7 @@
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.RequestSMSRecipientExport = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.RequestSmsRecipientExport = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,16 +35,16 @@
 
 
   /**
-   * The RequestSMSRecipientExport model module.
-   * @module model/RequestSMSRecipientExport
+   * The RequestSmsRecipientExport model module.
+   * @module model/RequestSmsRecipientExport
    * @version 3.x.x
    */
 
   /**
-   * Constructs a new <code>RequestSMSRecipientExport</code>.
-   * @alias module:model/RequestSMSRecipientExport
+   * Constructs a new <code>RequestSmsRecipientExport</code>.
+   * @alias module:model/RequestSmsRecipientExport
    * @class
-   * @param recipientsType {module:model/RequestSMSRecipientExport.RecipientsTypeEnum} Filter the recipients based on how they interacted with the campaign
+   * @param recipientsType {module:model/RequestSmsRecipientExport.RecipientsTypeEnum} Filter the recipients based on how they interacted with the campaign
    */
   var exports = function(recipientsType) {
     var _this = this;
@@ -54,11 +54,11 @@
   };
 
   /**
-   * Constructs a <code>RequestSMSRecipientExport</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>RequestSmsRecipientExport</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RequestSMSRecipientExport} obj Optional instance to populate.
-   * @return {module:model/RequestSMSRecipientExport} The populated <code>RequestSMSRecipientExport</code> instance.
+   * @param {module:model/RequestSmsRecipientExport} obj Optional instance to populate.
+   * @return {module:model/RequestSmsRecipientExport} The populated <code>RequestSmsRecipientExport</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -81,7 +81,7 @@
   exports.prototype['notifyURL'] = undefined;
   /**
    * Filter the recipients based on how they interacted with the campaign
-   * @member {module:model/RequestSMSRecipientExport.RecipientsTypeEnum} recipientsType
+   * @member {module:model/RequestSmsRecipientExport.RecipientsTypeEnum} recipientsType
    * @default 'all'
    */
   exports.prototype['recipientsType'] = 'all';

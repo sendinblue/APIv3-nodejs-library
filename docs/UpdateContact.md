@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **smsBlacklisted** | **Boolean** | Blacklist the contact for SMS (smsBlacklisted &#x3D; true) | [optional] 
 **listIds** | **[Number]** | Ids of the lists to add the contact to | [optional] 
 **unlinkListIds** | **[Number]** | Ids of the lists to remove the contact from | [optional] 
+**smtpBlacklistSender** | **[String]** | SMTP forbidden sender for contact. Use only for email Contact | [optional] 
 
 

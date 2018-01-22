@@ -4,21 +4,21 @@ All URIs are relative to *https://api.sendinblue.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createSMSCampaign**](SMSCampaignsApi.md#createSMSCampaign) | **POST** /smsCampaigns | Creates an SMS campaign
-[**deleteSMSCampaigns**](SMSCampaignsApi.md#deleteSMSCampaigns) | **DELETE** /smsCampaigns/{campaignId} | Delete the SMS campaign
-[**getSMSCampaigns**](SMSCampaignsApi.md#getSMSCampaigns) | **GET** /smsCampaigns | Returns the informations for all your created SMS campaigns
+[**createSmsCampaign**](SMSCampaignsApi.md#createSmsCampaign) | **POST** /smsCampaigns | Creates an SMS campaign
+[**deleteSmsCampaign**](SMSCampaignsApi.md#deleteSmsCampaign) | **DELETE** /smsCampaigns/{campaignId} | Delete the SMS campaign
 [**getSmsCampaign**](SMSCampaignsApi.md#getSmsCampaign) | **GET** /smsCampaigns/{campaignId} | Get an SMS campaign
-[**requestSMSRecipientExport**](SMSCampaignsApi.md#requestSMSRecipientExport) | **POST** /smsCampaigns/{campaignId}/exportRecipients | Exports the recipients of the specified campaign.
-[**sendSMSCampaignNow**](SMSCampaignsApi.md#sendSMSCampaignNow) | **POST** /smsCampaigns/{campaignId}/sendNow | Send your SMS campaign immediately
-[**sendSMSReport**](SMSCampaignsApi.md#sendSMSReport) | **POST** /smsCampaigns/{campaignId}/sendReport | Send report of SMS campaigns
+[**getSmsCampaigns**](SMSCampaignsApi.md#getSmsCampaigns) | **GET** /smsCampaigns | Returns the informations for all your created SMS campaigns
+[**requestSmsRecipientExport**](SMSCampaignsApi.md#requestSmsRecipientExport) | **POST** /smsCampaigns/{campaignId}/exportRecipients | Exports the recipients of the specified campaign.
+[**sendSmsCampaignNow**](SMSCampaignsApi.md#sendSmsCampaignNow) | **POST** /smsCampaigns/{campaignId}/sendNow | Send your SMS campaign immediately
+[**sendSmsReport**](SMSCampaignsApi.md#sendSmsReport) | **POST** /smsCampaigns/{campaignId}/sendReport | Send report of SMS campaigns
 [**sendTestSms**](SMSCampaignsApi.md#sendTestSms) | **POST** /smsCampaigns/{campaignId}/sendTest | Send an SMS
-[**updateSMSCampaignStatus**](SMSCampaignsApi.md#updateSMSCampaignStatus) | **PUT** /smsCampaigns/{campaignId}/status | Update the campaign status
 [**updateSmsCampaign**](SMSCampaignsApi.md#updateSmsCampaign) | **PUT** /smsCampaigns/{campaignId} | Updates an SMS campaign
+[**updateSmsCampaignStatus**](SMSCampaignsApi.md#updateSmsCampaignStatus) | **PUT** /smsCampaigns/{campaignId}/status | Update the campaign status
 
 
-<a name="createSMSCampaign"></a>
-# **createSMSCampaign**
-> CreateModel createSMSCampaign(createSmsCampaign)
+<a name="createSmsCampaign"></a>
+# **createSmsCampaign**
+> CreateModel createSmsCampaign(createSmsCampaign)
 
 Creates an SMS campaign
 
@@ -37,7 +37,7 @@ var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
 var createSmsCampaign = new SibApiV3Sdk.CreateSmsCampaign(); // CreateSmsCampaign | Values to create an SMS Campaign
 
-apiInstance.createSMSCampaign(createSmsCampaign).then(function(data) {
+apiInstance.createSmsCampaign(createSmsCampaign).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -64,9 +64,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="deleteSMSCampaigns"></a>
-# **deleteSMSCampaigns**
-> deleteSMSCampaigns(campaignId)
+<a name="deleteSmsCampaign"></a>
+# **deleteSmsCampaign**
+> deleteSmsCampaign(campaignId)
 
 Delete the SMS campaign
 
@@ -85,7 +85,7 @@ var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
 var campaignId = 789; // Number | id of the SMS campaign
 
-apiInstance.deleteSMSCampaigns(campaignId).then(function() {
+apiInstance.deleteSmsCampaign(campaignId).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);
@@ -102,59 +102,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getSMSCampaigns"></a>
-# **getSMSCampaigns**
-> GetSmsCampaigns getSMSCampaigns(opts)
-
-Returns the informations for all your created SMS campaigns
-
-### Example
-```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
-
-// Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
-
-var opts = { 
-  'status': "status_example", // String | Status of campaign.
-  'limit': 500, // Number | Number limitation for the result returned
-  'offset': 0 // Number | Beginning point in the list to retrieve from.
-};
-apiInstance.getSMSCampaigns(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **status** | **String**| Status of campaign. | [optional] 
- **limit** | **Number**| Number limitation for the result returned | [optional] [default to 500]
- **offset** | **Number**| Beginning point in the list to retrieve from. | [optional] [default to 0]
-
-### Return type
-
-[**GetSmsCampaigns**](GetSmsCampaigns.md)
 
 ### Authorization
 
@@ -216,9 +163,62 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="requestSMSRecipientExport"></a>
-# **requestSMSRecipientExport**
-> CreatedProcessId requestSMSRecipientExport(campaignId, opts)
+<a name="getSmsCampaigns"></a>
+# **getSmsCampaigns**
+> GetSmsCampaigns getSmsCampaigns(opts)
+
+Returns the informations for all your created SMS campaigns
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
+
+var opts = { 
+  'status': "status_example", // String | Status of campaign.
+  'limit': 500, // Number | Number limitation for the result returned
+  'offset': 0 // Number | Beginning point in the list to retrieve from.
+};
+apiInstance.getSmsCampaigns(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **status** | **String**| Status of campaign. | [optional] 
+ **limit** | **Number**| Number limitation for the result returned | [optional] [default to 500]
+ **offset** | **Number**| Beginning point in the list to retrieve from. | [optional] [default to 0]
+
+### Return type
+
+[**GetSmsCampaigns**](GetSmsCampaigns.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="requestSmsRecipientExport"></a>
+# **requestSmsRecipientExport**
+> CreatedProcessId requestSmsRecipientExport(campaignId, opts)
 
 Exports the recipients of the specified campaign.
 
@@ -240,9 +240,9 @@ var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 var campaignId = 789; // Number | id of the campaign
 
 var opts = { 
-  'recipientExport': new SibApiV3Sdk.RequestSMSRecipientExport() // RequestSMSRecipientExport | Values to send for a recipient export request
+  'recipientExport': new SibApiV3Sdk.RequestSmsRecipientExport() // RequestSmsRecipientExport | Values to send for a recipient export request
 };
-apiInstance.requestSMSRecipientExport(campaignId, opts).then(function(data) {
+apiInstance.requestSmsRecipientExport(campaignId, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -255,7 +255,7 @@ apiInstance.requestSMSRecipientExport(campaignId, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **Number**| id of the campaign | 
- **recipientExport** | [**RequestSMSRecipientExport**](RequestSMSRecipientExport.md)| Values to send for a recipient export request | [optional] 
+ **recipientExport** | [**RequestSmsRecipientExport**](RequestSmsRecipientExport.md)| Values to send for a recipient export request | [optional] 
 
 ### Return type
 
@@ -270,9 +270,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="sendSMSCampaignNow"></a>
-# **sendSMSCampaignNow**
-> sendSMSCampaignNow(campaignId)
+<a name="sendSmsCampaignNow"></a>
+# **sendSmsCampaignNow**
+> sendSmsCampaignNow(campaignId)
 
 Send your SMS campaign immediately
 
@@ -291,7 +291,7 @@ var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
 var campaignId = 789; // Number | id of the campaign
 
-apiInstance.sendSMSCampaignNow(campaignId).then(function() {
+apiInstance.sendSmsCampaignNow(campaignId).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);
@@ -318,9 +318,9 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="sendSMSReport"></a>
-# **sendSMSReport**
-> sendSMSReport(campaignId, sendReport)
+<a name="sendSmsReport"></a>
+# **sendSmsReport**
+> sendSmsReport(campaignId, sendReport)
 
 Send report of SMS campaigns
 
@@ -343,7 +343,7 @@ var campaignId = 789; // Number | id of the campaign
 
 var sendReport = new SibApiV3Sdk.SendReport(); // SendReport | Values for send a report
 
-apiInstance.sendSMSReport(campaignId, sendReport).then(function() {
+apiInstance.sendSmsReport(campaignId, sendReport).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);
@@ -422,57 +422,6 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="updateSMSCampaignStatus"></a>
-# **updateSMSCampaignStatus**
-> updateSMSCampaignStatus(campaignId, status)
-
-Update the campaign status
-
-### Example
-```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
-
-// Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
-
-var campaignId = 789; // Number | id of the campaign
-
-var status = new SibApiV3Sdk.UpdateCampaignStatus(); // UpdateCampaignStatus | Status of the campaign.
-
-apiInstance.updateSMSCampaignStatus(campaignId, status).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **campaignId** | **Number**| id of the campaign | 
- **status** | [**UpdateCampaignStatus**](UpdateCampaignStatus.md)| Status of the campaign. | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a name="updateSmsCampaign"></a>
 # **updateSmsCampaign**
 > updateSmsCampaign(campaignId, updateSmsCampaign)
@@ -510,6 +459,57 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **Number**| id of the SMS campaign | 
  **updateSmsCampaign** | [**UpdateSmsCampaign**](UpdateSmsCampaign.md)| Values to update an SMS Campaign | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="updateSmsCampaignStatus"></a>
+# **updateSmsCampaignStatus**
+> updateSmsCampaignStatus(campaignId, status)
+
+Update the campaign status
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
+
+var campaignId = 789; // Number | id of the campaign
+
+var status = new SibApiV3Sdk.UpdateCampaignStatus(); // UpdateCampaignStatus | Status of the campaign.
+
+apiInstance.updateSmsCampaignStatus(campaignId, status).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaignId** | **Number**| id of the campaign | 
+ **status** | [**UpdateCampaignStatus**](UpdateCampaignStatus.md)| Status of the campaign. | 
 
 ### Return type
 
