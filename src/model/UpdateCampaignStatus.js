@@ -37,7 +37,7 @@
   /**
    * The UpdateCampaignStatus model module.
    * @module model/UpdateCampaignStatus
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

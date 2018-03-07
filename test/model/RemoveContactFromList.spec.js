@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.AddRemoveContactToList();
+    instance = new SibApiV3Sdk.RemoveContactFromList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,16 +50,22 @@
       object[property] = value;
   }
 
-  describe('AddRemoveContactToList', function() {
-    it('should create an instance of AddRemoveContactToList', function() {
-      // uncomment below and update the code to test AddRemoveContactToList
-      //var instane = new SibApiV3Sdk.AddRemoveContactToList();
-      //expect(instance).to.be.a(SibApiV3Sdk.AddRemoveContactToList);
+  describe('RemoveContactFromList', function() {
+    it('should create an instance of RemoveContactFromList', function() {
+      // uncomment below and update the code to test RemoveContactFromList
+      //var instane = new SibApiV3Sdk.RemoveContactFromList();
+      //expect(instance).to.be.a(SibApiV3Sdk.RemoveContactFromList);
     });
 
     it('should have the property emails (base name: "emails")', function() {
       // uncomment below and update the code to test the property emails
-      //var instane = new SibApiV3Sdk.AddRemoveContactToList();
+      //var instane = new SibApiV3Sdk.RemoveContactFromList();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property all (base name: "all")', function() {
+      // uncomment below and update the code to test the property all
+      //var instane = new SibApiV3Sdk.RemoveContactFromList();
       //expect(instance).to.be();
     });
 

@@ -37,7 +37,7 @@
   /**
    * The GetContactCampaignStatsUnsubscriptions model module.
    * @module model/GetContactCampaignStatsUnsubscriptions
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

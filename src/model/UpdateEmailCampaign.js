@@ -37,7 +37,7 @@
   /**
    * The UpdateEmailCampaign model module.
    * @module model/UpdateEmailCampaign
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**
@@ -173,7 +173,7 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * This is to personalize the «To» Field. If you want to include the first name and last name of your recipient, add [FNAME] [LNAME]. To use the contact attributes here, these must already exist in SendinBlue account
+   * This is to personalize the «To» Field. If you want to include the first name and last name of your recipient, add {FNAME} {LNAME}. To use the contact attributes here, these must already exist in SendinBlue account
    * @member {String} toField
    */
   exports.prototype['toField'] = undefined;

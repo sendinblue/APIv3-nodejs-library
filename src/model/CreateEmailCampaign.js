@@ -37,7 +37,7 @@
   /**
    * The CreateEmailCampaign model module.
    * @module model/CreateEmailCampaign
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**
@@ -180,7 +180,7 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * To personalize the «To» Field, e.g. if you want to include the first name and last name of your recipient, use [FNAME] [LNAME]. These attributes must already exist in your contact database
+   * To personalize the «To» Field, e.g. if you want to include the first name and last name of your recipient, use {FNAME} {LNAME}. These attributes must already exist in your contact database
    * @member {String} toField
    */
   exports.prototype['toField'] = undefined;

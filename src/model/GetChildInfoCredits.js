@@ -37,7 +37,7 @@
   /**
    * The GetChildInfoCredits model module.
    * @module model/GetChildInfoCredits
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

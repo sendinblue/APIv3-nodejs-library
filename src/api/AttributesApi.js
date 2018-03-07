@@ -34,7 +34,7 @@
   /**
    * Attributes service.
    * @module api/AttributesApi
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

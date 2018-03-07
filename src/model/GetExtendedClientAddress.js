@@ -37,7 +37,7 @@
   /**
    * The GetExtendedClientAddress model module.
    * @module model/GetExtendedClientAddress
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

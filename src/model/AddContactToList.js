@@ -26,7 +26,7 @@
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.AddRemoveContactToList = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.AddContactToList = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,14 +35,14 @@
 
 
   /**
-   * The AddRemoveContactToList model module.
-   * @module model/AddRemoveContactToList
-   * @version 3.x.x
+   * The AddContactToList model module.
+   * @module model/AddContactToList
+   * @version 5.x.x
    */
 
   /**
-   * Constructs a new <code>AddRemoveContactToList</code>.
-   * @alias module:model/AddRemoveContactToList
+   * Constructs a new <code>AddContactToList</code>.
+   * @alias module:model/AddContactToList
    * @class
    */
   var exports = function() {
@@ -52,11 +52,11 @@
   };
 
   /**
-   * Constructs a <code>AddRemoveContactToList</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>AddContactToList</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/AddRemoveContactToList} obj Optional instance to populate.
-   * @return {module:model/AddRemoveContactToList} The populated <code>AddRemoveContactToList</code> instance.
+   * @param {module:model/AddContactToList} obj Optional instance to populate.
+   * @return {module:model/AddContactToList} The populated <code>AddContactToList</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -70,7 +70,7 @@
   }
 
   /**
-   * Emails to add or remove from a list
+   * Emails to add to a list
    * @member {Array.<String>} emails
    */
   exports.prototype['emails'] = undefined;

@@ -37,7 +37,7 @@
   /**
    * The GetChildInfoIps model module.
    * @module model/GetChildInfoIps
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

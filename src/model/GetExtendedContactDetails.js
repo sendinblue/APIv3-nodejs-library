@@ -37,7 +37,7 @@
   /**
    * The GetExtendedContactDetails model module.
    * @module model/GetExtendedContactDetails
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

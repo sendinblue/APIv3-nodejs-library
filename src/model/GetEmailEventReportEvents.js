@@ -37,7 +37,7 @@
   /**
    * The GetEmailEventReportEvents model module.
    * @module model/GetEmailEventReportEvents
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**
@@ -48,10 +48,8 @@
    * @param _date {Date} UTC date-time on which the event has been generated
    * @param messageId {String} Message ID which generated the event
    * @param event {module:model/GetEmailEventReportEvents.EventEnum} Event which occurred
-   * @param tag {String} Tag of the email which generated the event
-   * @param from {String} Sender email from which the emails are sent
    */
-  var exports = function(email, _date, messageId, event, tag, from) {
+  var exports = function(email, _date, messageId, event) {
     var _this = this;
 
     _this['email'] = email;
@@ -60,10 +58,10 @@
     _this['messageId'] = messageId;
     _this['event'] = event;
 
-    _this['tag'] = tag;
 
 
-    _this['from'] = from;
+
+
   };
 
   /**

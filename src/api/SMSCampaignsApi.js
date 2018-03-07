@@ -34,7 +34,7 @@
   /**
    * SMSCampaigns service.
    * @module api/SMSCampaignsApi
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

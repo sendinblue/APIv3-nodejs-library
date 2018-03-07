@@ -37,7 +37,7 @@
   /**
    * The UpdateSender model module.
    * @module model/UpdateSender
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**
