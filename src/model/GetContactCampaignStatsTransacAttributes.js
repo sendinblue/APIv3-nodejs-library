@@ -37,7 +37,7 @@
   /**
    * The GetContactCampaignStatsTransacAttributes model module.
    * @module model/GetContactCampaignStatsTransacAttributes
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

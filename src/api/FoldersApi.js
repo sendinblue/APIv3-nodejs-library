@@ -34,7 +34,7 @@
   /**
    * Folders service.
    * @module api/FoldersApi
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

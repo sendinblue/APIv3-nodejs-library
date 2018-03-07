@@ -37,7 +37,7 @@
   /**
    * The GetAccountRelayData model module.
    * @module model/GetAccountRelayData
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

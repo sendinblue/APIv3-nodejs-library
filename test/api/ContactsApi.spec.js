@@ -241,10 +241,10 @@
         done();
       });
     });
-    describe('removeContactToList', function() {
-      it('should call removeContactToList successfully', function(done) {
-        //uncomment below and update the code to test removeContactToList
-        //instance.removeContactToList(function(error) {
+    describe('removeContactFromList', function() {
+      it('should call removeContactFromList successfully', function(done) {
+        //uncomment below and update the code to test removeContactFromList
+        //instance.removeContactFromList(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

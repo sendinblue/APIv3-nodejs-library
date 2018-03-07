@@ -37,7 +37,7 @@
   /**
    * The CreateSender model module.
    * @module model/CreateSender
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The SendReportEmail model module.
    * @module model/SendReportEmail
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

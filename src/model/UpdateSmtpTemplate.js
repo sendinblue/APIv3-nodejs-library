@@ -37,7 +37,7 @@
   /**
    * The UpdateSmtpTemplate model module.
    * @module model/UpdateSmtpTemplate
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**
@@ -140,7 +140,7 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * To personalize the «To» Field, e.g. if you want to include the first name and last name of your recipient, add [FNAME] [LNAME]. These attributes must already exist in contacts database
+   * To personalize the «To» Field, e.g. if you want to include the first name and last name of your recipient, add {FNAME} {LNAME}. These attributes must already exist in contacts database
    * @member {String} toField
    */
   exports.prototype['toField'] = undefined;

@@ -37,7 +37,7 @@
   /**
    * The CreatedProcessId model module.
    * @module model/CreatedProcessId
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

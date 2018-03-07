@@ -37,7 +37,7 @@
   /**
    * The CreateUpdateFolder model module.
    * @module model/CreateUpdateFolder
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

@@ -17,64 +17,72 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetAttributesAttributes'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GetAttributesAttributes'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetAttributes = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetAttributesAttributes);
+    root.SibApiV3Sdk.RemoveContactFromList = factory(root.SibApiV3Sdk.ApiClient);
   }
-}(this, function(ApiClient, GetAttributesAttributes) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The GetAttributes model module.
-   * @module model/GetAttributes
+   * The RemoveContactFromList model module.
+   * @module model/RemoveContactFromList
    * @version 5.x.x
    */
 
   /**
-   * Constructs a new <code>GetAttributes</code>.
-   * @alias module:model/GetAttributes
+   * Constructs a new <code>RemoveContactFromList</code>.
+   * @alias module:model/RemoveContactFromList
    * @class
-   * @param attributes {Array.<module:model/GetAttributesAttributes>} Listing of available contact attributes in your account
    */
-  var exports = function(attributes) {
+  var exports = function() {
     var _this = this;
 
-    _this['attributes'] = attributes;
+
+
   };
 
   /**
-   * Constructs a <code>GetAttributes</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>RemoveContactFromList</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetAttributes} obj Optional instance to populate.
-   * @return {module:model/GetAttributes} The populated <code>GetAttributes</code> instance.
+   * @param {module:model/RemoveContactFromList} obj Optional instance to populate.
+   * @return {module:model/RemoveContactFromList} The populated <code>RemoveContactFromList</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('attributes')) {
-        obj['attributes'] = ApiClient.convertToType(data['attributes'], [GetAttributesAttributes]);
+      if (data.hasOwnProperty('emails')) {
+        obj['emails'] = ApiClient.convertToType(data['emails'], ['String']);
+      }
+      if (data.hasOwnProperty('all')) {
+        obj['all'] = ApiClient.convertToType(data['all'], 'Boolean');
       }
     }
     return obj;
   }
 
   /**
-   * Listing of available contact attributes in your account
-   * @member {Array.<module:model/GetAttributesAttributes>} attributes
+   * Required if 'all' is false. Emails to remove from a list
+   * @member {Array.<String>} emails
    */
-  exports.prototype['attributes'] = undefined;
+  exports.prototype['emails'] = undefined;
+  /**
+   * Required if 'emails' is empty. Remove all existing contacts from a list
+   * @member {Boolean} all
+   */
+  exports.prototype['all'] = undefined;
 
 
 

@@ -16,68 +16,53 @@
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    // AMD.
+    define(['expect.js', '../../src/index'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
-    }
-    root.SibApiV3Sdk.ManageIp = factory(root.SibApiV3Sdk.ApiClient);
+    factory(root.expect, root.SibApiV3Sdk);
   }
-}(this, function(ApiClient) {
+}(this, function(expect, SibApiV3Sdk) {
   'use strict';
 
+  var instance;
 
+  beforeEach(function() {
+    instance = new SibApiV3Sdk.AddContactToList();
+  });
 
-
-  /**
-   * The ManageIp model module.
-   * @module model/ManageIp
-   * @version 5.x.x
-   */
-
-  /**
-   * Constructs a new <code>ManageIp</code>.
-   * @alias module:model/ManageIp
-   * @class
-   */
-  var exports = function() {
-    var _this = this;
-
-
-  };
-
-  /**
-   * Constructs a <code>ManageIp</code> from a plain JavaScript object, optionally creating a new instance.
-   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-   * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ManageIp} obj Optional instance to populate.
-   * @return {module:model/ManageIp} The populated <code>ManageIp</code> instance.
-   */
-  exports.constructFromObject = function(data, obj) {
-    if (data) {
-      obj = obj || new exports();
-
-      if (data.hasOwnProperty('ipId')) {
-        obj['ipId'] = ApiClient.convertToType(data['ipId'], 'Number');
-      }
-    }
-    return obj;
+  var getProperty = function(object, getter, property) {
+    // Use getter method if present; otherwise, get the property directly.
+    if (typeof object[getter] === 'function')
+      return object[getter]();
+    else
+      return object[property];
   }
 
-  /**
-   * ID of the IP
-   * @member {Number} ipId
-   */
-  exports.prototype['ipId'] = undefined;
+  var setProperty = function(object, setter, property, value) {
+    // Use setter method if present; otherwise, set the property directly.
+    if (typeof object[setter] === 'function')
+      object[setter](value);
+    else
+      object[property] = value;
+  }
 
+  describe('AddContactToList', function() {
+    it('should create an instance of AddContactToList', function() {
+      // uncomment below and update the code to test AddContactToList
+      //var instane = new SibApiV3Sdk.AddContactToList();
+      //expect(instance).to.be.a(SibApiV3Sdk.AddContactToList);
+    });
 
+    it('should have the property emails (base name: "emails")', function() {
+      // uncomment below and update the code to test the property emails
+      //var instane = new SibApiV3Sdk.AddContactToList();
+      //expect(instance).to.be();
+    });
 
-  return exports;
+  });
+
 }));
-
-

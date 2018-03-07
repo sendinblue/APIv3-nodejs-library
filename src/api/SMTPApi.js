@@ -34,7 +34,7 @@
   /**
    * SMTP service.
    * @module api/SMTPApi
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The GetContactCampaignStatsClicked model module.
    * @module model/GetContactCampaignStatsClicked
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**

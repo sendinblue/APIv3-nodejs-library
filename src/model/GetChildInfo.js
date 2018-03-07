@@ -37,7 +37,7 @@
   /**
    * The GetChildInfo model module.
    * @module model/GetChildInfo
-   * @version 3.x.x
+   * @version 5.x.x
    */
 
   /**
