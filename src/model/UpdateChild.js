@@ -37,7 +37,7 @@
   /**
    * The UpdateChild model module.
    * @module model/UpdateChild
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
@@ -47,7 +47,6 @@
    */
   var exports = function() {
     var _this = this;
-
 
 
 
@@ -82,9 +81,6 @@
       if (data.hasOwnProperty('password')) {
         obj['password'] = ApiClient.convertToType(data['password'], 'String');
       }
-      if (data.hasOwnProperty('ips')) {
-        obj['ips'] = ApiClient.convertToType(data['ips'], ['Number']);
-      }
     }
     return obj;
   }
@@ -114,10 +110,6 @@
    * @member {String} password
    */
   exports.prototype['password'] = undefined;
-  /**
-   * @member {Array.<Number>} ips
-   */
-  exports.prototype['ips'] = undefined;
 
 
 

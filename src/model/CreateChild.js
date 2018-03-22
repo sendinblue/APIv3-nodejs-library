@@ -37,7 +37,7 @@
   /**
    * The CreateChild model module.
    * @module model/CreateChild
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

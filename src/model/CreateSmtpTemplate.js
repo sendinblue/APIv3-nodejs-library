@@ -37,7 +37,7 @@
   /**
    * The CreateSmtpTemplate model module.
    * @module model/CreateSmtpTemplate
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

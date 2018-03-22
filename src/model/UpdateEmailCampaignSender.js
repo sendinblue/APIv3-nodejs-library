@@ -37,7 +37,7 @@
   /**
    * The UpdateEmailCampaignSender model module.
    * @module model/UpdateEmailCampaignSender
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

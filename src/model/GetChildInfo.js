@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetChildInfoApiKeys', 'model/GetChildInfoCredits', 'model/GetChildInfoIps', 'model/GetChildInfoStatistics', 'model/GetClient'], factory);
+    define(['ApiClient', 'model/GetChildInfoApiKeys', 'model/GetChildInfoCredits', 'model/GetChildInfoStatistics', 'model/GetClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GetChildInfoApiKeys'), require('./GetChildInfoCredits'), require('./GetChildInfoIps'), require('./GetChildInfoStatistics'), require('./GetClient'));
+    module.exports = factory(require('../ApiClient'), require('./GetChildInfoApiKeys'), require('./GetChildInfoCredits'), require('./GetChildInfoStatistics'), require('./GetClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetChildInfo = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetChildInfoApiKeys, root.SibApiV3Sdk.GetChildInfoCredits, root.SibApiV3Sdk.GetChildInfoIps, root.SibApiV3Sdk.GetChildInfoStatistics, root.SibApiV3Sdk.GetClient);
+    root.SibApiV3Sdk.GetChildInfo = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetChildInfoApiKeys, root.SibApiV3Sdk.GetChildInfoCredits, root.SibApiV3Sdk.GetChildInfoStatistics, root.SibApiV3Sdk.GetClient);
   }
-}(this, function(ApiClient, GetChildInfoApiKeys, GetChildInfoCredits, GetChildInfoIps, GetChildInfoStatistics, GetClient) {
+}(this, function(ApiClient, GetChildInfoApiKeys, GetChildInfoCredits, GetChildInfoStatistics, GetClient) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The GetChildInfo model module.
    * @module model/GetChildInfo
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
@@ -84,10 +84,10 @@
         obj['password'] = ApiClient.convertToType(data['password'], 'String');
       }
       if (data.hasOwnProperty('ips')) {
-        obj['ips'] = ApiClient.convertToType(data['ips'], [GetChildInfoIps]);
+        obj['ips'] = ApiClient.convertToType(data['ips'], ['String']);
       }
       if (data.hasOwnProperty('apiKeys')) {
-        obj['apiKeys'] = ApiClient.convertToType(data['apiKeys'], [GetChildInfoApiKeys]);
+        obj['apiKeys'] = GetChildInfoApiKeys.constructFromObject(data['apiKeys']);
       }
     }
     return obj;
@@ -108,12 +108,11 @@
   exports.prototype['password'] = undefined;
   /**
    * IP(s) associated to a child account user
-   * @member {Array.<module:model/GetChildInfoIps>} ips
+   * @member {Array.<String>} ips
    */
   exports.prototype['ips'] = undefined;
   /**
-   * API Keys associated to child account
-   * @member {Array.<module:model/GetChildInfoApiKeys>} apiKeys
+   * @member {module:model/GetChildInfoApiKeys} apiKeys
    */
   exports.prototype['apiKeys'] = undefined;
 

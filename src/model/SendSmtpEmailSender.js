@@ -37,11 +37,12 @@
   /**
    * The SendSmtpEmailSender model module.
    * @module model/SendSmtpEmailSender
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
    * Constructs a new <code>SendSmtpEmailSender</code>.
+   * Sender from which emails are sent. Mandatory if &#39;templateId&#39; is not passed
    * @alias module:model/SendSmtpEmailSender
    * @class
    * @param email {String} Sender Email from which the emails are sent

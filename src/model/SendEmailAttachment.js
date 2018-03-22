@@ -37,7 +37,7 @@
   /**
    * The SendEmailAttachment model module.
    * @module model/SendEmailAttachment
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

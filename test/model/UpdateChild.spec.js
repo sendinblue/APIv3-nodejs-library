@@ -87,12 +87,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property ips (base name: "ips")', function() {
-      // uncomment below and update the code to test the property ips
-      //var instane = new SibApiV3Sdk.UpdateChild();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

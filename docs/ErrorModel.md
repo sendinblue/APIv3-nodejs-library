@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 * `document_not_found` (value: `"document_not_found"`)
 
-* `reseller_permission` (value: `"reseller_permission"`)
+* `reseller_permission_denied` (value: `"reseller_permission_denied"`)
 
 * `not_enough_credits` (value: `"not_enough_credits"`)
 

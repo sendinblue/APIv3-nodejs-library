@@ -37,7 +37,7 @@
   /**
    * The RemoveCredits model module.
    * @module model/RemoveCredits
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
@@ -74,12 +74,12 @@
   }
 
   /**
-   * SMS credits to be removed from the child account
+   * Required if email credits are empty. SMS credits to be removed from the child account
    * @member {Number} sms
    */
   exports.prototype['sms'] = undefined;
   /**
-   * Email credits to be removed from the child account
+   * Required if sms credits are empty. Email credits to be removed from the child account
    * @member {Number} email
    */
   exports.prototype['email'] = undefined;

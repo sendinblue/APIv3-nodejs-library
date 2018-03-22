@@ -57,8 +57,8 @@
       //expect(instance).to.be.a(SibApiV3Sdk.ManageIp);
     });
 
-    it('should have the property ipId (base name: "ipId")', function() {
-      // uncomment below and update the code to test the property ipId
+    it('should have the property ip (base name: "ip")', function() {
+      // uncomment below and update the code to test the property ip
       //var instane = new SibApiV3Sdk.ManageIp();
       //expect(instance).to.be();
     });

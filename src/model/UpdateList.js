@@ -37,7 +37,7 @@
   /**
    * The UpdateList model module.
    * @module model/UpdateList
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
