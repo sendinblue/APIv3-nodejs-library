@@ -37,7 +37,7 @@
   /**
    * The GetExtendedContactDetailsStatisticsClicked model module.
    * @module model/GetExtendedContactDetailsStatisticsClicked
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

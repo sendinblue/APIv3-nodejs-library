@@ -37,7 +37,7 @@
   /**
    * The SendSmtpEmailReplyTo model module.
    * @module model/SendSmtpEmailReplyTo
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The GetReports model module.
    * @module model/GetReports
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

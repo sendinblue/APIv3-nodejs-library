@@ -37,7 +37,7 @@
   /**
    * The GetEmailCampaign model module.
    * @module model/GetEmailCampaign
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
@@ -59,11 +59,15 @@
    * @param tag {String} Tag of the campaign
    * @param createdAt {Date} Creation UTC date-time of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param modifiedAt {Date} UTC date-time of last modification of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param recipients {Object} 
+   * @param statistics {Object} 
    */
-  var exports = function(id, name, subject, type, status, testSent, header, footer, replyTo, toField, htmlContent, tag, createdAt, modifiedAt) {
+  var exports = function(id, name, subject, type, status, testSent, header, footer, replyTo, toField, htmlContent, tag, createdAt, modifiedAt, recipients, statistics) {
     var _this = this;
 
     GetExtendedCampaignOverview.call(_this, id, name, subject, type, status, testSent, header, footer, replyTo, toField, htmlContent, tag, createdAt, modifiedAt);
+    _this['recipients'] = recipients;
+    _this['statistics'] = statistics;
   };
 
   /**
@@ -78,10 +82,24 @@
       obj = obj || new exports();
 
       GetExtendedCampaignOverview.constructFromObject(data, obj);
+      if (data.hasOwnProperty('recipients')) {
+        obj['recipients'] = ApiClient.convertToType(data['recipients'], Object);
+      }
+      if (data.hasOwnProperty('statistics')) {
+        obj['statistics'] = ApiClient.convertToType(data['statistics'], Object);
+      }
     }
     return obj;
   }
 
+  /**
+   * @member {Object} recipients
+   */
+  exports.prototype['recipients'] = undefined;
+  /**
+   * @member {Object} statistics
+   */
+  exports.prototype['statistics'] = undefined;
 
   // Implement GetExtendedCampaignOverview interface:
   /**

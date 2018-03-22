@@ -57,6 +57,18 @@
       //expect(instance).to.be.a(SibApiV3Sdk.GetSmsCampaign);
     });
 
+    it('should have the property recipients (base name: "recipients")', function() {
+      // uncomment below and update the code to test the property recipients
+      //var instane = new SibApiV3Sdk.GetSmsCampaign();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property statistics (base name: "statistics")', function() {
+      // uncomment below and update the code to test the property statistics
+      //var instane = new SibApiV3Sdk.GetSmsCampaign();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

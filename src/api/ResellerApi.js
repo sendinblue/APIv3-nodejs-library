@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddCredits', 'model/CreateChild', 'model/CreateModel', 'model/ErrorModel', 'model/GetChildInfo', 'model/GetChildrenList', 'model/ManageIp', 'model/RemainingCreditModel', 'model/RemoveCredits', 'model/UpdateChild'], factory);
+    define(['ApiClient', 'model/AddCredits', 'model/CreateChild', 'model/CreateReseller', 'model/ErrorModel', 'model/GetChildInfo', 'model/GetChildrenList', 'model/ManageIp', 'model/RemainingCreditModel', 'model/RemoveCredits', 'model/UpdateChild'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AddCredits'), require('../model/CreateChild'), require('../model/CreateModel'), require('../model/ErrorModel'), require('../model/GetChildInfo'), require('../model/GetChildrenList'), require('../model/ManageIp'), require('../model/RemainingCreditModel'), require('../model/RemoveCredits'), require('../model/UpdateChild'));
+    module.exports = factory(require('../ApiClient'), require('../model/AddCredits'), require('../model/CreateChild'), require('../model/CreateReseller'), require('../model/ErrorModel'), require('../model/GetChildInfo'), require('../model/GetChildrenList'), require('../model/ManageIp'), require('../model/RemainingCreditModel'), require('../model/RemoveCredits'), require('../model/UpdateChild'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.ResellerApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddCredits, root.SibApiV3Sdk.CreateChild, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetChildInfo, root.SibApiV3Sdk.GetChildrenList, root.SibApiV3Sdk.ManageIp, root.SibApiV3Sdk.RemainingCreditModel, root.SibApiV3Sdk.RemoveCredits, root.SibApiV3Sdk.UpdateChild);
+    root.SibApiV3Sdk.ResellerApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddCredits, root.SibApiV3Sdk.CreateChild, root.SibApiV3Sdk.CreateReseller, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetChildInfo, root.SibApiV3Sdk.GetChildrenList, root.SibApiV3Sdk.ManageIp, root.SibApiV3Sdk.RemainingCreditModel, root.SibApiV3Sdk.RemoveCredits, root.SibApiV3Sdk.UpdateChild);
   }
-}(this, function(ApiClient, AddCredits, CreateChild, CreateModel, ErrorModel, GetChildInfo, GetChildrenList, ManageIp, RemainingCreditModel, RemoveCredits, UpdateChild) {
+}(this, function(ApiClient, AddCredits, CreateChild, CreateReseller, ErrorModel, GetChildInfo, GetChildrenList, ManageIp, RemainingCreditModel, RemoveCredits, UpdateChild) {
   'use strict';
 
   /**
    * Reseller service.
    * @module api/ResellerApi
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
@@ -51,16 +51,16 @@
 
     /**
      * Add Email and/or SMS credits to a specific child account
-     * @param {Number} childId id of reseller&#39;s child
+     * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/AddCredits} addCredits Values to post to add credit to a specific child account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemainingCreditModel} and HTTP response
      */
-    this.addCreditsWithHttpInfo = function(childId, addCredits) {
+    this.addCreditsWithHttpInfo = function(childAuthKey, addCredits) {
       var postBody = addCredits;
 
-      // verify the required parameter 'childId' is set
-      if (childId === undefined || childId === null) {
-        throw new Error("Missing the required parameter 'childId' when calling addCredits");
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling addCredits");
       }
 
       // verify the required parameter 'addCredits' is set
@@ -70,7 +70,7 @@
 
 
       var pathParams = {
-        'childId': childId
+        'childAuthKey': childAuthKey
       };
       var queryParams = {
       };
@@ -85,7 +85,7 @@
       var returnType = RemainingCreditModel;
 
       return this.apiClient.callApi(
-        '/reseller/children/{childId}/credits/add', 'POST',
+        '/reseller/children/{childAuthKey}/credits/add', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -93,12 +93,12 @@
 
     /**
      * Add Email and/or SMS credits to a specific child account
-     * @param {Number} childId id of reseller&#39;s child
+     * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/AddCredits} addCredits Values to post to add credit to a specific child account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemainingCreditModel}
      */
-    this.addCredits = function(childId, addCredits) {
-      return this.addCreditsWithHttpInfo(childId, addCredits)
+    this.addCredits = function(childAuthKey, addCredits) {
+      return this.addCreditsWithHttpInfo(childAuthKey, addCredits)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -107,26 +107,26 @@
 
     /**
      * Associate a dedicated IP to the child
-     * @param {Number} childId id of reseller&#39;s child
-     * @param {module:model/ManageIp} ipId IP&#39;s id
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @param {module:model/ManageIp} ip IP to associate
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.associateIpToChildWithHttpInfo = function(childId, ipId) {
-      var postBody = ipId;
+    this.associateIpToChildWithHttpInfo = function(childAuthKey, ip) {
+      var postBody = ip;
 
-      // verify the required parameter 'childId' is set
-      if (childId === undefined || childId === null) {
-        throw new Error("Missing the required parameter 'childId' when calling associateIpToChild");
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling associateIpToChild");
       }
 
-      // verify the required parameter 'ipId' is set
-      if (ipId === undefined || ipId === null) {
-        throw new Error("Missing the required parameter 'ipId' when calling associateIpToChild");
+      // verify the required parameter 'ip' is set
+      if (ip === undefined || ip === null) {
+        throw new Error("Missing the required parameter 'ip' when calling associateIpToChild");
       }
 
 
       var pathParams = {
-        'childId': childId
+        'childAuthKey': childAuthKey
       };
       var queryParams = {
       };
@@ -141,7 +141,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/reseller/children/{childId}/ips/associate', 'POST',
+        '/reseller/children/{childAuthKey}/ips/associate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -149,12 +149,12 @@
 
     /**
      * Associate a dedicated IP to the child
-     * @param {Number} childId id of reseller&#39;s child
-     * @param {module:model/ManageIp} ipId IP&#39;s id
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @param {module:model/ManageIp} ip IP to associate
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.associateIpToChild = function(childId, ipId) {
-      return this.associateIpToChildWithHttpInfo(childId, ipId)
+    this.associateIpToChild = function(childAuthKey, ip) {
+      return this.associateIpToChildWithHttpInfo(childAuthKey, ip)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -165,7 +165,7 @@
      * Creates a reseller child
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateChild} opts.resellerChild reseller child to add
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateReseller} and HTTP response
      */
     this.createResellerChildWithHttpInfo = function(opts) {
       opts = opts || {};
@@ -184,7 +184,7 @@
       var authNames = ['api-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = CreateModel;
+      var returnType = CreateReseller;
 
       return this.apiClient.callApi(
         '/reseller/children', 'POST',
@@ -197,7 +197,7 @@
      * Creates a reseller child
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateChild} opts.resellerChild reseller child to add
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateReseller}
      */
     this.createResellerChild = function(opts) {
       return this.createResellerChildWithHttpInfo(opts)
@@ -208,21 +208,21 @@
 
 
     /**
-     * Deletes a single reseller child based on the childId supplied
-     * @param {Number} childId id of reseller&#39;s child
+     * Deletes a single reseller child based on the childAuthKey supplied
+     * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.deleteResellerChildWithHttpInfo = function(childId) {
+    this.deleteResellerChildWithHttpInfo = function(childAuthKey) {
       var postBody = null;
 
-      // verify the required parameter 'childId' is set
-      if (childId === undefined || childId === null) {
-        throw new Error("Missing the required parameter 'childId' when calling deleteResellerChild");
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling deleteResellerChild");
       }
 
 
       var pathParams = {
-        'childId': childId
+        'childAuthKey': childAuthKey
       };
       var queryParams = {
       };
@@ -237,19 +237,19 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/reseller/children/{childId}', 'DELETE',
+        '/reseller/children/{childAuthKey}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Deletes a single reseller child based on the childId supplied
-     * @param {Number} childId id of reseller&#39;s child
+     * Deletes a single reseller child based on the childAuthKey supplied
+     * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.deleteResellerChild = function(childId) {
-      return this.deleteResellerChildWithHttpInfo(childId)
+    this.deleteResellerChild = function(childAuthKey) {
+      return this.deleteResellerChildWithHttpInfo(childAuthKey)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -258,26 +258,26 @@
 
     /**
      * Dissociate a dedicated IP to the child
-     * @param {Number} childId id of reseller&#39;s child
-     * @param {module:model/ManageIp} ipId IP&#39;s id
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @param {module:model/ManageIp} ip IP to dissociate
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.dissociateIpFromChildWithHttpInfo = function(childId, ipId) {
-      var postBody = ipId;
+    this.dissociateIpFromChildWithHttpInfo = function(childAuthKey, ip) {
+      var postBody = ip;
 
-      // verify the required parameter 'childId' is set
-      if (childId === undefined || childId === null) {
-        throw new Error("Missing the required parameter 'childId' when calling dissociateIpFromChild");
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling dissociateIpFromChild");
       }
 
-      // verify the required parameter 'ipId' is set
-      if (ipId === undefined || ipId === null) {
-        throw new Error("Missing the required parameter 'ipId' when calling dissociateIpFromChild");
+      // verify the required parameter 'ip' is set
+      if (ip === undefined || ip === null) {
+        throw new Error("Missing the required parameter 'ip' when calling dissociateIpFromChild");
       }
 
 
       var pathParams = {
-        'childId': childId
+        'childAuthKey': childAuthKey
       };
       var queryParams = {
       };
@@ -292,7 +292,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/reseller/children/{childId}/ips/dissociate', 'POST',
+        '/reseller/children/{childAuthKey}/ips/dissociate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -300,12 +300,12 @@
 
     /**
      * Dissociate a dedicated IP to the child
-     * @param {Number} childId id of reseller&#39;s child
-     * @param {module:model/ManageIp} ipId IP&#39;s id
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @param {module:model/ManageIp} ip IP to dissociate
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.dissociateIpFromChild = function(childId, ipId) {
-      return this.dissociateIpFromChildWithHttpInfo(childId, ipId)
+    this.dissociateIpFromChild = function(childAuthKey, ip) {
+      return this.dissociateIpFromChildWithHttpInfo(childAuthKey, ip)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -314,20 +314,20 @@
 
     /**
      * Gets the info about a specific child account
-     * @param {Number} childId id of reseller&#39;s child
+     * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildInfo} and HTTP response
      */
-    this.getChildInfoWithHttpInfo = function(childId) {
+    this.getChildInfoWithHttpInfo = function(childAuthKey) {
       var postBody = null;
 
-      // verify the required parameter 'childId' is set
-      if (childId === undefined || childId === null) {
-        throw new Error("Missing the required parameter 'childId' when calling getChildInfo");
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling getChildInfo");
       }
 
 
       var pathParams = {
-        'childId': childId
+        'childAuthKey': childAuthKey
       };
       var queryParams = {
       };
@@ -342,7 +342,7 @@
       var returnType = GetChildInfo;
 
       return this.apiClient.callApi(
-        '/reseller/children/{childId}', 'GET',
+        '/reseller/children/{childAuthKey}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -350,11 +350,11 @@
 
     /**
      * Gets the info about a specific child account
-     * @param {Number} childId id of reseller&#39;s child
+     * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChildInfo}
      */
-    this.getChildInfo = function(childId) {
-      return this.getChildInfoWithHttpInfo(childId)
+    this.getChildInfo = function(childAuthKey) {
+      return this.getChildInfoWithHttpInfo(childAuthKey)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -404,16 +404,16 @@
 
     /**
      * Remove Email and/or SMS credits from a specific child account
-     * @param {Number} childId id of reseller&#39;s child
+     * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/RemoveCredits} removeCredits Values to post to remove email or SMS credits from a specific child account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemainingCreditModel} and HTTP response
      */
-    this.removeCreditsWithHttpInfo = function(childId, removeCredits) {
+    this.removeCreditsWithHttpInfo = function(childAuthKey, removeCredits) {
       var postBody = removeCredits;
 
-      // verify the required parameter 'childId' is set
-      if (childId === undefined || childId === null) {
-        throw new Error("Missing the required parameter 'childId' when calling removeCredits");
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling removeCredits");
       }
 
       // verify the required parameter 'removeCredits' is set
@@ -423,7 +423,7 @@
 
 
       var pathParams = {
-        'childId': childId
+        'childAuthKey': childAuthKey
       };
       var queryParams = {
       };
@@ -438,7 +438,7 @@
       var returnType = RemainingCreditModel;
 
       return this.apiClient.callApi(
-        '/reseller/children/{childId}/credits/remove', 'POST',
+        '/reseller/children/{childAuthKey}/credits/remove', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -446,12 +446,12 @@
 
     /**
      * Remove Email and/or SMS credits from a specific child account
-     * @param {Number} childId id of reseller&#39;s child
+     * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/RemoveCredits} removeCredits Values to post to remove email or SMS credits from a specific child account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemainingCreditModel}
      */
-    this.removeCredits = function(childId, removeCredits) {
-      return this.removeCreditsWithHttpInfo(childId, removeCredits)
+    this.removeCredits = function(childAuthKey, removeCredits) {
+      return this.removeCreditsWithHttpInfo(childAuthKey, removeCredits)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -459,17 +459,17 @@
 
 
     /**
-     * Updates infos of reseller&#39;s child based on the childId supplied
-     * @param {Number} childId id of reseller&#39;s child
+     * Updates infos of reseller&#39;s child based on the childAuthKey supplied
+     * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/UpdateChild} resellerChild values to update in child profile
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.updateResellerChildWithHttpInfo = function(childId, resellerChild) {
+    this.updateResellerChildWithHttpInfo = function(childAuthKey, resellerChild) {
       var postBody = resellerChild;
 
-      // verify the required parameter 'childId' is set
-      if (childId === undefined || childId === null) {
-        throw new Error("Missing the required parameter 'childId' when calling updateResellerChild");
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling updateResellerChild");
       }
 
       // verify the required parameter 'resellerChild' is set
@@ -479,7 +479,7 @@
 
 
       var pathParams = {
-        'childId': childId
+        'childAuthKey': childAuthKey
       };
       var queryParams = {
       };
@@ -494,20 +494,20 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/reseller/children/{childId}', 'PUT',
+        '/reseller/children/{childAuthKey}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Updates infos of reseller&#39;s child based on the childId supplied
-     * @param {Number} childId id of reseller&#39;s child
+     * Updates infos of reseller&#39;s child based on the childAuthKey supplied
+     * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/UpdateChild} resellerChild values to update in child profile
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.updateResellerChild = function(childId, resellerChild) {
-      return this.updateResellerChildWithHttpInfo(childId, resellerChild)
+    this.updateResellerChild = function(childAuthKey, resellerChild) {
+      return this.updateResellerChildWithHttpInfo(childAuthKey, resellerChild)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

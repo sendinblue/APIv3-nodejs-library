@@ -26,7 +26,7 @@
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetChildInfoIps = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.CreateReseller = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,56 +35,46 @@
 
 
   /**
-   * The GetChildInfoIps model module.
-   * @module model/GetChildInfoIps
-   * @version 5.x.x
+   * The CreateReseller model module.
+   * @module model/CreateReseller
+   * @version 6.x.x
    */
 
   /**
-   * Constructs a new <code>GetChildInfoIps</code>.
-   * @alias module:model/GetChildInfoIps
+   * Constructs a new <code>CreateReseller</code>.
+   * @alias module:model/CreateReseller
    * @class
-   * @param id {Number} ID of the IP
-   * @param ip {String} IP associated to the child account user
+   * @param authKey {String} AuthKey of Reseller child created
    */
-  var exports = function(id, ip) {
+  var exports = function(authKey) {
     var _this = this;
 
-    _this['id'] = id;
-    _this['ip'] = ip;
+    _this['authKey'] = authKey;
   };
 
   /**
-   * Constructs a <code>GetChildInfoIps</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>CreateReseller</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetChildInfoIps} obj Optional instance to populate.
-   * @return {module:model/GetChildInfoIps} The populated <code>GetChildInfoIps</code> instance.
+   * @param {module:model/CreateReseller} obj Optional instance to populate.
+   * @return {module:model/CreateReseller} The populated <code>CreateReseller</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-      }
-      if (data.hasOwnProperty('ip')) {
-        obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
+      if (data.hasOwnProperty('authKey')) {
+        obj['authKey'] = ApiClient.convertToType(data['authKey'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * ID of the IP
-   * @member {Number} id
+   * AuthKey of Reseller child created
+   * @member {String} authKey
    */
-  exports.prototype['id'] = undefined;
-  /**
-   * IP associated to the child account user
-   * @member {String} ip
-   */
-  exports.prototype['ip'] = undefined;
+  exports.prototype['authKey'] = undefined;
 
 
 

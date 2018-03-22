@@ -37,7 +37,7 @@
   /**
    * The RemainingCreditModelReseller model module.
    * @module model/RemainingCreditModelReseller
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The GetSmsCampaign model module.
    * @module model/GetSmsCampaign
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
@@ -54,11 +54,15 @@
    * @param sender {String} Sender of the SMS Campaign
    * @param createdAt {Date} Creation UTC date-time of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param modifiedAt {Date} UTC date-time of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @param recipients {Object} 
+   * @param statistics {Object} 
    */
-  var exports = function(id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt) {
+  var exports = function(id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt, recipients, statistics) {
     var _this = this;
 
     GetSmsCampaignOverview.call(_this, id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt);
+    _this['recipients'] = recipients;
+    _this['statistics'] = statistics;
   };
 
   /**
@@ -73,10 +77,24 @@
       obj = obj || new exports();
 
       GetSmsCampaignOverview.constructFromObject(data, obj);
+      if (data.hasOwnProperty('recipients')) {
+        obj['recipients'] = ApiClient.convertToType(data['recipients'], Object);
+      }
+      if (data.hasOwnProperty('statistics')) {
+        obj['statistics'] = ApiClient.convertToType(data['statistics'], Object);
+      }
     }
     return obj;
   }
 
+  /**
+   * @member {Object} recipients
+   */
+  exports.prototype['recipients'] = undefined;
+  /**
+   * @member {Object} statistics
+   */
+  exports.prototype['statistics'] = undefined;
 
   // Implement GetSmsCampaignOverview interface:
   /**

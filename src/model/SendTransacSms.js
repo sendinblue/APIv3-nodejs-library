@@ -37,7 +37,7 @@
   /**
    * The SendTransacSms model module.
    * @module model/SendTransacSms
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

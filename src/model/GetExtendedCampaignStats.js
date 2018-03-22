@@ -37,7 +37,7 @@
   /**
    * The GetExtendedCampaignStats model module.
    * @module model/GetExtendedCampaignStats
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The GetCampaignRecipients model module.
    * @module model/GetCampaignRecipients
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

@@ -57,20 +57,14 @@
       //expect(instance).to.be.a(SibApiV3Sdk.GetChildInfoApiKeys);
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
+    it('should have the property v2 (base name: "v2")', function() {
+      // uncomment below and update the code to test the property v2
       //var instane = new SibApiV3Sdk.GetChildInfoApiKeys();
       //expect(instance).to.be();
     });
 
-    it('should have the property key (base name: "key")', function() {
-      // uncomment below and update the code to test the property key
-      //var instane = new SibApiV3Sdk.GetChildInfoApiKeys();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property secret (base name: "secret")', function() {
-      // uncomment below and update the code to test the property secret
+    it('should have the property v3 (base name: "v3")', function() {
+      // uncomment below and update the code to test the property v3
       //var instane = new SibApiV3Sdk.GetChildInfoApiKeys();
       //expect(instance).to.be();
     });

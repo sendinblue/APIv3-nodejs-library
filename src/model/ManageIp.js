@@ -37,7 +37,7 @@
   /**
    * The ManageIp model module.
    * @module model/ManageIp
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
@@ -62,18 +62,18 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('ipId')) {
-        obj['ipId'] = ApiClient.convertToType(data['ipId'], 'Number');
+      if (data.hasOwnProperty('ip')) {
+        obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * ID of the IP
-   * @member {Number} ipId
+   * Dedicated ID
+   * @member {String} ip
    */
-  exports.prototype['ipId'] = undefined;
+  exports.prototype['ip'] = undefined;
 
 
 

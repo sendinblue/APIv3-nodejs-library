@@ -37,7 +37,7 @@
   /**
    * The GetExtendedCampaignOverviewSender model module.
    * @module model/GetExtendedCampaignOverviewSender
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

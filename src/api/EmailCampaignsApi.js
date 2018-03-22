@@ -34,7 +34,7 @@
   /**
    * EmailCampaigns service.
    * @module api/EmailCampaignsApi
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

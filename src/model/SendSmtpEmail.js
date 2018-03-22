@@ -37,7 +37,7 @@
   /**
    * The SendSmtpEmail model module.
    * @module model/SendSmtpEmail
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
@@ -45,19 +45,19 @@
    * @alias module:model/SendSmtpEmail
    * @class
    * @param to {Array.<module:model/SendSmtpEmailTo>} Email addresses and names of the recipients
-   * @param htmlContent {String} HTML body of the message
-   * @param subject {String} Subject of the message
    */
-  var exports = function(to, htmlContent, subject) {
+  var exports = function(to) {
     var _this = this;
 
 
     _this['to'] = to;
 
 
-    _this['htmlContent'] = htmlContent;
 
-    _this['subject'] = subject;
+
+
+
+
 
 
 
@@ -104,6 +104,12 @@
       if (data.hasOwnProperty('headers')) {
         obj['headers'] = ApiClient.convertToType(data['headers'], {'String': 'String'});
       }
+      if (data.hasOwnProperty('templateId')) {
+        obj['templateId'] = ApiClient.convertToType(data['templateId'], 'Number');
+      }
+      if (data.hasOwnProperty('params')) {
+        obj['params'] = ApiClient.convertToType(data['params'], {'String': 'String'});
+      }
     }
     return obj;
   }
@@ -128,17 +134,17 @@
    */
   exports.prototype['cc'] = undefined;
   /**
-   * HTML body of the message
+   * HTML body of the message ( Mandatory if 'templateId' is not passed, ignored if 'templateId' is passed )
    * @member {String} htmlContent
    */
   exports.prototype['htmlContent'] = undefined;
   /**
-   * Plain Text body of the message
+   * Plain Text body of the message ( Ignored if 'templateId' is passed )
    * @member {String} textContent
    */
   exports.prototype['textContent'] = undefined;
   /**
-   * Subject of the message
+   * Subject of the message. Mandatory if 'templateId' is not passed
    * @member {String} subject
    */
   exports.prototype['subject'] = undefined;
@@ -147,7 +153,7 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * Pass the absolute URL (no local file) or the base64 content of the attachment. Name can be used in both cases to define the attachment name. It is mandatory in case of content. Extension allowed: xlsx, xls, ods, docx, docm, doc, csv, pdf, txt, gif, jpg, jpeg, png, tif, tiff, rtf, bmp, cgm, css, shtml, html, htm, zip, xml, ppt, pptx, tar, ez, ics, mobi, msg, pub and eps
+   * Pass the absolute URL (no local file) or the base64 content of the attachment. Name can be used in both cases to define the attachment name. It is mandatory in case of content. Extension allowed: xlsx, xls, ods, docx, docm, doc, csv, pdf, txt, gif, jpg, jpeg, png, tif, tiff, rtf, bmp, cgm, css, shtml, html, htm, zip, xml, ppt, pptx, tar, ez, ics, mobi, msg, pub and eps ( Ignored if 'templateId' is passed )
    * @member {Array.<module:model/SendSmtpEmailAttachment>} attachment
    */
   exports.prototype['attachment'] = undefined;
@@ -155,6 +161,15 @@
    * @member {Object.<String, String>} headers
    */
   exports.prototype['headers'] = undefined;
+  /**
+   * Id of the template
+   * @member {Number} templateId
+   */
+  exports.prototype['templateId'] = undefined;
+  /**
+   * @member {Object.<String, String>} params
+   */
+  exports.prototype['params'] = undefined;
 
 
 

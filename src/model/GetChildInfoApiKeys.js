@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/GetChildInfoApiKeysV2', 'model/GetChildInfoApiKeysV3'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./GetChildInfoApiKeysV2'), require('./GetChildInfoApiKeysV3'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetChildInfoApiKeys = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.GetChildInfoApiKeys = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetChildInfoApiKeysV2, root.SibApiV3Sdk.GetChildInfoApiKeysV3);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, GetChildInfoApiKeysV2, GetChildInfoApiKeysV3) {
   'use strict';
 
 
@@ -37,21 +37,20 @@
   /**
    * The GetChildInfoApiKeys model module.
    * @module model/GetChildInfoApiKeys
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
    * Constructs a new <code>GetChildInfoApiKeys</code>.
+   * API Keys associated to child account
    * @alias module:model/GetChildInfoApiKeys
    * @class
-   * @param name {String} Name of the key
-   * @param key {String} API Key
+   * @param v2 {Array.<module:model/GetChildInfoApiKeysV2>} 
    */
-  var exports = function(name, key) {
+  var exports = function(v2) {
     var _this = this;
 
-    _this['name'] = name;
-    _this['key'] = key;
+    _this['v2'] = v2;
 
   };
 
@@ -66,34 +65,24 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('v2')) {
+        obj['v2'] = ApiClient.convertToType(data['v2'], [GetChildInfoApiKeysV2]);
       }
-      if (data.hasOwnProperty('key')) {
-        obj['key'] = ApiClient.convertToType(data['key'], 'String');
-      }
-      if (data.hasOwnProperty('secret')) {
-        obj['secret'] = ApiClient.convertToType(data['secret'], 'String');
+      if (data.hasOwnProperty('v3')) {
+        obj['v3'] = ApiClient.convertToType(data['v3'], [GetChildInfoApiKeysV3]);
       }
     }
     return obj;
   }
 
   /**
-   * Name of the key
-   * @member {String} name
+   * @member {Array.<module:model/GetChildInfoApiKeysV2>} v2
    */
-  exports.prototype['name'] = undefined;
+  exports.prototype['v2'] = undefined;
   /**
-   * API Key
-   * @member {String} key
+   * @member {Array.<module:model/GetChildInfoApiKeysV3>} v3
    */
-  exports.prototype['key'] = undefined;
-  /**
-   * Secret Key associated to the API Key (in case v1 Key is used only)
-   * @member {String} secret
-   */
-  exports.prototype['secret'] = undefined;
+  exports.prototype['v3'] = undefined;
 
 
 

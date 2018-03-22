@@ -37,7 +37,7 @@
   /**
    * The RequestContactImportNewList model module.
    * @module model/RequestContactImportNewList
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

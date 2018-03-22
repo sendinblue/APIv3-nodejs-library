@@ -37,7 +37,7 @@
   /**
    * The GetIp model module.
    * @module model/GetIp
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**

@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetChildInfoIps();
+    instance = new SibApiV3Sdk.GetChildInfoApiKeysV2();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,22 +50,22 @@
       object[property] = value;
   }
 
-  describe('GetChildInfoIps', function() {
-    it('should create an instance of GetChildInfoIps', function() {
-      // uncomment below and update the code to test GetChildInfoIps
-      //var instane = new SibApiV3Sdk.GetChildInfoIps();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetChildInfoIps);
+  describe('GetChildInfoApiKeysV2', function() {
+    it('should create an instance of GetChildInfoApiKeysV2', function() {
+      // uncomment below and update the code to test GetChildInfoApiKeysV2
+      //var instane = new SibApiV3Sdk.GetChildInfoApiKeysV2();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetChildInfoApiKeysV2);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instane = new SibApiV3Sdk.GetChildInfoIps();
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new SibApiV3Sdk.GetChildInfoApiKeysV2();
       //expect(instance).to.be();
     });
 
-    it('should have the property ip (base name: "ip")', function() {
-      // uncomment below and update the code to test the property ip
-      //var instane = new SibApiV3Sdk.GetChildInfoIps();
+    it('should have the property key (base name: "key")', function() {
+      // uncomment below and update the code to test the property key
+      //var instane = new SibApiV3Sdk.GetChildInfoApiKeysV2();
       //expect(instance).to.be();
     });
 

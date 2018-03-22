@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **lastName** | **String** | New Last name to use to update the child account | [optional] 
 **companyName** | **String** | New Company name to use to update the child account | [optional] 
 **password** | **String** | New password for the child account to login | [optional] 
-**ips** | **[Number]** |  | [optional] 
 
 

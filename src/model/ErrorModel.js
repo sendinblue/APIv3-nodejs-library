@@ -37,7 +37,7 @@
   /**
    * The ErrorModel model module.
    * @module model/ErrorModel
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
@@ -124,10 +124,10 @@
      */
     "document_not_found": "document_not_found",
     /**
-     * value: "reseller_permission"
+     * value: "reseller_permission_denied"
      * @const
      */
-    "reseller_permission": "reseller_permission",
+    "reseller_permission_denied": "reseller_permission_denied",
     /**
      * value: "not_enough_credits"
      * @const

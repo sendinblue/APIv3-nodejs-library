@@ -37,7 +37,7 @@
   /**
    * The GetChildrenList model module.
    * @module model/GetChildrenList
-   * @version 5.x.x
+   * @version 6.x.x
    */
 
   /**
