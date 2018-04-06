@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **attributes** | **Object** | Values of the attributes to fill. The attributes must exist in you contact database | [optional] 
 **emailBlacklisted** | **Boolean** | Blacklist the contact for emails (emailBlacklisted &#x3D; true) | [optional] 
 **smsBlacklisted** | **Boolean** | Blacklist the contact for SMS (smsBlacklisted &#x3D; true) | [optional] 
-**listIds** | **[Number]** | Ids of the lists to add the contact to | [optional] 
+**listIds** | **[Number]** | Ids of the lists to add the contact to. If updateEnabled &#x3D; true and listIds is empty delete contact from lists | [optional] 
 **updateEnabled** | **Boolean** | Facilitate to update existing contact in same request (updateEnabled &#x3D; true) | [optional] [default to false]
 **smtpBlacklistSender** | **[String]** | SMTP forbidden sender for contact. Use only for email Contact ( only available if updateEnabled &#x3D; true ) | [optional] 
 
