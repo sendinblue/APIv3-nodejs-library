@@ -371,6 +371,55 @@
 
 
     /**
+     * Deletes a contact
+     * @param {String} email Email (urlencoded) of the contact
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.deleteContactWithHttpInfo = function(email) {
+      var postBody = null;
+
+      // verify the required parameter 'email' is set
+      if (email === undefined || email === null) {
+        throw new Error("Missing the required parameter 'email' when calling deleteContact");
+      }
+
+
+      var pathParams = {
+        'email': email
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/contacts/{email}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Deletes a contact
+     * @param {String} email Email (urlencoded) of the contact
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.deleteContact = function(email) {
+      return this.deleteContactWithHttpInfo(email)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Delete a folder (and all its lists)
      * @param {Number} folderId Id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response

@@ -87,6 +87,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property userLimit (base name: "userLimit")', function() {
+      // uncomment below and update the code to test the property userLimit
+      //var instane = new SibApiV3Sdk.GetAccountPlan();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
