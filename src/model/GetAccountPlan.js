@@ -45,8 +45,8 @@
    * @alias module:model/GetAccountPlan
    * @class
    * @param type {module:model/GetAccountPlan.TypeEnum} Displays the plan type of the user
-   * @param creditsType {module:model/GetAccountPlan.CreditsTypeEnum} This is the type of the credit, \"User Limit\" or \"Send Limit\" are two possible types of credit of a user. \"User Limit\" implies the total number of subscribers you can add to your account, and \"Send Limit\" implies the total number of emails you can send to the subscribers in your account.
-   * @param credits {Number} Remaining credits of the user. This can either be \"User Limit\" or \"Send Limit\" depending on the plan.
+   * @param creditsType {module:model/GetAccountPlan.CreditsTypeEnum} This is the type of the credit, \"Send Limit\" is one of the possible types of credit of a user. \"Send Limit\" implies the total number of emails you can send to the subscribers in your account.
+   * @param credits {Number} Remaining credits of the user
    */
   var exports = function(type, creditsType, credits) {
     var _this = this;
@@ -54,6 +54,7 @@
     _this['type'] = type;
     _this['creditsType'] = creditsType;
     _this['credits'] = credits;
+
 
 
   };
@@ -84,6 +85,9 @@
       if (data.hasOwnProperty('endDate')) {
         obj['endDate'] = ApiClient.convertToType(data['endDate'], 'Date');
       }
+      if (data.hasOwnProperty('userLimit')) {
+        obj['userLimit'] = ApiClient.convertToType(data['userLimit'], 'Number');
+      }
     }
     return obj;
   }
@@ -94,12 +98,12 @@
    */
   exports.prototype['type'] = undefined;
   /**
-   * This is the type of the credit, \"User Limit\" or \"Send Limit\" are two possible types of credit of a user. \"User Limit\" implies the total number of subscribers you can add to your account, and \"Send Limit\" implies the total number of emails you can send to the subscribers in your account.
+   * This is the type of the credit, \"Send Limit\" is one of the possible types of credit of a user. \"Send Limit\" implies the total number of emails you can send to the subscribers in your account.
    * @member {module:model/GetAccountPlan.CreditsTypeEnum} creditsType
    */
   exports.prototype['creditsType'] = undefined;
   /**
-   * Remaining credits of the user. This can either be \"User Limit\" or \"Send Limit\" depending on the plan.
+   * Remaining credits of the user
    * @member {Number} credits
    */
   exports.prototype['credits'] = undefined;
@@ -113,6 +117,11 @@
    * @member {Date} endDate
    */
   exports.prototype['endDate'] = undefined;
+  /**
+   * Only in case of reseller account. It implies the total number of child accounts you can add to your account.
+   * @member {Number} userLimit
+   */
+  exports.prototype['userLimit'] = undefined;
 
 
   /**
@@ -158,11 +167,6 @@
    * @readonly
    */
   exports.CreditsTypeEnum = {
-    /**
-     * value: "userLimit"
-     * @const
-     */
-    "userLimit": "userLimit",
     /**
      * value: "sendLimit"
      * @const

@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**createFolder**](ContactsApi.md#createFolder) | **POST** /contacts/folders | Create a folder
 [**createList**](ContactsApi.md#createList) | **POST** /contacts/lists | Create a list
 [**deleteAttribute**](ContactsApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Deletes an attribute
+[**deleteContact**](ContactsApi.md#deleteContact) | **DELETE** /contacts/{email} | Deletes a contact
 [**deleteFolder**](ContactsApi.md#deleteFolder) | **DELETE** /contacts/folders/{folderId} | Delete a folder (and all its lists)
 [**deleteList**](ContactsApi.md#deleteList) | **DELETE** /contacts/lists/{listId} | Delete a list
 [**getAttributes**](ContactsApi.md#getAttributes) | **GET** /contacts/attributes | Lists all attributes
@@ -317,6 +318,54 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **attributeCategory** | **String**| Category of the attribute | 
  **attributeName** | **String**| Name of the existing attribute | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="deleteContact"></a>
+# **deleteContact**
+> deleteContact(email)
+
+Deletes a contact
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.ContactsApi();
+
+var email = "email_example"; // String | Email (urlencoded) of the contact
+
+apiInstance.deleteContact(email).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **String**| Email (urlencoded) of the contact | 
 
 ### Return type
 

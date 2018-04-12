@@ -111,6 +111,16 @@
         done();
       });
     });
+    describe('deleteContact', function() {
+      it('should call deleteContact successfully', function(done) {
+        //uncomment below and update the code to test deleteContact
+        //instance.deleteContact(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteFolder', function() {
       it('should call deleteFolder successfully', function(done) {
         //uncomment below and update the code to test deleteFolder
