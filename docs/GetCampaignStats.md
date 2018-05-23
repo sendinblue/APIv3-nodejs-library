@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**listId** | **Number** | List Id of email campaign (only in case of get email campaign(s)) | [optional] 
+**listId** | **Number** | List Id of email campaign (only in case of get email campaign(s)(not for global stats)) | [optional] 
 **uniqueClicks** | **Number** | Number of unique clicks for the campaign | 
-**clickers** | **Number** | Number of clicks for the campaign | 
+**clickers** | **Number** | Number of total clicks for the campaign | 
 **complaints** | **Number** | Number of complaints (Spam reports) for the campaign | 
 **delivered** | **Number** | Number of delivered emails for the campaign | 
 **sent** | **Number** | Number of sent emails for the campaign | 
@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **uniqueViews** | **Number** | Number of unique openings for the campaign | 
 **unsubscriptions** | **Number** | Number of unsubscription for the campaign | 
 **viewed** | **Number** | Number of openings for the campaign | 
-**deferred** | **Number** | Number of deferred emails for the campaign | 
+**deferred** | **Number** | Number of deferred emails for the campaign | [optional] 
 
 

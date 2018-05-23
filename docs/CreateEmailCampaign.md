@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tag** | **String** | Tag of the campaign | [optional] 
-**sender** | [**CreateEmailCampaignSender**](CreateEmailCampaignSender.md) |  | [optional] 
+**sender** | [**CreateEmailCampaignSender**](CreateEmailCampaignSender.md) |  | 
 **name** | **String** | Name of the campaign | 
 **htmlContent** | **String** | Mandatory if htmlUrl is empty. Body of the message (HTML) | [optional] 
 **htmlUrl** | **String** | Mandatory if htmlContent is empty. Url to the message (HTML) | [optional] 

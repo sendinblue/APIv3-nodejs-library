@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**GetExtendedClientAddress**](GetExtendedClientAddress.md) |  | [optional] 
+**address** | [**GetExtendedClientAddress**](GetExtendedClientAddress.md) |  | 
 
 

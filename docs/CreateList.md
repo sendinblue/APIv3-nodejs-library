@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | Name of the list | 
-**folderId** | **Number** | Id of the folder in which to create the list | 
+**folderId** | **Number** | Id of the parent folder in which this list is to be created | 
 
 

@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **modifiedAt** | **Date** | Last modification UTC date-time of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
 **listIds** | **[Number]** |  | 
 **listUnsubscribed** | **[Number]** |  | [optional] 
-**attributes** | **{String: String}** |  | 
+**attributes** | **Object** | Set of attributes of the contact | 
 
 

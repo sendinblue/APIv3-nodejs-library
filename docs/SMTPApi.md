@@ -453,6 +453,8 @@ Name | Type | Description  | Notes
 
 Send a template
 
+This endpoint is deprecated. Prefer v3/smtp/email instead.
+
 ### Example
 ```javascript
 var SibApiV3Sdk = require('sib-api-v3-sdk');

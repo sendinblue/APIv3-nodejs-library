@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **testSent** | **Boolean** | Retrieved the status of test email sending. (true&#x3D;Test email has been sent  false&#x3D;Test email has not been sent) | 
 **header** | **String** | Header of the campaign | 
 **footer** | **String** | Footer of the campaign | 
-**sender** | [**GetExtendedCampaignOverviewSender**](GetExtendedCampaignOverviewSender.md) |  | [optional] 
+**sender** | [**GetExtendedCampaignOverviewSender**](GetExtendedCampaignOverviewSender.md) |  | 
 **replyTo** | **String** | Email defined as the \&quot;Reply to\&quot; of the campaign | 
 **toField** | **String** | Customisation of the \&quot;to\&quot; field of the campaign | 
 **htmlContent** | **String** | HTML content of the campaign | 
