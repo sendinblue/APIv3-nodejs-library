@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**child** | [**RemainingCreditModelChild**](RemainingCreditModelChild.md) |  | [optional] 
-**reseller** | [**RemainingCreditModelReseller**](RemainingCreditModelReseller.md) |  | [optional] 
+**child** | [**RemainingCreditModelChild**](RemainingCreditModelChild.md) |  | 
+**reseller** | [**RemainingCreditModelReseller**](RemainingCreditModelReseller.md) |  | 
 
 
