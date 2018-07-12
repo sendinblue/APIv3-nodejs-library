@@ -46,7 +46,7 @@
    * @class
    * @param sender {String} Name of the sender. Only alphanumeric characters. No more than 11 characters
    * @param recipient {String} Mobile number to send SMS with the country code
-   * @param content {String} Content of the message. If more than 160 characters long, multiple text messages will be sent
+   * @param content {String} Content of the message. If more than 160 characters long, will be sent as multiple text messages
    */
   var exports = function(sender, recipient, content) {
     var _this = this;
@@ -103,7 +103,7 @@
    */
   exports.prototype['recipient'] = undefined;
   /**
-   * Content of the message. If more than 160 characters long, multiple text messages will be sent
+   * Content of the message. If more than 160 characters long, will be sent as multiple text messages
    * @member {String} content
    */
   exports.prototype['content'] = undefined;
