@@ -88,7 +88,7 @@
    */
   exports.prototype['enumeration'] = undefined;
   /**
-   * Type of the attribute. Use only if the attribute's category is 'normal', 'category' or 'transactional' ( type 'id' is only available if the category is 'transactional' attribute & type 'category' is only available if the category is 'category' attribute )
+   * Type of the attribute. Use only if the attribute's category is 'normal', 'category' or 'transactional' ( type 'boolean' is only available if the category is 'normal' attribute, type 'id' is only available if the category is 'transactional' attribute & type 'category' is only available if the category is 'category' attribute )
    * @member {module:model/CreateAttribute.TypeEnum} type
    */
   exports.prototype['type'] = undefined;
@@ -115,6 +115,11 @@
      * @const
      */
     "float": "float",
+    /**
+     * value: "boolean"
+     * @const
+     */
+    "boolean": "boolean",
     /**
      * value: "id"
      * @const

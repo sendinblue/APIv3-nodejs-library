@@ -234,6 +234,8 @@ var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 var opts = { 
   'type': "type_example", // String | Filter on the type of the campaigns
   'status': "status_example", // String | Filter on the status of the campaign
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | Mandatory if endDate is used. Starting (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent email campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either 'status' not passed and if passed is set to 'sent' )
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent email campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either 'status' not passed and if passed is set to 'sent' )
   'limit': 500, // Number | Number of documents per page
   'offset': 0 // Number | Index of the first document in the page
 };
@@ -251,6 +253,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **type** | **String**| Filter on the type of the campaigns | [optional] 
  **status** | **String**| Filter on the status of the campaign | [optional] 
+ **startDate** | **Date**| Mandatory if endDate is used. Starting (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent email campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; ) | [optional] 
+ **endDate** | **Date**| Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent email campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; ) | [optional] 
  **limit** | **Number**| Number of documents per page | [optional] [default to 500]
  **offset** | **Number**| Index of the first document in the page | [optional] [default to 0]
 

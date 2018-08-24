@@ -222,6 +222,12 @@ exports.prototype['mirrorActive'] = undefined;
    */
 exports.prototype['recurring'] = undefined;
 
+  /**
+   * Sent UTC date-time of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ). Only available if 'status' of the campaign is 'sent'
+   * @member {Date} sentDate
+   */
+exports.prototype['sentDate'] = undefined;
+
 
 
   return exports;

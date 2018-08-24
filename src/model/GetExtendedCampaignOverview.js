@@ -76,9 +76,6 @@
     _this['tag'] = tag;
     _this['createdAt'] = createdAt;
     _this['modifiedAt'] = modifiedAt;
-
-
-
   };
 
   /**
@@ -134,6 +131,9 @@
       }
       if (data.hasOwnProperty('recurring')) {
         obj['recurring'] = ApiClient.convertToType(data['recurring'], 'Boolean');
+      }
+      if (data.hasOwnProperty('sentDate')) {
+        obj['sentDate'] = ApiClient.convertToType(data['sentDate'], 'Date');
       }
     }
     return obj;
@@ -208,6 +208,11 @@
    * @member {Boolean} recurring
    */
   exports.prototype['recurring'] = undefined;
+  /**
+   * Sent UTC date-time of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ). Only available if 'status' of the campaign is 'sent'
+   * @member {Date} sentDate
+   */
+  exports.prototype['sentDate'] = undefined;
 
   // Implement GetCampaignOverview interface:
   /**
