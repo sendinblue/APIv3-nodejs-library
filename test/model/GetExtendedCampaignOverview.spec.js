@@ -141,6 +141,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sentDate (base name: "sentDate")', function() {
+      // uncomment below and update the code to test the property sentDate
+      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
