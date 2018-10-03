@@ -87,6 +87,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property templateId (base name: "templateId")', function() {
+      // uncomment below and update the code to test the property templateId
+      //var instane = new SibApiV3Sdk.CreateEmailCampaign();
+      //expect(instance).to.be();
+    });
+
     it('should have the property scheduledAt (base name: "scheduledAt")', function() {
       // uncomment below and update the code to test the property scheduledAt
       //var instane = new SibApiV3Sdk.CreateEmailCampaign();
@@ -161,6 +167,12 @@
 
     it('should have the property utmCampaign (base name: "utmCampaign")', function() {
       // uncomment below and update the code to test the property utmCampaign
+      //var instane = new SibApiV3Sdk.CreateEmailCampaign();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property params (base name: "params")', function() {
+      // uncomment below and update the code to test the property params
       //var instane = new SibApiV3Sdk.CreateEmailCampaign();
       //expect(instance).to.be();
     });

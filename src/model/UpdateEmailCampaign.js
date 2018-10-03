@@ -129,6 +129,9 @@
       if (data.hasOwnProperty('utmCampaign')) {
         obj['utmCampaign'] = ApiClient.convertToType(data['utmCampaign'], 'String');
       }
+      if (data.hasOwnProperty('params')) {
+        obj['params'] = ApiClient.convertToType(data['params'], Object);
+      }
     }
     return obj;
   }
@@ -173,7 +176,7 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * This is to personalize the «To» Field. If you want to include the first name and last name of your recipient, add {FNAME} {LNAME}. To use the contact attributes here, these must already exist in SendinBlue account
+   * To personalize the «To» Field. If you want to include the first name and last name of your recipient, add {FNAME} {LNAME}. These contact attributes must already exist in your SendinBlue account. If input parameter 'params' used please use {{contact.FNAME}} {{contact.LNAME}} for personalization
    * @member {String} toField
    */
   exports.prototype['toField'] = undefined;
@@ -218,6 +221,11 @@
    * @member {String} utmCampaign
    */
   exports.prototype['utmCampaign'] = undefined;
+  /**
+   * Pass the set of attributes to customize the type 'classic' campaign. For example, {'FNAME':'Joe', 'LNAME':'Doe'}.
+   * @member {Object} params
+   */
+  exports.prototype['params'] = undefined;
 
 
 

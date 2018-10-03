@@ -143,7 +143,7 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * This is to personalize the «To» Field. If you want to include the first name and last name of your recipient, add {FNAME} {LNAME}. To use the contact attributes here, these must already exist in SendinBlue account
+   * To personalize the «To» Field. If you want to include the first name and last name of your recipient, add {FNAME} {LNAME}. These contact attributes must already exist in your SendinBlue account. If input parameter 'params' used please use {{contact.FNAME}} {{contact.LNAME}} for personalization
    * @member {String} toField
    */
   exports.prototype['toField'] = undefined;
