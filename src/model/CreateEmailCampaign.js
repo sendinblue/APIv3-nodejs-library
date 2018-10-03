@@ -98,6 +98,9 @@
       if (data.hasOwnProperty('htmlUrl')) {
         obj['htmlUrl'] = ApiClient.convertToType(data['htmlUrl'], 'String');
       }
+      if (data.hasOwnProperty('templateId')) {
+        obj['templateId'] = ApiClient.convertToType(data['templateId'], 'Number');
+      }
       if (data.hasOwnProperty('scheduledAt')) {
         obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'Date');
       }
@@ -137,6 +140,9 @@
       if (data.hasOwnProperty('utmCampaign')) {
         obj['utmCampaign'] = ApiClient.convertToType(data['utmCampaign'], 'String');
       }
+      if (data.hasOwnProperty('params')) {
+        obj['params'] = ApiClient.convertToType(data['params'], Object);
+      }
     }
     return obj;
   }
@@ -156,15 +162,20 @@
    */
   exports.prototype['name'] = undefined;
   /**
-   * Mandatory if htmlUrl is empty. Body of the message (HTML)
+   * Mandatory if htmlUrl and templateId are empty. Body of the message (HTML)
    * @member {String} htmlContent
    */
   exports.prototype['htmlContent'] = undefined;
   /**
-   * Mandatory if htmlContent is empty. Url to the message (HTML)
+   * Mandatory if htmlContent and templateId are empty. Url to the message (HTML)
    * @member {String} htmlUrl
    */
   exports.prototype['htmlUrl'] = undefined;
+  /**
+   * Mandatory if htmlContent and htmlUrl are empty. Id of the SMTP template with status 'active'. Used to copy only its content fetched from htmlContent/htmlUrl to an email campaign for RSS feature.
+   * @member {Number} templateId
+   */
+  exports.prototype['templateId'] = undefined;
   /**
    * Sending UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
    * @member {Date} scheduledAt
@@ -181,7 +192,7 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * To personalize the «To» Field, e.g. if you want to include the first name and last name of your recipient, use {FNAME} {LNAME}. These attributes must already exist in your contact database
+   * To personalize the «To» Field. If you want to include the first name and last name of your recipient, add {FNAME} {LNAME}. These contact attributes must already exist in your SendinBlue account. If input parameter 'params' used please use {{contact.FNAME}} {{contact.LNAME}} for personalization
    * @member {String} toField
    */
   exports.prototype['toField'] = undefined;
@@ -231,6 +242,11 @@
    * @member {String} utmCampaign
    */
   exports.prototype['utmCampaign'] = undefined;
+  /**
+   * Pass the set of attributes to customize the type classic campaign. For example, {'FNAME':'Joe', 'LNAME':'Doe'}. Only available if 'type' is 'classic'
+   * @member {Object} params
+   */
+  exports.prototype['params'] = undefined;
 
 
   /**

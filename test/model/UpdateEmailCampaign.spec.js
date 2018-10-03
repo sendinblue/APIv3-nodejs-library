@@ -159,6 +159,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property params (base name: "params")', function() {
+      // uncomment below and update the code to test the property params
+      //var instane = new SibApiV3Sdk.UpdateEmailCampaign();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
