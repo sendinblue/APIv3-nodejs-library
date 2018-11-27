@@ -129,6 +129,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property unsubscribed (base name: "unsubscribed")', function() {
+      // uncomment below and update the code to test the property unsubscribed
+      //var instane = new SibApiV3Sdk.GetReportsReports();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **spamReports** | **Number** | Number of complaints (spam reports) for the date | 
 **blocked** | **Number** | Number of blocked emails for the date | 
 **invalid** | **Number** | Number of invalid emails for the date | 
+**unsubscribed** | **Number** | Number of unsubscribed emails for the date | 
 
 

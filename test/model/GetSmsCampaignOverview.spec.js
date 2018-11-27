@@ -87,12 +87,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property testSent (base name: "testSent")', function() {
-      // uncomment below and update the code to test the property testSent
-      //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();
-      //expect(instance).to.be();
-    });
-
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
       //var instane = new SibApiV3Sdk.GetSmsCampaignOverview();

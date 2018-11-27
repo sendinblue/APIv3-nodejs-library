@@ -45,13 +45,12 @@
    * @alias module:model/CreateSmsCampaignRecipients
    * @class
    * @param listIds {Array.<Number>} Lists Ids to send the campaign to. REQUIRED if scheduledAt is not empty
-   * @param exclusionListIds {Array.<Number>} List ids which have to be excluded from a campaign
    */
-  var exports = function(listIds, exclusionListIds) {
+  var exports = function(listIds) {
     var _this = this;
 
     _this['listIds'] = listIds;
-    _this['exclusionListIds'] = exclusionListIds;
+
   };
 
   /**
