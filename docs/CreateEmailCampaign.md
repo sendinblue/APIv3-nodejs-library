@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **footer** | **String** | Footer of the email campaign | [optional] 
 **header** | **String** | Header of the email campaign | [optional] 
 **utmCampaign** | **String** | Customize the utm_campaign value. If this field is empty, the campaign name will be used. Only alphanumeric characters and spaces are allowed | [optional] 
-**params** | **Object** | Pass the set of attributes to customize the type classic campaign. For example, {&#39;FNAME&#39;:&#39;Joe&#39;, &#39;LNAME&#39;:&#39;Doe&#39;}. Only available if &#39;type&#39; is &#39;classic&#39; | [optional] 
+**params** | **Object** | Pass the set of attributes to customize the type classic campaign. For example, {&#39;FNAME&#39;:&#39;Joe&#39;, &#39;LNAME&#39;:&#39;Doe&#39;}. Only available if &#39;type&#39; is &#39;classic&#39;. It&#39;s considered only if campaign is in New Template Language format. The New Template Language is dependent on the values of &#39;subject&#39;, &#39;htmlContent/htmlUrl&#39;, &#39;sender.name&#39; &amp; &#39;toField&#39; | [optional] 
 
 
 <a name="TypeEnum"></a>

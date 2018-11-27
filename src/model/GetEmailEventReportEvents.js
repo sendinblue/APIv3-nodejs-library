@@ -221,7 +221,12 @@
      * value: "blocked"
      * @const
      */
-    "blocked": "blocked"  };
+    "blocked": "blocked",
+    /**
+     * value: "unsubscribed"
+     * @const
+     */
+    "unsubscribed": "unsubscribed"  };
 
 
   return exports;

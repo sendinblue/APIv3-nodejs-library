@@ -212,6 +212,8 @@
      * Returns the informations for all your created SMS campaigns
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status Status of campaign.
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; )
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; )
      * @param {Number} opts.limit Number limitation for the result returned (default to 500)
      * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmsCampaigns} and HTTP response
@@ -225,6 +227,8 @@
       };
       var queryParams = {
         'status': opts['status'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
         'limit': opts['limit'],
         'offset': opts['offset'],
       };
@@ -251,6 +255,8 @@
      * Returns the informations for all your created SMS campaigns
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status Status of campaign.
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; )
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; )
      * @param {Number} opts.limit Number limitation for the result returned (default to 500)
      * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmsCampaigns}

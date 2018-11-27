@@ -49,12 +49,11 @@
    * @param status {module:model/GetSmsCampaignOverview.StatusEnum} Status of the SMS Campaign
    * @param content {String} Content of the SMS Campaign
    * @param scheduledAt {Date} UTC date-time on which SMS campaign is scheduled. Should be in YYYY-MM-DDTHH:mm:ss.SSSZ format
-   * @param testSent {Boolean} Retrieved the status of test SMS sending. (true=Test SMS has been sent  false=Test SMS has not been sent)
    * @param sender {String} Sender of the SMS Campaign
    * @param createdAt {Date} Creation UTC date-time of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param modifiedAt {Date} UTC date-time of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
-  var exports = function(id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt) {
+  var exports = function(id, name, status, content, scheduledAt, sender, createdAt, modifiedAt) {
     var _this = this;
 
     _this['id'] = id;
@@ -62,7 +61,6 @@
     _this['status'] = status;
     _this['content'] = content;
     _this['scheduledAt'] = scheduledAt;
-    _this['testSent'] = testSent;
     _this['sender'] = sender;
     _this['createdAt'] = createdAt;
     _this['modifiedAt'] = modifiedAt;
@@ -93,9 +91,6 @@
       }
       if (data.hasOwnProperty('scheduledAt')) {
         obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'Date');
-      }
-      if (data.hasOwnProperty('testSent')) {
-        obj['testSent'] = ApiClient.convertToType(data['testSent'], 'Boolean');
       }
       if (data.hasOwnProperty('sender')) {
         obj['sender'] = ApiClient.convertToType(data['sender'], 'String');
@@ -135,11 +130,6 @@
    * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
-  /**
-   * Retrieved the status of test SMS sending. (true=Test SMS has been sent  false=Test SMS has not been sent)
-   * @member {Boolean} testSent
-   */
-  exports.prototype['testSent'] = undefined;
   /**
    * Sender of the SMS Campaign
    * @member {String} sender
@@ -189,10 +179,10 @@
      */
     "suspended": "suspended",
     /**
-     * value: "in_process"
+     * value: "inProcess"
      * @const
      */
-    "in_process": "in_process"  };
+    "inProcess": "inProcess"  };
 
 
   return exports;

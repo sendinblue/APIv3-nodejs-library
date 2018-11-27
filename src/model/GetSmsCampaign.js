@@ -50,17 +50,16 @@
    * @param status {module:model/GetSmsCampaignOverview.StatusEnum} Status of the SMS Campaign
    * @param content {String} Content of the SMS Campaign
    * @param scheduledAt {Date} UTC date-time on which SMS campaign is scheduled. Should be in YYYY-MM-DDTHH:mm:ss.SSSZ format
-   * @param testSent {Boolean} Retrieved the status of test SMS sending. (true=Test SMS has been sent  false=Test SMS has not been sent)
    * @param sender {String} Sender of the SMS Campaign
    * @param createdAt {Date} Creation UTC date-time of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param modifiedAt {Date} UTC date-time of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param recipients {Object} 
    * @param statistics {Object} 
    */
-  var exports = function(id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt, recipients, statistics) {
+  var exports = function(id, name, status, content, scheduledAt, sender, createdAt, modifiedAt, recipients, statistics) {
     var _this = this;
 
-    GetSmsCampaignOverview.call(_this, id, name, status, content, scheduledAt, testSent, sender, createdAt, modifiedAt);
+    GetSmsCampaignOverview.call(_this, id, name, status, content, scheduledAt, sender, createdAt, modifiedAt);
     _this['recipients'] = recipients;
     _this['statistics'] = statistics;
   };
@@ -126,12 +125,6 @@ exports.prototype['content'] = undefined;
    * @member {Date} scheduledAt
    */
 exports.prototype['scheduledAt'] = undefined;
-
-  /**
-   * Retrieved the status of test SMS sending. (true=Test SMS has been sent  false=Test SMS has not been sent)
-   * @member {Boolean} testSent
-   */
-exports.prototype['testSent'] = undefined;
 
   /**
    * Sender of the SMS Campaign

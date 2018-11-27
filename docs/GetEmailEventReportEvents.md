@@ -41,6 +41,8 @@ Name | Type | Description | Notes
 
 * `blocked` (value: `"blocked"`)
 
+* `unsubscribed` (value: `"unsubscribed"`)
+
 
 
 

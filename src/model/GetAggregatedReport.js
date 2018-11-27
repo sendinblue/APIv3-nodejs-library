@@ -56,8 +56,9 @@
    * @param spamReports {Number} Number of complaint (spam report) for the timeframe
    * @param blocked {Number} Number of blocked contact emails for the timeframe
    * @param invalid {Number} Number of invalid emails for the timeframe
+   * @param unsubscribed {Number} Number of unsubscribed emails for the timeframe
    */
-  var exports = function(range, requests, delivered, hardBounces, softBounces, clicks, uniqueClicks, opens, uniqueOpens, spamReports, blocked, invalid) {
+  var exports = function(range, requests, delivered, hardBounces, softBounces, clicks, uniqueClicks, opens, uniqueOpens, spamReports, blocked, invalid, unsubscribed) {
     var _this = this;
 
     _this['range'] = range;
@@ -72,6 +73,7 @@
     _this['spamReports'] = spamReports;
     _this['blocked'] = blocked;
     _this['invalid'] = invalid;
+    _this['unsubscribed'] = unsubscribed;
   };
 
   /**
@@ -120,6 +122,9 @@
       }
       if (data.hasOwnProperty('invalid')) {
         obj['invalid'] = ApiClient.convertToType(data['invalid'], 'Number');
+      }
+      if (data.hasOwnProperty('unsubscribed')) {
+        obj['unsubscribed'] = ApiClient.convertToType(data['unsubscribed'], 'Number');
       }
     }
     return obj;
@@ -185,6 +190,11 @@
    * @member {Number} invalid
    */
   exports.prototype['invalid'] = undefined;
+  /**
+   * Number of unsubscribed emails for the timeframe
+   * @member {Number} unsubscribed
+   */
+  exports.prototype['unsubscribed'] = undefined;
 
 
 

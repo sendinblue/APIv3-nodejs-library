@@ -46,13 +46,14 @@
    * @class
    * @param name {String} Name of the campaign
    * @param sender {String} Name of the sender. The number of characters is limited to 11
+   * @param content {String} Content of the message. The maximum characters used per SMS is 160, if used more than that, it will be counted as more than one SMS
    */
-  var exports = function(name, sender) {
+  var exports = function(name, sender, content) {
     var _this = this;
 
     _this['name'] = name;
     _this['sender'] = sender;
-
+    _this['content'] = content;
 
 
   };

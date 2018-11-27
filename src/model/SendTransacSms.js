@@ -108,7 +108,7 @@
    */
   exports.prototype['content'] = undefined;
   /**
-   * Type of the SMS
+   * Type of the SMS. Marketing SMS messages are those sent typically with marketing content. Transactional SMS messages are sent to individuals and are triggered in response to some action, such as a sign-up, purchase, etc.
    * @member {module:model/SendTransacSms.TypeEnum} type
    * @default 'transactional'
    */
