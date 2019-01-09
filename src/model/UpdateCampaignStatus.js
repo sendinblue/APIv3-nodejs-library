@@ -71,6 +71,7 @@
   }
 
   /**
+   * Note:- replicateTemplate status will be available only for template type campaigns.
    * @member {module:model/UpdateCampaignStatus.StatusEnum} status
    */
   exports.prototype['status'] = undefined;

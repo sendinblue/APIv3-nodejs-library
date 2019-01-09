@@ -105,6 +105,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property emptyContactsAttributes (base name: "emptyContactsAttributes")', function() {
+      // uncomment below and update the code to test the property emptyContactsAttributes
+      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

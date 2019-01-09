@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **notifyURL** | **String** | URL that will be called once the export process is finished | [optional] 
-**recipientsType** | **String** | Filter the recipients based on how they interacted with the campaign | [default to &#39;all&#39;]
+**recipientsType** | **String** | Filter the recipients based on how they interacted with the campaign | 
 
 
 <a name="RecipientsTypeEnum"></a>

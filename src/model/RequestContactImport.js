@@ -93,6 +93,9 @@
       if (data.hasOwnProperty('updateExistingContacts')) {
         obj['updateExistingContacts'] = ApiClient.convertToType(data['updateExistingContacts'], 'Boolean');
       }
+      if (data.hasOwnProperty('emptyContactsAttributes')) {
+        obj['emptyContactsAttributes'] = ApiClient.convertToType(data['emptyContactsAttributes'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -139,6 +142,12 @@
    * @default true
    */
   exports.prototype['updateExistingContacts'] = true;
+  /**
+   * To facilitate the choice to erase any attribute of the existing contacts with empty value. emptyContactsAttributes = true means the empty fields in your import will erase any attribute that currently contain data in SendinBlue, & emptyContactsAttributes = false means the empty fields will not affect your existing data ( only available if `updateExistingContacts` set to true )
+   * @member {Boolean} emptyContactsAttributes
+   * @default false
+   */
+  exports.prototype['emptyContactsAttributes'] = false;
 
 
 

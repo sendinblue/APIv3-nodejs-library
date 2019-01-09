@@ -57,8 +57,8 @@
       //expect(instance).to.be.a(SibApiV3Sdk.SendTestSms);
     });
 
-    it('should have the property phoneNumbers (base name: "phoneNumbers")', function() {
-      // uncomment below and update the code to test the property phoneNumbers
+    it('should have the property phoneNumber (base name: "phoneNumber")', function() {
+      // uncomment below and update the code to test the property phoneNumber
       //var instane = new SibApiV3Sdk.SendTestSms();
       //expect(instance).to.be();
     });

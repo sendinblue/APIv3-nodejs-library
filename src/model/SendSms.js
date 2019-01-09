@@ -71,6 +71,15 @@
       if (data.hasOwnProperty('messageId')) {
         obj['messageId'] = ApiClient.convertToType(data['messageId'], 'Number');
       }
+      if (data.hasOwnProperty('smsCount')) {
+        obj['smsCount'] = ApiClient.convertToType(data['smsCount'], 'Number');
+      }
+      if (data.hasOwnProperty('usedCredits')) {
+        obj['usedCredits'] = ApiClient.convertToType(data['usedCredits'], 'Number');
+      }
+      if (data.hasOwnProperty('remainingCredits')) {
+        obj['remainingCredits'] = ApiClient.convertToType(data['remainingCredits'], 'Number');
+      }
     }
     return obj;
   }
@@ -83,6 +92,21 @@
    * @member {Number} messageId
    */
   exports.prototype['messageId'] = undefined;
+  /**
+   * Count of SMS's to send multiple text messages
+   * @member {Number} smsCount
+   */
+  exports.prototype['smsCount'] = undefined;
+  /**
+   * SMS credits used per text message
+   * @member {Number} usedCredits
+   */
+  exports.prototype['usedCredits'] = undefined;
+  /**
+   * Remaining SMS credits of the user
+   * @member {Number} remainingCredits
+   */
+  exports.prototype['remainingCredits'] = undefined;
 
 
 

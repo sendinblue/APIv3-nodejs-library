@@ -441,20 +441,20 @@
     /**
      * Send an SMS
      * @param {Number} campaignId Id of the SMS campaign
-     * @param {module:model/SendTestSms} sendTestSms Mobile number to which send the test
+     * @param {module:model/SendTestSms} phoneNumber Mobile number of the recipient with the country code. This number must belong to one of your contacts in SendinBlue account and must not be blacklisted
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.sendTestSmsWithHttpInfo = function(campaignId, sendTestSms) {
-      var postBody = sendTestSms;
+    this.sendTestSmsWithHttpInfo = function(campaignId, phoneNumber) {
+      var postBody = phoneNumber;
 
       // verify the required parameter 'campaignId' is set
       if (campaignId === undefined || campaignId === null) {
         throw new Error("Missing the required parameter 'campaignId' when calling sendTestSms");
       }
 
-      // verify the required parameter 'sendTestSms' is set
-      if (sendTestSms === undefined || sendTestSms === null) {
-        throw new Error("Missing the required parameter 'sendTestSms' when calling sendTestSms");
+      // verify the required parameter 'phoneNumber' is set
+      if (phoneNumber === undefined || phoneNumber === null) {
+        throw new Error("Missing the required parameter 'phoneNumber' when calling sendTestSms");
       }
 
 
@@ -485,11 +485,11 @@
     /**
      * Send an SMS
      * @param {Number} campaignId Id of the SMS campaign
-     * @param {module:model/SendTestSms} sendTestSms Mobile number to which send the test
+     * @param {module:model/SendTestSms} phoneNumber Mobile number of the recipient with the country code. This number must belong to one of your contacts in SendinBlue account and must not be blacklisted
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.sendTestSms = function(campaignId, sendTestSms) {
-      return this.sendTestSmsWithHttpInfo(campaignId, sendTestSms)
+    this.sendTestSms = function(campaignId, phoneNumber) {
+      return this.sendTestSmsWithHttpInfo(campaignId, phoneNumber)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
