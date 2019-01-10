@@ -377,7 +377,7 @@ null (empty response body)
 
 <a name="sendTestSms"></a>
 # **sendTestSms**
-> sendTestSms(campaignId, sendTestSms)
+> sendTestSms(campaignId, phoneNumber)
 
 Send an SMS
 
@@ -396,9 +396,9 @@ var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
 var campaignId = 789; // Number | Id of the SMS campaign
 
-var sendTestSms = new SibApiV3Sdk.SendTestSms(); // SendTestSms | Mobile number to which send the test
+var phoneNumber = new SibApiV3Sdk.SendTestSms(); // SendTestSms | Mobile number of the recipient with the country code. This number must belong to one of your contacts in SendinBlue account and must not be blacklisted
 
-apiInstance.sendTestSms(campaignId, sendTestSms).then(function() {
+apiInstance.sendTestSms(campaignId, phoneNumber).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);
@@ -411,7 +411,7 @@ apiInstance.sendTestSms(campaignId, sendTestSms).then(function() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **Number**| Id of the SMS campaign | 
- **sendTestSms** | [**SendTestSms**](SendTestSms.md)| Mobile number to which send the test | 
+ **phoneNumber** | [**SendTestSms**](SendTestSms.md)| Mobile number of the recipient with the country code. This number must belong to one of your contacts in SendinBlue account and must not be blacklisted | 
 
 ### Return type
 

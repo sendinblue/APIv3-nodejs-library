@@ -45,13 +45,14 @@
    * @alias module:model/CreateWebhook
    * @class
    * @param url {String} URL of the webhook
+   * @param events {Array.<module:model/CreateWebhook.EventsEnum>} Events triggering the webhook. Possible values for Transactional type webhook – request, delivered, hardBounce, softBounce, blocked, spam, invalid, deferred, click, opened, uniqueOpened and unsubscribed and possible values for Marketing type webhook – spam, opened, click, hardBounce, softBounce, unsubscribed, listAddition & delivered
    */
-  var exports = function(url) {
+  var exports = function(url, events) {
     var _this = this;
 
     _this['url'] = url;
 
-
+    _this['events'] = events;
 
   };
 

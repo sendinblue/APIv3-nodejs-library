@@ -45,16 +45,16 @@
    * Email sending credentials including subject, body, to, cc etc.
    * @alias module:model/SendReportEmail
    * @class
+   * @param subject {String} Subject of the email message
+   * @param to {Array.<String>} Email addresses of the recipients
+   * @param body {String} Body of the email message
    */
-  var exports = function() {
+  var exports = function(subject, to, body) {
     var _this = this;
 
-
-
-
-
-
-
+    _this['subject'] = subject;
+    _this['to'] = to;
+    _this['body'] = body;
   };
 
   /**
@@ -103,8 +103,9 @@
   /**
    * Type of the message body
    * @member {module:model/SendReportEmail.ContentTypeEnum} contentType
+   * @default 'html'
    */
-  exports.prototype['contentType'] = undefined;
+  exports.prototype['contentType'] = 'html';
   /**
    * Email addresses of the recipients in bcc
    * @member {Array.<String>} bcc

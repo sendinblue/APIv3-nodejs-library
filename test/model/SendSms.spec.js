@@ -69,6 +69,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property smsCount (base name: "smsCount")', function() {
+      // uncomment below and update the code to test the property smsCount
+      //var instane = new SibApiV3Sdk.SendSms();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property usedCredits (base name: "usedCredits")', function() {
+      // uncomment below and update the code to test the property usedCredits
+      //var instane = new SibApiV3Sdk.SendSms();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property remainingCredits (base name: "remainingCredits")', function() {
+      // uncomment below and update the code to test the property remainingCredits
+      //var instane = new SibApiV3Sdk.SendSms();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

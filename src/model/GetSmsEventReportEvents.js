@@ -45,7 +45,7 @@
    * @alias module:model/GetSmsEventReportEvents
    * @class
    * @param phoneNumber {String} Phone number which has generated the event
-   * @param _date {Date} Date on which the event has been generated
+   * @param _date {Date} UTC date-time on which the event has been generated
    * @param messageId {String} Message ID which generated the event
    * @param event {module:model/GetSmsEventReportEvents.EventEnum} Event which occurred
    */
@@ -103,7 +103,7 @@
    */
   exports.prototype['phoneNumber'] = undefined;
   /**
-   * Date on which the event has been generated
+   * UTC date-time on which the event has been generated
    * @member {Date} date
    */
   exports.prototype['date'] = undefined;

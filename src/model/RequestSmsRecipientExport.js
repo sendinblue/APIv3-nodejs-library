@@ -82,9 +82,8 @@
   /**
    * Filter the recipients based on how they interacted with the campaign
    * @member {module:model/RequestSmsRecipientExport.RecipientsTypeEnum} recipientsType
-   * @default 'all'
    */
-  exports.prototype['recipientsType'] = 'all';
+  exports.prototype['recipientsType'] = undefined;
 
 
   /**

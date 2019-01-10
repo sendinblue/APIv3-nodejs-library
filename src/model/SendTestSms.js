@@ -62,18 +62,18 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('phoneNumbers')) {
-        obj['phoneNumbers'] = ApiClient.convertToType(data['phoneNumbers'], ['String']);
+      if (data.hasOwnProperty('phoneNumber')) {
+        obj['phoneNumber'] = ApiClient.convertToType(data['phoneNumber'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Mobile number with the country code to send test SMS. The mobile number defined here must belong to one of your contacts in SendinBlue account and must not be blacklisted
-   * @member {Array.<String>} phoneNumbers
+   * Mobile number of the recipient with the country code. This number must belong to one of your contacts in SendinBlue account and must not be blacklisted
+   * @member {String} phoneNumber
    */
-  exports.prototype['phoneNumbers'] = undefined;
+  exports.prototype['phoneNumber'] = undefined;
 
 
 
