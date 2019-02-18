@@ -65,6 +65,8 @@
 
 
 
+
+
   };
 
   /**
@@ -132,6 +134,9 @@
       if (data.hasOwnProperty('params')) {
         obj['params'] = ApiClient.convertToType(data['params'], Object);
       }
+      if (data.hasOwnProperty('sendAtBestTime')) {
+        obj['sendAtBestTime'] = ApiClient.convertToType(data['sendAtBestTime'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -161,7 +166,7 @@
    */
   exports.prototype['htmlUrl'] = undefined;
   /**
-   * UTC date-time on which the campaign has to run (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
+   * UTC date-time on which the campaign has to run (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result. If sendAtBestTime is set to true, your campaign will be sent according to the date passed (ignoring the time part).
    * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
@@ -226,6 +231,11 @@
    * @member {Object} params
    */
   exports.prototype['params'] = undefined;
+  /**
+   * Set this to true if you want to send your campaign at best time. Note:- if true, warmup ip will be disabled.
+   * @member {Boolean} sendAtBestTime
+   */
+  exports.prototype['sendAtBestTime'] = undefined;
 
 
 

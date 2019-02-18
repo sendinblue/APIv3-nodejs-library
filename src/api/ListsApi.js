@@ -81,7 +81,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PostContactInfo;
@@ -132,7 +132,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = CreateModel;
@@ -183,7 +183,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -242,7 +242,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetContacts;
@@ -303,7 +303,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetFolderLists;
@@ -357,7 +357,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetExtendedList;
@@ -407,7 +407,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetLists;
@@ -466,7 +466,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PostContactInfo;
@@ -524,7 +524,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;

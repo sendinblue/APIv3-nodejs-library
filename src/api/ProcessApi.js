@@ -75,7 +75,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetProcess;
@@ -125,7 +125,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetProcesses;

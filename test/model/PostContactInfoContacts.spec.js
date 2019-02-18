@@ -69,6 +69,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property total (base name: "total")', function() {
+      // uncomment below and update the code to test the property total
+      //var instane = new SibApiV3Sdk.PostContactInfoContacts();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

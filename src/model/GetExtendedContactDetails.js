@@ -49,15 +49,16 @@
    * @param id {Number} ID of the contact for which you requested the details
    * @param emailBlacklisted {Boolean} Blacklist status for email campaigns (true=blacklisted, false=not blacklisted)
    * @param smsBlacklisted {Boolean} Blacklist status for SMS campaigns (true=blacklisted, false=not blacklisted)
+   * @param createdAt {Date} Creation UTC date-time of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param modifiedAt {Date} Last modification UTC date-time of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param listIds {Array.<Number>} 
    * @param attributes {Object} Set of attributes of the contact
    * @param statistics {module:model/GetExtendedContactDetailsStatistics} 
    */
-  var exports = function(email, id, emailBlacklisted, smsBlacklisted, modifiedAt, listIds, attributes, statistics) {
+  var exports = function(email, id, emailBlacklisted, smsBlacklisted, createdAt, modifiedAt, listIds, attributes, statistics) {
     var _this = this;
 
-    GetContactDetails.call(_this, email, id, emailBlacklisted, smsBlacklisted, modifiedAt, listIds, attributes);
+    GetContactDetails.call(_this, email, id, emailBlacklisted, smsBlacklisted, createdAt, modifiedAt, listIds, attributes);
     _this['statistics'] = statistics;
   };
 
@@ -109,6 +110,12 @@ exports.prototype['emailBlacklisted'] = undefined;
    * @member {Boolean} smsBlacklisted
    */
 exports.prototype['smsBlacklisted'] = undefined;
+
+  /**
+   * Creation UTC date-time of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} createdAt
+   */
+exports.prototype['createdAt'] = undefined;
 
   /**
    * Last modification UTC date-time of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ)

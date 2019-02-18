@@ -76,6 +76,10 @@
     _this['tag'] = tag;
     _this['createdAt'] = createdAt;
     _this['modifiedAt'] = modifiedAt;
+
+
+
+
   };
 
   /**

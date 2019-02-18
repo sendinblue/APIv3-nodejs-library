@@ -47,14 +47,14 @@
    * @param sender {module:model/CreateEmailCampaignSender} 
    * @param name {String} Name of the campaign
    * @param subject {String} Subject of the campaign
-   * @param type {module:model/CreateEmailCampaign.TypeEnum} Type of the campaign
    */
-  var exports = function(sender, name, subject, type) {
+  var exports = function(sender, name, subject) {
     var _this = this;
 
 
     _this['sender'] = sender;
     _this['name'] = name;
+
 
 
 
@@ -66,7 +66,7 @@
 
 
 
-    _this['type'] = type;
+
 
 
 
@@ -125,12 +125,6 @@
       if (data.hasOwnProperty('mirrorActive')) {
         obj['mirrorActive'] = ApiClient.convertToType(data['mirrorActive'], 'Boolean');
       }
-      if (data.hasOwnProperty('recurring')) {
-        obj['recurring'] = ApiClient.convertToType(data['recurring'], 'Boolean');
-      }
-      if (data.hasOwnProperty('type')) {
-        obj['type'] = ApiClient.convertToType(data['type'], 'String');
-      }
       if (data.hasOwnProperty('footer')) {
         obj['footer'] = ApiClient.convertToType(data['footer'], 'String');
       }
@@ -142,6 +136,9 @@
       }
       if (data.hasOwnProperty('params')) {
         obj['params'] = ApiClient.convertToType(data['params'], Object);
+      }
+      if (data.hasOwnProperty('sendAtBestTime')) {
+        obj['sendAtBestTime'] = ApiClient.convertToType(data['sendAtBestTime'], 'Boolean');
       }
     }
     return obj;
@@ -177,7 +174,7 @@
    */
   exports.prototype['templateId'] = undefined;
   /**
-   * Sending UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
+   * Sending UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result. If sendAtBestTime is set to true, your campaign will be sent according to the date passed (ignoring the time part).
    * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
@@ -217,17 +214,6 @@
    */
   exports.prototype['mirrorActive'] = undefined;
   /**
-   * For trigger campagins use false to make sure a contact receives the same campaign only once
-   * @member {Boolean} recurring
-   * @default false
-   */
-  exports.prototype['recurring'] = false;
-  /**
-   * Type of the campaign
-   * @member {module:model/CreateEmailCampaign.TypeEnum} type
-   */
-  exports.prototype['type'] = undefined;
-  /**
    * Footer of the email campaign
    * @member {String} footer
    */
@@ -247,24 +233,13 @@
    * @member {Object} params
    */
   exports.prototype['params'] = undefined;
-
-
   /**
-   * Allowed values for the <code>type</code> property.
-   * @enum {String}
-   * @readonly
+   * Set this to true if you want to send your campaign at best time.
+   * @member {Boolean} sendAtBestTime
+   * @default false
    */
-  exports.TypeEnum = {
-    /**
-     * value: "classic"
-     * @const
-     */
-    "classic": "classic",
-    /**
-     * value: "trigger"
-     * @const
-     */
-    "trigger": "trigger"  };
+  exports.prototype['sendAtBestTime'] = false;
+
 
 
   return exports;

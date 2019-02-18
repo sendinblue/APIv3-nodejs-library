@@ -141,18 +141,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property recurring (base name: "recurring")', function() {
-      // uncomment below and update the code to test the property recurring
-      //var instane = new SibApiV3Sdk.CreateEmailCampaign();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instane = new SibApiV3Sdk.CreateEmailCampaign();
-      //expect(instance).to.be();
-    });
-
     it('should have the property footer (base name: "footer")', function() {
       // uncomment below and update the code to test the property footer
       //var instane = new SibApiV3Sdk.CreateEmailCampaign();
@@ -173,6 +161,12 @@
 
     it('should have the property params (base name: "params")', function() {
       // uncomment below and update the code to test the property params
+      //var instane = new SibApiV3Sdk.CreateEmailCampaign();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sendAtBestTime (base name: "sendAtBestTime")', function() {
+      // uncomment below and update the code to test the property sendAtBestTime
       //var instane = new SibApiV3Sdk.CreateEmailCampaign();
       //expect(instance).to.be();
     });
