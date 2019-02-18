@@ -48,17 +48,19 @@
    * @param id {Number} ID of the contact for which you requested the details
    * @param emailBlacklisted {Boolean} Blacklist status for email campaigns (true=blacklisted, false=not blacklisted)
    * @param smsBlacklisted {Boolean} Blacklist status for SMS campaigns (true=blacklisted, false=not blacklisted)
+   * @param createdAt {Date} Creation UTC date-time of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param modifiedAt {Date} Last modification UTC date-time of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param listIds {Array.<Number>} 
    * @param attributes {Object} Set of attributes of the contact
    */
-  var exports = function(email, id, emailBlacklisted, smsBlacklisted, modifiedAt, listIds, attributes) {
+  var exports = function(email, id, emailBlacklisted, smsBlacklisted, createdAt, modifiedAt, listIds, attributes) {
     var _this = this;
 
     _this['email'] = email;
     _this['id'] = id;
     _this['emailBlacklisted'] = emailBlacklisted;
     _this['smsBlacklisted'] = smsBlacklisted;
+    _this['createdAt'] = createdAt;
     _this['modifiedAt'] = modifiedAt;
     _this['listIds'] = listIds;
 
@@ -87,6 +89,9 @@
       }
       if (data.hasOwnProperty('smsBlacklisted')) {
         obj['smsBlacklisted'] = ApiClient.convertToType(data['smsBlacklisted'], 'Boolean');
+      }
+      if (data.hasOwnProperty('createdAt')) {
+        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
       }
       if (data.hasOwnProperty('modifiedAt')) {
         obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'Date');
@@ -124,6 +129,11 @@
    * @member {Boolean} smsBlacklisted
    */
   exports.prototype['smsBlacklisted'] = undefined;
+  /**
+   * Creation UTC date-time of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ)
+   * @member {Date} createdAt
+   */
+  exports.prototype['createdAt'] = undefined;
   /**
    * Last modification UTC date-time of the contact (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @member {Date} modifiedAt

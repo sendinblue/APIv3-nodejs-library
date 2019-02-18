@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.SendTestSms();
+    instance = new SibApiV3Sdk.CreateUpdateContactModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,16 +50,16 @@
       object[property] = value;
   }
 
-  describe('SendTestSms', function() {
-    it('should create an instance of SendTestSms', function() {
-      // uncomment below and update the code to test SendTestSms
-      //var instane = new SibApiV3Sdk.SendTestSms();
-      //expect(instance).to.be.a(SibApiV3Sdk.SendTestSms);
+  describe('CreateUpdateContactModel', function() {
+    it('should create an instance of CreateUpdateContactModel', function() {
+      // uncomment below and update the code to test CreateUpdateContactModel
+      //var instane = new SibApiV3Sdk.CreateUpdateContactModel();
+      //expect(instance).to.be.a(SibApiV3Sdk.CreateUpdateContactModel);
     });
 
-    it('should have the property phoneNumber (base name: "phoneNumber")', function() {
-      // uncomment below and update the code to test the property phoneNumber
-      //var instane = new SibApiV3Sdk.SendTestSms();
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instane = new SibApiV3Sdk.CreateUpdateContactModel();
       //expect(instance).to.be();
     });
 

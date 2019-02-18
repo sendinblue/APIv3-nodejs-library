@@ -26,7 +26,7 @@
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.PostContactInfoContacts = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.CreateUpdateContactModel = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,61 +35,45 @@
 
 
   /**
-   * The PostContactInfoContacts model module.
-   * @module model/PostContactInfoContacts
+   * The CreateUpdateContactModel model module.
+   * @module model/CreateUpdateContactModel
    * @version 7.x.x
    */
 
   /**
-   * Constructs a new <code>PostContactInfoContacts</code>.
-   * @alias module:model/PostContactInfoContacts
+   * Constructs a new <code>CreateUpdateContactModel</code>.
+   * @alias module:model/CreateUpdateContactModel
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
-
   };
 
   /**
-   * Constructs a <code>PostContactInfoContacts</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>CreateUpdateContactModel</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PostContactInfoContacts} obj Optional instance to populate.
-   * @return {module:model/PostContactInfoContacts} The populated <code>PostContactInfoContacts</code> instance.
+   * @param {module:model/CreateUpdateContactModel} obj Optional instance to populate.
+   * @return {module:model/CreateUpdateContactModel} The populated <code>CreateUpdateContactModel</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('success')) {
-        obj['success'] = ApiClient.convertToType(data['success'], ['String']);
-      }
-      if (data.hasOwnProperty('failure')) {
-        obj['failure'] = ApiClient.convertToType(data['failure'], ['String']);
-      }
-      if (data.hasOwnProperty('total')) {
-        obj['total'] = ApiClient.convertToType(data['total'], 'Number');
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Array.<String>} success
+   * ID of the contact when a new contact is created
+   * @member {Number} id
    */
-  exports.prototype['success'] = undefined;
-  /**
-   * @member {Array.<String>} failure
-   */
-  exports.prototype['failure'] = undefined;
-  /**
-   * Displays the count of total number of contacts removed from list when user opts for \"all\" option.
-   * @member {Number} total
-   */
-  exports.prototype['total'] = undefined;
+  exports.prototype['id'] = undefined;
 
 
 

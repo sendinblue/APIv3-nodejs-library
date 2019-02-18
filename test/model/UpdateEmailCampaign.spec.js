@@ -165,6 +165,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sendAtBestTime (base name: "sendAtBestTime")', function() {
+      // uncomment below and update the code to test the property sendAtBestTime
+      //var instane = new SibApiV3Sdk.UpdateEmailCampaign();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

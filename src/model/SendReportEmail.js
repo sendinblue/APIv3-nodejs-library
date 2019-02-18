@@ -54,6 +54,9 @@
 
     _this['subject'] = subject;
     _this['to'] = to;
+
+
+
     _this['body'] = body;
   };
 

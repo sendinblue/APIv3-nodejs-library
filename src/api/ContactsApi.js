@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddContactToList', 'model/CreateAttribute', 'model/CreateContact', 'model/CreateList', 'model/CreateModel', 'model/CreateUpdateFolder', 'model/CreatedProcessId', 'model/ErrorModel', 'model/GetAttributes', 'model/GetContactCampaignStats', 'model/GetContacts', 'model/GetExtendedContactDetails', 'model/GetExtendedList', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders', 'model/GetLists', 'model/PostContactInfo', 'model/RemoveContactFromList', 'model/RequestContactExport', 'model/RequestContactImport', 'model/UpdateAttribute', 'model/UpdateContact', 'model/UpdateList'], factory);
+    define(['ApiClient', 'model/AddContactToList', 'model/CreateAttribute', 'model/CreateContact', 'model/CreateList', 'model/CreateModel', 'model/CreateUpdateContactModel', 'model/CreateUpdateFolder', 'model/CreatedProcessId', 'model/ErrorModel', 'model/GetAttributes', 'model/GetContactCampaignStats', 'model/GetContacts', 'model/GetExtendedContactDetails', 'model/GetExtendedList', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders', 'model/GetLists', 'model/PostContactInfo', 'model/RemoveContactFromList', 'model/RequestContactExport', 'model/RequestContactImport', 'model/UpdateAttribute', 'model/UpdateContact', 'model/UpdateList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AddContactToList'), require('../model/CreateAttribute'), require('../model/CreateContact'), require('../model/CreateList'), require('../model/CreateModel'), require('../model/CreateUpdateFolder'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetAttributes'), require('../model/GetContactCampaignStats'), require('../model/GetContacts'), require('../model/GetExtendedContactDetails'), require('../model/GetExtendedList'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'), require('../model/GetLists'), require('../model/PostContactInfo'), require('../model/RemoveContactFromList'), require('../model/RequestContactExport'), require('../model/RequestContactImport'), require('../model/UpdateAttribute'), require('../model/UpdateContact'), require('../model/UpdateList'));
+    module.exports = factory(require('../ApiClient'), require('../model/AddContactToList'), require('../model/CreateAttribute'), require('../model/CreateContact'), require('../model/CreateList'), require('../model/CreateModel'), require('../model/CreateUpdateContactModel'), require('../model/CreateUpdateFolder'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetAttributes'), require('../model/GetContactCampaignStats'), require('../model/GetContacts'), require('../model/GetExtendedContactDetails'), require('../model/GetExtendedList'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'), require('../model/GetLists'), require('../model/PostContactInfo'), require('../model/RemoveContactFromList'), require('../model/RequestContactExport'), require('../model/RequestContactImport'), require('../model/UpdateAttribute'), require('../model/UpdateContact'), require('../model/UpdateList'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.ContactsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddContactToList, root.SibApiV3Sdk.CreateAttribute, root.SibApiV3Sdk.CreateContact, root.SibApiV3Sdk.CreateList, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateUpdateFolder, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAttributes, root.SibApiV3Sdk.GetContactCampaignStats, root.SibApiV3Sdk.GetContacts, root.SibApiV3Sdk.GetExtendedContactDetails, root.SibApiV3Sdk.GetExtendedList, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders, root.SibApiV3Sdk.GetLists, root.SibApiV3Sdk.PostContactInfo, root.SibApiV3Sdk.RemoveContactFromList, root.SibApiV3Sdk.RequestContactExport, root.SibApiV3Sdk.RequestContactImport, root.SibApiV3Sdk.UpdateAttribute, root.SibApiV3Sdk.UpdateContact, root.SibApiV3Sdk.UpdateList);
+    root.SibApiV3Sdk.ContactsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddContactToList, root.SibApiV3Sdk.CreateAttribute, root.SibApiV3Sdk.CreateContact, root.SibApiV3Sdk.CreateList, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateUpdateContactModel, root.SibApiV3Sdk.CreateUpdateFolder, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAttributes, root.SibApiV3Sdk.GetContactCampaignStats, root.SibApiV3Sdk.GetContacts, root.SibApiV3Sdk.GetExtendedContactDetails, root.SibApiV3Sdk.GetExtendedList, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders, root.SibApiV3Sdk.GetLists, root.SibApiV3Sdk.PostContactInfo, root.SibApiV3Sdk.RemoveContactFromList, root.SibApiV3Sdk.RequestContactExport, root.SibApiV3Sdk.RequestContactImport, root.SibApiV3Sdk.UpdateAttribute, root.SibApiV3Sdk.UpdateContact, root.SibApiV3Sdk.UpdateList);
   }
-}(this, function(ApiClient, AddContactToList, CreateAttribute, CreateContact, CreateList, CreateModel, CreateUpdateFolder, CreatedProcessId, ErrorModel, GetAttributes, GetContactCampaignStats, GetContacts, GetExtendedContactDetails, GetExtendedList, GetFolder, GetFolderLists, GetFolders, GetLists, PostContactInfo, RemoveContactFromList, RequestContactExport, RequestContactImport, UpdateAttribute, UpdateContact, UpdateList) {
+}(this, function(ApiClient, AddContactToList, CreateAttribute, CreateContact, CreateList, CreateModel, CreateUpdateContactModel, CreateUpdateFolder, CreatedProcessId, ErrorModel, GetAttributes, GetContactCampaignStats, GetContacts, GetExtendedContactDetails, GetExtendedList, GetFolder, GetFolderLists, GetFolders, GetLists, PostContactInfo, RemoveContactFromList, RequestContactExport, RequestContactImport, UpdateAttribute, UpdateContact, UpdateList) {
   'use strict';
 
   /**
@@ -81,7 +81,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PostContactInfo;
@@ -146,7 +146,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -176,7 +176,7 @@
     /**
      * Create a contact
      * @param {module:model/CreateContact} createContact Values to create a contact
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateUpdateContactModel} and HTTP response
      */
     this.createContactWithHttpInfo = function(createContact) {
       var postBody = createContact;
@@ -198,10 +198,10 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = CreateModel;
+      var returnType = CreateUpdateContactModel;
 
       return this.apiClient.callApi(
         '/contacts', 'POST',
@@ -213,7 +213,7 @@
     /**
      * Create a contact
      * @param {module:model/CreateContact} createContact Values to create a contact
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateUpdateContactModel}
      */
     this.createContact = function(createContact) {
       return this.createContactWithHttpInfo(createContact)
@@ -248,7 +248,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = CreateModel;
@@ -298,7 +298,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = CreateModel;
@@ -356,7 +356,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -408,7 +408,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -459,7 +459,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -510,7 +510,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -554,7 +554,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetAttributes;
@@ -604,7 +604,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetExtendedContactDetails;
@@ -655,7 +655,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetContactCampaignStats;
@@ -707,7 +707,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetContacts;
@@ -769,7 +769,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetContacts;
@@ -824,7 +824,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetFolder;
@@ -881,7 +881,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetFolderLists;
@@ -942,7 +942,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetFolders;
@@ -994,7 +994,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetExtendedList;
@@ -1044,7 +1044,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetLists;
@@ -1097,7 +1097,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = CreatedProcessId;
@@ -1155,7 +1155,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PostContactInfo;
@@ -1207,7 +1207,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = CreatedProcessId;
@@ -1272,7 +1272,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -1331,7 +1331,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -1389,7 +1389,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -1447,7 +1447,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;

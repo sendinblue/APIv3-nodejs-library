@@ -81,6 +81,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property createdAt (base name: "createdAt")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instane = new SibApiV3Sdk.GetContactDetails();
+      //expect(instance).to.be();
+    });
+
     it('should have the property modifiedAt (base name: "modifiedAt")', function() {
       // uncomment below and update the code to test the property modifiedAt
       //var instane = new SibApiV3Sdk.GetContactDetails();

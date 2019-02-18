@@ -93,6 +93,12 @@ apiKey.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix['api-key'] = "Token"
 
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix['partner-key'] = "Token"
+
 var api = new SibApiV3Sdk.AccountApi()
 api.getAccount().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -237,6 +243,7 @@ Class | Method | HTTP request | Description
  - [SibApiV3Sdk.CreateSmtpEmail](docs/CreateSmtpEmail.md)
  - [SibApiV3Sdk.CreateSmtpTemplate](docs/CreateSmtpTemplate.md)
  - [SibApiV3Sdk.CreateSmtpTemplateSender](docs/CreateSmtpTemplateSender.md)
+ - [SibApiV3Sdk.CreateUpdateContactModel](docs/CreateUpdateContactModel.md)
  - [SibApiV3Sdk.CreateUpdateFolder](docs/CreateUpdateFolder.md)
  - [SibApiV3Sdk.CreateWebhook](docs/CreateWebhook.md)
  - [SibApiV3Sdk.CreatedProcessId](docs/CreatedProcessId.md)
@@ -371,9 +378,20 @@ Class | Method | HTTP request | Description
 
 ### api-key
 
+The API key should be passed in the request headers as `api-key` for authentication.
+
 - **Type**: API key
 - **API key parameter name**: api-key
 - **Location**: HTTP header
+
+### partner-key
+
+The partner key should be passed in the request headers as `partner-key` along with `api-key` pair for successful authentication of partner (Optional).
+
+- **Type**: API key
+- **API key parameter name**: partner-key
+- **Location**: HTTP header
+
 
 ## Support and Feedback
 

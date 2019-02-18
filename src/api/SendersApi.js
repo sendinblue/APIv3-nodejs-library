@@ -71,7 +71,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = CreateSenderModel;
@@ -123,7 +123,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -167,7 +167,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetIps;
@@ -217,7 +217,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetIpsFromSender;
@@ -267,7 +267,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetSendersList;
@@ -323,7 +323,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;

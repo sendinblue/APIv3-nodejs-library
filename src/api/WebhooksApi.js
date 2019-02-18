@@ -74,7 +74,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = CreateModel;
@@ -125,7 +125,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -176,7 +176,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetWebhook;
@@ -224,7 +224,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetWebhooks;
@@ -282,7 +282,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key'];
+      var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
