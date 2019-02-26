@@ -128,17 +128,17 @@
    */
   exports.prototype['attachmentUrl'] = undefined;
   /**
-   * Pass the list of content (base64 encoded) and name of the attachment. For example, [{'content':'base64 encoded content 1', 'name':'attcahment1'}, {'content':'base64 encoded content 2', 'name':'attcahment2'}].
+   * Pass the list of content (base64 encoded) and name of the attachment. For example, `[{\"content\":\"base64 encoded content 1\", \"name\":\"attcahment1\"}, {\"content\":\"base64 encoded content 2\", \"name\":\"attcahment2\"}]`
    * @member {Array.<module:model/SendEmailAttachment>} attachment
    */
   exports.prototype['attachment'] = undefined;
   /**
-   * Pass the set of headers that shall be sent along the mail headers in the original email. 'sender.ip' header can be set (only for dedicated ip users) to mention the IP to be used for sending transactional emails. For example, {'Content-Type':'text/html', 'charset':'iso-8859-1', 'sender.ip':'1.2.3.4'}
+   * Pass the set of headers that shall be sent along the mail headers in the original email. 'sender.ip' header can be set (only for dedicated ip users) to mention the IP to be used for sending transactional emails. For example, `{\"Content-Type\":\"text/html\", \"charset\":\"iso-8859-1\", \"sender.ip\":\"1.2.3.4\"}`
    * @member {Object} headers
    */
   exports.prototype['headers'] = undefined;
   /**
-   * Pass the set of attributes to customize the template. For example, {'FNAME':'Joe', 'LNAME':'Doe'}
+   * Pass the set of attributes to customize the template. For example, {\"FNAME\":\"Joe\", \"LNAME\":\"Doe\"}
    * @member {Object} attributes
    */
   exports.prototype['attributes'] = undefined;

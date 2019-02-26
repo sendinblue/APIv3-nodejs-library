@@ -47,7 +47,6 @@
    * @implements module:model/GetExtendedCampaignOverview
    * @param id {Number} ID of the campaign
    * @param name {String} Name of the campaign
-   * @param subject {String} Subject of the campaign
    * @param type {module:model/GetCampaignOverview.TypeEnum} Type of campaign
    * @param status {module:model/GetCampaignOverview.StatusEnum} Status of the campaign
    * @param testSent {Boolean} Retrieved the status of test email sending. (true=Test email has been sent  false=Test email has not been sent)
@@ -63,10 +62,10 @@
    * @param recipients {Object} 
    * @param statistics {Object} 
    */
-  var exports = function(id, name, subject, type, status, testSent, header, footer, sender, replyTo, toField, htmlContent, tag, createdAt, modifiedAt, recipients, statistics) {
+  var exports = function(id, name, type, status, testSent, header, footer, sender, replyTo, toField, htmlContent, tag, createdAt, modifiedAt, recipients, statistics) {
     var _this = this;
 
-    GetExtendedCampaignOverview.call(_this, id, name, subject, type, status, testSent, header, footer, sender, replyTo, toField, htmlContent, tag, createdAt, modifiedAt);
+    GetExtendedCampaignOverview.call(_this, id, name, type, status, testSent, header, footer, sender, replyTo, toField, htmlContent, tag, createdAt, modifiedAt);
     _this['recipients'] = recipients;
     _this['statistics'] = statistics;
   };
@@ -116,7 +115,7 @@ exports.prototype['id'] = undefined;
 exports.prototype['name'] = undefined;
 
   /**
-   * Subject of the campaign
+   * Subject of the campaign. Only available if `abTesting` flag of the campaign is `false`
    * @member {String} subject
    */
 exports.prototype['subject'] = undefined;
@@ -138,6 +137,48 @@ exports.prototype['status'] = undefined;
    * @member {Date} scheduledAt
    */
 exports.prototype['scheduledAt'] = undefined;
+
+  /**
+   * Status of A/B Test for the campaign. abTesting = false means it is disabled, & abTesting = true means it is enabled.
+   * @member {Boolean} abTesting
+   */
+exports.prototype['abTesting'] = undefined;
+
+  /**
+   * Subject A of the ab-test campaign. Only available if `abTesting` flag of the campaign is `true`
+   * @member {String} subjectA
+   */
+exports.prototype['subjectA'] = undefined;
+
+  /**
+   * Subject B of the ab-test campaign. Only available if `abTesting` flag of the campaign is `true`
+   * @member {String} subjectB
+   */
+exports.prototype['subjectB'] = undefined;
+
+  /**
+   * The size of your ab-test groups. Only available if `abTesting` flag of the campaign is `true`
+   * @member {Number} splitRule
+   */
+exports.prototype['splitRule'] = undefined;
+
+  /**
+   * Criteria for the winning version. Only available if `abTesting` flag of the campaign is `true`
+   * @member {String} winnerCriteria
+   */
+exports.prototype['winnerCriteria'] = undefined;
+
+  /**
+   * The duration of the test in hours at the end of which the winning version will be sent. Only available if `abTesting` flag of the campaign is `true`
+   * @member {Number} winnerDelay
+   */
+exports.prototype['winnerDelay'] = undefined;
+
+  /**
+   * It is true if you have chosen to send your campaign at best time, otherwise it is false
+   * @member {Boolean} sendAtBestTime
+   */
+exports.prototype['sendAtBestTime'] = undefined;
 
   /**
    * Retrieved the status of test email sending. (true=Test email has been sent  false=Test email has not been sent)

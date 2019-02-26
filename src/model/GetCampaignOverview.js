@@ -46,18 +46,24 @@
    * @class
    * @param id {Number} ID of the campaign
    * @param name {String} Name of the campaign
-   * @param subject {String} Subject of the campaign
    * @param type {module:model/GetCampaignOverview.TypeEnum} Type of campaign
    * @param status {module:model/GetCampaignOverview.StatusEnum} Status of the campaign
    */
-  var exports = function(id, name, subject, type, status) {
+  var exports = function(id, name, type, status) {
     var _this = this;
 
     _this['id'] = id;
     _this['name'] = name;
-    _this['subject'] = subject;
+
     _this['type'] = type;
     _this['status'] = status;
+
+
+
+
+
+
+
 
   };
 
@@ -90,6 +96,27 @@
       if (data.hasOwnProperty('scheduledAt')) {
         obj['scheduledAt'] = ApiClient.convertToType(data['scheduledAt'], 'Date');
       }
+      if (data.hasOwnProperty('abTesting')) {
+        obj['abTesting'] = ApiClient.convertToType(data['abTesting'], 'Boolean');
+      }
+      if (data.hasOwnProperty('subjectA')) {
+        obj['subjectA'] = ApiClient.convertToType(data['subjectA'], 'String');
+      }
+      if (data.hasOwnProperty('subjectB')) {
+        obj['subjectB'] = ApiClient.convertToType(data['subjectB'], 'String');
+      }
+      if (data.hasOwnProperty('splitRule')) {
+        obj['splitRule'] = ApiClient.convertToType(data['splitRule'], 'Number');
+      }
+      if (data.hasOwnProperty('winnerCriteria')) {
+        obj['winnerCriteria'] = ApiClient.convertToType(data['winnerCriteria'], 'String');
+      }
+      if (data.hasOwnProperty('winnerDelay')) {
+        obj['winnerDelay'] = ApiClient.convertToType(data['winnerDelay'], 'Number');
+      }
+      if (data.hasOwnProperty('sendAtBestTime')) {
+        obj['sendAtBestTime'] = ApiClient.convertToType(data['sendAtBestTime'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -105,7 +132,7 @@
    */
   exports.prototype['name'] = undefined;
   /**
-   * Subject of the campaign
+   * Subject of the campaign. Only available if `abTesting` flag of the campaign is `false`
    * @member {String} subject
    */
   exports.prototype['subject'] = undefined;
@@ -124,6 +151,41 @@
    * @member {Date} scheduledAt
    */
   exports.prototype['scheduledAt'] = undefined;
+  /**
+   * Status of A/B Test for the campaign. abTesting = false means it is disabled, & abTesting = true means it is enabled.
+   * @member {Boolean} abTesting
+   */
+  exports.prototype['abTesting'] = undefined;
+  /**
+   * Subject A of the ab-test campaign. Only available if `abTesting` flag of the campaign is `true`
+   * @member {String} subjectA
+   */
+  exports.prototype['subjectA'] = undefined;
+  /**
+   * Subject B of the ab-test campaign. Only available if `abTesting` flag of the campaign is `true`
+   * @member {String} subjectB
+   */
+  exports.prototype['subjectB'] = undefined;
+  /**
+   * The size of your ab-test groups. Only available if `abTesting` flag of the campaign is `true`
+   * @member {Number} splitRule
+   */
+  exports.prototype['splitRule'] = undefined;
+  /**
+   * Criteria for the winning version. Only available if `abTesting` flag of the campaign is `true`
+   * @member {String} winnerCriteria
+   */
+  exports.prototype['winnerCriteria'] = undefined;
+  /**
+   * The duration of the test in hours at the end of which the winning version will be sent. Only available if `abTesting` flag of the campaign is `true`
+   * @member {Number} winnerDelay
+   */
+  exports.prototype['winnerDelay'] = undefined;
+  /**
+   * It is true if you have chosen to send your campaign at best time, otherwise it is false
+   * @member {Boolean} sendAtBestTime
+   */
+  exports.prototype['sendAtBestTime'] = undefined;
 
 
   /**

@@ -44,7 +44,7 @@
    * Constructs a new <code>SendSmtpEmail</code>.
    * @alias module:model/SendSmtpEmail
    * @class
-   * @param to {Array.<module:model/SendSmtpEmailTo>} List of email addresses and names (optional) of the recipients. For example, [{'name':'Jimmy', 'email':'jimmy98@example.com'}, {'name':'Joe', 'email':'joe@example.com'}]
+   * @param to {Array.<module:model/SendSmtpEmailTo>} List of email addresses and names (optional) of the recipients. For example, `[{\"name\":\"Jimmy\", \"email\":\"jimmy98@example.com\"}, {\"name\":\"Joe\", \"email\":\"joe@example.com\"}]`
    */
   var exports = function(to) {
     var _this = this;
@@ -123,7 +123,7 @@
    */
   exports.prototype['sender'] = undefined;
   /**
-   * List of email addresses and names (optional) of the recipients. For example, [{'name':'Jimmy', 'email':'jimmy98@example.com'}, {'name':'Joe', 'email':'joe@example.com'}]
+   * List of email addresses and names (optional) of the recipients. For example, `[{\"name\":\"Jimmy\", \"email\":\"jimmy98@example.com\"}, {\"name\":\"Joe\", \"email\":\"joe@example.com\"}]`
    * @member {Array.<module:model/SendSmtpEmailTo>} to
    */
   exports.prototype['to'] = undefined;
@@ -157,12 +157,12 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * Pass the absolute URL (no local file) or the base64 content of the attachment along with the attachment name (Mandatory if attachment content is passed). For example, [{'url':'https://attachment.domain.com/myAttachmentFromUrl.jpg', 'name':'My attachment 1'}, {'content':'base64 exmaple content', 'name':'My attachment 2'}]. Allowed extensions for attachment file: xlsx, xls, ods, docx, docm, doc, csv, pdf, txt, gif, jpg, jpeg, png, tif, tiff, rtf, bmp, cgm, css, shtml, html, htm, zip, xml, ppt, pptx, tar, ez, ics, mobi, msg, pub, eps and odt ( If 'templateId' is passed and is in New Template Language format then only attachment url is accepted. If template is in Old template Language format, then 'attachment' is ignored )
+   * Pass the absolute URL (no local file) or the base64 content of the attachment along with the attachment name (Mandatory if attachment content is passed). For example, `[{\"url\":\"https://attachment.domain.com/myAttachmentFromUrl.jpg\", \"name\":\"My attachment 1\"}, {\"content\":\"base64 exmaple content\", \"name\":\"My attachment 2\"}]`. Allowed extensions for attachment file: xlsx, xls, ods, docx, docm, doc, csv, pdf, txt, gif, jpg, jpeg, png, tif, tiff, rtf, bmp, cgm, css, shtml, html, htm, zip, xml, ppt, pptx, tar, ez, ics, mobi, msg, pub, eps and odt ( If 'templateId' is passed and is in New Template Language format then only attachment url is accepted. If template is in Old template Language format, then 'attachment' is ignored )
    * @member {Array.<module:model/SendSmtpEmailAttachment>} attachment
    */
   exports.prototype['attachment'] = undefined;
   /**
-   * Pass the set of headers that shall be sent along the mail headers in the original email. 'sender.ip' header can be set (only for dedicated ip users) to mention the IP to be used for sending transactional emails. For example, {'Content-Type':'text/html', 'charset':'iso-8859-1', 'sender.ip':'1.2.3.4'}
+   * Pass the set of headers that shall be sent along the mail headers in the original email. 'sender.ip' header can be set (only for dedicated ip users) to mention the IP to be used for sending transactional emails. For example, `{\"Content-Type\":\"text/html\", \"charset\":\"iso-8859-1\", \"sender.ip\":\"1.2.3.4\"}`
    * @member {Object} headers
    */
   exports.prototype['headers'] = undefined;
@@ -172,7 +172,7 @@
    */
   exports.prototype['templateId'] = undefined;
   /**
-   * Pass the set of attributes to customize the template. For example, {'FNAME':'Joe', 'LNAME':'Doe'}. It's considered only if template is in New Template Language format.
+   * Pass the set of attributes to customize the template. For example, `{\"FNAME\":\"Joe\", \"LNAME\":\"Doe\"}`. It's considered only if template is in New Template Language format.
    * @member {Object} params
    */
   exports.prototype['params'] = undefined;

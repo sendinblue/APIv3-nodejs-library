@@ -93,6 +93,48 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property abTesting (base name: "abTesting")', function() {
+      // uncomment below and update the code to test the property abTesting
+      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property subjectA (base name: "subjectA")', function() {
+      // uncomment below and update the code to test the property subjectA
+      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property subjectB (base name: "subjectB")', function() {
+      // uncomment below and update the code to test the property subjectB
+      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property splitRule (base name: "splitRule")', function() {
+      // uncomment below and update the code to test the property splitRule
+      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property winnerCriteria (base name: "winnerCriteria")', function() {
+      // uncomment below and update the code to test the property winnerCriteria
+      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property winnerDelay (base name: "winnerDelay")', function() {
+      // uncomment below and update the code to test the property winnerDelay
+      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sendAtBestTime (base name: "sendAtBestTime")', function() {
+      // uncomment below and update the code to test the property sendAtBestTime
+      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

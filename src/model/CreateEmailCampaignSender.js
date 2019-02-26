@@ -42,7 +42,7 @@
 
   /**
    * Constructs a new <code>CreateEmailCampaignSender</code>.
-   * Sender details including email and name (optional). For example {&#39;name&#39;:&#39;xyz&#39; , &#39;email&#39;:&#39;example@abc.com&#39;}
+   * Sender details including email and name (optional). For example &#x60;{\&quot;name\&quot;:\&quot;xyz\&quot;, \&quot;email\&quot;:\&quot;example@abc.com\&quot;}&#x60;
    * @alias module:model/CreateEmailCampaignSender
    * @class
    * @param email {String} Sender email
