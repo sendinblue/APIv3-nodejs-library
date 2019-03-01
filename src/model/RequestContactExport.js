@@ -44,7 +44,7 @@
    * Constructs a new <code>RequestContactExport</code>.
    * @alias module:model/RequestContactExport
    * @class
-   * @param contactFilter {Object} Set the filter for the contacts to be exported. For example, {'blacklisted':true} will export all the blacklisted contacts.
+   * @param contactFilter {Object} Set the filter for the contacts to be exported. For example, `{\"blacklisted\":true}` will export all the blacklisted contacts.
    */
   var exports = function(contactFilter) {
     var _this = this;
@@ -84,7 +84,7 @@
    */
   exports.prototype['exportAttributes'] = undefined;
   /**
-   * Set the filter for the contacts to be exported. For example, {'blacklisted':true} will export all the blacklisted contacts.
+   * Set the filter for the contacts to be exported. For example, `{\"blacklisted\":true}` will export all the blacklisted contacts.
    * @member {Object} contactFilter
    */
   exports.prototype['contactFilter'] = undefined;

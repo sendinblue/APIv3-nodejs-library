@@ -46,9 +46,8 @@
    * @class
    * @param sender {module:model/CreateEmailCampaignSender} 
    * @param name {String} Name of the campaign
-   * @param subject {String} Subject of the campaign
    */
-  var exports = function(sender, name, subject) {
+  var exports = function(sender, name) {
     var _this = this;
 
 
@@ -58,7 +57,13 @@
 
 
 
-    _this['subject'] = subject;
+
+
+
+
+
+
+
 
 
 
@@ -140,6 +145,24 @@
       if (data.hasOwnProperty('sendAtBestTime')) {
         obj['sendAtBestTime'] = ApiClient.convertToType(data['sendAtBestTime'], 'Boolean');
       }
+      if (data.hasOwnProperty('abTesting')) {
+        obj['abTesting'] = ApiClient.convertToType(data['abTesting'], 'Boolean');
+      }
+      if (data.hasOwnProperty('subjectA')) {
+        obj['subjectA'] = ApiClient.convertToType(data['subjectA'], 'String');
+      }
+      if (data.hasOwnProperty('subjectB')) {
+        obj['subjectB'] = ApiClient.convertToType(data['subjectB'], 'String');
+      }
+      if (data.hasOwnProperty('splitRule')) {
+        obj['splitRule'] = ApiClient.convertToType(data['splitRule'], 'Number');
+      }
+      if (data.hasOwnProperty('winnerCriteria')) {
+        obj['winnerCriteria'] = ApiClient.convertToType(data['winnerCriteria'], 'String');
+      }
+      if (data.hasOwnProperty('winnerDelay')) {
+        obj['winnerDelay'] = ApiClient.convertToType(data['winnerDelay'], 'Number');
+      }
     }
     return obj;
   }
@@ -179,7 +202,7 @@
    */
   exports.prototype['scheduledAt'] = undefined;
   /**
-   * Subject of the campaign
+   * Subject of the campaign. Mandatory if abTesting is false. Ignored if abTesting is true.
    * @member {String} subject
    */
   exports.prototype['subject'] = undefined;
@@ -189,7 +212,7 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * To personalize the «To» Field. If you want to include the first name and last name of your recipient, add {FNAME} {LNAME}. These contact attributes must already exist in your SendinBlue account. If input parameter 'params' used please use {{contact.FNAME}} {{contact.LNAME}} for personalization
+   * To personalize the «To» Field. If you want to include the first name and last name of your recipient, add `{FNAME} {LNAME}`. These contact attributes must already exist in your SendinBlue account. If input parameter 'params' used please use `{{contact.FNAME}} {{contact.LNAME}}` for personalization
    * @member {String} toField
    */
   exports.prototype['toField'] = undefined;
@@ -229,7 +252,7 @@
    */
   exports.prototype['utmCampaign'] = undefined;
   /**
-   * Pass the set of attributes to customize the type classic campaign. For example, {'FNAME':'Joe', 'LNAME':'Doe'}. Only available if 'type' is 'classic'. It's considered only if campaign is in New Template Language format. The New Template Language is dependent on the values of 'subject', 'htmlContent/htmlUrl', 'sender.name' & 'toField'
+   * Pass the set of attributes to customize the type classic campaign. For example, `{\"FNAME\":\"Joe\", \"LNAME:\"Doe\"}`. Only available if 'type' is 'classic'. It's considered only if campaign is in New Template Language format. The New Template Language is dependent on the values of 'subject', 'htmlContent/htmlUrl', 'sender.name' & 'toField'
    * @member {Object} params
    */
   exports.prototype['params'] = undefined;
@@ -239,7 +262,55 @@
    * @default false
    */
   exports.prototype['sendAtBestTime'] = false;
+  /**
+   * Status of A/B Test. abTesting = false means it is disabled, & abTesting = true means it is enabled. 'subjectA', 'subjectB', 'splitRule', 'winnerCriteria' & 'winnerDelay' will be considered when abTesting is set to true. 'subjectA' & 'subjectB' are mandatory together & 'subject' if passed is ignored. Can be set to true only if 'sendAtBestTime' is 'false'. You will be able to set up two subject lines for your campaign and send them to a random sample of your total recipients. Half of the test group will receive version A, and the other half will receive version B
+   * @member {Boolean} abTesting
+   * @default false
+   */
+  exports.prototype['abTesting'] = false;
+  /**
+   * Subject A of the campaign. Mandatory if abTesting = true. subjectA & subjectB should have unique value
+   * @member {String} subjectA
+   */
+  exports.prototype['subjectA'] = undefined;
+  /**
+   * Subject B of the campaign. Mandatory if abTesting = true. subjectA & subjectB should have unique value
+   * @member {String} subjectB
+   */
+  exports.prototype['subjectB'] = undefined;
+  /**
+   * Add the size of your test groups. Mandatory if abTesting = true & 'recipients' is passed. We'll send version A and B to a random sample of recipients, and then the winning version to everyone else
+   * @member {Number} splitRule
+   */
+  exports.prototype['splitRule'] = undefined;
+  /**
+   * Choose the metrics that will determinate the winning version. Mandatory if 'splitRule' >= 1 and < 50. If splitRule = 50, 'winnerCriteria' is ignored if passed
+   * @member {module:model/CreateEmailCampaign.WinnerCriteriaEnum} winnerCriteria
+   */
+  exports.prototype['winnerCriteria'] = undefined;
+  /**
+   * Choose the duration of the test in hours. Maximum is 7 days, pass 24*7 = 168 hours. The winning version will be sent at the end of the test. Mandatory if 'splitRule' >= 1 and < 50. If splitRule = 50, 'winnerDelay' is ignored if passed
+   * @member {Number} winnerDelay
+   */
+  exports.prototype['winnerDelay'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>winnerCriteria</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.WinnerCriteriaEnum = {
+    /**
+     * value: "open"
+     * @const
+     */
+    "open": "open",
+    /**
+     * value: "click"
+     * @const
+     */
+    "click": "click"  };
 
 
   return exports;
