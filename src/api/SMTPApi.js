@@ -203,8 +203,8 @@
     /**
      * Get your SMTP activity aggregated over a period of time
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Tag of the emails
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAggregatedReport} and HTTP response
@@ -244,8 +244,8 @@
     /**
      * Get your SMTP activity aggregated over a period of time
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Tag of the emails
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAggregatedReport}
@@ -263,8 +263,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number limitation for the result returned (default to 50)
      * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.email Filter the report for a specific email addresses
      * @param {module:model/String} opts.event Filter the report for a specific event type
@@ -316,8 +316,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number limitation for the result returned (default to 50)
      * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.email Filter the report for a specific email addresses
      * @param {module:model/String} opts.event Filter the report for a specific event type
@@ -339,8 +339,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document on the page (default to 0)
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD)
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD)
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Tag of the emails
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetReports} and HTTP response
@@ -384,8 +384,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document on the page (default to 0)
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD)
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD)
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Tag of the emails
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetReports}

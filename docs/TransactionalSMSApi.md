@@ -37,8 +37,8 @@ var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
 var opts = { 
   'limit': 50, // Number | Number of documents per page
-  'startDate': new Date("2013-10-20"), // Date | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
-  'endDate': new Date("2013-10-20"), // Date | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+  'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+  'endDate': "endDate_example", // String | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
   'offset': 0, // Number | Index of the first document of the page
   'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate'
   'phoneNumber': "phoneNumber_example", // String | Filter the report for a specific phone number
@@ -58,8 +58,8 @@ apiInstance.getSmsEvents(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| Number of documents per page | [optional] [default to 50]
- **startDate** | **Date**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report | [optional] 
- **endDate** | **Date**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report | [optional] 
+ **startDate** | **String**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report | [optional] 
+ **endDate** | **String**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report | [optional] 
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
  **days** | **Number**| Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39; | [optional] 
  **phoneNumber** | **String**| Filter the report for a specific phone number | [optional] 
@@ -105,8 +105,8 @@ partnerKey.apiKey = 'YOUR API KEY';
 var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
 var opts = { 
-  'startDate': new Date("2013-10-20"), // Date | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
-  'endDate': new Date("2013-10-20"), // Date | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+  'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+  'endDate': "endDate_example", // String | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
   'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with startDate and endDate
   'tag': "tag_example" // String | Filter on a tag
 };
@@ -122,8 +122,8 @@ apiInstance.getTransacAggregatedSmsReport(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report | [optional] 
- **endDate** | **Date**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report | [optional] 
+ **startDate** | **String**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report | [optional] 
+ **endDate** | **String**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report | [optional] 
  **days** | **Number**| Number of days in the past including today (positive integer). Not compatible with startDate and endDate | [optional] 
  **tag** | **String**| Filter on a tag | [optional] 
 
@@ -166,8 +166,8 @@ partnerKey.apiKey = 'YOUR API KEY';
 var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
 var opts = { 
-  'startDate': new Date("2013-10-20"), // Date | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
-  'endDate': new Date("2013-10-20"), // Date | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+  'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+  'endDate': "endDate_example", // String | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
   'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate'
   'tag': "tag_example" // String | Filter on a tag
 };
@@ -183,8 +183,8 @@ apiInstance.getTransacSmsReport(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report | [optional] 
- **endDate** | **Date**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report | [optional] 
+ **startDate** | **String**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report | [optional] 
+ **endDate** | **String**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report | [optional] 
  **days** | **Number**| Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39; | [optional] 
  **tag** | **String**| Filter on a tag | [optional] 
 

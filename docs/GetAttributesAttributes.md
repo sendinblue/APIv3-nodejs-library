@@ -39,6 +39,8 @@ Name | Type | Description | Notes
 
 * `id` (value: `"id"`)
 
+* `boolean` (value: `"boolean"`)
+
 
 
 

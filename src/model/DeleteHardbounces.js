@@ -65,10 +65,10 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('startDate')) {
-        obj['startDate'] = ApiClient.convertToType(data['startDate'], 'Date');
+        obj['startDate'] = ApiClient.convertToType(data['startDate'], 'String');
       }
       if (data.hasOwnProperty('endDate')) {
-        obj['endDate'] = ApiClient.convertToType(data['endDate'], 'Date');
+        obj['endDate'] = ApiClient.convertToType(data['endDate'], 'String');
       }
       if (data.hasOwnProperty('contactEmail')) {
         obj['contactEmail'] = ApiClient.convertToType(data['contactEmail'], 'String');
@@ -79,12 +79,12 @@
 
   /**
    * Starting date (YYYY-MM-DD) of the time period for deletion. The hardbounces occurred after this date will be deleted. Must be less than or equal to the endDate
-   * @member {Date} startDate
+   * @member {String} startDate
    */
   exports.prototype['startDate'] = undefined;
   /**
    * Ending date (YYYY-MM-DD) of the time period for deletion. The hardbounces until this date will be deleted. Must be greater than or equal to the startDate
-   * @member {Date} endDate
+   * @member {String} endDate
    */
   exports.prototype['endDate'] = undefined;
   /**
