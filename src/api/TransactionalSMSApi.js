@@ -53,8 +53,8 @@
      * Get all the SMS activity (unaggregated events)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 50)
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.phoneNumber Filter the report for a specific phone number
@@ -102,8 +102,8 @@
      * Get all the SMS activity (unaggregated events)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 50)
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.phoneNumber Filter the report for a specific phone number
@@ -122,8 +122,8 @@
     /**
      * Get your SMS activity aggregated over a period of time
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with startDate and endDate
      * @param {String} opts.tag Filter on a tag
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTransacAggregatedSmsReport} and HTTP response
@@ -163,8 +163,8 @@
     /**
      * Get your SMS activity aggregated over a period of time
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with startDate and endDate
      * @param {String} opts.tag Filter on a tag
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTransacAggregatedSmsReport}
@@ -180,8 +180,8 @@
     /**
      * Get your SMS activity aggregated per day
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Filter on a tag
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTransacSmsReport} and HTTP response
@@ -221,8 +221,8 @@
     /**
      * Get your SMS activity aggregated per day
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
-     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
+     * @param {String} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
+     * @param {String} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Filter on a tag
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTransacSmsReport}

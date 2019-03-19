@@ -171,7 +171,12 @@
      * value: "id"
      * @const
      */
-    "id": "id"  };
+    "id": "id",
+    /**
+     * value: "boolean"
+     * @const
+     */
+    "boolean": "boolean"  };
 
 
   return exports;

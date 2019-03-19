@@ -153,20 +153,14 @@
     /**
      * Get an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
-     * @param {module:model/GetSmsCampaign} getSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmsCampaign} and HTTP response
      */
-    this.getSmsCampaignWithHttpInfo = function(campaignId, getSmsCampaign) {
-      var postBody = getSmsCampaign;
+    this.getSmsCampaignWithHttpInfo = function(campaignId) {
+      var postBody = null;
 
       // verify the required parameter 'campaignId' is set
       if (campaignId === undefined || campaignId === null) {
         throw new Error("Missing the required parameter 'campaignId' when calling getSmsCampaign");
-      }
-
-      // verify the required parameter 'getSmsCampaign' is set
-      if (getSmsCampaign === undefined || getSmsCampaign === null) {
-        throw new Error("Missing the required parameter 'getSmsCampaign' when calling getSmsCampaign");
       }
 
 
@@ -197,11 +191,10 @@
     /**
      * Get an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
-     * @param {module:model/GetSmsCampaign} getSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmsCampaign}
      */
-    this.getSmsCampaign = function(campaignId, getSmsCampaign) {
-      return this.getSmsCampaignWithHttpInfo(campaignId, getSmsCampaign)
+    this.getSmsCampaign = function(campaignId) {
+      return this.getSmsCampaignWithHttpInfo(campaignId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

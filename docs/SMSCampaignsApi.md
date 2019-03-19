@@ -126,7 +126,7 @@ null (empty response body)
 
 <a name="getSmsCampaign"></a>
 # **getSmsCampaign**
-> GetSmsCampaign getSmsCampaign(campaignId, getSmsCampaign)
+> GetSmsCampaign getSmsCampaign(campaignId)
 
 Get an SMS campaign
 
@@ -151,9 +151,7 @@ var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
 var campaignId = 789; // Number | id of the SMS campaign
 
-var getSmsCampaign = new SibApiV3Sdk.GetSmsCampaign(); // GetSmsCampaign | Values to update an SMS Campaign
-
-apiInstance.getSmsCampaign(campaignId, getSmsCampaign).then(function(data) {
+apiInstance.getSmsCampaign(campaignId).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -166,7 +164,6 @@ apiInstance.getSmsCampaign(campaignId, getSmsCampaign).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **Number**| id of the SMS campaign | 
- **getSmsCampaign** | [**GetSmsCampaign**](GetSmsCampaign.md)| Values to update an SMS Campaign | 
 
 ### Return type
 
