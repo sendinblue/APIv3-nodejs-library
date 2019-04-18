@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddCredits', 'model/CreateChild', 'model/CreateReseller', 'model/ErrorModel', 'model/GetChildInfo', 'model/GetChildrenList', 'model/ManageIp', 'model/RemainingCreditModel', 'model/RemoveCredits', 'model/UpdateChild'], factory);
+    define(['ApiClient', 'model/AddChildDomain', 'model/AddCredits', 'model/CreateChild', 'model/CreateReseller', 'model/ErrorModel', 'model/GetChildDomains', 'model/GetChildInfo', 'model/GetChildrenList', 'model/GetSsoToken', 'model/ManageIp', 'model/RemainingCreditModel', 'model/RemoveCredits', 'model/UpdateChild', 'model/UpdateChildDomain'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AddCredits'), require('../model/CreateChild'), require('../model/CreateReseller'), require('../model/ErrorModel'), require('../model/GetChildInfo'), require('../model/GetChildrenList'), require('../model/ManageIp'), require('../model/RemainingCreditModel'), require('../model/RemoveCredits'), require('../model/UpdateChild'));
+    module.exports = factory(require('../ApiClient'), require('../model/AddChildDomain'), require('../model/AddCredits'), require('../model/CreateChild'), require('../model/CreateReseller'), require('../model/ErrorModel'), require('../model/GetChildDomains'), require('../model/GetChildInfo'), require('../model/GetChildrenList'), require('../model/GetSsoToken'), require('../model/ManageIp'), require('../model/RemainingCreditModel'), require('../model/RemoveCredits'), require('../model/UpdateChild'), require('../model/UpdateChildDomain'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.ResellerApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddCredits, root.SibApiV3Sdk.CreateChild, root.SibApiV3Sdk.CreateReseller, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetChildInfo, root.SibApiV3Sdk.GetChildrenList, root.SibApiV3Sdk.ManageIp, root.SibApiV3Sdk.RemainingCreditModel, root.SibApiV3Sdk.RemoveCredits, root.SibApiV3Sdk.UpdateChild);
+    root.SibApiV3Sdk.ResellerApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddChildDomain, root.SibApiV3Sdk.AddCredits, root.SibApiV3Sdk.CreateChild, root.SibApiV3Sdk.CreateReseller, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetChildDomains, root.SibApiV3Sdk.GetChildInfo, root.SibApiV3Sdk.GetChildrenList, root.SibApiV3Sdk.GetSsoToken, root.SibApiV3Sdk.ManageIp, root.SibApiV3Sdk.RemainingCreditModel, root.SibApiV3Sdk.RemoveCredits, root.SibApiV3Sdk.UpdateChild, root.SibApiV3Sdk.UpdateChildDomain);
   }
-}(this, function(ApiClient, AddCredits, CreateChild, CreateReseller, ErrorModel, GetChildInfo, GetChildrenList, ManageIp, RemainingCreditModel, RemoveCredits, UpdateChild) {
+}(this, function(ApiClient, AddChildDomain, AddCredits, CreateChild, CreateReseller, ErrorModel, GetChildDomains, GetChildInfo, GetChildrenList, GetSsoToken, ManageIp, RemainingCreditModel, RemoveCredits, UpdateChild, UpdateChildDomain) {
   'use strict';
 
   /**
@@ -166,6 +166,64 @@
 
 
     /**
+     * Creates a domain for a child account
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @param {module:model/AddChildDomain} addChildDomain Sender domain to add for a specific child account
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.createChildDomainWithHttpInfo = function(childAuthKey, addChildDomain) {
+      var postBody = addChildDomain;
+
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling createChildDomain");
+      }
+
+      // verify the required parameter 'addChildDomain' is set
+      if (addChildDomain === undefined || addChildDomain === null) {
+        throw new Error("Missing the required parameter 'addChildDomain' when calling createChildDomain");
+      }
+
+
+      var pathParams = {
+        'childAuthKey': childAuthKey
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/reseller/children/{childAuthKey}/domains', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Creates a domain for a child account
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @param {module:model/AddChildDomain} addChildDomain Sender domain to add for a specific child account
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.createChildDomain = function(childAuthKey, addChildDomain) {
+      return this.createChildDomainWithHttpInfo(childAuthKey, addChildDomain)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Creates a reseller child
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateChild} opts.resellerChild reseller child to add
@@ -207,6 +265,65 @@
      */
     this.createResellerChild = function(opts) {
       return this.createResellerChildWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Deletes the sender domain of the reseller child based on the childAuthKey and domainName passed
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @param {String} domainName Pass the existing domain that needs to be deleted
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.deleteChildDomainWithHttpInfo = function(childAuthKey, domainName) {
+      var postBody = null;
+
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling deleteChildDomain");
+      }
+
+      // verify the required parameter 'domainName' is set
+      if (domainName === undefined || domainName === null) {
+        throw new Error("Missing the required parameter 'domainName' when calling deleteChildDomain");
+      }
+
+
+      var pathParams = {
+        'childAuthKey': childAuthKey,
+        'domainName': domainName
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/reseller/children/{childAuthKey}/domains/{domainName}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Deletes the sender domain of the reseller child based on the childAuthKey and domainName passed
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @param {String} domainName Pass the existing domain that needs to be deleted
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.deleteChildDomain = function(childAuthKey, domainName) {
+      return this.deleteChildDomainWithHttpInfo(childAuthKey, domainName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -323,6 +440,57 @@
 
 
     /**
+     * Gets all the sender domains of a specific child account
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildDomains} and HTTP response
+     */
+    this.getChildDomainsWithHttpInfo = function(childAuthKey) {
+      var postBody = null;
+
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling getChildDomains");
+      }
+
+
+      var pathParams = {
+        'childAuthKey': childAuthKey
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = GetChildDomains;
+
+      return this.apiClient.callApi(
+        '/reseller/children/{childAuthKey}/domains', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Gets all the sender domains of a specific child account
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChildDomains}
+     */
+    this.getChildDomains = function(childAuthKey) {
+      return this.getChildDomainsWithHttpInfo(childAuthKey)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Gets the info about a specific child account
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildInfo} and HTTP response
@@ -417,6 +585,57 @@
 
 
     /**
+     * Generates a session token which will remain valid for a short period of time only.
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSsoToken} and HTTP response
+     */
+    this.getSsoTokenWithHttpInfo = function(childAuthKey) {
+      var postBody = null;
+
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling getSsoToken");
+      }
+
+
+      var pathParams = {
+        'childAuthKey': childAuthKey
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = GetSsoToken;
+
+      return this.apiClient.callApi(
+        '/reseller/children/{childAuthKey}/auth', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Generates a session token which will remain valid for a short period of time only.
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSsoToken}
+     */
+    this.getSsoToken = function(childAuthKey) {
+      return this.getSsoTokenWithHttpInfo(childAuthKey)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Remove Email and/or SMS credits from a specific child account
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/RemoveCredits} removeCredits Values to post to remove email or SMS credits from a specific child account
@@ -468,6 +687,72 @@
      */
     this.removeCredits = function(childAuthKey, removeCredits) {
       return this.removeCreditsWithHttpInfo(childAuthKey, removeCredits)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Updates the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @param {String} domainName Pass the existing domain that needs to be updated
+     * @param {module:model/UpdateChildDomain} updateChildDomain value to update for sender domain
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.updateChildDomainWithHttpInfo = function(childAuthKey, domainName, updateChildDomain) {
+      var postBody = updateChildDomain;
+
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling updateChildDomain");
+      }
+
+      // verify the required parameter 'domainName' is set
+      if (domainName === undefined || domainName === null) {
+        throw new Error("Missing the required parameter 'domainName' when calling updateChildDomain");
+      }
+
+      // verify the required parameter 'updateChildDomain' is set
+      if (updateChildDomain === undefined || updateChildDomain === null) {
+        throw new Error("Missing the required parameter 'updateChildDomain' when calling updateChildDomain");
+      }
+
+
+      var pathParams = {
+        'childAuthKey': childAuthKey,
+        'domainName': domainName
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/reseller/children/{childAuthKey}/domains/{domainName}', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Updates the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @param {String} domainName Pass the existing domain that needs to be updated
+     * @param {module:model/UpdateChildDomain} updateChildDomain value to update for sender domain
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.updateChildDomain = function(childAuthKey, domainName, updateChildDomain) {
+      return this.updateChildDomainWithHttpInfo(childAuthKey, domainName, updateChildDomain)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

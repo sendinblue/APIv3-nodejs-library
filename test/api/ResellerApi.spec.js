@@ -71,10 +71,30 @@
         done();
       });
     });
+    describe('createChildDomain', function() {
+      it('should call createChildDomain successfully', function(done) {
+        //uncomment below and update the code to test createChildDomain
+        //instance.createChildDomain(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createResellerChild', function() {
       it('should call createResellerChild successfully', function(done) {
         //uncomment below and update the code to test createResellerChild
         //instance.createResellerChild(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteChildDomain', function() {
+      it('should call deleteChildDomain successfully', function(done) {
+        //uncomment below and update the code to test deleteChildDomain
+        //instance.deleteChildDomain(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -101,6 +121,16 @@
         done();
       });
     });
+    describe('getChildDomains', function() {
+      it('should call getChildDomains successfully', function(done) {
+        //uncomment below and update the code to test getChildDomains
+        //instance.getChildDomains(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getChildInfo', function() {
       it('should call getChildInfo successfully', function(done) {
         //uncomment below and update the code to test getChildInfo
@@ -121,10 +151,30 @@
         done();
       });
     });
+    describe('getSsoToken', function() {
+      it('should call getSsoToken successfully', function(done) {
+        //uncomment below and update the code to test getSsoToken
+        //instance.getSsoToken(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('removeCredits', function() {
       it('should call removeCredits successfully', function(done) {
         //uncomment below and update the code to test removeCredits
         //instance.removeCredits(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateChildDomain', function() {
+      it('should call updateChildDomain successfully', function(done) {
+        //uncomment below and update the code to test updateChildDomain
+        //instance.updateChildDomain(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

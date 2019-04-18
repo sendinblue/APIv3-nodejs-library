@@ -175,12 +175,17 @@ Class | Method | HTTP request | Description
 *SibApiV3Sdk.ProcessApi* | [**getProcesses**](docs/ProcessApi.md#getProcesses) | **GET** /processes | Return all the processes for your account
 *SibApiV3Sdk.ResellerApi* | [**addCredits**](docs/ResellerApi.md#addCredits) | **POST** /reseller/children/{childAuthKey}/credits/add | Add Email and/or SMS credits to a specific child account
 *SibApiV3Sdk.ResellerApi* | [**associateIpToChild**](docs/ResellerApi.md#associateIpToChild) | **POST** /reseller/children/{childAuthKey}/ips/associate | Associate a dedicated IP to the child
+*SibApiV3Sdk.ResellerApi* | [**createChildDomain**](docs/ResellerApi.md#createChildDomain) | **POST** /reseller/children/{childAuthKey}/domains | Creates a domain for a child account
 *SibApiV3Sdk.ResellerApi* | [**createResellerChild**](docs/ResellerApi.md#createResellerChild) | **POST** /reseller/children | Creates a reseller child
+*SibApiV3Sdk.ResellerApi* | [**deleteChildDomain**](docs/ResellerApi.md#deleteChildDomain) | **DELETE** /reseller/children/{childAuthKey}/domains/{domainName} | Deletes the sender domain of the reseller child based on the childAuthKey and domainName passed
 *SibApiV3Sdk.ResellerApi* | [**deleteResellerChild**](docs/ResellerApi.md#deleteResellerChild) | **DELETE** /reseller/children/{childAuthKey} | Deletes a single reseller child based on the childAuthKey supplied
 *SibApiV3Sdk.ResellerApi* | [**dissociateIpFromChild**](docs/ResellerApi.md#dissociateIpFromChild) | **POST** /reseller/children/{childAuthKey}/ips/dissociate | Dissociate a dedicated IP to the child
+*SibApiV3Sdk.ResellerApi* | [**getChildDomains**](docs/ResellerApi.md#getChildDomains) | **GET** /reseller/children/{childAuthKey}/domains | Gets all the sender domains of a specific child account
 *SibApiV3Sdk.ResellerApi* | [**getChildInfo**](docs/ResellerApi.md#getChildInfo) | **GET** /reseller/children/{childAuthKey} | Gets the info about a specific child account
 *SibApiV3Sdk.ResellerApi* | [**getResellerChilds**](docs/ResellerApi.md#getResellerChilds) | **GET** /reseller/children | Gets the list of all reseller&#39;s children accounts
+*SibApiV3Sdk.ResellerApi* | [**getSsoToken**](docs/ResellerApi.md#getSsoToken) | **GET** /reseller/children/{childAuthKey}/auth | Generates a session token which will remain valid for a short period of time only.
 *SibApiV3Sdk.ResellerApi* | [**removeCredits**](docs/ResellerApi.md#removeCredits) | **POST** /reseller/children/{childAuthKey}/credits/remove | Remove Email and/or SMS credits from a specific child account
+*SibApiV3Sdk.ResellerApi* | [**updateChildDomain**](docs/ResellerApi.md#updateChildDomain) | **PUT** /reseller/children/{childAuthKey}/domains/{domainName} | Updates the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
 *SibApiV3Sdk.ResellerApi* | [**updateResellerChild**](docs/ResellerApi.md#updateResellerChild) | **PUT** /reseller/children/{childAuthKey} | Updates infos of reseller&#39;s child based on the childAuthKey supplied
 *SibApiV3Sdk.SMSCampaignsApi* | [**createSmsCampaign**](docs/SMSCampaignsApi.md#createSmsCampaign) | **POST** /smsCampaigns | Creates an SMS campaign
 *SibApiV3Sdk.SMSCampaignsApi* | [**deleteSmsCampaign**](docs/SMSCampaignsApi.md#deleteSmsCampaign) | **DELETE** /smsCampaigns/{campaignId} | Delete the SMS campaign
@@ -223,6 +228,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [SibApiV3Sdk.AddChildDomain](docs/AddChildDomain.md)
  - [SibApiV3Sdk.AddContactToList](docs/AddContactToList.md)
  - [SibApiV3Sdk.AddCredits](docs/AddCredits.md)
  - [SibApiV3Sdk.CreateAttribute](docs/CreateAttribute.md)
@@ -261,6 +267,8 @@ Class | Method | HTTP request | Description
  - [SibApiV3Sdk.GetCampaignOverview](docs/GetCampaignOverview.md)
  - [SibApiV3Sdk.GetCampaignRecipients](docs/GetCampaignRecipients.md)
  - [SibApiV3Sdk.GetCampaignStats](docs/GetCampaignStats.md)
+ - [SibApiV3Sdk.GetChildDomain](docs/GetChildDomain.md)
+ - [SibApiV3Sdk.GetChildDomains](docs/GetChildDomains.md)
  - [SibApiV3Sdk.GetChildInfoApiKeys](docs/GetChildInfoApiKeys.md)
  - [SibApiV3Sdk.GetChildInfoApiKeysV2](docs/GetChildInfoApiKeysV2.md)
  - [SibApiV3Sdk.GetChildInfoApiKeysV3](docs/GetChildInfoApiKeysV3.md)
@@ -314,6 +322,7 @@ Class | Method | HTTP request | Description
  - [SibApiV3Sdk.GetSmtpTemplateOverview](docs/GetSmtpTemplateOverview.md)
  - [SibApiV3Sdk.GetSmtpTemplateOverviewSender](docs/GetSmtpTemplateOverviewSender.md)
  - [SibApiV3Sdk.GetSmtpTemplates](docs/GetSmtpTemplates.md)
+ - [SibApiV3Sdk.GetSsoToken](docs/GetSsoToken.md)
  - [SibApiV3Sdk.GetStatsByDomain](docs/GetStatsByDomain.md)
  - [SibApiV3Sdk.GetTransacAggregatedSmsReport](docs/GetTransacAggregatedSmsReport.md)
  - [SibApiV3Sdk.GetTransacSmsReport](docs/GetTransacSmsReport.md)
@@ -354,6 +363,7 @@ Class | Method | HTTP request | Description
  - [SibApiV3Sdk.UpdateAttributeEnumeration](docs/UpdateAttributeEnumeration.md)
  - [SibApiV3Sdk.UpdateCampaignStatus](docs/UpdateCampaignStatus.md)
  - [SibApiV3Sdk.UpdateChild](docs/UpdateChild.md)
+ - [SibApiV3Sdk.UpdateChildDomain](docs/UpdateChildDomain.md)
  - [SibApiV3Sdk.UpdateContact](docs/UpdateContact.md)
  - [SibApiV3Sdk.UpdateEmailCampaign](docs/UpdateEmailCampaign.md)
  - [SibApiV3Sdk.UpdateEmailCampaignRecipients](docs/UpdateEmailCampaignRecipients.md)
