@@ -6,12 +6,17 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addCredits**](ResellerApi.md#addCredits) | **POST** /reseller/children/{childAuthKey}/credits/add | Add Email and/or SMS credits to a specific child account
 [**associateIpToChild**](ResellerApi.md#associateIpToChild) | **POST** /reseller/children/{childAuthKey}/ips/associate | Associate a dedicated IP to the child
+[**createChildDomain**](ResellerApi.md#createChildDomain) | **POST** /reseller/children/{childAuthKey}/domains | Creates a domain for a child account
 [**createResellerChild**](ResellerApi.md#createResellerChild) | **POST** /reseller/children | Creates a reseller child
+[**deleteChildDomain**](ResellerApi.md#deleteChildDomain) | **DELETE** /reseller/children/{childAuthKey}/domains/{domainName} | Deletes the sender domain of the reseller child based on the childAuthKey and domainName passed
 [**deleteResellerChild**](ResellerApi.md#deleteResellerChild) | **DELETE** /reseller/children/{childAuthKey} | Deletes a single reseller child based on the childAuthKey supplied
 [**dissociateIpFromChild**](ResellerApi.md#dissociateIpFromChild) | **POST** /reseller/children/{childAuthKey}/ips/dissociate | Dissociate a dedicated IP to the child
+[**getChildDomains**](ResellerApi.md#getChildDomains) | **GET** /reseller/children/{childAuthKey}/domains | Gets all the sender domains of a specific child account
 [**getChildInfo**](ResellerApi.md#getChildInfo) | **GET** /reseller/children/{childAuthKey} | Gets the info about a specific child account
 [**getResellerChilds**](ResellerApi.md#getResellerChilds) | **GET** /reseller/children | Gets the list of all reseller&#39;s children accounts
+[**getSsoToken**](ResellerApi.md#getSsoToken) | **GET** /reseller/children/{childAuthKey}/auth | Generates a session token which will remain valid for a short period of time only.
 [**removeCredits**](ResellerApi.md#removeCredits) | **POST** /reseller/children/{childAuthKey}/credits/remove | Remove Email and/or SMS credits from a specific child account
+[**updateChildDomain**](ResellerApi.md#updateChildDomain) | **PUT** /reseller/children/{childAuthKey}/domains/{domainName} | Updates the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
 [**updateResellerChild**](ResellerApi.md#updateResellerChild) | **PUT** /reseller/children/{childAuthKey} | Updates infos of reseller&#39;s child based on the childAuthKey supplied
 
 
@@ -129,6 +134,63 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="createChildDomain"></a>
+# **createChildDomain**
+> createChildDomain(childAuthKey, addChildDomain)
+
+Creates a domain for a child account
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.ResellerApi();
+
+var childAuthKey = "childAuthKey_example"; // String | auth key of reseller's child
+
+var addChildDomain = new SibApiV3Sdk.AddChildDomain(); // AddChildDomain | Sender domain to add for a specific child account
+
+apiInstance.createChildDomain(childAuthKey, addChildDomain).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **childAuthKey** | **String**| auth key of reseller&#39;s child | 
+ **addChildDomain** | [**AddChildDomain**](AddChildDomain.md)| Sender domain to add for a specific child account | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="createResellerChild"></a>
 # **createResellerChild**
 > CreateReseller createResellerChild(opts)
@@ -174,6 +236,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CreateReseller**](CreateReseller.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="deleteChildDomain"></a>
+# **deleteChildDomain**
+> deleteChildDomain(childAuthKey, domainName)
+
+Deletes the sender domain of the reseller child based on the childAuthKey and domainName passed
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.ResellerApi();
+
+var childAuthKey = "childAuthKey_example"; // String | auth key of reseller's child
+
+var domainName = "domainName_example"; // String | Pass the existing domain that needs to be deleted
+
+apiInstance.deleteChildDomain(childAuthKey, domainName).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **childAuthKey** | **String**| auth key of reseller&#39;s child | 
+ **domainName** | **String**| Pass the existing domain that needs to be deleted | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
@@ -295,6 +414,60 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="getChildDomains"></a>
+# **getChildDomains**
+> GetChildDomains getChildDomains(childAuthKey)
+
+Gets all the sender domains of a specific child account
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.ResellerApi();
+
+var childAuthKey = "childAuthKey_example"; // String | auth key of reseller's child
+
+apiInstance.getChildDomains(childAuthKey).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **childAuthKey** | **String**| auth key of reseller&#39;s child | 
+
+### Return type
+
+[**GetChildDomains**](GetChildDomains.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="getChildInfo"></a>
 # **getChildInfo**
 > GetChildInfo getChildInfo(childAuthKey)
@@ -397,6 +570,60 @@ This endpoint does not need any parameter.
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="getSsoToken"></a>
+# **getSsoToken**
+> GetSsoToken getSsoToken(childAuthKey)
+
+Generates a session token which will remain valid for a short period of time only.
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.ResellerApi();
+
+var childAuthKey = "childAuthKey_example"; // String | auth key of reseller's child
+
+apiInstance.getSsoToken(childAuthKey).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **childAuthKey** | **String**| auth key of reseller&#39;s child | 
+
+### Return type
+
+[**GetSsoToken**](GetSsoToken.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="removeCredits"></a>
 # **removeCredits**
 > RemainingCreditModel removeCredits(childAuthKey, removeCredits)
@@ -444,6 +671,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RemainingCreditModel**](RemainingCreditModel.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="updateChildDomain"></a>
+# **updateChildDomain**
+> updateChildDomain(childAuthKey, domainName, updateChildDomain)
+
+Updates the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.ResellerApi();
+
+var childAuthKey = "childAuthKey_example"; // String | auth key of reseller's child
+
+var domainName = "domainName_example"; // String | Pass the existing domain that needs to be updated
+
+var updateChildDomain = new SibApiV3Sdk.UpdateChildDomain(); // UpdateChildDomain | value to update for sender domain
+
+apiInstance.updateChildDomain(childAuthKey, domainName, updateChildDomain).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **childAuthKey** | **String**| auth key of reseller&#39;s child | 
+ **domainName** | **String**| Pass the existing domain that needs to be updated | 
+ **updateChildDomain** | [**UpdateChildDomain**](UpdateChildDomain.md)| value to update for sender domain | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
