@@ -617,7 +617,7 @@ apiInstance.getContactInfo(email).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **String**| Email (urlencoded) of the contact | 
+ **email** | **String**| Email (urlencoded) of the contact OR its SMS attribute value | 
 
 ### Return type
 
