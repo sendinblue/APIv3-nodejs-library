@@ -580,7 +580,7 @@
 
     /**
      * Retrieves contact informations
-     * @param {String} email Email (urlencoded) of the contact
+     * @param {String} email Email (urlencoded) of the contact OR its SMS attribute value
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetExtendedContactDetails} and HTTP response
      */
     this.getContactInfoWithHttpInfo = function(email) {
@@ -618,7 +618,7 @@
 
     /**
      * Retrieves contact informations
-     * @param {String} email Email (urlencoded) of the contact
+     * @param {String} email Email (urlencoded) of the contact OR its SMS attribute value
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetExtendedContactDetails}
      */
     this.getContactInfo = function(email) {

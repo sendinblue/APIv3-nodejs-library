@@ -183,8 +183,9 @@ Class | Method | HTTP request | Description
 *SibApiV3Sdk.ResellerApi* | [**getChildDomains**](docs/ResellerApi.md#getChildDomains) | **GET** /reseller/children/{childAuthKey}/domains | Gets all the sender domains of a specific child account
 *SibApiV3Sdk.ResellerApi* | [**getChildInfo**](docs/ResellerApi.md#getChildInfo) | **GET** /reseller/children/{childAuthKey} | Gets the info about a specific child account
 *SibApiV3Sdk.ResellerApi* | [**getResellerChilds**](docs/ResellerApi.md#getResellerChilds) | **GET** /reseller/children | Gets the list of all reseller&#39;s children accounts
-*SibApiV3Sdk.ResellerApi* | [**getSsoToken**](docs/ResellerApi.md#getSsoToken) | **GET** /reseller/children/{childAuthKey}/auth | Generates a session token which will remain valid for a short period of time only.
+*SibApiV3Sdk.ResellerApi* | [**getSsoToken**](docs/ResellerApi.md#getSsoToken) | **GET** /reseller/children/{childAuthKey}/auth | Get session token to access Sendinblue (SSO)
 *SibApiV3Sdk.ResellerApi* | [**removeCredits**](docs/ResellerApi.md#removeCredits) | **POST** /reseller/children/{childAuthKey}/credits/remove | Remove Email and/or SMS credits from a specific child account
+*SibApiV3Sdk.ResellerApi* | [**updateChildAccountStatus**](docs/ResellerApi.md#updateChildAccountStatus) | **PUT** /reseller/children/{childAuthKey}/accountStatus | Updates infos of reseller&#39;s child account status based on the childAuthKey supplied
 *SibApiV3Sdk.ResellerApi* | [**updateChildDomain**](docs/ResellerApi.md#updateChildDomain) | **PUT** /reseller/children/{childAuthKey}/domains/{domainName} | Updates the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
 *SibApiV3Sdk.ResellerApi* | [**updateResellerChild**](docs/ResellerApi.md#updateResellerChild) | **PUT** /reseller/children/{childAuthKey} | Updates infos of reseller&#39;s child based on the childAuthKey supplied
 *SibApiV3Sdk.SMSCampaignsApi* | [**createSmsCampaign**](docs/SMSCampaignsApi.md#createSmsCampaign) | **POST** /smsCampaigns | Creates an SMS campaign
@@ -363,6 +364,7 @@ Class | Method | HTTP request | Description
  - [SibApiV3Sdk.UpdateAttributeEnumeration](docs/UpdateAttributeEnumeration.md)
  - [SibApiV3Sdk.UpdateCampaignStatus](docs/UpdateCampaignStatus.md)
  - [SibApiV3Sdk.UpdateChild](docs/UpdateChild.md)
+ - [SibApiV3Sdk.UpdateChildAccountStatus](docs/UpdateChildAccountStatus.md)
  - [SibApiV3Sdk.UpdateChildDomain](docs/UpdateChildDomain.md)
  - [SibApiV3Sdk.UpdateContact](docs/UpdateContact.md)
  - [SibApiV3Sdk.UpdateEmailCampaign](docs/UpdateEmailCampaign.md)

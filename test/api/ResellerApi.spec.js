@@ -171,6 +171,16 @@
         done();
       });
     });
+    describe('updateChildAccountStatus', function() {
+      it('should call updateChildAccountStatus successfully', function(done) {
+        //uncomment below and update the code to test updateChildAccountStatus
+        //instance.updateChildAccountStatus(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('updateChildDomain', function() {
       it('should call updateChildDomain successfully', function(done) {
         //uncomment below and update the code to test updateChildDomain
