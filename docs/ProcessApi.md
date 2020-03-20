@@ -19,17 +19,17 @@ Return the informations for a process
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ProcessApi();
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -73,17 +73,17 @@ Return all the processes for your account
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ProcessApi();
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 

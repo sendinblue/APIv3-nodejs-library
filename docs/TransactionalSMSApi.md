@@ -21,17 +21,17 @@ Get all the SMS activity (unaggregated events)
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -90,17 +90,17 @@ Get your SMS activity aggregated over a period of time
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -151,17 +151,17 @@ Get your SMS activity aggregated per day
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -212,17 +212,17 @@ Send the SMS campaign to the specified mobile number
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 

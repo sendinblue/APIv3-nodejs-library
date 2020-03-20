@@ -29,17 +29,17 @@ Create an email campaign
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -83,17 +83,17 @@ Delete an email campaign
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -119,7 +119,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -137,17 +137,17 @@ Export the recipients of a campaign
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -197,17 +197,17 @@ Obtain winning version of an A/B test email campaign
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -251,17 +251,17 @@ Get campaign informations
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -305,17 +305,17 @@ Return all your created campaigns
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -372,17 +372,17 @@ Get a unique URL to share &amp; import an email template from one Sendinblue acc
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -426,17 +426,17 @@ Send an email campaign immediately, based on campaignId
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -462,7 +462,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -482,17 +482,17 @@ A PDF will be sent to the specified email addresses
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -521,7 +521,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -539,17 +539,17 @@ Send an email campaign to your test list
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -578,7 +578,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -596,17 +596,17 @@ Update a campaign status
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -635,7 +635,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -653,17 +653,17 @@ Update a campaign
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -692,7 +692,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 

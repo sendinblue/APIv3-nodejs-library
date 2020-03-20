@@ -68,7 +68,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetAccount;

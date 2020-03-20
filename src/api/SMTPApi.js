@@ -74,7 +74,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = CreateModel;
@@ -122,7 +122,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -175,7 +175,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -229,7 +229,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetAggregatedReport;
@@ -299,7 +299,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetEmailEventReport;
@@ -367,7 +367,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetReports;
@@ -424,7 +424,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetSmtpTemplateOverview;
@@ -476,7 +476,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetSmtpTemplates;
@@ -538,7 +538,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetTransacBlockedContacts;
@@ -594,7 +594,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetTransacEmailContent;
@@ -651,7 +651,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = GetTransacEmailsList;
@@ -715,7 +715,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = SendTemplateEmail;
@@ -774,7 +774,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -825,7 +825,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = CreateSmtpEmail;
@@ -876,7 +876,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -927,7 +927,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -984,7 +984,7 @@
       var formParams = {
       };
 
-      var authNames = ['api-key', 'partner-key'];
+      var authNames = ['apiKey', 'partnerKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;

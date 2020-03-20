@@ -43,17 +43,17 @@ Add existing contacts to a list
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -100,17 +100,17 @@ Creates contact attribute
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -142,7 +142,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -160,17 +160,17 @@ Create a contact
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -214,17 +214,17 @@ Create a folder
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -268,17 +268,17 @@ Create a list
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -322,17 +322,17 @@ Deletes an attribute
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -361,7 +361,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -379,17 +379,17 @@ Deletes a contact
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -415,7 +415,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -433,17 +433,17 @@ Delete a folder (and all its lists)
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -469,7 +469,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -487,17 +487,17 @@ Delete a list
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -523,7 +523,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -541,17 +541,17 @@ Lists all attributes
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 apiInstance.getAttributes().then(function(data) {
@@ -571,7 +571,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -589,17 +589,17 @@ Retrieves contact informations
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -625,7 +625,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -643,17 +643,17 @@ Get the campaigns statistics for a contact
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -679,7 +679,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -697,17 +697,17 @@ Get all the contacts
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -738,7 +738,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -756,17 +756,17 @@ Get the contacts in a list
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -800,7 +800,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -818,17 +818,17 @@ Returns folder details
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -854,7 +854,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -872,17 +872,17 @@ Get the lists in a folder
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -914,7 +914,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -932,17 +932,17 @@ Get all the folders
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -971,7 +971,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -989,17 +989,17 @@ Get the details of a list
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -1025,7 +1025,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -1043,17 +1043,17 @@ Get all the lists
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -1082,7 +1082,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -1102,17 +1102,17 @@ It returns the background process ID which on completion calls the notify URL th
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -1138,7 +1138,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -1156,17 +1156,17 @@ Remove existing contacts from a list
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -1195,7 +1195,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -1215,17 +1215,17 @@ It returns the background process ID which on completion calls the notify URL th
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -1251,7 +1251,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -1269,17 +1269,17 @@ Updates contact attribute
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -1311,7 +1311,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -1329,17 +1329,17 @@ Updates a contact
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -1368,7 +1368,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -1386,17 +1386,17 @@ Update a contact folder
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -1425,7 +1425,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
@@ -1443,17 +1443,17 @@ Update a list
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var api-key = defaultClient.authentications['api-key'];
-api-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api-key.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
-// Configure API key authorization: partner-key
-var partner-key = defaultClient.authentications['partner-key'];
-partner-key.apiKey = 'YOUR API KEY';
+// Configure API key authorization: partnerKey
+var partnerKey = defaultClient.authentications['partnerKey'];
+partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partner-key.apiKeyPrefix = 'Token';
+//partnerKey.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -1482,7 +1482,7 @@ null (empty response body)
 
 ### Authorization
 
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+[apiKey](../README.md#apiKey), [partnerKey](../README.md#partnerKey)
 
 ### HTTP request headers
 
