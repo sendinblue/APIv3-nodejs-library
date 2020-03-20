@@ -53,11 +53,11 @@ command above from.
 #### git
 #
 If the library is hosted at a git repository, e.g.
-https://github.com/GIT_USER_ID/GIT_REPO_ID
+https://github.com/sendinblue/APIv3-nodejs-library
 then install it via:
 
 ```shell
-    npm install GIT_USER_ID/GIT_REPO_ID --save
+    npm install sendinblue/APIv3-nodejs-library --save
 ```
 
 ### For browser
@@ -72,24 +72,6 @@ browserify main.js > bundle.js
 ```
 
 Then include *bundle.js* in the HTML pages.
-
-### Webpack Configuration
-
-Using Webpack you may encounter the following error: "Module not found: Error:
-Cannot resolve module", most certainly you should disable AMD loader. Add/merge
-the following section to your webpack config:
-
-```javascript
-module: {
-  rules: [
-    {
-      parser: {
-        amd: false
-      }
-    }
-  ]
-}
-```
 
 ## Getting Started
 
