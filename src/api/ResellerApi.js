@@ -1,6 +1,6 @@
 /**
  * SendinBlue API
- * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  | 
+ * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  |   | 406  | Error. Not Acceptable  | 
  *
  * OpenAPI spec version: 3.0.0
  * Contact: contact@sendinblue.com
@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddChildDomain', 'model/AddCredits', 'model/CreateChild', 'model/CreateReseller', 'model/ErrorModel', 'model/GetChildDomains', 'model/GetChildInfo', 'model/GetChildrenList', 'model/GetSsoToken', 'model/ManageIp', 'model/RemainingCreditModel', 'model/RemoveCredits', 'model/UpdateChild', 'model/UpdateChildAccountStatus', 'model/UpdateChildDomain'], factory);
+    define(['ApiClient', 'model/AddChildDomain', 'model/AddCredits', 'model/CreateChild', 'model/CreateReseller', 'model/ErrorModel', 'model/GetChildAccountCreationStatus', 'model/GetChildDomains', 'model/GetChildInfo', 'model/GetChildrenList', 'model/GetSsoToken', 'model/ManageIp', 'model/RemainingCreditModel', 'model/RemoveCredits', 'model/UpdateChild', 'model/UpdateChildAccountStatus', 'model/UpdateChildDomain'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AddChildDomain'), require('../model/AddCredits'), require('../model/CreateChild'), require('../model/CreateReseller'), require('../model/ErrorModel'), require('../model/GetChildDomains'), require('../model/GetChildInfo'), require('../model/GetChildrenList'), require('../model/GetSsoToken'), require('../model/ManageIp'), require('../model/RemainingCreditModel'), require('../model/RemoveCredits'), require('../model/UpdateChild'), require('../model/UpdateChildAccountStatus'), require('../model/UpdateChildDomain'));
+    module.exports = factory(require('../ApiClient'), require('../model/AddChildDomain'), require('../model/AddCredits'), require('../model/CreateChild'), require('../model/CreateReseller'), require('../model/ErrorModel'), require('../model/GetChildAccountCreationStatus'), require('../model/GetChildDomains'), require('../model/GetChildInfo'), require('../model/GetChildrenList'), require('../model/GetSsoToken'), require('../model/ManageIp'), require('../model/RemainingCreditModel'), require('../model/RemoveCredits'), require('../model/UpdateChild'), require('../model/UpdateChildAccountStatus'), require('../model/UpdateChildDomain'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.ResellerApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddChildDomain, root.SibApiV3Sdk.AddCredits, root.SibApiV3Sdk.CreateChild, root.SibApiV3Sdk.CreateReseller, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetChildDomains, root.SibApiV3Sdk.GetChildInfo, root.SibApiV3Sdk.GetChildrenList, root.SibApiV3Sdk.GetSsoToken, root.SibApiV3Sdk.ManageIp, root.SibApiV3Sdk.RemainingCreditModel, root.SibApiV3Sdk.RemoveCredits, root.SibApiV3Sdk.UpdateChild, root.SibApiV3Sdk.UpdateChildAccountStatus, root.SibApiV3Sdk.UpdateChildDomain);
+    root.SibApiV3Sdk.ResellerApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddChildDomain, root.SibApiV3Sdk.AddCredits, root.SibApiV3Sdk.CreateChild, root.SibApiV3Sdk.CreateReseller, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetChildAccountCreationStatus, root.SibApiV3Sdk.GetChildDomains, root.SibApiV3Sdk.GetChildInfo, root.SibApiV3Sdk.GetChildrenList, root.SibApiV3Sdk.GetSsoToken, root.SibApiV3Sdk.ManageIp, root.SibApiV3Sdk.RemainingCreditModel, root.SibApiV3Sdk.RemoveCredits, root.SibApiV3Sdk.UpdateChild, root.SibApiV3Sdk.UpdateChildAccountStatus, root.SibApiV3Sdk.UpdateChildDomain);
   }
-}(this, function(ApiClient, AddChildDomain, AddCredits, CreateChild, CreateReseller, ErrorModel, GetChildDomains, GetChildInfo, GetChildrenList, GetSsoToken, ManageIp, RemainingCreditModel, RemoveCredits, UpdateChild, UpdateChildAccountStatus, UpdateChildDomain) {
+}(this, function(ApiClient, AddChildDomain, AddCredits, CreateChild, CreateReseller, ErrorModel, GetChildAccountCreationStatus, GetChildDomains, GetChildInfo, GetChildrenList, GetSsoToken, ManageIp, RemainingCreditModel, RemoveCredits, UpdateChild, UpdateChildAccountStatus, UpdateChildDomain) {
   'use strict';
 
   /**
    * Reseller service.
    * @module api/ResellerApi
-   * @version 7.x.x
+   * @version 7.2.0
    */
 
   /**
@@ -168,7 +168,7 @@
     /**
      * Creates a domain for a child account
      * @param {String} childAuthKey auth key of reseller&#39;s child
-     * @param {module:model/AddChildDomain} addChildDomain Sender domain to add for a specific child account
+     * @param {module:model/AddChildDomain} addChildDomain Sender domain to add for a specific child account. This will not be displayed to the parent account.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.createChildDomainWithHttpInfo = function(childAuthKey, addChildDomain) {
@@ -212,7 +212,7 @@
     /**
      * Creates a domain for a child account
      * @param {String} childAuthKey auth key of reseller&#39;s child
-     * @param {module:model/AddChildDomain} addChildDomain Sender domain to add for a specific child account
+     * @param {module:model/AddChildDomain} addChildDomain Sender domain to add for a specific child account. This will not be displayed to the parent account.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.createChildDomain = function(childAuthKey, addChildDomain) {
@@ -440,6 +440,57 @@
 
 
     /**
+     * Returns the status of reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the childAuthKey supplied
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildAccountCreationStatus} and HTTP response
+     */
+    this.getChildAccountCreationStatusWithHttpInfo = function(childAuthKey) {
+      var postBody = null;
+
+      // verify the required parameter 'childAuthKey' is set
+      if (childAuthKey === undefined || childAuthKey === null) {
+        throw new Error("Missing the required parameter 'childAuthKey' when calling getChildAccountCreationStatus");
+      }
+
+
+      var pathParams = {
+        'childAuthKey': childAuthKey
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = GetChildAccountCreationStatus;
+
+      return this.apiClient.callApi(
+        '/reseller/children/{childAuthKey}/accountCreationStatus', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Returns the status of reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the childAuthKey supplied
+     * @param {String} childAuthKey auth key of reseller&#39;s child
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChildAccountCreationStatus}
+     */
+    this.getChildAccountCreationStatus = function(childAuthKey) {
+      return this.getChildAccountCreationStatusWithHttpInfo(childAuthKey)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Gets all the sender domains of a specific child account
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildDomains} and HTTP response
@@ -543,15 +594,21 @@
 
     /**
      * Gets the list of all reseller&#39;s children accounts
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit Number of documents for child accounts information per page (default to 10)
+     * @param {Number} opts.offset Index of the first document in the page (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildrenList} and HTTP response
      */
-    this.getResellerChildsWithHttpInfo = function() {
+    this.getResellerChildsWithHttpInfo = function(opts) {
+      opts = opts || {};
       var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        'limit': opts['limit'],
+        'offset': opts['offset'],
       };
       var collectionQueryParams = {
       };
@@ -574,10 +631,13 @@
 
     /**
      * Gets the list of all reseller&#39;s children accounts
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit Number of documents for child accounts information per page (default to 10)
+     * @param {Number} opts.offset Index of the first document in the page (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChildrenList}
      */
-    this.getResellerChilds = function() {
-      return this.getResellerChildsWithHttpInfo()
+    this.getResellerChilds = function(opts) {
+      return this.getResellerChildsWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

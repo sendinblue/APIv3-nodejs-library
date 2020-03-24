@@ -1,6 +1,6 @@
 /**
  * SendinBlue API
- * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  | 
+ * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  |   | 406  | Error. Not Acceptable  | 
  *
  * OpenAPI spec version: 3.0.0
  * Contact: contact@sendinblue.com
@@ -37,7 +37,7 @@
   /**
    * The CreateContact model module.
    * @module model/CreateContact
-   * @version 7.x.x
+   * @version 7.2.0
    */
 
   /**
@@ -94,12 +94,12 @@
   }
 
   /**
-   * Email address of the user. Mandatory if \"sms\" field is not passed in \"attributes\" parameter'
+   * Email address of the user. Mandatory if \"SMS\" field is not passed in \"attributes\" parameter. Mobile Number in \"SMS\" field should be passed with proper country code. For example {'SMS':'+91xxxxxxxxxx'} or {'SMS':'0091xxxxxxxxxx'}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
   /**
-   * Pass the set of attributes and their values. These attributes must be present in your SendinBlue account. For example, `{\"FNAME\":\"Elly\", \"LNAME\":\"Roger\"}`
+   * Pass the set of attributes and their values. These attributes must be present in your SendinBlue account. For eg. {'FNAME':'Elly', 'LNAME':'Roger'}
    * @member {Object} attributes
    */
   exports.prototype['attributes'] = undefined;
@@ -125,7 +125,7 @@
    */
   exports.prototype['updateEnabled'] = false;
   /**
-   * SMTP forbidden sender for contact. Use only for email Contact ( only available if updateEnabled = true )
+   * transactional email forbidden sender for contact. Use only for email Contact ( only available if updateEnabled = true )
    * @member {Array.<String>} smtpBlacklistSender
    */
   exports.prototype['smtpBlacklistSender'] = undefined;
