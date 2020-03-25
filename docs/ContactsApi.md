@@ -603,7 +603,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
-var email = "email_example"; // String | Email (urlencoded) of the contact
+var email = "email_example"; // String | Email (urlencoded) of the contact OR its SMS attribute value
 
 apiInstance.getContactInfo(email).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);

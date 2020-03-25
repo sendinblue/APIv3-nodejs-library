@@ -1,6 +1,6 @@
 /**
  * SendinBlue API
- * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  | 
+ * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  |   | 406  | Error. Not Acceptable  | 
  *
  * OpenAPI spec version: 3.0.0
  * Contact: contact@sendinblue.com
@@ -37,7 +37,7 @@
   /**
    * The UpdateEmailCampaign model module.
    * @module model/UpdateEmailCampaign
-   * @version 7.x.x
+   * @version 7.2.0
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -161,6 +164,15 @@
       if (data.hasOwnProperty('winnerDelay')) {
         obj['winnerDelay'] = ApiClient.convertToType(data['winnerDelay'], 'Number');
       }
+      if (data.hasOwnProperty('ipWarmupEnable')) {
+        obj['ipWarmupEnable'] = ApiClient.convertToType(data['ipWarmupEnable'], 'Boolean');
+      }
+      if (data.hasOwnProperty('initialQuota')) {
+        obj['initialQuota'] = ApiClient.convertToType(data['initialQuota'], 'Number');
+      }
+      if (data.hasOwnProperty('increaseRate')) {
+        obj['increaseRate'] = ApiClient.convertToType(data['increaseRate'], 'Number');
+      }
     }
     return obj;
   }
@@ -205,7 +217,7 @@
    */
   exports.prototype['replyTo'] = undefined;
   /**
-   * To personalize the «To» Field. If you want to include the first name and last name of your recipient, add `{FNAME} {LNAME}`. These contact attributes must already exist in your SendinBlue account. If input parameter 'params' used please use `{{contact.FNAME}} {{contact.LNAME}}` for personalization
+   * To personalize the «To» Field. If you want to include the first name and last name of your recipient, add {FNAME} {LNAME}. These contact attributes must already exist in your SendinBlue account. If input parameter 'params' used please use {{contact.FNAME}} {{contact.LNAME}} for personalization
    * @member {String} toField
    */
   exports.prototype['toField'] = undefined;
@@ -251,7 +263,7 @@
    */
   exports.prototype['utmCampaign'] = undefined;
   /**
-   * Pass the set of attributes to customize the type 'classic' campaign. For example, `{\"FNAME\":\"Joe\", \"LNAME\":\"Doe\"}`. The 'params' field will get updated, only if the campaign is in New Template Language, else ignored. The New Template Language is dependent on the values of 'subject', 'htmlContent/htmlUrl', 'sender.name' & 'toField'
+   * Pass the set of attributes to customize the type 'classic' campaign. For example, {'FNAME':'Joe', 'LNAME':'Doe'}. The 'params' field will get updated, only if the campaign is in New Template Language, else ignored. The New Template Language is dependent on the values of 'subject', 'htmlContent/htmlUrl', 'sender.name' & 'toField'
    * @member {Object} params
    */
   exports.prototype['params'] = undefined;
@@ -291,6 +303,22 @@
    * @member {Number} winnerDelay
    */
   exports.prototype['winnerDelay'] = undefined;
+  /**
+   * Available for dedicated ip clients. Set this to true if you wish to warm up your ip.
+   * @member {Boolean} ipWarmupEnable
+   * @default false
+   */
+  exports.prototype['ipWarmupEnable'] = false;
+  /**
+   * Set an initial quota greater than 1 for warming up your ip. We recommend you set a value of 3000.
+   * @member {Number} initialQuota
+   */
+  exports.prototype['initialQuota'] = undefined;
+  /**
+   * Set a percentage increase rate for warming up your ip. We recommend you set the increase rate to 30% per day. If you want to send the same number of emails every day, set the daily increase value to 0%.
+   * @member {Number} increaseRate
+   */
+  exports.prototype['increaseRate'] = undefined;
 
 
   /**
