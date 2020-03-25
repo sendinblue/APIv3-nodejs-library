@@ -1,6 +1,6 @@
 /**
  * SendinBlue API
- * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  |   | 406  | Error. Not Acceptable  | 
+ * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  | 
  *
  * OpenAPI spec version: 3.0.0
  * Contact: contact@sendinblue.com
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/RequestContactExportCustomContactFilter'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./RequestContactExportCustomContactFilter'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.RequestContactExport = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.RequestContactExportCustomContactFilter);
+    root.SibApiV3Sdk.RequestContactExport = factory(root.SibApiV3Sdk.ApiClient);
   }
-}(this, function(ApiClient, RequestContactExportCustomContactFilter) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -37,20 +37,20 @@
   /**
    * The RequestContactExport model module.
    * @module model/RequestContactExport
-   * @version 7.2.0
+   * @version 7.x.x
    */
 
   /**
    * Constructs a new <code>RequestContactExport</code>.
    * @alias module:model/RequestContactExport
    * @class
+   * @param contactFilter {Object} Set the filter for the contacts to be exported. For example, `{\"blacklisted\":true}` will export all the blacklisted contacts.
    */
-  var exports = function() {
+  var exports = function(contactFilter) {
     var _this = this;
 
 
-
-
+    _this['contactFilter'] = contactFilter;
 
   };
 
@@ -71,9 +71,6 @@
       if (data.hasOwnProperty('contactFilter')) {
         obj['contactFilter'] = ApiClient.convertToType(data['contactFilter'], Object);
       }
-      if (data.hasOwnProperty('customContactFilter')) {
-        obj['customContactFilter'] = RequestContactExportCustomContactFilter.constructFromObject(data['customContactFilter']);
-      }
       if (data.hasOwnProperty('notifyUrl')) {
         obj['notifyUrl'] = ApiClient.convertToType(data['notifyUrl'], 'String');
       }
@@ -87,14 +84,10 @@
    */
   exports.prototype['exportAttributes'] = undefined;
   /**
-   * This attribute has been deprecated and will be removed by January 1st, 2021. Only one of the two filter options (contactFilter or customContactFilter) can be passed in the request. Set the filter for the contacts to be exported. For example, {'blacklisted':true} will export all the blacklisted contacts. 
+   * Set the filter for the contacts to be exported. For example, `{\"blacklisted\":true}` will export all the blacklisted contacts.
    * @member {Object} contactFilter
    */
   exports.prototype['contactFilter'] = undefined;
-  /**
-   * @member {module:model/RequestContactExportCustomContactFilter} customContactFilter
-   */
-  exports.prototype['customContactFilter'] = undefined;
   /**
    * Webhook that will be called once the export process is finished
    * @member {String} notifyUrl

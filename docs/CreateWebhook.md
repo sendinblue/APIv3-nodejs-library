@@ -39,10 +39,6 @@ Name | Type | Description | Notes
 
 * `listAddition` (value: `"listAddition"`)
 
-* `contactUpdated` (value: `"contactUpdated"`)
-
-* `contactDeleted` (value: `"contactDeleted"`)
-
 
 
 

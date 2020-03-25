@@ -1,6 +1,6 @@
 /**
  * SendinBlue API
- * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  |   | 406  | Error. Not Acceptable  | 
+ * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  | 
  *
  * OpenAPI spec version: 3.0.0
  * Contact: contact@sendinblue.com
@@ -37,12 +37,12 @@
   /**
    * The SendSmtpEmailSender model module.
    * @module model/SendSmtpEmailSender
-   * @version 7.2.0
+   * @version 7.x.x
    */
 
   /**
    * Constructs a new <code>SendSmtpEmailSender</code>.
-   * Mandatory if &#39;templateId&#39; is not passed. Pass name (optional) and email of sender from which emails will be sent. For example, {&#39;name&#39;:&#39;Mary from MyShop&#39;, &#39;email&#39;:&#39;no-reply@myshop.com&#39;}
+   * Mandatory if &#39;templateId&#39; is not passed. Pass name (optional) and email of sender from which emails will be sent. For example, &#x60;{\&quot;name\&quot;:\&quot;Mary from MyShop\&quot;, \&quot;email\&quot;:\&quot;no-reply@myshop.com\&quot;}&#x60;
    * @alias module:model/SendSmtpEmailSender
    * @class
    * @param email {String} Email of the sender from which the emails will be sent
@@ -76,7 +76,7 @@
   }
 
   /**
-   * Name of the sender from which the emails will be sent. Maximum allowed characters are 70.
+   * Name of the sender from which the emails will be sent
    * @member {String} name
    */
   exports.prototype['name'] = undefined;

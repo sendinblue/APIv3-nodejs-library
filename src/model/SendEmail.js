@@ -1,6 +1,6 @@
 /**
  * SendinBlue API
- * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  |   | 406  | Error. Not Acceptable  | 
+ * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  | 
  *
  * OpenAPI spec version: 3.0.0
  * Contact: contact@sendinblue.com
@@ -37,7 +37,7 @@
   /**
    * The SendEmail model module.
    * @module model/SendEmail
-   * @version 7.2.0
+   * @version 7.x.x
    */
 
   /**
@@ -128,17 +128,17 @@
    */
   exports.prototype['attachmentUrl'] = undefined;
   /**
-   * Pass the list of content (base64 encoded) and name of the attachment. For example, [{'content':'base64 encoded content 1', 'name':'attcahment1'}, {'content':'base64 encoded content 2', 'name':'attcahment2'}].
+   * Pass the list of content (base64 encoded) and name of the attachment. For example, `[{\"content\":\"base64 encoded content 1\", \"name\":\"attcahment1\"}, {\"content\":\"base64 encoded content 2\", \"name\":\"attcahment2\"}]`
    * @member {Array.<module:model/SendEmailAttachment>} attachment
    */
   exports.prototype['attachment'] = undefined;
   /**
-   * Pass the set of headers that shall be sent along the mail headers in the original email. 'sender.ip' header can be set (only for dedicated ip users) to mention the IP to be used for sending transactional emails. For example, {'Content-Type':'text/html', 'charset':'iso-8859-1', 'sender.ip':'1.2.3.4'}
+   * Pass the set of headers that shall be sent along the mail headers in the original email. 'sender.ip' header can be set (only for dedicated ip users) to mention the IP to be used for sending transactional emails. For example, `{\"Content-Type\":\"text/html\", \"charset\":\"iso-8859-1\", \"sender.ip\":\"1.2.3.4\"}`
    * @member {Object} headers
    */
   exports.prototype['headers'] = undefined;
   /**
-   * Pass the set of attributes to customize the template. For example, {'FNAME':'Joe', 'LNAME':'Doe'}
+   * Pass the set of attributes to customize the template. For example, {\"FNAME\":\"Joe\", \"LNAME\":\"Doe\"}
    * @member {Object} attributes
    */
   exports.prototype['attributes'] = undefined;
