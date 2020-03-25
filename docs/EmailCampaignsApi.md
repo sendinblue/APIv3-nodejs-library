@@ -7,9 +7,11 @@ Method | HTTP request | Description
 [**createEmailCampaign**](EmailCampaignsApi.md#createEmailCampaign) | **POST** /emailCampaigns | Create an email campaign
 [**deleteEmailCampaign**](EmailCampaignsApi.md#deleteEmailCampaign) | **DELETE** /emailCampaigns/{campaignId} | Delete an email campaign
 [**emailExportRecipients**](EmailCampaignsApi.md#emailExportRecipients) | **POST** /emailCampaigns/{campaignId}/exportRecipients | Export the recipients of a campaign
+[**getAbTestCampaignResult**](EmailCampaignsApi.md#getAbTestCampaignResult) | **GET** /emailCampaigns/{campaignId}/abTestCampaignResult | Get A/B test email campaign result
 [**getEmailCampaign**](EmailCampaignsApi.md#getEmailCampaign) | **GET** /emailCampaigns/{campaignId} | Get campaign informations
 [**getEmailCampaigns**](EmailCampaignsApi.md#getEmailCampaigns) | **GET** /emailCampaigns | Return all your created campaigns
-[**sendEmailCampaignNow**](EmailCampaignsApi.md#sendEmailCampaignNow) | **POST** /emailCampaigns/{campaignId}/sendNow | Send an email campaign id of the campaign immediately
+[**getSharedTemplateUrl**](EmailCampaignsApi.md#getSharedTemplateUrl) | **GET** /emailCampaigns/{campaignId}/sharedUrl | Get a shared template url
+[**sendEmailCampaignNow**](EmailCampaignsApi.md#sendEmailCampaignNow) | **POST** /emailCampaigns/{campaignId}/sendNow | Send an email campaign immediately, based on campaignId
 [**sendReport**](EmailCampaignsApi.md#sendReport) | **POST** /emailCampaigns/{campaignId}/sendReport | Send the report of a campaigns
 [**sendTestEmail**](EmailCampaignsApi.md#sendTestEmail) | **POST** /emailCampaigns/{campaignId}/sendTest | Send an email campaign to your test list
 [**updateCampaignStatus**](EmailCampaignsApi.md#updateCampaignStatus) | **PUT** /emailCampaigns/{campaignId}/status | Update a campaign status
@@ -182,6 +184,62 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="getAbTestCampaignResult"></a>
+# **getAbTestCampaignResult**
+> AbTestCampaignResult getAbTestCampaignResult(campaignId)
+
+Get A/B test email campaign result
+
+Obtain winning version of an A/B test email campaign
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+
+var campaignId = 789; // Number | Id of the A/B test campaign
+
+apiInstance.getAbTestCampaignResult(campaignId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaignId** | **Number**| Id of the A/B test campaign | 
+
+### Return type
+
+[**AbTestCampaignResult**](AbTestCampaignResult.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="getEmailCampaign"></a>
 # **getEmailCampaign**
 > GetEmailCampaign getEmailCampaign(campaignId)
@@ -301,11 +359,67 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="getSharedTemplateUrl"></a>
+# **getSharedTemplateUrl**
+> GetSharedTemplateUrl getSharedTemplateUrl(campaignId)
+
+Get a shared template url
+
+Get a unique URL to share &amp; import an email template from one Sendinblue account to another.
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+
+var campaignId = 789; // Number | Id of the campaign or template
+
+apiInstance.getSharedTemplateUrl(campaignId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaignId** | **Number**| Id of the campaign or template | 
+
+### Return type
+
+[**GetSharedTemplateUrl**](GetSharedTemplateUrl.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="sendEmailCampaignNow"></a>
 # **sendEmailCampaignNow**
 > sendEmailCampaignNow(campaignId)
 
-Send an email campaign id of the campaign immediately
+Send an email campaign immediately, based on campaignId
 
 ### Example
 ```javascript
