@@ -37,12 +37,12 @@
   /**
    * The SendSmtpEmailSender model module.
    * @module model/SendSmtpEmailSender
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
    * Constructs a new <code>SendSmtpEmailSender</code>.
-   * Mandatory if &#39;templateId&#39; is not passed. Pass name (optional) and email of sender from which emails will be sent. For example, {&#39;name&#39;:&#39;Mary from MyShop&#39;, &#39;email&#39;:&#39;no-reply@myshop.com&#39;}
+   * Mandatory if &#39;templateId&#39; is not passed. Pass name (optional) and email of sender from which emails will be sent. For example, {\&quot;name\&quot;:\&quot;Mary from MyShop\&quot;, \&quot;email\&quot;:\&quot;no-reply@myshop.com\&quot;}
    * @alias module:model/SendSmtpEmailSender
    * @class
    * @param email {String} Email of the sender from which the emails will be sent

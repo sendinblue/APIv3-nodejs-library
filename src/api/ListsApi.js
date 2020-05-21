@@ -34,7 +34,7 @@
   /**
    * Lists service.
    * @module api/ListsApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -209,7 +209,7 @@
 
 
     /**
-     * Get the contacts in a list
+     * Get contacts in a list
      * @param {Number} listId Id of the list
      * @param {Object} opts Optional parameters
      * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
@@ -255,7 +255,7 @@
     }
 
     /**
-     * Get the contacts in a list
+     * Get contacts in a list
      * @param {Number} listId Id of the list
      * @param {Object} opts Optional parameters
      * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
@@ -272,7 +272,7 @@
 
 
     /**
-     * Get the lists in a folder
+     * Get lists in a folder
      * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
@@ -316,7 +316,7 @@
     }
 
     /**
-     * Get the lists in a folder
+     * Get lists in a folder
      * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
@@ -332,7 +332,7 @@
 
 
     /**
-     * Get the details of a list
+     * Get a list&#39;s details
      * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetExtendedList} and HTTP response
      */
@@ -370,7 +370,7 @@
     }
 
     /**
-     * Get the details of a list
+     * Get a list&#39;s details
      * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetExtendedList}
      */
@@ -435,7 +435,7 @@
 
 
     /**
-     * Remove existing contacts from a list
+     * Delete a contact from a list
      * @param {Number} listId Id of the list
      * @param {module:model/RemoveContactFromList} contactEmails Emails adresses of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostContactInfo} and HTTP response
@@ -479,7 +479,7 @@
     }
 
     /**
-     * Remove existing contacts from a list
+     * Delete a contact from a list
      * @param {Number} listId Id of the list
      * @param {module:model/RemoveContactFromList} contactEmails Emails adresses of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostContactInfo}

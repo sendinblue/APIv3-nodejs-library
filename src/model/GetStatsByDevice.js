@@ -37,7 +37,7 @@
   /**
    * The GetStatsByDevice model module.
    * @module model/GetStatsByDevice
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**

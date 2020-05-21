@@ -37,7 +37,7 @@
   /**
    * The GetDeviceBrowserStats model module.
    * @module model/GetDeviceBrowserStats
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The CreateAttribute model module.
    * @module model/CreateAttribute
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -83,7 +83,7 @@
    */
   exports.prototype['value'] = undefined;
   /**
-   * List of values and labels that the attribute can take. Use only if the attribute's category is \"category\". For example, [{'value':1, 'label':'male'}, {'value':2, 'label':'female'}]
+   * List of values and labels that the attribute can take. Use only if the attribute's category is \"category\". For example, [{\"value\":1, \"label\":\"male\"}, {\"value\":2, \"label\":\"female\"}]
    * @member {Array.<module:model/CreateAttributeEnumeration>} enumeration
    */
   exports.prototype['enumeration'] = undefined;

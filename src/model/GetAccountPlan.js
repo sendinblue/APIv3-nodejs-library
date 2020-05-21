@@ -37,7 +37,7 @@
   /**
    * The GetAccountPlan model module.
    * @module model/GetAccountPlan
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**

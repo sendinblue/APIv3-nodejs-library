@@ -34,7 +34,7 @@
   /**
    * SMSCampaigns service.
    * @module api/SMSCampaignsApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -100,7 +100,7 @@
 
 
     /**
-     * Delete the SMS campaign
+     * Delete an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -138,7 +138,7 @@
     }
 
     /**
-     * Delete the SMS campaign
+     * Delete an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -202,7 +202,7 @@
 
 
     /**
-     * Returns the informations for all your created SMS campaigns
+     * Returns the information for all your created SMS campaigns
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status Status of campaign.
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; )
@@ -245,7 +245,7 @@
     }
 
     /**
-     * Returns the informations for all your created SMS campaigns
+     * Returns the information for all your created SMS campaigns
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status Status of campaign.
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; )
@@ -263,7 +263,7 @@
 
 
     /**
-     * Exports the recipients of the specified campaign.
+     * Export an SMS campaign&#39;s recipients
      * It returns the background process ID which on completion calls the notify URL that you have set in the input.
      * @param {Number} campaignId id of the campaign
      * @param {Object} opts Optional parameters
@@ -305,7 +305,7 @@
     }
 
     /**
-     * Exports the recipients of the specified campaign.
+     * Export an SMS campaign&#39;s recipients
      * It returns the background process ID which on completion calls the notify URL that you have set in the input.
      * @param {Number} campaignId id of the campaign
      * @param {Object} opts Optional parameters
@@ -372,7 +372,7 @@
 
 
     /**
-     * Send report of SMS campaigns
+     * Send an SMS campaign&#39;s report
      * Send report of Sent and Archived campaign, to the specified email addresses, with respective data and a pdf attachment in detail.
      * @param {Number} campaignId id of the campaign
      * @param {module:model/SendReport} sendReport Values for send a report
@@ -417,7 +417,7 @@
     }
 
     /**
-     * Send report of SMS campaigns
+     * Send an SMS campaign&#39;s report
      * Send report of Sent and Archived campaign, to the specified email addresses, with respective data and a pdf attachment in detail.
      * @param {Number} campaignId id of the campaign
      * @param {module:model/SendReport} sendReport Values for send a report
@@ -432,7 +432,7 @@
 
 
     /**
-     * Send an SMS
+     * Send a test SMS campaign
      * @param {Number} campaignId Id of the SMS campaign
      * @param {module:model/SendTestSms} phoneNumber Mobile number of the recipient with the country code. This number must belong to one of your contacts in SendinBlue account and must not be blacklisted
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -476,7 +476,7 @@
     }
 
     /**
-     * Send an SMS
+     * Send a test SMS campaign
      * @param {Number} campaignId Id of the SMS campaign
      * @param {module:model/SendTestSms} phoneNumber Mobile number of the recipient with the country code. This number must belong to one of your contacts in SendinBlue account and must not be blacklisted
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -490,7 +490,7 @@
 
 
     /**
-     * Updates an SMS campaign
+     * Update an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/UpdateSmsCampaign} updateSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -534,7 +534,7 @@
     }
 
     /**
-     * Updates an SMS campaign
+     * Update an SMS campaign
      * @param {Number} campaignId id of the SMS campaign
      * @param {module:model/UpdateSmsCampaign} updateSmsCampaign Values to update an SMS Campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -548,7 +548,7 @@
 
 
     /**
-     * Update the campaign status
+     * Update a campaign&#39;s status
      * @param {Number} campaignId id of the campaign
      * @param {module:model/UpdateCampaignStatus} status Status of the campaign.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -592,7 +592,7 @@
     }
 
     /**
-     * Update the campaign status
+     * Update a campaign&#39;s status
      * @param {Number} campaignId id of the campaign
      * @param {module:model/UpdateCampaignStatus} status Status of the campaign.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

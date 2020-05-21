@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddContactToList', 'model/CreateAttribute', 'model/CreateContact', 'model/CreateList', 'model/CreateModel', 'model/CreateUpdateContactModel', 'model/CreateUpdateFolder', 'model/CreatedProcessId', 'model/ErrorModel', 'model/GetAttributes', 'model/GetContactCampaignStats', 'model/GetContacts', 'model/GetExtendedContactDetails', 'model/GetExtendedList', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders', 'model/GetLists', 'model/PostContactInfo', 'model/RemoveContactFromList', 'model/RequestContactExport', 'model/RequestContactImport', 'model/UpdateAttribute', 'model/UpdateContact', 'model/UpdateList'], factory);
+    define(['ApiClient', 'model/AddContactToList', 'model/CreateAttribute', 'model/CreateContact', 'model/CreateDoiContact', 'model/CreateList', 'model/CreateModel', 'model/CreateUpdateContactModel', 'model/CreateUpdateFolder', 'model/CreatedProcessId', 'model/ErrorModel', 'model/GetAttributes', 'model/GetContactCampaignStats', 'model/GetContacts', 'model/GetExtendedContactDetails', 'model/GetExtendedList', 'model/GetFolder', 'model/GetFolderLists', 'model/GetFolders', 'model/GetLists', 'model/PostContactInfo', 'model/RemoveContactFromList', 'model/RequestContactExport', 'model/RequestContactImport', 'model/UpdateAttribute', 'model/UpdateContact', 'model/UpdateList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AddContactToList'), require('../model/CreateAttribute'), require('../model/CreateContact'), require('../model/CreateList'), require('../model/CreateModel'), require('../model/CreateUpdateContactModel'), require('../model/CreateUpdateFolder'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetAttributes'), require('../model/GetContactCampaignStats'), require('../model/GetContacts'), require('../model/GetExtendedContactDetails'), require('../model/GetExtendedList'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'), require('../model/GetLists'), require('../model/PostContactInfo'), require('../model/RemoveContactFromList'), require('../model/RequestContactExport'), require('../model/RequestContactImport'), require('../model/UpdateAttribute'), require('../model/UpdateContact'), require('../model/UpdateList'));
+    module.exports = factory(require('../ApiClient'), require('../model/AddContactToList'), require('../model/CreateAttribute'), require('../model/CreateContact'), require('../model/CreateDoiContact'), require('../model/CreateList'), require('../model/CreateModel'), require('../model/CreateUpdateContactModel'), require('../model/CreateUpdateFolder'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetAttributes'), require('../model/GetContactCampaignStats'), require('../model/GetContacts'), require('../model/GetExtendedContactDetails'), require('../model/GetExtendedList'), require('../model/GetFolder'), require('../model/GetFolderLists'), require('../model/GetFolders'), require('../model/GetLists'), require('../model/PostContactInfo'), require('../model/RemoveContactFromList'), require('../model/RequestContactExport'), require('../model/RequestContactImport'), require('../model/UpdateAttribute'), require('../model/UpdateContact'), require('../model/UpdateList'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.ContactsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddContactToList, root.SibApiV3Sdk.CreateAttribute, root.SibApiV3Sdk.CreateContact, root.SibApiV3Sdk.CreateList, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateUpdateContactModel, root.SibApiV3Sdk.CreateUpdateFolder, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAttributes, root.SibApiV3Sdk.GetContactCampaignStats, root.SibApiV3Sdk.GetContacts, root.SibApiV3Sdk.GetExtendedContactDetails, root.SibApiV3Sdk.GetExtendedList, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders, root.SibApiV3Sdk.GetLists, root.SibApiV3Sdk.PostContactInfo, root.SibApiV3Sdk.RemoveContactFromList, root.SibApiV3Sdk.RequestContactExport, root.SibApiV3Sdk.RequestContactImport, root.SibApiV3Sdk.UpdateAttribute, root.SibApiV3Sdk.UpdateContact, root.SibApiV3Sdk.UpdateList);
+    root.SibApiV3Sdk.ContactsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddContactToList, root.SibApiV3Sdk.CreateAttribute, root.SibApiV3Sdk.CreateContact, root.SibApiV3Sdk.CreateDoiContact, root.SibApiV3Sdk.CreateList, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateUpdateContactModel, root.SibApiV3Sdk.CreateUpdateFolder, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAttributes, root.SibApiV3Sdk.GetContactCampaignStats, root.SibApiV3Sdk.GetContacts, root.SibApiV3Sdk.GetExtendedContactDetails, root.SibApiV3Sdk.GetExtendedList, root.SibApiV3Sdk.GetFolder, root.SibApiV3Sdk.GetFolderLists, root.SibApiV3Sdk.GetFolders, root.SibApiV3Sdk.GetLists, root.SibApiV3Sdk.PostContactInfo, root.SibApiV3Sdk.RemoveContactFromList, root.SibApiV3Sdk.RequestContactExport, root.SibApiV3Sdk.RequestContactImport, root.SibApiV3Sdk.UpdateAttribute, root.SibApiV3Sdk.UpdateContact, root.SibApiV3Sdk.UpdateList);
   }
-}(this, function(ApiClient, AddContactToList, CreateAttribute, CreateContact, CreateList, CreateModel, CreateUpdateContactModel, CreateUpdateFolder, CreatedProcessId, ErrorModel, GetAttributes, GetContactCampaignStats, GetContacts, GetExtendedContactDetails, GetExtendedList, GetFolder, GetFolderLists, GetFolders, GetLists, PostContactInfo, RemoveContactFromList, RequestContactExport, RequestContactImport, UpdateAttribute, UpdateContact, UpdateList) {
+}(this, function(ApiClient, AddContactToList, CreateAttribute, CreateContact, CreateDoiContact, CreateList, CreateModel, CreateUpdateContactModel, CreateUpdateFolder, CreatedProcessId, ErrorModel, GetAttributes, GetContactCampaignStats, GetContacts, GetExtendedContactDetails, GetExtendedList, GetFolder, GetFolderLists, GetFolders, GetLists, PostContactInfo, RemoveContactFromList, RequestContactExport, RequestContactImport, UpdateAttribute, UpdateContact, UpdateList) {
   'use strict';
 
   /**
    * Contacts service.
    * @module api/ContactsApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -108,7 +108,7 @@
 
 
     /**
-     * Creates contact attribute
+     * Create contact attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the attribute
      * @param {module:model/CreateAttribute} createAttribute Values to create an attribute
@@ -159,7 +159,7 @@
     }
 
     /**
-     * Creates contact attribute
+     * Create contact attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the attribute
      * @param {module:model/CreateAttribute} createAttribute Values to create an attribute
@@ -217,6 +217,56 @@
      */
     this.createContact = function(createContact) {
       return this.createContactWithHttpInfo(createContact)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Create a contact to trigger the DOI workflow from a Landing Page form
+     * @param {module:model/CreateDoiContact} createDoiContact Values to create the DOI contact
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.createDoiContactWithHttpInfo = function(createDoiContact) {
+      var postBody = createDoiContact;
+
+      // verify the required parameter 'createDoiContact' is set
+      if (createDoiContact === undefined || createDoiContact === null) {
+        throw new Error("Missing the required parameter 'createDoiContact' when calling createDoiContact");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/contacts/doubleOptinConfirmation', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Create a contact to trigger the DOI workflow from a Landing Page form
+     * @param {module:model/CreateDoiContact} createDoiContact Values to create the DOI contact
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.createDoiContact = function(createDoiContact) {
+      return this.createDoiContactWithHttpInfo(createDoiContact)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -324,7 +374,7 @@
 
 
     /**
-     * Deletes an attribute
+     * Delete an attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the existing attribute
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -369,7 +419,7 @@
     }
 
     /**
-     * Deletes an attribute
+     * Delete an attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the existing attribute
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -383,7 +433,7 @@
 
 
     /**
-     * Deletes a contact
+     * Delete a contact
      * @param {String} email Email (urlencoded) of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -421,7 +471,7 @@
     }
 
     /**
-     * Deletes a contact
+     * Delete a contact
      * @param {String} email Email (urlencoded) of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -536,7 +586,7 @@
 
 
     /**
-     * Lists all attributes
+     * List all attributes
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAttributes} and HTTP response
      */
     this.getAttributesWithHttpInfo = function() {
@@ -567,7 +617,7 @@
     }
 
     /**
-     * Lists all attributes
+     * List all attributes
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAttributes}
      */
     this.getAttributes = function() {
@@ -579,7 +629,7 @@
 
 
     /**
-     * Retrieves contact informations
+     * Get a contact&#39;s details
      * @param {String} email Email (urlencoded) of the contact OR its SMS attribute value
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetExtendedContactDetails} and HTTP response
      */
@@ -617,7 +667,7 @@
     }
 
     /**
-     * Retrieves contact informations
+     * Get a contact&#39;s details
      * @param {String} email Email (urlencoded) of the contact OR its SMS attribute value
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetExtendedContactDetails}
      */
@@ -630,11 +680,15 @@
 
 
     /**
-     * Get the campaigns statistics for a contact
+     * Get email campaigns&#39; statistics for a contact
      * @param {String} email Email address (urlencoded) of the contact
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be lower than equal to endDate
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be greater than equal to startDate
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContactCampaignStats} and HTTP response
      */
-    this.getContactStatsWithHttpInfo = function(email) {
+    this.getContactStatsWithHttpInfo = function(email, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'email' is set
@@ -647,6 +701,8 @@
         'email': email
       };
       var queryParams = {
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
       };
       var collectionQueryParams = {
       };
@@ -668,12 +724,15 @@
     }
 
     /**
-     * Get the campaigns statistics for a contact
+     * Get email campaigns&#39; statistics for a contact
      * @param {String} email Email address (urlencoded) of the contact
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be lower than equal to endDate
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be greater than equal to startDate
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContactCampaignStats}
      */
-    this.getContactStats = function(email) {
-      return this.getContactStatsWithHttpInfo(email)
+    this.getContactStats = function(email, opts) {
+      return this.getContactStatsWithHttpInfo(email, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -736,7 +795,7 @@
 
 
     /**
-     * Get the contacts in a list
+     * Get contacts in a list
      * @param {Number} listId Id of the list
      * @param {Object} opts Optional parameters
      * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
@@ -782,7 +841,7 @@
     }
 
     /**
-     * Get the contacts in a list
+     * Get contacts in a list
      * @param {Number} listId Id of the list
      * @param {Object} opts Optional parameters
      * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
@@ -799,7 +858,7 @@
 
 
     /**
-     * Returns folder details
+     * Returns a folder&#39;s details
      * @param {Number} folderId id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolder} and HTTP response
      */
@@ -837,7 +896,7 @@
     }
 
     /**
-     * Returns folder details
+     * Returns a folder&#39;s details
      * @param {Number} folderId id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolder}
      */
@@ -850,7 +909,7 @@
 
 
     /**
-     * Get the lists in a folder
+     * Get lists in a folder
      * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
@@ -894,7 +953,7 @@
     }
 
     /**
-     * Get the lists in a folder
+     * Get lists in a folder
      * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
@@ -910,7 +969,7 @@
 
 
     /**
-     * Get all the folders
+     * Get all folders
      * @param {Number} limit Number of documents per page
      * @param {Number} offset Index of the first document of the page
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolders} and HTTP response
@@ -955,7 +1014,7 @@
     }
 
     /**
-     * Get all the folders
+     * Get all folders
      * @param {Number} limit Number of documents per page
      * @param {Number} offset Index of the first document of the page
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolders}
@@ -969,7 +1028,7 @@
 
 
     /**
-     * Get the details of a list
+     * Get a list&#39;s details
      * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetExtendedList} and HTTP response
      */
@@ -1007,7 +1066,7 @@
     }
 
     /**
-     * Get the details of a list
+     * Get a list&#39;s details
      * @param {Number} listId Id of the list
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetExtendedList}
      */
@@ -1124,7 +1183,7 @@
 
 
     /**
-     * Remove existing contacts from a list
+     * Delete a contact from a list
      * @param {Number} listId Id of the list
      * @param {module:model/RemoveContactFromList} contactEmails Emails adresses of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostContactInfo} and HTTP response
@@ -1168,7 +1227,7 @@
     }
 
     /**
-     * Remove existing contacts from a list
+     * Delete a contact from a list
      * @param {Number} listId Id of the list
      * @param {module:model/RemoveContactFromList} contactEmails Emails adresses of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostContactInfo}
@@ -1234,7 +1293,7 @@
 
 
     /**
-     * Updates contact attribute
+     * Update contact attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the existing attribute
      * @param {module:model/UpdateAttribute} updateAttribute Values to update an attribute
@@ -1285,7 +1344,7 @@
     }
 
     /**
-     * Updates contact attribute
+     * Update contact attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the existing attribute
      * @param {module:model/UpdateAttribute} updateAttribute Values to update an attribute
@@ -1300,7 +1359,7 @@
 
 
     /**
-     * Updates a contact
+     * Update a contact
      * @param {String} email Email (urlencoded) of the contact
      * @param {module:model/UpdateContact} updateContact Values to update a contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1344,7 +1403,7 @@
     }
 
     /**
-     * Updates a contact
+     * Update a contact
      * @param {String} email Email (urlencoded) of the contact
      * @param {module:model/UpdateContact} updateContact Values to update a contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1358,7 +1417,7 @@
 
 
     /**
-     * Update a contact folder
+     * Update a folder
      * @param {Number} folderId Id of the folder
      * @param {module:model/CreateUpdateFolder} updateFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1402,7 +1461,7 @@
     }
 
     /**
-     * Update a contact folder
+     * Update a folder
      * @param {Number} folderId Id of the folder
      * @param {module:model/CreateUpdateFolder} updateFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

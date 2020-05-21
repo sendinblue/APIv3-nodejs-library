@@ -37,7 +37,7 @@
   /**
    * The GetTransacEmailsListTransactionalEmails model module.
    * @module model/GetTransacEmailsListTransactionalEmails
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -59,6 +59,8 @@
     _this['messageId'] = messageId;
     _this['uuid'] = uuid;
     _this['date'] = _date;
+
+
   };
 
   /**
@@ -89,6 +91,12 @@
       }
       if (data.hasOwnProperty('date')) {
         obj['date'] = ApiClient.convertToType(data['date'], 'Date');
+      }
+      if (data.hasOwnProperty('from')) {
+        obj['from'] = ApiClient.convertToType(data['from'], 'String');
+      }
+      if (data.hasOwnProperty('tags')) {
+        obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
       }
     }
     return obj;
@@ -124,6 +132,16 @@
    * @member {Date} date
    */
   exports.prototype['date'] = undefined;
+  /**
+   * Email address of the sender from which the email was sent
+   * @member {String} from
+   */
+  exports.prototype['from'] = undefined;
+  /**
+   * Tags used for your email
+   * @member {Array.<String>} tags
+   */
+  exports.prototype['tags'] = undefined;
 
 
 

@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AbTestCampaignResult', 'model/CreateEmailCampaign', 'model/CreateModel', 'model/CreatedProcessId', 'model/EmailExportRecipients', 'model/ErrorModel', 'model/GetEmailCampaign', 'model/GetEmailCampaigns', 'model/GetSharedTemplateUrl', 'model/PostSendFailed', 'model/SendReport', 'model/SendTestEmail', 'model/UpdateCampaignStatus', 'model/UpdateEmailCampaign'], factory);
+    define(['ApiClient', 'model/AbTestCampaignResult', 'model/CreateEmailCampaign', 'model/CreateModel', 'model/CreatedProcessId', 'model/EmailExportRecipients', 'model/ErrorModel', 'model/GetEmailCampaign', 'model/GetEmailCampaigns', 'model/GetSharedTemplateUrl', 'model/PostSendFailed', 'model/SendReport', 'model/SendTestEmail', 'model/UpdateCampaignStatus', 'model/UpdateEmailCampaign', 'model/UploadImageToGallery'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AbTestCampaignResult'), require('../model/CreateEmailCampaign'), require('../model/CreateModel'), require('../model/CreatedProcessId'), require('../model/EmailExportRecipients'), require('../model/ErrorModel'), require('../model/GetEmailCampaign'), require('../model/GetEmailCampaigns'), require('../model/GetSharedTemplateUrl'), require('../model/PostSendFailed'), require('../model/SendReport'), require('../model/SendTestEmail'), require('../model/UpdateCampaignStatus'), require('../model/UpdateEmailCampaign'));
+    module.exports = factory(require('../ApiClient'), require('../model/AbTestCampaignResult'), require('../model/CreateEmailCampaign'), require('../model/CreateModel'), require('../model/CreatedProcessId'), require('../model/EmailExportRecipients'), require('../model/ErrorModel'), require('../model/GetEmailCampaign'), require('../model/GetEmailCampaigns'), require('../model/GetSharedTemplateUrl'), require('../model/PostSendFailed'), require('../model/SendReport'), require('../model/SendTestEmail'), require('../model/UpdateCampaignStatus'), require('../model/UpdateEmailCampaign'), require('../model/UploadImageToGallery'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.EmailCampaignsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AbTestCampaignResult, root.SibApiV3Sdk.CreateEmailCampaign, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.EmailExportRecipients, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetEmailCampaign, root.SibApiV3Sdk.GetEmailCampaigns, root.SibApiV3Sdk.GetSharedTemplateUrl, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendReport, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateCampaignStatus, root.SibApiV3Sdk.UpdateEmailCampaign);
+    root.SibApiV3Sdk.EmailCampaignsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AbTestCampaignResult, root.SibApiV3Sdk.CreateEmailCampaign, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.EmailExportRecipients, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetEmailCampaign, root.SibApiV3Sdk.GetEmailCampaigns, root.SibApiV3Sdk.GetSharedTemplateUrl, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendReport, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateCampaignStatus, root.SibApiV3Sdk.UpdateEmailCampaign, root.SibApiV3Sdk.UploadImageToGallery);
   }
-}(this, function(ApiClient, AbTestCampaignResult, CreateEmailCampaign, CreateModel, CreatedProcessId, EmailExportRecipients, ErrorModel, GetEmailCampaign, GetEmailCampaigns, GetSharedTemplateUrl, PostSendFailed, SendReport, SendTestEmail, UpdateCampaignStatus, UpdateEmailCampaign) {
+}(this, function(ApiClient, AbTestCampaignResult, CreateEmailCampaign, CreateModel, CreatedProcessId, EmailExportRecipients, ErrorModel, GetEmailCampaign, GetEmailCampaigns, GetSharedTemplateUrl, PostSendFailed, SendReport, SendTestEmail, UpdateCampaignStatus, UpdateEmailCampaign, UploadImageToGallery) {
   'use strict';
 
   /**
    * EmailCampaigns service.
    * @module api/EmailCampaignsApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -151,7 +151,7 @@
 
 
     /**
-     * Export the recipients of a campaign
+     * Export the recipients of an email campaign
      * @param {Number} campaignId Id of the campaign
      * @param {Object} opts Optional parameters
      * @param {module:model/EmailExportRecipients} opts.recipientExport Values to send for a recipient export request
@@ -192,7 +192,7 @@
     }
 
     /**
-     * Export the recipients of a campaign
+     * Export the recipients of an email campaign
      * @param {Number} campaignId Id of the campaign
      * @param {Object} opts Optional parameters
      * @param {module:model/EmailExportRecipients} opts.recipientExport Values to send for a recipient export request
@@ -207,7 +207,7 @@
 
 
     /**
-     * Get A/B test email campaign result
+     * Get an A/B test email campaign results
      * Obtain winning version of an A/B test email campaign
      * @param {Number} campaignId Id of the A/B test campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AbTestCampaignResult} and HTTP response
@@ -246,7 +246,7 @@
     }
 
     /**
-     * Get A/B test email campaign result
+     * Get an A/B test email campaign results
      * Obtain winning version of an A/B test email campaign
      * @param {Number} campaignId Id of the A/B test campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AbTestCampaignResult}
@@ -260,7 +260,7 @@
 
 
     /**
-     * Get campaign informations
+     * Get an email campaign report
      * @param {Number} campaignId Id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetEmailCampaign} and HTTP response
      */
@@ -298,7 +298,7 @@
     }
 
     /**
-     * Get campaign informations
+     * Get an email campaign report
      * @param {Number} campaignId Id of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetEmailCampaign}
      */
@@ -311,7 +311,7 @@
 
 
     /**
-     * Return all your created campaigns
+     * Return all your created email campaigns
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.type Filter on the type of the campaigns
      * @param {module:model/String} opts.status Filter on the status of the campaign
@@ -356,7 +356,7 @@
     }
 
     /**
-     * Return all your created campaigns
+     * Return all your created email campaigns
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.type Filter on the type of the campaigns
      * @param {module:model/String} opts.status Filter on the status of the campaign
@@ -479,7 +479,7 @@
 
 
     /**
-     * Send the report of a campaigns
+     * Send the report of a campaign
      * A PDF will be sent to the specified email addresses
      * @param {Number} campaignId Id of the campaign
      * @param {module:model/SendReport} sendReport Values for send a report
@@ -524,7 +524,7 @@
     }
 
     /**
-     * Send the report of a campaigns
+     * Send the report of a campaign
      * A PDF will be sent to the specified email addresses
      * @param {Number} campaignId Id of the campaign
      * @param {module:model/SendReport} sendReport Values for send a report
@@ -597,7 +597,7 @@
 
 
     /**
-     * Update a campaign status
+     * Update an email campaign status
      * @param {Number} campaignId Id of the campaign
      * @param {module:model/UpdateCampaignStatus} status Status of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -641,7 +641,7 @@
     }
 
     /**
-     * Update a campaign status
+     * Update an email campaign status
      * @param {Number} campaignId Id of the campaign
      * @param {module:model/UpdateCampaignStatus} status Status of the campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -655,7 +655,7 @@
 
 
     /**
-     * Update a campaign
+     * Update an email campaign
      * @param {Number} campaignId Id of the campaign
      * @param {module:model/UpdateEmailCampaign} emailCampaign Values to update a campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -699,13 +699,63 @@
     }
 
     /**
-     * Update a campaign
+     * Update an email campaign
      * @param {Number} campaignId Id of the campaign
      * @param {module:model/UpdateEmailCampaign} emailCampaign Values to update a campaign
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.updateEmailCampaign = function(campaignId, emailCampaign) {
       return this.updateEmailCampaignWithHttpInfo(campaignId, emailCampaign)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Upload an image to your account&#39;s image gallery
+     * @param {module:model/UploadImageToGallery} uploadImage Parameters to upload an image
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.uploadImageToGalleryWithHttpInfo = function(uploadImage) {
+      var postBody = uploadImage;
+
+      // verify the required parameter 'uploadImage' is set
+      if (uploadImage === undefined || uploadImage === null) {
+        throw new Error("Missing the required parameter 'uploadImage' when calling uploadImageToGallery");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/emailCampaigns/images', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Upload an image to your account&#39;s image gallery
+     * @param {module:model/UploadImageToGallery} uploadImage Parameters to upload an image
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.uploadImageToGallery = function(uploadImage) {
+      return this.uploadImageToGalleryWithHttpInfo(uploadImage)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

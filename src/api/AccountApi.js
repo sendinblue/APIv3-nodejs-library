@@ -34,7 +34,7 @@
   /**
    * Account service.
    * @module api/AccountApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -50,7 +50,7 @@
 
 
     /**
-     * Get your account informations, plans and credits details
+     * Get your account information, plan and credits details
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAccount} and HTTP response
      */
     this.getAccountWithHttpInfo = function() {
@@ -81,7 +81,7 @@
     }
 
     /**
-     * Get your account informations, plans and credits details
+     * Get your account information, plan and credits details
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAccount}
      */
     this.getAccount = function() {

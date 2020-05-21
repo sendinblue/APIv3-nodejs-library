@@ -37,7 +37,7 @@
   /**
    * The UpdateChild model module.
    * @module model/UpdateChild
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**

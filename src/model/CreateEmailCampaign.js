@@ -37,7 +37,7 @@
   /**
    * The CreateEmailCampaign model module.
    * @module model/CreateEmailCampaign
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -264,7 +264,7 @@
    */
   exports.prototype['utmCampaign'] = undefined;
   /**
-   * Pass the set of attributes to customize the type classic campaign. For example, {'FNAME':'Joe', 'LNAME':'Doe'}. Only available if 'type' is 'classic'. It's considered only if campaign is in New Template Language format. The New Template Language is dependent on the values of 'subject', 'htmlContent/htmlUrl', 'sender.name' & 'toField'
+   * Pass the set of attributes to customize the type classic campaign. For example, {\"FNAME\":\"Joe\", \"LNAME\":\"Doe\"}. Only available if 'type' is 'classic'. It's considered only if campaign is in New Template Language format. The New Template Language is dependent on the values of 'subject', 'htmlContent/htmlUrl', 'sender.name' & 'toField'
    * @member {Object} params
    */
   exports.prototype['params'] = undefined;

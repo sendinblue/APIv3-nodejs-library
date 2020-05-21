@@ -37,7 +37,7 @@
   /**
    * The GetCampaignStats model module.
    * @module model/GetCampaignStats
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**

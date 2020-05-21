@@ -5,30 +5,31 @@ All URIs are relative to *https://api.sendinblue.com/v3*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addContactToList**](ContactsApi.md#addContactToList) | **POST** /contacts/lists/{listId}/contacts/add | Add existing contacts to a list
-[**createAttribute**](ContactsApi.md#createAttribute) | **POST** /contacts/attributes/{attributeCategory}/{attributeName} | Creates contact attribute
+[**createAttribute**](ContactsApi.md#createAttribute) | **POST** /contacts/attributes/{attributeCategory}/{attributeName} | Create contact attribute
 [**createContact**](ContactsApi.md#createContact) | **POST** /contacts | Create a contact
+[**createDoiContact**](ContactsApi.md#createDoiContact) | **POST** /contacts/doubleOptinConfirmation | Create a contact to trigger the DOI workflow from a Landing Page form
 [**createFolder**](ContactsApi.md#createFolder) | **POST** /contacts/folders | Create a folder
 [**createList**](ContactsApi.md#createList) | **POST** /contacts/lists | Create a list
-[**deleteAttribute**](ContactsApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Deletes an attribute
-[**deleteContact**](ContactsApi.md#deleteContact) | **DELETE** /contacts/{email} | Deletes a contact
+[**deleteAttribute**](ContactsApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Delete an attribute
+[**deleteContact**](ContactsApi.md#deleteContact) | **DELETE** /contacts/{email} | Delete a contact
 [**deleteFolder**](ContactsApi.md#deleteFolder) | **DELETE** /contacts/folders/{folderId} | Delete a folder (and all its lists)
 [**deleteList**](ContactsApi.md#deleteList) | **DELETE** /contacts/lists/{listId} | Delete a list
-[**getAttributes**](ContactsApi.md#getAttributes) | **GET** /contacts/attributes | Lists all attributes
-[**getContactInfo**](ContactsApi.md#getContactInfo) | **GET** /contacts/{email} | Retrieves contact informations
-[**getContactStats**](ContactsApi.md#getContactStats) | **GET** /contacts/{email}/campaignStats | Get the campaigns statistics for a contact
+[**getAttributes**](ContactsApi.md#getAttributes) | **GET** /contacts/attributes | List all attributes
+[**getContactInfo**](ContactsApi.md#getContactInfo) | **GET** /contacts/{email} | Get a contact&#39;s details
+[**getContactStats**](ContactsApi.md#getContactStats) | **GET** /contacts/{email}/campaignStats | Get email campaigns&#39; statistics for a contact
 [**getContacts**](ContactsApi.md#getContacts) | **GET** /contacts | Get all the contacts
-[**getContactsFromList**](ContactsApi.md#getContactsFromList) | **GET** /contacts/lists/{listId}/contacts | Get the contacts in a list
-[**getFolder**](ContactsApi.md#getFolder) | **GET** /contacts/folders/{folderId} | Returns folder details
-[**getFolderLists**](ContactsApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get the lists in a folder
-[**getFolders**](ContactsApi.md#getFolders) | **GET** /contacts/folders | Get all the folders
-[**getList**](ContactsApi.md#getList) | **GET** /contacts/lists/{listId} | Get the details of a list
+[**getContactsFromList**](ContactsApi.md#getContactsFromList) | **GET** /contacts/lists/{listId}/contacts | Get contacts in a list
+[**getFolder**](ContactsApi.md#getFolder) | **GET** /contacts/folders/{folderId} | Returns a folder&#39;s details
+[**getFolderLists**](ContactsApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get lists in a folder
+[**getFolders**](ContactsApi.md#getFolders) | **GET** /contacts/folders | Get all folders
+[**getList**](ContactsApi.md#getList) | **GET** /contacts/lists/{listId} | Get a list&#39;s details
 [**getLists**](ContactsApi.md#getLists) | **GET** /contacts/lists | Get all the lists
 [**importContacts**](ContactsApi.md#importContacts) | **POST** /contacts/import | Import contacts
-[**removeContactFromList**](ContactsApi.md#removeContactFromList) | **POST** /contacts/lists/{listId}/contacts/remove | Remove existing contacts from a list
+[**removeContactFromList**](ContactsApi.md#removeContactFromList) | **POST** /contacts/lists/{listId}/contacts/remove | Delete a contact from a list
 [**requestContactExport**](ContactsApi.md#requestContactExport) | **POST** /contacts/export | Export contacts
-[**updateAttribute**](ContactsApi.md#updateAttribute) | **PUT** /contacts/attributes/{attributeCategory}/{attributeName} | Updates contact attribute
-[**updateContact**](ContactsApi.md#updateContact) | **PUT** /contacts/{email} | Updates a contact
-[**updateFolder**](ContactsApi.md#updateFolder) | **PUT** /contacts/folders/{folderId} | Update a contact folder
+[**updateAttribute**](ContactsApi.md#updateAttribute) | **PUT** /contacts/attributes/{attributeCategory}/{attributeName} | Update contact attribute
+[**updateContact**](ContactsApi.md#updateContact) | **PUT** /contacts/{email} | Update a contact
+[**updateFolder**](ContactsApi.md#updateFolder) | **PUT** /contacts/folders/{folderId} | Update a folder
 [**updateList**](ContactsApi.md#updateList) | **PUT** /contacts/lists/{listId} | Update a list
 
 
@@ -93,7 +94,7 @@ Name | Type | Description  | Notes
 # **createAttribute**
 > createAttribute(attributeCategory, attributeName, createAttribute)
 
-Creates contact attribute
+Create contact attribute
 
 ### Example
 ```javascript
@@ -193,6 +194,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CreateUpdateContactModel**](CreateUpdateContactModel.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="createDoiContact"></a>
+# **createDoiContact**
+> createDoiContact(createDoiContact)
+
+Create a contact to trigger the DOI workflow from a Landing Page form
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.ContactsApi();
+
+var createDoiContact = new SibApiV3Sdk.CreateDoiContact(); // CreateDoiContact | Values to create the DOI contact
+
+apiInstance.createDoiContact(createDoiContact).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createDoiContact** | [**CreateDoiContact**](CreateDoiContact.md)| Values to create the DOI contact | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
@@ -315,7 +370,7 @@ Name | Type | Description  | Notes
 # **deleteAttribute**
 > deleteAttribute(attributeCategory, attributeName)
 
-Deletes an attribute
+Delete an attribute
 
 ### Example
 ```javascript
@@ -372,7 +427,7 @@ null (empty response body)
 # **deleteContact**
 > deleteContact(email)
 
-Deletes a contact
+Delete a contact
 
 ### Example
 ```javascript
@@ -534,7 +589,7 @@ null (empty response body)
 # **getAttributes**
 > GetAttributes getAttributes()
 
-Lists all attributes
+List all attributes
 
 ### Example
 ```javascript
@@ -582,7 +637,7 @@ This endpoint does not need any parameter.
 # **getContactInfo**
 > GetExtendedContactDetails getContactInfo(email)
 
-Retrieves contact informations
+Get a contact&#39;s details
 
 ### Example
 ```javascript
@@ -634,9 +689,9 @@ Name | Type | Description  | Notes
 
 <a name="getContactStats"></a>
 # **getContactStats**
-> GetContactCampaignStats getContactStats(email)
+> GetContactCampaignStats getContactStats(email, opts)
 
-Get the campaigns statistics for a contact
+Get email campaigns&#39; statistics for a contact
 
 ### Example
 ```javascript
@@ -659,7 +714,11 @@ var apiInstance = new SibApiV3Sdk.ContactsApi();
 
 var email = "email_example"; // String | Email address (urlencoded) of the contact
 
-apiInstance.getContactStats(email).then(function(data) {
+var opts = { 
+  'startDate': new Date("2013-10-20"), // Date | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be lower than equal to endDate
+  'endDate': new Date("2013-10-20") // Date | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be greater than equal to startDate
+};
+apiInstance.getContactStats(email, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -672,6 +731,8 @@ apiInstance.getContactStats(email).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **String**| Email address (urlencoded) of the contact | 
+ **startDate** | **Date**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be lower than equal to endDate | [optional] 
+ **endDate** | **Date**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be greater than equal to startDate | [optional] 
 
 ### Return type
 
@@ -749,7 +810,7 @@ Name | Type | Description  | Notes
 # **getContactsFromList**
 > GetContacts getContactsFromList(listId, opts)
 
-Get the contacts in a list
+Get contacts in a list
 
 ### Example
 ```javascript
@@ -811,7 +872,7 @@ Name | Type | Description  | Notes
 # **getFolder**
 > GetFolder getFolder(folderId)
 
-Returns folder details
+Returns a folder&#39;s details
 
 ### Example
 ```javascript
@@ -865,7 +926,7 @@ Name | Type | Description  | Notes
 # **getFolderLists**
 > GetFolderLists getFolderLists(folderId, opts)
 
-Get the lists in a folder
+Get lists in a folder
 
 ### Example
 ```javascript
@@ -925,7 +986,7 @@ Name | Type | Description  | Notes
 # **getFolders**
 > GetFolders getFolders(limit, offset)
 
-Get all the folders
+Get all folders
 
 ### Example
 ```javascript
@@ -982,7 +1043,7 @@ Name | Type | Description  | Notes
 # **getList**
 > GetExtendedList getList(listId)
 
-Get the details of a list
+Get a list&#39;s details
 
 ### Example
 ```javascript
@@ -1149,7 +1210,7 @@ Name | Type | Description  | Notes
 # **removeContactFromList**
 > PostContactInfo removeContactFromList(listId, contactEmails)
 
-Remove existing contacts from a list
+Delete a contact from a list
 
 ### Example
 ```javascript
@@ -1262,7 +1323,7 @@ Name | Type | Description  | Notes
 # **updateAttribute**
 > updateAttribute(attributeCategory, attributeName, updateAttribute)
 
-Updates contact attribute
+Update contact attribute
 
 ### Example
 ```javascript
@@ -1322,7 +1383,7 @@ null (empty response body)
 # **updateContact**
 > updateContact(email, updateContact)
 
-Updates a contact
+Update a contact
 
 ### Example
 ```javascript
@@ -1379,7 +1440,7 @@ null (empty response body)
 # **updateFolder**
 > updateFolder(folderId, updateFolder)
 
-Update a contact folder
+Update a folder
 
 ### Example
 ```javascript

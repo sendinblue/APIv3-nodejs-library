@@ -34,7 +34,7 @@
   /**
    * Reseller service.
    * @module api/ResellerApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -166,7 +166,7 @@
 
 
     /**
-     * Creates a domain for a child account
+     * Create a domain for a child account
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/AddChildDomain} addChildDomain Sender domain to add for a specific child account. This will not be displayed to the parent account.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -210,7 +210,7 @@
     }
 
     /**
-     * Creates a domain for a child account
+     * Create a domain for a child account
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/AddChildDomain} addChildDomain Sender domain to add for a specific child account. This will not be displayed to the parent account.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -272,7 +272,7 @@
 
 
     /**
-     * Deletes the sender domain of the reseller child based on the childAuthKey and domainName passed
+     * Delete the sender domain of the reseller child based on the childAuthKey and domainName passed
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {String} domainName Pass the existing domain that needs to be deleted
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -317,7 +317,7 @@
     }
 
     /**
-     * Deletes the sender domain of the reseller child based on the childAuthKey and domainName passed
+     * Delete the sender domain of the reseller child based on the childAuthKey and domainName passed
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {String} domainName Pass the existing domain that needs to be deleted
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -331,7 +331,7 @@
 
 
     /**
-     * Deletes a single reseller child based on the childAuthKey supplied
+     * Delete a single reseller child based on the childAuthKey supplied
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -369,7 +369,7 @@
     }
 
     /**
-     * Deletes a single reseller child based on the childAuthKey supplied
+     * Delete a single reseller child based on the childAuthKey supplied
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -440,7 +440,7 @@
 
 
     /**
-     * Returns the status of reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the childAuthKey supplied
+     * Get the status of a reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the childAuthKey supplied
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildAccountCreationStatus} and HTTP response
      */
@@ -478,7 +478,7 @@
     }
 
     /**
-     * Returns the status of reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the childAuthKey supplied
+     * Get the status of a reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the childAuthKey supplied
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChildAccountCreationStatus}
      */
@@ -491,7 +491,7 @@
 
 
     /**
-     * Gets all the sender domains of a specific child account
+     * Get all sender domains for a specific child account
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildDomains} and HTTP response
      */
@@ -529,7 +529,7 @@
     }
 
     /**
-     * Gets all the sender domains of a specific child account
+     * Get all sender domains for a specific child account
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChildDomains}
      */
@@ -542,7 +542,7 @@
 
 
     /**
-     * Gets the info about a specific child account
+     * Get a child account&#39;s details
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChildInfo} and HTTP response
      */
@@ -580,7 +580,7 @@
     }
 
     /**
-     * Gets the info about a specific child account
+     * Get a child account&#39;s details
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChildInfo}
      */
@@ -593,7 +593,7 @@
 
 
     /**
-     * Gets the list of all reseller&#39;s children accounts
+     * Get the list of all children accounts
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents for child accounts information per page (default to 10)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
@@ -630,7 +630,7 @@
     }
 
     /**
-     * Gets the list of all reseller&#39;s children accounts
+     * Get the list of all children accounts
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents for child accounts information per page (default to 10)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
@@ -756,7 +756,7 @@
 
 
     /**
-     * Updates infos of reseller&#39;s child account status based on the childAuthKey supplied
+     * Update info of reseller&#39;s child account status based on the childAuthKey supplied
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/UpdateChildAccountStatus} updateChildAccountStatus values to update in child account status
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -800,7 +800,7 @@
     }
 
     /**
-     * Updates infos of reseller&#39;s child account status based on the childAuthKey supplied
+     * Update info of reseller&#39;s child account status based on the childAuthKey supplied
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/UpdateChildAccountStatus} updateChildAccountStatus values to update in child account status
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -814,7 +814,7 @@
 
 
     /**
-     * Updates the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
+     * Update the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {String} domainName Pass the existing domain that needs to be updated
      * @param {module:model/UpdateChildDomain} updateChildDomain value to update for sender domain
@@ -865,7 +865,7 @@
     }
 
     /**
-     * Updates the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
+     * Update the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {String} domainName Pass the existing domain that needs to be updated
      * @param {module:model/UpdateChildDomain} updateChildDomain value to update for sender domain
@@ -880,7 +880,7 @@
 
 
     /**
-     * Updates infos of reseller&#39;s child based on the childAuthKey supplied
+     * Update info of reseller&#39;s child based on the childAuthKey supplied
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/UpdateChild} resellerChild values to update in child profile
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -924,7 +924,7 @@
     }
 
     /**
-     * Updates infos of reseller&#39;s child based on the childAuthKey supplied
+     * Update info of reseller&#39;s child based on the childAuthKey supplied
      * @param {String} childAuthKey auth key of reseller&#39;s child
      * @param {module:model/UpdateChild} resellerChild values to update in child profile
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

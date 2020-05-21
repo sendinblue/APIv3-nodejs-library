@@ -6,20 +6,20 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addCredits**](ResellerApi.md#addCredits) | **POST** /reseller/children/{childAuthKey}/credits/add | Add Email and/or SMS credits to a specific child account
 [**associateIpToChild**](ResellerApi.md#associateIpToChild) | **POST** /reseller/children/{childAuthKey}/ips/associate | Associate a dedicated IP to the child
-[**createChildDomain**](ResellerApi.md#createChildDomain) | **POST** /reseller/children/{childAuthKey}/domains | Creates a domain for a child account
+[**createChildDomain**](ResellerApi.md#createChildDomain) | **POST** /reseller/children/{childAuthKey}/domains | Create a domain for a child account
 [**createResellerChild**](ResellerApi.md#createResellerChild) | **POST** /reseller/children | Creates a reseller child
-[**deleteChildDomain**](ResellerApi.md#deleteChildDomain) | **DELETE** /reseller/children/{childAuthKey}/domains/{domainName} | Deletes the sender domain of the reseller child based on the childAuthKey and domainName passed
-[**deleteResellerChild**](ResellerApi.md#deleteResellerChild) | **DELETE** /reseller/children/{childAuthKey} | Deletes a single reseller child based on the childAuthKey supplied
+[**deleteChildDomain**](ResellerApi.md#deleteChildDomain) | **DELETE** /reseller/children/{childAuthKey}/domains/{domainName} | Delete the sender domain of the reseller child based on the childAuthKey and domainName passed
+[**deleteResellerChild**](ResellerApi.md#deleteResellerChild) | **DELETE** /reseller/children/{childAuthKey} | Delete a single reseller child based on the childAuthKey supplied
 [**dissociateIpFromChild**](ResellerApi.md#dissociateIpFromChild) | **POST** /reseller/children/{childAuthKey}/ips/dissociate | Dissociate a dedicated IP to the child
-[**getChildAccountCreationStatus**](ResellerApi.md#getChildAccountCreationStatus) | **GET** /reseller/children/{childAuthKey}/accountCreationStatus | Returns the status of reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the childAuthKey supplied
-[**getChildDomains**](ResellerApi.md#getChildDomains) | **GET** /reseller/children/{childAuthKey}/domains | Gets all the sender domains of a specific child account
-[**getChildInfo**](ResellerApi.md#getChildInfo) | **GET** /reseller/children/{childAuthKey} | Gets the info about a specific child account
-[**getResellerChilds**](ResellerApi.md#getResellerChilds) | **GET** /reseller/children | Gets the list of all reseller&#39;s children accounts
+[**getChildAccountCreationStatus**](ResellerApi.md#getChildAccountCreationStatus) | **GET** /reseller/children/{childAuthKey}/accountCreationStatus | Get the status of a reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the childAuthKey supplied
+[**getChildDomains**](ResellerApi.md#getChildDomains) | **GET** /reseller/children/{childAuthKey}/domains | Get all sender domains for a specific child account
+[**getChildInfo**](ResellerApi.md#getChildInfo) | **GET** /reseller/children/{childAuthKey} | Get a child account&#39;s details
+[**getResellerChilds**](ResellerApi.md#getResellerChilds) | **GET** /reseller/children | Get the list of all children accounts
 [**getSsoToken**](ResellerApi.md#getSsoToken) | **GET** /reseller/children/{childAuthKey}/auth | Get session token to access Sendinblue (SSO)
 [**removeCredits**](ResellerApi.md#removeCredits) | **POST** /reseller/children/{childAuthKey}/credits/remove | Remove Email and/or SMS credits from a specific child account
-[**updateChildAccountStatus**](ResellerApi.md#updateChildAccountStatus) | **PUT** /reseller/children/{childAuthKey}/accountStatus | Updates infos of reseller&#39;s child account status based on the childAuthKey supplied
-[**updateChildDomain**](ResellerApi.md#updateChildDomain) | **PUT** /reseller/children/{childAuthKey}/domains/{domainName} | Updates the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
-[**updateResellerChild**](ResellerApi.md#updateResellerChild) | **PUT** /reseller/children/{childAuthKey} | Updates infos of reseller&#39;s child based on the childAuthKey supplied
+[**updateChildAccountStatus**](ResellerApi.md#updateChildAccountStatus) | **PUT** /reseller/children/{childAuthKey}/accountStatus | Update info of reseller&#39;s child account status based on the childAuthKey supplied
+[**updateChildDomain**](ResellerApi.md#updateChildDomain) | **PUT** /reseller/children/{childAuthKey}/domains/{domainName} | Update the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
+[**updateResellerChild**](ResellerApi.md#updateResellerChild) | **PUT** /reseller/children/{childAuthKey} | Update info of reseller&#39;s child based on the childAuthKey supplied
 
 
 <a name="addCredits"></a>
@@ -140,7 +140,7 @@ null (empty response body)
 # **createChildDomain**
 > createChildDomain(childAuthKey, addChildDomain)
 
-Creates a domain for a child account
+Create a domain for a child account
 
 ### Example
 ```javascript
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 # **deleteChildDomain**
 > deleteChildDomain(childAuthKey, domainName)
 
-Deletes the sender domain of the reseller child based on the childAuthKey and domainName passed
+Delete the sender domain of the reseller child based on the childAuthKey and domainName passed
 
 ### Example
 ```javascript
@@ -309,7 +309,7 @@ null (empty response body)
 # **deleteResellerChild**
 > deleteResellerChild(childAuthKey)
 
-Deletes a single reseller child based on the childAuthKey supplied
+Delete a single reseller child based on the childAuthKey supplied
 
 ### Example
 ```javascript
@@ -420,7 +420,7 @@ null (empty response body)
 # **getChildAccountCreationStatus**
 > GetChildAccountCreationStatus getChildAccountCreationStatus(childAuthKey)
 
-Returns the status of reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the childAuthKey supplied
+Get the status of a reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the childAuthKey supplied
 
 ### Example
 ```javascript
@@ -474,7 +474,7 @@ Name | Type | Description  | Notes
 # **getChildDomains**
 > GetChildDomains getChildDomains(childAuthKey)
 
-Gets all the sender domains of a specific child account
+Get all sender domains for a specific child account
 
 ### Example
 ```javascript
@@ -528,7 +528,7 @@ Name | Type | Description  | Notes
 # **getChildInfo**
 > GetChildInfo getChildInfo(childAuthKey)
 
-Gets the info about a specific child account
+Get a child account&#39;s details
 
 ### Example
 ```javascript
@@ -582,7 +582,7 @@ Name | Type | Description  | Notes
 # **getResellerChilds**
 > GetChildrenList getResellerChilds(opts)
 
-Gets the list of all reseller&#39;s children accounts
+Get the list of all children accounts
 
 ### Example
 ```javascript
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
 # **updateChildAccountStatus**
 > updateChildAccountStatus(childAuthKey, updateChildAccountStatus)
 
-Updates infos of reseller&#39;s child account status based on the childAuthKey supplied
+Update info of reseller&#39;s child account status based on the childAuthKey supplied
 
 ### Example
 ```javascript
@@ -809,7 +809,7 @@ null (empty response body)
 # **updateChildDomain**
 > updateChildDomain(childAuthKey, domainName, updateChildDomain)
 
-Updates the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
+Update the sender domain of reseller&#39;s child based on the childAuthKey and domainName passed
 
 ### Example
 ```javascript
@@ -869,7 +869,7 @@ null (empty response body)
 # **updateResellerChild**
 > updateResellerChild(childAuthKey, resellerChild)
 
-Updates infos of reseller&#39;s child based on the childAuthKey supplied
+Update info of reseller&#39;s child based on the childAuthKey supplied
 
 ### Example
 ```javascript

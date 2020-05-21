@@ -34,7 +34,7 @@
   /**
    * Attributes service.
    * @module api/AttributesApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -50,7 +50,7 @@
 
 
     /**
-     * Creates contact attribute
+     * Create contact attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the attribute
      * @param {module:model/CreateAttribute} createAttribute Values to create an attribute
@@ -101,7 +101,7 @@
     }
 
     /**
-     * Creates contact attribute
+     * Create contact attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the attribute
      * @param {module:model/CreateAttribute} createAttribute Values to create an attribute
@@ -116,7 +116,7 @@
 
 
     /**
-     * Deletes an attribute
+     * Delete an attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the existing attribute
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -161,7 +161,7 @@
     }
 
     /**
-     * Deletes an attribute
+     * Delete an attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the existing attribute
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -175,7 +175,7 @@
 
 
     /**
-     * Lists all attributes
+     * List all attributes
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAttributes} and HTTP response
      */
     this.getAttributesWithHttpInfo = function() {
@@ -206,7 +206,7 @@
     }
 
     /**
-     * Lists all attributes
+     * List all attributes
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAttributes}
      */
     this.getAttributes = function() {
@@ -218,7 +218,7 @@
 
 
     /**
-     * Updates contact attribute
+     * Update contact attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the existing attribute
      * @param {module:model/UpdateAttribute} updateAttribute Values to update an attribute
@@ -269,7 +269,7 @@
     }
 
     /**
-     * Updates contact attribute
+     * Update contact attribute
      * @param {module:model/String} attributeCategory Category of the attribute
      * @param {String} attributeName Name of the existing attribute
      * @param {module:model/UpdateAttribute} updateAttribute Values to update an attribute

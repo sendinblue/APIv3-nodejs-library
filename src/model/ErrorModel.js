@@ -37,7 +37,7 @@
   /**
    * The ErrorModel model module.
    * @module model/ErrorModel
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
