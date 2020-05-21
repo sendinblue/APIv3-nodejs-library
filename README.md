@@ -53,25 +53,12 @@ command above from.
 #### git
 #
 If the library is hosted at a git repository, e.g.
-https://github.com/GIT_USER_ID/GIT_REPO_ID
+https://github.com/sendinblue/APIv3-nodejs-library
 then install it via:
 
 ```shell
-    npm install GIT_USER_ID/GIT_REPO_ID --save
+    npm install sendinblue/APIv3-nodejs-library --save
 ```
-
-### For browser
-
-The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following
-the above steps with Node.js and installing browserify with `npm install -g browserify`,
-perform the following (assuming *main.js* is your entry file, that's to say your javascript file where you actually
-use this library):
-
-```shell
-browserify main.js > bundle.js
-```
-
-Then include *bundle.js* in the HTML pages.
 
 ### Webpack Configuration
 
@@ -104,7 +91,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix['api-key'] = "Token"
+//apiKey.apiKeyPrefix['api-key'] = "Token"
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
