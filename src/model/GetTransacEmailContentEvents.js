@@ -37,7 +37,7 @@
   /**
    * The GetTransacEmailContentEvents model module.
    * @module model/GetTransacEmailContentEvents
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**

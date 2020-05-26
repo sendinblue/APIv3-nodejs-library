@@ -34,7 +34,7 @@
   /**
    * TransactionalSMS service.
    * @module api/TransactionalSMSApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -50,7 +50,7 @@
 
 
     /**
-     * Get all the SMS activity (unaggregated events)
+     * Get all your SMS activity (unaggregated events)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {String} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
@@ -99,7 +99,7 @@
     }
 
     /**
-     * Get all the SMS activity (unaggregated events)
+     * Get all your SMS activity (unaggregated events)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {String} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
@@ -236,7 +236,7 @@
 
 
     /**
-     * Send the SMS campaign to the specified mobile number
+     * Send the SMS campaign to a mobile number
      * @param {module:model/SendTransacSms} sendTransacSms Values to send a transactional SMS
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendSms} and HTTP response
      */
@@ -273,7 +273,7 @@
     }
 
     /**
-     * Send the SMS campaign to the specified mobile number
+     * Send the SMS campaign to a mobile number
      * @param {module:model/SendTransacSms} sendTransacSms Values to send a transactional SMS
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendSms}
      */

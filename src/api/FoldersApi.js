@@ -34,7 +34,7 @@
   /**
    * Folders service.
    * @module api/FoldersApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -151,7 +151,7 @@
 
 
     /**
-     * Returns folder details
+     * Returns a folder&#39;s details
      * @param {Number} folderId id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolder} and HTTP response
      */
@@ -189,7 +189,7 @@
     }
 
     /**
-     * Returns folder details
+     * Returns a folder&#39;s details
      * @param {Number} folderId id of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolder}
      */
@@ -202,7 +202,7 @@
 
 
     /**
-     * Get the lists in a folder
+     * Get lists in a folder
      * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
@@ -246,7 +246,7 @@
     }
 
     /**
-     * Get the lists in a folder
+     * Get lists in a folder
      * @param {Number} folderId Id of the folder
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
@@ -262,7 +262,7 @@
 
 
     /**
-     * Get all the folders
+     * Get all folders
      * @param {Number} limit Number of documents per page
      * @param {Number} offset Index of the first document of the page
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolders} and HTTP response
@@ -307,7 +307,7 @@
     }
 
     /**
-     * Get all the folders
+     * Get all folders
      * @param {Number} limit Number of documents per page
      * @param {Number} offset Index of the first document of the page
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolders}
@@ -321,7 +321,7 @@
 
 
     /**
-     * Update a contact folder
+     * Update a folder
      * @param {Number} folderId Id of the folder
      * @param {module:model/CreateUpdateFolder} updateFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -365,7 +365,7 @@
     }
 
     /**
-     * Update a contact folder
+     * Update a folder
      * @param {Number} folderId Id of the folder
      * @param {module:model/CreateUpdateFolder} updateFolder Name of the folder
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

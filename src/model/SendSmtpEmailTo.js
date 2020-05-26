@@ -37,7 +37,7 @@
   /**
    * The SendSmtpEmailTo model module.
    * @module model/SendSmtpEmailTo
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**

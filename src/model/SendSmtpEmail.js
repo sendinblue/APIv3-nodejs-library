@@ -37,14 +37,14 @@
   /**
    * The SendSmtpEmail model module.
    * @module model/SendSmtpEmail
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
    * Constructs a new <code>SendSmtpEmail</code>.
    * @alias module:model/SendSmtpEmail
    * @class
-   * @param to {Array.<module:model/SendSmtpEmailTo>} List of email addresses and names (optional) of the recipients. For example, [{'name':'Jimmy', 'email':'jimmy98@example.com'}, {'name':'Joe', 'email':'joe@example.com'}]
+   * @param to {Array.<module:model/SendSmtpEmailTo>} List of email addresses and names (optional) of the recipients. For example, [{\"name\":\"Jimmy\", \"email\":\"jimmy98@example.com\"}, {\"name\":\"Joe\", \"email\":\"joe@example.com\"}]
    */
   var exports = function(to) {
     var _this = this;
@@ -123,7 +123,7 @@
    */
   exports.prototype['sender'] = undefined;
   /**
-   * List of email addresses and names (optional) of the recipients. For example, [{'name':'Jimmy', 'email':'jimmy98@example.com'}, {'name':'Joe', 'email':'joe@example.com'}]
+   * List of email addresses and names (optional) of the recipients. For example, [{\"name\":\"Jimmy\", \"email\":\"jimmy98@example.com\"}, {\"name\":\"Joe\", \"email\":\"joe@example.com\"}]
    * @member {Array.<module:model/SendSmtpEmailTo>} to
    */
   exports.prototype['to'] = undefined;
@@ -162,7 +162,7 @@
    */
   exports.prototype['attachment'] = undefined;
   /**
-   * Pass the set of custom headers (not the standard headers) that shall be sent along the mail headers in the original email. 'sender.ip' header can be set (only for dedicated ip users) to mention the IP to be used for sending transactional emails. For example, `{\"sender.ip\":\"1.2.3.4\", \"X-Mailin-custom\":\"some_custom_header\"}`.
+   * Pass the set of custom headers (not the standard headers) that shall be sent along the mail headers in the original email. 'sender.ip' header can be set (only for dedicated ip users) to mention the IP to be used for sending transactional emails. Headers are allowed in `This-Case-Only` (i.e. words separated by hyphen with first letter of each word in capital letter), they will be converted to such case styling if not in this format in the request payload. For example, `{\"sender.ip\":\"1.2.3.4\", \"X-Mailin-custom\":\"some_custom_header\"}`.
    * @member {Object} headers
    */
   exports.prototype['headers'] = undefined;
@@ -172,7 +172,7 @@
    */
   exports.prototype['templateId'] = undefined;
   /**
-   * Pass the set of attributes to customize the template. For example, {'FNAME':'Joe', 'LNAME':'Doe'}. It's considered only if template is in New Template Language format. Alternatively, you can pass the set of attributes to customize the template for each recipient. For this the email will be the key and its value will be a JSON containing attributes specific to each recipient. For example, `{'abc@example.com':{'name':'ABC', 'age':21}, 'xyz@example.com':{'name':'XYZ', 'age':25}}`
+   * Pass the set of attributes to customize the template. For example, {\"FNAME\":\"Joe\", \"LNAME\":\"Doe\"}. It's considered only if template is in New Template Language format.
    * @member {Object} params
    */
   exports.prototype['params'] = undefined;

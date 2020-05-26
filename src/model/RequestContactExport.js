@@ -37,7 +37,7 @@
   /**
    * The RequestContactExport model module.
    * @module model/RequestContactExport
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -87,7 +87,7 @@
    */
   exports.prototype['exportAttributes'] = undefined;
   /**
-   * This attribute has been deprecated and will be removed by January 1st, 2021. Only one of the two filter options (contactFilter or customContactFilter) can be passed in the request. Set the filter for the contacts to be exported. For example, {'blacklisted':true} will export all the blacklisted contacts. 
+   * This attribute has been deprecated and will be removed by January 1st, 2021. Only one of the two filter options (contactFilter or customContactFilter) can be passed in the request. Set the filter for the contacts to be exported. For example, {\"blacklisted\":true} will export all the blacklisted contacts. 
    * @member {Object} contactFilter
    */
   exports.prototype['contactFilter'] = undefined;

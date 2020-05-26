@@ -26,7 +26,7 @@
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.RequestContactImportNewList = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.UploadImageToGallery = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,55 +35,55 @@
 
 
   /**
-   * The RequestContactImportNewList model module.
-   * @module model/RequestContactImportNewList
+   * The UploadImageToGallery model module.
+   * @module model/UploadImageToGallery
    * @version 7.2.3
    */
 
   /**
-   * Constructs a new <code>RequestContactImportNewList</code>.
-   * To create a new list and import the contacts into it, pass the listName and an optional folderId.
-   * @alias module:model/RequestContactImportNewList
+   * Constructs a new <code>UploadImageToGallery</code>.
+   * @alias module:model/UploadImageToGallery
    * @class
+   * @param imageUrl {String} The absolute url of the image (no local file). Maximum allowed size for image is 2MB. Allowed extensions for images are - jpeg, jpg, png, bmp, gif.
    */
-  var exports = function() {
+  var exports = function(imageUrl) {
     var _this = this;
 
-
+    _this['imageUrl'] = imageUrl;
 
   };
 
   /**
-   * Constructs a <code>RequestContactImportNewList</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>UploadImageToGallery</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RequestContactImportNewList} obj Optional instance to populate.
-   * @return {module:model/RequestContactImportNewList} The populated <code>RequestContactImportNewList</code> instance.
+   * @param {module:model/UploadImageToGallery} obj Optional instance to populate.
+   * @return {module:model/UploadImageToGallery} The populated <code>UploadImageToGallery</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('listName')) {
-        obj['listName'] = ApiClient.convertToType(data['listName'], 'String');
+      if (data.hasOwnProperty('imageUrl')) {
+        obj['imageUrl'] = ApiClient.convertToType(data['imageUrl'], 'String');
       }
-      if (data.hasOwnProperty('folderId')) {
-        obj['folderId'] = ApiClient.convertToType(data['folderId'], 'Number');
+      if (data.hasOwnProperty('name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * List with listName will be created first and users will be imported in it (Mandatory if listIds is empty).
-   * @member {String} listName
+   * The absolute url of the image (no local file). Maximum allowed size for image is 2MB. Allowed extensions for images are - jpeg, jpg, png, bmp, gif.
+   * @member {String} imageUrl
    */
-  exports.prototype['listName'] = undefined;
+  exports.prototype['imageUrl'] = undefined;
   /**
-   * Id of the folder where this new list shall be created (Mandatory if listName is not empty).
-   * @member {Number} folderId
+   * Name of the image.
+   * @member {String} name
    */
-  exports.prototype['folderId'] = undefined;
+  exports.prototype['name'] = undefined;
 
 
 

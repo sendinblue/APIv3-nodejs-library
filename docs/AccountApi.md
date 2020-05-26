@@ -4,14 +4,14 @@ All URIs are relative to *https://api.sendinblue.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAccount**](AccountApi.md#getAccount) | **GET** /account | Get your account informations, plans and credits details
+[**getAccount**](AccountApi.md#getAccount) | **GET** /account | Get your account information, plan and credits details
 
 
 <a name="getAccount"></a>
 # **getAccount**
 > GetAccount getAccount()
 
-Get your account informations, plans and credits details
+Get your account information, plan and credits details
 
 ### Example
 ```javascript

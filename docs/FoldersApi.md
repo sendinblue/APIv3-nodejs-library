@@ -6,10 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createFolder**](FoldersApi.md#createFolder) | **POST** /contacts/folders | Create a folder
 [**deleteFolder**](FoldersApi.md#deleteFolder) | **DELETE** /contacts/folders/{folderId} | Delete a folder (and all its lists)
-[**getFolder**](FoldersApi.md#getFolder) | **GET** /contacts/folders/{folderId} | Returns folder details
-[**getFolderLists**](FoldersApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get the lists in a folder
-[**getFolders**](FoldersApi.md#getFolders) | **GET** /contacts/folders | Get all the folders
-[**updateFolder**](FoldersApi.md#updateFolder) | **PUT** /contacts/folders/{folderId} | Update a contact folder
+[**getFolder**](FoldersApi.md#getFolder) | **GET** /contacts/folders/{folderId} | Returns a folder&#39;s details
+[**getFolderLists**](FoldersApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get lists in a folder
+[**getFolders**](FoldersApi.md#getFolders) | **GET** /contacts/folders | Get all folders
+[**updateFolder**](FoldersApi.md#updateFolder) | **PUT** /contacts/folders/{folderId} | Update a folder
 
 
 <a name="createFolder"></a>
@@ -124,7 +124,7 @@ null (empty response body)
 # **getFolder**
 > GetFolder getFolder(folderId)
 
-Returns folder details
+Returns a folder&#39;s details
 
 ### Example
 ```javascript
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 # **getFolderLists**
 > GetFolderLists getFolderLists(folderId, opts)
 
-Get the lists in a folder
+Get lists in a folder
 
 ### Example
 ```javascript
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 # **getFolders**
 > GetFolders getFolders(limit, offset)
 
-Get all the folders
+Get all folders
 
 ### Example
 ```javascript
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 # **updateFolder**
 > updateFolder(folderId, updateFolder)
 
-Update a contact folder
+Update a folder
 
 ### Example
 ```javascript

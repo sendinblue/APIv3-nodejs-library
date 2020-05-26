@@ -37,7 +37,7 @@
   /**
    * The UpdateChildAccountStatus model module.
    * @module model/UpdateChildAccountStatus
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**

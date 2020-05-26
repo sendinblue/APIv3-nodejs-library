@@ -37,7 +37,7 @@
   /**
    * The CreateContact model module.
    * @module model/CreateContact
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -94,12 +94,12 @@
   }
 
   /**
-   * Email address of the user. Mandatory if \"SMS\" field is not passed in \"attributes\" parameter. Mobile Number in \"SMS\" field should be passed with proper country code. For example {'SMS':'+91xxxxxxxxxx'} or {'SMS':'0091xxxxxxxxxx'}
+   * Email address of the user. Mandatory if \"SMS\" field is not passed in \"attributes\" parameter. Mobile Number in \"SMS\" field should be passed with proper country code. For example {\"SMS\":\"+91xxxxxxxxxx\"} or {\"SMS\":\"0091xxxxxxxxxx\"}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
   /**
-   * Pass the set of attributes and their values. These attributes must be present in your SendinBlue account. For eg. {'FNAME':'Elly', 'LNAME':'Roger'}
+   * Pass the set of attributes and their values. These attributes must be present in your SendinBlue account. For eg. {\"FNAME\":\"Elly\", \"LNAME\":\"Roger\"}
    * @member {Object} attributes
    */
   exports.prototype['attributes'] = undefined;

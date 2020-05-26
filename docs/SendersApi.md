@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createSender**](SendersApi.md#createSender) | **POST** /senders | Create a new sender
 [**deleteSender**](SendersApi.md#deleteSender) | **DELETE** /senders/{senderId} | Delete a sender
-[**getIps**](SendersApi.md#getIps) | **GET** /senders/ips | Return all the dedicated IPs for your account
-[**getIpsFromSender**](SendersApi.md#getIpsFromSender) | **GET** /senders/{senderId}/ips | Return all the dedicated IPs for a sender
+[**getIps**](SendersApi.md#getIps) | **GET** /senders/ips | Get all the dedicated IPs for your account
+[**getIpsFromSender**](SendersApi.md#getIpsFromSender) | **GET** /senders/{senderId}/ips | Get all the dedicated IPs for a sender
 [**getSenders**](SendersApi.md#getSenders) | **GET** /senders | Get the list of all your senders
 [**updateSender**](SendersApi.md#updateSender) | **PUT** /senders/{senderId} | Update a sender
 
@@ -125,7 +125,7 @@ null (empty response body)
 # **getIps**
 > GetIps getIps()
 
-Return all the dedicated IPs for your account
+Get all the dedicated IPs for your account
 
 ### Example
 ```javascript
@@ -173,7 +173,7 @@ This endpoint does not need any parameter.
 # **getIpsFromSender**
 > GetIpsFromSender getIpsFromSender(senderId)
 
-Return all the dedicated IPs for a sender
+Get all the dedicated IPs for a sender
 
 ### Example
 ```javascript

@@ -37,7 +37,7 @@
   /**
    * The AddContactToList model module.
    * @module model/AddContactToList
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -70,7 +70,7 @@
   }
 
   /**
-   * Emails to add to a list
+   * Emails to add to a list. You can pass a maximum of 150 emails for addition in one request. If you need to add the emails in bulk, please prefer /contacts/import api.
    * @member {Array.<String>} emails
    */
   exports.prototype['emails'] = undefined;

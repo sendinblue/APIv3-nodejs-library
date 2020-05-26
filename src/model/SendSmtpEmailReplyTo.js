@@ -37,12 +37,12 @@
   /**
    * The SendSmtpEmailReplyTo model module.
    * @module model/SendSmtpEmailReplyTo
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
    * Constructs a new <code>SendSmtpEmailReplyTo</code>.
-   * Email (required), along with name (optional), on which transactional mail recipients will be able to reply back. For example, {&#39;email&#39;:&#39;ann6533@example.com&#39;, &#39;name&#39;:&#39;Ann&#39;}.
+   * Email (required), along with name (optional), on which transactional mail recipients will be able to reply back. For example, {\&quot;email\&quot;:\&quot;ann6533@example.com\&quot;, \&quot;name\&quot;:\&quot;Ann\&quot;}.
    * @alias module:model/SendSmtpEmailReplyTo
    * @class
    * @param email {String} Email address in reply to

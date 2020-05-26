@@ -37,7 +37,7 @@
   /**
    * The CreateList model module.
    * @module model/CreateList
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**

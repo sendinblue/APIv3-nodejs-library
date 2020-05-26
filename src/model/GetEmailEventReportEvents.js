@@ -37,7 +37,7 @@
   /**
    * The GetEmailEventReportEvents model module.
    * @module model/GetEmailEventReportEvents
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The RemoveContactFromList model module.
    * @module model/RemoveContactFromList
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -74,7 +74,7 @@
   }
 
   /**
-   * Required if 'all' is false. Emails to remove from a list
+   * Required if 'all' is false. Emails to remove from a list. You can pass a maximum of 150 emails for removal in one request.
    * @member {Array.<String>} emails
    */
   exports.prototype['emails'] = undefined;

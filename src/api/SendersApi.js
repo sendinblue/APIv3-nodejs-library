@@ -34,7 +34,7 @@
   /**
    * Senders service.
    * @module api/SendersApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -149,7 +149,7 @@
 
 
     /**
-     * Return all the dedicated IPs for your account
+     * Get all the dedicated IPs for your account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetIps} and HTTP response
      */
     this.getIpsWithHttpInfo = function() {
@@ -180,7 +180,7 @@
     }
 
     /**
-     * Return all the dedicated IPs for your account
+     * Get all the dedicated IPs for your account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetIps}
      */
     this.getIps = function() {
@@ -192,7 +192,7 @@
 
 
     /**
-     * Return all the dedicated IPs for a sender
+     * Get all the dedicated IPs for a sender
      * @param {Number} senderId Id of the sender
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetIpsFromSender} and HTTP response
      */
@@ -230,7 +230,7 @@
     }
 
     /**
-     * Return all the dedicated IPs for a sender
+     * Get all the dedicated IPs for a sender
      * @param {Number} senderId Id of the sender
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetIpsFromSender}
      */

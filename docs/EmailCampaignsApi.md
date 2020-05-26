@@ -6,16 +6,17 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createEmailCampaign**](EmailCampaignsApi.md#createEmailCampaign) | **POST** /emailCampaigns | Create an email campaign
 [**deleteEmailCampaign**](EmailCampaignsApi.md#deleteEmailCampaign) | **DELETE** /emailCampaigns/{campaignId} | Delete an email campaign
-[**emailExportRecipients**](EmailCampaignsApi.md#emailExportRecipients) | **POST** /emailCampaigns/{campaignId}/exportRecipients | Export the recipients of a campaign
-[**getAbTestCampaignResult**](EmailCampaignsApi.md#getAbTestCampaignResult) | **GET** /emailCampaigns/{campaignId}/abTestCampaignResult | Get A/B test email campaign result
-[**getEmailCampaign**](EmailCampaignsApi.md#getEmailCampaign) | **GET** /emailCampaigns/{campaignId} | Get campaign informations
-[**getEmailCampaigns**](EmailCampaignsApi.md#getEmailCampaigns) | **GET** /emailCampaigns | Return all your created campaigns
+[**emailExportRecipients**](EmailCampaignsApi.md#emailExportRecipients) | **POST** /emailCampaigns/{campaignId}/exportRecipients | Export the recipients of an email campaign
+[**getAbTestCampaignResult**](EmailCampaignsApi.md#getAbTestCampaignResult) | **GET** /emailCampaigns/{campaignId}/abTestCampaignResult | Get an A/B test email campaign results
+[**getEmailCampaign**](EmailCampaignsApi.md#getEmailCampaign) | **GET** /emailCampaigns/{campaignId} | Get an email campaign report
+[**getEmailCampaigns**](EmailCampaignsApi.md#getEmailCampaigns) | **GET** /emailCampaigns | Return all your created email campaigns
 [**getSharedTemplateUrl**](EmailCampaignsApi.md#getSharedTemplateUrl) | **GET** /emailCampaigns/{campaignId}/sharedUrl | Get a shared template url
 [**sendEmailCampaignNow**](EmailCampaignsApi.md#sendEmailCampaignNow) | **POST** /emailCampaigns/{campaignId}/sendNow | Send an email campaign immediately, based on campaignId
-[**sendReport**](EmailCampaignsApi.md#sendReport) | **POST** /emailCampaigns/{campaignId}/sendReport | Send the report of a campaigns
+[**sendReport**](EmailCampaignsApi.md#sendReport) | **POST** /emailCampaigns/{campaignId}/sendReport | Send the report of a campaign
 [**sendTestEmail**](EmailCampaignsApi.md#sendTestEmail) | **POST** /emailCampaigns/{campaignId}/sendTest | Send an email campaign to your test list
-[**updateCampaignStatus**](EmailCampaignsApi.md#updateCampaignStatus) | **PUT** /emailCampaigns/{campaignId}/status | Update a campaign status
-[**updateEmailCampaign**](EmailCampaignsApi.md#updateEmailCampaign) | **PUT** /emailCampaigns/{campaignId} | Update a campaign
+[**updateCampaignStatus**](EmailCampaignsApi.md#updateCampaignStatus) | **PUT** /emailCampaigns/{campaignId}/status | Update an email campaign status
+[**updateEmailCampaign**](EmailCampaignsApi.md#updateEmailCampaign) | **PUT** /emailCampaigns/{campaignId} | Update an email campaign
+[**uploadImageToGallery**](EmailCampaignsApi.md#uploadImageToGallery) | **POST** /emailCampaigns/images | Upload an image to your account&#39;s image gallery
 
 
 <a name="createEmailCampaign"></a>
@@ -130,7 +131,7 @@ null (empty response body)
 # **emailExportRecipients**
 > CreatedProcessId emailExportRecipients(campaignId, opts)
 
-Export the recipients of a campaign
+Export the recipients of an email campaign
 
 ### Example
 ```javascript
@@ -188,7 +189,7 @@ Name | Type | Description  | Notes
 # **getAbTestCampaignResult**
 > AbTestCampaignResult getAbTestCampaignResult(campaignId)
 
-Get A/B test email campaign result
+Get an A/B test email campaign results
 
 Obtain winning version of an A/B test email campaign
 
@@ -244,7 +245,7 @@ Name | Type | Description  | Notes
 # **getEmailCampaign**
 > GetEmailCampaign getEmailCampaign(campaignId)
 
-Get campaign informations
+Get an email campaign report
 
 ### Example
 ```javascript
@@ -298,7 +299,7 @@ Name | Type | Description  | Notes
 # **getEmailCampaigns**
 > GetEmailCampaigns getEmailCampaigns(opts)
 
-Return all your created campaigns
+Return all your created email campaigns
 
 ### Example
 ```javascript
@@ -473,7 +474,7 @@ null (empty response body)
 # **sendReport**
 > sendReport(campaignId, sendReport)
 
-Send the report of a campaigns
+Send the report of a campaign
 
 A PDF will be sent to the specified email addresses
 
@@ -589,7 +590,7 @@ null (empty response body)
 # **updateCampaignStatus**
 > updateCampaignStatus(campaignId, status)
 
-Update a campaign status
+Update an email campaign status
 
 ### Example
 ```javascript
@@ -646,7 +647,7 @@ null (empty response body)
 # **updateEmailCampaign**
 > updateEmailCampaign(campaignId, emailCampaign)
 
-Update a campaign
+Update an email campaign
 
 ### Example
 ```javascript
@@ -685,6 +686,60 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaignId** | **Number**| Id of the campaign | 
  **emailCampaign** | [**UpdateEmailCampaign**](UpdateEmailCampaign.md)| Values to update a campaign | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="uploadImageToGallery"></a>
+# **uploadImageToGallery**
+> uploadImageToGallery(uploadImage)
+
+Upload an image to your account&#39;s image gallery
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+
+var uploadImage = new SibApiV3Sdk.UploadImageToGallery(); // UploadImageToGallery | Parameters to upload an image
+
+apiInstance.uploadImageToGallery(uploadImage).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uploadImage** | [**UploadImageToGallery**](UploadImageToGallery.md)| Parameters to upload an image | 
 
 ### Return type
 

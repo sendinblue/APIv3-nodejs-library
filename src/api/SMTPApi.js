@@ -34,7 +34,7 @@
   /**
    * SMTP service.
    * @module api/SMTPApi
-   * @version 7.2.0
+   * @version 7.2.3
    */
 
   /**
@@ -50,7 +50,7 @@
 
 
     /**
-     * Create a transactional email template
+     * Create an email template
      * @param {module:model/CreateSmtpTemplate} smtpTemplate values to update in transactional email template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
      */
@@ -87,7 +87,7 @@
     }
 
     /**
-     * Create a transactional email template
+     * Create an email template
      * @param {module:model/CreateSmtpTemplate} smtpTemplate values to update in transactional email template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
      */
@@ -150,7 +150,7 @@
 
 
     /**
-     * Delete an inactive transactional email template
+     * Delete an inactive email template
      * @param {Number} templateId id of the template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -188,7 +188,7 @@
     }
 
     /**
-     * Delete an inactive transactional email template
+     * Delete an inactive email template
      * @param {Number} templateId id of the template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -399,7 +399,7 @@
 
 
     /**
-     * Returns the template informations
+     * Returns the template information
      * @param {Number} templateId id of the template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmtpTemplateOverview} and HTTP response
      */
@@ -437,7 +437,7 @@
     }
 
     /**
-     * Returns the template informations
+     * Returns the template information
      * @param {Number} templateId id of the template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmtpTemplateOverview}
      */
@@ -450,7 +450,7 @@
 
 
     /**
-     * Get the list of transactional email templates
+     * Get the list of email templates
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
@@ -489,7 +489,7 @@
     }
 
     /**
-     * Get the list of transactional email templates
+     * Get the list of email templates
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
@@ -626,7 +626,7 @@
      * @param {String} opts.email Mandatory if templateId and messageId are not passed in query filters. Email address to which transactional email has been sent.
      * @param {Number} opts.templateId Mandatory if email and messageId are not passed in query filters. Id of the template that was used to compose transactional email.
      * @param {String} opts.messageId Mandatory if templateId and email are not passed in query filters. Message ID of the transactional email sent.
-     * @param {String} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Maximum time period that can be selected is one month.
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Maximum time period that can be selected is one month.
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTransacEmailsList} and HTTP response
      */
@@ -670,7 +670,7 @@
      * @param {String} opts.email Mandatory if templateId and messageId are not passed in query filters. Email address to which transactional email has been sent.
      * @param {Number} opts.templateId Mandatory if email and messageId are not passed in query filters. Id of the template that was used to compose transactional email.
      * @param {String} opts.messageId Mandatory if templateId and email are not passed in query filters. Message ID of the transactional email sent.
-     * @param {String} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Maximum time period that can be selected is one month.
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Maximum time period that can be selected is one month.
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTransacEmailsList}
      */
@@ -953,7 +953,7 @@
 
 
     /**
-     * Updates a transactional email templates
+     * Update an email template
      * @param {Number} templateId id of the template
      * @param {module:model/UpdateSmtpTemplate} smtpTemplate values to update in transactional email template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -997,7 +997,7 @@
     }
 
     /**
-     * Updates a transactional email templates
+     * Update an email template
      * @param {Number} templateId id of the template
      * @param {module:model/UpdateSmtpTemplate} smtpTemplate values to update in transactional email template
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
