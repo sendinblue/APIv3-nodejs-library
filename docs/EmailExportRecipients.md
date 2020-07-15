@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**notifyURL** | **String** | Webhook called once the export process is finished | [optional] 
+**notifyURL** | **String** | Webhook called once the export process is finished. For reference, https://help.sendinblue.com/hc/en-us/articles/360007666479 | [optional] 
 **recipientsType** | **String** | Type of recipients to export for a campaign | 
 
 
