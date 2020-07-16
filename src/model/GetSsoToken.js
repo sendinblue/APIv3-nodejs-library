@@ -37,7 +37,7 @@
   /**
    * The GetSsoToken model module.
    * @module model/GetSsoToken
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

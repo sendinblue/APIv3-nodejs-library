@@ -37,7 +37,7 @@
   /**
    * The GetAttributesEnumeration model module.
    * @module model/GetAttributesEnumeration
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

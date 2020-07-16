@@ -37,7 +37,7 @@
   /**
    * The UploadImageToGallery model module.
    * @module model/UploadImageToGallery
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

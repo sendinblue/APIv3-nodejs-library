@@ -37,7 +37,7 @@
   /**
    * The GetEmailCampaign model module.
    * @module model/GetEmailCampaign
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**
@@ -268,6 +268,12 @@ exports.prototype['recurring'] = undefined;
    * @member {Date} sentDate
    */
 exports.prototype['sentDate'] = undefined;
+
+  /**
+   * Total number of non-delivered campaigns for a particular campaign id.
+   * @member {Number} returnBounce
+   */
+exports.prototype['returnBounce'] = undefined;
 
 
 

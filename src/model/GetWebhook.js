@@ -37,7 +37,7 @@
   /**
    * The GetWebhook model module.
    * @module model/GetWebhook
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

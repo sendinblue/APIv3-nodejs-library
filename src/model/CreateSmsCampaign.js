@@ -37,7 +37,7 @@
   /**
    * The CreateSmsCampaign model module.
    * @module model/CreateSmsCampaign
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

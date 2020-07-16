@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **htmlContent** | **String** | HTML content of the template | 
 **createdAt** | **Date** | Creation UTC date-time of the template (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
 **modifiedAt** | **Date** | Last modification UTC date-time of the template (YYYY-MM-DDTHH:mm:ss.SSSZ) | 
+**doiTemplate** | **Boolean** | It is true if template is a valid Double opt-in (DOI) template, otherwise it is false. This field will be available only in case of single template detail call. | [optional] 
 
 

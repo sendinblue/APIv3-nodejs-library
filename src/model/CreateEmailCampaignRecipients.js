@@ -37,7 +37,7 @@
   /**
    * The CreateEmailCampaignRecipients model module.
    * @module model/CreateEmailCampaignRecipients
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

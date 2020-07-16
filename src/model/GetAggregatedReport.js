@@ -37,7 +37,7 @@
   /**
    * The GetAggregatedReport model module.
    * @module model/GetAggregatedReport
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

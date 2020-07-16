@@ -37,7 +37,7 @@
   /**
    * The GetSmtpTemplates model module.
    * @module model/GetSmtpTemplates
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

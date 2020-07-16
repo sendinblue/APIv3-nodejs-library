@@ -37,7 +37,7 @@
   /**
    * The AddCredits model module.
    * @module model/AddCredits
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

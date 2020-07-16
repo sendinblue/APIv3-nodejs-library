@@ -37,7 +37,7 @@
   /**
    * The GetExtendedList model module.
    * @module model/GetExtendedList
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

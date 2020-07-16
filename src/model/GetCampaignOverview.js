@@ -37,7 +37,7 @@
   /**
    * The GetCampaignOverview model module.
    * @module model/GetCampaignOverview
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

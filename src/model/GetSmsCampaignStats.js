@@ -37,7 +37,7 @@
   /**
    * The GetSmsCampaignStats model module.
    * @module model/GetSmsCampaignStats
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

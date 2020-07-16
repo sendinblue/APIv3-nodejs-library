@@ -37,7 +37,7 @@
   /**
    * The RemoveContactFromList model module.
    * @module model/RemoveContactFromList
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**
@@ -79,7 +79,7 @@
    */
   exports.prototype['emails'] = undefined;
   /**
-   * Required if 'emails' is empty. Remove all existing contacts from a list
+   * Required if 'emails' is empty. Remove all existing contacts from a list.  A process will be created in this scenario. You can fetch the process details to know about the progress
    * @member {Boolean} all
    */
   exports.prototype['all'] = undefined;

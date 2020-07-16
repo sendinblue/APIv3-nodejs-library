@@ -37,7 +37,7 @@
   /**
    * The GetTransacBlockedContacts model module.
    * @module model/GetTransacBlockedContacts
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

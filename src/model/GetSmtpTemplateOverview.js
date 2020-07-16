@@ -37,7 +37,7 @@
   /**
    * The GetSmtpTemplateOverview model module.
    * @module model/GetSmtpTemplateOverview
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**
@@ -72,6 +72,7 @@
     _this['htmlContent'] = htmlContent;
     _this['createdAt'] = createdAt;
     _this['modifiedAt'] = modifiedAt;
+
   };
 
   /**
@@ -120,6 +121,9 @@
       }
       if (data.hasOwnProperty('modifiedAt')) {
         obj['modifiedAt'] = ApiClient.convertToType(data['modifiedAt'], 'Date');
+      }
+      if (data.hasOwnProperty('doiTemplate')) {
+        obj['doiTemplate'] = ApiClient.convertToType(data['doiTemplate'], 'Boolean');
       }
     }
     return obj;
@@ -184,6 +188,11 @@
    * @member {Date} modifiedAt
    */
   exports.prototype['modifiedAt'] = undefined;
+  /**
+   * It is true if template is a valid Double opt-in (DOI) template, otherwise it is false. This field will be available only in case of single template detail call.
+   * @member {Boolean} doiTemplate
+   */
+  exports.prototype['doiTemplate'] = undefined;
 
 
 

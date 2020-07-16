@@ -37,7 +37,7 @@
   /**
    * The CreateChild model module.
    * @module model/CreateChild
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**
@@ -58,6 +58,7 @@
     _this['lastName'] = lastName;
     _this['companyName'] = companyName;
     _this['password'] = password;
+
   };
 
   /**
@@ -85,6 +86,9 @@
       }
       if (data.hasOwnProperty('password')) {
         obj['password'] = ApiClient.convertToType(data['password'], 'String');
+      }
+      if (data.hasOwnProperty('language')) {
+        obj['language'] = ApiClient.convertToType(data['language'], 'String');
       }
     }
     return obj;
@@ -115,7 +119,49 @@
    * @member {String} password
    */
   exports.prototype['password'] = undefined;
+  /**
+   * Language of the child account
+   * @member {module:model/CreateChild.LanguageEnum} language
+   */
+  exports.prototype['language'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>language</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.LanguageEnum = {
+    /**
+     * value: "fr"
+     * @const
+     */
+    "fr": "fr",
+    /**
+     * value: "es"
+     * @const
+     */
+    "es": "es",
+    /**
+     * value: "pt"
+     * @const
+     */
+    "pt": "pt",
+    /**
+     * value: "it"
+     * @const
+     */
+    "it": "it",
+    /**
+     * value: "de"
+     * @const
+     */
+    "de": "de",
+    /**
+     * value: "en"
+     * @const
+     */
+    "en": "en"  };
 
 
   return exports;

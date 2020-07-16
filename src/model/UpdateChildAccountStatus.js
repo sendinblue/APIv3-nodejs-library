@@ -37,7 +37,7 @@
   /**
    * The UpdateChildAccountStatus model module.
    * @module model/UpdateChildAccountStatus
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -73,6 +74,9 @@
       if (data.hasOwnProperty('marketingAutomation')) {
         obj['marketingAutomation'] = ApiClient.convertToType(data['marketingAutomation'], 'Boolean');
       }
+      if (data.hasOwnProperty('smsCampaign')) {
+        obj['smsCampaign'] = ApiClient.convertToType(data['smsCampaign'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -92,6 +96,11 @@
    * @member {Boolean} marketingAutomation
    */
   exports.prototype['marketingAutomation'] = undefined;
+  /**
+   * Status of SMS Campaign Platform activation for your account (true=enabled, false=disabled)
+   * @member {Boolean} smsCampaign
+   */
+  exports.prototype['smsCampaign'] = undefined;
 
 
 

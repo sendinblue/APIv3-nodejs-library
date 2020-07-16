@@ -37,7 +37,7 @@
   /**
    * The RequestContactImport model module.
    * @module model/RequestContactImport
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**
@@ -117,7 +117,7 @@
    */
   exports.prototype['listIds'] = undefined;
   /**
-   * URL that will be called once the export process is finished
+   * URL that will be called once the import process is finished. For reference, https://help.sendinblue.com/hc/en-us/articles/360007666479
    * @member {String} notifyUrl
    */
   exports.prototype['notifyUrl'] = undefined;

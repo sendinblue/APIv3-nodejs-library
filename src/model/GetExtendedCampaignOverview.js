@@ -37,7 +37,7 @@
   /**
    * The GetExtendedCampaignOverview model module.
    * @module model/GetExtendedCampaignOverview
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**
@@ -75,6 +75,7 @@
     _this['tag'] = tag;
     _this['createdAt'] = createdAt;
     _this['modifiedAt'] = modifiedAt;
+
 
 
 
@@ -137,6 +138,9 @@
       }
       if (data.hasOwnProperty('sentDate')) {
         obj['sentDate'] = ApiClient.convertToType(data['sentDate'], 'Date');
+      }
+      if (data.hasOwnProperty('returnBounce')) {
+        obj['returnBounce'] = ApiClient.convertToType(data['returnBounce'], 'Number');
       }
     }
     return obj;
@@ -216,6 +220,11 @@
    * @member {Date} sentDate
    */
   exports.prototype['sentDate'] = undefined;
+  /**
+   * Total number of non-delivered campaigns for a particular campaign id.
+   * @member {Number} returnBounce
+   */
+  exports.prototype['returnBounce'] = undefined;
 
   // Implement GetCampaignOverview interface:
   /**

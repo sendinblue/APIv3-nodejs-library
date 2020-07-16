@@ -37,7 +37,7 @@
   /**
    * The PostContactInfoContacts model module.
    * @module model/PostContactInfoContacts
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -73,6 +74,9 @@
       if (data.hasOwnProperty('total')) {
         obj['total'] = ApiClient.convertToType(data['total'], 'Number');
       }
+      if (data.hasOwnProperty('processId')) {
+        obj['processId'] = ApiClient.convertToType(data['processId'], 'Number');
+      }
     }
     return obj;
   }
@@ -90,6 +94,11 @@
    * @member {Number} total
    */
   exports.prototype['total'] = undefined;
+  /**
+   * Id of the process created to remove contacts from list when user opts for \"all\" option.
+   * @member {Number} processId
+   */
+  exports.prototype['processId'] = undefined;
 
 
 

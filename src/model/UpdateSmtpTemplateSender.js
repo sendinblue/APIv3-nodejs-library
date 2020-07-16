@@ -37,7 +37,7 @@
   /**
    * The UpdateSmtpTemplateSender model module.
    * @module model/UpdateSmtpTemplateSender
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

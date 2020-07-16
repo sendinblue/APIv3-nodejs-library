@@ -37,7 +37,7 @@
   /**
    * The SendSms model module.
    * @module model/SendSms
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

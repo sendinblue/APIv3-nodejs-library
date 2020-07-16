@@ -37,7 +37,7 @@
   /**
    * The UpdateChildDomain model module.
    * @module model/UpdateChildDomain
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

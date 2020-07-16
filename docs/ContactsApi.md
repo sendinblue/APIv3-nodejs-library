@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**addContactToList**](ContactsApi.md#addContactToList) | **POST** /contacts/lists/{listId}/contacts/add | Add existing contacts to a list
 [**createAttribute**](ContactsApi.md#createAttribute) | **POST** /contacts/attributes/{attributeCategory}/{attributeName} | Create contact attribute
 [**createContact**](ContactsApi.md#createContact) | **POST** /contacts | Create a contact
-[**createDoiContact**](ContactsApi.md#createDoiContact) | **POST** /contacts/doubleOptinConfirmation | Create a contact to trigger the DOI workflow from a Landing Page form
+[**createDoiContact**](ContactsApi.md#createDoiContact) | **POST** /contacts/doubleOptinConfirmation | Create Contact via DOI (Double-Opt-In) Flow
 [**createFolder**](ContactsApi.md#createFolder) | **POST** /contacts/folders | Create a folder
 [**createList**](ContactsApi.md#createList) | **POST** /contacts/lists | Create a list
 [**deleteAttribute**](ContactsApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Delete an attribute
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 # **createDoiContact**
 > createDoiContact(createDoiContact)
 
-Create a contact to trigger the DOI workflow from a Landing Page form
+Create Contact via DOI (Double-Opt-In) Flow
 
 ### Example
 ```javascript
@@ -229,7 +229,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.ContactsApi();
 
-var createDoiContact = new SibApiV3Sdk.CreateDoiContact(); // CreateDoiContact | Values to create the DOI contact
+var createDoiContact = new SibApiV3Sdk.CreateDoiContact(); // CreateDoiContact | Values to create the Double opt-in (DOI) contact
 
 apiInstance.createDoiContact(createDoiContact).then(function() {
   console.log('API called successfully.');
@@ -243,7 +243,7 @@ apiInstance.createDoiContact(createDoiContact).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createDoiContact** | [**CreateDoiContact**](CreateDoiContact.md)| Values to create the DOI contact | 
+ **createDoiContact** | [**CreateDoiContact**](CreateDoiContact.md)| Values to create the Double opt-in (DOI) contact | 
 
 ### Return type
 

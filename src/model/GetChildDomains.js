@@ -37,7 +37,7 @@
   /**
    * The GetChildDomains model module.
    * @module model/GetChildDomains
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

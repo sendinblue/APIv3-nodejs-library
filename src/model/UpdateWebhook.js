@@ -37,7 +37,7 @@
   /**
    * The UpdateWebhook model module.
    * @module model/UpdateWebhook
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

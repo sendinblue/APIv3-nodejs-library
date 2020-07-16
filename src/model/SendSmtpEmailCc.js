@@ -37,7 +37,7 @@
   /**
    * The SendSmtpEmailCc model module.
    * @module model/SendSmtpEmailCc
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

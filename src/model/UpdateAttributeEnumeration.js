@@ -37,7 +37,7 @@
   /**
    * The UpdateAttributeEnumeration model module.
    * @module model/UpdateAttributeEnumeration
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

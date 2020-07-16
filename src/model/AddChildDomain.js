@@ -37,7 +37,7 @@
   /**
    * The AddChildDomain model module.
    * @module model/AddChildDomain
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

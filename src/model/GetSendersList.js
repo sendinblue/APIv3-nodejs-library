@@ -37,7 +37,7 @@
   /**
    * The GetSendersList model module.
    * @module model/GetSendersList
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**

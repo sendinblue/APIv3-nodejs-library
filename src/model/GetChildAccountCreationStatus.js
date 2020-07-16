@@ -37,7 +37,7 @@
   /**
    * The GetChildAccountCreationStatus model module.
    * @module model/GetChildAccountCreationStatus
-   * @version 7.2.3
+   * @version 7.2.4
    */
 
   /**
