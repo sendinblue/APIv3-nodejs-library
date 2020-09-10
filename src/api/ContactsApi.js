@@ -34,7 +34,7 @@
   /**
    * Contacts service.
    * @module api/ContactsApi
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
@@ -52,7 +52,7 @@
     /**
      * Add existing contacts to a list
      * @param {Number} listId Id of the list
-     * @param {module:model/AddContactToList} contactEmails Emails addresses of the contacts
+     * @param {module:model/AddContactToList} contactEmails Emails addresses OR IDs of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostContactInfo} and HTTP response
      */
     this.addContactToListWithHttpInfo = function(listId, contactEmails) {
@@ -96,7 +96,7 @@
     /**
      * Add existing contacts to a list
      * @param {Number} listId Id of the list
-     * @param {module:model/AddContactToList} contactEmails Emails addresses of the contacts
+     * @param {module:model/AddContactToList} contactEmails Emails addresses OR IDs of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostContactInfo}
      */
     this.addContactToList = function(listId, contactEmails) {
@@ -434,20 +434,20 @@
 
     /**
      * Delete a contact
-     * @param {String} email Email (urlencoded) of the contact
+     * @param {String} identifier Email (urlencoded) OR ID of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.deleteContactWithHttpInfo = function(email) {
+    this.deleteContactWithHttpInfo = function(identifier) {
       var postBody = null;
 
-      // verify the required parameter 'email' is set
-      if (email === undefined || email === null) {
-        throw new Error("Missing the required parameter 'email' when calling deleteContact");
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling deleteContact");
       }
 
 
       var pathParams = {
-        'email': email
+        'identifier': identifier
       };
       var queryParams = {
       };
@@ -464,7 +464,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/contacts/{email}', 'DELETE',
+        '/contacts/{identifier}', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -472,11 +472,11 @@
 
     /**
      * Delete a contact
-     * @param {String} email Email (urlencoded) of the contact
+     * @param {String} identifier Email (urlencoded) OR ID of the contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.deleteContact = function(email) {
-      return this.deleteContactWithHttpInfo(email)
+    this.deleteContact = function(identifier) {
+      return this.deleteContactWithHttpInfo(identifier)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -630,20 +630,20 @@
 
     /**
      * Get a contact&#39;s details
-     * @param {String} email Email (urlencoded) of the contact OR its SMS attribute value
+     * @param {String} identifier Email (urlencoded) OR ID of the contact OR its SMS attribute value
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetExtendedContactDetails} and HTTP response
      */
-    this.getContactInfoWithHttpInfo = function(email) {
+    this.getContactInfoWithHttpInfo = function(identifier) {
       var postBody = null;
 
-      // verify the required parameter 'email' is set
-      if (email === undefined || email === null) {
-        throw new Error("Missing the required parameter 'email' when calling getContactInfo");
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling getContactInfo");
       }
 
 
       var pathParams = {
-        'email': email
+        'identifier': identifier
       };
       var queryParams = {
       };
@@ -660,7 +660,7 @@
       var returnType = GetExtendedContactDetails;
 
       return this.apiClient.callApi(
-        '/contacts/{email}', 'GET',
+        '/contacts/{identifier}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -668,11 +668,11 @@
 
     /**
      * Get a contact&#39;s details
-     * @param {String} email Email (urlencoded) of the contact OR its SMS attribute value
+     * @param {String} identifier Email (urlencoded) OR ID of the contact OR its SMS attribute value
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetExtendedContactDetails}
      */
-    this.getContactInfo = function(email) {
-      return this.getContactInfoWithHttpInfo(email)
+    this.getContactInfo = function(identifier) {
+      return this.getContactInfoWithHttpInfo(identifier)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -681,24 +681,24 @@
 
     /**
      * Get email campaigns&#39; statistics for a contact
-     * @param {String} email Email address (urlencoded) of the contact
+     * @param {String} identifier Email (urlencoded) OR ID of the contact
      * @param {Object} opts Optional parameters
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be lower than equal to endDate
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be greater than equal to startDate
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContactCampaignStats} and HTTP response
      */
-    this.getContactStatsWithHttpInfo = function(email, opts) {
+    this.getContactStatsWithHttpInfo = function(identifier, opts) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'email' is set
-      if (email === undefined || email === null) {
-        throw new Error("Missing the required parameter 'email' when calling getContactStats");
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling getContactStats");
       }
 
 
       var pathParams = {
-        'email': email
+        'identifier': identifier
       };
       var queryParams = {
         'startDate': opts['startDate'],
@@ -717,7 +717,7 @@
       var returnType = GetContactCampaignStats;
 
       return this.apiClient.callApi(
-        '/contacts/{email}/campaignStats', 'GET',
+        '/contacts/{identifier}/campaignStats', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -725,14 +725,14 @@
 
     /**
      * Get email campaigns&#39; statistics for a contact
-     * @param {String} email Email address (urlencoded) of the contact
+     * @param {String} identifier Email (urlencoded) OR ID of the contact
      * @param {Object} opts Optional parameters
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be lower than equal to endDate
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be greater than equal to startDate
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContactCampaignStats}
      */
-    this.getContactStats = function(email, opts) {
-      return this.getContactStatsWithHttpInfo(email, opts)
+    this.getContactStats = function(identifier, opts) {
+      return this.getContactStatsWithHttpInfo(identifier, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1185,7 +1185,7 @@
     /**
      * Delete a contact from a list
      * @param {Number} listId Id of the list
-     * @param {module:model/RemoveContactFromList} contactEmails Emails adresses of the contact
+     * @param {module:model/RemoveContactFromList} contactEmails Emails addresses OR IDs of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostContactInfo} and HTTP response
      */
     this.removeContactFromListWithHttpInfo = function(listId, contactEmails) {
@@ -1229,7 +1229,7 @@
     /**
      * Delete a contact from a list
      * @param {Number} listId Id of the list
-     * @param {module:model/RemoveContactFromList} contactEmails Emails adresses of the contact
+     * @param {module:model/RemoveContactFromList} contactEmails Emails addresses OR IDs of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostContactInfo}
      */
     this.removeContactFromList = function(listId, contactEmails) {
@@ -1360,16 +1360,16 @@
 
     /**
      * Update a contact
-     * @param {String} email Email (urlencoded) of the contact
+     * @param {String} identifier Email (urlencoded) OR ID of the contact
      * @param {module:model/UpdateContact} updateContact Values to update a contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    this.updateContactWithHttpInfo = function(email, updateContact) {
+    this.updateContactWithHttpInfo = function(identifier, updateContact) {
       var postBody = updateContact;
 
-      // verify the required parameter 'email' is set
-      if (email === undefined || email === null) {
-        throw new Error("Missing the required parameter 'email' when calling updateContact");
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling updateContact");
       }
 
       // verify the required parameter 'updateContact' is set
@@ -1379,7 +1379,7 @@
 
 
       var pathParams = {
-        'email': email
+        'identifier': identifier
       };
       var queryParams = {
       };
@@ -1396,7 +1396,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/contacts/{email}', 'PUT',
+        '/contacts/{identifier}', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -1404,12 +1404,12 @@
 
     /**
      * Update a contact
-     * @param {String} email Email (urlencoded) of the contact
+     * @param {String} identifier Email (urlencoded) OR ID of the contact
      * @param {module:model/UpdateContact} updateContact Values to update a contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    this.updateContact = function(email, updateContact) {
-      return this.updateContactWithHttpInfo(email, updateContact)
+    this.updateContact = function(identifier, updateContact) {
+      return this.updateContactWithHttpInfo(identifier, updateContact)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

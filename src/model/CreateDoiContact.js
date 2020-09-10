@@ -37,7 +37,7 @@
   /**
    * The CreateDoiContact model module.
    * @module model/CreateDoiContact
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
@@ -47,8 +47,9 @@
    * @param email {String} Email address where the confirmation email will be sent. This email address will be the identifier for all other contact attributes.
    * @param includeListIds {Array.<Number>} Lists under user account where contact should be added
    * @param templateId {Number} Id of the Double opt-in (DOI) template
+   * @param redirectionUrl {String} URL of the web page that user will be redirected to after clicking on the double opt in URL. When editing your DOI template you can reference this URL by using the tag {{ params.DOIurl }}.
    */
-  var exports = function(email, includeListIds, templateId) {
+  var exports = function(email, includeListIds, templateId, redirectionUrl) {
     var _this = this;
 
     _this['email'] = email;
@@ -56,7 +57,7 @@
     _this['includeListIds'] = includeListIds;
 
     _this['templateId'] = templateId;
-
+    _this['redirectionUrl'] = redirectionUrl;
   };
 
   /**

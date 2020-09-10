@@ -37,43 +37,30 @@
   /**
    * The GetAggregatedReport model module.
    * @module model/GetAggregatedReport
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
    * Constructs a new <code>GetAggregatedReport</code>.
    * @alias module:model/GetAggregatedReport
    * @class
-   * @param range {String} Time frame of the report
-   * @param requests {Number} Number of requests for the timeframe
-   * @param delivered {Number} Number of delivered emails for the timeframe
-   * @param hardBounces {Number} Number of hardbounces for the timeframe
-   * @param softBounces {Number} Number of softbounces for the timeframe
-   * @param clicks {Number} Number of clicks for the timeframe
-   * @param uniqueClicks {Number} Number of unique clicks for the timeframe
-   * @param opens {Number} Number of openings for the timeframe
-   * @param uniqueOpens {Number} Number of unique openings for the timeframe
-   * @param spamReports {Number} Number of complaint (spam report) for the timeframe
-   * @param blocked {Number} Number of blocked contact emails for the timeframe
-   * @param invalid {Number} Number of invalid emails for the timeframe
-   * @param unsubscribed {Number} Number of unsubscribed emails for the timeframe
    */
-  var exports = function(range, requests, delivered, hardBounces, softBounces, clicks, uniqueClicks, opens, uniqueOpens, spamReports, blocked, invalid, unsubscribed) {
+  var exports = function() {
     var _this = this;
 
-    _this['range'] = range;
-    _this['requests'] = requests;
-    _this['delivered'] = delivered;
-    _this['hardBounces'] = hardBounces;
-    _this['softBounces'] = softBounces;
-    _this['clicks'] = clicks;
-    _this['uniqueClicks'] = uniqueClicks;
-    _this['opens'] = opens;
-    _this['uniqueOpens'] = uniqueOpens;
-    _this['spamReports'] = spamReports;
-    _this['blocked'] = blocked;
-    _this['invalid'] = invalid;
-    _this['unsubscribed'] = unsubscribed;
+
+
+
+
+
+
+
+
+
+
+
+
+
   };
 
   /**

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/AbTestCampaignResultClickedLinks', 'model/AbTestCampaignResultStatistics'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./AbTestCampaignResultClickedLinks'), require('./AbTestCampaignResultStatistics'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.AbTestCampaignResult = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.AbTestCampaignResult = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AbTestCampaignResultClickedLinks, root.SibApiV3Sdk.AbTestCampaignResultStatistics);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, AbTestCampaignResultClickedLinks, AbTestCampaignResultStatistics) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The AbTestCampaignResult model module.
    * @module model/AbTestCampaignResult
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -85,6 +87,12 @@
       if (data.hasOwnProperty('winningVersionRate')) {
         obj['winningVersionRate'] = ApiClient.convertToType(data['winningVersionRate'], 'String');
       }
+      if (data.hasOwnProperty('statistics')) {
+        obj['statistics'] = AbTestCampaignResultStatistics.constructFromObject(data['statistics']);
+      }
+      if (data.hasOwnProperty('clickedLinks')) {
+        obj['clickedLinks'] = AbTestCampaignResultClickedLinks.constructFromObject(data['clickedLinks']);
+      }
     }
     return obj;
   }
@@ -119,6 +127,14 @@
    * @member {String} winningVersionRate
    */
   exports.prototype['winningVersionRate'] = undefined;
+  /**
+   * @member {module:model/AbTestCampaignResultStatistics} statistics
+   */
+  exports.prototype['statistics'] = undefined;
+  /**
+   * @member {module:model/AbTestCampaignResultClickedLinks} clickedLinks
+   */
+  exports.prototype['clickedLinks'] = undefined;
 
 
   /**

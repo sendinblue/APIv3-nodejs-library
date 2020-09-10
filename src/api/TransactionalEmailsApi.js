@@ -26,20 +26,20 @@
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.SMTPApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSmtpEmail, root.SibApiV3Sdk.CreateSmtpTemplate, root.SibApiV3Sdk.DeleteHardbounces, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAggregatedReport, root.SibApiV3Sdk.GetEmailEventReport, root.SibApiV3Sdk.GetReports, root.SibApiV3Sdk.GetSmtpTemplateOverview, root.SibApiV3Sdk.GetSmtpTemplates, root.SibApiV3Sdk.GetTransacBlockedContacts, root.SibApiV3Sdk.GetTransacEmailContent, root.SibApiV3Sdk.GetTransacEmailsList, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendEmail, root.SibApiV3Sdk.SendSmtpEmail, root.SibApiV3Sdk.SendTemplateEmail, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateSmtpTemplate);
+    root.SibApiV3Sdk.TransactionalEmailsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSmtpEmail, root.SibApiV3Sdk.CreateSmtpTemplate, root.SibApiV3Sdk.DeleteHardbounces, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAggregatedReport, root.SibApiV3Sdk.GetEmailEventReport, root.SibApiV3Sdk.GetReports, root.SibApiV3Sdk.GetSmtpTemplateOverview, root.SibApiV3Sdk.GetSmtpTemplates, root.SibApiV3Sdk.GetTransacBlockedContacts, root.SibApiV3Sdk.GetTransacEmailContent, root.SibApiV3Sdk.GetTransacEmailsList, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendEmail, root.SibApiV3Sdk.SendSmtpEmail, root.SibApiV3Sdk.SendTemplateEmail, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateSmtpTemplate);
   }
 }(this, function(ApiClient, CreateModel, CreateSmtpEmail, CreateSmtpTemplate, DeleteHardbounces, ErrorModel, GetAggregatedReport, GetEmailEventReport, GetReports, GetSmtpTemplateOverview, GetSmtpTemplates, GetTransacBlockedContacts, GetTransacEmailContent, GetTransacEmailsList, PostSendFailed, SendEmail, SendSmtpEmail, SendTemplateEmail, SendTestEmail, UpdateSmtpTemplate) {
   'use strict';
 
   /**
-   * SMTP service.
-   * @module api/SMTPApi
-   * @version 7.2.4
+   * TransactionalEmails service.
+   * @module api/TransactionalEmailsApi
+   * @version 8.0.0
    */
 
   /**
-   * Constructs a new SMTPApi. 
-   * @alias module:api/SMTPApi
+   * Constructs a new TransactionalEmailsApi. 
+   * @alias module:api/TransactionalEmailsApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.

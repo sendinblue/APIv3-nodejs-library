@@ -37,7 +37,7 @@
   /**
    * The RequestContactExport model module.
    * @module model/RequestContactExport
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**

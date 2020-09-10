@@ -1,6 +1,6 @@
 /**
  * SendinBlue API
- * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  | 
+ * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  |   | 406  | Error. Not Acceptable  | 
  *
  * OpenAPI spec version: 3.0.0
  * Contact: contact@sendinblue.com
@@ -81,6 +81,16 @@
         done();
       });
     });
+    describe('getAbTestCampaignResult', function() {
+      it('should call getAbTestCampaignResult successfully', function(done) {
+        //uncomment below and update the code to test getAbTestCampaignResult
+        //instance.getAbTestCampaignResult(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailCampaign', function() {
       it('should call getEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test getEmailCampaign
@@ -95,6 +105,16 @@
       it('should call getEmailCampaigns successfully', function(done) {
         //uncomment below and update the code to test getEmailCampaigns
         //instance.getEmailCampaigns(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getSharedTemplateUrl', function() {
+      it('should call getSharedTemplateUrl successfully', function(done) {
+        //uncomment below and update the code to test getSharedTemplateUrl
+        //instance.getSharedTemplateUrl(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -145,6 +165,16 @@
       it('should call updateEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test updateEmailCampaign
         //instance.updateEmailCampaign(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('uploadImageToGallery', function() {
+      it('should call uploadImageToGallery successfully', function(done) {
+        //uncomment below and update the code to test uploadImageToGallery
+        //instance.uploadImageToGallery(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
