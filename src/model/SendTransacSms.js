@@ -37,14 +37,14 @@
   /**
    * The SendTransacSms model module.
    * @module model/SendTransacSms
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
    * Constructs a new <code>SendTransacSms</code>.
    * @alias module:model/SendTransacSms
    * @class
-   * @param sender {String} Name of the sender. Only alphanumeric characters. No more than 11 characters
+   * @param sender {String} Name of the sender. **The number of characters is limited to 11 for alphanumeric characters and 15 for numeric characters**
    * @param recipient {String} Mobile number to send SMS with the country code
    * @param content {String} Content of the message. If more than 160 characters long, will be sent as multiple text messages
    */
@@ -93,7 +93,7 @@
   }
 
   /**
-   * Name of the sender. Only alphanumeric characters. No more than 11 characters
+   * Name of the sender. **The number of characters is limited to 11 for alphanumeric characters and 15 for numeric characters**
    * @member {String} sender
    */
   exports.prototype['sender'] = undefined;

@@ -1,6 +1,6 @@
 /**
  * SendinBlue API
- * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  | 
+ * SendinBlue provide a RESTFul API that can be used with any languages. With this API, you will be able to :   - Manage your campaigns and get the statistics   - Manage your contacts   - Send transactional Emails and SMS   - and much more...  You can download our wrappers at https://github.com/orgs/sendinblue  **Possible responses**   | Code | Message |   | :-------------: | ------------- |   | 200  | OK. Successful Request  |   | 201  | OK. Successful Creation |   | 202  | OK. Request accepted |   | 204  | OK. Successful Update/Deletion  |   | 400  | Error. Bad Request  |   | 401  | Error. Authentication Needed  |   | 402  | Error. Not enough credit, plan upgrade needed  |   | 403  | Error. Permission denied  |   | 404  | Error. Object does not exist |   | 405  | Error. Method not allowed  |   | 406  | Error. Not Acceptable  | 
  *
  * OpenAPI spec version: 3.0.0
  * Contact: contact@sendinblue.com
@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.SMTPApi();
+    instance = new SibApiV3Sdk.TransactionalEmailsApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,7 +50,7 @@
       object[property] = value;
   }
 
-  describe('SMTPApi', function() {
+  describe('TransactionalEmailsApi', function() {
     describe('createSmtpTemplate', function() {
       it('should call createSmtpTemplate successfully', function(done) {
         //uncomment below and update the code to test createSmtpTemplate
@@ -131,6 +131,36 @@
         done();
       });
     });
+    describe('getTransacBlockedContacts', function() {
+      it('should call getTransacBlockedContacts successfully', function(done) {
+        //uncomment below and update the code to test getTransacBlockedContacts
+        //instance.getTransacBlockedContacts(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getTransacEmailContent', function() {
+      it('should call getTransacEmailContent successfully', function(done) {
+        //uncomment below and update the code to test getTransacEmailContent
+        //instance.getTransacEmailContent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getTransacEmailsList', function() {
+      it('should call getTransacEmailsList successfully', function(done) {
+        //uncomment below and update the code to test getTransacEmailsList
+        //instance.getTransacEmailsList(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sendTemplate', function() {
       it('should call sendTemplate successfully', function(done) {
         //uncomment below and update the code to test sendTemplate
@@ -155,6 +185,26 @@
       it('should call sendTransacEmail successfully', function(done) {
         //uncomment below and update the code to test sendTransacEmail
         //instance.sendTransacEmail(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('smtpBlockedContactsEmailDelete', function() {
+      it('should call smtpBlockedContactsEmailDelete successfully', function(done) {
+        //uncomment below and update the code to test smtpBlockedContactsEmailDelete
+        //instance.smtpBlockedContactsEmailDelete(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('smtpLogMessageIdDelete', function() {
+      it('should call smtpLogMessageIdDelete successfully', function(done) {
+        //uncomment below and update the code to test smtpLogMessageIdDelete
+        //instance.smtpLogMessageIdDelete(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

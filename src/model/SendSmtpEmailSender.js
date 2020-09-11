@@ -37,12 +37,12 @@
   /**
    * The SendSmtpEmailSender model module.
    * @module model/SendSmtpEmailSender
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
    * Constructs a new <code>SendSmtpEmailSender</code>.
-   * Mandatory if &#39;templateId&#39; is not passed. Pass name (optional) and email of sender from which emails will be sent. For example, {\&quot;name\&quot;:\&quot;Mary from MyShop\&quot;, \&quot;email\&quot;:\&quot;no-reply@myshop.com\&quot;}
+   * Mandatory if &#x60;templateId&#x60; is not passed. Pass name (optional) and email or id of sender from which emails will be sent. &#x60;name&#x60; will be ignored if passed along with sender &#x60;id&#x60;. For example, {\&quot;name\&quot;:\&quot;Mary from MyShop\&quot;, \&quot;email\&quot;:\&quot;no-reply@myshop.com\&quot;} or {\&quot;id\&quot;:2}
    * @alias module:model/SendSmtpEmailSender
    * @class
    * @param email {String} Email of the sender from which the emails will be sent
@@ -52,6 +52,7 @@
 
 
     _this['email'] = email;
+
   };
 
   /**
@@ -71,6 +72,9 @@
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+      }
     }
     return obj;
   }
@@ -85,6 +89,11 @@
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
+  /**
+   * Id of the sender from which the emails will be sent
+   * @member {Number} id
+   */
+  exports.prototype['id'] = undefined;
 
 
 

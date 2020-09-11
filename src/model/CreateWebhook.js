@@ -37,7 +37,7 @@
   /**
    * The CreateWebhook model module.
    * @module model/CreateWebhook
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
@@ -45,7 +45,7 @@
    * @alias module:model/CreateWebhook
    * @class
    * @param url {String} URL of the webhook
-   * @param events {Array.<module:model/CreateWebhook.EventsEnum>} Events triggering the webhook. Possible values for Transactional type webhook – sent, request, delivered, hardBounce, softBounce, blocked, spam, invalid, deferred, click, opened, uniqueOpened and unsubscribed and possible values for Marketing type webhook – spam, opened, click, hardBounce, softBounce, unsubscribed, listAddition & delivered
+   * @param events {Array.<module:model/CreateWebhook.EventsEnum>} Events triggering the webhook. Possible values for Transactional type webhook – `sent` OR `request`, `delivered`, `hardBounce`, `softBounce`, `blocked`, `spam`, `invalid`, `deferred`, `click`, `opened`, `uniqueOpened` and `unsubscribed` and possible values for Marketing type webhook – `spam`, `opened`, `click`, `hardBounce`, `softBounce`, `unsubscribed`, `listAddition` & `delivered`
    */
   var exports = function(url, events) {
     var _this = this;
@@ -94,7 +94,7 @@
    */
   exports.prototype['description'] = undefined;
   /**
-   * Events triggering the webhook. Possible values for Transactional type webhook – sent, request, delivered, hardBounce, softBounce, blocked, spam, invalid, deferred, click, opened, uniqueOpened and unsubscribed and possible values for Marketing type webhook – spam, opened, click, hardBounce, softBounce, unsubscribed, listAddition & delivered
+   * Events triggering the webhook. Possible values for Transactional type webhook – `sent` OR `request`, `delivered`, `hardBounce`, `softBounce`, `blocked`, `spam`, `invalid`, `deferred`, `click`, `opened`, `uniqueOpened` and `unsubscribed` and possible values for Marketing type webhook – `spam`, `opened`, `click`, `hardBounce`, `softBounce`, `unsubscribed`, `listAddition` & `delivered`
    * @member {Array.<module:model/CreateWebhook.EventsEnum>} events
    */
   exports.prototype['events'] = undefined;

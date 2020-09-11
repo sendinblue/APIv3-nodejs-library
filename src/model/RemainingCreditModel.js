@@ -37,7 +37,7 @@
   /**
    * The RemainingCreditModel model module.
    * @module model/RemainingCreditModel
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**

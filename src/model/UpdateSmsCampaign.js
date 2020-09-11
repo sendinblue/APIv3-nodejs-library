@@ -37,7 +37,7 @@
   /**
    * The UpdateSmsCampaign model module.
    * @module model/UpdateSmsCampaign
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
@@ -91,7 +91,7 @@
    */
   exports.prototype['name'] = undefined;
   /**
-   * Name of the sender. The number of characters is limited to 11
+   * Name of the sender. **The number of characters is limited to 11 for alphanumeric characters and 15 for numeric characters**
    * @member {String} sender
    */
   exports.prototype['sender'] = undefined;

@@ -34,7 +34,7 @@
   /**
    * Lists service.
    * @module api/ListsApi
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
@@ -52,7 +52,7 @@
     /**
      * Add existing contacts to a list
      * @param {Number} listId Id of the list
-     * @param {module:model/AddContactToList} contactEmails Emails addresses of the contacts
+     * @param {module:model/AddContactToList} contactEmails Emails addresses OR IDs of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostContactInfo} and HTTP response
      */
     this.addContactToListWithHttpInfo = function(listId, contactEmails) {
@@ -96,7 +96,7 @@
     /**
      * Add existing contacts to a list
      * @param {Number} listId Id of the list
-     * @param {module:model/AddContactToList} contactEmails Emails addresses of the contacts
+     * @param {module:model/AddContactToList} contactEmails Emails addresses OR IDs of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostContactInfo}
      */
     this.addContactToList = function(listId, contactEmails) {
@@ -437,7 +437,7 @@
     /**
      * Delete a contact from a list
      * @param {Number} listId Id of the list
-     * @param {module:model/RemoveContactFromList} contactEmails Emails adresses of the contact
+     * @param {module:model/RemoveContactFromList} contactEmails Emails addresses OR IDs of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostContactInfo} and HTTP response
      */
     this.removeContactFromListWithHttpInfo = function(listId, contactEmails) {
@@ -481,7 +481,7 @@
     /**
      * Delete a contact from a list
      * @param {Number} listId Id of the list
-     * @param {module:model/RemoveContactFromList} contactEmails Emails adresses of the contact
+     * @param {module:model/RemoveContactFromList} contactEmails Emails addresses OR IDs of the contacts
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostContactInfo}
      */
     this.removeContactFromList = function(listId, contactEmails) {

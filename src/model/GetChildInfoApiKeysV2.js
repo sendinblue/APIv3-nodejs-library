@@ -37,7 +37,7 @@
   /**
    * The GetChildInfoApiKeysV2 model module.
    * @module model/GetChildInfoApiKeysV2
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**

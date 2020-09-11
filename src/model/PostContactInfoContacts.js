@@ -37,7 +37,7 @@
   /**
    * The PostContactInfoContacts model module.
    * @module model/PostContactInfoContacts
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**

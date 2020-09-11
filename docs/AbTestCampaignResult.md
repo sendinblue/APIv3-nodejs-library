@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **openRate** | **String** | Open rate for current winning version | [optional] 
 **clickRate** | **String** | Click rate for current winning version | [optional] 
 **winningVersionRate** | **String** | Open/Click rate for the winner version | [optional] 
+**statistics** | [**AbTestCampaignResultStatistics**](AbTestCampaignResultStatistics.md) |  | [optional] 
+**clickedLinks** | [**AbTestCampaignResultClickedLinks**](AbTestCampaignResultClickedLinks.md) |  | [optional] 
 
 
 <a name="WinningVersionEnum"></a>

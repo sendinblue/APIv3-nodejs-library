@@ -37,7 +37,7 @@
   /**
    * The GetCampaignStats model module.
    * @module model/GetCampaignStats
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
@@ -69,6 +69,7 @@
     _this['uniqueViews'] = uniqueViews;
     _this['unsubscriptions'] = unsubscriptions;
     _this['viewed'] = viewed;
+
 
   };
 
@@ -118,6 +119,9 @@
       }
       if (data.hasOwnProperty('deferred')) {
         obj['deferred'] = ApiClient.convertToType(data['deferred'], 'Number');
+      }
+      if (data.hasOwnProperty('returnBounce')) {
+        obj['returnBounce'] = ApiClient.convertToType(data['returnBounce'], 'Number');
       }
     }
     return obj;
@@ -183,6 +187,11 @@
    * @member {Number} deferred
    */
   exports.prototype['deferred'] = undefined;
+  /**
+   * Total number of non-delivered campaigns for a particular campaign id.
+   * @member {Number} returnBounce
+   */
+  exports.prototype['returnBounce'] = undefined;
 
 
 

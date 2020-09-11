@@ -37,7 +37,7 @@
   /**
    * The UpdateWebhook model module.
    * @module model/UpdateWebhook
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**
@@ -88,7 +88,7 @@
    */
   exports.prototype['description'] = undefined;
   /**
-   * Events triggering the webhook. Possible values for Transactional type webhook – request, delivered, hardBounce, softBounce, blocked, spam, invalid, deferred, click, opened, uniqueOpened and unsubscribed and possible values for Marketing type webhook – spam, opened, click, hardBounce, softBounce, unsubscribed, listAddition and delivered
+   * Events triggering the webhook. Possible values for Transactional type webhook – `sent` OR `request`, `delivered`, `hardBounce`, `softBounce`, `blocked`, `spam`, `invalid`, `deferred`, `click`, `opened`, `uniqueOpened` and `unsubscribed` and possible values for Marketing type webhook – `spam`, `opened`, `click`, `hardBounce`, `softBounce`, `unsubscribed`, `listAddition` and `delivered`
    * @member {Array.<module:model/UpdateWebhook.EventsEnum>} events
    */
   exports.prototype['events'] = undefined;

@@ -37,7 +37,7 @@
   /**
    * The GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription model module.
    * @module model/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription
-   * @version 7.2.4
+   * @version 8.0.0
    */
 
   /**

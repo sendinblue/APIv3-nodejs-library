@@ -42,7 +42,7 @@ var apiInstance = new SibApiV3Sdk.ListsApi();
 
 var listId = 789; // Number | Id of the list
 
-var contactEmails = new SibApiV3Sdk.AddContactToList(); // AddContactToList | Emails addresses of the contacts
+var contactEmails = new SibApiV3Sdk.AddContactToList(); // AddContactToList | Emails addresses OR IDs of the contacts
 
 apiInstance.addContactToList(listId, contactEmails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -57,7 +57,7 @@ apiInstance.addContactToList(listId, contactEmails).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **Number**| Id of the list | 
- **contactEmails** | [**AddContactToList**](AddContactToList.md)| Emails addresses of the contacts | 
+ **contactEmails** | [**AddContactToList**](AddContactToList.md)| Emails addresses OR IDs of the contacts | 
 
 ### Return type
 
@@ -440,7 +440,7 @@ var apiInstance = new SibApiV3Sdk.ListsApi();
 
 var listId = 789; // Number | Id of the list
 
-var contactEmails = new SibApiV3Sdk.RemoveContactFromList(); // RemoveContactFromList | Emails adresses of the contact
+var contactEmails = new SibApiV3Sdk.RemoveContactFromList(); // RemoveContactFromList | Emails addresses OR IDs of the contacts
 
 apiInstance.removeContactFromList(listId, contactEmails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -455,7 +455,7 @@ apiInstance.removeContactFromList(listId, contactEmails).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **Number**| Id of the list | 
- **contactEmails** | [**RemoveContactFromList**](RemoveContactFromList.md)| Emails adresses of the contact | 
+ **contactEmails** | [**RemoveContactFromList**](RemoveContactFromList.md)| Emails addresses OR IDs of the contacts | 
 
 ### Return type
 
