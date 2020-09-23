@@ -1,6 +1,6 @@
 # SendinBlue's API v3 Node.js Library
 
-SendinBlue's API exposes the entire SendinBlue features via a standardized programmatic interface. Please refer to the full [documentation](https://developers.sendinblue.com) to learn more.
+Pakat's API exposes the entire Pakat features via a standardized programmatic interface. Please refer to the full [documentation](https://docs.pakat.com) to learn more. Pakat is a proxy for SendinBlue
 
 This is the wrapper for the API. It implements all the features of the API v3. It supports promises.
 
@@ -23,7 +23,7 @@ The following recommended installation requires [npm](https://npmjs.org/). If yo
 Then install it via:
 
 ```shell
-npm install sib-api-v3-sdk --save
+npm install pakat-api-v3-sdk --save
 ```
 
 ##### Local development
@@ -41,13 +41,13 @@ Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the follow
 npm link
 ```
 
-Finally, switch to the directory you want to use your sib-api-v3-sdk from, and run:
+Finally, switch to the directory you want to use your pakat-api-v3-sdk from, and run:
 
 ```shell
 npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
 ```
 
-You should now be able to `require('sib-api-v3-sdk')` in javascript files from the directory you ran the last
+You should now be able to `require('pakat-api-v3-sdk')` in javascript files from the directory you ran the last
 command above from.
 
 #### git
@@ -83,7 +83,7 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
+var SibApiV3Sdk = require('pakat-api-v3-sdk');
 
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
