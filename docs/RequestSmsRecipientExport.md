@@ -1,4 +1,4 @@
-# SibApiV3Sdk.RequestSmsRecipientExport
+# PakatApiV3Sdk.RequestSmsRecipientExport
 
 ## Properties
 Name | Type | Description | Notes

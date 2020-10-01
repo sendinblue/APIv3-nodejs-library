@@ -1,4 +1,4 @@
-# SibApiV3Sdk.ManageIp
+# PakatApiV3Sdk.ManageIp
 
 ## Properties
 Name | Type | Description | Notes

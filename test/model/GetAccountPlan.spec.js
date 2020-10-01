@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetAccountPlan();
+    instance = new PakatApiV3Sdk.GetAccountPlan();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,43 +53,43 @@
   describe('GetAccountPlan', function() {
     it('should create an instance of GetAccountPlan', function() {
       // uncomment below and update the code to test GetAccountPlan
-      //var instane = new SibApiV3Sdk.GetAccountPlan();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetAccountPlan);
+      //var instane = new PakatApiV3Sdk.GetAccountPlan();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetAccountPlan);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new SibApiV3Sdk.GetAccountPlan();
+      //var instane = new PakatApiV3Sdk.GetAccountPlan();
       //expect(instance).to.be();
     });
 
     it('should have the property creditsType (base name: "creditsType")', function() {
       // uncomment below and update the code to test the property creditsType
-      //var instane = new SibApiV3Sdk.GetAccountPlan();
+      //var instane = new PakatApiV3Sdk.GetAccountPlan();
       //expect(instance).to.be();
     });
 
     it('should have the property credits (base name: "credits")', function() {
       // uncomment below and update the code to test the property credits
-      //var instane = new SibApiV3Sdk.GetAccountPlan();
+      //var instane = new PakatApiV3Sdk.GetAccountPlan();
       //expect(instance).to.be();
     });
 
     it('should have the property startDate (base name: "startDate")', function() {
       // uncomment below and update the code to test the property startDate
-      //var instane = new SibApiV3Sdk.GetAccountPlan();
+      //var instane = new PakatApiV3Sdk.GetAccountPlan();
       //expect(instance).to.be();
     });
 
     it('should have the property endDate (base name: "endDate")', function() {
       // uncomment below and update the code to test the property endDate
-      //var instane = new SibApiV3Sdk.GetAccountPlan();
+      //var instane = new PakatApiV3Sdk.GetAccountPlan();
       //expect(instance).to.be();
     });
 
     it('should have the property userLimit (base name: "userLimit")', function() {
       // uncomment below and update the code to test the property userLimit
-      //var instane = new SibApiV3Sdk.GetAccountPlan();
+      //var instane = new PakatApiV3Sdk.GetAccountPlan();
       //expect(instance).to.be();
     });
 

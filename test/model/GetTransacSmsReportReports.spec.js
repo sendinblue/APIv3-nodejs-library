@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetTransacSmsReportReports();
+    instance = new PakatApiV3Sdk.GetTransacSmsReportReports();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,67 +53,67 @@
   describe('GetTransacSmsReportReports', function() {
     it('should create an instance of GetTransacSmsReportReports', function() {
       // uncomment below and update the code to test GetTransacSmsReportReports
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetTransacSmsReportReports);
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetTransacSmsReportReports);
     });
 
     it('should have the property _date (base name: "date")', function() {
       // uncomment below and update the code to test the property _date
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
       //expect(instance).to.be();
     });
 
     it('should have the property requests (base name: "requests")', function() {
       // uncomment below and update the code to test the property requests
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
       //expect(instance).to.be();
     });
 
     it('should have the property delivered (base name: "delivered")', function() {
       // uncomment below and update the code to test the property delivered
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
       //expect(instance).to.be();
     });
 
     it('should have the property hardBounces (base name: "hardBounces")', function() {
       // uncomment below and update the code to test the property hardBounces
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
       //expect(instance).to.be();
     });
 
     it('should have the property softBounces (base name: "softBounces")', function() {
       // uncomment below and update the code to test the property softBounces
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
       //expect(instance).to.be();
     });
 
     it('should have the property blocked (base name: "blocked")', function() {
       // uncomment below and update the code to test the property blocked
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
       //expect(instance).to.be();
     });
 
     it('should have the property unsubscribed (base name: "unsubscribed")', function() {
       // uncomment below and update the code to test the property unsubscribed
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
       //expect(instance).to.be();
     });
 
     it('should have the property replied (base name: "replied")', function() {
       // uncomment below and update the code to test the property replied
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
       //expect(instance).to.be();
     });
 
     it('should have the property accepted (base name: "accepted")', function() {
       // uncomment below and update the code to test the property accepted
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
       //expect(instance).to.be();
     });
 
     it('should have the property rejected (base name: "rejected")', function() {
       // uncomment below and update the code to test the property rejected
-      //var instane = new SibApiV3Sdk.GetTransacSmsReportReports();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReportReports();
       //expect(instance).to.be();
     });
 

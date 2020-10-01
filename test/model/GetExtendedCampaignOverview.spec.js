@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetExtendedCampaignOverview();
+    instance = new PakatApiV3Sdk.GetExtendedCampaignOverview();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,103 +53,103 @@
   describe('GetExtendedCampaignOverview', function() {
     it('should create an instance of GetExtendedCampaignOverview', function() {
       // uncomment below and update the code to test GetExtendedCampaignOverview
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedCampaignOverview);
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetExtendedCampaignOverview);
     });
 
     it('should have the property testSent (base name: "testSent")', function() {
       // uncomment below and update the code to test the property testSent
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property header (base name: "header")', function() {
       // uncomment below and update the code to test the property header
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property footer (base name: "footer")', function() {
       // uncomment below and update the code to test the property footer
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property replyTo (base name: "replyTo")', function() {
       // uncomment below and update the code to test the property replyTo
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property toField (base name: "toField")', function() {
       // uncomment below and update the code to test the property toField
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property htmlContent (base name: "htmlContent")', function() {
       // uncomment below and update the code to test the property htmlContent
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property shareLink (base name: "shareLink")', function() {
       // uncomment below and update the code to test the property shareLink
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "createdAt")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property modifiedAt (base name: "modifiedAt")', function() {
       // uncomment below and update the code to test the property modifiedAt
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property inlineImageActivation (base name: "inlineImageActivation")', function() {
       // uncomment below and update the code to test the property inlineImageActivation
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property mirrorActive (base name: "mirrorActive")', function() {
       // uncomment below and update the code to test the property mirrorActive
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property recurring (base name: "recurring")', function() {
       // uncomment below and update the code to test the property recurring
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property sentDate (base name: "sentDate")', function() {
       // uncomment below and update the code to test the property sentDate
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property returnBounce (base name: "returnBounce")', function() {
       // uncomment below and update the code to test the property returnBounce
-      //var instane = new SibApiV3Sdk.GetExtendedCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetExtendedCampaignOverview();
       //expect(instance).to.be();
     });
 

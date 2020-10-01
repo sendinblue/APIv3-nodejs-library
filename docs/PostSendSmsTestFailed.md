@@ -1,4 +1,4 @@
-# SibApiV3Sdk.PostSendSmsTestFailed
+# PakatApiV3Sdk.PostSendSmsTestFailed
 
 ## Properties
 Name | Type | Description | Notes

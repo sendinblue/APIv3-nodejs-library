@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.UpdateChildDomain();
+    instance = new PakatApiV3Sdk.UpdateChildDomain();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('UpdateChildDomain', function() {
     it('should create an instance of UpdateChildDomain', function() {
       // uncomment below and update the code to test UpdateChildDomain
-      //var instane = new SibApiV3Sdk.UpdateChildDomain();
-      //expect(instance).to.be.a(SibApiV3Sdk.UpdateChildDomain);
+      //var instane = new PakatApiV3Sdk.UpdateChildDomain();
+      //expect(instance).to.be.a(PakatApiV3Sdk.UpdateChildDomain);
     });
 
     it('should have the property domain (base name: "domain")', function() {
       // uncomment below and update the code to test the property domain
-      //var instane = new SibApiV3Sdk.UpdateChildDomain();
+      //var instane = new PakatApiV3Sdk.UpdateChildDomain();
       //expect(instance).to.be();
     });
 

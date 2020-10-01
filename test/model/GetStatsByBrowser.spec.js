@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetStatsByBrowser();
+    instance = new PakatApiV3Sdk.GetStatsByBrowser();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,8 +53,8 @@
   describe('GetStatsByBrowser', function() {
     it('should create an instance of GetStatsByBrowser', function() {
       // uncomment below and update the code to test GetStatsByBrowser
-      //var instane = new SibApiV3Sdk.GetStatsByBrowser();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetStatsByBrowser);
+      //var instane = new PakatApiV3Sdk.GetStatsByBrowser();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetStatsByBrowser);
     });
 
   });

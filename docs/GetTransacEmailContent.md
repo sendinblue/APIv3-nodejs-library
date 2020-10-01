@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetTransacEmailContent
+# PakatApiV3Sdk.GetTransacEmailContent
 
 ## Properties
 Name | Type | Description | Notes

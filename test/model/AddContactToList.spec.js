@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.AddContactToList();
+    instance = new PakatApiV3Sdk.AddContactToList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('AddContactToList', function() {
     it('should create an instance of AddContactToList', function() {
       // uncomment below and update the code to test AddContactToList
-      //var instane = new SibApiV3Sdk.AddContactToList();
-      //expect(instance).to.be.a(SibApiV3Sdk.AddContactToList);
+      //var instane = new PakatApiV3Sdk.AddContactToList();
+      //expect(instance).to.be.a(PakatApiV3Sdk.AddContactToList);
     });
 
     it('should have the property emails (base name: "emails")', function() {
       // uncomment below and update the code to test the property emails
-      //var instane = new SibApiV3Sdk.AddContactToList();
+      //var instane = new PakatApiV3Sdk.AddContactToList();
       //expect(instance).to.be();
     });
 
     it('should have the property ids (base name: "ids")', function() {
       // uncomment below and update the code to test the property ids
-      //var instane = new SibApiV3Sdk.AddContactToList();
+      //var instane = new PakatApiV3Sdk.AddContactToList();
       //expect(instance).to.be();
     });
 

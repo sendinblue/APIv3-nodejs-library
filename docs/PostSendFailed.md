@@ -1,4 +1,4 @@
-# SibApiV3Sdk.PostSendFailed
+# PakatApiV3Sdk.PostSendFailed
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.SendSmtpEmail
+# PakatApiV3Sdk.SendSmtpEmail
 
 ## Properties
 Name | Type | Description | Notes

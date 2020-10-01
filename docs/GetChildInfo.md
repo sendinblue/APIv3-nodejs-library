@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetChildInfo
+# PakatApiV3Sdk.GetChildInfo
 
 ## Properties
 Name | Type | Description | Notes

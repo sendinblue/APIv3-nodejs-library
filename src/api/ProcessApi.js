@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/ErrorModel'), require('../model/GetProcess'), require('../model/GetProcesses'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.ProcessApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetProcess, root.SibApiV3Sdk.GetProcesses);
+    root.PakatApiV3Sdk.ProcessApi = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.ErrorModel, root.PakatApiV3Sdk.GetProcess, root.PakatApiV3Sdk.GetProcesses);
   }
 }(this, function(ApiClient, ErrorModel, GetProcess, GetProcesses) {
   'use strict';

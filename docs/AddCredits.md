@@ -1,4 +1,4 @@
-# SibApiV3Sdk.AddCredits
+# PakatApiV3Sdk.AddCredits
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetSsoToken
+# PakatApiV3Sdk.GetSsoToken
 
 ## Properties
 Name | Type | Description | Notes

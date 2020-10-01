@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetExtendedList();
+    instance = new PakatApiV3Sdk.GetExtendedList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetExtendedList', function() {
     it('should create an instance of GetExtendedList', function() {
       // uncomment below and update the code to test GetExtendedList
-      //var instane = new SibApiV3Sdk.GetExtendedList();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedList);
+      //var instane = new PakatApiV3Sdk.GetExtendedList();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetExtendedList);
     });
 
     it('should have the property folderId (base name: "folderId")', function() {
       // uncomment below and update the code to test the property folderId
-      //var instane = new SibApiV3Sdk.GetExtendedList();
+      //var instane = new PakatApiV3Sdk.GetExtendedList();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "createdAt")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instane = new SibApiV3Sdk.GetExtendedList();
+      //var instane = new PakatApiV3Sdk.GetExtendedList();
       //expect(instance).to.be();
     });
 
     it('should have the property campaignStats (base name: "campaignStats")', function() {
       // uncomment below and update the code to test the property campaignStats
-      //var instane = new SibApiV3Sdk.GetExtendedList();
+      //var instane = new PakatApiV3Sdk.GetExtendedList();
       //expect(instance).to.be();
     });
 
     it('should have the property dynamicList (base name: "dynamicList")', function() {
       // uncomment below and update the code to test the property dynamicList
-      //var instane = new SibApiV3Sdk.GetExtendedList();
+      //var instane = new PakatApiV3Sdk.GetExtendedList();
       //expect(instance).to.be();
     });
 

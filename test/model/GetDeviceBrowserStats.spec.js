@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetDeviceBrowserStats();
+    instance = new PakatApiV3Sdk.GetDeviceBrowserStats();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetDeviceBrowserStats', function() {
     it('should create an instance of GetDeviceBrowserStats', function() {
       // uncomment below and update the code to test GetDeviceBrowserStats
-      //var instane = new SibApiV3Sdk.GetDeviceBrowserStats();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetDeviceBrowserStats);
+      //var instane = new PakatApiV3Sdk.GetDeviceBrowserStats();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetDeviceBrowserStats);
     });
 
     it('should have the property clickers (base name: "clickers")', function() {
       // uncomment below and update the code to test the property clickers
-      //var instane = new SibApiV3Sdk.GetDeviceBrowserStats();
+      //var instane = new PakatApiV3Sdk.GetDeviceBrowserStats();
       //expect(instance).to.be();
     });
 
     it('should have the property uniqueClicks (base name: "uniqueClicks")', function() {
       // uncomment below and update the code to test the property uniqueClicks
-      //var instane = new SibApiV3Sdk.GetDeviceBrowserStats();
+      //var instane = new PakatApiV3Sdk.GetDeviceBrowserStats();
       //expect(instance).to.be();
     });
 
     it('should have the property viewed (base name: "viewed")', function() {
       // uncomment below and update the code to test the property viewed
-      //var instane = new SibApiV3Sdk.GetDeviceBrowserStats();
+      //var instane = new PakatApiV3Sdk.GetDeviceBrowserStats();
       //expect(instance).to.be();
     });
 
     it('should have the property uniqueViews (base name: "uniqueViews")', function() {
       // uncomment below and update the code to test the property uniqueViews
-      //var instane = new SibApiV3Sdk.GetDeviceBrowserStats();
+      //var instane = new PakatApiV3Sdk.GetDeviceBrowserStats();
       //expect(instance).to.be();
     });
 

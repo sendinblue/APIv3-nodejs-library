@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateSmtpEmail
+# PakatApiV3Sdk.CreateSmtpEmail
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetReportsReports'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetReports = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetReportsReports);
+    root.PakatApiV3Sdk.GetReports = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetReportsReports);
   }
 }(this, function(ApiClient, GetReportsReports) {
   'use strict';

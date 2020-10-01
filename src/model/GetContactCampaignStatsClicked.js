@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetExtendedContactDetailsStatisticsLinks'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetContactCampaignStatsClicked = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsLinks);
+    root.PakatApiV3Sdk.GetContactCampaignStatsClicked = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetExtendedContactDetailsStatisticsLinks);
   }
 }(this, function(ApiClient, GetExtendedContactDetailsStatisticsLinks) {
   'use strict';

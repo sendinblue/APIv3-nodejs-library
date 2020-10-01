@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.CreateSmtpTemplateSender();
+    instance = new PakatApiV3Sdk.CreateSmtpTemplateSender();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('CreateSmtpTemplateSender', function() {
     it('should create an instance of CreateSmtpTemplateSender', function() {
       // uncomment below and update the code to test CreateSmtpTemplateSender
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplateSender();
-      //expect(instance).to.be.a(SibApiV3Sdk.CreateSmtpTemplateSender);
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplateSender();
+      //expect(instance).to.be.a(PakatApiV3Sdk.CreateSmtpTemplateSender);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplateSender();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplateSender();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplateSender();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplateSender();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplateSender();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplateSender();
       //expect(instance).to.be();
     });
 

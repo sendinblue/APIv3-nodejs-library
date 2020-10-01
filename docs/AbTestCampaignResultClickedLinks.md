@@ -1,4 +1,4 @@
-# SibApiV3Sdk.AbTestCampaignResultClickedLinks
+# PakatApiV3Sdk.AbTestCampaignResultClickedLinks
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetTransacBlockedContactsContacts();
+    instance = new PakatApiV3Sdk.GetTransacBlockedContactsContacts();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetTransacBlockedContactsContacts', function() {
     it('should create an instance of GetTransacBlockedContactsContacts', function() {
       // uncomment below and update the code to test GetTransacBlockedContactsContacts
-      //var instane = new SibApiV3Sdk.GetTransacBlockedContactsContacts();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetTransacBlockedContactsContacts);
+      //var instane = new PakatApiV3Sdk.GetTransacBlockedContactsContacts();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetTransacBlockedContactsContacts);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SibApiV3Sdk.GetTransacBlockedContactsContacts();
+      //var instane = new PakatApiV3Sdk.GetTransacBlockedContactsContacts();
       //expect(instance).to.be();
     });
 
     it('should have the property senderEmail (base name: "senderEmail")', function() {
       // uncomment below and update the code to test the property senderEmail
-      //var instane = new SibApiV3Sdk.GetTransacBlockedContactsContacts();
+      //var instane = new PakatApiV3Sdk.GetTransacBlockedContactsContacts();
       //expect(instance).to.be();
     });
 
     it('should have the property reason (base name: "reason")', function() {
       // uncomment below and update the code to test the property reason
-      //var instane = new SibApiV3Sdk.GetTransacBlockedContactsContacts();
+      //var instane = new PakatApiV3Sdk.GetTransacBlockedContactsContacts();
       //expect(instance).to.be();
     });
 
     it('should have the property blockedAt (base name: "blockedAt")', function() {
       // uncomment below and update the code to test the property blockedAt
-      //var instane = new SibApiV3Sdk.GetTransacBlockedContactsContacts();
+      //var instane = new PakatApiV3Sdk.GetTransacBlockedContactsContacts();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.SendTestSms
+# PakatApiV3Sdk.SendTestSms
 
 ## Properties
 Name | Type | Description | Notes

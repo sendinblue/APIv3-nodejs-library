@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateReseller
+# PakatApiV3Sdk.CreateReseller
 
 ## Properties
 Name | Type | Description | Notes

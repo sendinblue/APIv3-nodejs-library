@@ -1,4 +1,4 @@
-# SibApiV3Sdk.UpdateList
+# PakatApiV3Sdk.UpdateList
 
 ## Properties
 Name | Type | Description | Notes

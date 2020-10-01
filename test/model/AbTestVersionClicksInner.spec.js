@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.AbTestVersionClicksInner();
+    instance = new PakatApiV3Sdk.AbTestVersionClicksInner();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('AbTestVersionClicksInner', function() {
     it('should create an instance of AbTestVersionClicksInner', function() {
       // uncomment below and update the code to test AbTestVersionClicksInner
-      //var instane = new SibApiV3Sdk.AbTestVersionClicksInner();
-      //expect(instance).to.be.a(SibApiV3Sdk.AbTestVersionClicksInner);
+      //var instane = new PakatApiV3Sdk.AbTestVersionClicksInner();
+      //expect(instance).to.be.a(PakatApiV3Sdk.AbTestVersionClicksInner);
     });
 
     it('should have the property link (base name: "link")', function() {
       // uncomment below and update the code to test the property link
-      //var instane = new SibApiV3Sdk.AbTestVersionClicksInner();
+      //var instane = new PakatApiV3Sdk.AbTestVersionClicksInner();
       //expect(instance).to.be();
     });
 
     it('should have the property clicksCount (base name: "clicksCount")', function() {
       // uncomment below and update the code to test the property clicksCount
-      //var instane = new SibApiV3Sdk.AbTestVersionClicksInner();
+      //var instane = new PakatApiV3Sdk.AbTestVersionClicksInner();
       //expect(instance).to.be();
     });
 
     it('should have the property clickRate (base name: "clickRate")', function() {
       // uncomment below and update the code to test the property clickRate
-      //var instane = new SibApiV3Sdk.AbTestVersionClicksInner();
+      //var instane = new PakatApiV3Sdk.AbTestVersionClicksInner();
       //expect(instance).to.be();
     });
 

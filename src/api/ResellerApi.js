@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/AddChildDomain'), require('../model/AddCredits'), require('../model/CreateChild'), require('../model/CreateReseller'), require('../model/ErrorModel'), require('../model/GetChildAccountCreationStatus'), require('../model/GetChildDomains'), require('../model/GetChildInfo'), require('../model/GetChildrenList'), require('../model/GetSsoToken'), require('../model/ManageIp'), require('../model/RemainingCreditModel'), require('../model/RemoveCredits'), require('../model/UpdateChild'), require('../model/UpdateChildAccountStatus'), require('../model/UpdateChildDomain'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.ResellerApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AddChildDomain, root.SibApiV3Sdk.AddCredits, root.SibApiV3Sdk.CreateChild, root.SibApiV3Sdk.CreateReseller, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetChildAccountCreationStatus, root.SibApiV3Sdk.GetChildDomains, root.SibApiV3Sdk.GetChildInfo, root.SibApiV3Sdk.GetChildrenList, root.SibApiV3Sdk.GetSsoToken, root.SibApiV3Sdk.ManageIp, root.SibApiV3Sdk.RemainingCreditModel, root.SibApiV3Sdk.RemoveCredits, root.SibApiV3Sdk.UpdateChild, root.SibApiV3Sdk.UpdateChildAccountStatus, root.SibApiV3Sdk.UpdateChildDomain);
+    root.PakatApiV3Sdk.ResellerApi = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.AddChildDomain, root.PakatApiV3Sdk.AddCredits, root.PakatApiV3Sdk.CreateChild, root.PakatApiV3Sdk.CreateReseller, root.PakatApiV3Sdk.ErrorModel, root.PakatApiV3Sdk.GetChildAccountCreationStatus, root.PakatApiV3Sdk.GetChildDomains, root.PakatApiV3Sdk.GetChildInfo, root.PakatApiV3Sdk.GetChildrenList, root.PakatApiV3Sdk.GetSsoToken, root.PakatApiV3Sdk.ManageIp, root.PakatApiV3Sdk.RemainingCreditModel, root.PakatApiV3Sdk.RemoveCredits, root.PakatApiV3Sdk.UpdateChild, root.PakatApiV3Sdk.UpdateChildAccountStatus, root.PakatApiV3Sdk.UpdateChildDomain);
   }
 }(this, function(ApiClient, AddChildDomain, AddCredits, CreateChild, CreateReseller, ErrorModel, GetChildAccountCreationStatus, GetChildDomains, GetChildInfo, GetChildrenList, GetSsoToken, ManageIp, RemainingCreditModel, RemoveCredits, UpdateChild, UpdateChildAccountStatus, UpdateChildDomain) {
   'use strict';

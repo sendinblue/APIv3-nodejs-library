@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetTransacBlockedContactsReason();
+    instance = new PakatApiV3Sdk.GetTransacBlockedContactsReason();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetTransacBlockedContactsReason', function() {
     it('should create an instance of GetTransacBlockedContactsReason', function() {
       // uncomment below and update the code to test GetTransacBlockedContactsReason
-      //var instane = new SibApiV3Sdk.GetTransacBlockedContactsReason();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetTransacBlockedContactsReason);
+      //var instane = new PakatApiV3Sdk.GetTransacBlockedContactsReason();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetTransacBlockedContactsReason);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instane = new SibApiV3Sdk.GetTransacBlockedContactsReason();
+      //var instane = new PakatApiV3Sdk.GetTransacBlockedContactsReason();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new SibApiV3Sdk.GetTransacBlockedContactsReason();
+      //var instane = new PakatApiV3Sdk.GetTransacBlockedContactsReason();
       //expect(instance).to.be();
     });
 

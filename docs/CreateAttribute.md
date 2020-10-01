@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateAttribute
+# PakatApiV3Sdk.CreateAttribute
 
 ## Properties
 Name | Type | Description | Notes

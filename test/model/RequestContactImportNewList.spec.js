@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.RequestContactImportNewList();
+    instance = new PakatApiV3Sdk.RequestContactImportNewList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('RequestContactImportNewList', function() {
     it('should create an instance of RequestContactImportNewList', function() {
       // uncomment below and update the code to test RequestContactImportNewList
-      //var instane = new SibApiV3Sdk.RequestContactImportNewList();
-      //expect(instance).to.be.a(SibApiV3Sdk.RequestContactImportNewList);
+      //var instane = new PakatApiV3Sdk.RequestContactImportNewList();
+      //expect(instance).to.be.a(PakatApiV3Sdk.RequestContactImportNewList);
     });
 
     it('should have the property listName (base name: "listName")', function() {
       // uncomment below and update the code to test the property listName
-      //var instane = new SibApiV3Sdk.RequestContactImportNewList();
+      //var instane = new PakatApiV3Sdk.RequestContactImportNewList();
       //expect(instance).to.be();
     });
 
     it('should have the property folderId (base name: "folderId")', function() {
       // uncomment below and update the code to test the property folderId
-      //var instane = new SibApiV3Sdk.RequestContactImportNewList();
+      //var instane = new PakatApiV3Sdk.RequestContactImportNewList();
       //expect(instance).to.be();
     });
 

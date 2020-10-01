@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetSmtpTemplates();
+    instance = new PakatApiV3Sdk.GetSmtpTemplates();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetSmtpTemplates', function() {
     it('should create an instance of GetSmtpTemplates', function() {
       // uncomment below and update the code to test GetSmtpTemplates
-      //var instane = new SibApiV3Sdk.GetSmtpTemplates();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetSmtpTemplates);
+      //var instane = new PakatApiV3Sdk.GetSmtpTemplates();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetSmtpTemplates);
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new SibApiV3Sdk.GetSmtpTemplates();
+      //var instane = new PakatApiV3Sdk.GetSmtpTemplates();
       //expect(instance).to.be();
     });
 
     it('should have the property templates (base name: "templates")', function() {
       // uncomment below and update the code to test the property templates
-      //var instane = new SibApiV3Sdk.GetSmtpTemplates();
+      //var instane = new PakatApiV3Sdk.GetSmtpTemplates();
       //expect(instance).to.be();
     });
 

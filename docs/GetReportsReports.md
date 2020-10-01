@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetReportsReports
+# PakatApiV3Sdk.GetReportsReports
 
 ## Properties
 Name | Type | Description | Notes

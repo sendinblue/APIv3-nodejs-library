@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.UpdateWebhook();
+    instance = new PakatApiV3Sdk.UpdateWebhook();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('UpdateWebhook', function() {
     it('should create an instance of UpdateWebhook', function() {
       // uncomment below and update the code to test UpdateWebhook
-      //var instane = new SibApiV3Sdk.UpdateWebhook();
-      //expect(instance).to.be.a(SibApiV3Sdk.UpdateWebhook);
+      //var instane = new PakatApiV3Sdk.UpdateWebhook();
+      //expect(instance).to.be.a(PakatApiV3Sdk.UpdateWebhook);
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new SibApiV3Sdk.UpdateWebhook();
+      //var instane = new PakatApiV3Sdk.UpdateWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new SibApiV3Sdk.UpdateWebhook();
+      //var instane = new PakatApiV3Sdk.UpdateWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property events (base name: "events")', function() {
       // uncomment below and update the code to test the property events
-      //var instane = new SibApiV3Sdk.UpdateWebhook();
+      //var instane = new PakatApiV3Sdk.UpdateWebhook();
       //expect(instance).to.be();
     });
 

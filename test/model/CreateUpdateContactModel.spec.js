@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.CreateUpdateContactModel();
+    instance = new PakatApiV3Sdk.CreateUpdateContactModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('CreateUpdateContactModel', function() {
     it('should create an instance of CreateUpdateContactModel', function() {
       // uncomment below and update the code to test CreateUpdateContactModel
-      //var instane = new SibApiV3Sdk.CreateUpdateContactModel();
-      //expect(instance).to.be.a(SibApiV3Sdk.CreateUpdateContactModel);
+      //var instane = new PakatApiV3Sdk.CreateUpdateContactModel();
+      //expect(instance).to.be.a(PakatApiV3Sdk.CreateUpdateContactModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SibApiV3Sdk.CreateUpdateContactModel();
+      //var instane = new PakatApiV3Sdk.CreateUpdateContactModel();
       //expect(instance).to.be();
     });
 

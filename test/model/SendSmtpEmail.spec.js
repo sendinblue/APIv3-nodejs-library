@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.SendSmtpEmail();
+    instance = new PakatApiV3Sdk.SendSmtpEmail();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,85 +53,85 @@
   describe('SendSmtpEmail', function() {
     it('should create an instance of SendSmtpEmail', function() {
       // uncomment below and update the code to test SendSmtpEmail
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
-      //expect(instance).to.be.a(SibApiV3Sdk.SendSmtpEmail);
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
+      //expect(instance).to.be.a(PakatApiV3Sdk.SendSmtpEmail);
     });
 
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property to (base name: "to")', function() {
       // uncomment below and update the code to test the property to
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property bcc (base name: "bcc")', function() {
       // uncomment below and update the code to test the property bcc
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property cc (base name: "cc")', function() {
       // uncomment below and update the code to test the property cc
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property htmlContent (base name: "htmlContent")', function() {
       // uncomment below and update the code to test the property htmlContent
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property textContent (base name: "textContent")', function() {
       // uncomment below and update the code to test the property textContent
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property subject (base name: "subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property replyTo (base name: "replyTo")', function() {
       // uncomment below and update the code to test the property replyTo
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property attachment (base name: "attachment")', function() {
       // uncomment below and update the code to test the property attachment
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property headers (base name: "headers")', function() {
       // uncomment below and update the code to test the property headers
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property templateId (base name: "templateId")', function() {
       // uncomment below and update the code to test the property templateId
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property params (base name: "params")', function() {
       // uncomment below and update the code to test the property params
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property tags (base name: "tags")', function() {
       // uncomment below and update the code to test the property tags
-      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //var instane = new PakatApiV3Sdk.SendSmtpEmail();
       //expect(instance).to.be();
     });
 

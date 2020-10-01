@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.PostSendFailed();
+    instance = new PakatApiV3Sdk.PostSendFailed();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,37 +53,37 @@
   describe('PostSendFailed', function() {
     it('should create an instance of PostSendFailed', function() {
       // uncomment below and update the code to test PostSendFailed
-      //var instane = new SibApiV3Sdk.PostSendFailed();
-      //expect(instance).to.be.a(SibApiV3Sdk.PostSendFailed);
+      //var instane = new PakatApiV3Sdk.PostSendFailed();
+      //expect(instance).to.be.a(PakatApiV3Sdk.PostSendFailed);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instane = new SibApiV3Sdk.PostSendFailed();
+      //var instane = new PakatApiV3Sdk.PostSendFailed();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new SibApiV3Sdk.PostSendFailed();
+      //var instane = new PakatApiV3Sdk.PostSendFailed();
       //expect(instance).to.be();
     });
 
     it('should have the property unexistingEmails (base name: "unexistingEmails")', function() {
       // uncomment below and update the code to test the property unexistingEmails
-      //var instane = new SibApiV3Sdk.PostSendFailed();
+      //var instane = new PakatApiV3Sdk.PostSendFailed();
       //expect(instance).to.be();
     });
 
     it('should have the property withoutListEmails (base name: "withoutListEmails")', function() {
       // uncomment below and update the code to test the property withoutListEmails
-      //var instane = new SibApiV3Sdk.PostSendFailed();
+      //var instane = new PakatApiV3Sdk.PostSendFailed();
       //expect(instance).to.be();
     });
 
     it('should have the property blackListedEmails (base name: "blackListedEmails")', function() {
       // uncomment below and update the code to test the property blackListedEmails
-      //var instane = new SibApiV3Sdk.PostSendFailed();
+      //var instane = new PakatApiV3Sdk.PostSendFailed();
       //expect(instance).to.be();
     });
 

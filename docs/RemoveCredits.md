@@ -1,4 +1,4 @@
-# SibApiV3Sdk.RemoveCredits
+# PakatApiV3Sdk.RemoveCredits
 
 ## Properties
 Name | Type | Description | Notes

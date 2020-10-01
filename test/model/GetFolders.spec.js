@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetFolders();
+    instance = new PakatApiV3Sdk.GetFolders();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetFolders', function() {
     it('should create an instance of GetFolders', function() {
       // uncomment below and update the code to test GetFolders
-      //var instane = new SibApiV3Sdk.GetFolders();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetFolders);
+      //var instane = new PakatApiV3Sdk.GetFolders();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetFolders);
     });
 
     it('should have the property folders (base name: "folders")', function() {
       // uncomment below and update the code to test the property folders
-      //var instane = new SibApiV3Sdk.GetFolders();
+      //var instane = new PakatApiV3Sdk.GetFolders();
       //expect(instance).to.be();
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new SibApiV3Sdk.GetFolders();
+      //var instane = new PakatApiV3Sdk.GetFolders();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.UpdateAttributeEnumeration
+# PakatApiV3Sdk.UpdateAttributeEnumeration
 
 ## Properties
 Name | Type | Description | Notes

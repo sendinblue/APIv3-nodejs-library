@@ -83,9 +83,9 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var SibApiV3Sdk = require('pakat-api-v3-sdk');
+var PakatApiV3Sdk = require('pakat-api-v3-sdk');
 
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -99,7 +99,7 @@ partnerKey.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix['partner-key'] = "Token"
 
-var api = new SibApiV3Sdk.AccountApi()
+var api = new PakatApiV3Sdk.AccountApi()
 api.getAccount().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -115,306 +115,306 @@ All URIs are relative to *https://api.sendinblue.com/v3*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SibApiV3Sdk.AccountApi* | [**getAccount**](docs/AccountApi.md#getAccount) | **GET** /account | Get your account information, plan and credits details
-*SibApiV3Sdk.AttributesApi* | [**createAttribute**](docs/AttributesApi.md#createAttribute) | **POST** /contacts/attributes/{attributeCategory}/{attributeName} | Create contact attribute
-*SibApiV3Sdk.AttributesApi* | [**deleteAttribute**](docs/AttributesApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Delete an attribute
-*SibApiV3Sdk.AttributesApi* | [**getAttributes**](docs/AttributesApi.md#getAttributes) | **GET** /contacts/attributes | List all attributes
-*SibApiV3Sdk.AttributesApi* | [**updateAttribute**](docs/AttributesApi.md#updateAttribute) | **PUT** /contacts/attributes/{attributeCategory}/{attributeName} | Update contact attribute
-*SibApiV3Sdk.ContactsApi* | [**addContactToList**](docs/ContactsApi.md#addContactToList) | **POST** /contacts/lists/{listId}/contacts/add | Add existing contacts to a list
-*SibApiV3Sdk.ContactsApi* | [**createAttribute**](docs/ContactsApi.md#createAttribute) | **POST** /contacts/attributes/{attributeCategory}/{attributeName} | Create contact attribute
-*SibApiV3Sdk.ContactsApi* | [**createContact**](docs/ContactsApi.md#createContact) | **POST** /contacts | Create a contact
-*SibApiV3Sdk.ContactsApi* | [**createDoiContact**](docs/ContactsApi.md#createDoiContact) | **POST** /contacts/doubleOptinConfirmation | Create Contact via DOI (Double-Opt-In) Flow
-*SibApiV3Sdk.ContactsApi* | [**createFolder**](docs/ContactsApi.md#createFolder) | **POST** /contacts/folders | Create a folder
-*SibApiV3Sdk.ContactsApi* | [**createList**](docs/ContactsApi.md#createList) | **POST** /contacts/lists | Create a list
-*SibApiV3Sdk.ContactsApi* | [**deleteAttribute**](docs/ContactsApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Delete an attribute
-*SibApiV3Sdk.ContactsApi* | [**deleteContact**](docs/ContactsApi.md#deleteContact) | **DELETE** /contacts/{identifier} | Delete a contact
-*SibApiV3Sdk.ContactsApi* | [**deleteFolder**](docs/ContactsApi.md#deleteFolder) | **DELETE** /contacts/folders/{folderId} | Delete a folder (and all its lists)
-*SibApiV3Sdk.ContactsApi* | [**deleteList**](docs/ContactsApi.md#deleteList) | **DELETE** /contacts/lists/{listId} | Delete a list
-*SibApiV3Sdk.ContactsApi* | [**getAttributes**](docs/ContactsApi.md#getAttributes) | **GET** /contacts/attributes | List all attributes
-*SibApiV3Sdk.ContactsApi* | [**getContactInfo**](docs/ContactsApi.md#getContactInfo) | **GET** /contacts/{identifier} | Get a contact&#39;s details
-*SibApiV3Sdk.ContactsApi* | [**getContactStats**](docs/ContactsApi.md#getContactStats) | **GET** /contacts/{identifier}/campaignStats | Get email campaigns&#39; statistics for a contact
-*SibApiV3Sdk.ContactsApi* | [**getContacts**](docs/ContactsApi.md#getContacts) | **GET** /contacts | Get all the contacts
-*SibApiV3Sdk.ContactsApi* | [**getContactsFromList**](docs/ContactsApi.md#getContactsFromList) | **GET** /contacts/lists/{listId}/contacts | Get contacts in a list
-*SibApiV3Sdk.ContactsApi* | [**getFolder**](docs/ContactsApi.md#getFolder) | **GET** /contacts/folders/{folderId} | Returns a folder&#39;s details
-*SibApiV3Sdk.ContactsApi* | [**getFolderLists**](docs/ContactsApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get lists in a folder
-*SibApiV3Sdk.ContactsApi* | [**getFolders**](docs/ContactsApi.md#getFolders) | **GET** /contacts/folders | Get all folders
-*SibApiV3Sdk.ContactsApi* | [**getList**](docs/ContactsApi.md#getList) | **GET** /contacts/lists/{listId} | Get a list&#39;s details
-*SibApiV3Sdk.ContactsApi* | [**getLists**](docs/ContactsApi.md#getLists) | **GET** /contacts/lists | Get all the lists
-*SibApiV3Sdk.ContactsApi* | [**importContacts**](docs/ContactsApi.md#importContacts) | **POST** /contacts/import | Import contacts
-*SibApiV3Sdk.ContactsApi* | [**removeContactFromList**](docs/ContactsApi.md#removeContactFromList) | **POST** /contacts/lists/{listId}/contacts/remove | Delete a contact from a list
-*SibApiV3Sdk.ContactsApi* | [**requestContactExport**](docs/ContactsApi.md#requestContactExport) | **POST** /contacts/export | Export contacts
-*SibApiV3Sdk.ContactsApi* | [**updateAttribute**](docs/ContactsApi.md#updateAttribute) | **PUT** /contacts/attributes/{attributeCategory}/{attributeName} | Update contact attribute
-*SibApiV3Sdk.ContactsApi* | [**updateContact**](docs/ContactsApi.md#updateContact) | **PUT** /contacts/{identifier} | Update a contact
-*SibApiV3Sdk.ContactsApi* | [**updateFolder**](docs/ContactsApi.md#updateFolder) | **PUT** /contacts/folders/{folderId} | Update a folder
-*SibApiV3Sdk.ContactsApi* | [**updateList**](docs/ContactsApi.md#updateList) | **PUT** /contacts/lists/{listId} | Update a list
-*SibApiV3Sdk.EmailCampaignsApi* | [**createEmailCampaign**](docs/EmailCampaignsApi.md#createEmailCampaign) | **POST** /emailCampaigns | Create an email campaign
-*SibApiV3Sdk.EmailCampaignsApi* | [**deleteEmailCampaign**](docs/EmailCampaignsApi.md#deleteEmailCampaign) | **DELETE** /emailCampaigns/{campaignId} | Delete an email campaign
-*SibApiV3Sdk.EmailCampaignsApi* | [**emailExportRecipients**](docs/EmailCampaignsApi.md#emailExportRecipients) | **POST** /emailCampaigns/{campaignId}/exportRecipients | Export the recipients of an email campaign
-*SibApiV3Sdk.EmailCampaignsApi* | [**getAbTestCampaignResult**](docs/EmailCampaignsApi.md#getAbTestCampaignResult) | **GET** /emailCampaigns/{campaignId}/abTestCampaignResult | Get an A/B test email campaign results
-*SibApiV3Sdk.EmailCampaignsApi* | [**getEmailCampaign**](docs/EmailCampaignsApi.md#getEmailCampaign) | **GET** /emailCampaigns/{campaignId} | Get an email campaign report
-*SibApiV3Sdk.EmailCampaignsApi* | [**getEmailCampaigns**](docs/EmailCampaignsApi.md#getEmailCampaigns) | **GET** /emailCampaigns | Return all your created email campaigns
-*SibApiV3Sdk.EmailCampaignsApi* | [**getSharedTemplateUrl**](docs/EmailCampaignsApi.md#getSharedTemplateUrl) | **GET** /emailCampaigns/{campaignId}/sharedUrl | Get a shared template url
-*SibApiV3Sdk.EmailCampaignsApi* | [**sendEmailCampaignNow**](docs/EmailCampaignsApi.md#sendEmailCampaignNow) | **POST** /emailCampaigns/{campaignId}/sendNow | Send an email campaign immediately, based on campaignId
-*SibApiV3Sdk.EmailCampaignsApi* | [**sendReport**](docs/EmailCampaignsApi.md#sendReport) | **POST** /emailCampaigns/{campaignId}/sendReport | Send the report of a campaign
-*SibApiV3Sdk.EmailCampaignsApi* | [**sendTestEmail**](docs/EmailCampaignsApi.md#sendTestEmail) | **POST** /emailCampaigns/{campaignId}/sendTest | Send an email campaign to your test list
-*SibApiV3Sdk.EmailCampaignsApi* | [**updateCampaignStatus**](docs/EmailCampaignsApi.md#updateCampaignStatus) | **PUT** /emailCampaigns/{campaignId}/status | Update an email campaign status
-*SibApiV3Sdk.EmailCampaignsApi* | [**updateEmailCampaign**](docs/EmailCampaignsApi.md#updateEmailCampaign) | **PUT** /emailCampaigns/{campaignId} | Update an email campaign
-*SibApiV3Sdk.EmailCampaignsApi* | [**uploadImageToGallery**](docs/EmailCampaignsApi.md#uploadImageToGallery) | **POST** /emailCampaigns/images | Upload an image to your account&#39;s image gallery
-*SibApiV3Sdk.FoldersApi* | [**createFolder**](docs/FoldersApi.md#createFolder) | **POST** /contacts/folders | Create a folder
-*SibApiV3Sdk.FoldersApi* | [**deleteFolder**](docs/FoldersApi.md#deleteFolder) | **DELETE** /contacts/folders/{folderId} | Delete a folder (and all its lists)
-*SibApiV3Sdk.FoldersApi* | [**getFolder**](docs/FoldersApi.md#getFolder) | **GET** /contacts/folders/{folderId} | Returns a folder&#39;s details
-*SibApiV3Sdk.FoldersApi* | [**getFolderLists**](docs/FoldersApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get lists in a folder
-*SibApiV3Sdk.FoldersApi* | [**getFolders**](docs/FoldersApi.md#getFolders) | **GET** /contacts/folders | Get all folders
-*SibApiV3Sdk.FoldersApi* | [**updateFolder**](docs/FoldersApi.md#updateFolder) | **PUT** /contacts/folders/{folderId} | Update a folder
-*SibApiV3Sdk.ListsApi* | [**addContactToList**](docs/ListsApi.md#addContactToList) | **POST** /contacts/lists/{listId}/contacts/add | Add existing contacts to a list
-*SibApiV3Sdk.ListsApi* | [**createList**](docs/ListsApi.md#createList) | **POST** /contacts/lists | Create a list
-*SibApiV3Sdk.ListsApi* | [**deleteList**](docs/ListsApi.md#deleteList) | **DELETE** /contacts/lists/{listId} | Delete a list
-*SibApiV3Sdk.ListsApi* | [**getContactsFromList**](docs/ListsApi.md#getContactsFromList) | **GET** /contacts/lists/{listId}/contacts | Get contacts in a list
-*SibApiV3Sdk.ListsApi* | [**getFolderLists**](docs/ListsApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get lists in a folder
-*SibApiV3Sdk.ListsApi* | [**getList**](docs/ListsApi.md#getList) | **GET** /contacts/lists/{listId} | Get a list&#39;s details
-*SibApiV3Sdk.ListsApi* | [**getLists**](docs/ListsApi.md#getLists) | **GET** /contacts/lists | Get all the lists
-*SibApiV3Sdk.ListsApi* | [**removeContactFromList**](docs/ListsApi.md#removeContactFromList) | **POST** /contacts/lists/{listId}/contacts/remove | Delete a contact from a list
-*SibApiV3Sdk.ListsApi* | [**updateList**](docs/ListsApi.md#updateList) | **PUT** /contacts/lists/{listId} | Update a list
-*SibApiV3Sdk.ProcessApi* | [**getProcess**](docs/ProcessApi.md#getProcess) | **GET** /processes/{processId} | Return the informations for a process
-*SibApiV3Sdk.ProcessApi* | [**getProcesses**](docs/ProcessApi.md#getProcesses) | **GET** /processes | Return all the processes for your account
-*SibApiV3Sdk.ResellerApi* | [**addCredits**](docs/ResellerApi.md#addCredits) | **POST** /reseller/children/{childIdentifier}/credits/add | Add Email and/or SMS credits to a specific child account
-*SibApiV3Sdk.ResellerApi* | [**associateIpToChild**](docs/ResellerApi.md#associateIpToChild) | **POST** /reseller/children/{childIdentifier}/ips/associate | Associate a dedicated IP to the child
-*SibApiV3Sdk.ResellerApi* | [**createChildDomain**](docs/ResellerApi.md#createChildDomain) | **POST** /reseller/children/{childIdentifier}/domains | Create a domain for a child account
-*SibApiV3Sdk.ResellerApi* | [**createResellerChild**](docs/ResellerApi.md#createResellerChild) | **POST** /reseller/children | Creates a reseller child
-*SibApiV3Sdk.ResellerApi* | [**deleteChildDomain**](docs/ResellerApi.md#deleteChildDomain) | **DELETE** /reseller/children/{childIdentifier}/domains/{domainName} | Delete the sender domain of the reseller child based on the childIdentifier and domainName passed
-*SibApiV3Sdk.ResellerApi* | [**deleteResellerChild**](docs/ResellerApi.md#deleteResellerChild) | **DELETE** /reseller/children/{childIdentifier} | Delete a single reseller child based on the child identifier supplied
-*SibApiV3Sdk.ResellerApi* | [**dissociateIpFromChild**](docs/ResellerApi.md#dissociateIpFromChild) | **POST** /reseller/children/{childIdentifier}/ips/dissociate | Dissociate a dedicated IP to the child
-*SibApiV3Sdk.ResellerApi* | [**getChildAccountCreationStatus**](docs/ResellerApi.md#getChildAccountCreationStatus) | **GET** /reseller/children/{childIdentifier}/accountCreationStatus | Get the status of a reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the identifier supplied
-*SibApiV3Sdk.ResellerApi* | [**getChildDomains**](docs/ResellerApi.md#getChildDomains) | **GET** /reseller/children/{childIdentifier}/domains | Get all sender domains for a specific child account
-*SibApiV3Sdk.ResellerApi* | [**getChildInfo**](docs/ResellerApi.md#getChildInfo) | **GET** /reseller/children/{childIdentifier} | Get a child account&#39;s details
-*SibApiV3Sdk.ResellerApi* | [**getResellerChilds**](docs/ResellerApi.md#getResellerChilds) | **GET** /reseller/children | Get the list of all children accounts
-*SibApiV3Sdk.ResellerApi* | [**getSsoToken**](docs/ResellerApi.md#getSsoToken) | **GET** /reseller/children/{childIdentifier}/auth | Get session token to access Sendinblue (SSO)
-*SibApiV3Sdk.ResellerApi* | [**removeCredits**](docs/ResellerApi.md#removeCredits) | **POST** /reseller/children/{childIdentifier}/credits/remove | Remove Email and/or SMS credits from a specific child account
-*SibApiV3Sdk.ResellerApi* | [**updateChildAccountStatus**](docs/ResellerApi.md#updateChildAccountStatus) | **PUT** /reseller/children/{childIdentifier}/accountStatus | Update info of reseller&#39;s child account status based on the childIdentifier supplied
-*SibApiV3Sdk.ResellerApi* | [**updateChildDomain**](docs/ResellerApi.md#updateChildDomain) | **PUT** /reseller/children/{childIdentifier}/domains/{domainName} | Update the sender domain of reseller&#39;s child based on the childIdentifier and domainName passed
-*SibApiV3Sdk.ResellerApi* | [**updateResellerChild**](docs/ResellerApi.md#updateResellerChild) | **PUT** /reseller/children/{childIdentifier} | Update info of reseller&#39;s child based on the child identifier supplied
-*SibApiV3Sdk.SMSCampaignsApi* | [**createSmsCampaign**](docs/SMSCampaignsApi.md#createSmsCampaign) | **POST** /smsCampaigns | Creates an SMS campaign
-*SibApiV3Sdk.SMSCampaignsApi* | [**deleteSmsCampaign**](docs/SMSCampaignsApi.md#deleteSmsCampaign) | **DELETE** /smsCampaigns/{campaignId} | Delete an SMS campaign
-*SibApiV3Sdk.SMSCampaignsApi* | [**getSmsCampaign**](docs/SMSCampaignsApi.md#getSmsCampaign) | **GET** /smsCampaigns/{campaignId} | Get an SMS campaign
-*SibApiV3Sdk.SMSCampaignsApi* | [**getSmsCampaigns**](docs/SMSCampaignsApi.md#getSmsCampaigns) | **GET** /smsCampaigns | Returns the information for all your created SMS campaigns
-*SibApiV3Sdk.SMSCampaignsApi* | [**requestSmsRecipientExport**](docs/SMSCampaignsApi.md#requestSmsRecipientExport) | **POST** /smsCampaigns/{campaignId}/exportRecipients | Export an SMS campaign&#39;s recipients
-*SibApiV3Sdk.SMSCampaignsApi* | [**sendSmsCampaignNow**](docs/SMSCampaignsApi.md#sendSmsCampaignNow) | **POST** /smsCampaigns/{campaignId}/sendNow | Send your SMS campaign immediately
-*SibApiV3Sdk.SMSCampaignsApi* | [**sendSmsReport**](docs/SMSCampaignsApi.md#sendSmsReport) | **POST** /smsCampaigns/{campaignId}/sendReport | Send an SMS campaign&#39;s report
-*SibApiV3Sdk.SMSCampaignsApi* | [**sendTestSms**](docs/SMSCampaignsApi.md#sendTestSms) | **POST** /smsCampaigns/{campaignId}/sendTest | Send a test SMS campaign
-*SibApiV3Sdk.SMSCampaignsApi* | [**updateSmsCampaign**](docs/SMSCampaignsApi.md#updateSmsCampaign) | **PUT** /smsCampaigns/{campaignId} | Update an SMS campaign
-*SibApiV3Sdk.SMSCampaignsApi* | [**updateSmsCampaignStatus**](docs/SMSCampaignsApi.md#updateSmsCampaignStatus) | **PUT** /smsCampaigns/{campaignId}/status | Update a campaign&#39;s status
-*SibApiV3Sdk.SendersApi* | [**createSender**](docs/SendersApi.md#createSender) | **POST** /senders | Create a new sender
-*SibApiV3Sdk.SendersApi* | [**deleteSender**](docs/SendersApi.md#deleteSender) | **DELETE** /senders/{senderId} | Delete a sender
-*SibApiV3Sdk.SendersApi* | [**getIps**](docs/SendersApi.md#getIps) | **GET** /senders/ips | Get all the dedicated IPs for your account
-*SibApiV3Sdk.SendersApi* | [**getIpsFromSender**](docs/SendersApi.md#getIpsFromSender) | **GET** /senders/{senderId}/ips | Get all the dedicated IPs for a sender
-*SibApiV3Sdk.SendersApi* | [**getSenders**](docs/SendersApi.md#getSenders) | **GET** /senders | Get the list of all your senders
-*SibApiV3Sdk.SendersApi* | [**updateSender**](docs/SendersApi.md#updateSender) | **PUT** /senders/{senderId} | Update a sender
-*SibApiV3Sdk.TransactionalEmailsApi* | [**createSmtpTemplate**](docs/TransactionalEmailsApi.md#createSmtpTemplate) | **POST** /smtp/templates | Create an email template
-*SibApiV3Sdk.TransactionalEmailsApi* | [**deleteHardbounces**](docs/TransactionalEmailsApi.md#deleteHardbounces) | **POST** /smtp/deleteHardbounces | Delete hardbounces
-*SibApiV3Sdk.TransactionalEmailsApi* | [**deleteSmtpTemplate**](docs/TransactionalEmailsApi.md#deleteSmtpTemplate) | **DELETE** /smtp/templates/{templateId} | Delete an inactive email template
-*SibApiV3Sdk.TransactionalEmailsApi* | [**getAggregatedSmtpReport**](docs/TransactionalEmailsApi.md#getAggregatedSmtpReport) | **GET** /smtp/statistics/aggregatedReport | Get your transactional email activity aggregated over a period of time
-*SibApiV3Sdk.TransactionalEmailsApi* | [**getEmailEventReport**](docs/TransactionalEmailsApi.md#getEmailEventReport) | **GET** /smtp/statistics/events | Get all your transactional email activity (unaggregated events)
-*SibApiV3Sdk.TransactionalEmailsApi* | [**getSmtpReport**](docs/TransactionalEmailsApi.md#getSmtpReport) | **GET** /smtp/statistics/reports | Get your transactional email activity aggregated per day
-*SibApiV3Sdk.TransactionalEmailsApi* | [**getSmtpTemplate**](docs/TransactionalEmailsApi.md#getSmtpTemplate) | **GET** /smtp/templates/{templateId} | Returns the template information
-*SibApiV3Sdk.TransactionalEmailsApi* | [**getSmtpTemplates**](docs/TransactionalEmailsApi.md#getSmtpTemplates) | **GET** /smtp/templates | Get the list of email templates
-*SibApiV3Sdk.TransactionalEmailsApi* | [**getTransacBlockedContacts**](docs/TransactionalEmailsApi.md#getTransacBlockedContacts) | **GET** /smtp/blockedContacts | Get the list of blocked or unsubscribed transactional contacts
-*SibApiV3Sdk.TransactionalEmailsApi* | [**getTransacEmailContent**](docs/TransactionalEmailsApi.md#getTransacEmailContent) | **GET** /smtp/emails/{uuid} | Get the personalized content of a sent transactional email
-*SibApiV3Sdk.TransactionalEmailsApi* | [**getTransacEmailsList**](docs/TransactionalEmailsApi.md#getTransacEmailsList) | **GET** /smtp/emails | Get the list of transactional emails on the basis of allowed filters
-*SibApiV3Sdk.TransactionalEmailsApi* | [**sendTemplate**](docs/TransactionalEmailsApi.md#sendTemplate) | **POST** /smtp/templates/{templateId}/send | Send a template
-*SibApiV3Sdk.TransactionalEmailsApi* | [**sendTestTemplate**](docs/TransactionalEmailsApi.md#sendTestTemplate) | **POST** /smtp/templates/{templateId}/sendTest | Send a template to your test list
-*SibApiV3Sdk.TransactionalEmailsApi* | [**sendTransacEmail**](docs/TransactionalEmailsApi.md#sendTransacEmail) | **POST** /smtp/email | Send a transactional email
-*SibApiV3Sdk.TransactionalEmailsApi* | [**smtpBlockedContactsEmailDelete**](docs/TransactionalEmailsApi.md#smtpBlockedContactsEmailDelete) | **DELETE** /smtp/blockedContacts/{email} | Unblock or resubscribe a transactional contact
-*SibApiV3Sdk.TransactionalEmailsApi* | [**smtpLogMessageIdDelete**](docs/TransactionalEmailsApi.md#smtpLogMessageIdDelete) | **DELETE** /smtp/log/{messageId} | Delete an SMTP transactional log
-*SibApiV3Sdk.TransactionalEmailsApi* | [**updateSmtpTemplate**](docs/TransactionalEmailsApi.md#updateSmtpTemplate) | **PUT** /smtp/templates/{templateId} | Update an email template
-*SibApiV3Sdk.TransactionalSMSApi* | [**getSmsEvents**](docs/TransactionalSMSApi.md#getSmsEvents) | **GET** /transactionalSMS/statistics/events | Get all your SMS activity (unaggregated events)
-*SibApiV3Sdk.TransactionalSMSApi* | [**getTransacAggregatedSmsReport**](docs/TransactionalSMSApi.md#getTransacAggregatedSmsReport) | **GET** /transactionalSMS/statistics/aggregatedReport | Get your SMS activity aggregated over a period of time
-*SibApiV3Sdk.TransactionalSMSApi* | [**getTransacSmsReport**](docs/TransactionalSMSApi.md#getTransacSmsReport) | **GET** /transactionalSMS/statistics/reports | Get your SMS activity aggregated per day
-*SibApiV3Sdk.TransactionalSMSApi* | [**sendTransacSms**](docs/TransactionalSMSApi.md#sendTransacSms) | **POST** /transactionalSMS/sms | Send SMS message to a mobile number
-*SibApiV3Sdk.WebhooksApi* | [**createWebhook**](docs/WebhooksApi.md#createWebhook) | **POST** /webhooks | Create a webhook
-*SibApiV3Sdk.WebhooksApi* | [**deleteWebhook**](docs/WebhooksApi.md#deleteWebhook) | **DELETE** /webhooks/{webhookId} | Delete a webhook
-*SibApiV3Sdk.WebhooksApi* | [**getWebhook**](docs/WebhooksApi.md#getWebhook) | **GET** /webhooks/{webhookId} | Get a webhook details
-*SibApiV3Sdk.WebhooksApi* | [**getWebhooks**](docs/WebhooksApi.md#getWebhooks) | **GET** /webhooks | Get all webhooks
-*SibApiV3Sdk.WebhooksApi* | [**updateWebhook**](docs/WebhooksApi.md#updateWebhook) | **PUT** /webhooks/{webhookId} | Update a webhook
+*PakatApiV3Sdk.AccountApi* | [**getAccount**](docs/AccountApi.md#getAccount) | **GET** /account | Get your account information, plan and credits details
+*PakatApiV3Sdk.AttributesApi* | [**createAttribute**](docs/AttributesApi.md#createAttribute) | **POST** /contacts/attributes/{attributeCategory}/{attributeName} | Create contact attribute
+*PakatApiV3Sdk.AttributesApi* | [**deleteAttribute**](docs/AttributesApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Delete an attribute
+*PakatApiV3Sdk.AttributesApi* | [**getAttributes**](docs/AttributesApi.md#getAttributes) | **GET** /contacts/attributes | List all attributes
+*PakatApiV3Sdk.AttributesApi* | [**updateAttribute**](docs/AttributesApi.md#updateAttribute) | **PUT** /contacts/attributes/{attributeCategory}/{attributeName} | Update contact attribute
+*PakatApiV3Sdk.ContactsApi* | [**addContactToList**](docs/ContactsApi.md#addContactToList) | **POST** /contacts/lists/{listId}/contacts/add | Add existing contacts to a list
+*PakatApiV3Sdk.ContactsApi* | [**createAttribute**](docs/ContactsApi.md#createAttribute) | **POST** /contacts/attributes/{attributeCategory}/{attributeName} | Create contact attribute
+*PakatApiV3Sdk.ContactsApi* | [**createContact**](docs/ContactsApi.md#createContact) | **POST** /contacts | Create a contact
+*PakatApiV3Sdk.ContactsApi* | [**createDoiContact**](docs/ContactsApi.md#createDoiContact) | **POST** /contacts/doubleOptinConfirmation | Create Contact via DOI (Double-Opt-In) Flow
+*PakatApiV3Sdk.ContactsApi* | [**createFolder**](docs/ContactsApi.md#createFolder) | **POST** /contacts/folders | Create a folder
+*PakatApiV3Sdk.ContactsApi* | [**createList**](docs/ContactsApi.md#createList) | **POST** /contacts/lists | Create a list
+*PakatApiV3Sdk.ContactsApi* | [**deleteAttribute**](docs/ContactsApi.md#deleteAttribute) | **DELETE** /contacts/attributes/{attributeCategory}/{attributeName} | Delete an attribute
+*PakatApiV3Sdk.ContactsApi* | [**deleteContact**](docs/ContactsApi.md#deleteContact) | **DELETE** /contacts/{identifier} | Delete a contact
+*PakatApiV3Sdk.ContactsApi* | [**deleteFolder**](docs/ContactsApi.md#deleteFolder) | **DELETE** /contacts/folders/{folderId} | Delete a folder (and all its lists)
+*PakatApiV3Sdk.ContactsApi* | [**deleteList**](docs/ContactsApi.md#deleteList) | **DELETE** /contacts/lists/{listId} | Delete a list
+*PakatApiV3Sdk.ContactsApi* | [**getAttributes**](docs/ContactsApi.md#getAttributes) | **GET** /contacts/attributes | List all attributes
+*PakatApiV3Sdk.ContactsApi* | [**getContactInfo**](docs/ContactsApi.md#getContactInfo) | **GET** /contacts/{identifier} | Get a contact&#39;s details
+*PakatApiV3Sdk.ContactsApi* | [**getContactStats**](docs/ContactsApi.md#getContactStats) | **GET** /contacts/{identifier}/campaignStats | Get email campaigns&#39; statistics for a contact
+*PakatApiV3Sdk.ContactsApi* | [**getContacts**](docs/ContactsApi.md#getContacts) | **GET** /contacts | Get all the contacts
+*PakatApiV3Sdk.ContactsApi* | [**getContactsFromList**](docs/ContactsApi.md#getContactsFromList) | **GET** /contacts/lists/{listId}/contacts | Get contacts in a list
+*PakatApiV3Sdk.ContactsApi* | [**getFolder**](docs/ContactsApi.md#getFolder) | **GET** /contacts/folders/{folderId} | Returns a folder&#39;s details
+*PakatApiV3Sdk.ContactsApi* | [**getFolderLists**](docs/ContactsApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get lists in a folder
+*PakatApiV3Sdk.ContactsApi* | [**getFolders**](docs/ContactsApi.md#getFolders) | **GET** /contacts/folders | Get all folders
+*PakatApiV3Sdk.ContactsApi* | [**getList**](docs/ContactsApi.md#getList) | **GET** /contacts/lists/{listId} | Get a list&#39;s details
+*PakatApiV3Sdk.ContactsApi* | [**getLists**](docs/ContactsApi.md#getLists) | **GET** /contacts/lists | Get all the lists
+*PakatApiV3Sdk.ContactsApi* | [**importContacts**](docs/ContactsApi.md#importContacts) | **POST** /contacts/import | Import contacts
+*PakatApiV3Sdk.ContactsApi* | [**removeContactFromList**](docs/ContactsApi.md#removeContactFromList) | **POST** /contacts/lists/{listId}/contacts/remove | Delete a contact from a list
+*PakatApiV3Sdk.ContactsApi* | [**requestContactExport**](docs/ContactsApi.md#requestContactExport) | **POST** /contacts/export | Export contacts
+*PakatApiV3Sdk.ContactsApi* | [**updateAttribute**](docs/ContactsApi.md#updateAttribute) | **PUT** /contacts/attributes/{attributeCategory}/{attributeName} | Update contact attribute
+*PakatApiV3Sdk.ContactsApi* | [**updateContact**](docs/ContactsApi.md#updateContact) | **PUT** /contacts/{identifier} | Update a contact
+*PakatApiV3Sdk.ContactsApi* | [**updateFolder**](docs/ContactsApi.md#updateFolder) | **PUT** /contacts/folders/{folderId} | Update a folder
+*PakatApiV3Sdk.ContactsApi* | [**updateList**](docs/ContactsApi.md#updateList) | **PUT** /contacts/lists/{listId} | Update a list
+*PakatApiV3Sdk.EmailCampaignsApi* | [**createEmailCampaign**](docs/EmailCampaignsApi.md#createEmailCampaign) | **POST** /emailCampaigns | Create an email campaign
+*PakatApiV3Sdk.EmailCampaignsApi* | [**deleteEmailCampaign**](docs/EmailCampaignsApi.md#deleteEmailCampaign) | **DELETE** /emailCampaigns/{campaignId} | Delete an email campaign
+*PakatApiV3Sdk.EmailCampaignsApi* | [**emailExportRecipients**](docs/EmailCampaignsApi.md#emailExportRecipients) | **POST** /emailCampaigns/{campaignId}/exportRecipients | Export the recipients of an email campaign
+*PakatApiV3Sdk.EmailCampaignsApi* | [**getAbTestCampaignResult**](docs/EmailCampaignsApi.md#getAbTestCampaignResult) | **GET** /emailCampaigns/{campaignId}/abTestCampaignResult | Get an A/B test email campaign results
+*PakatApiV3Sdk.EmailCampaignsApi* | [**getEmailCampaign**](docs/EmailCampaignsApi.md#getEmailCampaign) | **GET** /emailCampaigns/{campaignId} | Get an email campaign report
+*PakatApiV3Sdk.EmailCampaignsApi* | [**getEmailCampaigns**](docs/EmailCampaignsApi.md#getEmailCampaigns) | **GET** /emailCampaigns | Return all your created email campaigns
+*PakatApiV3Sdk.EmailCampaignsApi* | [**getSharedTemplateUrl**](docs/EmailCampaignsApi.md#getSharedTemplateUrl) | **GET** /emailCampaigns/{campaignId}/sharedUrl | Get a shared template url
+*PakatApiV3Sdk.EmailCampaignsApi* | [**sendEmailCampaignNow**](docs/EmailCampaignsApi.md#sendEmailCampaignNow) | **POST** /emailCampaigns/{campaignId}/sendNow | Send an email campaign immediately, based on campaignId
+*PakatApiV3Sdk.EmailCampaignsApi* | [**sendReport**](docs/EmailCampaignsApi.md#sendReport) | **POST** /emailCampaigns/{campaignId}/sendReport | Send the report of a campaign
+*PakatApiV3Sdk.EmailCampaignsApi* | [**sendTestEmail**](docs/EmailCampaignsApi.md#sendTestEmail) | **POST** /emailCampaigns/{campaignId}/sendTest | Send an email campaign to your test list
+*PakatApiV3Sdk.EmailCampaignsApi* | [**updateCampaignStatus**](docs/EmailCampaignsApi.md#updateCampaignStatus) | **PUT** /emailCampaigns/{campaignId}/status | Update an email campaign status
+*PakatApiV3Sdk.EmailCampaignsApi* | [**updateEmailCampaign**](docs/EmailCampaignsApi.md#updateEmailCampaign) | **PUT** /emailCampaigns/{campaignId} | Update an email campaign
+*PakatApiV3Sdk.EmailCampaignsApi* | [**uploadImageToGallery**](docs/EmailCampaignsApi.md#uploadImageToGallery) | **POST** /emailCampaigns/images | Upload an image to your account&#39;s image gallery
+*PakatApiV3Sdk.FoldersApi* | [**createFolder**](docs/FoldersApi.md#createFolder) | **POST** /contacts/folders | Create a folder
+*PakatApiV3Sdk.FoldersApi* | [**deleteFolder**](docs/FoldersApi.md#deleteFolder) | **DELETE** /contacts/folders/{folderId} | Delete a folder (and all its lists)
+*PakatApiV3Sdk.FoldersApi* | [**getFolder**](docs/FoldersApi.md#getFolder) | **GET** /contacts/folders/{folderId} | Returns a folder&#39;s details
+*PakatApiV3Sdk.FoldersApi* | [**getFolderLists**](docs/FoldersApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get lists in a folder
+*PakatApiV3Sdk.FoldersApi* | [**getFolders**](docs/FoldersApi.md#getFolders) | **GET** /contacts/folders | Get all folders
+*PakatApiV3Sdk.FoldersApi* | [**updateFolder**](docs/FoldersApi.md#updateFolder) | **PUT** /contacts/folders/{folderId} | Update a folder
+*PakatApiV3Sdk.ListsApi* | [**addContactToList**](docs/ListsApi.md#addContactToList) | **POST** /contacts/lists/{listId}/contacts/add | Add existing contacts to a list
+*PakatApiV3Sdk.ListsApi* | [**createList**](docs/ListsApi.md#createList) | **POST** /contacts/lists | Create a list
+*PakatApiV3Sdk.ListsApi* | [**deleteList**](docs/ListsApi.md#deleteList) | **DELETE** /contacts/lists/{listId} | Delete a list
+*PakatApiV3Sdk.ListsApi* | [**getContactsFromList**](docs/ListsApi.md#getContactsFromList) | **GET** /contacts/lists/{listId}/contacts | Get contacts in a list
+*PakatApiV3Sdk.ListsApi* | [**getFolderLists**](docs/ListsApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get lists in a folder
+*PakatApiV3Sdk.ListsApi* | [**getList**](docs/ListsApi.md#getList) | **GET** /contacts/lists/{listId} | Get a list&#39;s details
+*PakatApiV3Sdk.ListsApi* | [**getLists**](docs/ListsApi.md#getLists) | **GET** /contacts/lists | Get all the lists
+*PakatApiV3Sdk.ListsApi* | [**removeContactFromList**](docs/ListsApi.md#removeContactFromList) | **POST** /contacts/lists/{listId}/contacts/remove | Delete a contact from a list
+*PakatApiV3Sdk.ListsApi* | [**updateList**](docs/ListsApi.md#updateList) | **PUT** /contacts/lists/{listId} | Update a list
+*PakatApiV3Sdk.ProcessApi* | [**getProcess**](docs/ProcessApi.md#getProcess) | **GET** /processes/{processId} | Return the informations for a process
+*PakatApiV3Sdk.ProcessApi* | [**getProcesses**](docs/ProcessApi.md#getProcesses) | **GET** /processes | Return all the processes for your account
+*PakatApiV3Sdk.ResellerApi* | [**addCredits**](docs/ResellerApi.md#addCredits) | **POST** /reseller/children/{childIdentifier}/credits/add | Add Email and/or SMS credits to a specific child account
+*PakatApiV3Sdk.ResellerApi* | [**associateIpToChild**](docs/ResellerApi.md#associateIpToChild) | **POST** /reseller/children/{childIdentifier}/ips/associate | Associate a dedicated IP to the child
+*PakatApiV3Sdk.ResellerApi* | [**createChildDomain**](docs/ResellerApi.md#createChildDomain) | **POST** /reseller/children/{childIdentifier}/domains | Create a domain for a child account
+*PakatApiV3Sdk.ResellerApi* | [**createResellerChild**](docs/ResellerApi.md#createResellerChild) | **POST** /reseller/children | Creates a reseller child
+*PakatApiV3Sdk.ResellerApi* | [**deleteChildDomain**](docs/ResellerApi.md#deleteChildDomain) | **DELETE** /reseller/children/{childIdentifier}/domains/{domainName} | Delete the sender domain of the reseller child based on the childIdentifier and domainName passed
+*PakatApiV3Sdk.ResellerApi* | [**deleteResellerChild**](docs/ResellerApi.md#deleteResellerChild) | **DELETE** /reseller/children/{childIdentifier} | Delete a single reseller child based on the child identifier supplied
+*PakatApiV3Sdk.ResellerApi* | [**dissociateIpFromChild**](docs/ResellerApi.md#dissociateIpFromChild) | **POST** /reseller/children/{childIdentifier}/ips/dissociate | Dissociate a dedicated IP to the child
+*PakatApiV3Sdk.ResellerApi* | [**getChildAccountCreationStatus**](docs/ResellerApi.md#getChildAccountCreationStatus) | **GET** /reseller/children/{childIdentifier}/accountCreationStatus | Get the status of a reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the identifier supplied
+*PakatApiV3Sdk.ResellerApi* | [**getChildDomains**](docs/ResellerApi.md#getChildDomains) | **GET** /reseller/children/{childIdentifier}/domains | Get all sender domains for a specific child account
+*PakatApiV3Sdk.ResellerApi* | [**getChildInfo**](docs/ResellerApi.md#getChildInfo) | **GET** /reseller/children/{childIdentifier} | Get a child account&#39;s details
+*PakatApiV3Sdk.ResellerApi* | [**getResellerChilds**](docs/ResellerApi.md#getResellerChilds) | **GET** /reseller/children | Get the list of all children accounts
+*PakatApiV3Sdk.ResellerApi* | [**getSsoToken**](docs/ResellerApi.md#getSsoToken) | **GET** /reseller/children/{childIdentifier}/auth | Get session token to access Sendinblue (SSO)
+*PakatApiV3Sdk.ResellerApi* | [**removeCredits**](docs/ResellerApi.md#removeCredits) | **POST** /reseller/children/{childIdentifier}/credits/remove | Remove Email and/or SMS credits from a specific child account
+*PakatApiV3Sdk.ResellerApi* | [**updateChildAccountStatus**](docs/ResellerApi.md#updateChildAccountStatus) | **PUT** /reseller/children/{childIdentifier}/accountStatus | Update info of reseller&#39;s child account status based on the childIdentifier supplied
+*PakatApiV3Sdk.ResellerApi* | [**updateChildDomain**](docs/ResellerApi.md#updateChildDomain) | **PUT** /reseller/children/{childIdentifier}/domains/{domainName} | Update the sender domain of reseller&#39;s child based on the childIdentifier and domainName passed
+*PakatApiV3Sdk.ResellerApi* | [**updateResellerChild**](docs/ResellerApi.md#updateResellerChild) | **PUT** /reseller/children/{childIdentifier} | Update info of reseller&#39;s child based on the child identifier supplied
+*PakatApiV3Sdk.SMSCampaignsApi* | [**createSmsCampaign**](docs/SMSCampaignsApi.md#createSmsCampaign) | **POST** /smsCampaigns | Creates an SMS campaign
+*PakatApiV3Sdk.SMSCampaignsApi* | [**deleteSmsCampaign**](docs/SMSCampaignsApi.md#deleteSmsCampaign) | **DELETE** /smsCampaigns/{campaignId} | Delete an SMS campaign
+*PakatApiV3Sdk.SMSCampaignsApi* | [**getSmsCampaign**](docs/SMSCampaignsApi.md#getSmsCampaign) | **GET** /smsCampaigns/{campaignId} | Get an SMS campaign
+*PakatApiV3Sdk.SMSCampaignsApi* | [**getSmsCampaigns**](docs/SMSCampaignsApi.md#getSmsCampaigns) | **GET** /smsCampaigns | Returns the information for all your created SMS campaigns
+*PakatApiV3Sdk.SMSCampaignsApi* | [**requestSmsRecipientExport**](docs/SMSCampaignsApi.md#requestSmsRecipientExport) | **POST** /smsCampaigns/{campaignId}/exportRecipients | Export an SMS campaign&#39;s recipients
+*PakatApiV3Sdk.SMSCampaignsApi* | [**sendSmsCampaignNow**](docs/SMSCampaignsApi.md#sendSmsCampaignNow) | **POST** /smsCampaigns/{campaignId}/sendNow | Send your SMS campaign immediately
+*PakatApiV3Sdk.SMSCampaignsApi* | [**sendSmsReport**](docs/SMSCampaignsApi.md#sendSmsReport) | **POST** /smsCampaigns/{campaignId}/sendReport | Send an SMS campaign&#39;s report
+*PakatApiV3Sdk.SMSCampaignsApi* | [**sendTestSms**](docs/SMSCampaignsApi.md#sendTestSms) | **POST** /smsCampaigns/{campaignId}/sendTest | Send a test SMS campaign
+*PakatApiV3Sdk.SMSCampaignsApi* | [**updateSmsCampaign**](docs/SMSCampaignsApi.md#updateSmsCampaign) | **PUT** /smsCampaigns/{campaignId} | Update an SMS campaign
+*PakatApiV3Sdk.SMSCampaignsApi* | [**updateSmsCampaignStatus**](docs/SMSCampaignsApi.md#updateSmsCampaignStatus) | **PUT** /smsCampaigns/{campaignId}/status | Update a campaign&#39;s status
+*PakatApiV3Sdk.SendersApi* | [**createSender**](docs/SendersApi.md#createSender) | **POST** /senders | Create a new sender
+*PakatApiV3Sdk.SendersApi* | [**deleteSender**](docs/SendersApi.md#deleteSender) | **DELETE** /senders/{senderId} | Delete a sender
+*PakatApiV3Sdk.SendersApi* | [**getIps**](docs/SendersApi.md#getIps) | **GET** /senders/ips | Get all the dedicated IPs for your account
+*PakatApiV3Sdk.SendersApi* | [**getIpsFromSender**](docs/SendersApi.md#getIpsFromSender) | **GET** /senders/{senderId}/ips | Get all the dedicated IPs for a sender
+*PakatApiV3Sdk.SendersApi* | [**getSenders**](docs/SendersApi.md#getSenders) | **GET** /senders | Get the list of all your senders
+*PakatApiV3Sdk.SendersApi* | [**updateSender**](docs/SendersApi.md#updateSender) | **PUT** /senders/{senderId} | Update a sender
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**createSmtpTemplate**](docs/TransactionalEmailsApi.md#createSmtpTemplate) | **POST** /smtp/templates | Create an email template
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**deleteHardbounces**](docs/TransactionalEmailsApi.md#deleteHardbounces) | **POST** /smtp/deleteHardbounces | Delete hardbounces
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**deleteSmtpTemplate**](docs/TransactionalEmailsApi.md#deleteSmtpTemplate) | **DELETE** /smtp/templates/{templateId} | Delete an inactive email template
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**getAggregatedSmtpReport**](docs/TransactionalEmailsApi.md#getAggregatedSmtpReport) | **GET** /smtp/statistics/aggregatedReport | Get your transactional email activity aggregated over a period of time
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**getEmailEventReport**](docs/TransactionalEmailsApi.md#getEmailEventReport) | **GET** /smtp/statistics/events | Get all your transactional email activity (unaggregated events)
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**getSmtpReport**](docs/TransactionalEmailsApi.md#getSmtpReport) | **GET** /smtp/statistics/reports | Get your transactional email activity aggregated per day
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**getSmtpTemplate**](docs/TransactionalEmailsApi.md#getSmtpTemplate) | **GET** /smtp/templates/{templateId} | Returns the template information
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**getSmtpTemplates**](docs/TransactionalEmailsApi.md#getSmtpTemplates) | **GET** /smtp/templates | Get the list of email templates
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**getTransacBlockedContacts**](docs/TransactionalEmailsApi.md#getTransacBlockedContacts) | **GET** /smtp/blockedContacts | Get the list of blocked or unsubscribed transactional contacts
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**getTransacEmailContent**](docs/TransactionalEmailsApi.md#getTransacEmailContent) | **GET** /smtp/emails/{uuid} | Get the personalized content of a sent transactional email
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**getTransacEmailsList**](docs/TransactionalEmailsApi.md#getTransacEmailsList) | **GET** /smtp/emails | Get the list of transactional emails on the basis of allowed filters
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**sendTemplate**](docs/TransactionalEmailsApi.md#sendTemplate) | **POST** /smtp/templates/{templateId}/send | Send a template
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**sendTestTemplate**](docs/TransactionalEmailsApi.md#sendTestTemplate) | **POST** /smtp/templates/{templateId}/sendTest | Send a template to your test list
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**sendTransacEmail**](docs/TransactionalEmailsApi.md#sendTransacEmail) | **POST** /smtp/email | Send a transactional email
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**smtpBlockedContactsEmailDelete**](docs/TransactionalEmailsApi.md#smtpBlockedContactsEmailDelete) | **DELETE** /smtp/blockedContacts/{email} | Unblock or resubscribe a transactional contact
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**smtpLogMessageIdDelete**](docs/TransactionalEmailsApi.md#smtpLogMessageIdDelete) | **DELETE** /smtp/log/{messageId} | Delete an SMTP transactional log
+*PakatApiV3Sdk.TransactionalEmailsApi* | [**updateSmtpTemplate**](docs/TransactionalEmailsApi.md#updateSmtpTemplate) | **PUT** /smtp/templates/{templateId} | Update an email template
+*PakatApiV3Sdk.TransactionalSMSApi* | [**getSmsEvents**](docs/TransactionalSMSApi.md#getSmsEvents) | **GET** /transactionalSMS/statistics/events | Get all your SMS activity (unaggregated events)
+*PakatApiV3Sdk.TransactionalSMSApi* | [**getTransacAggregatedSmsReport**](docs/TransactionalSMSApi.md#getTransacAggregatedSmsReport) | **GET** /transactionalSMS/statistics/aggregatedReport | Get your SMS activity aggregated over a period of time
+*PakatApiV3Sdk.TransactionalSMSApi* | [**getTransacSmsReport**](docs/TransactionalSMSApi.md#getTransacSmsReport) | **GET** /transactionalSMS/statistics/reports | Get your SMS activity aggregated per day
+*PakatApiV3Sdk.TransactionalSMSApi* | [**sendTransacSms**](docs/TransactionalSMSApi.md#sendTransacSms) | **POST** /transactionalSMS/sms | Send SMS message to a mobile number
+*PakatApiV3Sdk.WebhooksApi* | [**createWebhook**](docs/WebhooksApi.md#createWebhook) | **POST** /webhooks | Create a webhook
+*PakatApiV3Sdk.WebhooksApi* | [**deleteWebhook**](docs/WebhooksApi.md#deleteWebhook) | **DELETE** /webhooks/{webhookId} | Delete a webhook
+*PakatApiV3Sdk.WebhooksApi* | [**getWebhook**](docs/WebhooksApi.md#getWebhook) | **GET** /webhooks/{webhookId} | Get a webhook details
+*PakatApiV3Sdk.WebhooksApi* | [**getWebhooks**](docs/WebhooksApi.md#getWebhooks) | **GET** /webhooks | Get all webhooks
+*PakatApiV3Sdk.WebhooksApi* | [**updateWebhook**](docs/WebhooksApi.md#updateWebhook) | **PUT** /webhooks/{webhookId} | Update a webhook
 
 
 ## Documentation for Models
 
- - [SibApiV3Sdk.AbTestCampaignResult](docs/AbTestCampaignResult.md)
- - [SibApiV3Sdk.AbTestCampaignResultClickedLinks](docs/AbTestCampaignResultClickedLinks.md)
- - [SibApiV3Sdk.AbTestCampaignResultStatistics](docs/AbTestCampaignResultStatistics.md)
- - [SibApiV3Sdk.AbTestVersionClicks](docs/AbTestVersionClicks.md)
- - [SibApiV3Sdk.AbTestVersionClicksInner](docs/AbTestVersionClicksInner.md)
- - [SibApiV3Sdk.AbTestVersionStats](docs/AbTestVersionStats.md)
- - [SibApiV3Sdk.AddChildDomain](docs/AddChildDomain.md)
- - [SibApiV3Sdk.AddContactToList](docs/AddContactToList.md)
- - [SibApiV3Sdk.AddCredits](docs/AddCredits.md)
- - [SibApiV3Sdk.CreateAttribute](docs/CreateAttribute.md)
- - [SibApiV3Sdk.CreateAttributeEnumeration](docs/CreateAttributeEnumeration.md)
- - [SibApiV3Sdk.CreateChild](docs/CreateChild.md)
- - [SibApiV3Sdk.CreateContact](docs/CreateContact.md)
- - [SibApiV3Sdk.CreateDoiContact](docs/CreateDoiContact.md)
- - [SibApiV3Sdk.CreateEmailCampaign](docs/CreateEmailCampaign.md)
- - [SibApiV3Sdk.CreateEmailCampaignRecipients](docs/CreateEmailCampaignRecipients.md)
- - [SibApiV3Sdk.CreateEmailCampaignSender](docs/CreateEmailCampaignSender.md)
- - [SibApiV3Sdk.CreateList](docs/CreateList.md)
- - [SibApiV3Sdk.CreateModel](docs/CreateModel.md)
- - [SibApiV3Sdk.CreateReseller](docs/CreateReseller.md)
- - [SibApiV3Sdk.CreateSender](docs/CreateSender.md)
- - [SibApiV3Sdk.CreateSenderIps](docs/CreateSenderIps.md)
- - [SibApiV3Sdk.CreateSenderModel](docs/CreateSenderModel.md)
- - [SibApiV3Sdk.CreateSmsCampaign](docs/CreateSmsCampaign.md)
- - [SibApiV3Sdk.CreateSmsCampaignRecipients](docs/CreateSmsCampaignRecipients.md)
- - [SibApiV3Sdk.CreateSmtpEmail](docs/CreateSmtpEmail.md)
- - [SibApiV3Sdk.CreateSmtpTemplate](docs/CreateSmtpTemplate.md)
- - [SibApiV3Sdk.CreateSmtpTemplateSender](docs/CreateSmtpTemplateSender.md)
- - [SibApiV3Sdk.CreateUpdateContactModel](docs/CreateUpdateContactModel.md)
- - [SibApiV3Sdk.CreateUpdateFolder](docs/CreateUpdateFolder.md)
- - [SibApiV3Sdk.CreateWebhook](docs/CreateWebhook.md)
- - [SibApiV3Sdk.CreatedProcessId](docs/CreatedProcessId.md)
- - [SibApiV3Sdk.DeleteHardbounces](docs/DeleteHardbounces.md)
- - [SibApiV3Sdk.EmailExportRecipients](docs/EmailExportRecipients.md)
- - [SibApiV3Sdk.ErrorModel](docs/ErrorModel.md)
- - [SibApiV3Sdk.GetAccountMarketingAutomation](docs/GetAccountMarketingAutomation.md)
- - [SibApiV3Sdk.GetAccountPlan](docs/GetAccountPlan.md)
- - [SibApiV3Sdk.GetAccountRelay](docs/GetAccountRelay.md)
- - [SibApiV3Sdk.GetAccountRelayData](docs/GetAccountRelayData.md)
- - [SibApiV3Sdk.GetAggregatedReport](docs/GetAggregatedReport.md)
- - [SibApiV3Sdk.GetAttributes](docs/GetAttributes.md)
- - [SibApiV3Sdk.GetAttributesAttributes](docs/GetAttributesAttributes.md)
- - [SibApiV3Sdk.GetAttributesEnumeration](docs/GetAttributesEnumeration.md)
- - [SibApiV3Sdk.GetCampaignOverview](docs/GetCampaignOverview.md)
- - [SibApiV3Sdk.GetCampaignRecipients](docs/GetCampaignRecipients.md)
- - [SibApiV3Sdk.GetCampaignStats](docs/GetCampaignStats.md)
- - [SibApiV3Sdk.GetChildAccountCreationStatus](docs/GetChildAccountCreationStatus.md)
- - [SibApiV3Sdk.GetChildDomain](docs/GetChildDomain.md)
- - [SibApiV3Sdk.GetChildDomains](docs/GetChildDomains.md)
- - [SibApiV3Sdk.GetChildInfoApiKeys](docs/GetChildInfoApiKeys.md)
- - [SibApiV3Sdk.GetChildInfoApiKeysV2](docs/GetChildInfoApiKeysV2.md)
- - [SibApiV3Sdk.GetChildInfoApiKeysV3](docs/GetChildInfoApiKeysV3.md)
- - [SibApiV3Sdk.GetChildInfoCredits](docs/GetChildInfoCredits.md)
- - [SibApiV3Sdk.GetChildInfoStatistics](docs/GetChildInfoStatistics.md)
- - [SibApiV3Sdk.GetChildrenList](docs/GetChildrenList.md)
- - [SibApiV3Sdk.GetClient](docs/GetClient.md)
- - [SibApiV3Sdk.GetContactCampaignStats](docs/GetContactCampaignStats.md)
- - [SibApiV3Sdk.GetContactCampaignStatsClicked](docs/GetContactCampaignStatsClicked.md)
- - [SibApiV3Sdk.GetContactCampaignStatsOpened](docs/GetContactCampaignStatsOpened.md)
- - [SibApiV3Sdk.GetContactCampaignStatsTransacAttributes](docs/GetContactCampaignStatsTransacAttributes.md)
- - [SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions](docs/GetContactCampaignStatsUnsubscriptions.md)
- - [SibApiV3Sdk.GetContactDetails](docs/GetContactDetails.md)
- - [SibApiV3Sdk.GetContacts](docs/GetContacts.md)
- - [SibApiV3Sdk.GetDeviceBrowserStats](docs/GetDeviceBrowserStats.md)
- - [SibApiV3Sdk.GetEmailCampaigns](docs/GetEmailCampaigns.md)
- - [SibApiV3Sdk.GetEmailEventReport](docs/GetEmailEventReport.md)
- - [SibApiV3Sdk.GetEmailEventReportEvents](docs/GetEmailEventReportEvents.md)
- - [SibApiV3Sdk.GetExtendedCampaignOverviewSender](docs/GetExtendedCampaignOverviewSender.md)
- - [SibApiV3Sdk.GetExtendedCampaignStats](docs/GetExtendedCampaignStats.md)
- - [SibApiV3Sdk.GetExtendedClientAddress](docs/GetExtendedClientAddress.md)
- - [SibApiV3Sdk.GetExtendedContactDetailsStatistics](docs/GetExtendedContactDetailsStatistics.md)
- - [SibApiV3Sdk.GetExtendedContactDetailsStatisticsClicked](docs/GetExtendedContactDetailsStatisticsClicked.md)
- - [SibApiV3Sdk.GetExtendedContactDetailsStatisticsLinks](docs/GetExtendedContactDetailsStatisticsLinks.md)
- - [SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent](docs/GetExtendedContactDetailsStatisticsMessagesSent.md)
- - [SibApiV3Sdk.GetExtendedContactDetailsStatisticsOpened](docs/GetExtendedContactDetailsStatisticsOpened.md)
- - [SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions](docs/GetExtendedContactDetailsStatisticsUnsubscriptions.md)
- - [SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription](docs/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription.md)
- - [SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription](docs/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription.md)
- - [SibApiV3Sdk.GetExtendedListCampaignStats](docs/GetExtendedListCampaignStats.md)
- - [SibApiV3Sdk.GetFolder](docs/GetFolder.md)
- - [SibApiV3Sdk.GetFolderLists](docs/GetFolderLists.md)
- - [SibApiV3Sdk.GetFolders](docs/GetFolders.md)
- - [SibApiV3Sdk.GetIp](docs/GetIp.md)
- - [SibApiV3Sdk.GetIpFromSender](docs/GetIpFromSender.md)
- - [SibApiV3Sdk.GetIps](docs/GetIps.md)
- - [SibApiV3Sdk.GetIpsFromSender](docs/GetIpsFromSender.md)
- - [SibApiV3Sdk.GetList](docs/GetList.md)
- - [SibApiV3Sdk.GetLists](docs/GetLists.md)
- - [SibApiV3Sdk.GetProcess](docs/GetProcess.md)
- - [SibApiV3Sdk.GetProcesses](docs/GetProcesses.md)
- - [SibApiV3Sdk.GetReports](docs/GetReports.md)
- - [SibApiV3Sdk.GetReportsReports](docs/GetReportsReports.md)
- - [SibApiV3Sdk.GetSendersList](docs/GetSendersList.md)
- - [SibApiV3Sdk.GetSendersListIps](docs/GetSendersListIps.md)
- - [SibApiV3Sdk.GetSendersListSenders](docs/GetSendersListSenders.md)
- - [SibApiV3Sdk.GetSharedTemplateUrl](docs/GetSharedTemplateUrl.md)
- - [SibApiV3Sdk.GetSmsCampaignOverview](docs/GetSmsCampaignOverview.md)
- - [SibApiV3Sdk.GetSmsCampaignStats](docs/GetSmsCampaignStats.md)
- - [SibApiV3Sdk.GetSmsCampaigns](docs/GetSmsCampaigns.md)
- - [SibApiV3Sdk.GetSmsEventReport](docs/GetSmsEventReport.md)
- - [SibApiV3Sdk.GetSmsEventReportEvents](docs/GetSmsEventReportEvents.md)
- - [SibApiV3Sdk.GetSmtpTemplateOverview](docs/GetSmtpTemplateOverview.md)
- - [SibApiV3Sdk.GetSmtpTemplateOverviewSender](docs/GetSmtpTemplateOverviewSender.md)
- - [SibApiV3Sdk.GetSmtpTemplates](docs/GetSmtpTemplates.md)
- - [SibApiV3Sdk.GetSsoToken](docs/GetSsoToken.md)
- - [SibApiV3Sdk.GetStatsByBrowser](docs/GetStatsByBrowser.md)
- - [SibApiV3Sdk.GetStatsByDevice](docs/GetStatsByDevice.md)
- - [SibApiV3Sdk.GetStatsByDomain](docs/GetStatsByDomain.md)
- - [SibApiV3Sdk.GetTransacAggregatedSmsReport](docs/GetTransacAggregatedSmsReport.md)
- - [SibApiV3Sdk.GetTransacBlockedContacts](docs/GetTransacBlockedContacts.md)
- - [SibApiV3Sdk.GetTransacBlockedContactsContacts](docs/GetTransacBlockedContactsContacts.md)
- - [SibApiV3Sdk.GetTransacBlockedContactsReason](docs/GetTransacBlockedContactsReason.md)
- - [SibApiV3Sdk.GetTransacEmailContent](docs/GetTransacEmailContent.md)
- - [SibApiV3Sdk.GetTransacEmailContentEvents](docs/GetTransacEmailContentEvents.md)
- - [SibApiV3Sdk.GetTransacEmailsList](docs/GetTransacEmailsList.md)
- - [SibApiV3Sdk.GetTransacEmailsListTransactionalEmails](docs/GetTransacEmailsListTransactionalEmails.md)
- - [SibApiV3Sdk.GetTransacSmsReport](docs/GetTransacSmsReport.md)
- - [SibApiV3Sdk.GetTransacSmsReportReports](docs/GetTransacSmsReportReports.md)
- - [SibApiV3Sdk.GetWebhook](docs/GetWebhook.md)
- - [SibApiV3Sdk.GetWebhooks](docs/GetWebhooks.md)
- - [SibApiV3Sdk.ManageIp](docs/ManageIp.md)
- - [SibApiV3Sdk.PostContactInfo](docs/PostContactInfo.md)
- - [SibApiV3Sdk.PostContactInfoContacts](docs/PostContactInfoContacts.md)
- - [SibApiV3Sdk.PostSendFailed](docs/PostSendFailed.md)
- - [SibApiV3Sdk.PostSendSmsTestFailed](docs/PostSendSmsTestFailed.md)
- - [SibApiV3Sdk.RemainingCreditModel](docs/RemainingCreditModel.md)
- - [SibApiV3Sdk.RemainingCreditModelChild](docs/RemainingCreditModelChild.md)
- - [SibApiV3Sdk.RemainingCreditModelReseller](docs/RemainingCreditModelReseller.md)
- - [SibApiV3Sdk.RemoveContactFromList](docs/RemoveContactFromList.md)
- - [SibApiV3Sdk.RemoveCredits](docs/RemoveCredits.md)
- - [SibApiV3Sdk.RequestContactExport](docs/RequestContactExport.md)
- - [SibApiV3Sdk.RequestContactExportCustomContactFilter](docs/RequestContactExportCustomContactFilter.md)
- - [SibApiV3Sdk.RequestContactImport](docs/RequestContactImport.md)
- - [SibApiV3Sdk.RequestContactImportNewList](docs/RequestContactImportNewList.md)
- - [SibApiV3Sdk.RequestSmsRecipientExport](docs/RequestSmsRecipientExport.md)
- - [SibApiV3Sdk.SendEmail](docs/SendEmail.md)
- - [SibApiV3Sdk.SendEmailAttachment](docs/SendEmailAttachment.md)
- - [SibApiV3Sdk.SendReport](docs/SendReport.md)
- - [SibApiV3Sdk.SendReportEmail](docs/SendReportEmail.md)
- - [SibApiV3Sdk.SendSms](docs/SendSms.md)
- - [SibApiV3Sdk.SendSmtpEmail](docs/SendSmtpEmail.md)
- - [SibApiV3Sdk.SendSmtpEmailAttachment](docs/SendSmtpEmailAttachment.md)
- - [SibApiV3Sdk.SendSmtpEmailBcc](docs/SendSmtpEmailBcc.md)
- - [SibApiV3Sdk.SendSmtpEmailCc](docs/SendSmtpEmailCc.md)
- - [SibApiV3Sdk.SendSmtpEmailReplyTo](docs/SendSmtpEmailReplyTo.md)
- - [SibApiV3Sdk.SendSmtpEmailSender](docs/SendSmtpEmailSender.md)
- - [SibApiV3Sdk.SendSmtpEmailTo](docs/SendSmtpEmailTo.md)
- - [SibApiV3Sdk.SendTemplateEmail](docs/SendTemplateEmail.md)
- - [SibApiV3Sdk.SendTestEmail](docs/SendTestEmail.md)
- - [SibApiV3Sdk.SendTestSms](docs/SendTestSms.md)
- - [SibApiV3Sdk.SendTransacSms](docs/SendTransacSms.md)
- - [SibApiV3Sdk.UpdateAttribute](docs/UpdateAttribute.md)
- - [SibApiV3Sdk.UpdateAttributeEnumeration](docs/UpdateAttributeEnumeration.md)
- - [SibApiV3Sdk.UpdateCampaignStatus](docs/UpdateCampaignStatus.md)
- - [SibApiV3Sdk.UpdateChild](docs/UpdateChild.md)
- - [SibApiV3Sdk.UpdateChildAccountStatus](docs/UpdateChildAccountStatus.md)
- - [SibApiV3Sdk.UpdateChildDomain](docs/UpdateChildDomain.md)
- - [SibApiV3Sdk.UpdateContact](docs/UpdateContact.md)
- - [SibApiV3Sdk.UpdateEmailCampaign](docs/UpdateEmailCampaign.md)
- - [SibApiV3Sdk.UpdateEmailCampaignRecipients](docs/UpdateEmailCampaignRecipients.md)
- - [SibApiV3Sdk.UpdateEmailCampaignSender](docs/UpdateEmailCampaignSender.md)
- - [SibApiV3Sdk.UpdateList](docs/UpdateList.md)
- - [SibApiV3Sdk.UpdateSender](docs/UpdateSender.md)
- - [SibApiV3Sdk.UpdateSmsCampaign](docs/UpdateSmsCampaign.md)
- - [SibApiV3Sdk.UpdateSmtpTemplate](docs/UpdateSmtpTemplate.md)
- - [SibApiV3Sdk.UpdateSmtpTemplateSender](docs/UpdateSmtpTemplateSender.md)
- - [SibApiV3Sdk.UpdateWebhook](docs/UpdateWebhook.md)
- - [SibApiV3Sdk.UploadImageToGallery](docs/UploadImageToGallery.md)
- - [SibApiV3Sdk.GetChildInfo](docs/GetChildInfo.md)
- - [SibApiV3Sdk.GetExtendedCampaignOverview](docs/GetExtendedCampaignOverview.md)
- - [SibApiV3Sdk.GetExtendedClient](docs/GetExtendedClient.md)
- - [SibApiV3Sdk.GetExtendedContactDetails](docs/GetExtendedContactDetails.md)
- - [SibApiV3Sdk.GetExtendedList](docs/GetExtendedList.md)
- - [SibApiV3Sdk.GetSmsCampaign](docs/GetSmsCampaign.md)
- - [SibApiV3Sdk.GetAccount](docs/GetAccount.md)
- - [SibApiV3Sdk.GetEmailCampaign](docs/GetEmailCampaign.md)
+ - [PakatApiV3Sdk.AbTestCampaignResult](docs/AbTestCampaignResult.md)
+ - [PakatApiV3Sdk.AbTestCampaignResultClickedLinks](docs/AbTestCampaignResultClickedLinks.md)
+ - [PakatApiV3Sdk.AbTestCampaignResultStatistics](docs/AbTestCampaignResultStatistics.md)
+ - [PakatApiV3Sdk.AbTestVersionClicks](docs/AbTestVersionClicks.md)
+ - [PakatApiV3Sdk.AbTestVersionClicksInner](docs/AbTestVersionClicksInner.md)
+ - [PakatApiV3Sdk.AbTestVersionStats](docs/AbTestVersionStats.md)
+ - [PakatApiV3Sdk.AddChildDomain](docs/AddChildDomain.md)
+ - [PakatApiV3Sdk.AddContactToList](docs/AddContactToList.md)
+ - [PakatApiV3Sdk.AddCredits](docs/AddCredits.md)
+ - [PakatApiV3Sdk.CreateAttribute](docs/CreateAttribute.md)
+ - [PakatApiV3Sdk.CreateAttributeEnumeration](docs/CreateAttributeEnumeration.md)
+ - [PakatApiV3Sdk.CreateChild](docs/CreateChild.md)
+ - [PakatApiV3Sdk.CreateContact](docs/CreateContact.md)
+ - [PakatApiV3Sdk.CreateDoiContact](docs/CreateDoiContact.md)
+ - [PakatApiV3Sdk.CreateEmailCampaign](docs/CreateEmailCampaign.md)
+ - [PakatApiV3Sdk.CreateEmailCampaignRecipients](docs/CreateEmailCampaignRecipients.md)
+ - [PakatApiV3Sdk.CreateEmailCampaignSender](docs/CreateEmailCampaignSender.md)
+ - [PakatApiV3Sdk.CreateList](docs/CreateList.md)
+ - [PakatApiV3Sdk.CreateModel](docs/CreateModel.md)
+ - [PakatApiV3Sdk.CreateReseller](docs/CreateReseller.md)
+ - [PakatApiV3Sdk.CreateSender](docs/CreateSender.md)
+ - [PakatApiV3Sdk.CreateSenderIps](docs/CreateSenderIps.md)
+ - [PakatApiV3Sdk.CreateSenderModel](docs/CreateSenderModel.md)
+ - [PakatApiV3Sdk.CreateSmsCampaign](docs/CreateSmsCampaign.md)
+ - [PakatApiV3Sdk.CreateSmsCampaignRecipients](docs/CreateSmsCampaignRecipients.md)
+ - [PakatApiV3Sdk.CreateSmtpEmail](docs/CreateSmtpEmail.md)
+ - [PakatApiV3Sdk.CreateSmtpTemplate](docs/CreateSmtpTemplate.md)
+ - [PakatApiV3Sdk.CreateSmtpTemplateSender](docs/CreateSmtpTemplateSender.md)
+ - [PakatApiV3Sdk.CreateUpdateContactModel](docs/CreateUpdateContactModel.md)
+ - [PakatApiV3Sdk.CreateUpdateFolder](docs/CreateUpdateFolder.md)
+ - [PakatApiV3Sdk.CreateWebhook](docs/CreateWebhook.md)
+ - [PakatApiV3Sdk.CreatedProcessId](docs/CreatedProcessId.md)
+ - [PakatApiV3Sdk.DeleteHardbounces](docs/DeleteHardbounces.md)
+ - [PakatApiV3Sdk.EmailExportRecipients](docs/EmailExportRecipients.md)
+ - [PakatApiV3Sdk.ErrorModel](docs/ErrorModel.md)
+ - [PakatApiV3Sdk.GetAccountMarketingAutomation](docs/GetAccountMarketingAutomation.md)
+ - [PakatApiV3Sdk.GetAccountPlan](docs/GetAccountPlan.md)
+ - [PakatApiV3Sdk.GetAccountRelay](docs/GetAccountRelay.md)
+ - [PakatApiV3Sdk.GetAccountRelayData](docs/GetAccountRelayData.md)
+ - [PakatApiV3Sdk.GetAggregatedReport](docs/GetAggregatedReport.md)
+ - [PakatApiV3Sdk.GetAttributes](docs/GetAttributes.md)
+ - [PakatApiV3Sdk.GetAttributesAttributes](docs/GetAttributesAttributes.md)
+ - [PakatApiV3Sdk.GetAttributesEnumeration](docs/GetAttributesEnumeration.md)
+ - [PakatApiV3Sdk.GetCampaignOverview](docs/GetCampaignOverview.md)
+ - [PakatApiV3Sdk.GetCampaignRecipients](docs/GetCampaignRecipients.md)
+ - [PakatApiV3Sdk.GetCampaignStats](docs/GetCampaignStats.md)
+ - [PakatApiV3Sdk.GetChildAccountCreationStatus](docs/GetChildAccountCreationStatus.md)
+ - [PakatApiV3Sdk.GetChildDomain](docs/GetChildDomain.md)
+ - [PakatApiV3Sdk.GetChildDomains](docs/GetChildDomains.md)
+ - [PakatApiV3Sdk.GetChildInfoApiKeys](docs/GetChildInfoApiKeys.md)
+ - [PakatApiV3Sdk.GetChildInfoApiKeysV2](docs/GetChildInfoApiKeysV2.md)
+ - [PakatApiV3Sdk.GetChildInfoApiKeysV3](docs/GetChildInfoApiKeysV3.md)
+ - [PakatApiV3Sdk.GetChildInfoCredits](docs/GetChildInfoCredits.md)
+ - [PakatApiV3Sdk.GetChildInfoStatistics](docs/GetChildInfoStatistics.md)
+ - [PakatApiV3Sdk.GetChildrenList](docs/GetChildrenList.md)
+ - [PakatApiV3Sdk.GetClient](docs/GetClient.md)
+ - [PakatApiV3Sdk.GetContactCampaignStats](docs/GetContactCampaignStats.md)
+ - [PakatApiV3Sdk.GetContactCampaignStatsClicked](docs/GetContactCampaignStatsClicked.md)
+ - [PakatApiV3Sdk.GetContactCampaignStatsOpened](docs/GetContactCampaignStatsOpened.md)
+ - [PakatApiV3Sdk.GetContactCampaignStatsTransacAttributes](docs/GetContactCampaignStatsTransacAttributes.md)
+ - [PakatApiV3Sdk.GetContactCampaignStatsUnsubscriptions](docs/GetContactCampaignStatsUnsubscriptions.md)
+ - [PakatApiV3Sdk.GetContactDetails](docs/GetContactDetails.md)
+ - [PakatApiV3Sdk.GetContacts](docs/GetContacts.md)
+ - [PakatApiV3Sdk.GetDeviceBrowserStats](docs/GetDeviceBrowserStats.md)
+ - [PakatApiV3Sdk.GetEmailCampaigns](docs/GetEmailCampaigns.md)
+ - [PakatApiV3Sdk.GetEmailEventReport](docs/GetEmailEventReport.md)
+ - [PakatApiV3Sdk.GetEmailEventReportEvents](docs/GetEmailEventReportEvents.md)
+ - [PakatApiV3Sdk.GetExtendedCampaignOverviewSender](docs/GetExtendedCampaignOverviewSender.md)
+ - [PakatApiV3Sdk.GetExtendedCampaignStats](docs/GetExtendedCampaignStats.md)
+ - [PakatApiV3Sdk.GetExtendedClientAddress](docs/GetExtendedClientAddress.md)
+ - [PakatApiV3Sdk.GetExtendedContactDetailsStatistics](docs/GetExtendedContactDetailsStatistics.md)
+ - [PakatApiV3Sdk.GetExtendedContactDetailsStatisticsClicked](docs/GetExtendedContactDetailsStatisticsClicked.md)
+ - [PakatApiV3Sdk.GetExtendedContactDetailsStatisticsLinks](docs/GetExtendedContactDetailsStatisticsLinks.md)
+ - [PakatApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent](docs/GetExtendedContactDetailsStatisticsMessagesSent.md)
+ - [PakatApiV3Sdk.GetExtendedContactDetailsStatisticsOpened](docs/GetExtendedContactDetailsStatisticsOpened.md)
+ - [PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions](docs/GetExtendedContactDetailsStatisticsUnsubscriptions.md)
+ - [PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription](docs/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription.md)
+ - [PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription](docs/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription.md)
+ - [PakatApiV3Sdk.GetExtendedListCampaignStats](docs/GetExtendedListCampaignStats.md)
+ - [PakatApiV3Sdk.GetFolder](docs/GetFolder.md)
+ - [PakatApiV3Sdk.GetFolderLists](docs/GetFolderLists.md)
+ - [PakatApiV3Sdk.GetFolders](docs/GetFolders.md)
+ - [PakatApiV3Sdk.GetIp](docs/GetIp.md)
+ - [PakatApiV3Sdk.GetIpFromSender](docs/GetIpFromSender.md)
+ - [PakatApiV3Sdk.GetIps](docs/GetIps.md)
+ - [PakatApiV3Sdk.GetIpsFromSender](docs/GetIpsFromSender.md)
+ - [PakatApiV3Sdk.GetList](docs/GetList.md)
+ - [PakatApiV3Sdk.GetLists](docs/GetLists.md)
+ - [PakatApiV3Sdk.GetProcess](docs/GetProcess.md)
+ - [PakatApiV3Sdk.GetProcesses](docs/GetProcesses.md)
+ - [PakatApiV3Sdk.GetReports](docs/GetReports.md)
+ - [PakatApiV3Sdk.GetReportsReports](docs/GetReportsReports.md)
+ - [PakatApiV3Sdk.GetSendersList](docs/GetSendersList.md)
+ - [PakatApiV3Sdk.GetSendersListIps](docs/GetSendersListIps.md)
+ - [PakatApiV3Sdk.GetSendersListSenders](docs/GetSendersListSenders.md)
+ - [PakatApiV3Sdk.GetSharedTemplateUrl](docs/GetSharedTemplateUrl.md)
+ - [PakatApiV3Sdk.GetSmsCampaignOverview](docs/GetSmsCampaignOverview.md)
+ - [PakatApiV3Sdk.GetSmsCampaignStats](docs/GetSmsCampaignStats.md)
+ - [PakatApiV3Sdk.GetSmsCampaigns](docs/GetSmsCampaigns.md)
+ - [PakatApiV3Sdk.GetSmsEventReport](docs/GetSmsEventReport.md)
+ - [PakatApiV3Sdk.GetSmsEventReportEvents](docs/GetSmsEventReportEvents.md)
+ - [PakatApiV3Sdk.GetSmtpTemplateOverview](docs/GetSmtpTemplateOverview.md)
+ - [PakatApiV3Sdk.GetSmtpTemplateOverviewSender](docs/GetSmtpTemplateOverviewSender.md)
+ - [PakatApiV3Sdk.GetSmtpTemplates](docs/GetSmtpTemplates.md)
+ - [PakatApiV3Sdk.GetSsoToken](docs/GetSsoToken.md)
+ - [PakatApiV3Sdk.GetStatsByBrowser](docs/GetStatsByBrowser.md)
+ - [PakatApiV3Sdk.GetStatsByDevice](docs/GetStatsByDevice.md)
+ - [PakatApiV3Sdk.GetStatsByDomain](docs/GetStatsByDomain.md)
+ - [PakatApiV3Sdk.GetTransacAggregatedSmsReport](docs/GetTransacAggregatedSmsReport.md)
+ - [PakatApiV3Sdk.GetTransacBlockedContacts](docs/GetTransacBlockedContacts.md)
+ - [PakatApiV3Sdk.GetTransacBlockedContactsContacts](docs/GetTransacBlockedContactsContacts.md)
+ - [PakatApiV3Sdk.GetTransacBlockedContactsReason](docs/GetTransacBlockedContactsReason.md)
+ - [PakatApiV3Sdk.GetTransacEmailContent](docs/GetTransacEmailContent.md)
+ - [PakatApiV3Sdk.GetTransacEmailContentEvents](docs/GetTransacEmailContentEvents.md)
+ - [PakatApiV3Sdk.GetTransacEmailsList](docs/GetTransacEmailsList.md)
+ - [PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails](docs/GetTransacEmailsListTransactionalEmails.md)
+ - [PakatApiV3Sdk.GetTransacSmsReport](docs/GetTransacSmsReport.md)
+ - [PakatApiV3Sdk.GetTransacSmsReportReports](docs/GetTransacSmsReportReports.md)
+ - [PakatApiV3Sdk.GetWebhook](docs/GetWebhook.md)
+ - [PakatApiV3Sdk.GetWebhooks](docs/GetWebhooks.md)
+ - [PakatApiV3Sdk.ManageIp](docs/ManageIp.md)
+ - [PakatApiV3Sdk.PostContactInfo](docs/PostContactInfo.md)
+ - [PakatApiV3Sdk.PostContactInfoContacts](docs/PostContactInfoContacts.md)
+ - [PakatApiV3Sdk.PostSendFailed](docs/PostSendFailed.md)
+ - [PakatApiV3Sdk.PostSendSmsTestFailed](docs/PostSendSmsTestFailed.md)
+ - [PakatApiV3Sdk.RemainingCreditModel](docs/RemainingCreditModel.md)
+ - [PakatApiV3Sdk.RemainingCreditModelChild](docs/RemainingCreditModelChild.md)
+ - [PakatApiV3Sdk.RemainingCreditModelReseller](docs/RemainingCreditModelReseller.md)
+ - [PakatApiV3Sdk.RemoveContactFromList](docs/RemoveContactFromList.md)
+ - [PakatApiV3Sdk.RemoveCredits](docs/RemoveCredits.md)
+ - [PakatApiV3Sdk.RequestContactExport](docs/RequestContactExport.md)
+ - [PakatApiV3Sdk.RequestContactExportCustomContactFilter](docs/RequestContactExportCustomContactFilter.md)
+ - [PakatApiV3Sdk.RequestContactImport](docs/RequestContactImport.md)
+ - [PakatApiV3Sdk.RequestContactImportNewList](docs/RequestContactImportNewList.md)
+ - [PakatApiV3Sdk.RequestSmsRecipientExport](docs/RequestSmsRecipientExport.md)
+ - [PakatApiV3Sdk.SendEmail](docs/SendEmail.md)
+ - [PakatApiV3Sdk.SendEmailAttachment](docs/SendEmailAttachment.md)
+ - [PakatApiV3Sdk.SendReport](docs/SendReport.md)
+ - [PakatApiV3Sdk.SendReportEmail](docs/SendReportEmail.md)
+ - [PakatApiV3Sdk.SendSms](docs/SendSms.md)
+ - [PakatApiV3Sdk.SendSmtpEmail](docs/SendSmtpEmail.md)
+ - [PakatApiV3Sdk.SendSmtpEmailAttachment](docs/SendSmtpEmailAttachment.md)
+ - [PakatApiV3Sdk.SendSmtpEmailBcc](docs/SendSmtpEmailBcc.md)
+ - [PakatApiV3Sdk.SendSmtpEmailCc](docs/SendSmtpEmailCc.md)
+ - [PakatApiV3Sdk.SendSmtpEmailReplyTo](docs/SendSmtpEmailReplyTo.md)
+ - [PakatApiV3Sdk.SendSmtpEmailSender](docs/SendSmtpEmailSender.md)
+ - [PakatApiV3Sdk.SendSmtpEmailTo](docs/SendSmtpEmailTo.md)
+ - [PakatApiV3Sdk.SendTemplateEmail](docs/SendTemplateEmail.md)
+ - [PakatApiV3Sdk.SendTestEmail](docs/SendTestEmail.md)
+ - [PakatApiV3Sdk.SendTestSms](docs/SendTestSms.md)
+ - [PakatApiV3Sdk.SendTransacSms](docs/SendTransacSms.md)
+ - [PakatApiV3Sdk.UpdateAttribute](docs/UpdateAttribute.md)
+ - [PakatApiV3Sdk.UpdateAttributeEnumeration](docs/UpdateAttributeEnumeration.md)
+ - [PakatApiV3Sdk.UpdateCampaignStatus](docs/UpdateCampaignStatus.md)
+ - [PakatApiV3Sdk.UpdateChild](docs/UpdateChild.md)
+ - [PakatApiV3Sdk.UpdateChildAccountStatus](docs/UpdateChildAccountStatus.md)
+ - [PakatApiV3Sdk.UpdateChildDomain](docs/UpdateChildDomain.md)
+ - [PakatApiV3Sdk.UpdateContact](docs/UpdateContact.md)
+ - [PakatApiV3Sdk.UpdateEmailCampaign](docs/UpdateEmailCampaign.md)
+ - [PakatApiV3Sdk.UpdateEmailCampaignRecipients](docs/UpdateEmailCampaignRecipients.md)
+ - [PakatApiV3Sdk.UpdateEmailCampaignSender](docs/UpdateEmailCampaignSender.md)
+ - [PakatApiV3Sdk.UpdateList](docs/UpdateList.md)
+ - [PakatApiV3Sdk.UpdateSender](docs/UpdateSender.md)
+ - [PakatApiV3Sdk.UpdateSmsCampaign](docs/UpdateSmsCampaign.md)
+ - [PakatApiV3Sdk.UpdateSmtpTemplate](docs/UpdateSmtpTemplate.md)
+ - [PakatApiV3Sdk.UpdateSmtpTemplateSender](docs/UpdateSmtpTemplateSender.md)
+ - [PakatApiV3Sdk.UpdateWebhook](docs/UpdateWebhook.md)
+ - [PakatApiV3Sdk.UploadImageToGallery](docs/UploadImageToGallery.md)
+ - [PakatApiV3Sdk.GetChildInfo](docs/GetChildInfo.md)
+ - [PakatApiV3Sdk.GetExtendedCampaignOverview](docs/GetExtendedCampaignOverview.md)
+ - [PakatApiV3Sdk.GetExtendedClient](docs/GetExtendedClient.md)
+ - [PakatApiV3Sdk.GetExtendedContactDetails](docs/GetExtendedContactDetails.md)
+ - [PakatApiV3Sdk.GetExtendedList](docs/GetExtendedList.md)
+ - [PakatApiV3Sdk.GetSmsCampaign](docs/GetSmsCampaign.md)
+ - [PakatApiV3Sdk.GetAccount](docs/GetAccount.md)
+ - [PakatApiV3Sdk.GetEmailCampaign](docs/GetEmailCampaign.md)
 
 
 ## Documentation for Authorization

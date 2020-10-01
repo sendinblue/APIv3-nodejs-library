@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.DeleteHardbounces();
+    instance = new PakatApiV3Sdk.DeleteHardbounces();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('DeleteHardbounces', function() {
     it('should create an instance of DeleteHardbounces', function() {
       // uncomment below and update the code to test DeleteHardbounces
-      //var instane = new SibApiV3Sdk.DeleteHardbounces();
-      //expect(instance).to.be.a(SibApiV3Sdk.DeleteHardbounces);
+      //var instane = new PakatApiV3Sdk.DeleteHardbounces();
+      //expect(instance).to.be.a(PakatApiV3Sdk.DeleteHardbounces);
     });
 
     it('should have the property startDate (base name: "startDate")', function() {
       // uncomment below and update the code to test the property startDate
-      //var instane = new SibApiV3Sdk.DeleteHardbounces();
+      //var instane = new PakatApiV3Sdk.DeleteHardbounces();
       //expect(instance).to.be();
     });
 
     it('should have the property endDate (base name: "endDate")', function() {
       // uncomment below and update the code to test the property endDate
-      //var instane = new SibApiV3Sdk.DeleteHardbounces();
+      //var instane = new PakatApiV3Sdk.DeleteHardbounces();
       //expect(instance).to.be();
     });
 
     it('should have the property contactEmail (base name: "contactEmail")', function() {
       // uncomment below and update the code to test the property contactEmail
-      //var instane = new SibApiV3Sdk.DeleteHardbounces();
+      //var instane = new PakatApiV3Sdk.DeleteHardbounces();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.RequestContactImportNewList
+# PakatApiV3Sdk.RequestContactImportNewList
 
 ## Properties
 Name | Type | Description | Notes

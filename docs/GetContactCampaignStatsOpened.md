@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetContactCampaignStatsOpened
+# PakatApiV3Sdk.GetContactCampaignStatsOpened
 
 ## Properties
 Name | Type | Description | Notes

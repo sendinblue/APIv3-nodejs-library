@@ -1,4 +1,4 @@
-# SibApiV3Sdk.ErrorModel
+# PakatApiV3Sdk.ErrorModel
 
 ## Properties
 Name | Type | Description | Notes

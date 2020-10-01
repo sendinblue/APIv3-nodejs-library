@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateDoiContact
+# PakatApiV3Sdk.CreateDoiContact
 
 ## Properties
 Name | Type | Description | Notes

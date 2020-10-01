@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/AbTestCampaignResult'), require('../model/CreateEmailCampaign'), require('../model/CreateModel'), require('../model/CreatedProcessId'), require('../model/EmailExportRecipients'), require('../model/ErrorModel'), require('../model/GetEmailCampaign'), require('../model/GetEmailCampaigns'), require('../model/GetSharedTemplateUrl'), require('../model/PostSendFailed'), require('../model/SendReport'), require('../model/SendTestEmail'), require('../model/UpdateCampaignStatus'), require('../model/UpdateEmailCampaign'), require('../model/UploadImageToGallery'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.EmailCampaignsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AbTestCampaignResult, root.SibApiV3Sdk.CreateEmailCampaign, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.EmailExportRecipients, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetEmailCampaign, root.SibApiV3Sdk.GetEmailCampaigns, root.SibApiV3Sdk.GetSharedTemplateUrl, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendReport, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateCampaignStatus, root.SibApiV3Sdk.UpdateEmailCampaign, root.SibApiV3Sdk.UploadImageToGallery);
+    root.PakatApiV3Sdk.EmailCampaignsApi = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.AbTestCampaignResult, root.PakatApiV3Sdk.CreateEmailCampaign, root.PakatApiV3Sdk.CreateModel, root.PakatApiV3Sdk.CreatedProcessId, root.PakatApiV3Sdk.EmailExportRecipients, root.PakatApiV3Sdk.ErrorModel, root.PakatApiV3Sdk.GetEmailCampaign, root.PakatApiV3Sdk.GetEmailCampaigns, root.PakatApiV3Sdk.GetSharedTemplateUrl, root.PakatApiV3Sdk.PostSendFailed, root.PakatApiV3Sdk.SendReport, root.PakatApiV3Sdk.SendTestEmail, root.PakatApiV3Sdk.UpdateCampaignStatus, root.PakatApiV3Sdk.UpdateEmailCampaign, root.PakatApiV3Sdk.UploadImageToGallery);
   }
 }(this, function(ApiClient, AbTestCampaignResult, CreateEmailCampaign, CreateModel, CreatedProcessId, EmailExportRecipients, ErrorModel, GetEmailCampaign, GetEmailCampaigns, GetSharedTemplateUrl, PostSendFailed, SendReport, SendTestEmail, UpdateCampaignStatus, UpdateEmailCampaign, UploadImageToGallery) {
   'use strict';

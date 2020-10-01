@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetIp();
+    instance = new PakatApiV3Sdk.GetIp();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetIp', function() {
     it('should create an instance of GetIp', function() {
       // uncomment below and update the code to test GetIp
-      //var instane = new SibApiV3Sdk.GetIp();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetIp);
+      //var instane = new PakatApiV3Sdk.GetIp();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetIp);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SibApiV3Sdk.GetIp();
+      //var instane = new PakatApiV3Sdk.GetIp();
       //expect(instance).to.be();
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SibApiV3Sdk.GetIp();
+      //var instane = new PakatApiV3Sdk.GetIp();
       //expect(instance).to.be();
     });
 
     it('should have the property active (base name: "active")', function() {
       // uncomment below and update the code to test the property active
-      //var instane = new SibApiV3Sdk.GetIp();
+      //var instane = new PakatApiV3Sdk.GetIp();
       //expect(instance).to.be();
     });
 
     it('should have the property domain (base name: "domain")', function() {
       // uncomment below and update the code to test the property domain
-      //var instane = new SibApiV3Sdk.GetIp();
+      //var instane = new PakatApiV3Sdk.GetIp();
       //expect(instance).to.be();
     });
 

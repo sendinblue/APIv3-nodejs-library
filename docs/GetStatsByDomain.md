@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetStatsByDomain
+# PakatApiV3Sdk.GetStatsByDomain
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.AbTestVersionStats();
+    instance = new PakatApiV3Sdk.AbTestVersionStats();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('AbTestVersionStats', function() {
     it('should create an instance of AbTestVersionStats', function() {
       // uncomment below and update the code to test AbTestVersionStats
-      //var instane = new SibApiV3Sdk.AbTestVersionStats();
-      //expect(instance).to.be.a(SibApiV3Sdk.AbTestVersionStats);
+      //var instane = new PakatApiV3Sdk.AbTestVersionStats();
+      //expect(instance).to.be.a(PakatApiV3Sdk.AbTestVersionStats);
     });
 
     it('should have the property versionA (base name: "Version A")', function() {
       // uncomment below and update the code to test the property versionA
-      //var instane = new SibApiV3Sdk.AbTestVersionStats();
+      //var instane = new PakatApiV3Sdk.AbTestVersionStats();
       //expect(instance).to.be();
     });
 
     it('should have the property versionB (base name: "Version B")', function() {
       // uncomment below and update the code to test the property versionB
-      //var instane = new SibApiV3Sdk.AbTestVersionStats();
+      //var instane = new PakatApiV3Sdk.AbTestVersionStats();
       //expect(instance).to.be();
     });
 

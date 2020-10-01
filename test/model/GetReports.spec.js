@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetReports();
+    instance = new PakatApiV3Sdk.GetReports();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetReports', function() {
     it('should create an instance of GetReports', function() {
       // uncomment below and update the code to test GetReports
-      //var instane = new SibApiV3Sdk.GetReports();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetReports);
+      //var instane = new PakatApiV3Sdk.GetReports();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetReports);
     });
 
     it('should have the property reports (base name: "reports")', function() {
       // uncomment below and update the code to test the property reports
-      //var instane = new SibApiV3Sdk.GetReports();
+      //var instane = new PakatApiV3Sdk.GetReports();
       //expect(instance).to.be();
     });
 

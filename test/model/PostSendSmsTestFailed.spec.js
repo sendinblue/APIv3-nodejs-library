@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.PostSendSmsTestFailed();
+    instance = new PakatApiV3Sdk.PostSendSmsTestFailed();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('PostSendSmsTestFailed', function() {
     it('should create an instance of PostSendSmsTestFailed', function() {
       // uncomment below and update the code to test PostSendSmsTestFailed
-      //var instane = new SibApiV3Sdk.PostSendSmsTestFailed();
-      //expect(instance).to.be.a(SibApiV3Sdk.PostSendSmsTestFailed);
+      //var instane = new PakatApiV3Sdk.PostSendSmsTestFailed();
+      //expect(instance).to.be.a(PakatApiV3Sdk.PostSendSmsTestFailed);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instane = new SibApiV3Sdk.PostSendSmsTestFailed();
+      //var instane = new PakatApiV3Sdk.PostSendSmsTestFailed();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new SibApiV3Sdk.PostSendSmsTestFailed();
+      //var instane = new PakatApiV3Sdk.PostSendSmsTestFailed();
       //expect(instance).to.be();
     });
 
     it('should have the property unexistingSms (base name: "unexistingSms")', function() {
       // uncomment below and update the code to test the property unexistingSms
-      //var instane = new SibApiV3Sdk.PostSendSmsTestFailed();
+      //var instane = new PakatApiV3Sdk.PostSendSmsTestFailed();
       //expect(instance).to.be();
     });
 
     it('should have the property withoutListSms (base name: "withoutListSms")', function() {
       // uncomment below and update the code to test the property withoutListSms
-      //var instane = new SibApiV3Sdk.PostSendSmsTestFailed();
+      //var instane = new PakatApiV3Sdk.PostSendSmsTestFailed();
       //expect(instance).to.be();
     });
 

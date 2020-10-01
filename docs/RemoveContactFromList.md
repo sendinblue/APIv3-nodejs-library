@@ -1,4 +1,4 @@
-# SibApiV3Sdk.RemoveContactFromList
+# PakatApiV3Sdk.RemoveContactFromList
 
 ## Properties
 Name | Type | Description | Notes

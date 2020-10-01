@@ -1,4 +1,4 @@
-# SibApiV3Sdk.AddContactToList
+# PakatApiV3Sdk.AddContactToList
 
 ## Properties
 Name | Type | Description | Notes

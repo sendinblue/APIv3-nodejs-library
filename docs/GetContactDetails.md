@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetContactDetails
+# PakatApiV3Sdk.GetContactDetails
 
 ## Properties
 Name | Type | Description | Notes

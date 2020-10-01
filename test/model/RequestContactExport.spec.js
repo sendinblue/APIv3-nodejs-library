@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.RequestContactExport();
+    instance = new PakatApiV3Sdk.RequestContactExport();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('RequestContactExport', function() {
     it('should create an instance of RequestContactExport', function() {
       // uncomment below and update the code to test RequestContactExport
-      //var instane = new SibApiV3Sdk.RequestContactExport();
-      //expect(instance).to.be.a(SibApiV3Sdk.RequestContactExport);
+      //var instane = new PakatApiV3Sdk.RequestContactExport();
+      //expect(instance).to.be.a(PakatApiV3Sdk.RequestContactExport);
     });
 
     it('should have the property exportAttributes (base name: "exportAttributes")', function() {
       // uncomment below and update the code to test the property exportAttributes
-      //var instane = new SibApiV3Sdk.RequestContactExport();
+      //var instane = new PakatApiV3Sdk.RequestContactExport();
       //expect(instance).to.be();
     });
 
     it('should have the property contactFilter (base name: "contactFilter")', function() {
       // uncomment below and update the code to test the property contactFilter
-      //var instane = new SibApiV3Sdk.RequestContactExport();
+      //var instane = new PakatApiV3Sdk.RequestContactExport();
       //expect(instance).to.be();
     });
 
     it('should have the property customContactFilter (base name: "customContactFilter")', function() {
       // uncomment below and update the code to test the property customContactFilter
-      //var instane = new SibApiV3Sdk.RequestContactExport();
+      //var instane = new PakatApiV3Sdk.RequestContactExport();
       //expect(instance).to.be();
     });
 
     it('should have the property notifyUrl (base name: "notifyUrl")', function() {
       // uncomment below and update the code to test the property notifyUrl
-      //var instane = new SibApiV3Sdk.RequestContactExport();
+      //var instane = new PakatApiV3Sdk.RequestContactExport();
       //expect(instance).to.be();
     });
 

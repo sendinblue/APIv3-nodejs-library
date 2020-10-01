@@ -1,4 +1,4 @@
-# SibApiV3Sdk.FoldersApi
+# PakatApiV3Sdk.FoldersApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -20,8 +20,8 @@ Create a folder
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -35,9 +35,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.FoldersApi();
+var apiInstance = new PakatApiV3Sdk.FoldersApi();
 
-var createFolder = new SibApiV3Sdk.CreateUpdateFolder(); // CreateUpdateFolder | Name of the folder
+var createFolder = new PakatApiV3Sdk.CreateUpdateFolder(); // CreateUpdateFolder | Name of the folder
 
 apiInstance.createFolder(createFolder).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -74,8 +74,8 @@ Delete a folder (and all its lists)
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -89,7 +89,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.FoldersApi();
+var apiInstance = new PakatApiV3Sdk.FoldersApi();
 
 var folderId = 789; // Number | Id of the folder
 
@@ -128,8 +128,8 @@ Returns a folder&#39;s details
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -143,7 +143,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.FoldersApi();
+var apiInstance = new PakatApiV3Sdk.FoldersApi();
 
 var folderId = 789; // Number | id of the folder
 
@@ -182,8 +182,8 @@ Get lists in a folder
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -197,7 +197,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.FoldersApi();
+var apiInstance = new PakatApiV3Sdk.FoldersApi();
 
 var folderId = 789; // Number | Id of the folder
 
@@ -242,8 +242,8 @@ Get all folders
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -257,7 +257,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.FoldersApi();
+var apiInstance = new PakatApiV3Sdk.FoldersApi();
 
 var limit = 10; // Number | Number of documents per page
 
@@ -299,8 +299,8 @@ Update a folder
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -314,11 +314,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.FoldersApi();
+var apiInstance = new PakatApiV3Sdk.FoldersApi();
 
 var folderId = 789; // Number | Id of the folder
 
-var updateFolder = new SibApiV3Sdk.CreateUpdateFolder(); // CreateUpdateFolder | Name of the folder
+var updateFolder = new PakatApiV3Sdk.CreateUpdateFolder(); // CreateUpdateFolder | Name of the folder
 
 apiInstance.updateFolder(folderId, updateFolder).then(function() {
   console.log('API called successfully.');

@@ -23,10 +23,10 @@
 		module.exports = factory(require('superagent'), require('querystring'))
 	} else {
 		// Browser globals (root is window)
-		if (!root.SibApiV3Sdk) {
-			root.SibApiV3Sdk = {}
+		if (!root.PakatApiV3Sdk) {
+			root.PakatApiV3Sdk = {}
 		}
-		root.SibApiV3Sdk.ApiClient = factory(root.superagent, root.querystring)
+		root.PakatApiV3Sdk.ApiClient = factory(root.superagent, root.querystring)
 	}
 })(this, function (superagent, querystring) {
 	'use strict'

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateChild
+# PakatApiV3Sdk.CreateChild
 
 ## Properties
 Name | Type | Description | Notes

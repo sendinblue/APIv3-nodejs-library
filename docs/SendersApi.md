@@ -1,4 +1,4 @@
-# SibApiV3Sdk.SendersApi
+# PakatApiV3Sdk.SendersApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -20,8 +20,8 @@ Create a new sender
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -35,10 +35,10 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.SendersApi();
+var apiInstance = new PakatApiV3Sdk.SendersApi();
 
 var opts = { 
-  'sender': new SibApiV3Sdk.CreateSender() // CreateSender | sender's name
+  'sender': new PakatApiV3Sdk.CreateSender() // CreateSender | sender's name
 };
 apiInstance.createSender(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -75,8 +75,8 @@ Delete a sender
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -90,7 +90,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.SendersApi();
+var apiInstance = new PakatApiV3Sdk.SendersApi();
 
 var senderId = 789; // Number | Id of the sender
 
@@ -129,8 +129,8 @@ Get all the dedicated IPs for your account
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -144,7 +144,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.SendersApi();
+var apiInstance = new PakatApiV3Sdk.SendersApi();
 apiInstance.getIps().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -177,8 +177,8 @@ Get all the dedicated IPs for a sender
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -192,7 +192,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.SendersApi();
+var apiInstance = new PakatApiV3Sdk.SendersApi();
 
 var senderId = 789; // Number | Id of the sender
 
@@ -231,8 +231,8 @@ Get the list of all your senders
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -246,7 +246,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.SendersApi();
+var apiInstance = new PakatApiV3Sdk.SendersApi();
 
 var opts = { 
   'ip': "ip_example", // String | Filter your senders for a specific ip (available for dedicated IP usage only)
@@ -288,8 +288,8 @@ Update a sender
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -303,12 +303,12 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.SendersApi();
+var apiInstance = new PakatApiV3Sdk.SendersApi();
 
 var senderId = 789; // Number | Id of the sender
 
 var opts = { 
-  'sender': new SibApiV3Sdk.UpdateSender() // UpdateSender | sender's name
+  'sender': new PakatApiV3Sdk.UpdateSender() // UpdateSender | sender's name
 };
 apiInstance.updateSender(senderId, opts).then(function() {
   console.log('API called successfully.');

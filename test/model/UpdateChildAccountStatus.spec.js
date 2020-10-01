@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.UpdateChildAccountStatus();
+    instance = new PakatApiV3Sdk.UpdateChildAccountStatus();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('UpdateChildAccountStatus', function() {
     it('should create an instance of UpdateChildAccountStatus', function() {
       // uncomment below and update the code to test UpdateChildAccountStatus
-      //var instane = new SibApiV3Sdk.UpdateChildAccountStatus();
-      //expect(instance).to.be.a(SibApiV3Sdk.UpdateChildAccountStatus);
+      //var instane = new PakatApiV3Sdk.UpdateChildAccountStatus();
+      //expect(instance).to.be.a(PakatApiV3Sdk.UpdateChildAccountStatus);
     });
 
     it('should have the property transactionalEmail (base name: "transactionalEmail")', function() {
       // uncomment below and update the code to test the property transactionalEmail
-      //var instane = new SibApiV3Sdk.UpdateChildAccountStatus();
+      //var instane = new PakatApiV3Sdk.UpdateChildAccountStatus();
       //expect(instance).to.be();
     });
 
     it('should have the property transactionalSms (base name: "transactionalSms")', function() {
       // uncomment below and update the code to test the property transactionalSms
-      //var instane = new SibApiV3Sdk.UpdateChildAccountStatus();
+      //var instane = new PakatApiV3Sdk.UpdateChildAccountStatus();
       //expect(instance).to.be();
     });
 
     it('should have the property marketingAutomation (base name: "marketingAutomation")', function() {
       // uncomment below and update the code to test the property marketingAutomation
-      //var instane = new SibApiV3Sdk.UpdateChildAccountStatus();
+      //var instane = new PakatApiV3Sdk.UpdateChildAccountStatus();
       //expect(instance).to.be();
     });
 
     it('should have the property smsCampaign (base name: "smsCampaign")', function() {
       // uncomment below and update the code to test the property smsCampaign
-      //var instane = new SibApiV3Sdk.UpdateChildAccountStatus();
+      //var instane = new PakatApiV3Sdk.UpdateChildAccountStatus();
       //expect(instance).to.be();
     });
 

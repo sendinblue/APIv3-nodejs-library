@@ -1,4 +1,4 @@
-# SibApiV3Sdk.WebhooksApi
+# PakatApiV3Sdk.WebhooksApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -19,8 +19,8 @@ Create a webhook
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -34,9 +34,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.WebhooksApi();
+var apiInstance = new PakatApiV3Sdk.WebhooksApi();
 
-var createWebhook = new SibApiV3Sdk.CreateWebhook(); // CreateWebhook | Values to create a webhook
+var createWebhook = new PakatApiV3Sdk.CreateWebhook(); // CreateWebhook | Values to create a webhook
 
 apiInstance.createWebhook(createWebhook).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -73,8 +73,8 @@ Delete a webhook
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -88,7 +88,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.WebhooksApi();
+var apiInstance = new PakatApiV3Sdk.WebhooksApi();
 
 var webhookId = 789; // Number | Id of the webhook
 
@@ -127,8 +127,8 @@ Get a webhook details
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -142,7 +142,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.WebhooksApi();
+var apiInstance = new PakatApiV3Sdk.WebhooksApi();
 
 var webhookId = 789; // Number | Id of the webhook
 
@@ -181,8 +181,8 @@ Get all webhooks
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -196,7 +196,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.WebhooksApi();
+var apiInstance = new PakatApiV3Sdk.WebhooksApi();
 
 var opts = { 
   'type': "transactional" // String | Filter on webhook type
@@ -236,8 +236,8 @@ Update a webhook
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -251,11 +251,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.WebhooksApi();
+var apiInstance = new PakatApiV3Sdk.WebhooksApi();
 
 var webhookId = 789; // Number | Id of the webhook
 
-var updateWebhook = new SibApiV3Sdk.UpdateWebhook(); // UpdateWebhook | Values to update a webhook
+var updateWebhook = new PakatApiV3Sdk.UpdateWebhook(); // UpdateWebhook | Values to update a webhook
 
 apiInstance.updateWebhook(webhookId, updateWebhook).then(function() {
   console.log('API called successfully.');

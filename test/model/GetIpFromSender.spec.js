@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetIpFromSender();
+    instance = new PakatApiV3Sdk.GetIpFromSender();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetIpFromSender', function() {
     it('should create an instance of GetIpFromSender', function() {
       // uncomment below and update the code to test GetIpFromSender
-      //var instane = new SibApiV3Sdk.GetIpFromSender();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetIpFromSender);
+      //var instane = new PakatApiV3Sdk.GetIpFromSender();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetIpFromSender);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SibApiV3Sdk.GetIpFromSender();
+      //var instane = new PakatApiV3Sdk.GetIpFromSender();
       //expect(instance).to.be();
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SibApiV3Sdk.GetIpFromSender();
+      //var instane = new PakatApiV3Sdk.GetIpFromSender();
       //expect(instance).to.be();
     });
 
     it('should have the property domain (base name: "domain")', function() {
       // uncomment below and update the code to test the property domain
-      //var instane = new SibApiV3Sdk.GetIpFromSender();
+      //var instane = new PakatApiV3Sdk.GetIpFromSender();
       //expect(instance).to.be();
     });
 
     it('should have the property weight (base name: "weight")', function() {
       // uncomment below and update the code to test the property weight
-      //var instane = new SibApiV3Sdk.GetIpFromSender();
+      //var instane = new PakatApiV3Sdk.GetIpFromSender();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetIp
+# PakatApiV3Sdk.GetIp
 
 ## Properties
 Name | Type | Description | Notes

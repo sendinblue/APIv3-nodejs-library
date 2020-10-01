@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetExtendedContactDetailsStatisticsClicked'), require('./GetExtendedContactDetailsStatisticsMessagesSent'), require('./GetExtendedContactDetailsStatisticsOpened'), require('./GetExtendedContactDetailsStatisticsUnsubscriptions'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetExtendedContactDetailsStatistics = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsClicked, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsOpened, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions);
+    root.PakatApiV3Sdk.GetExtendedContactDetailsStatistics = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetExtendedContactDetailsStatisticsClicked, root.PakatApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent, root.PakatApiV3Sdk.GetExtendedContactDetailsStatisticsOpened, root.PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptions);
   }
 }(this, function(ApiClient, GetExtendedContactDetailsStatisticsClicked, GetExtendedContactDetailsStatisticsMessagesSent, GetExtendedContactDetailsStatisticsOpened, GetExtendedContactDetailsStatisticsUnsubscriptions) {
   'use strict';

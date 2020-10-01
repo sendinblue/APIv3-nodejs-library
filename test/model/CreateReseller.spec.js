@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.CreateReseller();
+    instance = new PakatApiV3Sdk.CreateReseller();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('CreateReseller', function() {
     it('should create an instance of CreateReseller', function() {
       // uncomment below and update the code to test CreateReseller
-      //var instane = new SibApiV3Sdk.CreateReseller();
-      //expect(instance).to.be.a(SibApiV3Sdk.CreateReseller);
+      //var instane = new PakatApiV3Sdk.CreateReseller();
+      //expect(instance).to.be.a(PakatApiV3Sdk.CreateReseller);
     });
 
     it('should have the property authKey (base name: "authKey")', function() {
       // uncomment below and update the code to test the property authKey
-      //var instane = new SibApiV3Sdk.CreateReseller();
+      //var instane = new PakatApiV3Sdk.CreateReseller();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SibApiV3Sdk.CreateReseller();
+      //var instane = new PakatApiV3Sdk.CreateReseller();
       //expect(instance).to.be();
     });
 

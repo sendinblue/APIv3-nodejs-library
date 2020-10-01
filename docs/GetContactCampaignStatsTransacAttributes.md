@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetContactCampaignStatsTransacAttributes
+# PakatApiV3Sdk.GetContactCampaignStatsTransacAttributes
 
 ## Properties
 Name | Type | Description | Notes

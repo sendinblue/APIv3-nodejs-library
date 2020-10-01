@@ -1,4 +1,4 @@
-# SibApiV3Sdk.UpdateCampaignStatus
+# PakatApiV3Sdk.UpdateCampaignStatus
 
 ## Properties
 Name | Type | Description | Notes

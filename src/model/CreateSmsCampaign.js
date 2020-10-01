@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./CreateSmsCampaignRecipients'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.CreateSmsCampaign = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateSmsCampaignRecipients);
+    root.PakatApiV3Sdk.CreateSmsCampaign = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.CreateSmsCampaignRecipients);
   }
 }(this, function(ApiClient, CreateSmsCampaignRecipients) {
   'use strict';

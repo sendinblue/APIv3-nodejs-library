@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.SendTestSms();
+    instance = new PakatApiV3Sdk.SendTestSms();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('SendTestSms', function() {
     it('should create an instance of SendTestSms', function() {
       // uncomment below and update the code to test SendTestSms
-      //var instane = new SibApiV3Sdk.SendTestSms();
-      //expect(instance).to.be.a(SibApiV3Sdk.SendTestSms);
+      //var instane = new PakatApiV3Sdk.SendTestSms();
+      //expect(instance).to.be.a(PakatApiV3Sdk.SendTestSms);
     });
 
     it('should have the property phoneNumber (base name: "phoneNumber")', function() {
       // uncomment below and update the code to test the property phoneNumber
-      //var instane = new SibApiV3Sdk.SendTestSms();
+      //var instane = new PakatApiV3Sdk.SendTestSms();
       //expect(instance).to.be();
     });
 

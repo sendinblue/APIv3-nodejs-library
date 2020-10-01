@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreateSender'), require('../model/CreateSenderModel'), require('../model/ErrorModel'), require('../model/GetIps'), require('../model/GetIpsFromSender'), require('../model/GetSendersList'), require('../model/UpdateSender'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.SendersApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateSender, root.SibApiV3Sdk.CreateSenderModel, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetIps, root.SibApiV3Sdk.GetIpsFromSender, root.SibApiV3Sdk.GetSendersList, root.SibApiV3Sdk.UpdateSender);
+    root.PakatApiV3Sdk.SendersApi = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.CreateSender, root.PakatApiV3Sdk.CreateSenderModel, root.PakatApiV3Sdk.ErrorModel, root.PakatApiV3Sdk.GetIps, root.PakatApiV3Sdk.GetIpsFromSender, root.PakatApiV3Sdk.GetSendersList, root.PakatApiV3Sdk.UpdateSender);
   }
 }(this, function(ApiClient, CreateSender, CreateSenderModel, ErrorModel, GetIps, GetIpsFromSender, GetSendersList, UpdateSender) {
   'use strict';

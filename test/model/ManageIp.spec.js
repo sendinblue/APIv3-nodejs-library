@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.ManageIp();
+    instance = new PakatApiV3Sdk.ManageIp();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('ManageIp', function() {
     it('should create an instance of ManageIp', function() {
       // uncomment below and update the code to test ManageIp
-      //var instane = new SibApiV3Sdk.ManageIp();
-      //expect(instance).to.be.a(SibApiV3Sdk.ManageIp);
+      //var instane = new PakatApiV3Sdk.ManageIp();
+      //expect(instance).to.be.a(PakatApiV3Sdk.ManageIp);
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SibApiV3Sdk.ManageIp();
+      //var instane = new PakatApiV3Sdk.ManageIp();
       //expect(instance).to.be();
     });
 

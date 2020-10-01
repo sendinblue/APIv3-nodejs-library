@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetChildInfoApiKeysV2'), require('./GetChildInfoApiKeysV3'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetChildInfoApiKeys = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetChildInfoApiKeysV2, root.SibApiV3Sdk.GetChildInfoApiKeysV3);
+    root.PakatApiV3Sdk.GetChildInfoApiKeys = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetChildInfoApiKeysV2, root.PakatApiV3Sdk.GetChildInfoApiKeysV3);
   }
 }(this, function(ApiClient, GetChildInfoApiKeysV2, GetChildInfoApiKeysV3) {
   'use strict';

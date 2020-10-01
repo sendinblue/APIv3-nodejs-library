@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetTransacBlockedContactsReason'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetTransacBlockedContactsContacts = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetTransacBlockedContactsReason);
+    root.PakatApiV3Sdk.GetTransacBlockedContactsContacts = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetTransacBlockedContactsReason);
   }
 }(this, function(ApiClient, GetTransacBlockedContactsReason) {
   'use strict';

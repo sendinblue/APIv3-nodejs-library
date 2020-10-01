@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreateAttribute'), require('../model/ErrorModel'), require('../model/GetAttributes'), require('../model/UpdateAttribute'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.AttributesApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateAttribute, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAttributes, root.SibApiV3Sdk.UpdateAttribute);
+    root.PakatApiV3Sdk.AttributesApi = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.CreateAttribute, root.PakatApiV3Sdk.ErrorModel, root.PakatApiV3Sdk.GetAttributes, root.PakatApiV3Sdk.UpdateAttribute);
   }
 }(this, function(ApiClient, CreateAttribute, ErrorModel, GetAttributes, UpdateAttribute) {
   'use strict';

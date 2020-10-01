@@ -1,4 +1,4 @@
-# SibApiV3Sdk.SendReportEmail
+# PakatApiV3Sdk.SendReportEmail
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetTransacSmsReport();
+    instance = new PakatApiV3Sdk.GetTransacSmsReport();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetTransacSmsReport', function() {
     it('should create an instance of GetTransacSmsReport', function() {
       // uncomment below and update the code to test GetTransacSmsReport
-      //var instane = new SibApiV3Sdk.GetTransacSmsReport();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetTransacSmsReport);
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReport();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetTransacSmsReport);
     });
 
     it('should have the property reports (base name: "reports")', function() {
       // uncomment below and update the code to test the property reports
-      //var instane = new SibApiV3Sdk.GetTransacSmsReport();
+      //var instane = new PakatApiV3Sdk.GetTransacSmsReport();
       //expect(instance).to.be();
     });
 

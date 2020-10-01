@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetAccount
+# PakatApiV3Sdk.GetAccount
 
 ## Properties
 Name | Type | Description | Notes

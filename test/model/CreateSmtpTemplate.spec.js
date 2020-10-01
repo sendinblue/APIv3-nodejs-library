@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.CreateSmtpTemplate();
+    instance = new PakatApiV3Sdk.CreateSmtpTemplate();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,67 +53,67 @@
   describe('CreateSmtpTemplate', function() {
     it('should create an instance of CreateSmtpTemplate', function() {
       // uncomment below and update the code to test CreateSmtpTemplate
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
-      //expect(instance).to.be.a(SibApiV3Sdk.CreateSmtpTemplate);
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
+      //expect(instance).to.be.a(PakatApiV3Sdk.CreateSmtpTemplate);
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property templateName (base name: "templateName")', function() {
       // uncomment below and update the code to test the property templateName
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property htmlContent (base name: "htmlContent")', function() {
       // uncomment below and update the code to test the property htmlContent
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property htmlUrl (base name: "htmlUrl")', function() {
       // uncomment below and update the code to test the property htmlUrl
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property subject (base name: "subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property replyTo (base name: "replyTo")', function() {
       // uncomment below and update the code to test the property replyTo
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property toField (base name: "toField")', function() {
       // uncomment below and update the code to test the property toField
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property attachmentUrl (base name: "attachmentUrl")', function() {
       // uncomment below and update the code to test the property attachmentUrl
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
       //expect(instance).to.be();
     });
 
     it('should have the property isActive (base name: "isActive")', function() {
       // uncomment below and update the code to test the property isActive
-      //var instane = new SibApiV3Sdk.CreateSmtpTemplate();
+      //var instane = new PakatApiV3Sdk.CreateSmtpTemplate();
       //expect(instance).to.be();
     });
 

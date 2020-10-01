@@ -1,4 +1,4 @@
-# SibApiV3Sdk.SendReport
+# PakatApiV3Sdk.SendReport
 
 ## Properties
 Name | Type | Description | Notes

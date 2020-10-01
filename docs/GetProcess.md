@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetProcess
+# PakatApiV3Sdk.GetProcess
 
 ## Properties
 Name | Type | Description | Notes

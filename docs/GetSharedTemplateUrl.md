@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetSharedTemplateUrl
+# PakatApiV3Sdk.GetSharedTemplateUrl
 
 ## Properties
 Name | Type | Description | Notes

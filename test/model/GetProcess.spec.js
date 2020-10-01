@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetProcess();
+    instance = new PakatApiV3Sdk.GetProcess();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetProcess', function() {
     it('should create an instance of GetProcess', function() {
       // uncomment below and update the code to test GetProcess
-      //var instane = new SibApiV3Sdk.GetProcess();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetProcess);
+      //var instane = new PakatApiV3Sdk.GetProcess();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetProcess);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SibApiV3Sdk.GetProcess();
+      //var instane = new PakatApiV3Sdk.GetProcess();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new SibApiV3Sdk.GetProcess();
+      //var instane = new PakatApiV3Sdk.GetProcess();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SibApiV3Sdk.GetProcess();
+      //var instane = new PakatApiV3Sdk.GetProcess();
       //expect(instance).to.be();
     });
 
     it('should have the property exportUrl (base name: "export_url")', function() {
       // uncomment below and update the code to test the property exportUrl
-      //var instane = new SibApiV3Sdk.GetProcess();
+      //var instane = new PakatApiV3Sdk.GetProcess();
       //expect(instance).to.be();
     });
 

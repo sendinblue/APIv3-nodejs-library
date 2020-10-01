@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetSsoToken();
+    instance = new PakatApiV3Sdk.GetSsoToken();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetSsoToken', function() {
     it('should create an instance of GetSsoToken', function() {
       // uncomment below and update the code to test GetSsoToken
-      //var instane = new SibApiV3Sdk.GetSsoToken();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetSsoToken);
+      //var instane = new PakatApiV3Sdk.GetSsoToken();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetSsoToken);
     });
 
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
-      //var instane = new SibApiV3Sdk.GetSsoToken();
+      //var instane = new PakatApiV3Sdk.GetSsoToken();
       //expect(instance).to.be();
     });
 

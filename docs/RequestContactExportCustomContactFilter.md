@@ -1,4 +1,4 @@
-# SibApiV3Sdk.RequestContactExportCustomContactFilter
+# PakatApiV3Sdk.RequestContactExportCustomContactFilter
 
 ## Properties
 Name | Type | Description | Notes

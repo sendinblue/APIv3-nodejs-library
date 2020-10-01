@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent
+# PakatApiV3Sdk.GetExtendedContactDetailsStatisticsMessagesSent
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetSmsCampaigns
+# PakatApiV3Sdk.GetSmsCampaigns
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetAccount();
+    instance = new PakatApiV3Sdk.GetAccount();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('GetAccount', function() {
     it('should create an instance of GetAccount', function() {
       // uncomment below and update the code to test GetAccount
-      //var instane = new SibApiV3Sdk.GetAccount();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetAccount);
+      //var instane = new PakatApiV3Sdk.GetAccount();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetAccount);
     });
 
     it('should have the property plan (base name: "plan")', function() {
       // uncomment below and update the code to test the property plan
-      //var instane = new SibApiV3Sdk.GetAccount();
+      //var instane = new PakatApiV3Sdk.GetAccount();
       //expect(instance).to.be();
     });
 
     it('should have the property relay (base name: "relay")', function() {
       // uncomment below and update the code to test the property relay
-      //var instane = new SibApiV3Sdk.GetAccount();
+      //var instane = new PakatApiV3Sdk.GetAccount();
       //expect(instance).to.be();
     });
 
     it('should have the property marketingAutomation (base name: "marketingAutomation")', function() {
       // uncomment below and update the code to test the property marketingAutomation
-      //var instane = new SibApiV3Sdk.GetAccount();
+      //var instane = new PakatApiV3Sdk.GetAccount();
       //expect(instance).to.be();
     });
 

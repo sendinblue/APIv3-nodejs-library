@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetSmsEventReport
+# PakatApiV3Sdk.GetSmsEventReport
 
 ## Properties
 Name | Type | Description | Notes

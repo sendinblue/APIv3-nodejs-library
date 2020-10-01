@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetTransacEmailContent();
+    instance = new PakatApiV3Sdk.GetTransacEmailContent();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,49 +53,49 @@
   describe('GetTransacEmailContent', function() {
     it('should create an instance of GetTransacEmailContent', function() {
       // uncomment below and update the code to test GetTransacEmailContent
-      //var instane = new SibApiV3Sdk.GetTransacEmailContent();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetTransacEmailContent);
+      //var instane = new PakatApiV3Sdk.GetTransacEmailContent();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetTransacEmailContent);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SibApiV3Sdk.GetTransacEmailContent();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailContent();
       //expect(instance).to.be();
     });
 
     it('should have the property subject (base name: "subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instane = new SibApiV3Sdk.GetTransacEmailContent();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailContent();
       //expect(instance).to.be();
     });
 
     it('should have the property templateId (base name: "templateId")', function() {
       // uncomment below and update the code to test the property templateId
-      //var instane = new SibApiV3Sdk.GetTransacEmailContent();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailContent();
       //expect(instance).to.be();
     });
 
     it('should have the property _date (base name: "date")', function() {
       // uncomment below and update the code to test the property _date
-      //var instane = new SibApiV3Sdk.GetTransacEmailContent();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailContent();
       //expect(instance).to.be();
     });
 
     it('should have the property events (base name: "events")', function() {
       // uncomment below and update the code to test the property events
-      //var instane = new SibApiV3Sdk.GetTransacEmailContent();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailContent();
       //expect(instance).to.be();
     });
 
     it('should have the property body (base name: "body")', function() {
       // uncomment below and update the code to test the property body
-      //var instane = new SibApiV3Sdk.GetTransacEmailContent();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailContent();
       //expect(instance).to.be();
     });
 
     it('should have the property attachmentCount (base name: "attachmentCount")', function() {
       // uncomment below and update the code to test the property attachmentCount
-      //var instane = new SibApiV3Sdk.GetTransacEmailContent();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailContent();
       //expect(instance).to.be();
     });
 

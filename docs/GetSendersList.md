@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetSendersList
+# PakatApiV3Sdk.GetSendersList
 
 ## Properties
 Name | Type | Description | Notes

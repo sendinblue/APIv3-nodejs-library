@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.UpdateChild();
+    instance = new PakatApiV3Sdk.UpdateChild();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,37 +53,37 @@
   describe('UpdateChild', function() {
     it('should create an instance of UpdateChild', function() {
       // uncomment below and update the code to test UpdateChild
-      //var instane = new SibApiV3Sdk.UpdateChild();
-      //expect(instance).to.be.a(SibApiV3Sdk.UpdateChild);
+      //var instane = new PakatApiV3Sdk.UpdateChild();
+      //expect(instance).to.be.a(PakatApiV3Sdk.UpdateChild);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SibApiV3Sdk.UpdateChild();
+      //var instane = new PakatApiV3Sdk.UpdateChild();
       //expect(instance).to.be();
     });
 
     it('should have the property firstName (base name: "firstName")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instane = new SibApiV3Sdk.UpdateChild();
+      //var instane = new PakatApiV3Sdk.UpdateChild();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "lastName")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instane = new SibApiV3Sdk.UpdateChild();
+      //var instane = new PakatApiV3Sdk.UpdateChild();
       //expect(instance).to.be();
     });
 
     it('should have the property companyName (base name: "companyName")', function() {
       // uncomment below and update the code to test the property companyName
-      //var instane = new SibApiV3Sdk.UpdateChild();
+      //var instane = new PakatApiV3Sdk.UpdateChild();
       //expect(instance).to.be();
     });
 
     it('should have the property password (base name: "password")', function() {
       // uncomment below and update the code to test the property password
-      //var instane = new SibApiV3Sdk.UpdateChild();
+      //var instane = new PakatApiV3Sdk.UpdateChild();
       //expect(instance).to.be();
     });
 

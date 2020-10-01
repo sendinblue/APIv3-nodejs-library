@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetAccountRelayData
+# PakatApiV3Sdk.GetAccountRelayData
 
 ## Properties
 Name | Type | Description | Notes

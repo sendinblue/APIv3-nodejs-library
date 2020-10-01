@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.PostContactInfoContacts();
+    instance = new PakatApiV3Sdk.PostContactInfoContacts();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('PostContactInfoContacts', function() {
     it('should create an instance of PostContactInfoContacts', function() {
       // uncomment below and update the code to test PostContactInfoContacts
-      //var instane = new SibApiV3Sdk.PostContactInfoContacts();
-      //expect(instance).to.be.a(SibApiV3Sdk.PostContactInfoContacts);
+      //var instane = new PakatApiV3Sdk.PostContactInfoContacts();
+      //expect(instance).to.be.a(PakatApiV3Sdk.PostContactInfoContacts);
     });
 
     it('should have the property success (base name: "success")', function() {
       // uncomment below and update the code to test the property success
-      //var instane = new SibApiV3Sdk.PostContactInfoContacts();
+      //var instane = new PakatApiV3Sdk.PostContactInfoContacts();
       //expect(instance).to.be();
     });
 
     it('should have the property failure (base name: "failure")', function() {
       // uncomment below and update the code to test the property failure
-      //var instane = new SibApiV3Sdk.PostContactInfoContacts();
+      //var instane = new PakatApiV3Sdk.PostContactInfoContacts();
       //expect(instance).to.be();
     });
 
     it('should have the property total (base name: "total")', function() {
       // uncomment below and update the code to test the property total
-      //var instane = new SibApiV3Sdk.PostContactInfoContacts();
+      //var instane = new PakatApiV3Sdk.PostContactInfoContacts();
       //expect(instance).to.be();
     });
 
     it('should have the property processId (base name: "processId")', function() {
       // uncomment below and update the code to test the property processId
-      //var instane = new SibApiV3Sdk.PostContactInfoContacts();
+      //var instane = new PakatApiV3Sdk.PostContactInfoContacts();
       //expect(instance).to.be();
     });
 
