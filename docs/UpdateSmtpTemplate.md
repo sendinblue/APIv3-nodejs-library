@@ -1,4 +1,4 @@
-# SibApiV3Sdk.UpdateSmtpTemplate
+# PakatApiV3Sdk.UpdateSmtpTemplate
 
 ## Properties
 Name | Type | Description | Notes

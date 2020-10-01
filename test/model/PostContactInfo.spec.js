@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.PostContactInfo();
+    instance = new PakatApiV3Sdk.PostContactInfo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('PostContactInfo', function() {
     it('should create an instance of PostContactInfo', function() {
       // uncomment below and update the code to test PostContactInfo
-      //var instane = new SibApiV3Sdk.PostContactInfo();
-      //expect(instance).to.be.a(SibApiV3Sdk.PostContactInfo);
+      //var instane = new PakatApiV3Sdk.PostContactInfo();
+      //expect(instance).to.be.a(PakatApiV3Sdk.PostContactInfo);
     });
 
     it('should have the property contacts (base name: "contacts")', function() {
       // uncomment below and update the code to test the property contacts
-      //var instane = new SibApiV3Sdk.PostContactInfo();
+      //var instane = new PakatApiV3Sdk.PostContactInfo();
       //expect(instance).to.be();
     });
 

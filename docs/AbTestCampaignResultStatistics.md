@@ -1,4 +1,4 @@
-# SibApiV3Sdk.AbTestCampaignResultStatistics
+# PakatApiV3Sdk.AbTestCampaignResultStatistics
 
 ## Properties
 Name | Type | Description | Notes

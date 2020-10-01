@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetContactCampaignStats();
+    instance = new PakatApiV3Sdk.GetContactCampaignStats();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,55 +53,55 @@
   describe('GetContactCampaignStats', function() {
     it('should create an instance of GetContactCampaignStats', function() {
       // uncomment below and update the code to test GetContactCampaignStats
-      //var instane = new SibApiV3Sdk.GetContactCampaignStats();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetContactCampaignStats);
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStats();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetContactCampaignStats);
     });
 
     it('should have the property messagesSent (base name: "messagesSent")', function() {
       // uncomment below and update the code to test the property messagesSent
-      //var instane = new SibApiV3Sdk.GetContactCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property hardBounces (base name: "hardBounces")', function() {
       // uncomment below and update the code to test the property hardBounces
-      //var instane = new SibApiV3Sdk.GetContactCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property softBounces (base name: "softBounces")', function() {
       // uncomment below and update the code to test the property softBounces
-      //var instane = new SibApiV3Sdk.GetContactCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property complaints (base name: "complaints")', function() {
       // uncomment below and update the code to test the property complaints
-      //var instane = new SibApiV3Sdk.GetContactCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property unsubscriptions (base name: "unsubscriptions")', function() {
       // uncomment below and update the code to test the property unsubscriptions
-      //var instane = new SibApiV3Sdk.GetContactCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property opened (base name: "opened")', function() {
       // uncomment below and update the code to test the property opened
-      //var instane = new SibApiV3Sdk.GetContactCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property clicked (base name: "clicked")', function() {
       // uncomment below and update the code to test the property clicked
-      //var instane = new SibApiV3Sdk.GetContactCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property transacAttributes (base name: "transacAttributes")', function() {
       // uncomment below and update the code to test the property transacAttributes
-      //var instane = new SibApiV3Sdk.GetContactCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStats();
       //expect(instance).to.be();
     });
 

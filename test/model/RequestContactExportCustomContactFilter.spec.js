@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.RequestContactExportCustomContactFilter();
+    instance = new PakatApiV3Sdk.RequestContactExportCustomContactFilter();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,43 +53,43 @@
   describe('RequestContactExportCustomContactFilter', function() {
     it('should create an instance of RequestContactExportCustomContactFilter', function() {
       // uncomment below and update the code to test RequestContactExportCustomContactFilter
-      //var instane = new SibApiV3Sdk.RequestContactExportCustomContactFilter();
-      //expect(instance).to.be.a(SibApiV3Sdk.RequestContactExportCustomContactFilter);
+      //var instane = new PakatApiV3Sdk.RequestContactExportCustomContactFilter();
+      //expect(instance).to.be.a(PakatApiV3Sdk.RequestContactExportCustomContactFilter);
     });
 
     it('should have the property actionForContacts (base name: "actionForContacts")', function() {
       // uncomment below and update the code to test the property actionForContacts
-      //var instane = new SibApiV3Sdk.RequestContactExportCustomContactFilter();
+      //var instane = new PakatApiV3Sdk.RequestContactExportCustomContactFilter();
       //expect(instance).to.be();
     });
 
     it('should have the property actionForEmailCampaigns (base name: "actionForEmailCampaigns")', function() {
       // uncomment below and update the code to test the property actionForEmailCampaigns
-      //var instane = new SibApiV3Sdk.RequestContactExportCustomContactFilter();
+      //var instane = new PakatApiV3Sdk.RequestContactExportCustomContactFilter();
       //expect(instance).to.be();
     });
 
     it('should have the property actionForSmsCampaigns (base name: "actionForSmsCampaigns")', function() {
       // uncomment below and update the code to test the property actionForSmsCampaigns
-      //var instane = new SibApiV3Sdk.RequestContactExportCustomContactFilter();
+      //var instane = new PakatApiV3Sdk.RequestContactExportCustomContactFilter();
       //expect(instance).to.be();
     });
 
     it('should have the property listId (base name: "listId")', function() {
       // uncomment below and update the code to test the property listId
-      //var instane = new SibApiV3Sdk.RequestContactExportCustomContactFilter();
+      //var instane = new PakatApiV3Sdk.RequestContactExportCustomContactFilter();
       //expect(instance).to.be();
     });
 
     it('should have the property emailCampaignId (base name: "emailCampaignId")', function() {
       // uncomment below and update the code to test the property emailCampaignId
-      //var instane = new SibApiV3Sdk.RequestContactExportCustomContactFilter();
+      //var instane = new PakatApiV3Sdk.RequestContactExportCustomContactFilter();
       //expect(instance).to.be();
     });
 
     it('should have the property smsCampaignId (base name: "smsCampaignId")', function() {
       // uncomment below and update the code to test the property smsCampaignId
-      //var instane = new SibApiV3Sdk.RequestContactExportCustomContactFilter();
+      //var instane = new PakatApiV3Sdk.RequestContactExportCustomContactFilter();
       //expect(instance).to.be();
     });
 

@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription'), require('./GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetContactCampaignStatsUnsubscriptions = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription, root.SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription);
+    root.PakatApiV3Sdk.GetContactCampaignStatsUnsubscriptions = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription, root.PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription);
   }
 }(this, function(ApiClient, GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription, GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription) {
   'use strict';

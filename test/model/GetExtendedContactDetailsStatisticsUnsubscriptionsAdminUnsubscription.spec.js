@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
+    instance = new PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription', function() {
     it('should create an instance of GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription', function() {
       // uncomment below and update the code to test GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription
-      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription);
+      //var instane = new PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription);
     });
 
     it('should have the property eventTime (base name: "eventTime")', function() {
       // uncomment below and update the code to test the property eventTime
-      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
+      //var instane = new PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
       //expect(instance).to.be();
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
+      //var instane = new PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription();
       //expect(instance).to.be();
     });
 

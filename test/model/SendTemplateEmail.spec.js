@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.SendTemplateEmail();
+    instance = new PakatApiV3Sdk.SendTemplateEmail();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('SendTemplateEmail', function() {
     it('should create an instance of SendTemplateEmail', function() {
       // uncomment below and update the code to test SendTemplateEmail
-      //var instane = new SibApiV3Sdk.SendTemplateEmail();
-      //expect(instance).to.be.a(SibApiV3Sdk.SendTemplateEmail);
+      //var instane = new PakatApiV3Sdk.SendTemplateEmail();
+      //expect(instance).to.be.a(PakatApiV3Sdk.SendTemplateEmail);
     });
 
     it('should have the property messageId (base name: "messageId")', function() {
       // uncomment below and update the code to test the property messageId
-      //var instane = new SibApiV3Sdk.SendTemplateEmail();
+      //var instane = new PakatApiV3Sdk.SendTemplateEmail();
       //expect(instance).to.be();
     });
 

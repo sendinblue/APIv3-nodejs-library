@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetChildInfoCredits
+# PakatApiV3Sdk.GetChildInfoCredits
 
 ## Properties
 Name | Type | Description | Notes

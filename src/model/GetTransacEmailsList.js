@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetTransacEmailsListTransactionalEmails'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetTransacEmailsList = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetTransacEmailsListTransactionalEmails);
+    root.PakatApiV3Sdk.GetTransacEmailsList = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails);
   }
 }(this, function(ApiClient, GetTransacEmailsListTransactionalEmails) {
   'use strict';

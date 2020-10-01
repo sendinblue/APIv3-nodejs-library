@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetAccountMarketingAutomation
+# PakatApiV3Sdk.GetAccountMarketingAutomation
 
 ## Properties
 Name | Type | Description | Notes

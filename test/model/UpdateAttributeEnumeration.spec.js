@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.UpdateAttributeEnumeration();
+    instance = new PakatApiV3Sdk.UpdateAttributeEnumeration();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('UpdateAttributeEnumeration', function() {
     it('should create an instance of UpdateAttributeEnumeration', function() {
       // uncomment below and update the code to test UpdateAttributeEnumeration
-      //var instane = new SibApiV3Sdk.UpdateAttributeEnumeration();
-      //expect(instance).to.be.a(SibApiV3Sdk.UpdateAttributeEnumeration);
+      //var instane = new PakatApiV3Sdk.UpdateAttributeEnumeration();
+      //expect(instance).to.be.a(PakatApiV3Sdk.UpdateAttributeEnumeration);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new SibApiV3Sdk.UpdateAttributeEnumeration();
+      //var instane = new PakatApiV3Sdk.UpdateAttributeEnumeration();
       //expect(instance).to.be();
     });
 
     it('should have the property label (base name: "label")', function() {
       // uncomment below and update the code to test the property label
-      //var instane = new SibApiV3Sdk.UpdateAttributeEnumeration();
+      //var instane = new PakatApiV3Sdk.UpdateAttributeEnumeration();
       //expect(instance).to.be();
     });
 

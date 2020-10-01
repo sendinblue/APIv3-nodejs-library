@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetExtendedContactDetails();
+    instance = new PakatApiV3Sdk.GetExtendedContactDetails();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetExtendedContactDetails', function() {
     it('should create an instance of GetExtendedContactDetails', function() {
       // uncomment below and update the code to test GetExtendedContactDetails
-      //var instane = new SibApiV3Sdk.GetExtendedContactDetails();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedContactDetails);
+      //var instane = new PakatApiV3Sdk.GetExtendedContactDetails();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetExtendedContactDetails);
     });
 
     it('should have the property statistics (base name: "statistics")', function() {
       // uncomment below and update the code to test the property statistics
-      //var instane = new SibApiV3Sdk.GetExtendedContactDetails();
+      //var instane = new PakatApiV3Sdk.GetExtendedContactDetails();
       //expect(instance).to.be();
     });
 

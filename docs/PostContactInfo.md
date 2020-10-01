@@ -1,4 +1,4 @@
-# SibApiV3Sdk.PostContactInfo
+# PakatApiV3Sdk.PostContactInfo
 
 ## Properties
 Name | Type | Description | Notes

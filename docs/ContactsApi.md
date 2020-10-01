@@ -1,4 +1,4 @@
-# SibApiV3Sdk.ContactsApi
+# PakatApiV3Sdk.ContactsApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -41,8 +41,8 @@ Add existing contacts to a list
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -56,11 +56,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var listId = 789; // Number | Id of the list
 
-var contactEmails = new SibApiV3Sdk.AddContactToList(); // AddContactToList | Emails addresses OR IDs of the contacts
+var contactEmails = new PakatApiV3Sdk.AddContactToList(); // AddContactToList | Emails addresses OR IDs of the contacts
 
 apiInstance.addContactToList(listId, contactEmails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -98,8 +98,8 @@ Create contact attribute
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -113,13 +113,13 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var attributeCategory = "attributeCategory_example"; // String | Category of the attribute
 
 var attributeName = "attributeName_example"; // String | Name of the attribute
 
-var createAttribute = new SibApiV3Sdk.CreateAttribute(); // CreateAttribute | Values to create an attribute
+var createAttribute = new PakatApiV3Sdk.CreateAttribute(); // CreateAttribute | Values to create an attribute
 
 apiInstance.createAttribute(attributeCategory, attributeName, createAttribute).then(function() {
   console.log('API called successfully.');
@@ -158,8 +158,8 @@ Create a contact
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -173,9 +173,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
-var createContact = new SibApiV3Sdk.CreateContact(); // CreateContact | Values to create a contact
+var createContact = new PakatApiV3Sdk.CreateContact(); // CreateContact | Values to create a contact
 
 apiInstance.createContact(createContact).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -212,8 +212,8 @@ Create Contact via DOI (Double-Opt-In) Flow
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -227,9 +227,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
-var createDoiContact = new SibApiV3Sdk.CreateDoiContact(); // CreateDoiContact | Values to create the Double opt-in (DOI) contact
+var createDoiContact = new PakatApiV3Sdk.CreateDoiContact(); // CreateDoiContact | Values to create the Double opt-in (DOI) contact
 
 apiInstance.createDoiContact(createDoiContact).then(function() {
   console.log('API called successfully.');
@@ -266,8 +266,8 @@ Create a folder
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -281,9 +281,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
-var createFolder = new SibApiV3Sdk.CreateUpdateFolder(); // CreateUpdateFolder | Name of the folder
+var createFolder = new PakatApiV3Sdk.CreateUpdateFolder(); // CreateUpdateFolder | Name of the folder
 
 apiInstance.createFolder(createFolder).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -320,8 +320,8 @@ Create a list
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -335,9 +335,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
-var createList = new SibApiV3Sdk.CreateList(); // CreateList | Values to create a list
+var createList = new PakatApiV3Sdk.CreateList(); // CreateList | Values to create a list
 
 apiInstance.createList(createList).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -374,8 +374,8 @@ Delete an attribute
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -389,7 +389,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var attributeCategory = "attributeCategory_example"; // String | Category of the attribute
 
@@ -431,8 +431,8 @@ Delete a contact
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -446,7 +446,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var identifier = "identifier_example"; // String | Email (urlencoded) OR ID of the contact
 
@@ -485,8 +485,8 @@ Delete a folder (and all its lists)
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -500,7 +500,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var folderId = 789; // Number | Id of the folder
 
@@ -539,8 +539,8 @@ Delete a list
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -554,7 +554,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var listId = 789; // Number | Id of the list
 
@@ -593,8 +593,8 @@ List all attributes
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -608,7 +608,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 apiInstance.getAttributes().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -641,8 +641,8 @@ Get a contact&#39;s details
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -656,7 +656,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var identifier = "identifier_example"; // String | Email (urlencoded) OR ID of the contact OR its SMS attribute value
 
@@ -695,8 +695,8 @@ Get email campaigns&#39; statistics for a contact
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -710,7 +710,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var identifier = "identifier_example"; // String | Email (urlencoded) OR ID of the contact
 
@@ -755,8 +755,8 @@ Get all the contacts
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -770,7 +770,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var opts = { 
   'limit': 50, // Number | Number of documents per page
@@ -814,8 +814,8 @@ Get contacts in a list
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -829,7 +829,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var listId = 789; // Number | Id of the list
 
@@ -876,8 +876,8 @@ Returns a folder&#39;s details
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -891,7 +891,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var folderId = 789; // Number | id of the folder
 
@@ -930,8 +930,8 @@ Get lists in a folder
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -945,7 +945,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var folderId = 789; // Number | Id of the folder
 
@@ -990,8 +990,8 @@ Get all folders
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -1005,7 +1005,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var limit = 10; // Number | Number of documents per page
 
@@ -1047,8 +1047,8 @@ Get a list&#39;s details
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -1062,7 +1062,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var listId = 789; // Number | Id of the list
 
@@ -1101,8 +1101,8 @@ Get all the lists
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -1116,7 +1116,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var opts = { 
   'limit': 10, // Number | Number of documents per page
@@ -1160,8 +1160,8 @@ It returns the background process ID which on completion calls the notify URL th
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -1175,9 +1175,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
-var requestContactImport = new SibApiV3Sdk.RequestContactImport(); // RequestContactImport | Values to import contacts in Sendinblue. To know more about the expected format, please have a look at ``https://help.sendinblue.com/hc/en-us/articles/209499265-Build-contacts-lists-for-your-email-marketing-campaigns``
+var requestContactImport = new PakatApiV3Sdk.RequestContactImport(); // RequestContactImport | Values to import contacts in Sendinblue. To know more about the expected format, please have a look at ``https://help.sendinblue.com/hc/en-us/articles/209499265-Build-contacts-lists-for-your-email-marketing-campaigns``
 
 apiInstance.importContacts(requestContactImport).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1214,8 +1214,8 @@ Delete a contact from a list
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -1229,11 +1229,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var listId = 789; // Number | Id of the list
 
-var contactEmails = new SibApiV3Sdk.RemoveContactFromList(); // RemoveContactFromList | Emails addresses OR IDs of the contacts
+var contactEmails = new PakatApiV3Sdk.RemoveContactFromList(); // RemoveContactFromList | Emails addresses OR IDs of the contacts
 
 apiInstance.removeContactFromList(listId, contactEmails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1273,8 +1273,8 @@ It returns the background process ID which on completion calls the notify URL th
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -1288,9 +1288,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
-var requestContactExport = new SibApiV3Sdk.RequestContactExport(); // RequestContactExport | Values to request a contact export
+var requestContactExport = new PakatApiV3Sdk.RequestContactExport(); // RequestContactExport | Values to request a contact export
 
 apiInstance.requestContactExport(requestContactExport).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1327,8 +1327,8 @@ Update contact attribute
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -1342,13 +1342,13 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var attributeCategory = "attributeCategory_example"; // String | Category of the attribute
 
 var attributeName = "attributeName_example"; // String | Name of the existing attribute
 
-var updateAttribute = new SibApiV3Sdk.UpdateAttribute(); // UpdateAttribute | Values to update an attribute
+var updateAttribute = new PakatApiV3Sdk.UpdateAttribute(); // UpdateAttribute | Values to update an attribute
 
 apiInstance.updateAttribute(attributeCategory, attributeName, updateAttribute).then(function() {
   console.log('API called successfully.');
@@ -1387,8 +1387,8 @@ Update a contact
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -1402,11 +1402,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var identifier = "identifier_example"; // String | Email (urlencoded) OR ID of the contact
 
-var updateContact = new SibApiV3Sdk.UpdateContact(); // UpdateContact | Values to update a contact
+var updateContact = new PakatApiV3Sdk.UpdateContact(); // UpdateContact | Values to update a contact
 
 apiInstance.updateContact(identifier, updateContact).then(function() {
   console.log('API called successfully.');
@@ -1444,8 +1444,8 @@ Update a folder
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -1459,11 +1459,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var folderId = 789; // Number | Id of the folder
 
-var updateFolder = new SibApiV3Sdk.CreateUpdateFolder(); // CreateUpdateFolder | Name of the folder
+var updateFolder = new PakatApiV3Sdk.CreateUpdateFolder(); // CreateUpdateFolder | Name of the folder
 
 apiInstance.updateFolder(folderId, updateFolder).then(function() {
   console.log('API called successfully.');
@@ -1501,8 +1501,8 @@ Update a list
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -1516,11 +1516,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.ContactsApi();
+var apiInstance = new PakatApiV3Sdk.ContactsApi();
 
 var listId = 789; // Number | Id of the list
 
-var updateList = new SibApiV3Sdk.UpdateList(); // UpdateList | Values to update a list
+var updateList = new PakatApiV3Sdk.UpdateList(); // UpdateList | Values to update a list
 
 apiInstance.updateList(listId, updateList).then(function() {
   console.log('API called successfully.');

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateSenderIps
+# PakatApiV3Sdk.CreateSenderIps
 
 ## Properties
 Name | Type | Description | Notes

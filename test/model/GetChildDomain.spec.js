@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetChildDomain();
+    instance = new PakatApiV3Sdk.GetChildDomain();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetChildDomain', function() {
     it('should create an instance of GetChildDomain', function() {
       // uncomment below and update the code to test GetChildDomain
-      //var instane = new SibApiV3Sdk.GetChildDomain();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetChildDomain);
+      //var instane = new PakatApiV3Sdk.GetChildDomain();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetChildDomain);
     });
 
     it('should have the property domain (base name: "domain")', function() {
       // uncomment below and update the code to test the property domain
-      //var instane = new SibApiV3Sdk.GetChildDomain();
+      //var instane = new PakatApiV3Sdk.GetChildDomain();
       //expect(instance).to.be();
     });
 
     it('should have the property active (base name: "active")', function() {
       // uncomment below and update the code to test the property active
-      //var instane = new SibApiV3Sdk.GetChildDomain();
+      //var instane = new PakatApiV3Sdk.GetChildDomain();
       //expect(instance).to.be();
     });
 

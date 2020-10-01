@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetFolder
+# PakatApiV3Sdk.GetFolder
 
 ## Properties
 Name | Type | Description | Notes

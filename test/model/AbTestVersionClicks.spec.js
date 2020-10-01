@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.AbTestVersionClicks();
+    instance = new PakatApiV3Sdk.AbTestVersionClicks();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,8 +53,8 @@
   describe('AbTestVersionClicks', function() {
     it('should create an instance of AbTestVersionClicks', function() {
       // uncomment below and update the code to test AbTestVersionClicks
-      //var instane = new SibApiV3Sdk.AbTestVersionClicks();
-      //expect(instance).to.be.a(SibApiV3Sdk.AbTestVersionClicks);
+      //var instane = new PakatApiV3Sdk.AbTestVersionClicks();
+      //expect(instance).to.be.a(PakatApiV3Sdk.AbTestVersionClicks);
     });
 
   });

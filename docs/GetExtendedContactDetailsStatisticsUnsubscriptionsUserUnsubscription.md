@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription
+# PakatApiV3Sdk.GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription
 
 ## Properties
 Name | Type | Description | Notes

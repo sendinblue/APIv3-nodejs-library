@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetCampaignRecipients();
+    instance = new PakatApiV3Sdk.GetCampaignRecipients();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetCampaignRecipients', function() {
     it('should create an instance of GetCampaignRecipients', function() {
       // uncomment below and update the code to test GetCampaignRecipients
-      //var instane = new SibApiV3Sdk.GetCampaignRecipients();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetCampaignRecipients);
+      //var instane = new PakatApiV3Sdk.GetCampaignRecipients();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetCampaignRecipients);
     });
 
     it('should have the property lists (base name: "lists")', function() {
       // uncomment below and update the code to test the property lists
-      //var instane = new SibApiV3Sdk.GetCampaignRecipients();
+      //var instane = new PakatApiV3Sdk.GetCampaignRecipients();
       //expect(instance).to.be();
     });
 
     it('should have the property exclusionLists (base name: "exclusionLists")', function() {
       // uncomment below and update the code to test the property exclusionLists
-      //var instane = new SibApiV3Sdk.GetCampaignRecipients();
+      //var instane = new PakatApiV3Sdk.GetCampaignRecipients();
       //expect(instance).to.be();
     });
 

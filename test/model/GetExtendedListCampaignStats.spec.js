@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetExtendedListCampaignStats();
+    instance = new PakatApiV3Sdk.GetExtendedListCampaignStats();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetExtendedListCampaignStats', function() {
     it('should create an instance of GetExtendedListCampaignStats', function() {
       // uncomment below and update the code to test GetExtendedListCampaignStats
-      //var instane = new SibApiV3Sdk.GetExtendedListCampaignStats();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedListCampaignStats);
+      //var instane = new PakatApiV3Sdk.GetExtendedListCampaignStats();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetExtendedListCampaignStats);
     });
 
     it('should have the property campaignId (base name: "campaignId")', function() {
       // uncomment below and update the code to test the property campaignId
-      //var instane = new SibApiV3Sdk.GetExtendedListCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetExtendedListCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property stats (base name: "stats")', function() {
       // uncomment below and update the code to test the property stats
-      //var instane = new SibApiV3Sdk.GetExtendedListCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetExtendedListCampaignStats();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetChildrenList
+# PakatApiV3Sdk.GetChildrenList
 
 ## Properties
 Name | Type | Description | Notes

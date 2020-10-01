@@ -1,4 +1,4 @@
-# SibApiV3Sdk.AbTestVersionClicks
+# PakatApiV3Sdk.AbTestVersionClicks
 
 ## Properties
 Name | Type | Description | Notes

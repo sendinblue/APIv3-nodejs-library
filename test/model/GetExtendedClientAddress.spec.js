@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetExtendedClientAddress();
+    instance = new PakatApiV3Sdk.GetExtendedClientAddress();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetExtendedClientAddress', function() {
     it('should create an instance of GetExtendedClientAddress', function() {
       // uncomment below and update the code to test GetExtendedClientAddress
-      //var instane = new SibApiV3Sdk.GetExtendedClientAddress();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetExtendedClientAddress);
+      //var instane = new PakatApiV3Sdk.GetExtendedClientAddress();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetExtendedClientAddress);
     });
 
     it('should have the property street (base name: "street")', function() {
       // uncomment below and update the code to test the property street
-      //var instane = new SibApiV3Sdk.GetExtendedClientAddress();
+      //var instane = new PakatApiV3Sdk.GetExtendedClientAddress();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instane = new SibApiV3Sdk.GetExtendedClientAddress();
+      //var instane = new PakatApiV3Sdk.GetExtendedClientAddress();
       //expect(instance).to.be();
     });
 
     it('should have the property zipCode (base name: "zipCode")', function() {
       // uncomment below and update the code to test the property zipCode
-      //var instane = new SibApiV3Sdk.GetExtendedClientAddress();
+      //var instane = new PakatApiV3Sdk.GetExtendedClientAddress();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new SibApiV3Sdk.GetExtendedClientAddress();
+      //var instane = new PakatApiV3Sdk.GetExtendedClientAddress();
       //expect(instance).to.be();
     });
 

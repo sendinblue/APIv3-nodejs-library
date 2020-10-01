@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.SendReportEmail();
+    instance = new PakatApiV3Sdk.SendReportEmail();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,43 +53,43 @@
   describe('SendReportEmail', function() {
     it('should create an instance of SendReportEmail', function() {
       // uncomment below and update the code to test SendReportEmail
-      //var instane = new SibApiV3Sdk.SendReportEmail();
-      //expect(instance).to.be.a(SibApiV3Sdk.SendReportEmail);
+      //var instane = new PakatApiV3Sdk.SendReportEmail();
+      //expect(instance).to.be.a(PakatApiV3Sdk.SendReportEmail);
     });
 
     it('should have the property subject (base name: "subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instane = new SibApiV3Sdk.SendReportEmail();
+      //var instane = new PakatApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property to (base name: "to")', function() {
       // uncomment below and update the code to test the property to
-      //var instane = new SibApiV3Sdk.SendReportEmail();
+      //var instane = new PakatApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property contentType (base name: "contentType")', function() {
       // uncomment below and update the code to test the property contentType
-      //var instane = new SibApiV3Sdk.SendReportEmail();
+      //var instane = new PakatApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property bcc (base name: "bcc")', function() {
       // uncomment below and update the code to test the property bcc
-      //var instane = new SibApiV3Sdk.SendReportEmail();
+      //var instane = new PakatApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property cc (base name: "cc")', function() {
       // uncomment below and update the code to test the property cc
-      //var instane = new SibApiV3Sdk.SendReportEmail();
+      //var instane = new PakatApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 
     it('should have the property body (base name: "body")', function() {
       // uncomment below and update the code to test the property body
-      //var instane = new SibApiV3Sdk.SendReportEmail();
+      //var instane = new PakatApiV3Sdk.SendReportEmail();
       //expect(instance).to.be();
     });
 

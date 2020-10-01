@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./SendSmtpEmailAttachment'), require('./SendSmtpEmailBcc'), require('./SendSmtpEmailCc'), require('./SendSmtpEmailReplyTo'), require('./SendSmtpEmailSender'), require('./SendSmtpEmailTo'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.SendSmtpEmail = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.SendSmtpEmailAttachment, root.SibApiV3Sdk.SendSmtpEmailBcc, root.SibApiV3Sdk.SendSmtpEmailCc, root.SibApiV3Sdk.SendSmtpEmailReplyTo, root.SibApiV3Sdk.SendSmtpEmailSender, root.SibApiV3Sdk.SendSmtpEmailTo);
+    root.PakatApiV3Sdk.SendSmtpEmail = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.SendSmtpEmailAttachment, root.PakatApiV3Sdk.SendSmtpEmailBcc, root.PakatApiV3Sdk.SendSmtpEmailCc, root.PakatApiV3Sdk.SendSmtpEmailReplyTo, root.PakatApiV3Sdk.SendSmtpEmailSender, root.PakatApiV3Sdk.SendSmtpEmailTo);
   }
 }(this, function(ApiClient, SendSmtpEmailAttachment, SendSmtpEmailBcc, SendSmtpEmailCc, SendSmtpEmailReplyTo, SendSmtpEmailSender, SendSmtpEmailTo) {
   'use strict';

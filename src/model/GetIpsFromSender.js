@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetIpFromSender'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetIpsFromSender = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetIpFromSender);
+    root.PakatApiV3Sdk.GetIpsFromSender = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetIpFromSender);
   }
 }(this, function(ApiClient, GetIpFromSender) {
   'use strict';

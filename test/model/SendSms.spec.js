@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.SendSms();
+    instance = new PakatApiV3Sdk.SendSms();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,37 +53,37 @@
   describe('SendSms', function() {
     it('should create an instance of SendSms', function() {
       // uncomment below and update the code to test SendSms
-      //var instane = new SibApiV3Sdk.SendSms();
-      //expect(instance).to.be.a(SibApiV3Sdk.SendSms);
+      //var instane = new PakatApiV3Sdk.SendSms();
+      //expect(instance).to.be.a(PakatApiV3Sdk.SendSms);
     });
 
     it('should have the property reference (base name: "reference")', function() {
       // uncomment below and update the code to test the property reference
-      //var instane = new SibApiV3Sdk.SendSms();
+      //var instane = new PakatApiV3Sdk.SendSms();
       //expect(instance).to.be();
     });
 
     it('should have the property messageId (base name: "messageId")', function() {
       // uncomment below and update the code to test the property messageId
-      //var instane = new SibApiV3Sdk.SendSms();
+      //var instane = new PakatApiV3Sdk.SendSms();
       //expect(instance).to.be();
     });
 
     it('should have the property smsCount (base name: "smsCount")', function() {
       // uncomment below and update the code to test the property smsCount
-      //var instane = new SibApiV3Sdk.SendSms();
+      //var instane = new PakatApiV3Sdk.SendSms();
       //expect(instance).to.be();
     });
 
     it('should have the property usedCredits (base name: "usedCredits")', function() {
       // uncomment below and update the code to test the property usedCredits
-      //var instane = new SibApiV3Sdk.SendSms();
+      //var instane = new PakatApiV3Sdk.SendSms();
       //expect(instance).to.be();
     });
 
     it('should have the property remainingCredits (base name: "remainingCredits")', function() {
       // uncomment below and update the code to test the property remainingCredits
-      //var instane = new SibApiV3Sdk.SendSms();
+      //var instane = new PakatApiV3Sdk.SendSms();
       //expect(instance).to.be();
     });
 

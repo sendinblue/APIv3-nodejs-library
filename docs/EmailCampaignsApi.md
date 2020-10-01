@@ -1,4 +1,4 @@
-# SibApiV3Sdk.EmailCampaignsApi
+# PakatApiV3Sdk.EmailCampaignsApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -27,8 +27,8 @@ Create an email campaign
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -42,9 +42,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
-var emailCampaigns = new SibApiV3Sdk.CreateEmailCampaign(); // CreateEmailCampaign | Values to create a campaign
+var emailCampaigns = new PakatApiV3Sdk.CreateEmailCampaign(); // CreateEmailCampaign | Values to create a campaign
 
 apiInstance.createEmailCampaign(emailCampaigns).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -81,8 +81,8 @@ Delete an email campaign
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -96,7 +96,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | id of the campaign
 
@@ -135,8 +135,8 @@ Export the recipients of an email campaign
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -150,12 +150,12 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | Id of the campaign
 
 var opts = { 
-  'recipientExport': new SibApiV3Sdk.EmailExportRecipients() // EmailExportRecipients | Values to send for a recipient export request
+  'recipientExport': new PakatApiV3Sdk.EmailExportRecipients() // EmailExportRecipients | Values to send for a recipient export request
 };
 apiInstance.emailExportRecipients(campaignId, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -195,8 +195,8 @@ Obtain winning version of an A/B test email campaign
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -210,7 +210,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | Id of the A/B test campaign
 
@@ -249,8 +249,8 @@ Get an email campaign report
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -264,7 +264,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | Id of the campaign
 
@@ -303,8 +303,8 @@ Return all your created email campaigns
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -318,7 +318,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var opts = { 
   'type': "type_example", // String | Filter on the type of the campaigns
@@ -370,8 +370,8 @@ Get a unique URL to share &amp; import an email template from one Sendinblue acc
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -385,7 +385,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | Id of the campaign or template
 
@@ -424,8 +424,8 @@ Send an email campaign immediately, based on campaignId
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -439,7 +439,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | Id of the campaign
 
@@ -480,8 +480,8 @@ A PDF will be sent to the specified email addresses
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -495,11 +495,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | Id of the campaign
 
-var sendReport = new SibApiV3Sdk.SendReport(); // SendReport | Values for send a report
+var sendReport = new PakatApiV3Sdk.SendReport(); // SendReport | Values for send a report
 
 apiInstance.sendReport(campaignId, sendReport).then(function() {
   console.log('API called successfully.');
@@ -537,8 +537,8 @@ Send an email campaign to your test list
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -552,11 +552,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | Id of the campaign
 
-var emailTo = new SibApiV3Sdk.SendTestEmail(); // SendTestEmail | 
+var emailTo = new PakatApiV3Sdk.SendTestEmail(); // SendTestEmail | 
 
 apiInstance.sendTestEmail(campaignId, emailTo).then(function() {
   console.log('API called successfully.');
@@ -594,8 +594,8 @@ Update an email campaign status
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -609,11 +609,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | Id of the campaign
 
-var status = new SibApiV3Sdk.UpdateCampaignStatus(); // UpdateCampaignStatus | Status of the campaign
+var status = new PakatApiV3Sdk.UpdateCampaignStatus(); // UpdateCampaignStatus | Status of the campaign
 
 apiInstance.updateCampaignStatus(campaignId, status).then(function() {
   console.log('API called successfully.');
@@ -651,8 +651,8 @@ Update an email campaign
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -666,11 +666,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
 var campaignId = 789; // Number | Id of the campaign
 
-var emailCampaign = new SibApiV3Sdk.UpdateEmailCampaign(); // UpdateEmailCampaign | Values to update a campaign
+var emailCampaign = new PakatApiV3Sdk.UpdateEmailCampaign(); // UpdateEmailCampaign | Values to update a campaign
 
 apiInstance.updateEmailCampaign(campaignId, emailCampaign).then(function() {
   console.log('API called successfully.');
@@ -708,8 +708,8 @@ Upload an image to your account&#39;s image gallery
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -723,9 +723,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+var apiInstance = new PakatApiV3Sdk.EmailCampaignsApi();
 
-var uploadImage = new SibApiV3Sdk.UploadImageToGallery(); // UploadImageToGallery | Parameters to upload an image
+var uploadImage = new PakatApiV3Sdk.UploadImageToGallery(); // UploadImageToGallery | Parameters to upload an image
 
 apiInstance.uploadImageToGallery(uploadImage).then(function() {
   console.log('API called successfully.');

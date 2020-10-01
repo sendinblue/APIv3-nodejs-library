@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetChildInfoApiKeys'), require('./GetChildInfoCredits'), require('./GetChildInfoStatistics'), require('./GetClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetChildInfo = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetChildInfoApiKeys, root.SibApiV3Sdk.GetChildInfoCredits, root.SibApiV3Sdk.GetChildInfoStatistics, root.SibApiV3Sdk.GetClient);
+    root.PakatApiV3Sdk.GetChildInfo = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetChildInfoApiKeys, root.PakatApiV3Sdk.GetChildInfoCredits, root.PakatApiV3Sdk.GetChildInfoStatistics, root.PakatApiV3Sdk.GetClient);
   }
 }(this, function(ApiClient, GetChildInfoApiKeys, GetChildInfoCredits, GetChildInfoStatistics, GetClient) {
   'use strict';

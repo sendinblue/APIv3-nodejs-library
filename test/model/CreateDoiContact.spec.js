@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.CreateDoiContact();
+    instance = new PakatApiV3Sdk.CreateDoiContact();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,43 +53,43 @@
   describe('CreateDoiContact', function() {
     it('should create an instance of CreateDoiContact', function() {
       // uncomment below and update the code to test CreateDoiContact
-      //var instane = new SibApiV3Sdk.CreateDoiContact();
-      //expect(instance).to.be.a(SibApiV3Sdk.CreateDoiContact);
+      //var instane = new PakatApiV3Sdk.CreateDoiContact();
+      //expect(instance).to.be.a(PakatApiV3Sdk.CreateDoiContact);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SibApiV3Sdk.CreateDoiContact();
+      //var instane = new PakatApiV3Sdk.CreateDoiContact();
       //expect(instance).to.be();
     });
 
     it('should have the property attributes (base name: "attributes")', function() {
       // uncomment below and update the code to test the property attributes
-      //var instane = new SibApiV3Sdk.CreateDoiContact();
+      //var instane = new PakatApiV3Sdk.CreateDoiContact();
       //expect(instance).to.be();
     });
 
     it('should have the property includeListIds (base name: "includeListIds")', function() {
       // uncomment below and update the code to test the property includeListIds
-      //var instane = new SibApiV3Sdk.CreateDoiContact();
+      //var instane = new PakatApiV3Sdk.CreateDoiContact();
       //expect(instance).to.be();
     });
 
     it('should have the property excludeListIds (base name: "excludeListIds")', function() {
       // uncomment below and update the code to test the property excludeListIds
-      //var instane = new SibApiV3Sdk.CreateDoiContact();
+      //var instane = new PakatApiV3Sdk.CreateDoiContact();
       //expect(instance).to.be();
     });
 
     it('should have the property templateId (base name: "templateId")', function() {
       // uncomment below and update the code to test the property templateId
-      //var instane = new SibApiV3Sdk.CreateDoiContact();
+      //var instane = new PakatApiV3Sdk.CreateDoiContact();
       //expect(instance).to.be();
     });
 
     it('should have the property redirectionUrl (base name: "redirectionUrl")', function() {
       // uncomment below and update the code to test the property redirectionUrl
-      //var instane = new SibApiV3Sdk.CreateDoiContact();
+      //var instane = new PakatApiV3Sdk.CreateDoiContact();
       //expect(instance).to.be();
     });
 

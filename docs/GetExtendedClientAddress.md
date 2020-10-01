@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetExtendedClientAddress
+# PakatApiV3Sdk.GetExtendedClientAddress
 
 ## Properties
 Name | Type | Description | Notes

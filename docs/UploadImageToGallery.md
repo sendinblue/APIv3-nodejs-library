@@ -1,4 +1,4 @@
-# SibApiV3Sdk.UploadImageToGallery
+# PakatApiV3Sdk.UploadImageToGallery
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.TransactionalEmailsApi
+# PakatApiV3Sdk.TransactionalEmailsApi
 
 All URIs are relative to *https://api.sendinblue.com/v3*
 
@@ -31,8 +31,8 @@ Create an email template
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -46,9 +46,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
-var smtpTemplate = new SibApiV3Sdk.CreateSmtpTemplate(); // CreateSmtpTemplate | values to update in transactional email template
+var smtpTemplate = new PakatApiV3Sdk.CreateSmtpTemplate(); // CreateSmtpTemplate | values to update in transactional email template
 
 apiInstance.createSmtpTemplate(smtpTemplate).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -87,8 +87,8 @@ Delete hardbounces. To use carefully (e.g. in case of temporary ISP failures)
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -102,10 +102,10 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var opts = { 
-  'deleteHardbounces': new SibApiV3Sdk.DeleteHardbounces() // DeleteHardbounces | values to delete hardbounces
+  'deleteHardbounces': new PakatApiV3Sdk.DeleteHardbounces() // DeleteHardbounces | values to delete hardbounces
 };
 apiInstance.deleteHardbounces(opts).then(function() {
   console.log('API called successfully.');
@@ -142,8 +142,8 @@ Delete an inactive email template
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -157,7 +157,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var templateId = 789; // Number | id of the template
 
@@ -196,8 +196,8 @@ Get your transactional email activity aggregated over a period of time
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -211,7 +211,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var opts = { 
   'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
@@ -257,8 +257,8 @@ Get all your transactional email activity (unaggregated events)
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -272,7 +272,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var opts = { 
   'limit': 50, // Number | Number limitation for the result returned
@@ -330,8 +330,8 @@ Get your transactional email activity aggregated per day
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -345,7 +345,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var opts = { 
   'limit': 10, // Number | Number of documents returned per page
@@ -395,8 +395,8 @@ Returns the template information
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -410,7 +410,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var templateId = 789; // Number | id of the template
 
@@ -449,8 +449,8 @@ Get the list of email templates
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -464,7 +464,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var opts = { 
   'templateStatus': true, // Boolean | Filter on the status of the template. Active = true, inactive = false
@@ -508,8 +508,8 @@ Get the list of blocked or unsubscribed transactional contacts
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -523,7 +523,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var opts = { 
   'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the blocked or unsubscribed contacts
@@ -571,8 +571,8 @@ Get the personalized content of a sent transactional email
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -586,7 +586,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var uuid = "uuid_example"; // String | Unique id of the transactional email that has been sent to a particular contact
 
@@ -627,8 +627,8 @@ This endpoint will show the list of emails for past 30 days by default. To retri
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -642,7 +642,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var opts = { 
   'email': "email_example", // String | Mandatory if templateId and messageId are not passed in query filters. Email address to which transactional email has been sent.
@@ -692,8 +692,8 @@ This endpoint is deprecated. Prefer v3/smtp/email instead.
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -707,11 +707,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var templateId = 789; // Number | Id of the template
 
-var sendEmail = new SibApiV3Sdk.SendEmail(); // SendEmail | 
+var sendEmail = new PakatApiV3Sdk.SendEmail(); // SendEmail | 
 
 apiInstance.sendTemplate(templateId, sendEmail).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -749,8 +749,8 @@ Send a template to your test list
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -764,11 +764,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var templateId = 789; // Number | Id of the template
 
-var sendTestEmail = new SibApiV3Sdk.SendTestEmail(); // SendTestEmail | 
+var sendTestEmail = new PakatApiV3Sdk.SendTestEmail(); // SendTestEmail | 
 
 apiInstance.sendTestTemplate(templateId, sendTestEmail).then(function() {
   console.log('API called successfully.');
@@ -806,8 +806,8 @@ Send a transactional email
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -821,9 +821,9 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
-var sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
+var sendSmtpEmail = new PakatApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
 
 apiInstance.sendTransacEmail(sendSmtpEmail).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -860,8 +860,8 @@ Unblock or resubscribe a transactional contact
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -875,7 +875,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var email = "email_example"; // String | contact email (urlencoded) to unblock.
 
@@ -914,8 +914,8 @@ Delete an SMTP transactional log
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -929,7 +929,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var messageId = "messageId_example"; // String | MessageId of the transactional log to delete
 
@@ -968,8 +968,8 @@ Update an email template
 
 ### Example
 ```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+var PakatApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = PakatApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 var apiKey = defaultClient.authentications['api-key'];
@@ -983,11 +983,11 @@ partnerKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //partnerKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+var apiInstance = new PakatApiV3Sdk.TransactionalEmailsApi();
 
 var templateId = 789; // Number | id of the template
 
-var smtpTemplate = new SibApiV3Sdk.UpdateSmtpTemplate(); // UpdateSmtpTemplate | values to update in transactional email template
+var smtpTemplate = new PakatApiV3Sdk.UpdateSmtpTemplate(); // UpdateSmtpTemplate | values to update in transactional email template
 
 apiInstance.updateSmtpTemplate(templateId, smtpTemplate).then(function() {
   console.log('API called successfully.');

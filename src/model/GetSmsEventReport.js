@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetSmsEventReportEvents'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetSmsEventReport = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetSmsEventReportEvents);
+    root.PakatApiV3Sdk.GetSmsEventReport = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetSmsEventReportEvents);
   }
 }(this, function(ApiClient, GetSmsEventReportEvents) {
   'use strict';

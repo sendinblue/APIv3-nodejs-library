@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreateModel'), require('../model/CreateSmsCampaign'), require('../model/CreatedProcessId'), require('../model/ErrorModel'), require('../model/GetSmsCampaign'), require('../model/GetSmsCampaigns'), require('../model/PostSendSmsTestFailed'), require('../model/RequestSmsRecipientExport'), require('../model/SendReport'), require('../model/SendTestSms'), require('../model/UpdateCampaignStatus'), require('../model/UpdateSmsCampaign'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.SMSCampaignsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSmsCampaign, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetSmsCampaign, root.SibApiV3Sdk.GetSmsCampaigns, root.SibApiV3Sdk.PostSendSmsTestFailed, root.SibApiV3Sdk.RequestSmsRecipientExport, root.SibApiV3Sdk.SendReport, root.SibApiV3Sdk.SendTestSms, root.SibApiV3Sdk.UpdateCampaignStatus, root.SibApiV3Sdk.UpdateSmsCampaign);
+    root.PakatApiV3Sdk.SMSCampaignsApi = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.CreateModel, root.PakatApiV3Sdk.CreateSmsCampaign, root.PakatApiV3Sdk.CreatedProcessId, root.PakatApiV3Sdk.ErrorModel, root.PakatApiV3Sdk.GetSmsCampaign, root.PakatApiV3Sdk.GetSmsCampaigns, root.PakatApiV3Sdk.PostSendSmsTestFailed, root.PakatApiV3Sdk.RequestSmsRecipientExport, root.PakatApiV3Sdk.SendReport, root.PakatApiV3Sdk.SendTestSms, root.PakatApiV3Sdk.UpdateCampaignStatus, root.PakatApiV3Sdk.UpdateSmsCampaign);
   }
 }(this, function(ApiClient, CreateModel, CreateSmsCampaign, CreatedProcessId, ErrorModel, GetSmsCampaign, GetSmsCampaigns, PostSendSmsTestFailed, RequestSmsRecipientExport, SendReport, SendTestSms, UpdateCampaignStatus, UpdateSmsCampaign) {
   'use strict';

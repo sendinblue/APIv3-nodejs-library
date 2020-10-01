@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetExtendedClient
+# PakatApiV3Sdk.GetExtendedClient
 
 ## Properties
 Name | Type | Description | Notes

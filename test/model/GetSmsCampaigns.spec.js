@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetSmsCampaigns();
+    instance = new PakatApiV3Sdk.GetSmsCampaigns();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetSmsCampaigns', function() {
     it('should create an instance of GetSmsCampaigns', function() {
       // uncomment below and update the code to test GetSmsCampaigns
-      //var instane = new SibApiV3Sdk.GetSmsCampaigns();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetSmsCampaigns);
+      //var instane = new PakatApiV3Sdk.GetSmsCampaigns();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetSmsCampaigns);
     });
 
     it('should have the property campaigns (base name: "campaigns")', function() {
       // uncomment below and update the code to test the property campaigns
-      //var instane = new SibApiV3Sdk.GetSmsCampaigns();
+      //var instane = new PakatApiV3Sdk.GetSmsCampaigns();
       //expect(instance).to.be();
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new SibApiV3Sdk.GetSmsCampaigns();
+      //var instane = new PakatApiV3Sdk.GetSmsCampaigns();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreatedProcessId
+# PakatApiV3Sdk.CreatedProcessId
 
 ## Properties
 Name | Type | Description | Notes

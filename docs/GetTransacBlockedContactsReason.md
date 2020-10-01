@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetTransacBlockedContactsReason
+# PakatApiV3Sdk.GetTransacBlockedContactsReason
 
 ## Properties
 Name | Type | Description | Notes

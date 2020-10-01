@@ -1,4 +1,4 @@
-# SibApiV3Sdk.DeleteHardbounces
+# PakatApiV3Sdk.DeleteHardbounces
 
 ## Properties
 Name | Type | Description | Notes

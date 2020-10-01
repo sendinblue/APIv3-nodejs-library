@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./UpdateEmailCampaignRecipients'), require('./UpdateEmailCampaignSender'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.UpdateEmailCampaign = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.UpdateEmailCampaignRecipients, root.SibApiV3Sdk.UpdateEmailCampaignSender);
+    root.PakatApiV3Sdk.UpdateEmailCampaign = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.UpdateEmailCampaignRecipients, root.PakatApiV3Sdk.UpdateEmailCampaignSender);
   }
 }(this, function(ApiClient, UpdateEmailCampaignRecipients, UpdateEmailCampaignSender) {
   'use strict';

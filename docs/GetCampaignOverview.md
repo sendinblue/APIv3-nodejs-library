@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetCampaignOverview
+# PakatApiV3Sdk.GetCampaignOverview
 
 ## Properties
 Name | Type | Description | Notes

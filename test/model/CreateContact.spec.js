@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.CreateContact();
+    instance = new PakatApiV3Sdk.CreateContact();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,49 +53,49 @@
   describe('CreateContact', function() {
     it('should create an instance of CreateContact', function() {
       // uncomment below and update the code to test CreateContact
-      //var instane = new SibApiV3Sdk.CreateContact();
-      //expect(instance).to.be.a(SibApiV3Sdk.CreateContact);
+      //var instane = new PakatApiV3Sdk.CreateContact();
+      //expect(instance).to.be.a(PakatApiV3Sdk.CreateContact);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SibApiV3Sdk.CreateContact();
+      //var instane = new PakatApiV3Sdk.CreateContact();
       //expect(instance).to.be();
     });
 
     it('should have the property attributes (base name: "attributes")', function() {
       // uncomment below and update the code to test the property attributes
-      //var instane = new SibApiV3Sdk.CreateContact();
+      //var instane = new PakatApiV3Sdk.CreateContact();
       //expect(instance).to.be();
     });
 
     it('should have the property emailBlacklisted (base name: "emailBlacklisted")', function() {
       // uncomment below and update the code to test the property emailBlacklisted
-      //var instane = new SibApiV3Sdk.CreateContact();
+      //var instane = new PakatApiV3Sdk.CreateContact();
       //expect(instance).to.be();
     });
 
     it('should have the property smsBlacklisted (base name: "smsBlacklisted")', function() {
       // uncomment below and update the code to test the property smsBlacklisted
-      //var instane = new SibApiV3Sdk.CreateContact();
+      //var instane = new PakatApiV3Sdk.CreateContact();
       //expect(instance).to.be();
     });
 
     it('should have the property listIds (base name: "listIds")', function() {
       // uncomment below and update the code to test the property listIds
-      //var instane = new SibApiV3Sdk.CreateContact();
+      //var instane = new PakatApiV3Sdk.CreateContact();
       //expect(instance).to.be();
     });
 
     it('should have the property updateEnabled (base name: "updateEnabled")', function() {
       // uncomment below and update the code to test the property updateEnabled
-      //var instane = new SibApiV3Sdk.CreateContact();
+      //var instane = new PakatApiV3Sdk.CreateContact();
       //expect(instance).to.be();
     });
 
     it('should have the property smtpBlacklistSender (base name: "smtpBlacklistSender")', function() {
       // uncomment below and update the code to test the property smtpBlacklistSender
-      //var instane = new SibApiV3Sdk.CreateContact();
+      //var instane = new PakatApiV3Sdk.CreateContact();
       //expect(instance).to.be();
     });
 

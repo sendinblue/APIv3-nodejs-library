@@ -1,4 +1,4 @@
-# SibApiV3Sdk.RemainingCreditModelChild
+# PakatApiV3Sdk.RemainingCreditModelChild
 
 ## Properties
 Name | Type | Description | Notes

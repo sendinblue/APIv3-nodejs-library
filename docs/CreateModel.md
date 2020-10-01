@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateModel
+# PakatApiV3Sdk.CreateModel
 
 ## Properties
 Name | Type | Description | Notes

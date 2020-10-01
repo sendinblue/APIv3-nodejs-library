@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetCampaignStats'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetStatsByDomain = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetCampaignStats);
+    root.PakatApiV3Sdk.GetStatsByDomain = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetCampaignStats);
   }
 }(this, function(ApiClient, GetCampaignStats) {
   'use strict';

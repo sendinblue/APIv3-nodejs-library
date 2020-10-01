@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetStatsByDevice
+# PakatApiV3Sdk.GetStatsByDevice
 
 ## Properties
 Name | Type | Description | Notes

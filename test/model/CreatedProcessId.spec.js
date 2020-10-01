@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.CreatedProcessId();
+    instance = new PakatApiV3Sdk.CreatedProcessId();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('CreatedProcessId', function() {
     it('should create an instance of CreatedProcessId', function() {
       // uncomment below and update the code to test CreatedProcessId
-      //var instane = new SibApiV3Sdk.CreatedProcessId();
-      //expect(instance).to.be.a(SibApiV3Sdk.CreatedProcessId);
+      //var instane = new PakatApiV3Sdk.CreatedProcessId();
+      //expect(instance).to.be.a(PakatApiV3Sdk.CreatedProcessId);
     });
 
     it('should have the property processId (base name: "processId")', function() {
       // uncomment below and update the code to test the property processId
-      //var instane = new SibApiV3Sdk.CreatedProcessId();
+      //var instane = new PakatApiV3Sdk.CreatedProcessId();
       //expect(instance).to.be();
     });
 

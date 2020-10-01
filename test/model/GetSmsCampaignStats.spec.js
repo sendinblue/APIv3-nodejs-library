@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetSmsCampaignStats();
+    instance = new PakatApiV3Sdk.GetSmsCampaignStats();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,49 +53,49 @@
   describe('GetSmsCampaignStats', function() {
     it('should create an instance of GetSmsCampaignStats', function() {
       // uncomment below and update the code to test GetSmsCampaignStats
-      //var instane = new SibApiV3Sdk.GetSmsCampaignStats();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetSmsCampaignStats);
+      //var instane = new PakatApiV3Sdk.GetSmsCampaignStats();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetSmsCampaignStats);
     });
 
     it('should have the property delivered (base name: "delivered")', function() {
       // uncomment below and update the code to test the property delivered
-      //var instane = new SibApiV3Sdk.GetSmsCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetSmsCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property sent (base name: "sent")', function() {
       // uncomment below and update the code to test the property sent
-      //var instane = new SibApiV3Sdk.GetSmsCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetSmsCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property processing (base name: "processing")', function() {
       // uncomment below and update the code to test the property processing
-      //var instane = new SibApiV3Sdk.GetSmsCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetSmsCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property softBounces (base name: "softBounces")', function() {
       // uncomment below and update the code to test the property softBounces
-      //var instane = new SibApiV3Sdk.GetSmsCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetSmsCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property hardBounces (base name: "hardBounces")', function() {
       // uncomment below and update the code to test the property hardBounces
-      //var instane = new SibApiV3Sdk.GetSmsCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetSmsCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property unsubscriptions (base name: "unsubscriptions")', function() {
       // uncomment below and update the code to test the property unsubscriptions
-      //var instane = new SibApiV3Sdk.GetSmsCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetSmsCampaignStats();
       //expect(instance).to.be();
     });
 
     it('should have the property answered (base name: "answered")', function() {
       // uncomment below and update the code to test the property answered
-      //var instane = new SibApiV3Sdk.GetSmsCampaignStats();
+      //var instane = new PakatApiV3Sdk.GetSmsCampaignStats();
       //expect(instance).to.be();
     });
 

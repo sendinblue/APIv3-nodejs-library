@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/ErrorModel'), require('../model/GetSmsEventReport'), require('../model/GetTransacAggregatedSmsReport'), require('../model/GetTransacSmsReport'), require('../model/SendSms'), require('../model/SendTransacSms'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.TransactionalSMSApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetSmsEventReport, root.SibApiV3Sdk.GetTransacAggregatedSmsReport, root.SibApiV3Sdk.GetTransacSmsReport, root.SibApiV3Sdk.SendSms, root.SibApiV3Sdk.SendTransacSms);
+    root.PakatApiV3Sdk.TransactionalSMSApi = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.ErrorModel, root.PakatApiV3Sdk.GetSmsEventReport, root.PakatApiV3Sdk.GetTransacAggregatedSmsReport, root.PakatApiV3Sdk.GetTransacSmsReport, root.PakatApiV3Sdk.SendSms, root.PakatApiV3Sdk.SendTransacSms);
   }
 }(this, function(ApiClient, ErrorModel, GetSmsEventReport, GetTransacAggregatedSmsReport, GetTransacSmsReport, SendSms, SendTransacSms) {
   'use strict';

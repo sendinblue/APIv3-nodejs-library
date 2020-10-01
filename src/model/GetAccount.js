@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetAccountMarketingAutomation'), require('./GetAccountPlan'), require('./GetAccountRelay'), require('./GetExtendedClient'), require('./GetExtendedClientAddress'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetAccount = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetAccountMarketingAutomation, root.SibApiV3Sdk.GetAccountPlan, root.SibApiV3Sdk.GetAccountRelay, root.SibApiV3Sdk.GetExtendedClient, root.SibApiV3Sdk.GetExtendedClientAddress);
+    root.PakatApiV3Sdk.GetAccount = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetAccountMarketingAutomation, root.PakatApiV3Sdk.GetAccountPlan, root.PakatApiV3Sdk.GetAccountRelay, root.PakatApiV3Sdk.GetExtendedClient, root.PakatApiV3Sdk.GetExtendedClientAddress);
   }
 }(this, function(ApiClient, GetAccountMarketingAutomation, GetAccountPlan, GetAccountRelay, GetExtendedClient, GetExtendedClientAddress) {
   'use strict';

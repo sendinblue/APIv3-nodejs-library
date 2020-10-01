@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetStatsByBrowser
+# PakatApiV3Sdk.GetStatsByBrowser
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetDeviceBrowserStats
+# PakatApiV3Sdk.GetDeviceBrowserStats
 
 ## Properties
 Name | Type | Description | Notes

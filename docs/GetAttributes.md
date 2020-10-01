@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetAttributes
+# PakatApiV3Sdk.GetAttributes
 
 ## Properties
 Name | Type | Description | Notes

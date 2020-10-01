@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.UploadImageToGallery();
+    instance = new PakatApiV3Sdk.UploadImageToGallery();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('UploadImageToGallery', function() {
     it('should create an instance of UploadImageToGallery', function() {
       // uncomment below and update the code to test UploadImageToGallery
-      //var instane = new SibApiV3Sdk.UploadImageToGallery();
-      //expect(instance).to.be.a(SibApiV3Sdk.UploadImageToGallery);
+      //var instane = new PakatApiV3Sdk.UploadImageToGallery();
+      //expect(instance).to.be.a(PakatApiV3Sdk.UploadImageToGallery);
     });
 
     it('should have the property imageUrl (base name: "imageUrl")', function() {
       // uncomment below and update the code to test the property imageUrl
-      //var instane = new SibApiV3Sdk.UploadImageToGallery();
+      //var instane = new PakatApiV3Sdk.UploadImageToGallery();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SibApiV3Sdk.UploadImageToGallery();
+      //var instane = new PakatApiV3Sdk.UploadImageToGallery();
       //expect(instance).to.be();
     });
 

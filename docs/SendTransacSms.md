@@ -1,4 +1,4 @@
-# SibApiV3Sdk.SendTransacSms
+# PakatApiV3Sdk.SendTransacSms
 
 ## Properties
 Name | Type | Description | Notes

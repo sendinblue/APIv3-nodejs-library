@@ -1,4 +1,4 @@
-# SibApiV3Sdk.EmailExportRecipients
+# PakatApiV3Sdk.EmailExportRecipients
 
 ## Properties
 Name | Type | Description | Notes

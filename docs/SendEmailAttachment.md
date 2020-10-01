@@ -1,4 +1,4 @@
-# SibApiV3Sdk.SendEmailAttachment
+# PakatApiV3Sdk.SendEmailAttachment
 
 ## Properties
 Name | Type | Description | Notes

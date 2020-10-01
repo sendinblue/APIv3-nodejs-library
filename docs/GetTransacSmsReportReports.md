@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetTransacSmsReportReports
+# PakatApiV3Sdk.GetTransacSmsReportReports
 
 ## Properties
 Name | Type | Description | Notes

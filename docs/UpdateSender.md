@@ -1,4 +1,4 @@
-# SibApiV3Sdk.UpdateSender
+# PakatApiV3Sdk.UpdateSender
 
 ## Properties
 Name | Type | Description | Notes

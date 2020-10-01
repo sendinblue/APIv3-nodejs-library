@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetStatsByBrowser'), require('./GetStatsByDevice'), require('./GetStatsByDomain'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetExtendedCampaignStats = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetStatsByBrowser, root.SibApiV3Sdk.GetStatsByDevice, root.SibApiV3Sdk.GetStatsByDomain);
+    root.PakatApiV3Sdk.GetExtendedCampaignStats = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetStatsByBrowser, root.PakatApiV3Sdk.GetStatsByDevice, root.PakatApiV3Sdk.GetStatsByDomain);
   }
 }(this, function(ApiClient, GetStatsByBrowser, GetStatsByDevice, GetStatsByDomain) {
   'use strict';

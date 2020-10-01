@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateUpdateFolder
+# PakatApiV3Sdk.CreateUpdateFolder
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateWebhook
+# PakatApiV3Sdk.CreateWebhook
 
 ## Properties
 Name | Type | Description | Notes

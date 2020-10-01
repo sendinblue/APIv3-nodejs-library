@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetStatsByDevice();
+    instance = new PakatApiV3Sdk.GetStatsByDevice();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('GetStatsByDevice', function() {
     it('should create an instance of GetStatsByDevice', function() {
       // uncomment below and update the code to test GetStatsByDevice
-      //var instane = new SibApiV3Sdk.GetStatsByDevice();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetStatsByDevice);
+      //var instane = new PakatApiV3Sdk.GetStatsByDevice();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetStatsByDevice);
     });
 
     it('should have the property desktop (base name: "desktop")', function() {
       // uncomment below and update the code to test the property desktop
-      //var instane = new SibApiV3Sdk.GetStatsByDevice();
+      //var instane = new PakatApiV3Sdk.GetStatsByDevice();
       //expect(instance).to.be();
     });
 
     it('should have the property mobile (base name: "mobile")', function() {
       // uncomment below and update the code to test the property mobile
-      //var instane = new SibApiV3Sdk.GetStatsByDevice();
+      //var instane = new PakatApiV3Sdk.GetStatsByDevice();
       //expect(instance).to.be();
     });
 
     it('should have the property tablet (base name: "tablet")', function() {
       // uncomment below and update the code to test the property tablet
-      //var instane = new SibApiV3Sdk.GetStatsByDevice();
+      //var instane = new PakatApiV3Sdk.GetStatsByDevice();
       //expect(instance).to.be();
     });
 
     it('should have the property unknown (base name: "unknown")', function() {
       // uncomment below and update the code to test the property unknown
-      //var instane = new SibApiV3Sdk.GetStatsByDevice();
+      //var instane = new PakatApiV3Sdk.GetStatsByDevice();
       //expect(instance).to.be();
     });
 

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetCampaignOverview();
+    instance = new PakatApiV3Sdk.GetCampaignOverview();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,85 +53,85 @@
   describe('GetCampaignOverview', function() {
     it('should create an instance of GetCampaignOverview', function() {
       // uncomment below and update the code to test GetCampaignOverview
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetCampaignOverview);
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetCampaignOverview);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property subject (base name: "subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property scheduledAt (base name: "scheduledAt")', function() {
       // uncomment below and update the code to test the property scheduledAt
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property abTesting (base name: "abTesting")', function() {
       // uncomment below and update the code to test the property abTesting
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property subjectA (base name: "subjectA")', function() {
       // uncomment below and update the code to test the property subjectA
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property subjectB (base name: "subjectB")', function() {
       // uncomment below and update the code to test the property subjectB
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property splitRule (base name: "splitRule")', function() {
       // uncomment below and update the code to test the property splitRule
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property winnerCriteria (base name: "winnerCriteria")', function() {
       // uncomment below and update the code to test the property winnerCriteria
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property winnerDelay (base name: "winnerDelay")', function() {
       // uncomment below and update the code to test the property winnerDelay
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 
     it('should have the property sendAtBestTime (base name: "sendAtBestTime")', function() {
       // uncomment below and update the code to test the property sendAtBestTime
-      //var instane = new SibApiV3Sdk.GetCampaignOverview();
+      //var instane = new PakatApiV3Sdk.GetCampaignOverview();
       //expect(instance).to.be();
     });
 

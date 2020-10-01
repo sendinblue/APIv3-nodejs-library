@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateEmailCampaignSender
+# PakatApiV3Sdk.CreateEmailCampaignSender
 
 ## Properties
 Name | Type | Description | Notes

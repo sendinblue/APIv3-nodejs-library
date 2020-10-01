@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.UpdateCampaignStatus();
+    instance = new PakatApiV3Sdk.UpdateCampaignStatus();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('UpdateCampaignStatus', function() {
     it('should create an instance of UpdateCampaignStatus', function() {
       // uncomment below and update the code to test UpdateCampaignStatus
-      //var instane = new SibApiV3Sdk.UpdateCampaignStatus();
-      //expect(instance).to.be.a(SibApiV3Sdk.UpdateCampaignStatus);
+      //var instane = new PakatApiV3Sdk.UpdateCampaignStatus();
+      //expect(instance).to.be.a(PakatApiV3Sdk.UpdateCampaignStatus);
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new SibApiV3Sdk.UpdateCampaignStatus();
+      //var instane = new PakatApiV3Sdk.UpdateCampaignStatus();
       //expect(instance).to.be();
     });
 

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetWebhook();
+    instance = new PakatApiV3Sdk.GetWebhook();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,49 +53,49 @@
   describe('GetWebhook', function() {
     it('should create an instance of GetWebhook', function() {
       // uncomment below and update the code to test GetWebhook
-      //var instane = new SibApiV3Sdk.GetWebhook();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetWebhook);
+      //var instane = new PakatApiV3Sdk.GetWebhook();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetWebhook);
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new SibApiV3Sdk.GetWebhook();
+      //var instane = new PakatApiV3Sdk.GetWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SibApiV3Sdk.GetWebhook();
+      //var instane = new PakatApiV3Sdk.GetWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new SibApiV3Sdk.GetWebhook();
+      //var instane = new PakatApiV3Sdk.GetWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property events (base name: "events")', function() {
       // uncomment below and update the code to test the property events
-      //var instane = new SibApiV3Sdk.GetWebhook();
+      //var instane = new PakatApiV3Sdk.GetWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new SibApiV3Sdk.GetWebhook();
+      //var instane = new PakatApiV3Sdk.GetWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "createdAt")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instane = new SibApiV3Sdk.GetWebhook();
+      //var instane = new PakatApiV3Sdk.GetWebhook();
       //expect(instance).to.be();
     });
 
     it('should have the property modifiedAt (base name: "modifiedAt")', function() {
       // uncomment below and update the code to test the property modifiedAt
-      //var instane = new SibApiV3Sdk.GetWebhook();
+      //var instane = new PakatApiV3Sdk.GetWebhook();
       //expect(instance).to.be();
     });
 

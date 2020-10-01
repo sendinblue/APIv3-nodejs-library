@@ -1,4 +1,4 @@
-# SibApiV3Sdk.UpdateChildAccountStatus
+# PakatApiV3Sdk.UpdateChildAccountStatus
 
 ## Properties
 Name | Type | Description | Notes

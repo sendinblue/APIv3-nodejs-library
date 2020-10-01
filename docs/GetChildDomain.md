@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetChildDomain
+# PakatApiV3Sdk.GetChildDomain
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetContactCampaignStatsClicked();
+    instance = new PakatApiV3Sdk.GetContactCampaignStatsClicked();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetContactCampaignStatsClicked', function() {
     it('should create an instance of GetContactCampaignStatsClicked', function() {
       // uncomment below and update the code to test GetContactCampaignStatsClicked
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsClicked();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetContactCampaignStatsClicked);
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStatsClicked();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetContactCampaignStatsClicked);
     });
 
     it('should have the property campaignId (base name: "campaignId")', function() {
       // uncomment below and update the code to test the property campaignId
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsClicked();
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStatsClicked();
       //expect(instance).to.be();
     });
 
     it('should have the property links (base name: "links")', function() {
       // uncomment below and update the code to test the property links
-      //var instane = new SibApiV3Sdk.GetContactCampaignStatsClicked();
+      //var instane = new PakatApiV3Sdk.GetContactCampaignStatsClicked();
       //expect(instance).to.be();
     });
 

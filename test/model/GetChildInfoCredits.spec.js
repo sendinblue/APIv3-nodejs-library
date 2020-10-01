@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetChildInfoCredits();
+    instance = new PakatApiV3Sdk.GetChildInfoCredits();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('GetChildInfoCredits', function() {
     it('should create an instance of GetChildInfoCredits', function() {
       // uncomment below and update the code to test GetChildInfoCredits
-      //var instane = new SibApiV3Sdk.GetChildInfoCredits();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetChildInfoCredits);
+      //var instane = new PakatApiV3Sdk.GetChildInfoCredits();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetChildInfoCredits);
     });
 
     it('should have the property emailCredits (base name: "emailCredits")', function() {
       // uncomment below and update the code to test the property emailCredits
-      //var instane = new SibApiV3Sdk.GetChildInfoCredits();
+      //var instane = new PakatApiV3Sdk.GetChildInfoCredits();
       //expect(instance).to.be();
     });
 
     it('should have the property smsCredits (base name: "smsCredits")', function() {
       // uncomment below and update the code to test the property smsCredits
-      //var instane = new SibApiV3Sdk.GetChildInfoCredits();
+      //var instane = new PakatApiV3Sdk.GetChildInfoCredits();
       //expect(instance).to.be();
     });
 

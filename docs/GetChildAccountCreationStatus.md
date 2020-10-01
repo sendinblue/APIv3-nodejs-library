@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetChildAccountCreationStatus
+# PakatApiV3Sdk.GetChildAccountCreationStatus
 
 ## Properties
 Name | Type | Description | Notes

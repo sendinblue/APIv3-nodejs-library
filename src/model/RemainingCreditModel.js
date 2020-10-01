@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./RemainingCreditModelChild'), require('./RemainingCreditModelReseller'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.RemainingCreditModel = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.RemainingCreditModelChild, root.SibApiV3Sdk.RemainingCreditModelReseller);
+    root.PakatApiV3Sdk.RemainingCreditModel = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.RemainingCreditModelChild, root.PakatApiV3Sdk.RemainingCreditModelReseller);
   }
 }(this, function(ApiClient, RemainingCreditModelChild, RemainingCreditModelReseller) {
   'use strict';

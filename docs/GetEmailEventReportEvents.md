@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetEmailEventReportEvents
+# PakatApiV3Sdk.GetEmailEventReportEvents
 
 ## Properties
 Name | Type | Description | Notes

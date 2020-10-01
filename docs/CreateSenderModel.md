@@ -1,4 +1,4 @@
-# SibApiV3Sdk.CreateSenderModel
+# PakatApiV3Sdk.CreateSenderModel
 
 ## Properties
 Name | Type | Description | Notes

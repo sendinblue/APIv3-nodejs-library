@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./AbTestCampaignResultClickedLinks'), require('./AbTestCampaignResultStatistics'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.AbTestCampaignResult = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AbTestCampaignResultClickedLinks, root.SibApiV3Sdk.AbTestCampaignResultStatistics);
+    root.PakatApiV3Sdk.AbTestCampaignResult = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.AbTestCampaignResultClickedLinks, root.PakatApiV3Sdk.AbTestCampaignResultStatistics);
   }
 }(this, function(ApiClient, AbTestCampaignResultClickedLinks, AbTestCampaignResultStatistics) {
   'use strict';

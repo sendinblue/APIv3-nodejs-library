@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetAccountRelayData();
+    instance = new PakatApiV3Sdk.GetAccountRelayData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('GetAccountRelayData', function() {
     it('should create an instance of GetAccountRelayData', function() {
       // uncomment below and update the code to test GetAccountRelayData
-      //var instane = new SibApiV3Sdk.GetAccountRelayData();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetAccountRelayData);
+      //var instane = new PakatApiV3Sdk.GetAccountRelayData();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetAccountRelayData);
     });
 
     it('should have the property userName (base name: "userName")', function() {
       // uncomment below and update the code to test the property userName
-      //var instane = new SibApiV3Sdk.GetAccountRelayData();
+      //var instane = new PakatApiV3Sdk.GetAccountRelayData();
       //expect(instance).to.be();
     });
 
     it('should have the property relay (base name: "relay")', function() {
       // uncomment below and update the code to test the property relay
-      //var instane = new SibApiV3Sdk.GetAccountRelayData();
+      //var instane = new PakatApiV3Sdk.GetAccountRelayData();
       //expect(instance).to.be();
     });
 
     it('should have the property port (base name: "port")', function() {
       // uncomment below and update the code to test the property port
-      //var instane = new SibApiV3Sdk.GetAccountRelayData();
+      //var instane = new PakatApiV3Sdk.GetAccountRelayData();
       //expect(instance).to.be();
     });
 

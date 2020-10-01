@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetChildAccountCreationStatus();
+    instance = new PakatApiV3Sdk.GetChildAccountCreationStatus();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('GetChildAccountCreationStatus', function() {
     it('should create an instance of GetChildAccountCreationStatus', function() {
       // uncomment below and update the code to test GetChildAccountCreationStatus
-      //var instane = new SibApiV3Sdk.GetChildAccountCreationStatus();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetChildAccountCreationStatus);
+      //var instane = new PakatApiV3Sdk.GetChildAccountCreationStatus();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetChildAccountCreationStatus);
     });
 
     it('should have the property childAccountCreated (base name: "childAccountCreated")', function() {
       // uncomment below and update the code to test the property childAccountCreated
-      //var instane = new SibApiV3Sdk.GetChildAccountCreationStatus();
+      //var instane = new PakatApiV3Sdk.GetChildAccountCreationStatus();
       //expect(instance).to.be();
     });
 

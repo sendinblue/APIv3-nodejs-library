@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetCampaignOverview'), require('./GetExtendedCampaignOverviewSender'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetExtendedCampaignOverview = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetCampaignOverview, root.SibApiV3Sdk.GetExtendedCampaignOverviewSender);
+    root.PakatApiV3Sdk.GetExtendedCampaignOverview = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetCampaignOverview, root.PakatApiV3Sdk.GetExtendedCampaignOverviewSender);
   }
 }(this, function(ApiClient, GetCampaignOverview, GetExtendedCampaignOverviewSender) {
   'use strict';

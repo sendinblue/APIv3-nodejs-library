@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.RequestContactImport();
+    instance = new PakatApiV3Sdk.RequestContactImport();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,61 +53,61 @@
   describe('RequestContactImport', function() {
     it('should create an instance of RequestContactImport', function() {
       // uncomment below and update the code to test RequestContactImport
-      //var instane = new SibApiV3Sdk.RequestContactImport();
-      //expect(instance).to.be.a(SibApiV3Sdk.RequestContactImport);
+      //var instane = new PakatApiV3Sdk.RequestContactImport();
+      //expect(instance).to.be.a(PakatApiV3Sdk.RequestContactImport);
     });
 
     it('should have the property fileUrl (base name: "fileUrl")', function() {
       // uncomment below and update the code to test the property fileUrl
-      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //var instane = new PakatApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property fileBody (base name: "fileBody")', function() {
       // uncomment below and update the code to test the property fileBody
-      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //var instane = new PakatApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property listIds (base name: "listIds")', function() {
       // uncomment below and update the code to test the property listIds
-      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //var instane = new PakatApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property notifyUrl (base name: "notifyUrl")', function() {
       // uncomment below and update the code to test the property notifyUrl
-      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //var instane = new PakatApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property newList (base name: "newList")', function() {
       // uncomment below and update the code to test the property newList
-      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //var instane = new PakatApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property emailBlacklist (base name: "emailBlacklist")', function() {
       // uncomment below and update the code to test the property emailBlacklist
-      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //var instane = new PakatApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property smsBlacklist (base name: "smsBlacklist")', function() {
       // uncomment below and update the code to test the property smsBlacklist
-      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //var instane = new PakatApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property updateExistingContacts (base name: "updateExistingContacts")', function() {
       // uncomment below and update the code to test the property updateExistingContacts
-      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //var instane = new PakatApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 
     it('should have the property emptyContactsAttributes (base name: "emptyContactsAttributes")', function() {
       // uncomment below and update the code to test the property emptyContactsAttributes
-      //var instane = new SibApiV3Sdk.RequestContactImport();
+      //var instane = new PakatApiV3Sdk.RequestContactImport();
       //expect(instance).to.be();
     });
 

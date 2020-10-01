@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetAggregatedReport
+# PakatApiV3Sdk.GetAggregatedReport
 
 ## Properties
 Name | Type | Description | Notes

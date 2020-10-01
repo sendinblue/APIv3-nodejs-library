@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreateModel'), require('../model/CreateWebhook'), require('../model/ErrorModel'), require('../model/GetWebhook'), require('../model/GetWebhooks'), require('../model/UpdateWebhook'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.WebhooksApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateWebhook, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetWebhook, root.SibApiV3Sdk.GetWebhooks, root.SibApiV3Sdk.UpdateWebhook);
+    root.PakatApiV3Sdk.WebhooksApi = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.CreateModel, root.PakatApiV3Sdk.CreateWebhook, root.PakatApiV3Sdk.ErrorModel, root.PakatApiV3Sdk.GetWebhook, root.PakatApiV3Sdk.GetWebhooks, root.PakatApiV3Sdk.UpdateWebhook);
   }
 }(this, function(ApiClient, CreateModel, CreateWebhook, ErrorModel, GetWebhook, GetWebhooks, UpdateWebhook) {
   'use strict';

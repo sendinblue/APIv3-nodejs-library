@@ -1,4 +1,4 @@
-# SibApiV3Sdk.GetCampaignRecipients
+# PakatApiV3Sdk.GetCampaignRecipients
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
+    factory(root.expect, root.PakatApiV3Sdk);
   }
-}(this, function(expect, SibApiV3Sdk) {
+}(this, function(expect, PakatApiV3Sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.GetTransacEmailsListTransactionalEmails();
+    instance = new PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,55 +53,55 @@
   describe('GetTransacEmailsListTransactionalEmails', function() {
     it('should create an instance of GetTransacEmailsListTransactionalEmails', function() {
       // uncomment below and update the code to test GetTransacEmailsListTransactionalEmails
-      //var instane = new SibApiV3Sdk.GetTransacEmailsListTransactionalEmails();
-      //expect(instance).to.be.a(SibApiV3Sdk.GetTransacEmailsListTransactionalEmails);
+      //var instane = new PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails();
+      //expect(instance).to.be.a(PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SibApiV3Sdk.GetTransacEmailsListTransactionalEmails();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails();
       //expect(instance).to.be();
     });
 
     it('should have the property subject (base name: "subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instane = new SibApiV3Sdk.GetTransacEmailsListTransactionalEmails();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails();
       //expect(instance).to.be();
     });
 
     it('should have the property templateId (base name: "templateId")', function() {
       // uncomment below and update the code to test the property templateId
-      //var instane = new SibApiV3Sdk.GetTransacEmailsListTransactionalEmails();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails();
       //expect(instance).to.be();
     });
 
     it('should have the property messageId (base name: "messageId")', function() {
       // uncomment below and update the code to test the property messageId
-      //var instane = new SibApiV3Sdk.GetTransacEmailsListTransactionalEmails();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails();
       //expect(instance).to.be();
     });
 
     it('should have the property uuid (base name: "uuid")', function() {
       // uncomment below and update the code to test the property uuid
-      //var instane = new SibApiV3Sdk.GetTransacEmailsListTransactionalEmails();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails();
       //expect(instance).to.be();
     });
 
     it('should have the property _date (base name: "date")', function() {
       // uncomment below and update the code to test the property _date
-      //var instane = new SibApiV3Sdk.GetTransacEmailsListTransactionalEmails();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails();
       //expect(instance).to.be();
     });
 
     it('should have the property from (base name: "from")', function() {
       // uncomment below and update the code to test the property from
-      //var instane = new SibApiV3Sdk.GetTransacEmailsListTransactionalEmails();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails();
       //expect(instance).to.be();
     });
 
     it('should have the property tags (base name: "tags")', function() {
       // uncomment below and update the code to test the property tags
-      //var instane = new SibApiV3Sdk.GetTransacEmailsListTransactionalEmails();
+      //var instane = new PakatApiV3Sdk.GetTransacEmailsListTransactionalEmails();
       //expect(instance).to.be();
     });
 

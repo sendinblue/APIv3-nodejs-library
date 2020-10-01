@@ -1,4 +1,4 @@
-# SibApiV3Sdk.UpdateContact
+# PakatApiV3Sdk.UpdateContact
 
 ## Properties
 Name | Type | Description | Notes

@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./GetExtendedListCampaignStats'), require('./GetList'));
   } else {
     // Browser globals (root is window)
-    if (!root.SibApiV3Sdk) {
-      root.SibApiV3Sdk = {};
+    if (!root.PakatApiV3Sdk) {
+      root.PakatApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetExtendedList = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.GetExtendedListCampaignStats, root.SibApiV3Sdk.GetList);
+    root.PakatApiV3Sdk.GetExtendedList = factory(root.PakatApiV3Sdk.ApiClient, root.PakatApiV3Sdk.GetExtendedListCampaignStats, root.PakatApiV3Sdk.GetList);
   }
 }(this, function(ApiClient, GetExtendedListCampaignStats, GetList) {
   'use strict';
