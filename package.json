@@ -4,6 +4,9 @@
 	"description": "Pakat API v3 SDK is forked from a SendinBlue package with the same name provided to use with Pakat.net API.",
 	"license": "MIT",
 	"main": "src/index.js",
+	"repository": {
+		"url": "https://github.com/Irandoust/Pakat-APIv3-nodejs-library"
+	},
 	"scripts": {
 		"test": "./node_modules/mocha/bin/mocha --recursive"
 	},
