@@ -1,6 +1,6 @@
 # SendinBlue's API v3 Node.js Library
 
-Pakat's API exposes the entire Pakat features via a standardized programmatic interface. Please refer to the full [documentation](https://docs.pakat.com) to learn more. Pakat is a proxy for SendinBlue
+Pakat's API exposes the entire Pakat features via a standardized programmatic interface. Please refer to the full [documentation](https://docs.pakat.net) to learn more. Pakat is a proxy for SendinBlue
 
 This is the wrapper for the API. It implements all the features of the API v3. It supports promises.
 
