@@ -37,7 +37,7 @@
   /**
    * The GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription model module.
    * @module model/GetExtendedContactDetailsStatisticsUnsubscriptionsUserUnsubscription
-   * @version 8.0.0
+   * @version 8.0.2
    */
 
   /**
@@ -46,14 +46,13 @@
    * @class
    * @param campaignId {Number} ID of the campaign which generated the event
    * @param eventTime {Date} UTC date-time of the event
-   * @param ip {String} IP from which the user has unsubscribed
    */
-  var exports = function(campaignId, eventTime, ip) {
+  var exports = function(campaignId, eventTime) {
     var _this = this;
 
     _this['campaignId'] = campaignId;
     _this['eventTime'] = eventTime;
-    _this['ip'] = ip;
+
   };
 
   /**

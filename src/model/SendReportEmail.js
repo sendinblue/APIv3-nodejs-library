@@ -37,26 +37,21 @@
   /**
    * The SendReportEmail model module.
    * @module model/SendReportEmail
-   * @version 8.0.0
+   * @version 8.0.2
    */
 
   /**
    * Constructs a new <code>SendReportEmail</code>.
-   * Email sending credentials including subject, body, to, cc etc.
+   * Custom attributes for the report email.
    * @alias module:model/SendReportEmail
    * @class
-   * @param subject {String} Subject of the email message
    * @param to {Array.<String>} Email addresses of the recipients
-   * @param body {String} Body of the email message
+   * @param body {String} Custom text message to be presented in the report email.
    */
-  var exports = function(subject, to, body) {
+  var exports = function(to, body) {
     var _this = this;
 
-    _this['subject'] = subject;
     _this['to'] = to;
-
-
-
     _this['body'] = body;
   };
 
@@ -71,20 +66,8 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('subject')) {
-        obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
-      }
       if (data.hasOwnProperty('to')) {
         obj['to'] = ApiClient.convertToType(data['to'], ['String']);
-      }
-      if (data.hasOwnProperty('contentType')) {
-        obj['contentType'] = ApiClient.convertToType(data['contentType'], 'String');
-      }
-      if (data.hasOwnProperty('bcc')) {
-        obj['bcc'] = ApiClient.convertToType(data['bcc'], ['String']);
-      }
-      if (data.hasOwnProperty('cc')) {
-        obj['cc'] = ApiClient.convertToType(data['cc'], ['String']);
       }
       if (data.hasOwnProperty('body')) {
         obj['body'] = ApiClient.convertToType(data['body'], 'String');
@@ -94,54 +77,16 @@
   }
 
   /**
-   * Subject of the email message
-   * @member {String} subject
-   */
-  exports.prototype['subject'] = undefined;
-  /**
    * Email addresses of the recipients
    * @member {Array.<String>} to
    */
   exports.prototype['to'] = undefined;
   /**
-   * Type of the message body
-   * @member {module:model/SendReportEmail.ContentTypeEnum} contentType
-   * @default 'html'
-   */
-  exports.prototype['contentType'] = 'html';
-  /**
-   * Email addresses of the recipients in bcc
-   * @member {Array.<String>} bcc
-   */
-  exports.prototype['bcc'] = undefined;
-  /**
-   * Email addresses of the recipients in cc
-   * @member {Array.<String>} cc
-   */
-  exports.prototype['cc'] = undefined;
-  /**
-   * Body of the email message
+   * Custom text message to be presented in the report email.
    * @member {String} body
    */
   exports.prototype['body'] = undefined;
 
-
-  /**
-   * Allowed values for the <code>contentType</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.ContentTypeEnum = {
-    /**
-     * value: "text"
-     * @const
-     */
-    "text": "text",
-    /**
-     * value: "html"
-     * @const
-     */
-    "html": "html"  };
 
 
   return exports;
