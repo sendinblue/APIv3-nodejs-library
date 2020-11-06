@@ -37,7 +37,7 @@
   /**
    * The GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription model module.
    * @module model/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription
-   * @version 8.0.0
+   * @version 8.0.2
    */
 
   /**
@@ -45,13 +45,12 @@
    * @alias module:model/GetExtendedContactDetailsStatisticsUnsubscriptionsAdminUnsubscription
    * @class
    * @param eventTime {Date} UTC date-time of the event
-   * @param ip {String} IP from which the user has been unsubscribed
    */
-  var exports = function(eventTime, ip) {
+  var exports = function(eventTime) {
     var _this = this;
 
     _this['eventTime'] = eventTime;
-    _this['ip'] = ip;
+
   };
 
   /**
