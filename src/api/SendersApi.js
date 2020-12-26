@@ -34,7 +34,7 @@
   /**
    * Senders service.
    * @module api/SendersApi
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**

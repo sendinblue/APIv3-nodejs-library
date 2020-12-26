@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CreateModel', 'model/CreateSmtpEmail', 'model/CreateSmtpTemplate', 'model/DeleteHardbounces', 'model/ErrorModel', 'model/GetAggregatedReport', 'model/GetEmailEventReport', 'model/GetReports', 'model/GetSmtpTemplateOverview', 'model/GetSmtpTemplates', 'model/GetTransacBlockedContacts', 'model/GetTransacEmailContent', 'model/GetTransacEmailsList', 'model/PostSendFailed', 'model/SendEmail', 'model/SendSmtpEmail', 'model/SendTemplateEmail', 'model/SendTestEmail', 'model/UpdateSmtpTemplate'], factory);
+    define(['ApiClient', 'model/BlockDomain', 'model/CreateModel', 'model/CreateSmtpEmail', 'model/CreateSmtpTemplate', 'model/DeleteHardbounces', 'model/ErrorModel', 'model/GetAggregatedReport', 'model/GetBlockedDomains', 'model/GetEmailEventReport', 'model/GetReports', 'model/GetSmtpTemplateOverview', 'model/GetSmtpTemplates', 'model/GetTransacBlockedContacts', 'model/GetTransacEmailContent', 'model/GetTransacEmailsList', 'model/PostSendFailed', 'model/SendEmail', 'model/SendSmtpEmail', 'model/SendTemplateEmail', 'model/SendTestEmail', 'model/UpdateSmtpTemplate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CreateModel'), require('../model/CreateSmtpEmail'), require('../model/CreateSmtpTemplate'), require('../model/DeleteHardbounces'), require('../model/ErrorModel'), require('../model/GetAggregatedReport'), require('../model/GetEmailEventReport'), require('../model/GetReports'), require('../model/GetSmtpTemplateOverview'), require('../model/GetSmtpTemplates'), require('../model/GetTransacBlockedContacts'), require('../model/GetTransacEmailContent'), require('../model/GetTransacEmailsList'), require('../model/PostSendFailed'), require('../model/SendEmail'), require('../model/SendSmtpEmail'), require('../model/SendTemplateEmail'), require('../model/SendTestEmail'), require('../model/UpdateSmtpTemplate'));
+    module.exports = factory(require('../ApiClient'), require('../model/BlockDomain'), require('../model/CreateModel'), require('../model/CreateSmtpEmail'), require('../model/CreateSmtpTemplate'), require('../model/DeleteHardbounces'), require('../model/ErrorModel'), require('../model/GetAggregatedReport'), require('../model/GetBlockedDomains'), require('../model/GetEmailEventReport'), require('../model/GetReports'), require('../model/GetSmtpTemplateOverview'), require('../model/GetSmtpTemplates'), require('../model/GetTransacBlockedContacts'), require('../model/GetTransacEmailContent'), require('../model/GetTransacEmailsList'), require('../model/PostSendFailed'), require('../model/SendEmail'), require('../model/SendSmtpEmail'), require('../model/SendTemplateEmail'), require('../model/SendTestEmail'), require('../model/UpdateSmtpTemplate'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.TransactionalEmailsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSmtpEmail, root.SibApiV3Sdk.CreateSmtpTemplate, root.SibApiV3Sdk.DeleteHardbounces, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAggregatedReport, root.SibApiV3Sdk.GetEmailEventReport, root.SibApiV3Sdk.GetReports, root.SibApiV3Sdk.GetSmtpTemplateOverview, root.SibApiV3Sdk.GetSmtpTemplates, root.SibApiV3Sdk.GetTransacBlockedContacts, root.SibApiV3Sdk.GetTransacEmailContent, root.SibApiV3Sdk.GetTransacEmailsList, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendEmail, root.SibApiV3Sdk.SendSmtpEmail, root.SibApiV3Sdk.SendTemplateEmail, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateSmtpTemplate);
+    root.SibApiV3Sdk.TransactionalEmailsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.BlockDomain, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSmtpEmail, root.SibApiV3Sdk.CreateSmtpTemplate, root.SibApiV3Sdk.DeleteHardbounces, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAggregatedReport, root.SibApiV3Sdk.GetBlockedDomains, root.SibApiV3Sdk.GetEmailEventReport, root.SibApiV3Sdk.GetReports, root.SibApiV3Sdk.GetSmtpTemplateOverview, root.SibApiV3Sdk.GetSmtpTemplates, root.SibApiV3Sdk.GetTransacBlockedContacts, root.SibApiV3Sdk.GetTransacEmailContent, root.SibApiV3Sdk.GetTransacEmailsList, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendEmail, root.SibApiV3Sdk.SendSmtpEmail, root.SibApiV3Sdk.SendTemplateEmail, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateSmtpTemplate);
   }
-}(this, function(ApiClient, CreateModel, CreateSmtpEmail, CreateSmtpTemplate, DeleteHardbounces, ErrorModel, GetAggregatedReport, GetEmailEventReport, GetReports, GetSmtpTemplateOverview, GetSmtpTemplates, GetTransacBlockedContacts, GetTransacEmailContent, GetTransacEmailsList, PostSendFailed, SendEmail, SendSmtpEmail, SendTemplateEmail, SendTestEmail, UpdateSmtpTemplate) {
+}(this, function(ApiClient, BlockDomain, CreateModel, CreateSmtpEmail, CreateSmtpTemplate, DeleteHardbounces, ErrorModel, GetAggregatedReport, GetBlockedDomains, GetEmailEventReport, GetReports, GetSmtpTemplateOverview, GetSmtpTemplates, GetTransacBlockedContacts, GetTransacEmailContent, GetTransacEmailsList, PostSendFailed, SendEmail, SendSmtpEmail, SendTemplateEmail, SendTestEmail, UpdateSmtpTemplate) {
   'use strict';
 
   /**
    * TransactionalEmails service.
    * @module api/TransactionalEmailsApi
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**
@@ -47,6 +47,58 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+
+    /**
+     * Add a new domain to the list of blocked domains
+     * Blocks a new domain in order to avoid messages being sent to the same
+     * @param {module:model/BlockDomain} blockDomain 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.blockNewDomainWithHttpInfo = function(blockDomain) {
+      var postBody = blockDomain;
+
+      // verify the required parameter 'blockDomain' is set
+      if (blockDomain === undefined || blockDomain === null) {
+        throw new Error("Missing the required parameter 'blockDomain' when calling blockNewDomain");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/smtp/blockedDomains', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Add a new domain to the list of blocked domains
+     * Blocks a new domain in order to avoid messages being sent to the same
+     * @param {module:model/BlockDomain} blockDomain 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.blockNewDomain = function(blockDomain) {
+      return this.blockNewDomainWithHttpInfo(blockDomain)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**
@@ -93,6 +145,59 @@
      */
     this.createSmtpTemplate = function(smtpTemplate) {
       return this.createSmtpTemplateWithHttpInfo(smtpTemplate)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Unblock an existing domain from the list of blocked domains
+     * Unblocks an existing domain from the list of blocked domains
+     * @param {String} domain The name of the domain to be deleted
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.deleteBlockedDomainWithHttpInfo = function(domain) {
+      var postBody = null;
+
+      // verify the required parameter 'domain' is set
+      if (domain === undefined || domain === null) {
+        throw new Error("Missing the required parameter 'domain' when calling deleteBlockedDomain");
+      }
+
+
+      var pathParams = {
+        'domain': domain
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/smtp/blockedDomains/{domain}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Unblock an existing domain from the list of blocked domains
+     * Unblocks an existing domain from the list of blocked domains
+     * @param {String} domain The name of the domain to be deleted
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.deleteBlockedDomain = function(domain) {
+      return this.deleteBlockedDomainWithHttpInfo(domain)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -259,6 +364,51 @@
 
 
     /**
+     * Get the list of blocked domains
+     * Get the list of blocked domains
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetBlockedDomains} and HTTP response
+     */
+    this.getBlockedDomainsWithHttpInfo = function() {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = GetBlockedDomains;
+
+      return this.apiClient.callApi(
+        '/smtp/blockedDomains', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get the list of blocked domains
+     * Get the list of blocked domains
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetBlockedDomains}
+     */
+    this.getBlockedDomains = function() {
+      return this.getBlockedDomainsWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Get all your transactional email activity (unaggregated events)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number limitation for the result returned (default to 50)
@@ -271,6 +421,7 @@
      * @param {String} opts.tags Filter the report for tags (serialized and urlencoded array)
      * @param {String} opts.messageId Filter on a specific message id
      * @param {Number} opts.templateId Filter on a specific template id
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetEmailEventReport} and HTTP response
      */
     this.getEmailEventReportWithHttpInfo = function(opts) {
@@ -291,6 +442,7 @@
         'tags': opts['tags'],
         'messageId': opts['messageId'],
         'templateId': opts['templateId'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -324,6 +476,7 @@
      * @param {String} opts.tags Filter the report for tags (serialized and urlencoded array)
      * @param {String} opts.messageId Filter on a specific message id
      * @param {Number} opts.templateId Filter on a specific template id
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetEmailEventReport}
      */
     this.getEmailEventReport = function(opts) {
@@ -343,6 +496,7 @@
      * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Tag of the emails
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetReports} and HTTP response
      */
     this.getSmtpReportWithHttpInfo = function(opts) {
@@ -359,6 +513,7 @@
         'endDate': opts['endDate'],
         'days': opts['days'],
         'tag': opts['tag'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -388,6 +543,7 @@
      * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Tag of the emails
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetReports}
      */
     this.getSmtpReport = function(opts) {
@@ -455,6 +611,7 @@
      * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmtpTemplates} and HTTP response
      */
     this.getSmtpTemplatesWithHttpInfo = function(opts) {
@@ -468,6 +625,7 @@
         'templateStatus': opts['templateStatus'],
         'limit': opts['limit'],
         'offset': opts['offset'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -494,6 +652,7 @@
      * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmtpTemplates}
      */
     this.getSmtpTemplates = function(opts) {
@@ -512,6 +671,7 @@
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document on the page (default to 0)
      * @param {Array.<String>} opts.senders Comma separated list of emails of the senders from which contacts are blocked or unsubscribed
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTransacBlockedContacts} and HTTP response
      */
     this.getTransacBlockedContactsWithHttpInfo = function(opts) {
@@ -526,6 +686,7 @@
         'endDate': opts['endDate'],
         'limit': opts['limit'],
         'offset': opts['offset'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
         'senders': {
@@ -558,6 +719,7 @@
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document on the page (default to 0)
      * @param {Array.<String>} opts.senders Comma separated list of emails of the senders from which contacts are blocked or unsubscribed
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTransacBlockedContacts}
      */
     this.getTransacBlockedContacts = function(opts) {
@@ -628,6 +790,7 @@
      * @param {String} opts.messageId Mandatory if templateId and email are not passed in query filters. Message ID of the transactional email sent.
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Maximum time period that can be selected is one month.
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTransacEmailsList} and HTTP response
      */
     this.getTransacEmailsListWithHttpInfo = function(opts) {
@@ -643,6 +806,7 @@
         'messageId': opts['messageId'],
         'startDate': opts['startDate'],
         'endDate': opts['endDate'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -672,6 +836,7 @@
      * @param {String} opts.messageId Mandatory if templateId and email are not passed in query filters. Message ID of the transactional email sent.
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Maximum time period that can be selected is one month.
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTransacEmailsList}
      */
     this.getTransacEmailsList = function(opts) {

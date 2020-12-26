@@ -37,7 +37,7 @@
   /**
    * The GetEmailCampaign model module.
    * @module model/GetEmailCampaign
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**
@@ -54,18 +54,16 @@
    * @param footer {String} Footer of the campaign
    * @param sender {module:model/GetExtendedCampaignOverviewSender} 
    * @param replyTo {String} Email defined as the \"Reply to\" of the campaign
-   * @param toField {String} Customisation of the \"to\" field of the campaign
    * @param htmlContent {String} HTML content of the campaign
-   * @param tag {String} Tag of the campaign
    * @param createdAt {Date} Creation UTC date-time of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param modifiedAt {Date} UTC date-time of last modification of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param recipients {Object} 
    * @param statistics {Object} 
    */
-  var exports = function(id, name, type, status, testSent, header, footer, sender, replyTo, toField, htmlContent, tag, createdAt, modifiedAt, recipients, statistics) {
+  var exports = function(id, name, type, status, testSent, header, footer, sender, replyTo, htmlContent, createdAt, modifiedAt, recipients, statistics) {
     var _this = this;
 
-    GetExtendedCampaignOverview.call(_this, id, name, type, status, testSent, header, footer, sender, replyTo, toField, htmlContent, tag, createdAt, modifiedAt);
+    GetExtendedCampaignOverview.call(_this, id, name, type, status, testSent, header, footer, sender, replyTo, htmlContent, createdAt, modifiedAt);
     _this['recipients'] = recipients;
     _this['statistics'] = statistics;
   };

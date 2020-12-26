@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **children** | **[Object]** | Your children&#39;s account information | [optional] 
-**count** | **Number** | Number of child accounts | 
+**count** | **Number** | Number of child accounts | [optional] 
 
 

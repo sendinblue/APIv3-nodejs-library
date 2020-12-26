@@ -37,20 +37,19 @@
   /**
    * The GetEmailCampaigns model module.
    * @module model/GetEmailCampaigns
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**
    * Constructs a new <code>GetEmailCampaigns</code>.
    * @alias module:model/GetEmailCampaigns
    * @class
-   * @param count {Number} Number of Email campaigns retrieved
    */
-  var exports = function(count) {
+  var exports = function() {
     var _this = this;
 
 
-    _this['count'] = count;
+
   };
 
   /**

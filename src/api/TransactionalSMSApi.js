@@ -34,7 +34,7 @@
   /**
    * TransactionalSMS service.
    * @module api/TransactionalSMSApi
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**
@@ -60,6 +60,7 @@
      * @param {String} opts.phoneNumber Filter the report for a specific phone number
      * @param {module:model/String} opts.event Filter the report for specific events
      * @param {String} opts.tags Filter the report for specific tags passed as a serialized urlencoded array
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmsEventReport} and HTTP response
      */
     this.getSmsEventsWithHttpInfo = function(opts) {
@@ -78,6 +79,7 @@
         'phoneNumber': opts['phoneNumber'],
         'event': opts['event'],
         'tags': opts['tags'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -109,6 +111,7 @@
      * @param {String} opts.phoneNumber Filter the report for a specific phone number
      * @param {module:model/String} opts.event Filter the report for specific events
      * @param {String} opts.tags Filter the report for specific tags passed as a serialized urlencoded array
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmsEventReport}
      */
     this.getSmsEvents = function(opts) {
@@ -184,6 +187,7 @@
      * @param {String} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Filter on a tag
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTransacSmsReport} and HTTP response
      */
     this.getTransacSmsReportWithHttpInfo = function(opts) {
@@ -198,6 +202,7 @@
         'endDate': opts['endDate'],
         'days': opts['days'],
         'tag': opts['tag'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -225,6 +230,7 @@
      * @param {String} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Filter on a tag
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTransacSmsReport}
      */
     this.getTransacSmsReport = function(opts) {

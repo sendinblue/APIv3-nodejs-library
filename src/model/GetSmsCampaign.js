@@ -37,7 +37,7 @@
   /**
    * The GetSmsCampaign model module.
    * @module model/GetSmsCampaign
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**
@@ -49,17 +49,16 @@
    * @param name {String} Name of the SMS Campaign
    * @param status {module:model/GetSmsCampaignOverview.StatusEnum} Status of the SMS Campaign
    * @param content {String} Content of the SMS Campaign
-   * @param scheduledAt {Date} UTC date-time on which SMS campaign is scheduled. Should be in YYYY-MM-DDTHH:mm:ss.SSSZ format
    * @param sender {String} Sender of the SMS Campaign
    * @param createdAt {Date} Creation UTC date-time of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param modifiedAt {Date} UTC date-time of last modification of the SMS campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param recipients {Object} 
    * @param statistics {Object} 
    */
-  var exports = function(id, name, status, content, scheduledAt, sender, createdAt, modifiedAt, recipients, statistics) {
+  var exports = function(id, name, status, content, sender, createdAt, modifiedAt, recipients, statistics) {
     var _this = this;
 
-    GetSmsCampaignOverview.call(_this, id, name, status, content, scheduledAt, sender, createdAt, modifiedAt);
+    GetSmsCampaignOverview.call(_this, id, name, status, content, sender, createdAt, modifiedAt);
     _this['recipients'] = recipients;
     _this['statistics'] = statistics;
   };

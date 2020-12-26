@@ -34,7 +34,7 @@
   /**
    * Lists service.
    * @module api/ListsApi
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**
@@ -215,6 +215,7 @@
      * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContacts} and HTTP response
      */
     this.getContactsFromListWithHttpInfo = function(listId, opts) {
@@ -234,6 +235,7 @@
         'modifiedSince': opts['modifiedSince'],
         'limit': opts['limit'],
         'offset': opts['offset'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -261,6 +263,7 @@
      * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContacts}
      */
     this.getContactsFromList = function(listId, opts) {
@@ -277,6 +280,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolderLists} and HTTP response
      */
     this.getFolderListsWithHttpInfo = function(folderId, opts) {
@@ -295,6 +299,7 @@
       var queryParams = {
         'limit': opts['limit'],
         'offset': opts['offset'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -321,6 +326,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolderLists}
      */
     this.getFolderLists = function(folderId, opts) {
@@ -387,6 +393,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetLists} and HTTP response
      */
     this.getListsWithHttpInfo = function(opts) {
@@ -399,6 +406,7 @@
       var queryParams = {
         'limit': opts['limit'],
         'offset': opts['offset'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -424,6 +432,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetLists}
      */
     this.getLists = function(opts) {

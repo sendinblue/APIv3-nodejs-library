@@ -37,20 +37,19 @@
   /**
    * The GetProcesses model module.
    * @module model/GetProcesses
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**
    * Constructs a new <code>GetProcesses</code>.
    * @alias module:model/GetProcesses
    * @class
-   * @param count {Number} Number of processes available on your account
    */
-  var exports = function(count) {
+  var exports = function() {
     var _this = this;
 
 
-    _this['count'] = count;
+
   };
 
   /**

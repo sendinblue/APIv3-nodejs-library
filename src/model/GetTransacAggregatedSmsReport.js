@@ -37,37 +37,27 @@
   /**
    * The GetTransacAggregatedSmsReport model module.
    * @module model/GetTransacAggregatedSmsReport
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**
    * Constructs a new <code>GetTransacAggregatedSmsReport</code>.
    * @alias module:model/GetTransacAggregatedSmsReport
    * @class
-   * @param range {String} Time frame of the report
-   * @param requests {Number} Number of requests for the timeframe
-   * @param delivered {Number} Number of delivered SMS for the timeframe
-   * @param hardBounces {Number} Number of hardbounces for the timeframe
-   * @param softBounces {Number} Number of softbounces for the timeframe
-   * @param blocked {Number} Number of blocked contact for the timeframe
-   * @param unsubscribed {Number} Number of unsubscription for the timeframe
-   * @param replied {Number} Number of answered SMS for the timeframe
-   * @param accepted {Number} Number of accepted for the timeframe
-   * @param rejected {Number} Number of rejected for the timeframe
    */
-  var exports = function(range, requests, delivered, hardBounces, softBounces, blocked, unsubscribed, replied, accepted, rejected) {
+  var exports = function() {
     var _this = this;
 
-    _this['range'] = range;
-    _this['requests'] = requests;
-    _this['delivered'] = delivered;
-    _this['hardBounces'] = hardBounces;
-    _this['softBounces'] = softBounces;
-    _this['blocked'] = blocked;
-    _this['unsubscribed'] = unsubscribed;
-    _this['replied'] = replied;
-    _this['accepted'] = accepted;
-    _this['rejected'] = rejected;
+
+
+
+
+
+
+
+
+
+
   };
 
   /**

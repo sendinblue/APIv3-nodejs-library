@@ -37,7 +37,7 @@
   /**
    * The GetEmailEventReportEvents model module.
    * @module model/GetEmailEventReportEvents
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**
@@ -57,6 +57,7 @@
 
     _this['messageId'] = messageId;
     _this['event'] = event;
+
 
 
 
@@ -104,6 +105,9 @@
       }
       if (data.hasOwnProperty('from')) {
         obj['from'] = ApiClient.convertToType(data['from'], 'String');
+      }
+      if (data.hasOwnProperty('templateId')) {
+        obj['templateId'] = ApiClient.convertToType(data['templateId'], 'Number');
       }
     }
     return obj;
@@ -159,6 +163,11 @@
    * @member {String} from
    */
   exports.prototype['from'] = undefined;
+  /**
+   * ID of the template (only available if the email is template based)
+   * @member {Number} templateId
+   */
+  exports.prototype['templateId'] = undefined;
 
 
   /**
@@ -226,7 +235,12 @@
      * value: "unsubscribed"
      * @const
      */
-    "unsubscribed": "unsubscribed"  };
+    "unsubscribed": "unsubscribed",
+    /**
+     * value: "error"
+     * @const
+     */
+    "error": "error"  };
 
 
   return exports;

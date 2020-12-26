@@ -37,21 +37,19 @@
   /**
    * The GetChildDomain model module.
    * @module model/GetChildDomain
-   * @version 8.0.0
+   * @version 8.0.3
    */
 
   /**
    * Constructs a new <code>GetChildDomain</code>.
    * @alias module:model/GetChildDomain
    * @class
-   * @param domain {String} Sender domain
-   * @param active {Boolean} indicates whether a domain is verified or not
    */
-  var exports = function(domain, active) {
+  var exports = function() {
     var _this = this;
 
-    _this['domain'] = domain;
-    _this['active'] = active;
+
+
   };
 
   /**

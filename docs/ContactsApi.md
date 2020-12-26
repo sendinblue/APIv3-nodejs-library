@@ -775,7 +775,8 @@ var apiInstance = new SibApiV3Sdk.ContactsApi();
 var opts = { 
   'limit': 50, // Number | Number of documents per page
   'offset': 0, // Number | Index of the first document of the page
-  'modifiedSince': new Date("2013-10-20T19:20:30+01:00") // Date | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
+  'modifiedSince': new Date("2013-10-20T19:20:30+01:00"), // Date | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
 };
 apiInstance.getContacts(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -792,6 +793,7 @@ Name | Type | Description  | Notes
  **limit** | **Number**| Number of documents per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
  **modifiedSince** | **Date**| Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result. | [optional] 
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
 
 ### Return type
 
@@ -836,7 +838,8 @@ var listId = 789; // Number | Id of the list
 var opts = { 
   'modifiedSince': new Date("2013-10-20T19:20:30+01:00"), // Date | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
   'limit': 50, // Number | Number of documents per page
-  'offset': 0 // Number | Index of the first document of the page
+  'offset': 0, // Number | Index of the first document of the page
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
 };
 apiInstance.getContactsFromList(listId, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -854,6 +857,7 @@ Name | Type | Description  | Notes
  **modifiedSince** | **Date**| Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result. | [optional] 
  **limit** | **Number**| Number of documents per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
 
 ### Return type
 
@@ -951,7 +955,8 @@ var folderId = 789; // Number | Id of the folder
 
 var opts = { 
   'limit': 10, // Number | Number of documents per page
-  'offset': 0 // Number | Index of the first document of the page
+  'offset': 0, // Number | Index of the first document of the page
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
 };
 apiInstance.getFolderLists(folderId, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -968,6 +973,7 @@ Name | Type | Description  | Notes
  **folderId** | **Number**| Id of the folder | 
  **limit** | **Number**| Number of documents per page | [optional] [default to 10]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
 
 ### Return type
 
@@ -984,7 +990,7 @@ Name | Type | Description  | Notes
 
 <a name="getFolders"></a>
 # **getFolders**
-> GetFolders getFolders(limit, offset)
+> GetFolders getFolders(limit, offset, opts)
 
 Get all folders
 
@@ -1011,7 +1017,10 @@ var limit = 10; // Number | Number of documents per page
 
 var offset = 0; // Number | Index of the first document of the page
 
-apiInstance.getFolders(limit, offset).then(function(data) {
+var opts = { 
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
+};
+apiInstance.getFolders(limit, offset, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -1025,6 +1034,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| Number of documents per page | [default to 10]
  **offset** | **Number**| Index of the first document of the page | [default to 0]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
 
 ### Return type
 
@@ -1120,7 +1130,8 @@ var apiInstance = new SibApiV3Sdk.ContactsApi();
 
 var opts = { 
   'limit': 10, // Number | Number of documents per page
-  'offset': 0 // Number | Index of the first document of the page
+  'offset': 0, // Number | Index of the first document of the page
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
 };
 apiInstance.getLists(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1136,6 +1147,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| Number of documents per page | [optional] [default to 10]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
 
 ### Return type
 
