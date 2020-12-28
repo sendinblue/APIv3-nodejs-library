@@ -581,6 +581,10 @@
     }
   };
 
+  /**
+   * Sets the user-agent
+   * @param header (String)
+   */
   exports.setUserAgent = function(header) {
     if (typeof header == 'string' && header.substr(0,11).trim().toLowerCase() === 'sendinblue_') {
       exports.instance.defaultHeaders['user-agent'] = header;
