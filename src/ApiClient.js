@@ -64,7 +64,10 @@
      * @type {Array.<String>}
      * @default {}
      */
-    this.defaultHeaders = {};
+    const pkgJson = require('../package.json');
+    this.defaultHeaders = {
+      'user-agent': `sendinblue_clientAPI/v${pkgJson.version}/node`
+    };
 
     /**
      * The default HTTP timeout for all API calls.
@@ -576,6 +579,13 @@
           obj[k] = exports.convertToType(data[k], itemType);
       }
     }
+  };
+
+  exports.setUserAgent = function(header) {
+    if (typeof header == 'string' && header.substr(0,11).trim().toLowerCase() === 'sendinblue_') {
+      exports.instance.defaultHeaders['user-agent'] = header;
+    }
+    return;
   };
 
   /**
