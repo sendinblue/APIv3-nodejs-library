@@ -34,7 +34,7 @@
   /**
    * Webhooks service.
    * @module api/WebhooksApi
-   * @version 8.0.3
+   * @version 8.1.0
    */
 
   /**

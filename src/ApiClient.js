@@ -34,7 +34,7 @@ const pkgJson = require('../package.json');
 
   /**
    * @module ApiClient
-   * @version 8.0.3
+   * @version 8.1.0
    */
 
   /**

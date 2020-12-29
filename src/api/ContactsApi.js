@@ -34,7 +34,7 @@
   /**
    * Contacts service.
    * @module api/ContactsApi
-   * @version 8.0.3
+   * @version 8.1.0
    */
 
   /**
