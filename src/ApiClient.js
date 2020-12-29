@@ -13,6 +13,7 @@
  * Do not edit the class manually.
  *
  */
+const pkgJson = require('../package.json');
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
@@ -64,7 +65,6 @@
      * @type {Array.<String>}
      * @default {}
      */
-    const pkgJson = require('../package.json');
     this.defaultHeaders = {
       'user-agent': `sendinblue_clientAPI/v${pkgJson.version}/node`
     };
