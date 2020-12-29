@@ -37,20 +37,19 @@
   /**
    * The GetChildrenList model module.
    * @module model/GetChildrenList
-   * @version 8.0.0
+   * @version 8.1.0
    */
 
   /**
    * Constructs a new <code>GetChildrenList</code>.
    * @alias module:model/GetChildrenList
    * @class
-   * @param count {Number} Number of child accounts
    */
-  var exports = function(count) {
+  var exports = function() {
     var _this = this;
 
 
-    _this['count'] = count;
+
   };
 
   /**

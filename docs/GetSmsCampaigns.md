@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **campaigns** | **[Object]** |  | [optional] 
-**count** | **Number** | Number of SMS campaigns retrieved | 
+**count** | **Number** | Number of SMS campaigns retrieved | [optional] 
 
 

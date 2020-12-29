@@ -26,7 +26,7 @@
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.GetLists = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.BlockDomain = factory(root.SibApiV3Sdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,54 +35,46 @@
 
 
   /**
-   * The GetLists model module.
-   * @module model/GetLists
+   * The BlockDomain model module.
+   * @module model/BlockDomain
    * @version 8.1.0
    */
 
   /**
-   * Constructs a new <code>GetLists</code>.
-   * @alias module:model/GetLists
+   * Constructs a new <code>BlockDomain</code>.
+   * @alias module:model/BlockDomain
    * @class
+   * @param domain {String} name of the domain to be blocked
    */
-  var exports = function() {
+  var exports = function(domain) {
     var _this = this;
 
-
-
+    _this['domain'] = domain;
   };
 
   /**
-   * Constructs a <code>GetLists</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>BlockDomain</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetLists} obj Optional instance to populate.
-   * @return {module:model/GetLists} The populated <code>GetLists</code> instance.
+   * @param {module:model/BlockDomain} obj Optional instance to populate.
+   * @return {module:model/BlockDomain} The populated <code>BlockDomain</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('lists')) {
-        obj['lists'] = ApiClient.convertToType(data['lists'], [Object]);
-      }
-      if (data.hasOwnProperty('count')) {
-        obj['count'] = ApiClient.convertToType(data['count'], 'Number');
+      if (data.hasOwnProperty('domain')) {
+        obj['domain'] = ApiClient.convertToType(data['domain'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Listing of all the lists available in your account
-   * @member {Array.<Object>} lists
+   * name of the domain to be blocked
+   * @member {String} domain
    */
-  exports.prototype['lists'] = undefined;
-  /**
-   * Number of lists in your account
-   * @member {Number} count
-   */
-  exports.prototype['count'] = undefined;
+  exports.prototype['domain'] = undefined;
 
 
 

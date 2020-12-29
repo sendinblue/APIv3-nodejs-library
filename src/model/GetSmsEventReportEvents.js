@@ -37,25 +37,21 @@
   /**
    * The GetSmsEventReportEvents model module.
    * @module model/GetSmsEventReportEvents
-   * @version 8.0.0
+   * @version 8.1.0
    */
 
   /**
    * Constructs a new <code>GetSmsEventReportEvents</code>.
    * @alias module:model/GetSmsEventReportEvents
    * @class
-   * @param phoneNumber {String} Phone number which has generated the event
-   * @param _date {Date} UTC date-time on which the event has been generated
-   * @param messageId {String} Message ID which generated the event
-   * @param event {module:model/GetSmsEventReportEvents.EventEnum} Event which occurred
    */
-  var exports = function(phoneNumber, _date, messageId, event) {
+  var exports = function() {
     var _this = this;
 
-    _this['phoneNumber'] = phoneNumber;
-    _this['date'] = _date;
-    _this['messageId'] = messageId;
-    _this['event'] = event;
+
+
+
+
 
 
 

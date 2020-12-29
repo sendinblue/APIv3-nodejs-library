@@ -37,21 +37,20 @@
   /**
    * The SendSmtpEmailSender model module.
    * @module model/SendSmtpEmailSender
-   * @version 8.0.0
+   * @version 8.1.0
    */
 
   /**
    * Constructs a new <code>SendSmtpEmailSender</code>.
-   * Mandatory if &#x60;templateId&#x60; is not passed. Pass name (optional) and email or id of sender from which emails will be sent. &#x60;name&#x60; will be ignored if passed along with sender &#x60;id&#x60;. For example, {\&quot;name\&quot;:\&quot;Mary from MyShop\&quot;, \&quot;email\&quot;:\&quot;no-reply@myshop.com\&quot;} or {\&quot;id\&quot;:2}
+   * Mandatory if &#x60;templateId&#x60; is not passed. Pass &#x60;name&#x60; (optional) and &#x60;email&#x60; OR &#x60;id&#x60; of sender from which emails will be sent. &#x60;name&#x60; will be ignored if passed along with sender &#x60;id&#x60;. For example, {\&quot;name\&quot;:\&quot;Mary from MyShop\&quot;, \&quot;email\&quot;:\&quot;no-reply@myshop.com\&quot;} or {\&quot;id\&quot;:2}
    * @alias module:model/SendSmtpEmailSender
    * @class
-   * @param email {String} Email of the sender from which the emails will be sent
    */
-  var exports = function(email) {
+  var exports = function() {
     var _this = this;
 
 
-    _this['email'] = email;
+
 
   };
 
@@ -80,17 +79,17 @@
   }
 
   /**
-   * Name of the sender from which the emails will be sent. Maximum allowed characters are 70.
+   * Name of the sender from which the emails will be sent. Maximum allowed characters are 70. Applicable only when email is passed.
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
-   * Email of the sender from which the emails will be sent
+   * Email of the sender from which the emails will be sent. Mandatory if sender id is not passed.
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
   /**
-   * Id of the sender from which the emails will be sent
+   * Id of the sender from which the emails will be sent. In order to select a sender with specific pool of IP’s, dedicated ip users shall pass id (instead of email). Mandatory if email is not passed.
    * @member {Number} id
    */
   exports.prototype['id'] = undefined;

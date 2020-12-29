@@ -34,7 +34,7 @@
   /**
    * EmailCampaigns service.
    * @module api/EmailCampaignsApi
-   * @version 8.0.0
+   * @version 8.1.0
    */
 
   /**
@@ -319,6 +319,7 @@
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent email campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; )
      * @param {Number} opts.limit Number of documents per page (default to 500)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetEmailCampaigns} and HTTP response
      */
     this.getEmailCampaignsWithHttpInfo = function(opts) {
@@ -335,6 +336,7 @@
         'endDate': opts['endDate'],
         'limit': opts['limit'],
         'offset': opts['offset'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -364,6 +366,7 @@
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent email campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; )
      * @param {Number} opts.limit Number of documents per page (default to 500)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetEmailCampaigns}
      */
     this.getEmailCampaigns = function(opts) {

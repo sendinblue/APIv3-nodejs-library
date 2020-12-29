@@ -117,6 +117,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property templateId (base name: "templateId")', function() {
+      // uncomment below and update the code to test the property templateId
+      //var instane = new SibApiV3Sdk.GetEmailEventReportEvents();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

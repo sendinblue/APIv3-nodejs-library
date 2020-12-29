@@ -37,37 +37,27 @@
   /**
    * The GetTransacSmsReportReports model module.
    * @module model/GetTransacSmsReportReports
-   * @version 8.0.0
+   * @version 8.1.0
    */
 
   /**
    * Constructs a new <code>GetTransacSmsReportReports</code>.
    * @alias module:model/GetTransacSmsReportReports
    * @class
-   * @param _date {Date} Date for which statistics are retrieved
-   * @param requests {Number} Number of requests for the date
-   * @param delivered {Number} Number of delivered SMS for the date
-   * @param hardBounces {Number} Number of hardbounces for the date
-   * @param softBounces {Number} Number of softbounces for the date
-   * @param blocked {Number} Number of blocked contact for the date
-   * @param unsubscribed {Number} Number of unsubscription for the date
-   * @param replied {Number} Number of answered SMS for the date
-   * @param accepted {Number} Number of accepted for the date
-   * @param rejected {Number} Number of rejected for the date
    */
-  var exports = function(_date, requests, delivered, hardBounces, softBounces, blocked, unsubscribed, replied, accepted, rejected) {
+  var exports = function() {
     var _this = this;
 
-    _this['date'] = _date;
-    _this['requests'] = requests;
-    _this['delivered'] = delivered;
-    _this['hardBounces'] = hardBounces;
-    _this['softBounces'] = softBounces;
-    _this['blocked'] = blocked;
-    _this['unsubscribed'] = unsubscribed;
-    _this['replied'] = replied;
-    _this['accepted'] = accepted;
-    _this['rejected'] = rejected;
+
+
+
+
+
+
+
+
+
+
   };
 
   /**

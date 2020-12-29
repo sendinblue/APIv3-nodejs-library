@@ -4,10 +4,13 @@ All URIs are relative to *https://api.sendinblue.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**blockNewDomain**](TransactionalEmailsApi.md#blockNewDomain) | **POST** /smtp/blockedDomains | Add a new domain to the list of blocked domains
 [**createSmtpTemplate**](TransactionalEmailsApi.md#createSmtpTemplate) | **POST** /smtp/templates | Create an email template
+[**deleteBlockedDomain**](TransactionalEmailsApi.md#deleteBlockedDomain) | **DELETE** /smtp/blockedDomains/{domain} | Unblock an existing domain from the list of blocked domains
 [**deleteHardbounces**](TransactionalEmailsApi.md#deleteHardbounces) | **POST** /smtp/deleteHardbounces | Delete hardbounces
 [**deleteSmtpTemplate**](TransactionalEmailsApi.md#deleteSmtpTemplate) | **DELETE** /smtp/templates/{templateId} | Delete an inactive email template
 [**getAggregatedSmtpReport**](TransactionalEmailsApi.md#getAggregatedSmtpReport) | **GET** /smtp/statistics/aggregatedReport | Get your transactional email activity aggregated over a period of time
+[**getBlockedDomains**](TransactionalEmailsApi.md#getBlockedDomains) | **GET** /smtp/blockedDomains | Get the list of blocked domains
 [**getEmailEventReport**](TransactionalEmailsApi.md#getEmailEventReport) | **GET** /smtp/statistics/events | Get all your transactional email activity (unaggregated events)
 [**getSmtpReport**](TransactionalEmailsApi.md#getSmtpReport) | **GET** /smtp/statistics/reports | Get your transactional email activity aggregated per day
 [**getSmtpTemplate**](TransactionalEmailsApi.md#getSmtpTemplate) | **GET** /smtp/templates/{templateId} | Returns the template information
@@ -22,6 +25,62 @@ Method | HTTP request | Description
 [**smtpLogMessageIdDelete**](TransactionalEmailsApi.md#smtpLogMessageIdDelete) | **DELETE** /smtp/log/{messageId} | Delete an SMTP transactional log
 [**updateSmtpTemplate**](TransactionalEmailsApi.md#updateSmtpTemplate) | **PUT** /smtp/templates/{templateId} | Update an email template
 
+
+<a name="blockNewDomain"></a>
+# **blockNewDomain**
+> blockNewDomain(blockDomain)
+
+Add a new domain to the list of blocked domains
+
+Blocks a new domain in order to avoid messages being sent to the same
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+
+var blockDomain = new SibApiV3Sdk.BlockDomain(); // BlockDomain | 
+
+apiInstance.blockNewDomain(blockDomain).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blockDomain** | [**BlockDomain**](BlockDomain.md)|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="createSmtpTemplate"></a>
 # **createSmtpTemplate**
@@ -67,6 +126,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CreateModel**](CreateModel.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="deleteBlockedDomain"></a>
+# **deleteBlockedDomain**
+> deleteBlockedDomain(domain)
+
+Unblock an existing domain from the list of blocked domains
+
+Unblocks an existing domain from the list of blocked domains
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+
+var domain = "domain_example"; // String | The name of the domain to be deleted
+
+apiInstance.deleteBlockedDomain(domain).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **String**| The name of the domain to be deleted | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
@@ -249,6 +364,56 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="getBlockedDomains"></a>
+# **getBlockedDomains**
+> GetBlockedDomains getBlockedDomains()
+
+Get the list of blocked domains
+
+Get the list of blocked domains
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+apiInstance.getBlockedDomains().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetBlockedDomains**](GetBlockedDomains.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="getEmailEventReport"></a>
 # **getEmailEventReport**
 > GetEmailEventReport getEmailEventReport(opts)
@@ -284,7 +449,8 @@ var opts = {
   'event': "event_example", // String | Filter the report for a specific event type
   'tags': "tags_example", // String | Filter the report for tags (serialized and urlencoded array)
   'messageId': "messageId_example", // String | Filter on a specific message id
-  'templateId': 789 // Number | Filter on a specific template id
+  'templateId': 789, // Number | Filter on a specific template id
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
 };
 apiInstance.getEmailEventReport(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -308,6 +474,7 @@ Name | Type | Description  | Notes
  **tags** | **String**| Filter the report for tags (serialized and urlencoded array) | [optional] 
  **messageId** | **String**| Filter on a specific message id | [optional] 
  **templateId** | **Number**| Filter on a specific template id | [optional] 
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
 
 ### Return type
 
@@ -353,7 +520,8 @@ var opts = {
   'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD)
   'endDate': "endDate_example", // String | Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
   'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate'
-  'tag': "tag_example" // String | Tag of the emails
+  'tag': "tag_example", // String | Tag of the emails
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
 };
 apiInstance.getSmtpReport(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -373,6 +541,7 @@ Name | Type | Description  | Notes
  **endDate** | **String**| Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD) | [optional] 
  **days** | **Number**| Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39; | [optional] 
  **tag** | **String**| Tag of the emails | [optional] 
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
 
 ### Return type
 
@@ -469,7 +638,8 @@ var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 var opts = { 
   'templateStatus': true, // Boolean | Filter on the status of the template. Active = true, inactive = false
   'limit': 50, // Number | Number of documents returned per page
-  'offset': 0 // Number | Index of the first document in the page
+  'offset': 0, // Number | Index of the first document in the page
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
 };
 apiInstance.getSmtpTemplates(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -486,6 +656,7 @@ Name | Type | Description  | Notes
  **templateStatus** | **Boolean**| Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false | [optional] 
  **limit** | **Number**| Number of documents returned per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document in the page | [optional] [default to 0]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
 
 ### Return type
 
@@ -530,7 +701,8 @@ var opts = {
   'endDate': "endDate_example", // String | Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the blocked or unsubscribed contacts
   'limit': 50, // Number | Number of documents returned per page
   'offset': 0, // Number | Index of the first document on the page
-  'senders': ["senders_example"] // [String] | Comma separated list of emails of the senders from which contacts are blocked or unsubscribed
+  'senders': ["senders_example"], // [String] | Comma separated list of emails of the senders from which contacts are blocked or unsubscribed
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
 };
 apiInstance.getTransacBlockedContacts(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -549,6 +721,7 @@ Name | Type | Description  | Notes
  **limit** | **Number**| Number of documents returned per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document on the page | [optional] [default to 0]
  **senders** | [**[String]**](String.md)| Comma separated list of emails of the senders from which contacts are blocked or unsubscribed | [optional] 
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
 
 ### Return type
 
@@ -649,7 +822,8 @@ var opts = {
   'templateId': 789, // Number | Mandatory if email and messageId are not passed in query filters. Id of the template that was used to compose transactional email.
   'messageId': "messageId_example", // String | Mandatory if templateId and email are not passed in query filters. Message ID of the transactional email sent.
   'startDate': new Date("2013-10-20"), // Date | Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Maximum time period that can be selected is one month.
-  'endDate': new Date("2013-10-20") // Date | Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
+  'endDate': new Date("2013-10-20"), // Date | Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
 };
 apiInstance.getTransacEmailsList(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -668,6 +842,7 @@ Name | Type | Description  | Notes
  **messageId** | **String**| Mandatory if templateId and email are not passed in query filters. Message ID of the transactional email sent. | [optional] 
  **startDate** | **Date**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Maximum time period that can be selected is one month. | [optional] 
  **endDate** | **Date**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month. | [optional] 
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
 
 ### Return type
 

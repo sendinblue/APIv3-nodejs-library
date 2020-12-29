@@ -37,7 +37,7 @@
   /**
    * The GetExtendedCampaignOverview model module.
    * @module model/GetExtendedCampaignOverview
-   * @version 8.0.0
+   * @version 8.1.0
    */
 
   /**
@@ -54,13 +54,11 @@
    * @param footer {String} Footer of the campaign
    * @param sender {module:model/GetExtendedCampaignOverviewSender} 
    * @param replyTo {String} Email defined as the \"Reply to\" of the campaign
-   * @param toField {String} Customisation of the \"to\" field of the campaign
    * @param htmlContent {String} HTML content of the campaign
-   * @param tag {String} Tag of the campaign
    * @param createdAt {Date} Creation UTC date-time of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    * @param modifiedAt {Date} UTC date-time of last modification of the campaign (YYYY-MM-DDTHH:mm:ss.SSSZ)
    */
-  var exports = function(id, name, type, status, testSent, header, footer, sender, replyTo, toField, htmlContent, tag, createdAt, modifiedAt) {
+  var exports = function(id, name, type, status, testSent, header, footer, sender, replyTo, htmlContent, createdAt, modifiedAt) {
     var _this = this;
 
     GetCampaignOverview.call(_this, id, name, type, status);
@@ -69,10 +67,10 @@
     _this['footer'] = footer;
     _this['sender'] = sender;
     _this['replyTo'] = replyTo;
-    _this['toField'] = toField;
+
     _this['htmlContent'] = htmlContent;
 
-    _this['tag'] = tag;
+
     _this['createdAt'] = createdAt;
     _this['modifiedAt'] = modifiedAt;
 

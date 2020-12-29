@@ -34,7 +34,7 @@
   /**
    * Folders service.
    * @module api/FoldersApi
-   * @version 8.0.0
+   * @version 8.1.0
    */
 
   /**
@@ -207,6 +207,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolderLists} and HTTP response
      */
     this.getFolderListsWithHttpInfo = function(folderId, opts) {
@@ -225,6 +226,7 @@
       var queryParams = {
         'limit': opts['limit'],
         'offset': opts['offset'],
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -251,6 +253,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolderLists}
      */
     this.getFolderLists = function(folderId, opts) {
@@ -265,9 +268,12 @@
      * Get all folders
      * @param {Number} limit Number of documents per page
      * @param {Number} offset Index of the first document of the page
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolders} and HTTP response
      */
-    this.getFoldersWithHttpInfo = function(limit, offset) {
+    this.getFoldersWithHttpInfo = function(limit, offset, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'limit' is set
@@ -286,6 +292,7 @@
       var queryParams = {
         'limit': limit,
         'offset': offset,
+        'sort': opts['sort'],
       };
       var collectionQueryParams = {
       };
@@ -310,10 +317,12 @@
      * Get all folders
      * @param {Number} limit Number of documents per page
      * @param {Number} offset Index of the first document of the page
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolders}
      */
-    this.getFolders = function(limit, offset) {
-      return this.getFoldersWithHttpInfo(limit, offset)
+    this.getFolders = function(limit, offset, opts) {
+      return this.getFoldersWithHttpInfo(limit, offset, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

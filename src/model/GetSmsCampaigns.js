@@ -37,20 +37,19 @@
   /**
    * The GetSmsCampaigns model module.
    * @module model/GetSmsCampaigns
-   * @version 8.0.0
+   * @version 8.1.0
    */
 
   /**
    * Constructs a new <code>GetSmsCampaigns</code>.
    * @alias module:model/GetSmsCampaigns
    * @class
-   * @param count {Number} Number of SMS campaigns retrieved
    */
-  var exports = function(count) {
+  var exports = function() {
     var _this = this;
 
 
-    _this['count'] = count;
+
   };
 
   /**

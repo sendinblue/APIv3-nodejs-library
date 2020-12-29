@@ -37,21 +37,19 @@
   /**
    * The GetFolderLists model module.
    * @module model/GetFolderLists
-   * @version 8.0.0
+   * @version 8.1.0
    */
 
   /**
    * Constructs a new <code>GetFolderLists</code>.
    * @alias module:model/GetFolderLists
    * @class
-   * @param lists {Array.<Object>} 
-   * @param count {Number} Number of lists in the folder
    */
-  var exports = function(lists, count) {
+  var exports = function() {
     var _this = this;
 
-    _this['lists'] = lists;
-    _this['count'] = count;
+
+
   };
 
   /**

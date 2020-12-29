@@ -51,10 +51,30 @@
   }
 
   describe('TransactionalEmailsApi', function() {
+    describe('blockNewDomain', function() {
+      it('should call blockNewDomain successfully', function(done) {
+        //uncomment below and update the code to test blockNewDomain
+        //instance.blockNewDomain(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createSmtpTemplate', function() {
       it('should call createSmtpTemplate successfully', function(done) {
         //uncomment below and update the code to test createSmtpTemplate
         //instance.createSmtpTemplate(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteBlockedDomain', function() {
+      it('should call deleteBlockedDomain successfully', function(done) {
+        //uncomment below and update the code to test deleteBlockedDomain
+        //instance.deleteBlockedDomain(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -85,6 +105,16 @@
       it('should call getAggregatedSmtpReport successfully', function(done) {
         //uncomment below and update the code to test getAggregatedSmtpReport
         //instance.getAggregatedSmtpReport(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getBlockedDomains', function() {
+      it('should call getBlockedDomains successfully', function(done) {
+        //uncomment below and update the code to test getBlockedDomains
+        //instance.getBlockedDomains(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

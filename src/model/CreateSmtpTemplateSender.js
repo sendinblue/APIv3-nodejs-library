@@ -37,7 +37,7 @@
   /**
    * The CreateSmtpTemplateSender model module.
    * @module model/CreateSmtpTemplateSender
-   * @version 8.0.0
+   * @version 8.1.0
    */
 
   /**
@@ -45,13 +45,12 @@
    * Sender details including id or email and name (optional). Only one of either Sender&#39;s email or Sender&#39;s ID shall be passed in one request at a time. For example &#x60;{\&quot;name\&quot;:\&quot;xyz\&quot;, \&quot;email\&quot;:\&quot;example@abc.com\&quot;}&#x60; , &#x60;{\&quot;name\&quot;:\&quot;xyz\&quot;, \&quot;id\&quot;:123}&#x60;
    * @alias module:model/CreateSmtpTemplateSender
    * @class
-   * @param email {String} Email of the sender
    */
-  var exports = function(email) {
+  var exports = function() {
     var _this = this;
 
 
-    _this['email'] = email;
+
 
   };
 

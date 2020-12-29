@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SibApiV3Sdk.SendReportEmail();
+    instance = new SibApiV3Sdk.GetBlockedDomains();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,22 +50,16 @@
       object[property] = value;
   }
 
-  describe('SendReportEmail', function() {
-    it('should create an instance of SendReportEmail', function() {
-      // uncomment below and update the code to test SendReportEmail
-      //var instane = new SibApiV3Sdk.SendReportEmail();
-      //expect(instance).to.be.a(SibApiV3Sdk.SendReportEmail);
+  describe('GetBlockedDomains', function() {
+    it('should create an instance of GetBlockedDomains', function() {
+      // uncomment below and update the code to test GetBlockedDomains
+      //var instane = new SibApiV3Sdk.GetBlockedDomains();
+      //expect(instance).to.be.a(SibApiV3Sdk.GetBlockedDomains);
     });
 
-    it('should have the property to (base name: "to")', function() {
-      // uncomment below and update the code to test the property to
-      //var instane = new SibApiV3Sdk.SendReportEmail();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property body (base name: "body")', function() {
-      // uncomment below and update the code to test the property body
-      //var instane = new SibApiV3Sdk.SendReportEmail();
+    it('should have the property domains (base name: "domains")', function() {
+      // uncomment below and update the code to test the property domains
+      //var instane = new SibApiV3Sdk.GetBlockedDomains();
       //expect(instance).to.be();
     });
 
