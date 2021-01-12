@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **name** | **String** | Name of the attribute | 
 **category** | **String** | Category of the attribute | 
 **type** | **String** | Type of the attribute | [optional] 
-**enumeration** | [**[GetAttributesEnumeration]**](GetAttributesEnumeration.md) | Parameter only available for \&quot;category\&quot; type attributes. | [optional] 
+**enumeration** | [**[GetAttributesEnumeration]**](GetAttributesEnumeration.md) | Parameter only available for "category" type attributes. | [optional] 
 **calculatedValue** | **String** | Calculated value formula | [optional] 
 
 
