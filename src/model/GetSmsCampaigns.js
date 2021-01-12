@@ -37,7 +37,7 @@
   /**
    * The GetSmsCampaigns model module.
    * @module model/GetSmsCampaigns
-   * @version 8.1.0
+   * @version 8.1.1
    */
 
   /**

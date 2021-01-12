@@ -34,7 +34,7 @@
   /**
    * Account service.
    * @module api/AccountApi
-   * @version 8.1.0
+   * @version 8.1.1
    */
 
   /**
