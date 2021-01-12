@@ -42,7 +42,7 @@
 
   /**
    * Constructs a new <code>CreateEmailCampaignSender</code>.
-   * Sender details including id or email and name (optional). Only one of either Sender&#39;s email or Sender&#39;s ID shall be passed in one request at a time. For example &#x60;{\&quot;name\&quot;:\&quot;xyz\&quot;, \&quot;email\&quot;:\&quot;example@abc.com\&quot;}&#x60; , &#x60;{\&quot;name\&quot;:\&quot;xyz\&quot;, \&quot;id\&quot;:123}&#x60;
+   * Sender details including id or email and name (optional). Only one of either Sender&#39;s email or Sender&#39;s ID shall be passed in one request at a time. For example &#x60;{"name":"xyz", "email":"example@abc.com"}&#x60; , &#x60;{"name":"xyz", "id":123}&#x60;
    * @alias module:model/CreateEmailCampaignSender
    * @class
    * @param email {String} Sender email
