@@ -129,6 +129,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property messageVersions (base name: "messageVersions")', function() {
+      // uncomment below and update the code to test the property messageVersions
+      //var instane = new SibApiV3Sdk.SendSmtpEmail();
+      //expect(instance).to.be();
+    });
+
     it('should have the property tags (base name: "tags")', function() {
       // uncomment below and update the code to test the property tags
       //var instane = new SibApiV3Sdk.SendSmtpEmail();

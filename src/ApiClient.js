@@ -34,7 +34,7 @@ const pkgJson = require('../package.json');
 
   /**
    * @module ApiClient
-   * @version 8.1.1
+   * @version 8.2.0
    */
 
   /**
@@ -68,6 +68,8 @@ const pkgJson = require('../package.json');
     this.defaultHeaders = {
       'user-agent': `sendinblue_clientAPI/v${pkgJson.version}/node`
     };
+
+    console.log('just to test if its is working')
 
     /**
      * The default HTTP timeout for all API calls.

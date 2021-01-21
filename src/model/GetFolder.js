@@ -37,7 +37,7 @@
   /**
    * The GetFolder model module.
    * @module model/GetFolder
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

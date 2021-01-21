@@ -37,7 +37,7 @@
   /**
    * The GetAttributesAttributes model module.
    * @module model/GetAttributesAttributes
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

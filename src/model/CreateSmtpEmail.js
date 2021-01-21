@@ -37,19 +37,19 @@
   /**
    * The CreateSmtpEmail model module.
    * @module model/CreateSmtpEmail
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**
    * Constructs a new <code>CreateSmtpEmail</code>.
    * @alias module:model/CreateSmtpEmail
    * @class
-   * @param messageId {String} Message ID of the transactional email sent
    */
-  var exports = function(messageId) {
+  var exports = function() {
     var _this = this;
 
-    _this['messageId'] = messageId;
+
+
   };
 
   /**
@@ -66,6 +66,9 @@
       if (data.hasOwnProperty('messageId')) {
         obj['messageId'] = ApiClient.convertToType(data['messageId'], 'String');
       }
+      if (data.hasOwnProperty('messageIds')) {
+        obj['messageIds'] = ApiClient.convertToType(data['messageIds'], ['String']);
+      }
     }
     return obj;
   }
@@ -75,6 +78,10 @@
    * @member {String} messageId
    */
   exports.prototype['messageId'] = undefined;
+  /**
+   * @member {Array.<String>} messageIds
+   */
+  exports.prototype['messageIds'] = undefined;
 
 
 

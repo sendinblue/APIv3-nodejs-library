@@ -34,7 +34,7 @@
   /**
    * Contacts service.
    * @module api/ContactsApi
-   * @version 8.1.1
+   * @version 8.2.0
    */
 
   /**
@@ -745,7 +745,7 @@
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
      * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContacts} and HTTP response
      */
     this.getContactsWithHttpInfo = function(opts) {
@@ -786,7 +786,7 @@
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
      * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContacts}
      */
     this.getContacts = function(opts) {
@@ -804,7 +804,7 @@
      * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContacts} and HTTP response
      */
     this.getContactsFromListWithHttpInfo = function(listId, opts) {
@@ -852,7 +852,7 @@
      * @param {Date} opts.modifiedSince Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContacts}
      */
     this.getContactsFromList = function(listId, opts) {
@@ -920,7 +920,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolderLists} and HTTP response
      */
     this.getFolderListsWithHttpInfo = function(folderId, opts) {
@@ -966,7 +966,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolderLists}
      */
     this.getFolderLists = function(folderId, opts) {
@@ -982,7 +982,7 @@
      * @param {Number} limit Number of documents per page
      * @param {Number} offset Index of the first document of the page
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFolders} and HTTP response
      */
     this.getFoldersWithHttpInfo = function(limit, offset, opts) {
@@ -1031,7 +1031,7 @@
      * @param {Number} limit Number of documents per page
      * @param {Number} offset Index of the first document of the page
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFolders}
      */
     this.getFolders = function(limit, offset, opts) {
@@ -1098,7 +1098,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetLists} and HTTP response
      */
     this.getListsWithHttpInfo = function(opts) {
@@ -1137,7 +1137,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number of documents per page (default to 10)
      * @param {Number} opts.offset Index of the first document of the page (default to 0)
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetLists}
      */
     this.getLists = function(opts) {

@@ -37,7 +37,7 @@
   /**
    * The GetTransacAggregatedSmsReport model module.
    * @module model/GetTransacAggregatedSmsReport
-   * @version 8.1.1
+   * @version 8.2.0
    */
 
   /**

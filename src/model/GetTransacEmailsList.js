@@ -37,7 +37,7 @@
   /**
    * The GetTransacEmailsList model module.
    * @module model/GetTransacEmailsList
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

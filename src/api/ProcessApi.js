@@ -34,7 +34,7 @@
   /**
    * Process service.
    * @module api/ProcessApi
-   * @version 8.1.1
+   * @version 8.2.0
    */
 
   /**
@@ -105,7 +105,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number limitation for the result returned (default to 10)
      * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetProcesses} and HTTP response
      */
     this.getProcessesWithHttpInfo = function(opts) {
@@ -144,7 +144,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Number limitation for the result returned (default to 10)
      * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetProcesses}
      */
     this.getProcesses = function(opts) {

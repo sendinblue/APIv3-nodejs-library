@@ -37,7 +37,7 @@
   /**
    * The GetExtendedContactDetailsStatisticsMessagesSent model module.
    * @module model/GetExtendedContactDetailsStatisticsMessagesSent
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

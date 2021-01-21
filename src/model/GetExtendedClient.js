@@ -37,7 +37,7 @@
   /**
    * The GetExtendedClient model module.
    * @module model/GetExtendedClient
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

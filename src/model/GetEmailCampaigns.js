@@ -37,7 +37,7 @@
   /**
    * The GetEmailCampaigns model module.
    * @module model/GetEmailCampaigns
-   * @version 8.1.1
+   * @version 8.2.0
    */
 
   /**

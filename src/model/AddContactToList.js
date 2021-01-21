@@ -37,7 +37,7 @@
   /**
    * The AddContactToList model module.
    * @module model/AddContactToList
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

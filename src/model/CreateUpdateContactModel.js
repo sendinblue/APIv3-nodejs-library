@@ -37,7 +37,7 @@
   /**
    * The CreateUpdateContactModel model module.
    * @module model/CreateUpdateContactModel
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

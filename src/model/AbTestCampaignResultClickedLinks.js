@@ -37,7 +37,7 @@
   /**
    * The AbTestCampaignResultClickedLinks model module.
    * @module model/AbTestCampaignResultClickedLinks
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

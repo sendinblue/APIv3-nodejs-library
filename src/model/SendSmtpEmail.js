@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SendSmtpEmailAttachment', 'model/SendSmtpEmailBcc', 'model/SendSmtpEmailCc', 'model/SendSmtpEmailReplyTo', 'model/SendSmtpEmailSender', 'model/SendSmtpEmailTo'], factory);
+    define(['ApiClient', 'model/SendSmtpEmailAttachment', 'model/SendSmtpEmailBcc', 'model/SendSmtpEmailCc', 'model/SendSmtpEmailMessageVersions', 'model/SendSmtpEmailReplyTo', 'model/SendSmtpEmailSender', 'model/SendSmtpEmailTo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./SendSmtpEmailAttachment'), require('./SendSmtpEmailBcc'), require('./SendSmtpEmailCc'), require('./SendSmtpEmailReplyTo'), require('./SendSmtpEmailSender'), require('./SendSmtpEmailTo'));
+    module.exports = factory(require('../ApiClient'), require('./SendSmtpEmailAttachment'), require('./SendSmtpEmailBcc'), require('./SendSmtpEmailCc'), require('./SendSmtpEmailMessageVersions'), require('./SendSmtpEmailReplyTo'), require('./SendSmtpEmailSender'), require('./SendSmtpEmailTo'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.SendSmtpEmail = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.SendSmtpEmailAttachment, root.SibApiV3Sdk.SendSmtpEmailBcc, root.SibApiV3Sdk.SendSmtpEmailCc, root.SibApiV3Sdk.SendSmtpEmailReplyTo, root.SibApiV3Sdk.SendSmtpEmailSender, root.SibApiV3Sdk.SendSmtpEmailTo);
+    root.SibApiV3Sdk.SendSmtpEmail = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.SendSmtpEmailAttachment, root.SibApiV3Sdk.SendSmtpEmailBcc, root.SibApiV3Sdk.SendSmtpEmailCc, root.SibApiV3Sdk.SendSmtpEmailMessageVersions, root.SibApiV3Sdk.SendSmtpEmailReplyTo, root.SibApiV3Sdk.SendSmtpEmailSender, root.SibApiV3Sdk.SendSmtpEmailTo);
   }
-}(this, function(ApiClient, SendSmtpEmailAttachment, SendSmtpEmailBcc, SendSmtpEmailCc, SendSmtpEmailReplyTo, SendSmtpEmailSender, SendSmtpEmailTo) {
+}(this, function(ApiClient, SendSmtpEmailAttachment, SendSmtpEmailBcc, SendSmtpEmailCc, SendSmtpEmailMessageVersions, SendSmtpEmailReplyTo, SendSmtpEmailSender, SendSmtpEmailTo) {
   'use strict';
 
 
@@ -37,20 +37,20 @@
   /**
    * The SendSmtpEmail model module.
    * @module model/SendSmtpEmail
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**
    * Constructs a new <code>SendSmtpEmail</code>.
    * @alias module:model/SendSmtpEmail
    * @class
-   * @param to {Array.<module:model/SendSmtpEmailTo>} List of email addresses and names (optional) of the recipients. For example, [{\"name\":\"Jimmy\", \"email\":\"jimmy98@example.com\"}, {\"name\":\"Joe\", \"email\":\"joe@example.com\"}]
    */
-  var exports = function(to) {
+  var exports = function() {
     var _this = this;
 
 
-    _this['to'] = to;
+
+
 
 
 
@@ -111,6 +111,9 @@
       if (data.hasOwnProperty('params')) {
         obj['params'] = ApiClient.convertToType(data['params'], Object);
       }
+      if (data.hasOwnProperty('messageVersions')) {
+        obj['messageVersions'] = ApiClient.convertToType(data['messageVersions'], [SendSmtpEmailMessageVersions]);
+      }
       if (data.hasOwnProperty('tags')) {
         obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
       }
@@ -123,7 +126,7 @@
    */
   exports.prototype['sender'] = undefined;
   /**
-   * List of email addresses and names (optional) of the recipients. For example, [{\"name\":\"Jimmy\", \"email\":\"jimmy98@example.com\"}, {\"name\":\"Joe\", \"email\":\"joe@example.com\"}]
+   * Mandatory if messageVersions are not passed, ignored if messageVersions are passed. List of email addresses and names (optional) of the recipients. For example, [{\"name\":\"Jimmy\", \"email\":\"jimmy98@example.com\"}, {\"name\":\"Joe\", \"email\":\"joe@example.com\"}]
    * @member {Array.<module:model/SendSmtpEmailTo>} to
    */
   exports.prototype['to'] = undefined;
@@ -167,7 +170,7 @@
    */
   exports.prototype['headers'] = undefined;
   /**
-   * Id of the template
+   * Id of the template. Mandatory if messageVersions are passed
    * @member {Number} templateId
    */
   exports.prototype['templateId'] = undefined;
@@ -176,6 +179,11 @@
    * @member {Object} params
    */
   exports.prototype['params'] = undefined;
+  /**
+   * You can customize and send out multiple versions of a templateId. Some global parameters such as **to(mandatory), bcc, cc, replyTo, subject** can also be customized specific to each version. The size of individual params in all the messageVersions shall not exceed 100 KB limit and that of cumulative params shall not exceed 1000 KB. This feature is currently in its beta version. You can follow this **step-by-step guide** on how to use **messageVersions** to batch send emails - https://developers.sendinblue.com/docs/batch-send-transactional-emails
+   * @member {Array.<module:model/SendSmtpEmailMessageVersions>} messageVersions
+   */
+  exports.prototype['messageVersions'] = undefined;
   /**
    * Tag your emails to find them more easily
    * @member {Array.<String>} tags

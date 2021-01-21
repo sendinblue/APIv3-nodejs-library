@@ -37,7 +37,7 @@
   /**
    * The CreateEmailCampaignSender model module.
    * @module model/CreateEmailCampaignSender
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

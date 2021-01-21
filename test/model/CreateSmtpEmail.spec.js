@@ -63,6 +63,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property messageIds (base name: "messageIds")', function() {
+      // uncomment below and update the code to test the property messageIds
+      //var instane = new SibApiV3Sdk.CreateSmtpEmail();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

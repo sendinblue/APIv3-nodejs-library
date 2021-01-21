@@ -37,7 +37,7 @@
   /**
    * The UpdateEmailCampaignRecipients model module.
    * @module model/UpdateEmailCampaignRecipients
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

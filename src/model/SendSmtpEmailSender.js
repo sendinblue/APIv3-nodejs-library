@@ -37,7 +37,7 @@
   /**
    * The SendSmtpEmailSender model module.
    * @module model/SendSmtpEmailSender
-   * @version 8.1.1
+   * @version 8.2.0
    */
 
   /**

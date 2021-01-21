@@ -37,7 +37,7 @@
   /**
    * The UpdateContact model module.
    * @module model/UpdateContact
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

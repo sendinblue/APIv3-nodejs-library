@@ -37,7 +37,7 @@
   /**
    * The GetContacts model module.
    * @module model/GetContacts
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

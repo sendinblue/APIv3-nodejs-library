@@ -956,7 +956,7 @@ var folderId = 789; // Number | Id of the folder
 var opts = { 
   'limit': 10, // Number | Number of documents per page
   'offset': 0, // Number | Index of the first document of the page
-  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed
 };
 apiInstance.getFolderLists(folderId, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -973,7 +973,7 @@ Name | Type | Description  | Notes
  **folderId** | **Number**| Id of the folder | 
  **limit** | **Number**| Number of documents per page | [optional] [default to 10]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
- **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
 
 ### Return type
 
@@ -1018,7 +1018,7 @@ var limit = 10; // Number | Number of documents per page
 var offset = 0; // Number | Index of the first document of the page
 
 var opts = { 
-  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed
 };
 apiInstance.getFolders(limit, offset, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1034,7 +1034,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| Number of documents per page | [default to 10]
  **offset** | **Number**| Index of the first document of the page | [default to 0]
- **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
 
 ### Return type
 
@@ -1131,7 +1131,7 @@ var apiInstance = new SibApiV3Sdk.ContactsApi();
 var opts = { 
   'limit': 10, // Number | Number of documents per page
   'offset': 0, // Number | Index of the first document of the page
-  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed
 };
 apiInstance.getLists(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1147,7 +1147,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| Number of documents per page | [optional] [default to 10]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
- **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
 
 ### Return type
 
