@@ -37,7 +37,7 @@
   /**
    * The ManageIp model module.
    * @module model/ManageIp
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

@@ -90,7 +90,7 @@ var apiInstance = new SibApiV3Sdk.ProcessApi();
 var opts = { 
   'limit': 10, // Number | Number limitation for the result returned
   'offset': 0, // Number | Beginning point in the list to retrieve from.
-  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed
 };
 apiInstance.getProcesses(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| Number limitation for the result returned | [optional] [default to 10]
  **offset** | **Number**| Beginning point in the list to retrieve from. | [optional] [default to 0]
- **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
 
 ### Return type
 

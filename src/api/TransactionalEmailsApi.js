@@ -34,7 +34,7 @@
   /**
    * TransactionalEmails service.
    * @module api/TransactionalEmailsApi
-   * @version 8.1.1
+   * @version 8.2.0
    */
 
   /**
@@ -421,7 +421,7 @@
      * @param {String} opts.tags Filter the report for tags (serialized and urlencoded array)
      * @param {String} opts.messageId Filter on a specific message id
      * @param {Number} opts.templateId Filter on a specific template id
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetEmailEventReport} and HTTP response
      */
     this.getEmailEventReportWithHttpInfo = function(opts) {
@@ -476,7 +476,7 @@
      * @param {String} opts.tags Filter the report for tags (serialized and urlencoded array)
      * @param {String} opts.messageId Filter on a specific message id
      * @param {Number} opts.templateId Filter on a specific template id
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetEmailEventReport}
      */
     this.getEmailEventReport = function(opts) {
@@ -496,7 +496,7 @@
      * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Tag of the emails
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetReports} and HTTP response
      */
     this.getSmtpReportWithHttpInfo = function(opts) {
@@ -543,7 +543,7 @@
      * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD)
      * @param {Number} opts.days Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39;
      * @param {String} opts.tag Tag of the emails
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetReports}
      */
     this.getSmtpReport = function(opts) {
@@ -611,7 +611,7 @@
      * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSmtpTemplates} and HTTP response
      */
     this.getSmtpTemplatesWithHttpInfo = function(opts) {
@@ -652,7 +652,7 @@
      * @param {Boolean} opts.templateStatus Filter on the status of the template. Active &#x3D; true, inactive &#x3D; false
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document in the page (default to 0)
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSmtpTemplates}
      */
     this.getSmtpTemplates = function(opts) {
@@ -671,7 +671,7 @@
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document on the page (default to 0)
      * @param {Array.<String>} opts.senders Comma separated list of emails of the senders from which contacts are blocked or unsubscribed
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTransacBlockedContacts} and HTTP response
      */
     this.getTransacBlockedContactsWithHttpInfo = function(opts) {
@@ -719,7 +719,7 @@
      * @param {Number} opts.limit Number of documents returned per page (default to 50)
      * @param {Number} opts.offset Index of the first document on the page (default to 0)
      * @param {Array.<String>} opts.senders Comma separated list of emails of the senders from which contacts are blocked or unsubscribed
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTransacBlockedContacts}
      */
     this.getTransacBlockedContacts = function(opts) {
@@ -790,7 +790,7 @@
      * @param {String} opts.messageId Mandatory if templateId and email are not passed in query filters. Message ID of the transactional email sent.
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Maximum time period that can be selected is one month.
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTransacEmailsList} and HTTP response
      */
     this.getTransacEmailsListWithHttpInfo = function(opts) {
@@ -836,7 +836,7 @@
      * @param {String} opts.messageId Mandatory if templateId and email are not passed in query filters. Message ID of the transactional email sent.
      * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Maximum time period that can be selected is one month.
      * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
-     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation (default to desc)
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTransacEmailsList}
      */
     this.getTransacEmailsList = function(opts) {

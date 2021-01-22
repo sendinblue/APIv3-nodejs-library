@@ -209,7 +209,7 @@ var opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either 'status' not passed and if passed is set to 'sent' )
   'limit': 500, // Number | Number limitation for the result returned
   'offset': 0, // Number | Beginning point in the list to retrieve from.
-  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation
+  'sort': "desc" // String | Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed
 };
 apiInstance.getSmsCampaigns(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
  **endDate** | **Date**| Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; ) | [optional] 
  **limit** | **Number**| Number limitation for the result returned | [optional] [default to 500]
  **offset** | **Number**| Beginning point in the list to retrieve from. | [optional] [default to 0]
- **sort** | **String**| Sort the results in the ascending/descending order of record creation | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
 
 ### Return type
 

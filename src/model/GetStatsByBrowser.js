@@ -37,7 +37,7 @@
   /**
    * The GetStatsByBrowser model module.
    * @module model/GetStatsByBrowser
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The CreateSmsCampaignRecipients model module.
    * @module model/CreateSmsCampaignRecipients
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

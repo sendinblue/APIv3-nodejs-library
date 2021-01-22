@@ -37,7 +37,7 @@
   /**
    * The CreateWebhook model module.
    * @module model/CreateWebhook
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

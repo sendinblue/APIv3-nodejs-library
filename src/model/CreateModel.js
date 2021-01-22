@@ -37,7 +37,7 @@
   /**
    * The CreateModel model module.
    * @module model/CreateModel
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

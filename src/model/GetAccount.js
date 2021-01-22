@@ -37,7 +37,7 @@
   /**
    * The GetAccount model module.
    * @module model/GetAccount
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

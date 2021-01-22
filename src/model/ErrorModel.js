@@ -37,7 +37,7 @@
   /**
    * The ErrorModel model module.
    * @module model/ErrorModel
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**

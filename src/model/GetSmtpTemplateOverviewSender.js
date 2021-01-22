@@ -37,7 +37,7 @@
   /**
    * The GetSmtpTemplateOverviewSender model module.
    * @module model/GetSmtpTemplateOverviewSender
-   * @version 8.0.0
+   * @version 8.2.0
    */
 
   /**
