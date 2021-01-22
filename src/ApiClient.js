@@ -69,8 +69,6 @@ const pkgJson = require('../package.json');
       'user-agent': `sendinblue_clientAPI/v${pkgJson.version}/node`
     };
 
-    console.log('just to test if its is working')
-
     /**
      * The default HTTP timeout for all API calls.
      * @type {Number}
