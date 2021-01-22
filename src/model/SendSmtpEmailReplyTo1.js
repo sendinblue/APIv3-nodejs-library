@@ -42,7 +42,7 @@
 
   /**
    * Constructs a new <code>SendSmtpEmailReplyTo1</code>.
-   * Email (required), along with name (optional), on which transactional mail recipients will be able to reply back. For example, {\&quot;email\&quot;:\&quot;ann6533@example.com\&quot;, \&quot;name\&quot;:\&quot;Ann\&quot;}
+   * Email (required), along with name (optional), on which transactional mail recipients will be able to reply back. For example, {"email":"ann6533@example.com", "name":"Ann"}
    * @alias module:model/SendSmtpEmailReplyTo1
    * @class
    * @param email {String} Email address in reply to
