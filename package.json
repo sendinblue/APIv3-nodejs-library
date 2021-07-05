@@ -11,7 +11,9 @@
     "fs": false
   },
   "dependencies": {
-    "superagent": "3.7.0"
+    "glob-parent": "^5.1.2",
+    "superagent": "3.7.0",
+    "y18n": "^4.0.1"
   },
   "devDependencies": {
     "expect.js": "~0.3.1",
