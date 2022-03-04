@@ -20,16 +20,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ProcessApi();
 
@@ -74,16 +74,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ProcessApi();
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| Number limitation for the result returned | [optional] [default to 10]
  **offset** | **Number**| Beginning point in the list to retrieve from. | [optional] [default to 0]
- **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed | [optional] [default to desc]
 
 ### Return type
 

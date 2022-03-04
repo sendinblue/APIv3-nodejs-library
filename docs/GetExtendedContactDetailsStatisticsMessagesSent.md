@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **campaignId** | **Number** | ID of the campaign which generated the event | 
-**eventTime** | **Date** | UTC date-time of the event | 
+**eventTime** | **String** | UTC date-time of the event | 
 
 

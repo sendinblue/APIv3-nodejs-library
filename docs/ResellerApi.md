@@ -11,15 +11,15 @@ Method | HTTP request | Description
 [**deleteChildDomain**](ResellerApi.md#deleteChildDomain) | **DELETE** /reseller/children/{childIdentifier}/domains/{domainName} | Delete the sender domain of the reseller child based on the childIdentifier and domainName passed
 [**deleteResellerChild**](ResellerApi.md#deleteResellerChild) | **DELETE** /reseller/children/{childIdentifier} | Delete a single reseller child based on the child identifier supplied
 [**dissociateIpFromChild**](ResellerApi.md#dissociateIpFromChild) | **POST** /reseller/children/{childIdentifier}/ips/dissociate | Dissociate a dedicated IP to the child
-[**getChildAccountCreationStatus**](ResellerApi.md#getChildAccountCreationStatus) | **GET** /reseller/children/{childIdentifier}/accountCreationStatus | Get the status of a reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the identifier supplied
+[**getChildAccountCreationStatus**](ResellerApi.md#getChildAccountCreationStatus) | **GET** /reseller/children/{childIdentifier}/accountCreationStatus | Get the status of a reseller's child account creation, whether it is successfully created (exists) or not based on the identifier supplied
 [**getChildDomains**](ResellerApi.md#getChildDomains) | **GET** /reseller/children/{childIdentifier}/domains | Get all sender domains for a specific child account
-[**getChildInfo**](ResellerApi.md#getChildInfo) | **GET** /reseller/children/{childIdentifier} | Get a child account&#39;s details
+[**getChildInfo**](ResellerApi.md#getChildInfo) | **GET** /reseller/children/{childIdentifier} | Get a child account's details
 [**getResellerChilds**](ResellerApi.md#getResellerChilds) | **GET** /reseller/children | Get the list of all children accounts
 [**getSsoToken**](ResellerApi.md#getSsoToken) | **GET** /reseller/children/{childIdentifier}/auth | Get session token to access Sendinblue (SSO)
 [**removeCredits**](ResellerApi.md#removeCredits) | **POST** /reseller/children/{childIdentifier}/credits/remove | Remove Email and/or SMS credits from a specific child account
-[**updateChildAccountStatus**](ResellerApi.md#updateChildAccountStatus) | **PUT** /reseller/children/{childIdentifier}/accountStatus | Update info of reseller&#39;s child account status based on the childIdentifier supplied
-[**updateChildDomain**](ResellerApi.md#updateChildDomain) | **PUT** /reseller/children/{childIdentifier}/domains/{domainName} | Update the sender domain of reseller&#39;s child based on the childIdentifier and domainName passed
-[**updateResellerChild**](ResellerApi.md#updateResellerChild) | **PUT** /reseller/children/{childIdentifier} | Update info of reseller&#39;s child based on the child identifier supplied
+[**updateChildAccountStatus**](ResellerApi.md#updateChildAccountStatus) | **PUT** /reseller/children/{childIdentifier}/accountStatus | Update info of reseller's child account status based on the childIdentifier supplied
+[**updateChildDomain**](ResellerApi.md#updateChildDomain) | **PUT** /reseller/children/{childIdentifier}/domains/{domainName} | Update the sender domain of reseller's child based on the childIdentifier and domainName passed
+[**updateResellerChild**](ResellerApi.md#updateResellerChild) | **PUT** /reseller/children/{childIdentifier} | Update info of reseller's child based on the child identifier supplied
 
 
 <a name="addCredits"></a>
@@ -34,16 +34,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -63,7 +63,7 @@ apiInstance.addCredits(childIdentifier, addCredits).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
  **addCredits** | [**AddCredits**](AddCredits.md)| Values to post to add credit to a specific child account | 
 
 ### Return type
@@ -91,16 +91,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -120,7 +120,7 @@ apiInstance.associateIpToChild(childIdentifier, ip).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
  **ip** | [**ManageIp**](ManageIp.md)| IP to associate | 
 
 ### Return type
@@ -148,16 +148,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -177,7 +177,7 @@ apiInstance.createChildDomain(childIdentifier, addChildDomain).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
  **addChildDomain** | [**AddChildDomain**](AddChildDomain.md)| Sender domain to add for a specific child account. This will not be displayed to the parent account. | 
 
 ### Return type
@@ -205,16 +205,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -260,16 +260,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -289,7 +289,7 @@ apiInstance.deleteChildDomain(childIdentifier, domainName).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
  **domainName** | **String**| Pass the existing domain that needs to be deleted | 
 
 ### Return type
@@ -317,16 +317,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -344,7 +344,7 @@ apiInstance.deleteResellerChild(childIdentifier).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or child id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or child id of reseller's child | 
 
 ### Return type
 
@@ -371,16 +371,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -400,7 +400,7 @@ apiInstance.dissociateIpFromChild(childIdentifier, ip).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
  **ip** | [**ManageIp**](ManageIp.md)| IP to dissociate | 
 
 ### Return type
@@ -420,7 +420,7 @@ null (empty response body)
 # **getChildAccountCreationStatus**
 > GetChildAccountCreationStatus getChildAccountCreationStatus(childIdentifier)
 
-Get the status of a reseller&#39;s child account creation, whether it is successfully created (exists) or not based on the identifier supplied
+Get the status of a reseller's child account creation, whether it is successfully created (exists) or not based on the identifier supplied
 
 ### Example
 ```javascript
@@ -428,16 +428,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -455,7 +455,7 @@ apiInstance.getChildAccountCreationStatus(childIdentifier).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
 
 ### Return type
 
@@ -482,16 +482,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -509,7 +509,7 @@ apiInstance.getChildDomains(childIdentifier).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
 
 ### Return type
 
@@ -528,7 +528,7 @@ Name | Type | Description  | Notes
 # **getChildInfo**
 > GetChildInfo getChildInfo(childIdentifier)
 
-Get a child account&#39;s details
+Get a child account's details
 
 ### Example
 ```javascript
@@ -536,16 +536,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -563,7 +563,7 @@ apiInstance.getChildInfo(childIdentifier).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
 
 ### Return type
 
@@ -590,16 +590,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 
 Get session token to access Sendinblue (SSO)
 
-It returns a session [token] which will remain valid for a short period of time. A child account will be able to access a white-labeled section by using the following url pattern &#x3D;&gt; https:/email.mydomain.com/login/sso?token&#x3D;[token]
+It returns a session [token] which will remain valid for a short period of time. A child account will be able to access a white-labeled section by using the following url pattern => https:/email.mydomain.com/login/sso?token=[token]
 
 ### Example
 ```javascript
@@ -649,16 +649,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -676,7 +676,7 @@ apiInstance.getSsoToken(childIdentifier).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
 
 ### Return type
 
@@ -703,16 +703,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -732,7 +732,7 @@ apiInstance.removeCredits(childIdentifier, removeCredits).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
  **removeCredits** | [**RemoveCredits**](RemoveCredits.md)| Values to post to remove email or SMS credits from a specific child account | 
 
 ### Return type
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
 # **updateChildAccountStatus**
 > updateChildAccountStatus(childIdentifier, updateChildAccountStatus)
 
-Update info of reseller&#39;s child account status based on the childIdentifier supplied
+Update info of reseller's child account status based on the childIdentifier supplied
 
 ### Example
 ```javascript
@@ -760,16 +760,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -789,7 +789,7 @@ apiInstance.updateChildAccountStatus(childIdentifier, updateChildAccountStatus).
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
  **updateChildAccountStatus** | [**UpdateChildAccountStatus**](UpdateChildAccountStatus.md)| values to update in child account status | 
 
 ### Return type
@@ -809,7 +809,7 @@ null (empty response body)
 # **updateChildDomain**
 > updateChildDomain(childIdentifier, domainName, updateChildDomain)
 
-Update the sender domain of reseller&#39;s child based on the childIdentifier and domainName passed
+Update the sender domain of reseller's child based on the childIdentifier and domainName passed
 
 ### Example
 ```javascript
@@ -817,16 +817,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -848,7 +848,7 @@ apiInstance.updateChildDomain(childIdentifier, domainName, updateChildDomain).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
  **domainName** | **String**| Pass the existing domain that needs to be updated | 
  **updateChildDomain** | [**UpdateChildDomain**](UpdateChildDomain.md)| value to update for sender domain | 
 
@@ -869,7 +869,7 @@ null (empty response body)
 # **updateResellerChild**
 > updateResellerChild(childIdentifier, resellerChild)
 
-Update info of reseller&#39;s child based on the child identifier supplied
+Update info of reseller's child based on the child identifier supplied
 
 ### Example
 ```javascript
@@ -877,16 +877,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.ResellerApi();
 
@@ -906,7 +906,7 @@ apiInstance.updateResellerChild(childIdentifier, resellerChild).then(function() 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **childIdentifier** | **String**| Either auth key or id of reseller&#39;s child | 
+ **childIdentifier** | **String**| Either auth key or id of reseller's child | 
  **resellerChild** | [**UpdateChild**](UpdateChild.md)| values to update in child profile | 
 
 ### Return type

@@ -15,102 +15,103 @@
  */
 
 (function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SibApiV3Sdk);
-  }
+    if (typeof define === 'function' && define.amd) {
+        // AMD.
+        define(['expect.js', '../../src/index'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // CommonJS-like environments that support module.exports, like Node.
+        factory(require('expect.js'), require('../../src/index'));
+    } else {
+        // Browser globals (root is window)
+        factory(root.expect, root.SibApiV3Sdk);
+    }
 }(this, function(expect, SibApiV3Sdk) {
-  'use strict';
+    'use strict';
 
-  var instance;
+    var instance;
 
-  beforeEach(function() {
-    instance = new SibApiV3Sdk.SendEmail();
-  });
-
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('SendEmail', function() {
-    it('should create an instance of SendEmail', function() {
-      // uncomment below and update the code to test SendEmail
-      //var instane = new SibApiV3Sdk.SendEmail();
-      //expect(instance).to.be.a(SibApiV3Sdk.SendEmail);
+    beforeEach(function() {
+        // console.log("Hey!", Object.keys(new SibApiV3Sdk))
+        // instance = new SibApiV3Sdk.SendEmail();
     });
 
-    it('should have the property emailTo (base name: "emailTo")', function() {
-      // uncomment below and update the code to test the property emailTo
-      //var instane = new SibApiV3Sdk.SendEmail();
-      //expect(instance).to.be();
-    });
+    var getProperty = function(object, getter, property) {
+        // Use getter method if present; otherwise, get the property directly.
+        if (typeof object[getter] === 'function')
+            return object[getter]();
+        else
+            return object[property];
+    }
 
-    it('should have the property emailBcc (base name: "emailBcc")', function() {
-      // uncomment below and update the code to test the property emailBcc
-      //var instane = new SibApiV3Sdk.SendEmail();
-      //expect(instance).to.be();
-    });
+    var setProperty = function(object, setter, property, value) {
+        // Use setter method if present; otherwise, set the property directly.
+        if (typeof object[setter] === 'function')
+            object[setter](value);
+        else
+            object[property] = value;
+    }
 
-    it('should have the property emailCc (base name: "emailCc")', function() {
-      // uncomment below and update the code to test the property emailCc
-      //var instane = new SibApiV3Sdk.SendEmail();
-      //expect(instance).to.be();
-    });
+    describe('SendEmail', function() {
+        it('should create an instance of SendEmail', function() {
+            // uncomment below and update the code to test SendEmail
+            //var instane = new SibApiV3Sdk.SendEmail();
+            //expect(instance).to.be.a(SibApiV3Sdk.SendEmail);
+        });
 
-    it('should have the property replyTo (base name: "replyTo")', function() {
-      // uncomment below and update the code to test the property replyTo
-      //var instane = new SibApiV3Sdk.SendEmail();
-      //expect(instance).to.be();
-    });
+        it('should have the property emailTo (base name: "emailTo")', function() {
+            // uncomment below and update the code to test the property emailTo
+            //var instane = new SibApiV3Sdk.SendEmail();
+            //expect(instance).to.be();
+        });
 
-    it('should have the property attachmentUrl (base name: "attachmentUrl")', function() {
-      // uncomment below and update the code to test the property attachmentUrl
-      //var instane = new SibApiV3Sdk.SendEmail();
-      //expect(instance).to.be();
-    });
+        it('should have the property emailBcc (base name: "emailBcc")', function() {
+            // uncomment below and update the code to test the property emailBcc
+            //var instane = new SibApiV3Sdk.SendEmail();
+            //expect(instance).to.be();
+        });
 
-    it('should have the property attachment (base name: "attachment")', function() {
-      // uncomment below and update the code to test the property attachment
-      //var instane = new SibApiV3Sdk.SendEmail();
-      //expect(instance).to.be();
-    });
+        it('should have the property emailCc (base name: "emailCc")', function() {
+            // uncomment below and update the code to test the property emailCc
+            //var instane = new SibApiV3Sdk.SendEmail();
+            //expect(instance).to.be();
+        });
 
-    it('should have the property headers (base name: "headers")', function() {
-      // uncomment below and update the code to test the property headers
-      //var instane = new SibApiV3Sdk.SendEmail();
-      //expect(instance).to.be();
-    });
+        it('should have the property replyTo (base name: "replyTo")', function() {
+            // uncomment below and update the code to test the property replyTo
+            //var instane = new SibApiV3Sdk.SendEmail();
+            //expect(instance).to.be();
+        });
 
-    it('should have the property attributes (base name: "attributes")', function() {
-      // uncomment below and update the code to test the property attributes
-      //var instane = new SibApiV3Sdk.SendEmail();
-      //expect(instance).to.be();
-    });
+        it('should have the property attachmentUrl (base name: "attachmentUrl")', function() {
+            // uncomment below and update the code to test the property attachmentUrl
+            //var instane = new SibApiV3Sdk.SendEmail();
+            //expect(instance).to.be();
+        });
 
-    it('should have the property tags (base name: "tags")', function() {
-      // uncomment below and update the code to test the property tags
-      //var instane = new SibApiV3Sdk.SendEmail();
-      //expect(instance).to.be();
-    });
+        it('should have the property attachment (base name: "attachment")', function() {
+            // uncomment below and update the code to test the property attachment
+            //var instane = new SibApiV3Sdk.SendEmail();
+            //expect(instance).to.be();
+        });
 
-  });
+        it('should have the property headers (base name: "headers")', function() {
+            // uncomment below and update the code to test the property headers
+            //var instane = new SibApiV3Sdk.SendEmail();
+            //expect(instance).to.be();
+        });
+
+        it('should have the property attributes (base name: "attributes")', function() {
+            // uncomment below and update the code to test the property attributes
+            //var instane = new SibApiV3Sdk.SendEmail();
+            //expect(instance).to.be();
+        });
+
+        it('should have the property tags (base name: "tags")', function() {
+            // uncomment below and update the code to test the property tags
+            //var instane = new SibApiV3Sdk.SendEmail();
+            //expect(instance).to.be();
+        });
+
+    });
 
 }));

@@ -5,8 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **String** | URL of the webhook | 
 **description** | **String** | Description of the webhook | [optional] 
-**events** | **[String]** | Events triggering the webhook. Possible values for Transactional type webhook – &#x60;sent&#x60; OR &#x60;request&#x60;, &#x60;delivered&#x60;, &#x60;hardBounce&#x60;, &#x60;softBounce&#x60;, &#x60;blocked&#x60;, &#x60;spam&#x60;, &#x60;invalid&#x60;, &#x60;deferred&#x60;, &#x60;click&#x60;, &#x60;opened&#x60;, &#x60;uniqueOpened&#x60; and &#x60;unsubscribed&#x60; and possible values for Marketing type webhook – &#x60;spam&#x60;, &#x60;opened&#x60;, &#x60;click&#x60;, &#x60;hardBounce&#x60;, &#x60;softBounce&#x60;, &#x60;unsubscribed&#x60;, &#x60;listAddition&#x60; &amp; &#x60;delivered&#x60; | 
-**type** | **String** | Type of the webhook | [optional] [default to &#39;transactional&#39;]
+**events** | **[String]** | - Events triggering the webhook. Possible values for **Transactional** type webhook: #### `sent` OR `request`, `delivered`, `hardBounce`, `softBounce`, `blocked`, `spam`, `invalid`, `deferred`, `click`, `opened`, `uniqueOpened` and `unsubscribed` - Possible values for **Marketing** type webhook: #### `spam`, `opened`, `click`, `hardBounce`, `softBounce`, `unsubscribed`, `listAddition` & `delivered` - Possible values for **Inbound** type webhook: #### `inboundEmailProcessed`  | 
+**type** | **String** | Type of the webhook | [optional] [default to 'transactional']
+**domain** | **String** | Inbound domain of webhook, required in case of event type `inbound` | [optional] 
 
 
 <a name="[EventsEnum]"></a>
@@ -45,6 +46,8 @@ Name | Type | Description | Notes
 
 * `contactDeleted` (value: `"contactDeleted"`)
 
+* `inboundEmailProcessed` (value: `"inboundEmailProcessed"`)
+
 
 
 
@@ -55,6 +58,8 @@ Name | Type | Description | Notes
 * `transactional` (value: `"transactional"`)
 
 * `marketing` (value: `"marketing"`)
+
+* `inbound` (value: `"inbound"`)
 
 
 

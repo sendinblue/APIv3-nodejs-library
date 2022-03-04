@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **name** | **String** | Name of the attribute | 
 **category** | **String** | Category of the attribute | 
 **type** | **String** | Type of the attribute | [optional] 
-**enumeration** | [**[GetAttributesEnumeration]**](GetAttributesEnumeration.md) | Parameter only available for "category" type attributes. | [optional] 
+**enumeration** | [**[GetAttributesEnumeration]**](GetAttributesEnumeration.md) | Parameter only available for \"category\" type attributes. | [optional] 
 **calculatedValue** | **String** | Calculated value formula | [optional] 
 
 
@@ -33,13 +33,13 @@ Name | Type | Description | Notes
 
 * `text` (value: `"text"`)
 
-* `date` (value: `"date"`)
+* `_date` (value: `"date"`)
 
-* `float` (value: `"float"`)
+* `_float` (value: `"float"`)
 
 * `id` (value: `"id"`)
 
-* `boolean` (value: `"boolean"`)
+* `_boolean` (value: `"boolean"`)
 
 
 

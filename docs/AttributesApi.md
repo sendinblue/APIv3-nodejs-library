@@ -22,16 +22,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.AttributesApi();
 
@@ -82,16 +82,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.AttributesApi();
 
@@ -139,16 +139,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.AttributesApi();
 apiInstance.getAttributes().then(function(data) {
@@ -187,16 +187,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var apiKey= defaultClient.authentications['api-key'];
+apiKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKeyapiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partnerKey= defaultClient.authentications['partner-key'];
+partnerKeyapiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partnerKeyapiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.AttributesApi();
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**children** | **[Object]** | Your children&#39;s account information | [optional] 
+**children** | **[Object]** | Your children's account information | [optional] 
 **count** | **Number** | Number of child accounts | [optional] 
 
 
