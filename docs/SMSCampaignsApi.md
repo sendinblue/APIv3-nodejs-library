@@ -8,12 +8,12 @@ Method | HTTP request | Description
 [**deleteSmsCampaign**](SMSCampaignsApi.md#deleteSmsCampaign) | **DELETE** /smsCampaigns/{campaignId} | Delete an SMS campaign
 [**getSmsCampaign**](SMSCampaignsApi.md#getSmsCampaign) | **GET** /smsCampaigns/{campaignId} | Get an SMS campaign
 [**getSmsCampaigns**](SMSCampaignsApi.md#getSmsCampaigns) | **GET** /smsCampaigns | Returns the information for all your created SMS campaigns
-[**requestSmsRecipientExport**](SMSCampaignsApi.md#requestSmsRecipientExport) | **POST** /smsCampaigns/{campaignId}/exportRecipients | Export an SMS campaign&#39;s recipients
+[**requestSmsRecipientExport**](SMSCampaignsApi.md#requestSmsRecipientExport) | **POST** /smsCampaigns/{campaignId}/exportRecipients | Export an SMS campaign's recipients
 [**sendSmsCampaignNow**](SMSCampaignsApi.md#sendSmsCampaignNow) | **POST** /smsCampaigns/{campaignId}/sendNow | Send your SMS campaign immediately
-[**sendSmsReport**](SMSCampaignsApi.md#sendSmsReport) | **POST** /smsCampaigns/{campaignId}/sendReport | Send an SMS campaign&#39;s report
+[**sendSmsReport**](SMSCampaignsApi.md#sendSmsReport) | **POST** /smsCampaigns/{campaignId}/sendReport | Send an SMS campaign's report
 [**sendTestSms**](SMSCampaignsApi.md#sendTestSms) | **POST** /smsCampaigns/{campaignId}/sendTest | Send a test SMS campaign
 [**updateSmsCampaign**](SMSCampaignsApi.md#updateSmsCampaign) | **PUT** /smsCampaigns/{campaignId} | Update an SMS campaign
-[**updateSmsCampaignStatus**](SMSCampaignsApi.md#updateSmsCampaignStatus) | **PUT** /smsCampaigns/{campaignId}/status | Update a campaign&#39;s status
+[**updateSmsCampaignStatus**](SMSCampaignsApi.md#updateSmsCampaignStatus) | **PUT** /smsCampaigns/{campaignId}/status | Update a campaign's status
 
 
 <a name="createSmsCampaign"></a>
@@ -31,7 +31,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -85,7 +85,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -139,7 +139,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -193,7 +193,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -205,8 +205,8 @@ var apiInstance = new SibApiV3Sdk.SMSCampaignsApi();
 
 var opts = { 
   'status': "status_example", // String | Status of campaign.
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | Mandatory if endDate is used. Starting (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either 'status' not passed and if passed is set to 'sent' )
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either 'status' not passed and if passed is set to 'sent' )
+  'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either 'status' not passed and if passed is set to 'sent' )
+  'endDate': "endDate_example", // String | Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either 'status' not passed and if passed is set to 'sent' )
   'limit': 500, // Number | Number limitation for the result returned
   'offset': 0, // Number | Beginning point in the list to retrieve from.
   'sort': "desc" // String | Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed
@@ -224,11 +224,11 @@ apiInstance.getSmsCampaigns(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **status** | **String**| Status of campaign. | [optional] 
- **startDate** | **Date**| Mandatory if endDate is used. Starting (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; ) | [optional] 
- **endDate** | **Date**| Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either &#39;status&#39; not passed and if passed is set to &#39;sent&#39; ) | [optional] 
+ **startDate** | **String**| Mandatory if endDate is used. Starting (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either 'status' not passed and if passed is set to 'sent' ) | [optional] 
+ **endDate** | **String**| Mandatory if startDate is used. Ending (urlencoded) UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ) to filter the sent sms campaigns. Prefer to pass your timezone in date-time format for accurate result ( only available if either 'status' not passed and if passed is set to 'sent' ) | [optional] 
  **limit** | **Number**| Number limitation for the result returned | [optional] [default to 500]
  **offset** | **Number**| Beginning point in the list to retrieve from. | [optional] [default to 0]
- **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed | [optional] [default to desc]
 
 ### Return type
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 # **requestSmsRecipientExport**
 > CreatedProcessId requestSmsRecipientExport(campaignId, opts)
 
-Export an SMS campaign&#39;s recipients
+Export an SMS campaign's recipients
 
 It returns the background process ID which on completion calls the notify URL that you have set in the input.
 
@@ -260,7 +260,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -318,7 +318,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -361,7 +361,7 @@ null (empty response body)
 # **sendSmsReport**
 > sendSmsReport(campaignId, sendReport)
 
-Send an SMS campaign&#39;s report
+Send an SMS campaign's report
 
 Send report of Sent and Archived campaign, to the specified email addresses, with respective data and a pdf attachment in detail.
 
@@ -374,7 +374,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -431,7 +431,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -488,7 +488,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -534,7 +534,7 @@ null (empty response body)
 # **updateSmsCampaignStatus**
 > updateSmsCampaignStatus(campaignId, status)
 
-Update a campaign&#39;s status
+Update a campaign's status
 
 ### Example
 ```javascript
@@ -545,7 +545,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];

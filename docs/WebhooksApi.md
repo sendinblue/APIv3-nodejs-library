@@ -26,7 +26,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -80,7 +80,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -134,7 +134,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -188,7 +188,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -199,7 +199,8 @@ partnerKey.apiKey = 'YOUR API KEY';
 var apiInstance = new SibApiV3Sdk.WebhooksApi();
 
 var opts = { 
-  'type': "transactional" // String | Filter on webhook type
+  'type': "transactional", // String | Filter on webhook type
+  'sort': "desc" // String | Sort the results in the ascending/descending order of webhook creation
 };
 apiInstance.getWebhooks(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -214,6 +215,7 @@ apiInstance.getWebhooks(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **type** | **String**| Filter on webhook type | [optional] [default to transactional]
+ **sort** | **String**| Sort the results in the ascending/descending order of webhook creation | [optional] [default to desc]
 
 ### Return type
 
@@ -243,7 +245,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];

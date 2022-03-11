@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**deleteList**](ListsApi.md#deleteList) | **DELETE** /contacts/lists/{listId} | Delete a list
 [**getContactsFromList**](ListsApi.md#getContactsFromList) | **GET** /contacts/lists/{listId}/contacts | Get contacts in a list
 [**getFolderLists**](ListsApi.md#getFolderLists) | **GET** /contacts/folders/{folderId}/lists | Get lists in a folder
-[**getList**](ListsApi.md#getList) | **GET** /contacts/lists/{listId} | Get a list&#39;s details
+[**getList**](ListsApi.md#getList) | **GET** /contacts/lists/{listId} | Get a list's details
 [**getLists**](ListsApi.md#getLists) | **GET** /contacts/lists | Get all the lists
 [**removeContactFromList**](ListsApi.md#removeContactFromList) | **POST** /contacts/lists/{listId}/contacts/remove | Delete a contact from a list
 [**updateList**](ListsApi.md#updateList) | **PUT** /contacts/lists/{listId} | Update a list
@@ -30,7 +30,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -87,7 +87,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -141,7 +141,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -195,7 +195,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -208,7 +208,7 @@ var apiInstance = new SibApiV3Sdk.ListsApi();
 var listId = 789; // Number | Id of the list
 
 var opts = { 
-  'modifiedSince': new Date("2013-10-20T19:20:30+01:00"), // Date | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
+  'modifiedSince': "modifiedSince_example", // String | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
   'limit': 50, // Number | Number of documents per page
   'offset': 0, // Number | Index of the first document of the page
   'sort': "desc" // String | Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed
@@ -226,10 +226,10 @@ apiInstance.getContactsFromList(listId, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **Number**| Id of the list | 
- **modifiedSince** | **Date**| Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result. | [optional] 
+ **modifiedSince** | **String**| Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result. | [optional] 
  **limit** | **Number**| Number of documents per page | [optional] [default to 50]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
- **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed | [optional] [default to desc]
 
 ### Return type
 
@@ -259,7 +259,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
  **folderId** | **Number**| Id of the folder | 
  **limit** | **Number**| Number of documents per page | [optional] [default to 10]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
- **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed | [optional] [default to desc]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 # **getList**
 > GetExtendedList getList(listId)
 
-Get a list&#39;s details
+Get a list's details
 
 ### Example
 ```javascript
@@ -321,7 +321,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -375,7 +375,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| Number of documents per page | [optional] [default to 10]
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
- **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed | [optional] [default to desc]
 
 ### Return type
 
@@ -434,7 +434,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -491,7 +491,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];

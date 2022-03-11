@@ -22,7 +22,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];

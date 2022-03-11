@@ -25,7 +25,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -40,7 +40,7 @@ var opts = {
   'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
   'endDate': "endDate_example", // String | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
   'offset': 0, // Number | Index of the first document of the page
-  'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate'
+  'days': 789, // Number | Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate'
   'phoneNumber': "phoneNumber_example", // String | Filter the report for a specific phone number
   'event': "event_example", // String | Filter the report for specific events
   'tags': "tags_example", // String | Filter the report for specific tags passed as a serialized urlencoded array
@@ -62,11 +62,11 @@ Name | Type | Description  | Notes
  **startDate** | **String**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report | [optional] 
  **endDate** | **String**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report | [optional] 
  **offset** | **Number**| Index of the first document of the page | [optional] [default to 0]
- **days** | **Number**| Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39; | [optional] 
+ **days** | **Number**| Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate' | [optional] 
  **phoneNumber** | **String**| Filter the report for a specific phone number | [optional] 
  **event** | **String**| Filter the report for specific events | [optional] 
  **tags** | **String**| Filter the report for specific tags passed as a serialized urlencoded array | [optional] 
- **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed | [optional] [default to desc]
 
 ### Return type
 
@@ -96,7 +96,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -109,7 +109,7 @@ var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 var opts = { 
   'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
   'endDate': "endDate_example", // String | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
-  'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with startDate and endDate
+  'days': 789, // Number | Number of days in the past including today (positive integer). Not compatible with startDate and endDate
   'tag': "tag_example" // String | Filter on a tag
 };
 apiInstance.getTransacAggregatedSmsReport(opts).then(function(data) {
@@ -157,7 +157,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];
@@ -170,7 +170,7 @@ var apiInstance = new SibApiV3Sdk.TransactionalSMSApi();
 var opts = { 
   'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report
   'endDate': "endDate_example", // String | Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report
-  'days': 56, // Number | Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate'
+  'days': 789, // Number | Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate'
   'tag': "tag_example", // String | Filter on a tag
   'sort': "desc" // String | Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed
 };
@@ -188,9 +188,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startDate** | **String**| Mandatory if endDate is used. Starting date (YYYY-MM-DD) of the report | [optional] 
  **endDate** | **String**| Mandatory if startDate is used. Ending date (YYYY-MM-DD) of the report | [optional] 
- **days** | **Number**| Number of days in the past including today (positive integer). Not compatible with &#39;startDate&#39; and &#39;endDate&#39; | [optional] 
+ **days** | **Number**| Number of days in the past including today (positive integer). Not compatible with 'startDate' and 'endDate' | [optional] 
  **tag** | **String**| Filter on a tag | [optional] 
- **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if &#x60;sort&#x60; is not passed | [optional] [default to desc]
+ **sort** | **String**| Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed | [optional] [default to desc]
 
 ### Return type
 
@@ -220,7 +220,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
+//apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
 var partnerKey = defaultClient.authentications['partner-key'];

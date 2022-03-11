@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**recipients** | **Object** |  | 
-**statistics** | **Object** |  | 
+**recipients** | [**GetSmsCampaignRecipients**](GetSmsCampaignRecipients.md) |  | 
+**statistics** | [**GetSmsCampaignRecipients**](GetSmsCampaignRecipients.md) |  | 
 
 

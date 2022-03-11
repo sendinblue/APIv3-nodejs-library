@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 * `queued` (value: `"queued"`)
 
-* `in_process` (value: `"in_process"`)
+* `inProcess` (value: `"in_process"`)
 
 * `completed` (value: `"completed"`)
 

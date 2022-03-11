@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enabled** | **Boolean** | Status of your transactional email Account (true&#x3D;Enabled, false&#x3D;Disabled) | 
+**enabled** | **Boolean** | Status of your transactional email Account (true=Enabled, false=Disabled) | 
 **data** | [**GetAccountRelayData**](GetAccountRelayData.md) |  | 
 
 

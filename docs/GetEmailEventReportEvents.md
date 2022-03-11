@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** | Email address which generates the event | 
-**_date** | **Date** | UTC date-time on which the event has been generated | 
+**_date** | **String** | UTC date-time on which the event has been generated | 
 **subject** | **String** | Subject of the event | [optional] 
 **messageId** | **String** | Message ID which generated the event | 
 **event** | **String** | Event which occurred | 
@@ -45,6 +45,8 @@ Name | Type | Description | Notes
 * `unsubscribed` (value: `"unsubscribed"`)
 
 * `error` (value: `"error"`)
+
+* `loadedByProxy` (value: `"loadedByProxy"`)
 
 
 
