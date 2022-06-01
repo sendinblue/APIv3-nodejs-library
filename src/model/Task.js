@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Contact', 'model/TaskReminder'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Contact'), require('./TaskReminder'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.Task = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.Contact, root.SibApiV3Sdk.TaskReminder);
+    root.SibApiV3Sdk.Task = factory(root.SibApiV3Sdk.ApiClient);
   }
-}(this, function(ApiClient, Contact, TaskReminder) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
    * The Task model module.
    * @module model/Task
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -44,12 +44,10 @@
    * @class
    * @param taskTypeId {String} Id for type of task e.g Call / Email / Meeting etc.
    * @param name {String} Name of task
-   * @param _date {Date} Task date/time
    */
-  var exports = function(taskTypeId, name, _date) {
+  var exports = function(taskTypeId, name) {
     this.taskTypeId = taskTypeId;
     this.name = name;
-    this._date = _date;
   };
 
   /**
@@ -62,8 +60,6 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('firstContact'))
-        obj.firstContact = Contact.constructFromObject(data['firstContact']);
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'String');
       if (data.hasOwnProperty('taskTypeId'))
@@ -72,38 +68,15 @@
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('contactsIds'))
         obj.contactsIds = ApiClient.convertToType(data['contactsIds'], ['Number']);
-      if (data.hasOwnProperty('contacts'))
-        obj.contacts = ApiClient.convertToType(data['contacts'], [Contact]);
       if (data.hasOwnProperty('dealsIds'))
         obj.dealsIds = ApiClient.convertToType(data['dealsIds'], ['String']);
       if (data.hasOwnProperty('companiesIds'))
         obj.companiesIds = ApiClient.convertToType(data['companiesIds'], ['String']);
-      if (data.hasOwnProperty('assignToId'))
-        obj.assignToId = ApiClient.convertToType(data['assignToId'], 'String');
-      if (data.hasOwnProperty('date'))
-        obj._date = ApiClient.convertToType(data['date'], 'Date');
-      if (data.hasOwnProperty('duration'))
-        obj.duration = ApiClient.convertToType(data['duration'], 'Number');
-      if (data.hasOwnProperty('notes'))
-        obj.notes = ApiClient.convertToType(data['notes'], 'String');
-      if (data.hasOwnProperty('done'))
-        obj.done = ApiClient.convertToType(data['done'], 'Boolean');
-      if (data.hasOwnProperty('reminder'))
-        obj.reminder = TaskReminder.constructFromObject(data['reminder']);
-      if (data.hasOwnProperty('createdAt'))
-        obj.createdAt = ApiClient.convertToType(data['createdAt'], 'Date');
-      if (data.hasOwnProperty('updatedAt'))
-        obj.updatedAt = ApiClient.convertToType(data['updatedAt'], 'Date');
-      if (data.hasOwnProperty('refs'))
-        obj.refs = ApiClient.convertToType(data['refs'], Object);
+      if (data.hasOwnProperty('firstContact'))
+        obj.companiesIds = ApiClient.convertToType(data['firstContact'], ['String']);
     }
     return obj;
   }
-
-  /**
-   * @member {module:model/Contact} firstContact
-   */
-  exports.prototype.firstContact = undefined;
 
   /**
    * Unique task id
@@ -130,12 +103,6 @@
   exports.prototype.contactsIds = undefined;
 
   /**
-   * Contact details for contacts linked to this task
-   * @member {Array.<module:model/Contact>} contacts
-   */
-  exports.prototype.contacts = undefined;
-
-  /**
    * Deal ids for deals a task is linked to
    * @member {Array.<String>} dealsIds
    */
@@ -146,59 +113,6 @@
    * @member {Array.<String>} companiesIds
    */
   exports.prototype.companiesIds = undefined;
-
-  /**
-   * User id to whom task is assigned
-   * @member {String} assignToId
-   */
-  exports.prototype.assignToId = undefined;
-
-  /**
-   * Task date/time
-   * @member {Date} _date
-   */
-  exports.prototype._date = undefined;
-
-  /**
-   * Duration of task
-   * @member {Number} duration
-   */
-  exports.prototype.duration = undefined;
-
-  /**
-   * Notes added to a task
-   * @member {String} notes
-   */
-  exports.prototype.notes = undefined;
-
-  /**
-   * Task marked as done
-   * @member {Boolean} done
-   */
-  exports.prototype.done = undefined;
-
-  /**
-   * Task reminder date/time for a task
-   * @member {module:model/TaskReminder} reminder
-   */
-  exports.prototype.reminder = undefined;
-
-  /**
-   * Task created date/time
-   * @member {Date} createdAt
-   */
-  exports.prototype.createdAt = undefined;
-
-  /**
-   * Task update date/time
-   * @member {Date} updatedAt
-   */
-  exports.prototype.updatedAt = undefined;
-
-  /**
-   * @member {Object} refs
-   */
-  exports.prototype.refs = undefined;
 
 
   return exports;

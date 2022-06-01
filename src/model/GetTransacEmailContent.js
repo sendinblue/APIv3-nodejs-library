@@ -34,7 +34,7 @@
   /**
    * The GetTransacEmailContent model module.
    * @module model/GetTransacEmailContent
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**

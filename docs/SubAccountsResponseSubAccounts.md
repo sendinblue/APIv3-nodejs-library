@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Number** | client id of sub-account organization | 
-**companyName** | **String** | Name of sub-account organization | 
-**active** | **Boolean** | Whether organization is active or not | 
-**createdAt** | **Number** | timestamp when the organization was created | 
+**id** | **Number** | id of the sub-account | 
+**companyName** | **String** | Name of the sub-account company | 
+**active** | **Boolean** | Whether the sub-account is active or not | 
+**createdAt** | **Number** | Timestamp when the sub-account was created | 
 
 

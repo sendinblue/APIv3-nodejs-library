@@ -34,7 +34,7 @@
   /**
    * The Body1 model module.
    * @module model/Body1
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -94,7 +94,7 @@
   exports.prototype.name = undefined;
 
   /**
-   * Duration of task
+   * Duration of task in milliseconds [1 minute = 60000 ms]
    * @member {Number} duration
    */
   exports.prototype.duration = undefined;

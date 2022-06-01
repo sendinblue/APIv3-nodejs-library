@@ -34,7 +34,7 @@
   /**
    * The Body model module.
    * @module model/Body
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -43,7 +43,7 @@
    * @class
    * @param name {String} Name of task
    * @param taskTypeId {String} Id for type of task e.g Call / Email / Meeting etc.
-   * @param _date {Date} Task date/time
+   * @param _date {Date} Task due date and time
    */
   var exports = function(name, taskTypeId, _date) {
     this.name = name;
@@ -94,7 +94,7 @@
   exports.prototype.name = undefined;
 
   /**
-   * Duration of task
+   * Duration of task in milliseconds [1 minute = 60000 ms]
    * @member {Number} duration
    */
   exports.prototype.duration = undefined;
@@ -106,7 +106,7 @@
   exports.prototype.taskTypeId = undefined;
 
   /**
-   * Task date/time
+   * Task due date and time
    * @member {Date} _date
    */
   exports.prototype._date = undefined;

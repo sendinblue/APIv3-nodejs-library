@@ -636,7 +636,7 @@ This endpoint does not need any parameter.
 
 <a name="getContactInfo"></a>
 # **getContactInfo**
-> GetExtendedContactDetails getContactInfo(identifier)
+> GetExtendedContactDetails getContactInfo(identifier, opts)
 
 Get a contact's details
 
@@ -663,7 +663,11 @@ var apiInstance = new SibApiV3Sdk.ContactsApi();
 
 var identifier = "identifier_example"; // String | Email (urlencoded) OR ID of the contact OR its SMS attribute value
 
-apiInstance.getContactInfo(identifier).then(function(data) {
+var opts = { 
+  'startDate': null, // Object | **Mandatory if endDate is used.** Starting date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be lower than equal to endDate 
+  'endDate': null // Object | **Mandatory if startDate is used.** Ending date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be greater than equal to startDate. 
+};
+apiInstance.getContactInfo(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -676,6 +680,8 @@ apiInstance.getContactInfo(identifier).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| Email (urlencoded) OR ID of the contact OR its SMS attribute value | 
+ **startDate** | [**Object**](.md)| **Mandatory if endDate is used.** Starting date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be lower than equal to endDate  | [optional] 
+ **endDate** | [**Object**](.md)| **Mandatory if startDate is used.** Ending date (YYYY-MM-DD) of the statistic events specific to campaigns. Must be greater than equal to startDate.  | [optional] 
 
 ### Return type
 

@@ -34,7 +34,7 @@
   /**
    * The MasterDetailsResponseBillingInfoAddress model module.
    * @module model/MasterDetailsResponseBillingInfoAddress
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The UpdateSmtpTemplate model module.
    * @module model/UpdateSmtpTemplate
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -97,7 +97,7 @@
   exports.prototype.templateName = undefined;
 
   /**
-   * Required if htmlUrl is empty. Body of the message (HTML must have more than 10 characters)
+   * Required if htmlUrl is empty. If the template is designed using Drag & Drop editor via HTML content, then the design page will not have Drag & Drop editor access for that template. Body of the message (HTML must have more than 10 characters)
    * @member {String} htmlContent
    */
   exports.prototype.htmlContent = undefined;

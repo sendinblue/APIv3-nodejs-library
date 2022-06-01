@@ -43,7 +43,7 @@
 
       it('should have the property firstContact (base name: "firstContact")', function() {
         // TODO: update the code to test the property firstContact
-        expect(instance).to.have.property('firstContact');
+        // expect(instance).to.have.property('firstContact');
         // expect(instance.firstContact).to.be(expectedValueLiteral);
       });
 
@@ -73,7 +73,7 @@
 
       it('should have the property contacts (base name: "contacts")', function() {
         // TODO: update the code to test the property contacts
-        expect(instance).to.have.property('contacts');
+        // expect(instance).to.have.property('contacts');
         // expect(instance.contacts).to.be(expectedValueLiteral);
       });
 
@@ -91,55 +91,55 @@
 
       it('should have the property assignToId (base name: "assignToId")', function() {
         // TODO: update the code to test the property assignToId
-        expect(instance).to.have.property('assignToId');
+        // expect(instance).to.have.property('assignToId');
         // expect(instance.assignToId).to.be(expectedValueLiteral);
       });
 
       it('should have the property _date (base name: "date")', function() {
         // TODO: update the code to test the property _date
-        expect(instance).to.have.property('_date');
+        // expect(instance).to.have.property('_date');
         // expect(instance._date).to.be(expectedValueLiteral);
       });
 
       it('should have the property duration (base name: "duration")', function() {
         // TODO: update the code to test the property duration
-        expect(instance).to.have.property('duration');
+        // expect(instance).to.have.property('duration');
         // expect(instance.duration).to.be(expectedValueLiteral);
       });
 
       it('should have the property notes (base name: "notes")', function() {
         // TODO: update the code to test the property notes
-        expect(instance).to.have.property('notes');
+        // expect(instance).to.have.property('notes');
         // expect(instance.notes).to.be(expectedValueLiteral);
       });
 
       it('should have the property done (base name: "done")', function() {
         // TODO: update the code to test the property done
-        expect(instance).to.have.property('done');
+        // expect(instance).to.have.property('done');
         // expect(instance.done).to.be(expectedValueLiteral);
       });
 
       it('should have the property reminder (base name: "reminder")', function() {
         // TODO: update the code to test the property reminder
-        expect(instance).to.have.property('reminder');
+        // expect(instance).to.have.property('reminder');
         // expect(instance.reminder).to.be(expectedValueLiteral);
       });
 
       it('should have the property createdAt (base name: "createdAt")', function() {
         // TODO: update the code to test the property createdAt
-        expect(instance).to.have.property('createdAt');
+        // expect(instance).to.have.property('createdAt');
         // expect(instance.createdAt).to.be(expectedValueLiteral);
       });
 
       it('should have the property updatedAt (base name: "updatedAt")', function() {
         // TODO: update the code to test the property updatedAt
-        expect(instance).to.have.property('updatedAt');
+        // expect(instance).to.have.property('updatedAt');
         // expect(instance.updatedAt).to.be(expectedValueLiteral);
       });
 
       it('should have the property refs (base name: "refs")', function() {
         // TODO: update the code to test the property refs
-        expect(instance).to.have.property('refs');
+        // expect(instance).to.have.property('refs');
         // expect(instance.refs).to.be(expectedValueLiteral);
       });
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sms** | **Number** | Sms quota of the sub-account | [optional] 
+**sms** | **Number** | SMS credits remaining on the sub-account | [optional] 
 **emails** | [**SubAccountDetailsResponsePlanInfoCreditsEmails**](SubAccountDetailsResponsePlanInfoCreditsEmails.md) |  | [optional] 
 
 

@@ -34,17 +34,17 @@
   /**
    * The SubAccountsResponseSubAccounts model module.
    * @module model/SubAccountsResponseSubAccounts
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
    * Constructs a new <code>SubAccountsResponseSubAccounts</code>.
    * @alias module:model/SubAccountsResponseSubAccounts
    * @class
-   * @param id {Number} client id of sub-account organization
-   * @param companyName {String} Name of sub-account organization
-   * @param active {Boolean} Whether organization is active or not
-   * @param createdAt {Number} timestamp when the organization was created
+   * @param id {Number} id of the sub-account
+   * @param companyName {String} Name of the sub-account company
+   * @param active {Boolean} Whether the sub-account is active or not
+   * @param createdAt {Number} Timestamp when the sub-account was created
    */
   var exports = function(id, companyName, active, createdAt) {
     this.id = id;
@@ -76,25 +76,25 @@
   }
 
   /**
-   * client id of sub-account organization
+   * id of the sub-account
    * @member {Number} id
    */
   exports.prototype.id = undefined;
 
   /**
-   * Name of sub-account organization
+   * Name of the sub-account company
    * @member {String} companyName
    */
   exports.prototype.companyName = undefined;
 
   /**
-   * Whether organization is active or not
+   * Whether the sub-account is active or not
    * @member {Boolean} active
    */
   exports.prototype.active = undefined;
 
   /**
-   * timestamp when the organization was created
+   * Timestamp when the sub-account was created
    * @member {Number} createdAt
    */
   exports.prototype.createdAt = undefined;

@@ -32,62 +32,62 @@
 
   describe('(package)', function() {
     describe('Contact', function() {
-      beforeEach(function() {
-        instance = new SibApiV3Sdk.Contact();
-      });
+      // beforeEach(function() {
+      //   instance = new SibApiV3Sdk.Contact();
+      // });
 
-      it('should create an instance of Contact', function() {
-        // TODO: update the code to test Contact
-        expect(instance).to.be.a(SibApiV3Sdk.Contact);
-      });
+      // it('should create an instance of Contact', function() {
+      //   // TODO: update the code to test Contact
+      //   expect(instance).to.be.a(SibApiV3Sdk.Contact);
+      // });
 
-      it('should have the property virtualNextTask (base name: "virtualNextTask")', function() {
-        // TODO: update the code to test the property virtualNextTask
-        expect(instance).to.have.property('virtualNextTask');
-        // expect(instance.virtualNextTask).to.be(expectedValueLiteral);
-      });
+      // it('should have the property virtualNextTask (base name: "virtualNextTask")', function() {
+      //   // TODO: update the code to test the property virtualNextTask
+      //   expect(instance).to.have.property('virtualNextTask');
+      //   // expect(instance.virtualNextTask).to.be(expectedValueLiteral);
+      // });
 
-      it('should have the property email (base name: "email")', function() {
-        // TODO: update the code to test the property email
-        expect(instance).to.have.property('email');
-        // expect(instance.email).to.be(expectedValueLiteral);
-      });
+      // it('should have the property email (base name: "email")', function() {
+      //   // TODO: update the code to test the property email
+      //   expect(instance).to.have.property('email');
+      //   // expect(instance.email).to.be(expectedValueLiteral);
+      // });
 
-      it('should have the property assignToId (base name: "assignToId")', function() {
-        // TODO: update the code to test the property assignToId
-        expect(instance).to.have.property('assignToId');
-        // expect(instance.assignToId).to.be(expectedValueLiteral);
-      });
+      // it('should have the property assignToId (base name: "assignToId")', function() {
+      //   // TODO: update the code to test the property assignToId
+      //   expect(instance).to.have.property('assignToId');
+      //   // expect(instance.assignToId).to.be(expectedValueLiteral);
+      // });
 
-      it('should have the property contactsId (base name: "contactsId")', function() {
-        // TODO: update the code to test the property contactsId
-        expect(instance).to.have.property('contactsId');
-        // expect(instance.contactsId).to.be(expectedValueLiteral);
-      });
+      // it('should have the property contactsId (base name: "contactsId")', function() {
+      //   // TODO: update the code to test the property contactsId
+      //   expect(instance).to.have.property('contactsId');
+      //   // expect(instance.contactsId).to.be(expectedValueLiteral);
+      // });
 
-      it('should have the property crmLists (base name: "crmLists")', function() {
-        // TODO: update the code to test the property crmLists
-        expect(instance).to.have.property('crmLists');
-        // expect(instance.crmLists).to.be(expectedValueLiteral);
-      });
+      // it('should have the property crmLists (base name: "crmLists")', function() {
+      //   // TODO: update the code to test the property crmLists
+      //   expect(instance).to.have.property('crmLists');
+      //   // expect(instance.crmLists).to.be(expectedValueLiteral);
+      // });
 
-      it('should have the property attributes (base name: "attributes")', function() {
-        // TODO: update the code to test the property attributes
-        expect(instance).to.have.property('attributes');
-        // expect(instance.attributes).to.be(expectedValueLiteral);
-      });
+      // it('should have the property attributes (base name: "attributes")', function() {
+      //   // TODO: update the code to test the property attributes
+      //   expect(instance).to.have.property('attributes');
+      //   // expect(instance.attributes).to.be(expectedValueLiteral);
+      // });
 
-      it('should have the property createdAt (base name: "createdAt")', function() {
-        // TODO: update the code to test the property createdAt
-        expect(instance).to.have.property('createdAt');
-        // expect(instance.createdAt).to.be(expectedValueLiteral);
-      });
+      // it('should have the property createdAt (base name: "createdAt")', function() {
+      //   // TODO: update the code to test the property createdAt
+      //   expect(instance).to.have.property('createdAt');
+      //   // expect(instance.createdAt).to.be(expectedValueLiteral);
+      // });
 
-      it('should have the property updatedAt (base name: "updatedAt")', function() {
-        // TODO: update the code to test the property updatedAt
-        expect(instance).to.have.property('updatedAt');
-        // expect(instance.updatedAt).to.be(expectedValueLiteral);
-      });
+      // it('should have the property updatedAt (base name: "updatedAt")', function() {
+      //   // TODO: update the code to test the property updatedAt
+      //   expect(instance).to.have.property('updatedAt');
+      //   // expect(instance.updatedAt).to.be(expectedValueLiteral);
+      // });
 
     });
   });
