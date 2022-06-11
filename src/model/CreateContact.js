@@ -34,7 +34,7 @@
   /**
    * The CreateContact model module.
    * @module model/CreateContact
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -80,7 +80,7 @@
   exports.prototype.email = undefined;
 
   /**
-   * Pass the set of attributes and their values. These attributes must be present in your SendinBlue account. For eg. {\"FNAME\":\"Elly\", \"LNAME\":\"Roger\"}
+   * Pass the set of attributes and their values. The attribute's parameter should be passed in capital letter while creating a contact. These attributes must be present in your SendinBlue account. For eg. {\"FNAME\":\"Elly\", \"LNAME\":\"Roger\"}
    * @member {Object} attributes
    */
   exports.prototype.attributes = undefined;

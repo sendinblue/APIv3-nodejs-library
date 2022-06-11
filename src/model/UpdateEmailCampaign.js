@@ -34,7 +34,7 @@
   /**
    * The UpdateEmailCampaign model module.
    * @module model/UpdateEmailCampaign
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -133,7 +133,7 @@
   exports.prototype.name = undefined;
 
   /**
-   * Body of the message (HTML version). REQUIRED if htmlUrl is empty
+   * Body of the message (HTML version). If the campaign is designed using Drag & Drop editor via HTML content, then the design page will not have Drag & Drop editor access for that campaign. REQUIRED if htmlUrl is empty
    * @member {String} htmlContent
    */
   exports.prototype.htmlContent = undefined;

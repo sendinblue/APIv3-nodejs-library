@@ -34,7 +34,7 @@
   /**
    * The GetStatsByDomain model module.
    * @module model/GetStatsByDomain
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**

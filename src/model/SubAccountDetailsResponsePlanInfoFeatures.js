@@ -34,12 +34,12 @@
   /**
    * The SubAccountDetailsResponsePlanInfoFeatures model module.
    * @module model/SubAccountDetailsResponsePlanInfoFeatures
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
    * Constructs a new <code>SubAccountDetailsResponsePlanInfoFeatures</code>.
-   * Sub-account features and addons quota details
+   * Features available on the sub-account
    * @alias module:model/SubAccountDetailsResponsePlanInfoFeatures
    * @class
    */

@@ -34,7 +34,7 @@
   /**
    * The SendSmtpEmail model module.
    * @module model/SendSmtpEmail
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -83,6 +83,10 @@
         obj.messageVersions = ApiClient.convertToType(data['messageVersions'], [SendSmtpEmailMessageVersions]);
       if (data.hasOwnProperty('tags'))
         obj.tags = ApiClient.convertToType(data['tags'], ['String']);
+      if (data.hasOwnProperty('scheduledAt'))
+        obj.scheduledAt = ApiClient.convertToType(data['scheduledAt'], 'Date');
+      if (data.hasOwnProperty('batchId'))
+        obj.batchId = ApiClient.convertToType(data['batchId'], 'String');
     }
     return obj;
   }
@@ -168,6 +172,18 @@
    * @member {Array.<String>} tags
    */
   exports.prototype.tags = undefined;
+
+  /**
+   * UTC date-time on which the email has to schedule (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for scheduling. There can be an expected delay of +5 minutes in scheduled email delivery. **Please note this feature is currently a public beta**.
+   * @member {Date} scheduledAt
+   */
+  exports.prototype.scheduledAt = undefined;
+
+  /**
+   * Valid UUIDv4 batch id to identify the scheduled batches transactional email. If not passed we will create a valid UUIDv4 batch id at our end.
+   * @member {String} batchId
+   */
+  exports.prototype.batchId = undefined;
 
 
   return exports;

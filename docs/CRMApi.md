@@ -4,14 +4,12 @@ All URIs are relative to *https://api.sendinblue.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**crmFilesIdDataGet**](CRMApi.md#crmFilesIdDataGet) | **GET** /crm/files/{id}/data | Get file details
-[**crmFilesIdDelete**](CRMApi.md#crmFilesIdDelete) | **DELETE** /crm/files/{id} | Delete a file
-[**crmFilesIdGet**](CRMApi.md#crmFilesIdGet) | **GET** /crm/files/{id} | Download a file
-[**crmFilesPost**](CRMApi.md#crmFilesPost) | **POST** /crm/files | Upload a file
+[**crmNotesGet**](CRMApi.md#crmNotesGet) | **GET** /crm/notes | Get all notes
 [**crmNotesIdDelete**](CRMApi.md#crmNotesIdDelete) | **DELETE** /crm/notes/{id} | Delete a note
 [**crmNotesIdGet**](CRMApi.md#crmNotesIdGet) | **GET** /crm/notes/{id} | Get a note
 [**crmNotesIdPatch**](CRMApi.md#crmNotesIdPatch) | **PATCH** /crm/notes/{id} | Update a note
 [**crmNotesPost**](CRMApi.md#crmNotesPost) | **POST** /crm/notes | Create a note
+[**crmTasksGet**](CRMApi.md#crmTasksGet) | **GET** /crm/tasks | Get all tasks
 [**crmTasksIdDelete**](CRMApi.md#crmTasksIdDelete) | **DELETE** /crm/tasks/{id} | Delete a task
 [**crmTasksIdGet**](CRMApi.md#crmTasksIdGet) | **GET** /crm/tasks/{id} | Get a task
 [**crmTasksIdPatch**](CRMApi.md#crmTasksIdPatch) | **PATCH** /crm/tasks/{id} | Update a task
@@ -19,65 +17,11 @@ Method | HTTP request | Description
 [**crmTasktypesGet**](CRMApi.md#crmTasktypesGet) | **GET** /crm/tasktypes | Get all task types
 
 
-<a name="crmFilesIdDataGet"></a>
-# **crmFilesIdDataGet**
-> FileData crmFilesIdDataGet(id)
+<a name="crmNotesGet"></a>
+# **crmNotesGet**
+> NoteList crmNotesGet(opts)
 
-Get file details
-
-### Example
-```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
-
-// Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
-
-// Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new SibApiV3Sdk.CRMApi();
-
-var id = "id_example"; // String | File id to get file data.
-
-apiInstance.crmFilesIdDataGet(id).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| File id to get file data. | 
-
-### Return type
-
-[**FileData**](FileData.md)
-
-### Authorization
-
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="crmFilesIdDelete"></a>
-# **crmFilesIdDelete**
-> crmFilesIdDelete(id)
-
-Delete a file
+Get all notes
 
 ### Example
 ```javascript
@@ -85,133 +29,29 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.CRMApi();
-
-var id = "id_example"; // String | File id to delete.
-
-apiInstance.crmFilesIdDelete(id).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| File id to delete. | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="crmFilesIdGet"></a>
-# **crmFilesIdGet**
-> crmFilesIdGet(id)
-
-Download a file
-
-### Example
-```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
-
-// Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
-
-// Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new SibApiV3Sdk.CRMApi();
-
-var id = "id_example"; // String | File id to download.
-
-apiInstance.crmFilesIdGet(id).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| File id to download. | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="crmFilesPost"></a>
-# **crmFilesPost**
-> FileData crmFilesPost(file, opts)
-
-Upload a file
-
-### Example
-```javascript
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
-
-// Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
-
-// Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new SibApiV3Sdk.CRMApi();
-
-var file = "/path/to/file.txt"; // File | File data to create a file.
 
 var opts = { 
-  'dealsIds': ["dealsIds_example"] // [String] | Deal ids linked to a file
+  'entity': "entity_example", // String | Filter by note entity type
+  'entityIds': "entityIds_example", // String | Filter by note entity IDs
+  'dateFrom': 56, // Number | dateFrom to date range filter type (timestamp in milliseconds)
+  'dateTo': 56, // Number | dateTo to date range filter type (timestamp in milliseconds)
+  'offset': 789, // Number | Index of the first document of the page
+  'limit': 50, // Number | Number of documents per page
+  'sort': "sort_example" // String | Sort the results in the ascending/descending order. Default order is **descending** by creation if `sort` is not passed
 };
-apiInstance.crmFilesPost(file, opts).then(function(data) {
+apiInstance.crmNotesGet(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -223,12 +63,17 @@ apiInstance.crmFilesPost(file, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **File**| File data to create a file. | 
- **dealsIds** | [**[String]**](String.md)| Deal ids linked to a file | [optional] 
+ **entity** | **String**| Filter by note entity type | [optional] 
+ **entityIds** | **String**| Filter by note entity IDs | [optional] 
+ **dateFrom** | **Number**| dateFrom to date range filter type (timestamp in milliseconds) | [optional] 
+ **dateTo** | **Number**| dateTo to date range filter type (timestamp in milliseconds) | [optional] 
+ **offset** | **Number**| Index of the first document of the page | [optional] 
+ **limit** | **Number**| Number of documents per page | [optional] [default to 50]
+ **sort** | **String**| Sort the results in the ascending/descending order. Default order is **descending** by creation if `sort` is not passed | [optional] 
 
 ### Return type
 
-[**FileData**](FileData.md)
+[**NoteList**](NoteList.md)
 
 ### Authorization
 
@@ -236,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="crmNotesIdDelete"></a>
@@ -251,16 +96,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.CRMApi();
 
@@ -305,16 +150,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.CRMApi();
 
@@ -349,7 +194,7 @@ Name | Type | Description  | Notes
 
 <a name="crmNotesIdPatch"></a>
 # **crmNotesIdPatch**
-> Note crmNotesIdPatch(id, body)
+> crmNotesIdPatch(id, body)
 
 Update a note
 
@@ -359,16 +204,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.CRMApi();
 
@@ -376,8 +221,8 @@ var id = "id_example"; // String | Note ID to update
 
 var body = new SibApiV3Sdk.NoteData(); // NoteData | Note data to update a note
 
-apiInstance.crmNotesIdPatch(id, body).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
+apiInstance.crmNotesIdPatch(id, body).then(function() {
+  console.log('API called successfully.');
 }, function(error) {
   console.error(error);
 });
@@ -393,7 +238,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Note**](Note.md)
+null (empty response body)
 
 ### Authorization
 
@@ -406,7 +251,7 @@ Name | Type | Description  | Notes
 
 <a name="crmNotesPost"></a>
 # **crmNotesPost**
-> Note crmNotesPost(body)
+> NoteId crmNotesPost(body)
 
 Create a note
 
@@ -416,16 +261,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.CRMApi();
 
@@ -447,7 +292,86 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Note**](Note.md)
+[**NoteId**](NoteId.md)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="crmTasksGet"></a>
+# **crmTasksGet**
+> TaskList crmTasksGet(opts)
+
+Get all tasks
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api-key.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partner-key.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.CRMApi();
+
+var opts = { 
+  'filterType': "filterType_example", // String | Filter by task type (ID)
+  'filterStatus': "filterStatus_example", // String | Filter by task status
+  'filterDate': "filterDate_example", // String | Filter by date
+  'filterAssignTo': "filterAssignTo_example", // String | Filter by assignTo id
+  'filterContacts': "filterContacts_example", // String | Filter by contact ids
+  'filterDeals': "filterDeals_example", // String | Filter by deals ids
+  'filterCompanies': "filterCompanies_example", // String | Filter by companies ids
+  'dateFrom': 56, // Number | dateFrom to date range filter type (timestamp in milliseconds)
+  'dateTo': 56, // Number | dateTo to date range filter type (timestamp in milliseconds)
+  'offset': 789, // Number | Index of the first document of the page
+  'limit': 50, // Number | Number of documents per page
+  'sort': "sort_example", // String | Sort the results in the ascending/descending order. Default order is **descending** by creation if `sort` is not passed
+  'sortBy': "sortBy_example" // String | The field used to sort field names.
+};
+apiInstance.crmTasksGet(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filterType** | **String**| Filter by task type (ID) | [optional] 
+ **filterStatus** | **String**| Filter by task status | [optional] 
+ **filterDate** | **String**| Filter by date | [optional] 
+ **filterAssignTo** | **String**| Filter by assignTo id | [optional] 
+ **filterContacts** | **String**| Filter by contact ids | [optional] 
+ **filterDeals** | **String**| Filter by deals ids | [optional] 
+ **filterCompanies** | **String**| Filter by companies ids | [optional] 
+ **dateFrom** | **Number**| dateFrom to date range filter type (timestamp in milliseconds) | [optional] 
+ **dateTo** | **Number**| dateTo to date range filter type (timestamp in milliseconds) | [optional] 
+ **offset** | **Number**| Index of the first document of the page | [optional] 
+ **limit** | **Number**| Number of documents per page | [optional] [default to 50]
+ **sort** | **String**| Sort the results in the ascending/descending order. Default order is **descending** by creation if `sort` is not passed | [optional] 
+ **sortBy** | **String**| The field used to sort field names. | [optional] 
+
+### Return type
+
+[**TaskList**](TaskList.md)
 
 ### Authorization
 
@@ -470,16 +394,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.CRMApi();
 
@@ -524,16 +448,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.CRMApi();
 
@@ -568,7 +492,7 @@ Name | Type | Description  | Notes
 
 <a name="crmTasksIdPatch"></a>
 # **crmTasksIdPatch**
-> Task crmTasksIdPatch(id, body)
+> crmTasksIdPatch(id, body)
 
 Update a task
 
@@ -578,25 +502,25 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.CRMApi();
 
 var id = "id_example"; // String | 
 
-var body = new SibApiV3Sdk.Body1(); // Body1 | Updated task details.
+var body = new SibApiV3Sdk.Body6(); // Body6 | Updated task details.
 
-apiInstance.crmTasksIdPatch(id, body).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
+apiInstance.crmTasksIdPatch(id, body).then(function() {
+  console.log('API called successfully.');
 }, function(error) {
   console.error(error);
 });
@@ -608,11 +532,11 @@ apiInstance.crmTasksIdPatch(id, body).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **body** | [**Body1**](Body1.md)| Updated task details. | 
+ **body** | [**Body6**](Body6.md)| Updated task details. | 
 
 ### Return type
 
-[**Task**](Task.md)
+null (empty response body)
 
 ### Authorization
 
@@ -625,7 +549,7 @@ Name | Type | Description  | Notes
 
 <a name="crmTasksPost"></a>
 # **crmTasksPost**
-> Task crmTasksPost(body)
+> InlineResponse2011 crmTasksPost(body)
 
 Create a task
 
@@ -635,20 +559,20 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.CRMApi();
 
-var body = new SibApiV3Sdk.Body(); // Body | Task name.
+var body = new SibApiV3Sdk.Body5(); // Body5 | Task name.
 
 apiInstance.crmTasksPost(body).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -662,11 +586,11 @@ apiInstance.crmTasksPost(body).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body**](Body.md)| Task name. | 
+ **body** | [**Body5**](Body5.md)| Task name. | 
 
 ### Return type
 
-[**Task**](Task.md)
+[**InlineResponse2011**](InlineResponse2011.md)
 
 ### Authorization
 
@@ -689,16 +613,16 @@ var SibApiV3Sdk = require('sib-api-v3-sdk');
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'YOUR API KEY';
+var api-key = defaultClient.authentications['api-key'];
+api-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
+//api-key.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.CRMApi();
 apiInstance.crmTasktypesGet().then(function(data) {

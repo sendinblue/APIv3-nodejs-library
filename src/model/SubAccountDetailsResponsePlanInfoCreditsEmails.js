@@ -34,12 +34,12 @@
   /**
    * The SubAccountDetailsResponsePlanInfoCreditsEmails model module.
    * @module model/SubAccountDetailsResponsePlanInfoCreditsEmails
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
    * Constructs a new <code>SubAccountDetailsResponsePlanInfoCreditsEmails</code>.
-   * Email quota details of the sub-account
+   * Email credits remaining on the sub-account
    * @alias module:model/SubAccountDetailsResponsePlanInfoCreditsEmails
    * @class
    */

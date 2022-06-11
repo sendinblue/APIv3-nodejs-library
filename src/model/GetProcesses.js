@@ -34,7 +34,7 @@
   /**
    * The GetProcesses model module.
    * @module model/GetProcesses
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**

@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **Number** | Value of time unit before reminder is to be sent | 
-**unit** | **String** | Unit of time before reminder is to be sent | 
-**types** | **[String]** | Type of task reminder | 
+**value** | **Number** | Value of time unit before reminder is to be sent | [optional] 
+**unit** | **String** | Unit of time before reminder is to be sent | [optional] 
+**types** | **[String]** | Type of task reminder e.g email, push | [optional] 
 
 
 <a name="UnitEnum"></a>
