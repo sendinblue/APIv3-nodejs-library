@@ -13,6 +13,7 @@
  * Do not edit the class manually.
  *
  */
+const pkgJson = require('../package.json');
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
@@ -60,11 +61,13 @@
       'partner-key': {type: 'apiKey', 'in': 'header', name: 'partner-key'}
     };
     /**
-     * The default HTTP headers to be included for all API calls.
-     * @type {Array.<String>}
-     * @default {}
-     */
-    this.defaultHeaders = {};
+    * The default HTTP headers to be included for all API calls.
+    * @type {Array.<String>}
+    * @default {}
+    */
+    this.defaultHeaders = {
+      'user-agent': `sendinblue_clientAPI/v${pkgJson.version}/node`
+    };
 
     /**
      * The default HTTP timeout for all API calls.
@@ -579,6 +582,17 @@
           obj[k] = exports.convertToType(data[k], itemType);
       }
     }
+  };
+
+  /**
+   * Sets the user-agent
+   * @param header (String)
+   */
+  exports.setUserAgent = function(header) {
+    if (typeof header == 'string' && header.substr(0, 11).trim().toLowerCase() === 'sendinblue_') {
+      exports.instance.defaultHeaders['user-agent'] = header;
+    }
+    return;
   };
 
   /**
