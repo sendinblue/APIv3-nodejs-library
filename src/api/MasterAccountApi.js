@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CreateModel', 'model/CreateSubAccount', 'model/ErrorModel', 'model/GetSsoToken', 'model/MasterDetailsResponse', 'model/SsoTokenRequest', 'model/SubAccountDetailsResponse', 'model/SubAccountUpdatePlanRequest', 'model/SubAccountsResponse'], factory);
+    define(['ApiClient', 'model/CreateSubAccount', 'model/CreateSubAccountResponse', 'model/ErrorModel', 'model/GetSsoToken', 'model/MasterDetailsResponse', 'model/SsoTokenRequest', 'model/SubAccountDetailsResponse', 'model/SubAccountUpdatePlanRequest', 'model/SubAccountsResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CreateModel'), require('../model/CreateSubAccount'), require('../model/ErrorModel'), require('../model/GetSsoToken'), require('../model/MasterDetailsResponse'), require('../model/SsoTokenRequest'), require('../model/SubAccountDetailsResponse'), require('../model/SubAccountUpdatePlanRequest'), require('../model/SubAccountsResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CreateSubAccount'), require('../model/CreateSubAccountResponse'), require('../model/ErrorModel'), require('../model/GetSsoToken'), require('../model/MasterDetailsResponse'), require('../model/SsoTokenRequest'), require('../model/SubAccountDetailsResponse'), require('../model/SubAccountUpdatePlanRequest'), require('../model/SubAccountsResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.MasterAccountApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSubAccount, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetSsoToken, root.SibApiV3Sdk.MasterDetailsResponse, root.SibApiV3Sdk.SsoTokenRequest, root.SibApiV3Sdk.SubAccountDetailsResponse, root.SibApiV3Sdk.SubAccountUpdatePlanRequest, root.SibApiV3Sdk.SubAccountsResponse);
+    root.SibApiV3Sdk.MasterAccountApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.CreateSubAccount, root.SibApiV3Sdk.CreateSubAccountResponse, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetSsoToken, root.SibApiV3Sdk.MasterDetailsResponse, root.SibApiV3Sdk.SsoTokenRequest, root.SibApiV3Sdk.SubAccountDetailsResponse, root.SibApiV3Sdk.SubAccountUpdatePlanRequest, root.SibApiV3Sdk.SubAccountsResponse);
   }
-}(this, function(ApiClient, CreateModel, CreateSubAccount, ErrorModel, GetSsoToken, MasterDetailsResponse, SsoTokenRequest, SubAccountDetailsResponse, SubAccountUpdatePlanRequest, SubAccountsResponse) {
+}(this, function(ApiClient, CreateSubAccount, CreateSubAccountResponse, ErrorModel, GetSsoToken, MasterDetailsResponse, SsoTokenRequest, SubAccountDetailsResponse, SubAccountUpdatePlanRequest, SubAccountsResponse) {
   'use strict';
 
   /**
    * MasterAccount service.
    * @module api/MasterAccountApi
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -97,7 +97,7 @@
     /**
      * Get the list of all the sub-accounts of the master account.
      * This endpoint will provide the list all the sub-accounts of the master account.
-     * @param {Number} offset Page number of sub-accounts listing
+     * @param {Number} offset Index of the first sub-account in the page
      * @param {Number} limit Number of sub-accounts to be displayed on each page
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubAccountsResponse} and HTTP response
      */
@@ -143,7 +143,7 @@
     /**
      * Get the list of all the sub-accounts of the master account.
      * This endpoint will provide the list all the sub-accounts of the master account.
-     * @param {Number} offset Page number of sub-accounts listing
+     * @param {Number} offset Index of the first sub-account in the page
      * @param {Number} limit Number of sub-accounts to be displayed on each page
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubAccountsResponse}
      */
@@ -208,7 +208,7 @@
 
     /**
      * Get sub-account details
-     * This endpoint will provide the details of specified sub-account organization
+     * This endpoint will provide the details for the specified sub-account company
      * @param {Number} id Id of the sub-account organization
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubAccountDetailsResponse} and HTTP response
      */
@@ -247,7 +247,7 @@
 
     /**
      * Get sub-account details
-     * This endpoint will provide the details of specified sub-account organization
+     * This endpoint will provide the details for the specified sub-account company
      * @param {Number} id Id of the sub-account organization
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubAccountDetailsResponse}
      */
@@ -323,7 +323,7 @@
      * Create a new sub-account under a master account.
      * This endpoint will create a new sub-account under a master account
      * @param {module:model/CreateSubAccount} subAccountCreate values to create new sub-account
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateSubAccountResponse} and HTTP response
      */
     this.corporateSubAccountPostWithHttpInfo = function(subAccountCreate) {
       var postBody = subAccountCreate;
@@ -348,7 +348,7 @@
       var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = CreateModel;
+      var returnType = CreateSubAccountResponse;
 
       return this.apiClient.callApi(
         '/corporate/subAccount', 'POST',
@@ -361,7 +361,7 @@
      * Create a new sub-account under a master account.
      * This endpoint will create a new sub-account under a master account
      * @param {module:model/CreateSubAccount} subAccountCreate values to create new sub-account
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateSubAccountResponse}
      */
     this.corporateSubAccountPost = function(subAccountCreate) {
       return this.corporateSubAccountPostWithHttpInfo(subAccountCreate)
@@ -373,7 +373,7 @@
 
     /**
      * Generate SSO token to access Sendinblue
-     * This endpoint generates an sso token to authenticate and access a sub-account of the master using the account endpoint https://app.sendinblue.com/account/login/sub-account/sso/[token], where [token] will be replaced with actual token.
+     * This endpoint generates an sso token to authenticate and access a sub-account of the master using the account endpoint https://app.sendinblue.com/account/login/sub-account/sso/[token], where [token] will be replaced by the actual token.
      * @param {module:model/SsoTokenRequest} ssoTokenRequest Values to generate SSO token for sub-account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSsoToken} and HTTP response
      */
@@ -411,7 +411,7 @@
 
     /**
      * Generate SSO token to access Sendinblue
-     * This endpoint generates an sso token to authenticate and access a sub-account of the master using the account endpoint https://app.sendinblue.com/account/login/sub-account/sso/[token], where [token] will be replaced with actual token.
+     * This endpoint generates an sso token to authenticate and access a sub-account of the master using the account endpoint https://app.sendinblue.com/account/login/sub-account/sso/[token], where [token] will be replaced by the actual token.
      * @param {module:model/SsoTokenRequest} ssoTokenRequest Values to generate SSO token for sub-account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSsoToken}
      */

@@ -34,12 +34,12 @@
   /**
    * The SubAccountDetailsResponsePlanInfoCredits model module.
    * @module model/SubAccountDetailsResponsePlanInfoCredits
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
    * Constructs a new <code>SubAccountDetailsResponsePlanInfoCredits</code>.
-   * Sub-account messaging quota details
+   * Credits quota and remaining credits on the sub-account
    * @alias module:model/SubAccountDetailsResponsePlanInfoCredits
    * @class
    */
@@ -65,7 +65,7 @@
   }
 
   /**
-   * Sms quota of the sub-account
+   * SMS credits remaining on the sub-account
    * @member {Number} sms
    */
   exports.prototype.sms = undefined;

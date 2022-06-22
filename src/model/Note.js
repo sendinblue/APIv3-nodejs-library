@@ -34,7 +34,7 @@
   /**
    * The Note model module.
    * @module model/Note
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -42,10 +42,8 @@
    * Note Details
    * @alias module:model/Note
    * @class
-   * @param text {String} Text content of a note
    */
-  var exports = function(text) {
-    this.text = text;
+  var exports = function() {
   };
 
   /**

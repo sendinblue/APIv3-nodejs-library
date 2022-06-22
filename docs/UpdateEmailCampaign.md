@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **tag** | **String** | Tag of the campaign | [optional] 
 **sender** | [**UpdateEmailCampaignSender**](UpdateEmailCampaignSender.md) |  | [optional] 
 **name** | **String** | Name of the campaign | [optional] 
-**htmlContent** | **String** | Body of the message (HTML version). REQUIRED if htmlUrl is empty | [optional] 
+**htmlContent** | **String** | Body of the message (HTML version). If the campaign is designed using Drag & Drop editor via HTML content, then the design page will not have Drag & Drop editor access for that campaign. REQUIRED if htmlUrl is empty | [optional] 
 **htmlUrl** | **String** | Url which contents the body of the email message. REQUIRED if htmlContent is empty | [optional] 
 **scheduledAt** | **String** | UTC date-time on which the campaign has to run (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result. If sendAtBestTime is set to true, your campaign will be sent according to the date passed (ignoring the time part). | [optional] 
 **subject** | **String** | Subject of the campaign | [optional] 

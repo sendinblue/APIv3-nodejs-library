@@ -34,7 +34,7 @@
   /**
    * The SubAccountDetailsResponsePlanInfoFeaturesLandingPage model module.
    * @module model/SubAccountDetailsResponsePlanInfoFeaturesLandingPage
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**

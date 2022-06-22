@@ -34,14 +34,14 @@
   /**
    * The CreateSubAccount model module.
    * @module model/CreateSubAccount
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
    * Constructs a new <code>CreateSubAccount</code>.
    * @alias module:model/CreateSubAccount
    * @class
-   * @param companyName {String} Name of the organization
+   * @param companyName {String} Set the name of the sub-account company
    * @param email {String} Email address for the organization
    */
   var exports = function(companyName, email) {
@@ -72,7 +72,7 @@
   }
 
   /**
-   * Name of the organization
+   * Set the name of the sub-account company
    * @member {String} companyName
    */
   exports.prototype.companyName = undefined;
@@ -84,13 +84,13 @@
   exports.prototype.email = undefined;
 
   /**
-   * Language for identifying localization information
+   * Set the language of the sub-account
    * @member {module:model/CreateSubAccount.LanguageEnum} language
    */
   exports.prototype.language = undefined;
 
   /**
-   * Request timezone of the client
+   * Set the timezone of the sub-account
    * @member {String} timezone
    */
   exports.prototype.timezone = undefined;

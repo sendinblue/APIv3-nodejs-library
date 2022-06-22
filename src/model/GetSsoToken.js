@@ -34,14 +34,14 @@
   /**
    * The GetSsoToken model module.
    * @module model/GetSsoToken
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
    * Constructs a new <code>GetSsoToken</code>.
    * @alias module:model/GetSsoToken
    * @class
-   * @param token {String} Session token. It will remain valid for a short period of time only.
+   * @param token {String} Session token, it will remain valid for 15 days.
    */
   var exports = function(token) {
     this.token = token;
@@ -64,7 +64,7 @@
   }
 
   /**
-   * Session token. It will remain valid for a short period of time only.
+   * Session token, it will remain valid for 15 days.
    * @member {String} token
    */
   exports.prototype.token = undefined;

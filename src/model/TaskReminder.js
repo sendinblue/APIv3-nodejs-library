@@ -34,7 +34,7 @@
   /**
    * The TaskReminder model module.
    * @module model/TaskReminder
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -42,14 +42,8 @@
    * Task reminder date/time for a task
    * @alias module:model/TaskReminder
    * @class
-   * @param value {Number} Value of time unit before reminder is to be sent
-   * @param unit {module:model/TaskReminder.UnitEnum} Unit of time before reminder is to be sent
-   * @param types {Array.<String>} Type of task reminder
    */
-  var exports = function(value, unit, types) {
-    this.value = value;
-    this.unit = unit;
-    this.types = types;
+  var exports = function() {
   };
 
   /**
@@ -85,7 +79,7 @@
   exports.prototype.unit = undefined;
 
   /**
-   * Type of task reminder
+   * Type of task reminder e.g email, push
    * @member {Array.<String>} types
    */
   exports.prototype.types = undefined;

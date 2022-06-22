@@ -34,7 +34,7 @@
   /**
    * The GetCampaignStats model module.
    * @module model/GetCampaignStats
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -97,6 +97,10 @@
         obj.uniqueViews = ApiClient.convertToType(data['uniqueViews'], 'Number');
       if (data.hasOwnProperty('trackableViews'))
         obj.trackableViews = ApiClient.convertToType(data['trackableViews'], 'Number');
+      if (data.hasOwnProperty('trackableViewsRate'))
+        obj.trackableViewsRate = ApiClient.convertToType(data['trackableViewsRate'], 'Number');
+      if (data.hasOwnProperty('estimatedViews'))
+        obj.estimatedViews = ApiClient.convertToType(data['estimatedViews'], 'Number');
       if (data.hasOwnProperty('unsubscriptions'))
         obj.unsubscriptions = ApiClient.convertToType(data['unsubscriptions'], 'Number');
       if (data.hasOwnProperty('viewed'))
@@ -168,6 +172,18 @@
    * @member {Number} trackableViews
    */
   exports.prototype.trackableViews = undefined;
+
+  /**
+   * Rate of recipients without any privacy protection option enabled in their email client
+   * @member {Number} trackableViewsRate
+   */
+  exports.prototype.trackableViewsRate = undefined;
+
+  /**
+   * Rate of recipients without any privacy protection option enabled in their email client, applied to all delivered emails
+   * @member {Number} estimatedViews
+   */
+  exports.prototype.estimatedViews = undefined;
 
   /**
    * Number of unsubscription for the campaign

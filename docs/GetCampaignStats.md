@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **hardBounces** | **Number** | Number of harbounce for the campaign | 
 **uniqueViews** | **Number** | Number of unique openings for the campaign | 
 **trackableViews** | **Number** | Recipients without any privacy protection option enabled in their email client | 
+**trackableViewsRate** | **Number** | Rate of recipients without any privacy protection option enabled in their email client | [optional] 
+**estimatedViews** | **Number** | Rate of recipients without any privacy protection option enabled in their email client, applied to all delivered emails | [optional] 
 **unsubscriptions** | **Number** | Number of unsubscription for the campaign | 
 **viewed** | **Number** | Number of openings for the campaign | 
 **deferred** | **Number** | Number of deferred emails for the campaign | [optional] 

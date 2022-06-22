@@ -34,7 +34,7 @@
   /**
    * The NoteData model module.
    * @module model/NoteData
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -42,10 +42,8 @@
    * Note data to be saved
    * @alias module:model/NoteData
    * @class
-   * @param text {String} Text content of a note
    */
-  var exports = function(text) {
-    this.text = text;
+  var exports = function() {
   };
 
   /**

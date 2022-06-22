@@ -34,7 +34,7 @@
   /**
    * The RemoveCredits model module.
    * @module model/RemoveCredits
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**

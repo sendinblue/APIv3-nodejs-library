@@ -34,7 +34,7 @@
   /**
    * The GetAccountRelay model module.
    * @module model/GetAccountRelay
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**

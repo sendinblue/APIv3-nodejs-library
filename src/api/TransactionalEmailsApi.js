@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BlockDomain', 'model/CreateModel', 'model/CreateSmtpEmail', 'model/CreateSmtpTemplate', 'model/DeleteHardbounces', 'model/ErrorModel', 'model/GetAggregatedReport', 'model/GetBlockedDomains', 'model/GetEmailEventReport', 'model/GetReports', 'model/GetSmtpTemplateOverview', 'model/GetSmtpTemplates', 'model/GetTransacBlockedContacts', 'model/GetTransacEmailContent', 'model/GetTransacEmailsList', 'model/PostSendFailed', 'model/SendSmtpEmail', 'model/SendTestEmail', 'model/UpdateSmtpTemplate'], factory);
+    define(['ApiClient', 'model/BlockDomain', 'model/CreateModel', 'model/CreateSmtpEmail', 'model/CreateSmtpTemplate', 'model/DeleteHardbounces', 'model/ErrorModel', 'model/GetAggregatedReport', 'model/GetBlockedDomains', 'model/GetEmailEventReport', 'model/GetReports', 'model/GetScheduledEmailByBatchId', 'model/GetScheduledEmailByMessageId', 'model/GetSmtpTemplateOverview', 'model/GetSmtpTemplates', 'model/GetTransacBlockedContacts', 'model/GetTransacEmailContent', 'model/GetTransacEmailsList', 'model/PostSendFailed', 'model/ScheduleSmtpEmail', 'model/SendSmtpEmail', 'model/SendTestEmail', 'model/UpdateSmtpTemplate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/BlockDomain'), require('../model/CreateModel'), require('../model/CreateSmtpEmail'), require('../model/CreateSmtpTemplate'), require('../model/DeleteHardbounces'), require('../model/ErrorModel'), require('../model/GetAggregatedReport'), require('../model/GetBlockedDomains'), require('../model/GetEmailEventReport'), require('../model/GetReports'), require('../model/GetSmtpTemplateOverview'), require('../model/GetSmtpTemplates'), require('../model/GetTransacBlockedContacts'), require('../model/GetTransacEmailContent'), require('../model/GetTransacEmailsList'), require('../model/PostSendFailed'), require('../model/SendSmtpEmail'), require('../model/SendTestEmail'), require('../model/UpdateSmtpTemplate'));
+    module.exports = factory(require('../ApiClient'), require('../model/BlockDomain'), require('../model/CreateModel'), require('../model/CreateSmtpEmail'), require('../model/CreateSmtpTemplate'), require('../model/DeleteHardbounces'), require('../model/ErrorModel'), require('../model/GetAggregatedReport'), require('../model/GetBlockedDomains'), require('../model/GetEmailEventReport'), require('../model/GetReports'), require('../model/GetScheduledEmailByBatchId'), require('../model/GetScheduledEmailByMessageId'), require('../model/GetSmtpTemplateOverview'), require('../model/GetSmtpTemplates'), require('../model/GetTransacBlockedContacts'), require('../model/GetTransacEmailContent'), require('../model/GetTransacEmailsList'), require('../model/PostSendFailed'), require('../model/ScheduleSmtpEmail'), require('../model/SendSmtpEmail'), require('../model/SendTestEmail'), require('../model/UpdateSmtpTemplate'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.TransactionalEmailsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.BlockDomain, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSmtpEmail, root.SibApiV3Sdk.CreateSmtpTemplate, root.SibApiV3Sdk.DeleteHardbounces, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAggregatedReport, root.SibApiV3Sdk.GetBlockedDomains, root.SibApiV3Sdk.GetEmailEventReport, root.SibApiV3Sdk.GetReports, root.SibApiV3Sdk.GetSmtpTemplateOverview, root.SibApiV3Sdk.GetSmtpTemplates, root.SibApiV3Sdk.GetTransacBlockedContacts, root.SibApiV3Sdk.GetTransacEmailContent, root.SibApiV3Sdk.GetTransacEmailsList, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendSmtpEmail, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateSmtpTemplate);
+    root.SibApiV3Sdk.TransactionalEmailsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.BlockDomain, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreateSmtpEmail, root.SibApiV3Sdk.CreateSmtpTemplate, root.SibApiV3Sdk.DeleteHardbounces, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetAggregatedReport, root.SibApiV3Sdk.GetBlockedDomains, root.SibApiV3Sdk.GetEmailEventReport, root.SibApiV3Sdk.GetReports, root.SibApiV3Sdk.GetScheduledEmailByBatchId, root.SibApiV3Sdk.GetScheduledEmailByMessageId, root.SibApiV3Sdk.GetSmtpTemplateOverview, root.SibApiV3Sdk.GetSmtpTemplates, root.SibApiV3Sdk.GetTransacBlockedContacts, root.SibApiV3Sdk.GetTransacEmailContent, root.SibApiV3Sdk.GetTransacEmailsList, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.ScheduleSmtpEmail, root.SibApiV3Sdk.SendSmtpEmail, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateSmtpTemplate);
   }
-}(this, function(ApiClient, BlockDomain, CreateModel, CreateSmtpEmail, CreateSmtpTemplate, DeleteHardbounces, ErrorModel, GetAggregatedReport, GetBlockedDomains, GetEmailEventReport, GetReports, GetSmtpTemplateOverview, GetSmtpTemplates, GetTransacBlockedContacts, GetTransacEmailContent, GetTransacEmailsList, PostSendFailed, SendSmtpEmail, SendTestEmail, UpdateSmtpTemplate) {
+}(this, function(ApiClient, BlockDomain, CreateModel, CreateSmtpEmail, CreateSmtpTemplate, DeleteHardbounces, ErrorModel, GetAggregatedReport, GetBlockedDomains, GetEmailEventReport, GetReports, GetScheduledEmailByBatchId, GetScheduledEmailByMessageId, GetSmtpTemplateOverview, GetSmtpTemplates, GetTransacBlockedContacts, GetTransacEmailContent, GetTransacEmailsList, PostSendFailed, ScheduleSmtpEmail, SendSmtpEmail, SendTestEmail, UpdateSmtpTemplate) {
   'use strict';
 
   /**
    * TransactionalEmails service.
    * @module api/TransactionalEmailsApi
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -248,6 +248,59 @@
      */
     this.deleteHardbounces = function(opts) {
       return this.deleteHardbouncesWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Delete scheduled emails by batchId or messageId
+     * Delete scheduled batch of emails by batchId or single scheduled email by messageId
+     * @param {String} identifier The `batchId` of scheduled emails batch (Should be a valid UUIDv4) or the `messageId` of scheduled email.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.deleteScheduledEmailByIdWithHttpInfo = function(identifier) {
+      var postBody = null;
+
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling deleteScheduledEmailById");
+      }
+
+
+      var pathParams = {
+        'identifier': identifier
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/smtp/email/{identifier}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Delete scheduled emails by batchId or messageId
+     * Delete scheduled batch of emails by batchId or single scheduled email by messageId
+     * @param {String} identifier The `batchId` of scheduled emails batch (Should be a valid UUIDv4) or the `messageId` of scheduled email.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.deleteScheduledEmailById = function(identifier) {
+      return this.deleteScheduledEmailByIdWithHttpInfo(identifier)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -485,6 +538,142 @@
      */
     this.getEmailEventReport = function(opts) {
       return this.getEmailEventReportWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Fetch scheduled emails by batchId
+     * Fetch scheduled batch of emails by batchId (Can retrieve data upto 30 days old)
+     * @param {String} batchId The batchId of scheduled emails batch (Should be a valid UUIDv4)
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Mandatory if `endDate` is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Can be maximum 30 days older tha current date.
+     * @param {Date} opts.endDate Mandatory if `startDate` is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed (default to desc)
+     * @param {module:model/String} opts.status Filter the records by `status` of the scheduled email batch or message.
+     * @param {Number} opts.limit Number of documents returned per page (default to 100)
+     * @param {Number} opts.offset Index of the first document on the page (default to 0)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetScheduledEmailByBatchId} and HTTP response
+     */
+    this.getScheduledEmailByBatchIdWithHttpInfo = function(batchId, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'batchId' is set
+      if (batchId === undefined || batchId === null) {
+        throw new Error("Missing the required parameter 'batchId' when calling getScheduledEmailByBatchId");
+      }
+
+
+      var pathParams = {
+        'batchId': batchId
+      };
+      var queryParams = {
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'sort': opts['sort'],
+        'status': opts['status'],
+        'limit': opts['limit'],
+        'offset': opts['offset'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = GetScheduledEmailByBatchId;
+
+      return this.apiClient.callApi(
+        '/smtp/emailStatus/{batchId}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Fetch scheduled emails by batchId
+     * Fetch scheduled batch of emails by batchId (Can retrieve data upto 30 days old)
+     * @param {String} batchId The batchId of scheduled emails batch (Should be a valid UUIDv4)
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Mandatory if `endDate` is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Can be maximum 30 days older tha current date.
+     * @param {Date} opts.endDate Mandatory if `startDate` is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
+     * @param {module:model/String} opts.sort Sort the results in the ascending/descending order of record creation. Default order is **descending** if `sort` is not passed (default to desc)
+     * @param {module:model/String} opts.status Filter the records by `status` of the scheduled email batch or message.
+     * @param {Number} opts.limit Number of documents returned per page (default to 100)
+     * @param {Number} opts.offset Index of the first document on the page (default to 0)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetScheduledEmailByBatchId}
+     */
+    this.getScheduledEmailByBatchId = function(batchId, opts) {
+      return this.getScheduledEmailByBatchIdWithHttpInfo(batchId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Fetch scheduled email by messageId
+     * Fetch scheduled email by messageId (Can retrieve data upto 30 days old)
+     * @param {String} messageId The messageId of scheduled email
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Can be maximum 30 days older tha current date.
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetScheduledEmailByMessageId} and HTTP response
+     */
+    this.getScheduledEmailByMessageIdWithHttpInfo = function(messageId, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'messageId' is set
+      if (messageId === undefined || messageId === null) {
+        throw new Error("Missing the required parameter 'messageId' when calling getScheduledEmailByMessageId");
+      }
+
+
+      var pathParams = {
+        'messageId': messageId
+      };
+      var queryParams = {
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = GetScheduledEmailByMessageId;
+
+      return this.apiClient.callApi(
+        '/smtp/emailStatus/{messageId}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Fetch scheduled email by messageId
+     * Fetch scheduled email by messageId (Can retrieve data upto 30 days old)
+     * @param {String} messageId The messageId of scheduled email
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Mandatory if endDate is used. Starting date (YYYY-MM-DD) from which you want to fetch the list. Can be maximum 30 days older tha current date.
+     * @param {Date} opts.endDate Mandatory if startDate is used. Ending date (YYYY-MM-DD) till which you want to fetch the list. Maximum time period that can be selected is one month.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetScheduledEmailByMessageId}
+     */
+    this.getScheduledEmailByMessageId = function(messageId, opts) {
+      return this.getScheduledEmailByMessageIdWithHttpInfo(messageId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

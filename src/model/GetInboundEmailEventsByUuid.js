@@ -34,7 +34,7 @@
   /**
    * The GetInboundEmailEventsByUuid model module.
    * @module model/GetInboundEmailEventsByUuid
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**

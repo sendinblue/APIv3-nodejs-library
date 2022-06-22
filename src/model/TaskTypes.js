@@ -34,7 +34,7 @@
   /**
    * The TaskTypes model module.
    * @module model/TaskTypes
-   * @version 8.3.0
+   * @version 8.4.0
    */
 
   /**
@@ -58,10 +58,10 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'String');
-      if (data.hasOwnProperty('icon'))
-        obj.icon = ApiClient.convertToType(data['icon'], 'String');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
+      if (data.hasOwnProperty('icon'))
+        obj.icon = ApiClient.convertToType(data['icon'], 'String');
     }
     return obj;
   }
@@ -73,16 +73,16 @@
   exports.prototype.id = undefined;
 
   /**
-   * Icon of task type
-   * @member {String} icon
-   */
-  exports.prototype.icon = undefined;
-
-  /**
    * Title of task type
    * @member {String} title
    */
   exports.prototype.title = undefined;
+
+  /**
+   * Title of task type
+   * @member {String} icon
+   */
+  exports.prototype.icon = undefined;
 
 
   return exports;
