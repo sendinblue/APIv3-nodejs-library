@@ -34,7 +34,7 @@
   /**
    * The Deal model module.
    * @module model/Deal
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

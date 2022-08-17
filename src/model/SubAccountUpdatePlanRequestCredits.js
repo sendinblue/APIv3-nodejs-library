@@ -34,7 +34,7 @@
   /**
    * The SubAccountUpdatePlanRequestCredits model module.
    * @module model/SubAccountUpdatePlanRequestCredits
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

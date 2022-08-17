@@ -34,7 +34,7 @@
   /**
    * The CreateContact model module.
    * @module model/CreateContact
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

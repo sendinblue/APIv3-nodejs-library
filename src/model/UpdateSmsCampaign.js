@@ -34,7 +34,7 @@
   /**
    * The UpdateSmsCampaign model module.
    * @module model/UpdateSmsCampaign
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

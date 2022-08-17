@@ -34,7 +34,7 @@
   /**
    * The RequestContactImport model module.
    * @module model/RequestContactImport
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

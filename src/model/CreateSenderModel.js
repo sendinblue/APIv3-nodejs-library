@@ -34,7 +34,7 @@
   /**
    * The CreateSenderModel model module.
    * @module model/CreateSenderModel
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

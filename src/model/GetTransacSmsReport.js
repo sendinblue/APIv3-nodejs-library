@@ -34,7 +34,7 @@
   /**
    * The GetTransacSmsReport model module.
    * @module model/GetTransacSmsReport
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

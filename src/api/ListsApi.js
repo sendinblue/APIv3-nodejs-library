@@ -34,7 +34,7 @@
   /**
    * Lists service.
    * @module api/ListsApi
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

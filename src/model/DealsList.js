@@ -34,7 +34,7 @@
   /**
    * The DealsList model module.
    * @module model/DealsList
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

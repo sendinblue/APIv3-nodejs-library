@@ -34,7 +34,7 @@
   /**
    * The TaskTypes model module.
    * @module model/TaskTypes
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

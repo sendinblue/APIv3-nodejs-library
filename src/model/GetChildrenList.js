@@ -34,7 +34,7 @@
   /**
    * The GetChildrenList model module.
    * @module model/GetChildrenList
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

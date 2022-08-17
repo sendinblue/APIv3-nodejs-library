@@ -34,7 +34,7 @@
   /**
    * The SubAccountDetailsResponsePlanInfoFeaturesInbox model module.
    * @module model/SubAccountDetailsResponsePlanInfoFeaturesInbox
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

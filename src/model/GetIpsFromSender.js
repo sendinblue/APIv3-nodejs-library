@@ -34,7 +34,7 @@
   /**
    * The GetIpsFromSender model module.
    * @module model/GetIpsFromSender
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

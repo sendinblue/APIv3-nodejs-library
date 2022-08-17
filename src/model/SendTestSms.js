@@ -34,7 +34,7 @@
   /**
    * The SendTestSms model module.
    * @module model/SendTestSms
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The GetList model module.
    * @module model/GetList
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

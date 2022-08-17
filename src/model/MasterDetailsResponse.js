@@ -34,7 +34,7 @@
   /**
    * The MasterDetailsResponse model module.
    * @module model/MasterDetailsResponse
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

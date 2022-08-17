@@ -34,7 +34,7 @@
   /**
    * The GetChildInfoStatistics model module.
    * @module model/GetChildInfoStatistics
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

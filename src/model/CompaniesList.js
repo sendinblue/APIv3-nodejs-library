@@ -34,7 +34,7 @@
   /**
    * The CompaniesList model module.
    * @module model/CompaniesList
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

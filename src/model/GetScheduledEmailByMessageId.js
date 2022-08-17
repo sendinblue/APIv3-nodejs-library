@@ -34,7 +34,7 @@
   /**
    * The GetScheduledEmailByMessageId model module.
    * @module model/GetScheduledEmailByMessageId
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The Company model module.
    * @module model/Company
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

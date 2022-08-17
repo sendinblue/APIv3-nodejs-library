@@ -34,7 +34,7 @@
   /**
    * The GetSsoToken model module.
    * @module model/GetSsoToken
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

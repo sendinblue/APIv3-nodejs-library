@@ -34,7 +34,7 @@
   /**
    * The GetFolderLists model module.
    * @module model/GetFolderLists
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

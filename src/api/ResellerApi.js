@@ -34,7 +34,7 @@
   /**
    * Reseller service.
    * @module api/ResellerApi
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

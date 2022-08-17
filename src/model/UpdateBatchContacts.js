@@ -34,7 +34,7 @@
   /**
    * The UpdateBatchContacts model module.
    * @module model/UpdateBatchContacts
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**

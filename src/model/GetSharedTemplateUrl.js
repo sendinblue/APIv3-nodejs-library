@@ -34,7 +34,7 @@
   /**
    * The GetSharedTemplateUrl model module.
    * @module model/GetSharedTemplateUrl
-   * @version 8.4.0
+   * @version 8.4.1
    */
 
   /**
