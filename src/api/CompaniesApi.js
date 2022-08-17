@@ -34,7 +34,7 @@
   /**
    * Companies service.
    * @module api/CompaniesApi
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

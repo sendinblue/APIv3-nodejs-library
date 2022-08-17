@@ -34,7 +34,7 @@
   /**
    * The DeleteHardbounces model module.
    * @module model/DeleteHardbounces
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

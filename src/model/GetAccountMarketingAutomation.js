@@ -34,7 +34,7 @@
   /**
    * The GetAccountMarketingAutomation model module.
    * @module model/GetAccountMarketingAutomation
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

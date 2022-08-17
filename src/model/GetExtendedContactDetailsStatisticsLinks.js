@@ -34,7 +34,7 @@
   /**
    * The GetExtendedContactDetailsStatisticsLinks model module.
    * @module model/GetExtendedContactDetailsStatisticsLinks
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

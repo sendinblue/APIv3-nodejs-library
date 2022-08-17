@@ -34,7 +34,7 @@
   /**
    * The Body5 model module.
    * @module model/Body5
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

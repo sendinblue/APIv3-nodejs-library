@@ -34,7 +34,7 @@
   /**
    * The SendTestEmail model module.
    * @module model/SendTestEmail
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

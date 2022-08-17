@@ -34,7 +34,7 @@
   /**
    * The SubAccountsResponse model module.
    * @module model/SubAccountsResponse
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

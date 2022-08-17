@@ -34,7 +34,7 @@
   /**
    * The AbTestCampaignResultStatistics model module.
    * @module model/AbTestCampaignResultStatistics
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

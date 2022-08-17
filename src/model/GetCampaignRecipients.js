@@ -34,7 +34,7 @@
   /**
    * The GetCampaignRecipients model module.
    * @module model/GetCampaignRecipients
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

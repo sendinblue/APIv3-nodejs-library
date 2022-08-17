@@ -34,7 +34,7 @@
   /**
    * The GetReportsReports model module.
    * @module model/GetReportsReports
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

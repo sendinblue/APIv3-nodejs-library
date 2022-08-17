@@ -34,7 +34,7 @@
   /**
    * The CreateAttribute model module.
    * @module model/CreateAttribute
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

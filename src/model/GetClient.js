@@ -34,7 +34,7 @@
   /**
    * The GetClient model module.
    * @module model/GetClient
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

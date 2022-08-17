@@ -34,7 +34,7 @@
   /**
    * The BlockDomain model module.
    * @module model/BlockDomain
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

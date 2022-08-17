@@ -34,7 +34,7 @@
   /**
    * The SubAccountUpdatePlanRequestFeatures model module.
    * @module model/SubAccountUpdatePlanRequestFeatures
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

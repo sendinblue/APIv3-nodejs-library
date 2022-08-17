@@ -34,7 +34,7 @@
   /**
    * The GetScheduledEmailByBatchId model module.
    * @module model/GetScheduledEmailByBatchId
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

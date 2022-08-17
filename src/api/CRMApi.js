@@ -34,7 +34,7 @@
   /**
    * CRM service.
    * @module api/CRMApi
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

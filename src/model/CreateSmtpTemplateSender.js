@@ -34,7 +34,7 @@
   /**
    * The CreateSmtpTemplateSender model module.
    * @module model/CreateSmtpTemplateSender
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

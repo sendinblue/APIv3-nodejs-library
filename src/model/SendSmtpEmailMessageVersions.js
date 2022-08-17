@@ -34,7 +34,7 @@
   /**
    * The SendSmtpEmailMessageVersions model module.
    * @module model/SendSmtpEmailMessageVersions
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

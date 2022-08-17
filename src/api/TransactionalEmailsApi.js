@@ -34,7 +34,7 @@
   /**
    * TransactionalEmails service.
    * @module api/TransactionalEmailsApi
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The AbTestVersionStats model module.
    * @module model/AbTestVersionStats
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The SendReport model module.
    * @module model/SendReport
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

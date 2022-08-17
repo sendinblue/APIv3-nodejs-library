@@ -34,7 +34,7 @@
   /**
    * The SendSmtpEmailTo1 model module.
    * @module model/SendSmtpEmailTo1
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

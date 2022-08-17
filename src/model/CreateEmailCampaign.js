@@ -34,7 +34,7 @@
   /**
    * The CreateEmailCampaign model module.
    * @module model/CreateEmailCampaign
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

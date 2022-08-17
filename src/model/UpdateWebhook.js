@@ -34,7 +34,7 @@
   /**
    * The UpdateWebhook model module.
    * @module model/UpdateWebhook
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

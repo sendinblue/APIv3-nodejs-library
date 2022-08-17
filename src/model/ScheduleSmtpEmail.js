@@ -34,7 +34,7 @@
   /**
    * The ScheduleSmtpEmail model module.
    * @module model/ScheduleSmtpEmail
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

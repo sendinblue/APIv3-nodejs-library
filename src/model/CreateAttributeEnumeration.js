@@ -34,7 +34,7 @@
   /**
    * The CreateAttributeEnumeration model module.
    * @module model/CreateAttributeEnumeration
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

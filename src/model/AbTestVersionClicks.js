@@ -34,7 +34,7 @@
   /**
    * The AbTestVersionClicks model module.
    * @module model/AbTestVersionClicks
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

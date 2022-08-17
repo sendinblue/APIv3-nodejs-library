@@ -34,7 +34,7 @@
   /**
    * The GetBlockedDomains model module.
    * @module model/GetBlockedDomains
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

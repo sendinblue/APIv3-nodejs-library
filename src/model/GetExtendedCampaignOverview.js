@@ -34,7 +34,7 @@
   /**
    * The GetExtendedCampaignOverview model module.
    * @module model/GetExtendedCampaignOverview
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The CompanyAttributes model module.
    * @module model/CompanyAttributes
-   * @version 8.4.1
+   * @version 8.4.2
    */
 
   /**
