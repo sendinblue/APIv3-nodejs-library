@@ -305,7 +305,7 @@
     this.getEmailCampaign = function(campaignId) {
       return this.getEmailCampaignWithHttpInfo(campaignId)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return JSON.parse(response_and_data.response.text);
         });
     }
 

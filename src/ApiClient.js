@@ -453,11 +453,11 @@ const pkgJson = require('../package.json');
       request.accept(accept);
     }
 
-    if (returnType === 'Blob') {
-      request.responseType('blob');
-    } else if (returnType === 'String') {
-      request.responseType('string');
-    }
+    // if (returnType === 'Blob') {
+    //   request.responseType('blob');
+    // } else if (returnType === 'String') {
+    //   request.responseType('string');
+    // }
 
     // Attach previously saved cookies, if enabled
     if (this.enableCookies){
