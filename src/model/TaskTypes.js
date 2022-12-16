@@ -34,7 +34,7 @@
   /**
    * The TaskTypes model module.
    * @module model/TaskTypes
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -60,8 +60,6 @@
         obj.id = ApiClient.convertToType(data['id'], 'String');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
-      if (data.hasOwnProperty('icon'))
-        obj.icon = ApiClient.convertToType(data['icon'], 'String');
     }
     return obj;
   }
@@ -77,12 +75,6 @@
    * @member {String} title
    */
   exports.prototype.title = undefined;
-
-  /**
-   * Title of task type
-   * @member {String} icon
-   */
-  exports.prototype.icon = undefined;
 
 
   return exports;

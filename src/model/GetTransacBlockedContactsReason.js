@@ -34,7 +34,7 @@
   /**
    * The GetTransacBlockedContactsReason model module.
    * @module model/GetTransacBlockedContactsReason
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

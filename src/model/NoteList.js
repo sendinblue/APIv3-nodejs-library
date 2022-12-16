@@ -34,7 +34,7 @@
   /**
    * The NoteList model module.
    * @module model/NoteList
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

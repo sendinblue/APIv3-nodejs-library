@@ -34,7 +34,7 @@
   /**
    * The CreateSenderIps model module.
    * @module model/CreateSenderIps
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

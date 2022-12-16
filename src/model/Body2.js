@@ -34,17 +34,15 @@
   /**
    * The Body2 model module.
    * @module model/Body2
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
    * Constructs a new <code>Body2</code>.
    * @alias module:model/Body2
    * @class
-   * @param name {String} Name of company
    */
-  var exports = function(name) {
-    this.name = name;
+  var exports = function() {
   };
 
   /**
@@ -57,25 +55,41 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('attributes'))
-        obj.attributes = ApiClient.convertToType(data['attributes'], Object);
+      if (data.hasOwnProperty('linkContactIds'))
+        obj.linkContactIds = ApiClient.convertToType(data['linkContactIds'], ['Number']);
+      if (data.hasOwnProperty('unlinkContactIds'))
+        obj.unlinkContactIds = ApiClient.convertToType(data['unlinkContactIds'], ['Number']);
+      if (data.hasOwnProperty('linkDealsIds'))
+        obj.linkDealsIds = ApiClient.convertToType(data['linkDealsIds'], ['String']);
+      if (data.hasOwnProperty('unlinkDealsIds'))
+        obj.unlinkDealsIds = ApiClient.convertToType(data['unlinkDealsIds'], ['String']);
     }
     return obj;
   }
 
   /**
-   * Name of company
-   * @member {String} name
+   * Contact ids for contacts to be linked with company
+   * @member {Array.<Number>} linkContactIds
    */
-  exports.prototype.name = undefined;
+  exports.prototype.linkContactIds = undefined;
 
   /**
-   * Attributes for company creation
-   * @member {Object} attributes
+   * Contact ids for contacts to be unlinked from company
+   * @member {Array.<Number>} unlinkContactIds
    */
-  exports.prototype.attributes = undefined;
+  exports.prototype.unlinkContactIds = undefined;
+
+  /**
+   * Deals ids for deals to be linked with company
+   * @member {Array.<String>} linkDealsIds
+   */
+  exports.prototype.linkDealsIds = undefined;
+
+  /**
+   * Deals ids for deals to be unlinked from company
+   * @member {Array.<String>} unlinkDealsIds
+   */
+  exports.prototype.unlinkDealsIds = undefined;
 
 
   return exports;

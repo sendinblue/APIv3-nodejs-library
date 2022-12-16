@@ -34,7 +34,7 @@
   /**
    * The CreateSmtpEmail model module.
    * @module model/CreateSmtpEmail
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

@@ -47,12 +47,6 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
-      it('should have the property icon (base name: "icon")', function() {
-        // TODO: update the code to test the property icon
-        expect(instance).to.have.property('icon');
-        // expect(instance.icon).to.be(expectedValueLiteral);
-      });
-
       it('should have the property title (base name: "title")', function() {
         // TODO: update the code to test the property title
         expect(instance).to.have.property('title');

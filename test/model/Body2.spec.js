@@ -41,16 +41,28 @@
         expect(instance).to.be.a(SibApiV3Sdk.Body2);
       });
 
-      it('should have the property name (base name: "name")', function() {
-        // TODO: update the code to test the property name
-        expect(instance).to.have.property('name');
-        // expect(instance.name).to.be(expectedValueLiteral);
+      it('should have the property linkContactIds (base name: "linkContactIds")', function() {
+        // TODO: update the code to test the property linkContactIds
+        expect(instance).to.have.property('linkContactIds');
+        // expect(instance.linkContactIds).to.be(expectedValueLiteral);
       });
 
-      it('should have the property attributes (base name: "attributes")', function() {
-        // TODO: update the code to test the property attributes
-        expect(instance).to.have.property('attributes');
-        // expect(instance.attributes).to.be(expectedValueLiteral);
+      it('should have the property unlinkContactIds (base name: "unlinkContactIds")', function() {
+        // TODO: update the code to test the property unlinkContactIds
+        expect(instance).to.have.property('unlinkContactIds');
+        // expect(instance.unlinkContactIds).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property linkDealsIds (base name: "linkDealsIds")', function() {
+        // TODO: update the code to test the property linkDealsIds
+        expect(instance).to.have.property('linkDealsIds');
+        // expect(instance.linkDealsIds).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property unlinkDealsIds (base name: "unlinkDealsIds")', function() {
+        // TODO: update the code to test the property unlinkDealsIds
+        expect(instance).to.have.property('unlinkDealsIds');
+        // expect(instance.unlinkDealsIds).to.be(expectedValueLiteral);
       });
 
     });

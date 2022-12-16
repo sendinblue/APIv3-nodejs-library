@@ -37,10 +37,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -91,10 +91,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -145,10 +145,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -205,10 +205,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -259,10 +259,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -313,10 +313,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -382,10 +382,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -436,10 +436,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -492,10 +492,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -549,10 +549,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -606,10 +606,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -663,10 +663,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
@@ -704,7 +704,7 @@ null (empty response body)
 
 <a name="uploadImageToGallery"></a>
 # **uploadImageToGallery**
-> uploadImageToGallery(uploadImage)
+> UploadImageModel uploadImageToGallery(uploadImage)
 
 Upload an image to your account's image gallery
 
@@ -720,17 +720,17 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
 
 var uploadImage = new SibApiV3Sdk.UploadImageToGallery(); // UploadImageToGallery | Parameters to upload an image
 
-apiInstance.uploadImageToGallery(uploadImage).then(function() {
-  console.log('API called successfully.');
+apiInstance.uploadImageToGallery(uploadImage).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
 });
@@ -745,7 +745,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**UploadImageModel**](UploadImageModel.md)
 
 ### Authorization
 

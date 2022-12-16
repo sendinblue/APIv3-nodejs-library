@@ -34,7 +34,7 @@
   /**
    * The NoteData model module.
    * @module model/NoteData
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -42,8 +42,10 @@
    * Note data to be saved
    * @alias module:model/NoteData
    * @class
+   * @param text {String} Text content of a note
    */
-  var exports = function() {
+  var exports = function(text) {
+    this.text = text;
   };
 
   /**
@@ -62,6 +64,8 @@
         obj.contactIds = ApiClient.convertToType(data['contactIds'], ['Number']);
       if (data.hasOwnProperty('dealIds'))
         obj.dealIds = ApiClient.convertToType(data['dealIds'], ['String']);
+      if (data.hasOwnProperty('companyIds'))
+        obj.companyIds = ApiClient.convertToType(data['companyIds'], ['String']);
     }
     return obj;
   }
@@ -83,6 +87,12 @@
    * @member {Array.<String>} dealIds
    */
   exports.prototype.dealIds = undefined;
+
+  /**
+   * Company Ids linked to a note
+   * @member {Array.<String>} companyIds
+   */
+  exports.prototype.companyIds = undefined;
 
 
   return exports;

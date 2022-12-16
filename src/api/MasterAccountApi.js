@@ -34,7 +34,7 @@
   /**
    * MasterAccount service.
    * @module api/MasterAccountApi
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -373,7 +373,7 @@
 
     /**
      * Generate SSO token to access Sendinblue
-     * This endpoint generates an sso token to authenticate and access a sub-account of the master using the account endpoint https://app.sendinblue.com/account/login/sub-account/sso/[token], where [token] will be replaced by the actual token.
+     * This endpoint generates an sso token to authenticate and access a sub-account of the master using the account endpoint https://account-app.sendinblue.com/account/login/sub-account/sso/[token], where [token] will be replaced by the actual token.
      * @param {module:model/SsoTokenRequest} ssoTokenRequest Values to generate SSO token for sub-account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSsoToken} and HTTP response
      */
@@ -411,7 +411,7 @@
 
     /**
      * Generate SSO token to access Sendinblue
-     * This endpoint generates an sso token to authenticate and access a sub-account of the master using the account endpoint https://app.sendinblue.com/account/login/sub-account/sso/[token], where [token] will be replaced by the actual token.
+     * This endpoint generates an sso token to authenticate and access a sub-account of the master using the account endpoint https://account-app.sendinblue.com/account/login/sub-account/sso/[token], where [token] will be replaced by the actual token.
      * @param {module:model/SsoTokenRequest} ssoTokenRequest Values to generate SSO token for sub-account
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSsoToken}
      */

@@ -34,7 +34,7 @@
   /**
    * TransactionalEmails service.
    * @module api/TransactionalEmailsApi
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -467,7 +467,7 @@
      * Get all your transactional email activity (unaggregated events)
      * This endpoint will show the aggregated stats for past 30 days by default if `startDate` and `endDate` OR `days` is not passed. The date range can not exceed 90 days
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit Number limitation for the result returned (default to 50)
+     * @param {Number} opts.limit Number limitation for the result returned (default to 2500)
      * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
      * @param {String} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
      * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
@@ -523,7 +523,7 @@
      * Get all your transactional email activity (unaggregated events)
      * This endpoint will show the aggregated stats for past 30 days by default if `startDate` and `endDate` OR `days` is not passed. The date range can not exceed 90 days
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit Number limitation for the result returned (default to 50)
+     * @param {Number} opts.limit Number limitation for the result returned (default to 2500)
      * @param {Number} opts.offset Beginning point in the list to retrieve from. (default to 0)
      * @param {String} opts.startDate Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
      * @param {String} opts.endDate Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate

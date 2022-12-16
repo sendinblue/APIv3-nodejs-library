@@ -34,7 +34,7 @@
   /**
    * The NoteId model module.
    * @module model/NoteId
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

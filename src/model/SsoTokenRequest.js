@@ -34,7 +34,7 @@
   /**
    * The SsoTokenRequest model module.
    * @module model/SsoTokenRequest
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

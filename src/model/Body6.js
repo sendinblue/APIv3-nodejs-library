@@ -17,32 +17,38 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/TaskReminder'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./TaskReminder'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.Body6 = factory(root.SibApiV3Sdk.ApiClient);
+    root.SibApiV3Sdk.Body6 = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.TaskReminder);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, TaskReminder) {
   'use strict';
 
   /**
    * The Body6 model module.
    * @module model/Body6
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
    * Constructs a new <code>Body6</code>.
    * @alias module:model/Body6
    * @class
+   * @param name {String} Name of task
+   * @param taskTypeId {String} Id for type of task e.g Call / Email / Meeting etc.
+   * @param _date {Date} Task due date and time
    */
-  var exports = function() {
+  var exports = function(name, taskTypeId, _date) {
+    this.name = name;
+    this.taskTypeId = taskTypeId;
+    this._date = _date;
   };
 
   /**
@@ -75,6 +81,8 @@
         obj.dealsIds = ApiClient.convertToType(data['dealsIds'], ['String']);
       if (data.hasOwnProperty('companiesIds'))
         obj.companiesIds = ApiClient.convertToType(data['companiesIds'], ['String']);
+      if (data.hasOwnProperty('reminder'))
+        obj.reminder = TaskReminder.constructFromObject(data['reminder']);
     }
     return obj;
   }
@@ -98,7 +106,7 @@
   exports.prototype.taskTypeId = undefined;
 
   /**
-   * Task date/time
+   * Task due date and time
    * @member {Date} _date
    */
   exports.prototype._date = undefined;
@@ -138,6 +146,11 @@
    * @member {Array.<String>} companiesIds
    */
   exports.prototype.companiesIds = undefined;
+
+  /**
+   * @member {module:model/TaskReminder} reminder
+   */
+  exports.prototype.reminder = undefined;
 
 
   return exports;

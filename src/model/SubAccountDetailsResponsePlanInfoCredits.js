@@ -34,7 +34,7 @@
   /**
    * The SubAccountDetailsResponsePlanInfoCredits model module.
    * @module model/SubAccountDetailsResponsePlanInfoCredits
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The DealAttributes model module.
    * @module model/DealAttributes
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

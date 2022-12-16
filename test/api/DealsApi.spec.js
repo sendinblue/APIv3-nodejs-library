@@ -179,7 +179,7 @@
           // TODO: uncomment, update parameter values for crmDealsIdPatch call
           /*
           var id = "id_example";
-          var body = new SibApiV3Sdk.Body1();
+          var body = new SibApiV3Sdk.Body4();
           body.name = "Deal: Connect with client";
           body.attributes = {"deal_owner":"6093d2425a9b436e9519d034","amount":12};
 
@@ -194,11 +194,33 @@
           done();
         });
       });
+      describe('crmDealsLinkUnlinkIdPatch', function() {
+        it('should call crmDealsLinkUnlinkIdPatch successfully', function(done) {
+          // TODO: uncomment, update parameter values for crmDealsLinkUnlinkIdPatch call
+          /*
+          var id = "id_example";
+          var body = new SibApiV3Sdk.Body5();
+          body.linkContactIds = [1,2,3];
+          body.unlinkContactIds = [4,5,6];
+          body.linkCompanyIds = ["61a5ce58c5d4795761045990","61a5ce58c5d4795761045991","61a5ce58c5d4795761045992"];
+          body.unlinkCompanyIds = ["61a5ce58c5d4795761045994","61a5ce58c5d479576104595","61a5ce58c5d4795761045996"];
+
+          instance.crmDealsLinkUnlinkIdPatch(id, body).then(function(data) {
+
+            done();
+          }, function(error) {
+            done(error);
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('crmDealsPost', function() {
         it('should call crmDealsPost successfully', function(done) {
           // TODO: uncomment, update parameter values for crmDealsPost call and complete the assertions
           /*
-          var body = new SibApiV3Sdk.Body();
+          var body = new SibApiV3Sdk.Body3();
           body.name = "Deal: Connect with company";
           body.attributes = {"deal_owner":"6093d2425a9b436e9519d034","amount":12};
 

@@ -34,7 +34,7 @@
   /**
    * The Body1 model module.
    * @module model/Body1
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -59,95 +59,30 @@
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('attributes'))
         obj.attributes = ApiClient.convertToType(data['attributes'], Object);
-      if (data.hasOwnProperty('duration'))
-        obj.duration = ApiClient.convertToType(data['duration'], 'Number');
-      if (data.hasOwnProperty('taskTypeId'))
-        obj.taskTypeId = ApiClient.convertToType(data['taskTypeId'], 'String');
-      if (data.hasOwnProperty('date'))
-        obj._date = ApiClient.convertToType(data['date'], 'Date');
-      if (data.hasOwnProperty('notes'))
-        obj.notes = ApiClient.convertToType(data['notes'], 'String');
-      if (data.hasOwnProperty('done'))
-        obj.done = ApiClient.convertToType(data['done'], 'Boolean');
-      if (data.hasOwnProperty('assignToId'))
-        obj.assignToId = ApiClient.convertToType(data['assignToId'], 'String');
-      if (data.hasOwnProperty('contactsIds'))
-        obj.contactsIds = ApiClient.convertToType(data['contactsIds'], ['Number']);
-      if (data.hasOwnProperty('dealsIds'))
-        obj.dealsIds = ApiClient.convertToType(data['dealsIds'], ['String']);
-      if (data.hasOwnProperty('companiesIds'))
-        obj.companiesIds = ApiClient.convertToType(data['companiesIds'], ['String']);
-      if (data.hasOwnProperty('reminder'))
-        obj.reminder = TaskReminder.constructFromObject(data['reminder']);
+      if (data.hasOwnProperty('countryCode'))
+        obj.countryCode = ApiClient.convertToType(data['countryCode'], 'Number');
     }
     return obj;
   }
 
   /**
-   * Name of task
+   * Name of company
    * @member {String} name
    */
   exports.prototype.name = undefined;
 
   /**
-  * Duration of task in milliseconds [1 minute = 60000 ms]
-  * @member {Number} duration
-  */
-  exports.prototype.duration = undefined;
+   * Attributes for company update
+   * @member {Object} attributes
+   */
+  exports.prototype.attributes = undefined;
 
   /**
-  * Id for type of task e.g Call / Email / Meeting etc.
-  * @member {String} taskTypeId
-  */
-  exports.prototype.taskTypeId = undefined;
+   * Country code if phone_number is passed in attributes.
+   * @member {Number} countryCode
+   */
+  exports.prototype.countryCode = undefined;
 
-  /**
-  * Task due date and time
-  * @member {Date} _date
-  */
-  exports.prototype._date = undefined;
-
-  /**
-  * Notes added to a task
-  * @member {String} notes
-  */
-  exports.prototype.notes = undefined;
-
-  /**
-  * Task marked as done
-  * @member {Boolean} done
-  */
-  exports.prototype.done = undefined;
-
-  /**
-  * User id to whom task is assigned
-  * @member {String} assignToId
-  */
-  exports.prototype.assignToId = undefined;
-
-  /**
-  * Contact ids for contacts linked to this task
-  * @member {Array.<Number>} contactsIds
-  */
-  exports.prototype.contactsIds = undefined;
-
-  /**
-  * Deal ids for deals a task is linked to
-  * @member {Array.<String>} dealsIds
-  */
-  exports.prototype.dealsIds = undefined;
-
-  /**
-  * Companies ids for companies a task is linked to
-  * @member {Array.<String>} companiesIds
-  */
-  exports.prototype.companiesIds = undefined;
-
-  /**
-  * @member {module:model/TaskReminder} reminder
-  */
-  exports.prototype.reminder = undefined;
- 
 
   return exports;
 

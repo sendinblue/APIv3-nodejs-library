@@ -36,6 +36,26 @@
 
   describe('(package)', function() {
     describe('InboundParsingApi', function() {
+      describe('getInboundEmailAttachment', function() {
+        it('should call getInboundEmailAttachment successfully', function(done) {
+          // TODO: uncomment, update parameter values for getInboundEmailAttachment call and complete the assertions
+          /*
+          var downloadToken = "downloadToken_example";
+
+          instance.getInboundEmailAttachment(downloadToken).then(function(data) {
+            // TODO: update response assertions
+            expect(data).to.be.a(File);
+            // expect(data).to.be(null);
+
+            done();
+          }, function(error) {
+            done(error);
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('getInboundEmailEvents', function() {
         it('should call getInboundEmailEvents successfully', function(done) {
           // TODO: uncomment, update parameter values for getInboundEmailEvents call and complete the assertions

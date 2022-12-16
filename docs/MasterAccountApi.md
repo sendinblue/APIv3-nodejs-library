@@ -33,10 +33,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.MasterAccountApi();
 apiInstance.corporateMasterAccountGet().then(function(data) {
@@ -83,10 +83,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.MasterAccountApi();
 
@@ -140,10 +140,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.MasterAccountApi();
 
@@ -196,10 +196,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.MasterAccountApi();
 
@@ -252,10 +252,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.MasterAccountApi();
 
@@ -311,10 +311,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.MasterAccountApi();
 
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 Generate SSO token to access Sendinblue
 
-This endpoint generates an sso token to authenticate and access a sub-account of the master using the account endpoint https://app.sendinblue.com/account/login/sub-account/sso/[token], where [token] will be replaced by the actual token.
+This endpoint generates an sso token to authenticate and access a sub-account of the master using the account endpoint https://account-app.sendinblue.com/account/login/sub-account/sso/[token], where [token] will be replaced by the actual token.
 
 ### Example
 ```javascript
@@ -367,10 +367,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.MasterAccountApi();
 

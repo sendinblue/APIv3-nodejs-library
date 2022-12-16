@@ -34,7 +34,7 @@
   /**
    * The UpdateAttribute model module.
    * @module model/UpdateAttribute
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

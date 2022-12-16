@@ -261,7 +261,7 @@
 
           instance.corporateSubAccountPost(subAccountCreate).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SibApiV3Sdk.CreateModel);
+            expect(data).to.be.a(SibApiV3Sdk.CreateSubAccountResponse);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be(122);
 

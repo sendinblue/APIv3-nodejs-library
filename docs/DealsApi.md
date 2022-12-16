@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**crmDealsIdDelete**](DealsApi.md#crmDealsIdDelete) | **DELETE** /crm/deals/{id} | Delete a deal
 [**crmDealsIdGet**](DealsApi.md#crmDealsIdGet) | **GET** /crm/deals/{id} | Get a deal
 [**crmDealsIdPatch**](DealsApi.md#crmDealsIdPatch) | **PATCH** /crm/deals/{id} | Update a deal
+[**crmDealsLinkUnlinkIdPatch**](DealsApi.md#crmDealsLinkUnlinkIdPatch) | **PATCH** /crm/deals/link-unlink/{id} | Link and Unlink a deal with contacts and companies
 [**crmDealsPost**](DealsApi.md#crmDealsPost) | **POST** /crm/deals | Create a deal
 [**crmPipelineDetailsGet**](DealsApi.md#crmPipelineDetailsGet) | **GET** /crm/pipeline/details | Get pipeline stages
 
@@ -31,10 +32,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.DealsApi();
 apiInstance.crmAttributesDealsGet().then(function(data) {
@@ -79,10 +80,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.DealsApi();
 
@@ -146,10 +147,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.DealsApi();
 
@@ -200,10 +201,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.DealsApi();
 
@@ -254,16 +255,16 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.DealsApi();
 
 var id = "id_example"; // String | 
 
-var body = new SibApiV3Sdk.Body1(); // Body1 | Updated deal details.
+var body = new SibApiV3Sdk.Body4(); // Body4 | Updated deal details.
 
 apiInstance.crmDealsIdPatch(id, body).then(function() {
   console.log('API called successfully.');
@@ -278,7 +279,64 @@ apiInstance.crmDealsIdPatch(id, body).then(function() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **body** | [**Body1**](Body1.md)| Updated deal details. | 
+ **body** | [**Body4**](Body4.md)| Updated deal details. | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="crmDealsLinkUnlinkIdPatch"></a>
+# **crmDealsLinkUnlinkIdPatch**
+> crmDealsLinkUnlinkIdPatch(id, body)
+
+Link and Unlink a deal with contacts and companies
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partner-key.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.DealsApi();
+
+var id = "id_example"; // String | 
+
+var body = new SibApiV3Sdk.Body5(); // Body5 | Linked / Unlinked contacts and companies ids.
+
+apiInstance.crmDealsLinkUnlinkIdPatch(id, body).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **body** | [**Body5**](Body5.md)| Linked / Unlinked contacts and companies ids. | 
 
 ### Return type
 
@@ -311,14 +369,14 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.DealsApi();
 
-var body = new SibApiV3Sdk.Body(); // Body | Deal create data.
+var body = new SibApiV3Sdk.Body3(); // Body3 | Deal create data.
 
 apiInstance.crmDealsPost(body).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -332,7 +390,7 @@ apiInstance.crmDealsPost(body).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body**](Body.md)| Deal create data. | 
+ **body** | [**Body3**](Body3.md)| Deal create data. | 
 
 ### Return type
 
@@ -365,10 +423,10 @@ apiKey.apiKey = 'YOUR API KEY';
 //apiKey.apiKeyPrefix = 'Token';
 
 // Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = 'YOUR API KEY';
+var partner-key = defaultClient.authentications['partner-key'];
+partner-key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix = 'Token';
+//partner-key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SibApiV3Sdk.DealsApi();
 apiInstance.crmPipelineDetailsGet().then(function(data) {

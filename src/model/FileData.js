@@ -34,7 +34,7 @@
   /**
    * The FileData model module.
    * @module model/FileData
-   * @version 8.3.0
+   * @version 8.5.0
    */
 
   /**
@@ -56,41 +56,23 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('url'))
-        obj.url = ApiClient.convertToType(data['url'], 'String');
-      if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('authorId'))
         obj.authorId = ApiClient.convertToType(data['authorId'], 'String');
-      if (data.hasOwnProperty('author'))
-        obj.author = ApiClient.convertToType(data['author'], Object);
       if (data.hasOwnProperty('contactId'))
         obj.contactId = ApiClient.convertToType(data['contactId'], 'Number');
-      if (data.hasOwnProperty('dealIds'))
-        obj.dealIds = ApiClient.convertToType(data['dealIds'], ['String']);
+      if (data.hasOwnProperty('dealId'))
+        obj.dealId = ApiClient.convertToType(data['dealId'], 'String');
+      if (data.hasOwnProperty('companyId'))
+        obj.companyId = ApiClient.convertToType(data['companyId'], 'String');
       if (data.hasOwnProperty('size'))
         obj.size = ApiClient.convertToType(data['size'], 'Number');
       if (data.hasOwnProperty('createdAt'))
         obj.createdAt = ApiClient.convertToType(data['createdAt'], 'Date');
-      if (data.hasOwnProperty('updatedAt'))
-        obj.updatedAt = ApiClient.convertToType(data['updatedAt'], 'Date');
     }
     return obj;
   }
-
-  /**
-   * Url of uploaded file
-   * @member {String} url
-   */
-  exports.prototype.url = undefined;
-
-  /**
-   * Id of uploaded file
-   * @member {String} id
-   */
-  exports.prototype.id = undefined;
 
   /**
    * Name of uploaded file
@@ -105,25 +87,25 @@
   exports.prototype.authorId = undefined;
 
   /**
-   * Account details of user which created the file
-   * @member {Object} author
-   */
-  exports.prototype.author = undefined;
-
-  /**
    * Contact id of contact on which file is uploaded
    * @member {Number} contactId
    */
   exports.prototype.contactId = undefined;
 
   /**
-   * Deal ids linked to a file
-   * @member {Array.<String>} dealIds
+   * Deal id linked to a file
+   * @member {String} dealId
    */
-  exports.prototype.dealIds = undefined;
+  exports.prototype.dealId = undefined;
 
   /**
-   * Size of file uploaded
+   * Company id linked to a file
+   * @member {String} companyId
+   */
+  exports.prototype.companyId = undefined;
+
+  /**
+   * Size of file in bytes
    * @member {Number} size
    */
   exports.prototype.size = undefined;
@@ -133,12 +115,6 @@
    * @member {Date} createdAt
    */
   exports.prototype.createdAt = undefined;
-
-  /**
-   * File updated date/time
-   * @member {Date} updatedAt
-   */
-  exports.prototype.updatedAt = undefined;
 
 
   return exports;

@@ -179,9 +179,10 @@
           // TODO: uncomment, update parameter values for companiesIdPatch call and complete the assertions
           /*
           var id = "id_example";
-          var body = new SibApiV3Sdk.Body3();
+          var body = new SibApiV3Sdk.Body1();
           body.name = "company";
           body.attributes = {"category":"label_2","domain":"xyz","date":"2022-05-04T00:00:00+05:30","industry":"flipkart","number_of_contacts":1,"number_of_employees":100,"owner":"5b1a17d914b73d35a76ca0c7","phone_number":"81718441912","revenue":10000.34222};
+          body.countryCode = 91;
 
           instance.companiesIdPatch(id, body).then(function(data) {
             // TODO: update response assertions
@@ -225,7 +226,7 @@
           // TODO: uncomment, update parameter values for companiesLinkUnlinkIdPatch call
           /*
           var id = "id_example";
-          var body = new SibApiV3Sdk.Body4();
+          var body = new SibApiV3Sdk.Body2();
           body.linkContactIds = [1,2,3];
           body.unlinkContactIds = [4,5,6];
           body.linkDealsIds = ["61a5ce58c5d4795761045990","61a5ce58c5d4795761045991","61a5ce58c5d4795761045992"];
@@ -246,9 +247,10 @@
         it('should call companiesPost successfully', function(done) {
           // TODO: uncomment, update parameter values for companiesPost call and complete the assertions
           /*
-          var body = new SibApiV3Sdk.Body2();
+          var body = new SibApiV3Sdk.Body();
           body.name = "company";
           body.attributes = {"domain":"https://example.com","industry":"Fabric","owner":"60e68d60582a3b006f524197"};
+          body.countryCode = 91;
 
           instance.companiesPost(body).then(function(data) {
             // TODO: update response assertions

@@ -34,7 +34,7 @@
   /**
    * The CreateDoiContact model module.
    * @module model/CreateDoiContact
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

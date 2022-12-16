@@ -34,7 +34,7 @@
   /**
    * The GetSendersListIps model module.
    * @module model/GetSendersListIps
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

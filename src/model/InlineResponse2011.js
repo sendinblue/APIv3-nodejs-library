@@ -34,7 +34,7 @@
   /**
    * The InlineResponse2011 model module.
    * @module model/InlineResponse2011
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

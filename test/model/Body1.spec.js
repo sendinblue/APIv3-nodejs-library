@@ -47,64 +47,16 @@
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
-      it('should have the property duration (base name: "duration")', function() {
-        // TODO: update the code to test the property duration
-        expect(instance).to.have.property('duration');
-        // expect(instance.duration).to.be(expectedValueLiteral);
+      it('should have the property attributes (base name: "attributes")', function() {
+        // TODO: update the code to test the property attributes
+        expect(instance).to.have.property('attributes');
+        // expect(instance.attributes).to.be(expectedValueLiteral);
       });
 
-      it('should have the property taskTypeId (base name: "taskTypeId")', function() {
-        // TODO: update the code to test the property taskTypeId
-        expect(instance).to.have.property('taskTypeId');
-        // expect(instance.taskTypeId).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property _date (base name: "date")', function() {
-        // TODO: update the code to test the property _date
-        expect(instance).to.have.property('_date');
-        // expect(instance._date).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property notes (base name: "notes")', function() {
-        // TODO: update the code to test the property notes
-        expect(instance).to.have.property('notes');
-        // expect(instance.notes).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property done (base name: "done")', function() {
-        // TODO: update the code to test the property done
-        expect(instance).to.have.property('done');
-        // expect(instance.done).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property assignToId (base name: "assignToId")', function() {
-        // TODO: update the code to test the property assignToId
-        expect(instance).to.have.property('assignToId');
-        // expect(instance.assignToId).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property contactsIds (base name: "contactsIds")', function() {
-        // TODO: update the code to test the property contactsIds
-        expect(instance).to.have.property('contactsIds');
-        // expect(instance.contactsIds).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property dealsIds (base name: "dealsIds")', function() {
-        // TODO: update the code to test the property dealsIds
-        expect(instance).to.have.property('dealsIds');
-        // expect(instance.dealsIds).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property companiesIds (base name: "companiesIds")', function() {
-        // TODO: update the code to test the property companiesIds
-        expect(instance).to.have.property('companiesIds');
-        // expect(instance.companiesIds).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property reminder (base name: "reminder")', function() {
-        // TODO: update the code to test the property reminder
-        expect(instance).to.have.property('reminder');
-        // expect(instance.reminder).to.be(expectedValueLiteral);
+      it('should have the property countryCode (base name: "countryCode")', function() {
+        // TODO: update the code to test the property countryCode
+        expect(instance).to.have.property('countryCode');
+        // expect(instance.countryCode).to.be(expectedValueLiteral);
       });
 
     });

@@ -32,74 +32,56 @@
 
   describe('(package)', function() {
     describe('FileData', function() {
-      // beforeEach(function() {
-      //   instance = new SibApiV3Sdk.FileData();
-      // });
+      beforeEach(function() {
+        instance = new SibApiV3Sdk.FileData();
+      });
 
-      // it('should create an instance of FileData', function() {
-      //   // TODO: update the code to test FileData
-      //   expect(instance).to.be.a(SibApiV3Sdk.FileData);
-      // });
+      it('should create an instance of FileData', function() {
+        // TODO: update the code to test FileData
+        expect(instance).to.be.a(SibApiV3Sdk.FileData);
+      });
 
-      // it('should have the property url (base name: "url")', function() {
-      //   // TODO: update the code to test the property url
-      //   expect(instance).to.have.property('url');
-      //   // expect(instance.url).to.be(expectedValueLiteral);
-      // });
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
+      });
 
-      // it('should have the property id (base name: "id")', function() {
-      //   // TODO: update the code to test the property id
-      //   expect(instance).to.have.property('id');
-      //   // expect(instance.id).to.be(expectedValueLiteral);
-      // });
+      it('should have the property authorId (base name: "authorId")', function() {
+        // TODO: update the code to test the property authorId
+        expect(instance).to.have.property('authorId');
+        // expect(instance.authorId).to.be(expectedValueLiteral);
+      });
 
-      // it('should have the property name (base name: "name")', function() {
-      //   // TODO: update the code to test the property name
-      //   expect(instance).to.have.property('name');
-      //   // expect(instance.name).to.be(expectedValueLiteral);
-      // });
+      it('should have the property contactId (base name: "contactId")', function() {
+        // TODO: update the code to test the property contactId
+        expect(instance).to.have.property('contactId');
+        // expect(instance.contactId).to.be(expectedValueLiteral);
+      });
 
-      // it('should have the property authorId (base name: "authorId")', function() {
-      //   // TODO: update the code to test the property authorId
-      //   expect(instance).to.have.property('authorId');
-      //   // expect(instance.authorId).to.be(expectedValueLiteral);
-      // });
+      it('should have the property dealId (base name: "dealId")', function() {
+        // TODO: update the code to test the property dealId
+        expect(instance).to.have.property('dealId');
+        // expect(instance.dealId).to.be(expectedValueLiteral);
+      });
 
-      // it('should have the property author (base name: "author")', function() {
-      //   // TODO: update the code to test the property author
-      //   expect(instance).to.have.property('author');
-      //   // expect(instance.author).to.be(expectedValueLiteral);
-      // });
+      it('should have the property companyId (base name: "companyId")', function() {
+        // TODO: update the code to test the property companyId
+        expect(instance).to.have.property('companyId');
+        // expect(instance.companyId).to.be(expectedValueLiteral);
+      });
 
-      // it('should have the property contactId (base name: "contactId")', function() {
-      //   // TODO: update the code to test the property contactId
-      //   expect(instance).to.have.property('contactId');
-      //   // expect(instance.contactId).to.be(expectedValueLiteral);
-      // });
+      it('should have the property size (base name: "size")', function() {
+        // TODO: update the code to test the property size
+        expect(instance).to.have.property('size');
+        // expect(instance.size).to.be(expectedValueLiteral);
+      });
 
-      // it('should have the property dealIds (base name: "dealIds")', function() {
-      //   // TODO: update the code to test the property dealIds
-      //   expect(instance).to.have.property('dealIds');
-      //   // expect(instance.dealIds).to.be(expectedValueLiteral);
-      // });
-
-      // it('should have the property size (base name: "size")', function() {
-      //   // TODO: update the code to test the property size
-      //   expect(instance).to.have.property('size');
-      //   // expect(instance.size).to.be(expectedValueLiteral);
-      // });
-
-      // it('should have the property createdAt (base name: "createdAt")', function() {
-      //   // TODO: update the code to test the property createdAt
-      //   expect(instance).to.have.property('createdAt');
-      //   // expect(instance.createdAt).to.be(expectedValueLiteral);
-      // });
-
-      // it('should have the property updatedAt (base name: "updatedAt")', function() {
-      //   // TODO: update the code to test the property updatedAt
-      //   expect(instance).to.have.property('updatedAt');
-      //   // expect(instance.updatedAt).to.be(expectedValueLiteral);
-      // });
+      it('should have the property createdAt (base name: "createdAt")', function() {
+        // TODO: update the code to test the property createdAt
+        expect(instance).to.have.property('createdAt');
+        // expect(instance.createdAt).to.be(expectedValueLiteral);
+      });
 
     });
   });

@@ -34,7 +34,7 @@
   /**
    * The GetSmsEventReportEvents model module.
    * @module model/GetSmsEventReportEvents
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

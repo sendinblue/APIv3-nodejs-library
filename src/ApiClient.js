@@ -34,8 +34,10 @@ const pkgJson = require('../package.json');
 
   /**
    * @module ApiClient
-   * @version 8.4.2
+   * @version 8.5.0
    */
+
+  console.log('version 8.5.0')
 
   /**
    * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
@@ -61,10 +63,10 @@ const pkgJson = require('../package.json');
       'partner-key': {type: 'apiKey', 'in': 'header', name: 'partner-key'}
     };
     /**
-    * The default HTTP headers to be included for all API calls.
-    * @type {Array.<String>}
-    * @default {}
-    */
+     * The default HTTP headers to be included for all API calls.
+     * @type {Array.<String>}
+     * @default {}
+     */
     this.defaultHeaders = {
       'user-agent': `sendinblue_clientAPI/v${pkgJson.version}/node`
     };
@@ -594,7 +596,7 @@ const pkgJson = require('../package.json');
     }
     return;
   };
-
+  
   /**
    * The default API client implementation.
    * @type {module:ApiClient}

@@ -34,7 +34,7 @@
   /**
    * The Body4 model module.
    * @module model/Body4
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -55,41 +55,25 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('linkContactIds'))
-        obj.linkContactIds = ApiClient.convertToType(data['linkContactIds'], ['Number']);
-      if (data.hasOwnProperty('unlinkContactIds'))
-        obj.unlinkContactIds = ApiClient.convertToType(data['unlinkContactIds'], ['Number']);
-      if (data.hasOwnProperty('linkDealsIds'))
-        obj.linkDealsIds = ApiClient.convertToType(data['linkDealsIds'], ['String']);
-      if (data.hasOwnProperty('unlinkDealsIds'))
-        obj.unlinkDealsIds = ApiClient.convertToType(data['unlinkDealsIds'], ['String']);
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('attributes'))
+        obj.attributes = ApiClient.convertToType(data['attributes'], Object);
     }
     return obj;
   }
 
   /**
-   * Contact ids for contacts to be linked with company
-   * @member {Array.<Number>} linkContactIds
+   * Name of deal
+   * @member {String} name
    */
-  exports.prototype.linkContactIds = undefined;
+  exports.prototype.name = undefined;
 
   /**
-   * Contact ids for contacts to be unlinked from company
-   * @member {Array.<Number>} unlinkContactIds
+   * Attributes for deal update
+   * @member {Object} attributes
    */
-  exports.prototype.unlinkContactIds = undefined;
-
-  /**
-   * Deals ids for deals to be linked with company
-   * @member {Array.<String>} linkDealsIds
-   */
-  exports.prototype.linkDealsIds = undefined;
-
-  /**
-   * Deals ids for deals to be unlinked from company
-   * @member {Array.<String>} unlinkDealsIds
-   */
-  exports.prototype.unlinkDealsIds = undefined;
+  exports.prototype.attributes = undefined;
 
 
   return exports;

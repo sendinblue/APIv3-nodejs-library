@@ -34,7 +34,7 @@
   /**
    * The EmailExportRecipients model module.
    * @module model/EmailExportRecipients
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

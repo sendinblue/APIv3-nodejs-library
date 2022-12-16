@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Body2', 'model/Body3', 'model/Body4', 'model/CompaniesList', 'model/Company', 'model/CompanyAttributes', 'model/ErrorModel', 'model/InlineResponse200'], factory);
+    define(['ApiClient', 'model/Body', 'model/Body1', 'model/Body2', 'model/CompaniesList', 'model/Company', 'model/CompanyAttributes', 'model/ErrorModel', 'model/InlineResponse200'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Body2'), require('../model/Body3'), require('../model/Body4'), require('../model/CompaniesList'), require('../model/Company'), require('../model/CompanyAttributes'), require('../model/ErrorModel'), require('../model/InlineResponse200'));
+    module.exports = factory(require('../ApiClient'), require('../model/Body'), require('../model/Body1'), require('../model/Body2'), require('../model/CompaniesList'), require('../model/Company'), require('../model/CompanyAttributes'), require('../model/ErrorModel'), require('../model/InlineResponse200'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.CompaniesApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.Body2, root.SibApiV3Sdk.Body3, root.SibApiV3Sdk.Body4, root.SibApiV3Sdk.CompaniesList, root.SibApiV3Sdk.Company, root.SibApiV3Sdk.CompanyAttributes, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.InlineResponse200);
+    root.SibApiV3Sdk.CompaniesApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.Body, root.SibApiV3Sdk.Body1, root.SibApiV3Sdk.Body2, root.SibApiV3Sdk.CompaniesList, root.SibApiV3Sdk.Company, root.SibApiV3Sdk.CompanyAttributes, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.InlineResponse200);
   }
-}(this, function(ApiClient, Body2, Body3, Body4, CompaniesList, Company, CompanyAttributes, ErrorModel, InlineResponse200) {
+}(this, function(ApiClient, Body, Body1, Body2, CompaniesList, Company, CompanyAttributes, ErrorModel, InlineResponse200) {
   'use strict';
 
   /**
    * Companies service.
    * @module api/CompaniesApi
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -264,7 +264,7 @@
     /**
      * Update a company
      * @param {String} id 
-     * @param {module:model/Body3} body Updated company details.
+     * @param {module:model/Body1} body Updated company details.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Company} and HTTP response
      */
     this.companiesIdPatchWithHttpInfo = function(id, body) {
@@ -308,7 +308,7 @@
     /**
      * Update a company
      * @param {String} id 
-     * @param {module:model/Body3} body Updated company details.
+     * @param {module:model/Body1} body Updated company details.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Company}
      */
     this.companiesIdPatch = function(id, body) {
@@ -322,7 +322,7 @@
     /**
      * Link and Unlink company with contacts and deals
      * @param {String} id 
-     * @param {module:model/Body4} body Linked / Unlinked contacts and deals ids.
+     * @param {module:model/Body2} body Linked / Unlinked contacts and deals ids.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.companiesLinkUnlinkIdPatchWithHttpInfo = function(id, body) {
@@ -366,7 +366,7 @@
     /**
      * Link and Unlink company with contacts and deals
      * @param {String} id 
-     * @param {module:model/Body4} body Linked / Unlinked contacts and deals ids.
+     * @param {module:model/Body2} body Linked / Unlinked contacts and deals ids.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.companiesLinkUnlinkIdPatch = function(id, body) {
@@ -379,7 +379,7 @@
 
     /**
      * Create a company
-     * @param {module:model/Body2} body Company create data.
+     * @param {module:model/Body} body Company create data.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     this.companiesPostWithHttpInfo = function(body) {
@@ -416,7 +416,7 @@
 
     /**
      * Create a company
-     * @param {module:model/Body2} body Company create data.
+     * @param {module:model/Body} body Company create data.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     this.companiesPost = function(body) {

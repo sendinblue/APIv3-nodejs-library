@@ -34,7 +34,7 @@
   /**
    * The SendSmtpEmailBcc model module.
    * @module model/SendSmtpEmailBcc
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
