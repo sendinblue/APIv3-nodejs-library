@@ -34,7 +34,7 @@
   /**
    * The CreateAttribute model module.
    * @module model/CreateAttribute
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('value'))
         obj.value = ApiClient.convertToType(data['value'], 'String');
+      if (data.hasOwnProperty('isRecurring'))
+        obj.isRecurring = ApiClient.convertToType(data['isRecurring'], 'Boolean');
       if (data.hasOwnProperty('enumeration'))
         obj.enumeration = ApiClient.convertToType(data['enumeration'], [CreateAttributeEnumeration]);
       if (data.hasOwnProperty('type'))
@@ -70,6 +72,12 @@
    * @member {String} value
    */
   exports.prototype.value = undefined;
+
+  /**
+   * Type of the calculated attribute. Use only if the attribute's category is 'calculated'
+   * @member {Boolean} isRecurring
+   */
+  exports.prototype.isRecurring = undefined;
 
   /**
    * List of values and labels that the attribute can take. Use only if the attribute's category is \"category\". For example, [{\"value\":1, \"label\":\"male\"}, {\"value\":2, \"label\":\"female\"}]

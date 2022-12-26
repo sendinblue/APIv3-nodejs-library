@@ -34,15 +34,17 @@
   /**
    * The Body3 model module.
    * @module model/Body3
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
    * Constructs a new <code>Body3</code>.
    * @alias module:model/Body3
    * @class
+   * @param name {String} Name of deal
    */
-  var exports = function() {
+  var exports = function(name) {
+    this.name = name;
   };
 
   /**
@@ -64,13 +66,13 @@
   }
 
   /**
-   * Name of company
+   * Name of deal
    * @member {String} name
    */
   exports.prototype.name = undefined;
 
   /**
-   * Attributes for company update
+   * Attributes fo\\r deal creation
    * @member {Object} attributes
    */
   exports.prototype.attributes = undefined;

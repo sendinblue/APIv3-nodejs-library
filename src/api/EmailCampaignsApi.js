@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AbTestCampaignResult', 'model/CreateEmailCampaign', 'model/CreateModel', 'model/CreatedProcessId', 'model/EmailExportRecipients', 'model/ErrorModel', 'model/GetEmailCampaign', 'model/GetEmailCampaigns', 'model/GetSharedTemplateUrl', 'model/PostSendFailed', 'model/SendReport', 'model/SendTestEmail', 'model/UpdateCampaignStatus', 'model/UpdateEmailCampaign', 'model/UploadImageToGallery'], factory);
+    define(['ApiClient', 'model/AbTestCampaignResult', 'model/CreateEmailCampaign', 'model/CreateModel', 'model/CreatedProcessId', 'model/EmailExportRecipients', 'model/ErrorModel', 'model/GetEmailCampaign', 'model/GetEmailCampaigns', 'model/GetSharedTemplateUrl', 'model/PostSendFailed', 'model/SendReport', 'model/SendTestEmail', 'model/UpdateCampaignStatus', 'model/UpdateEmailCampaign', 'model/UploadImageModel', 'model/UploadImageToGallery'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AbTestCampaignResult'), require('../model/CreateEmailCampaign'), require('../model/CreateModel'), require('../model/CreatedProcessId'), require('../model/EmailExportRecipients'), require('../model/ErrorModel'), require('../model/GetEmailCampaign'), require('../model/GetEmailCampaigns'), require('../model/GetSharedTemplateUrl'), require('../model/PostSendFailed'), require('../model/SendReport'), require('../model/SendTestEmail'), require('../model/UpdateCampaignStatus'), require('../model/UpdateEmailCampaign'), require('../model/UploadImageToGallery'));
+    module.exports = factory(require('../ApiClient'), require('../model/AbTestCampaignResult'), require('../model/CreateEmailCampaign'), require('../model/CreateModel'), require('../model/CreatedProcessId'), require('../model/EmailExportRecipients'), require('../model/ErrorModel'), require('../model/GetEmailCampaign'), require('../model/GetEmailCampaigns'), require('../model/GetSharedTemplateUrl'), require('../model/PostSendFailed'), require('../model/SendReport'), require('../model/SendTestEmail'), require('../model/UpdateCampaignStatus'), require('../model/UpdateEmailCampaign'), require('../model/UploadImageModel'), require('../model/UploadImageToGallery'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.EmailCampaignsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AbTestCampaignResult, root.SibApiV3Sdk.CreateEmailCampaign, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.EmailExportRecipients, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetEmailCampaign, root.SibApiV3Sdk.GetEmailCampaigns, root.SibApiV3Sdk.GetSharedTemplateUrl, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendReport, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateCampaignStatus, root.SibApiV3Sdk.UpdateEmailCampaign, root.SibApiV3Sdk.UploadImageToGallery);
+    root.SibApiV3Sdk.EmailCampaignsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.AbTestCampaignResult, root.SibApiV3Sdk.CreateEmailCampaign, root.SibApiV3Sdk.CreateModel, root.SibApiV3Sdk.CreatedProcessId, root.SibApiV3Sdk.EmailExportRecipients, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.GetEmailCampaign, root.SibApiV3Sdk.GetEmailCampaigns, root.SibApiV3Sdk.GetSharedTemplateUrl, root.SibApiV3Sdk.PostSendFailed, root.SibApiV3Sdk.SendReport, root.SibApiV3Sdk.SendTestEmail, root.SibApiV3Sdk.UpdateCampaignStatus, root.SibApiV3Sdk.UpdateEmailCampaign, root.SibApiV3Sdk.UploadImageModel, root.SibApiV3Sdk.UploadImageToGallery);
   }
-}(this, function(ApiClient, AbTestCampaignResult, CreateEmailCampaign, CreateModel, CreatedProcessId, EmailExportRecipients, ErrorModel, GetEmailCampaign, GetEmailCampaigns, GetSharedTemplateUrl, PostSendFailed, SendReport, SendTestEmail, UpdateCampaignStatus, UpdateEmailCampaign, UploadImageToGallery) {
+}(this, function(ApiClient, AbTestCampaignResult, CreateEmailCampaign, CreateModel, CreatedProcessId, EmailExportRecipients, ErrorModel, GetEmailCampaign, GetEmailCampaigns, GetSharedTemplateUrl, PostSendFailed, SendReport, SendTestEmail, UpdateCampaignStatus, UpdateEmailCampaign, UploadImageModel, UploadImageToGallery) {
   'use strict';
 
   /**
    * EmailCampaigns service.
    * @module api/EmailCampaignsApi
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -718,7 +718,7 @@
     /**
      * Upload an image to your account's image gallery
      * @param {module:model/UploadImageToGallery} uploadImage Parameters to upload an image
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UploadImageModel} and HTTP response
      */
     this.uploadImageToGalleryWithHttpInfo = function(uploadImage) {
       var postBody = uploadImage;
@@ -743,7 +743,7 @@
       var authNames = ['api-key', 'partner-key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = null;
+      var returnType = UploadImageModel;
 
       return this.apiClient.callApi(
         '/emailCampaigns/images', 'POST',
@@ -755,7 +755,7 @@
     /**
      * Upload an image to your account's image gallery
      * @param {module:model/UploadImageToGallery} uploadImage Parameters to upload an image
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UploadImageModel}
      */
     this.uploadImageToGallery = function(uploadImage) {
       return this.uploadImageToGalleryWithHttpInfo(uploadImage)

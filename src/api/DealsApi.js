@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Body', 'model/Body1', 'model/Deal', 'model/DealAttributes', 'model/DealsList', 'model/ErrorModel', 'model/InlineResponse201', 'model/Pipeline'], factory);
+    define(['ApiClient', 'model/Body3', 'model/Body4', 'model/Body5', 'model/Deal', 'model/DealAttributes', 'model/DealsList', 'model/ErrorModel', 'model/InlineResponse201', 'model/Pipeline'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Body'), require('../model/Body1'), require('../model/Deal'), require('../model/DealAttributes'), require('../model/DealsList'), require('../model/ErrorModel'), require('../model/InlineResponse201'), require('../model/Pipeline'));
+    module.exports = factory(require('../ApiClient'), require('../model/Body3'), require('../model/Body4'), require('../model/Body5'), require('../model/Deal'), require('../model/DealAttributes'), require('../model/DealsList'), require('../model/ErrorModel'), require('../model/InlineResponse201'), require('../model/Pipeline'));
   } else {
     // Browser globals (root is window)
     if (!root.SibApiV3Sdk) {
       root.SibApiV3Sdk = {};
     }
-    root.SibApiV3Sdk.DealsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.Body, root.SibApiV3Sdk.Body1, root.SibApiV3Sdk.Deal, root.SibApiV3Sdk.DealAttributes, root.SibApiV3Sdk.DealsList, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.InlineResponse201, root.SibApiV3Sdk.Pipeline);
+    root.SibApiV3Sdk.DealsApi = factory(root.SibApiV3Sdk.ApiClient, root.SibApiV3Sdk.Body3, root.SibApiV3Sdk.Body4, root.SibApiV3Sdk.Body5, root.SibApiV3Sdk.Deal, root.SibApiV3Sdk.DealAttributes, root.SibApiV3Sdk.DealsList, root.SibApiV3Sdk.ErrorModel, root.SibApiV3Sdk.InlineResponse201, root.SibApiV3Sdk.Pipeline);
   }
-}(this, function(ApiClient, Body, Body1, Deal, DealAttributes, DealsList, ErrorModel, InlineResponse201, Pipeline) {
+}(this, function(ApiClient, Body3, Body4, Body5, Deal, DealAttributes, DealsList, ErrorModel, InlineResponse201, Pipeline) {
   'use strict';
 
   /**
    * Deals service.
    * @module api/DealsApi
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -95,9 +95,9 @@
     /**
      * Get all deals
      * @param {Object} opts Optional parameters
-     * @param {String} opts.filterAttributes Filter by attrbutes. If you have filter for owner on your side please send it as `attributes.owner`.\"
-     * @param {String} opts.filterLinkedCompaniesIds Filter by linked companies ids
-     * @param {String} opts.filterLinkedContactsIds Filter by linked companies ids
+     * @param {String} opts.filtersAttributes Filter by attrbutes. If you have filter for owner on your side please send it as `attributes.owner`.\"
+     * @param {String} opts.filtersLinkedCompaniesIds Filter by linked companies ids
+     * @param {String} opts.filtersLinkedContactsIds Filter by linked companies ids
      * @param {Number} opts.offset Index of the first document of the page
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {module:model/String} opts.sort Sort the results in the ascending/descending order. Default order is **descending** by creation if `sort` is not passed
@@ -112,9 +112,9 @@
       var pathParams = {
       };
       var queryParams = {
-        'filter[attributes]': opts['filterAttributes'],
-        'filter[linkedCompaniesIds]': opts['filterLinkedCompaniesIds'],
-        'filter[linkedContactsIds]': opts['filterLinkedContactsIds'],
+        'filters[attributes]': opts['filtersAttributes'],
+        'filters[linkedCompaniesIds]': opts['filtersLinkedCompaniesIds'],
+        'filters[linkedContactsIds]': opts['filtersLinkedContactsIds'],
         'offset': opts['offset'],
         'limit': opts['limit'],
         'sort': opts['sort'],
@@ -142,9 +142,9 @@
     /**
      * Get all deals
      * @param {Object} opts Optional parameters
-     * @param {String} opts.filterAttributes Filter by attrbutes. If you have filter for owner on your side please send it as `attributes.owner`.\"
-     * @param {String} opts.filterLinkedCompaniesIds Filter by linked companies ids
-     * @param {String} opts.filterLinkedContactsIds Filter by linked companies ids
+     * @param {String} opts.filtersAttributes Filter by attrbutes. If you have filter for owner on your side please send it as `attributes.owner`.\"
+     * @param {String} opts.filtersLinkedCompaniesIds Filter by linked companies ids
+     * @param {String} opts.filtersLinkedContactsIds Filter by linked companies ids
      * @param {Number} opts.offset Index of the first document of the page
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {module:model/String} opts.sort Sort the results in the ascending/descending order. Default order is **descending** by creation if `sort` is not passed
@@ -264,7 +264,7 @@
     /**
      * Update a deal
      * @param {String} id 
-     * @param {module:model/Body1} body Updated deal details.
+     * @param {module:model/Body4} body Updated deal details.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.crmDealsIdPatchWithHttpInfo = function(id, body) {
@@ -308,7 +308,7 @@
     /**
      * Update a deal
      * @param {String} id 
-     * @param {module:model/Body1} body Updated deal details.
+     * @param {module:model/Body4} body Updated deal details.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.crmDealsIdPatch = function(id, body) {
@@ -320,8 +320,66 @@
 
 
     /**
+     * Link and Unlink a deal with contacts and companies
+     * @param {String} id 
+     * @param {module:model/Body5} body Linked / Unlinked contacts and companies ids.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.crmDealsLinkUnlinkIdPatchWithHttpInfo = function(id, body) {
+      var postBody = body;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling crmDealsLinkUnlinkIdPatch");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling crmDealsLinkUnlinkIdPatch");
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/crm/deals/link-unlink/{id}', 'PATCH',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Link and Unlink a deal with contacts and companies
+     * @param {String} id 
+     * @param {module:model/Body5} body Linked / Unlinked contacts and companies ids.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.crmDealsLinkUnlinkIdPatch = function(id, body) {
+      return this.crmDealsLinkUnlinkIdPatchWithHttpInfo(id, body)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Create a deal
-     * @param {module:model/Body} body Deal create data.
+     * @param {module:model/Body3} body Deal create data.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
     this.crmDealsPostWithHttpInfo = function(body) {
@@ -358,7 +416,7 @@
 
     /**
      * Create a deal
-     * @param {module:model/Body} body Deal create data.
+     * @param {module:model/Body3} body Deal create data.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
     this.crmDealsPost = function(body) {

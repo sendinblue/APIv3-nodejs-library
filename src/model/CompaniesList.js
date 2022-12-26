@@ -34,12 +34,12 @@
   /**
    * The CompaniesList model module.
    * @module model/CompaniesList
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
    * Constructs a new <code>CompaniesList</code>.
-   * List of comapnies
+   * List of companies
    * @alias module:model/CompaniesList
    * @class
    */

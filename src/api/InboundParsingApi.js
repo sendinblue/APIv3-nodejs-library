@@ -34,7 +34,7 @@
   /**
    * InboundParsing service.
    * @module api/InboundParsingApi
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -47,6 +47,59 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+
+    /**
+     * Retrieve inbound attachment with download token.
+     * This endpoint will retrieve inbound attachment with download token.
+     * @param {String} downloadToken Token to fetch a particular attachment
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     */
+    this.getInboundEmailAttachmentWithHttpInfo = function(downloadToken) {
+      var postBody = null;
+
+      // verify the required parameter 'downloadToken' is set
+      if (downloadToken === undefined || downloadToken === null) {
+        throw new Error("Missing the required parameter 'downloadToken' when calling getInboundEmailAttachment");
+      }
+
+
+      var pathParams = {
+        'downloadToken': downloadToken
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['api-key', 'partner-key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = File;
+
+      return this.apiClient.callApi(
+        '/inbound/attachments/{downloadToken}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Retrieve inbound attachment with download token.
+     * This endpoint will retrieve inbound attachment with download token.
+     * @param {String} downloadToken Token to fetch a particular attachment
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     */
+    this.getInboundEmailAttachment = function(downloadToken) {
+      return this.getInboundEmailAttachmentWithHttpInfo(downloadToken)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**

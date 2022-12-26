@@ -34,14 +34,14 @@
   /**
    * The Body model module.
    * @module model/Body
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
    * Constructs a new <code>Body</code>.
    * @alias module:model/Body
    * @class
-   * @param name {String} Name of deal
+   * @param name {String} Name of company
    */
   var exports = function(name) {
     this.name = name;
@@ -61,21 +61,29 @@
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('attributes'))
         obj.attributes = ApiClient.convertToType(data['attributes'], Object);
+      if (data.hasOwnProperty('countryCode'))
+        obj.countryCode = ApiClient.convertToType(data['countryCode'], 'Number');
     }
     return obj;
   }
 
   /**
-   * Name of deal
+   * Name of company
    * @member {String} name
    */
   exports.prototype.name = undefined;
 
   /**
-   * Attributes fo\\r deal creation
+   * Attributes for company creation
    * @member {Object} attributes
    */
   exports.prototype.attributes = undefined;
+
+  /**
+   * Country code if phone_number is passed in attributes.
+   * @member {Number} countryCode
+   */
+  exports.prototype.countryCode = undefined;
 
 
   return exports;

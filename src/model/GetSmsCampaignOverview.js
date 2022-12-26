@@ -34,7 +34,7 @@
   /**
    * The GetSmsCampaignOverview model module.
    * @module model/GetSmsCampaignOverview
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

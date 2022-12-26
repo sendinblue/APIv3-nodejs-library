@@ -34,7 +34,7 @@
   /**
    * The CreateSmsCampaign model module.
    * @module model/CreateSmsCampaign
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -73,6 +73,10 @@
         obj.scheduledAt = ApiClient.convertToType(data['scheduledAt'], 'String');
       if (data.hasOwnProperty('unicodeEnabled'))
         obj.unicodeEnabled = ApiClient.convertToType(data['unicodeEnabled'], 'Boolean');
+      if (data.hasOwnProperty('organisationPrefix'))
+        obj.organisationPrefix = ApiClient.convertToType(data['organisationPrefix'], 'String');
+      if (data.hasOwnProperty('unsubscribeInstruction'))
+        obj.unsubscribeInstruction = ApiClient.convertToType(data['unsubscribeInstruction'], 'String');
     }
     return obj;
   }
@@ -112,6 +116,18 @@
    * @default false
    */
   exports.prototype.unicodeEnabled = false;
+
+  /**
+   * A recognizable prefix will ensure your audience knows who you are. Recommended by U.S. carriers. This will be added as your Brand Name before the message content. **Prefer verifying maximum length of 160 characters including this prefix in message content to avoid multiple sending of same sms.**
+   * @member {String} organisationPrefix
+   */
+  exports.prototype.organisationPrefix = undefined;
+
+  /**
+   * Instructions to unsubscribe from future communications. Recommended by U.S. carriers. Must include **STOP** keyword. This will be added as instructions after the end of message content. **Prefer verifying maximum length of 160 characters including this instructions in message content to avoid multiple sending of same sms.**
+   * @member {String} unsubscribeInstruction
+   */
+  exports.prototype.unsubscribeInstruction = undefined;
 
 
   return exports;

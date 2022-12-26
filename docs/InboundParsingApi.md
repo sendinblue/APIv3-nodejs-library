@@ -4,9 +4,66 @@ All URIs are relative to *https://api.sendinblue.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getInboundEmailAttachment**](InboundParsingApi.md#getInboundEmailAttachment) | **GET** /inbound/attachments/{downloadToken} | Retrieve inbound attachment with download token.
 [**getInboundEmailEvents**](InboundParsingApi.md#getInboundEmailEvents) | **GET** /inbound/events | Get the list of all the events for the received emails.
 [**getInboundEmailEventsByUuid**](InboundParsingApi.md#getInboundEmailEventsByUuid) | **GET** /inbound/events/{uuid} | Fetch all events history for one particular received email.
 
+
+<a name="getInboundEmailAttachment"></a>
+# **getInboundEmailAttachment**
+> File getInboundEmailAttachment(downloadToken)
+
+Retrieve inbound attachment with download token.
+
+This endpoint will retrieve inbound attachment with download token.
+
+### Example
+```javascript
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+// Configure API key authorization: api-key
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+// Configure API key authorization: partner-key
+var partnerKey = defaultClient.authentications['partner-key'];
+partnerKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//partnerKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SibApiV3Sdk.InboundParsingApi();
+
+var downloadToken = "downloadToken_example"; // String | Token to fetch a particular attachment
+
+apiInstance.getInboundEmailAttachment(downloadToken).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **downloadToken** | **String**| Token to fetch a particular attachment | 
+
+### Return type
+
+**File**
+
+### Authorization
+
+[api-key](../README.md#api-key), [partner-key](../README.md#partner-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="getInboundEmailEvents"></a>
 # **getInboundEmailEvents**

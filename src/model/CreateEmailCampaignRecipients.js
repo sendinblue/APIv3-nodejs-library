@@ -34,12 +34,12 @@
   /**
    * The CreateEmailCampaignRecipients model module.
    * @module model/CreateEmailCampaignRecipients
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
    * Constructs a new <code>CreateEmailCampaignRecipients</code>.
-   * List ids to include/exclude from campaign
+   * Segment ids and List ids to include/exclude from campaign
    * @alias module:model/CreateEmailCampaignRecipients
    * @class
    */
@@ -60,6 +60,8 @@
         obj.exclusionListIds = ApiClient.convertToType(data['exclusionListIds'], ['Number']);
       if (data.hasOwnProperty('listIds'))
         obj.listIds = ApiClient.convertToType(data['listIds'], ['Number']);
+      if (data.hasOwnProperty('segmentIds'))
+        obj.segmentIds = ApiClient.convertToType(data['segmentIds'], ['Number']);
     }
     return obj;
   }
@@ -75,6 +77,12 @@
    * @member {Array.<Number>} listIds
    */
   exports.prototype.listIds = undefined;
+
+  /**
+   * Mandatory if listIds are not used. Segment ids to send the campaign to.
+   * @member {Array.<Number>} segmentIds
+   */
+  exports.prototype.segmentIds = undefined;
 
 
   return exports;

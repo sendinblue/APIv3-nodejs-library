@@ -34,7 +34,7 @@
   /**
    * The SubAccountDetailsResponsePlanInfoFeaturesUsers model module.
    * @module model/SubAccountDetailsResponsePlanInfoFeaturesUsers
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

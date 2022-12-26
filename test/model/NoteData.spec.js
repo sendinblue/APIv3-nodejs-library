@@ -59,6 +59,12 @@
         // expect(instance.dealIds).to.be(expectedValueLiteral);
       });
 
+      it('should have the property companyIds (base name: "companyIds")', function() {
+        // TODO: update the code to test the property companyIds
+        expect(instance).to.have.property('companyIds');
+        // expect(instance.companyIds).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

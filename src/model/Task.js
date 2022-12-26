@@ -34,7 +34,7 @@
   /**
    * The Task model module.
    * @module model/Task
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -42,8 +42,12 @@
    * Task Details
    * @alias module:model/Task
    * @class
+   * @param taskTypeId {String} Id for type of task e.g Call / Email / Meeting etc.
+   * @param name {String} Name of task
    */
-  var exports = function() {
+  var exports = function(taskTypeId, name) {
+    this.taskTypeId = taskTypeId;
+    this.name = name;
   };
 
   /**
@@ -68,28 +72,6 @@
         obj.dealsIds = ApiClient.convertToType(data['dealsIds'], ['String']);
       if (data.hasOwnProperty('companiesIds'))
         obj.companiesIds = ApiClient.convertToType(data['companiesIds'], ['String']);
-      if (data.hasOwnProperty('firstContact'))
-        obj.firstContact = ApiClient.convertToType(data['firstContact'], 'String');
-      if (data.hasOwnProperty('contacts'))
-        obj.contacts = ApiClient.convertToType(data['contacts'], 'String');
-      if (data.hasOwnProperty('assignToId'))
-        obj.assignToId = ApiClient.convertToType(data['assignToId'], 'String');
-      if (data.hasOwnProperty('date'))
-        obj._date = ApiClient.convertToType(data['date'], 'String');
-      if (data.hasOwnProperty('duration'))
-        obj.duration = ApiClient.convertToType(data['duration'], 'String');
-      if (data.hasOwnProperty('notes'))
-        obj.notes = ApiClient.convertToType(data['notes'], 'String');
-      if (data.hasOwnProperty('done'))
-        obj.done = ApiClient.convertToType(data['done'], 'String');
-      if (data.hasOwnProperty('reminder'))
-        obj.reminder = ApiClient.convertToType(data['reminder'], 'String');
-      if (data.hasOwnProperty('createdAt'))
-        obj.createdAt = ApiClient.convertToType(data['createdAt'], 'String');
-      if (data.hasOwnProperty('updatedAt'))
-        obj.updatedAt = ApiClient.convertToType(data['updatedAt'], 'String');
-      if (data.hasOwnProperty('refs'))
-        obj.refs = ApiClient.convertToType(data['refs'], 'String');
     }
     return obj;
   }
@@ -129,72 +111,6 @@
    * @member {Array.<String>} companiesIds
    */
   exports.prototype.companiesIds = undefined;
-
-  /**
-   * first contact
-   * @member {String} firstContact
-   */
-  exports.prototype.firstContact = undefined;
-
-  /**
-   * contacts
-   * @member {String} contacts
-   */
-  exports.prototype.contacts = undefined;
-
-  /**
-   * assign to id
-   * @member {String} assignToId
-   */
-  exports.prototype.assignToId = undefined;
-
-  /**
-   * date
-   * @member {String} _date
-   */
-  exports.prototype._date = undefined;
-
-  /**
-   * duration
-   * @member {String} duration
-   */
-  exports.prototype.duration = undefined;
-
-  /**
-   * notes
-   * @member {String} notes
-   */
-  exports.prototype.notes = undefined;
-
-  /**
-   * done
-   * @member {String} done
-   */
-  exports.prototype.done = undefined;
-
-  /**
-   * reminder
-   * @member {String} reminder
-   */
-  exports.prototype.reminder = undefined;
-
-  /**
-   * created at
-   * @member {String} createdAt
-   */
-  exports.prototype.createdAt = undefined;
-
-  /**
-   * updated at
-   * @member {String} updatedAt
-   */
-  exports.prototype.updatedAt = undefined;
-
-  /**
-   * refs
-   * @member {String} refs
-   */
-  exports.prototype.refs = undefined;
 
 
   return exports;

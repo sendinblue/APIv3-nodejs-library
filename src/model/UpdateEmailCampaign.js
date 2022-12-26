@@ -34,7 +34,7 @@
   /**
    * The UpdateEmailCampaign model module.
    * @module model/UpdateEmailCampaign
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -111,6 +111,10 @@
         obj.initialQuota = ApiClient.convertToType(data['initialQuota'], 'Number');
       if (data.hasOwnProperty('increaseRate'))
         obj.increaseRate = ApiClient.convertToType(data['increaseRate'], 'Number');
+      if (data.hasOwnProperty('unsubscriptionPageId'))
+        obj.unsubscriptionPageId = ApiClient.convertToType(data['unsubscriptionPageId'], 'String');
+      if (data.hasOwnProperty('updateFormId'))
+        obj.updateFormId = ApiClient.convertToType(data['updateFormId'], 'String');
     }
     return obj;
   }
@@ -284,6 +288,18 @@
    * @member {Number} increaseRate
    */
   exports.prototype.increaseRate = undefined;
+
+  /**
+   * Enter an unsubscription page id. The page id is a 24 digit alphanumeric id that can be found in the URL when editing the page.
+   * @member {String} unsubscriptionPageId
+   */
+  exports.prototype.unsubscriptionPageId = undefined;
+
+  /**
+   * Mandatory if templateId is used containing the {{ update_profile }} tag. Enter an update profile form id. The form id is a 24 digit alphanumeric id that can be found in the URL when editing the form.
+   * @member {String} updateFormId
+   */
+  exports.prototype.updateFormId = undefined;
 
 
 

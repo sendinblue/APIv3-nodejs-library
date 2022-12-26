@@ -34,7 +34,7 @@
   /**
    * The RequestSmsRecipientExport model module.
    * @module model/RequestSmsRecipientExport
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

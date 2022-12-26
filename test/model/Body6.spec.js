@@ -101,6 +101,12 @@
         // expect(instance.companiesIds).to.be(expectedValueLiteral);
       });
 
+      it('should have the property reminder (base name: "reminder")', function() {
+        // TODO: update the code to test the property reminder
+        expect(instance).to.have.property('reminder');
+        // expect(instance.reminder).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

@@ -34,7 +34,7 @@
   /**
    * The SendTransacSms model module.
    * @module model/SendTransacSms
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.webUrl = ApiClient.convertToType(data['webUrl'], 'String');
       if (data.hasOwnProperty('unicodeEnabled'))
         obj.unicodeEnabled = ApiClient.convertToType(data['unicodeEnabled'], 'Boolean');
+      if (data.hasOwnProperty('organisationPrefix'))
+        obj.organisationPrefix = ApiClient.convertToType(data['organisationPrefix'], 'String');
     }
     return obj;
   }
@@ -122,6 +124,12 @@
    * @default false
    */
   exports.prototype.unicodeEnabled = false;
+
+  /**
+   * A recognizable prefix will ensure your audience knows who you are. Recommended by U.S. carriers. This will be added as your Brand Name before the message content. **Prefer verifying maximum length of 160 characters including this prefix in message content to avoid multiple sending of same sms.**
+   * @member {String} organisationPrefix
+   */
+  exports.prototype.organisationPrefix = undefined;
 
 
 

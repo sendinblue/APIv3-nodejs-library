@@ -263,7 +263,7 @@ var apiInstance = new SibApiV3Sdk.CompaniesApi();
 
 var id = "id_example"; // String | 
 
-var body = new SibApiV3Sdk.Body3(); // Body3 | Updated company details.
+var body = new SibApiV3Sdk.Body1(); // Body1 | Updated company details.
 
 apiInstance.companiesIdPatch(id, body).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -278,7 +278,7 @@ apiInstance.companiesIdPatch(id, body).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **body** | [**Body3**](Body3.md)| Updated company details. | 
+ **body** | [**Body1**](Body1.md)| Updated company details. | 
 
 ### Return type
 
@@ -320,7 +320,7 @@ var apiInstance = new SibApiV3Sdk.CompaniesApi();
 
 var id = "id_example"; // String | 
 
-var body = new SibApiV3Sdk.Body4(); // Body4 | Linked / Unlinked contacts and deals ids.
+var body = new SibApiV3Sdk.Body2(); // Body2 | Linked / Unlinked contacts and deals ids.
 
 apiInstance.companiesLinkUnlinkIdPatch(id, body).then(function() {
   console.log('API called successfully.');
@@ -335,7 +335,7 @@ apiInstance.companiesLinkUnlinkIdPatch(id, body).then(function() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **body** | [**Body4**](Body4.md)| Linked / Unlinked contacts and deals ids. | 
+ **body** | [**Body2**](Body2.md)| Linked / Unlinked contacts and deals ids. | 
 
 ### Return type
 
@@ -375,7 +375,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SibApiV3Sdk.CompaniesApi();
 
-var body = new SibApiV3Sdk.Body2(); // Body2 | Company create data.
+var body = new SibApiV3Sdk.Body(); // Body | Company create data.
 
 apiInstance.companiesPost(body).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -389,7 +389,7 @@ apiInstance.companiesPost(body).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body2**](Body2.md)| Company create data. | 
+ **body** | [**Body**](Body.md)| Company create data. | 
 
 ### Return type
 

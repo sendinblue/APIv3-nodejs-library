@@ -34,7 +34,7 @@
   /**
    * The GetInboundEmailEventsByUuidAttachments model module.
    * @module model/GetInboundEmailEventsByUuidAttachments
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

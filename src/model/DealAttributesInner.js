@@ -34,7 +34,7 @@
   /**
    * The DealAttributesInner model module.
    * @module model/DealAttributesInner
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

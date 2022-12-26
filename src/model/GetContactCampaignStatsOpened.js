@@ -34,7 +34,7 @@
   /**
    * The GetContactCampaignStatsOpened model module.
    * @module model/GetContactCampaignStatsOpened
-   * @version 8.4.2
+   * @version 8.5.0
    */
 
   /**

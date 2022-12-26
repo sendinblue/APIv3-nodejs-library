@@ -502,7 +502,7 @@ partnerKey.apiKey = 'YOUR API KEY';
 var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 
 var opts = { 
-  'limit': 50, // Number | Number limitation for the result returned
+  'limit': 2500, // Number | Number limitation for the result returned
   'offset': 0, // Number | Beginning point in the list to retrieve from.
   'startDate': "startDate_example", // String | Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate
   'endDate': "endDate_example", // String | Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate
@@ -526,7 +526,7 @@ apiInstance.getEmailEventReport(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **Number**| Number limitation for the result returned | [optional] [default to 50]
+ **limit** | **Number**| Number limitation for the result returned | [optional] [default to 2500]
  **offset** | **Number**| Beginning point in the list to retrieve from. | [optional] [default to 0]
  **startDate** | **String**| Mandatory if endDate is used. Starting date of the report (YYYY-MM-DD). Must be lower than equal to endDate | [optional] 
  **endDate** | **String**| Mandatory if startDate is used. Ending date of the report (YYYY-MM-DD). Must be greater than equal to startDate | [optional] 
