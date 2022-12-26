@@ -37,8 +37,6 @@ const pkgJson = require('../package.json');
    * @version 8.5.0
    */
 
-  console.log('version 8.5.0')
-
   /**
    * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
    * application to use this class directly - the *Api and model classes provide the public API for the service. The
@@ -586,17 +584,13 @@ const pkgJson = require('../package.json');
     }
   };
 
-  /**
-   * Sets the user-agent
-   * @param header (String)
-   */
   exports.setUserAgent = function(header) {
-    if (typeof header == 'string' && header.substr(0, 11).trim().toLowerCase() === 'sendinblue_') {
+    if (typeof header == 'string' && header.substr(0,11).trim().toLowerCase() === 'sendinblue_') {
       exports.instance.defaultHeaders['user-agent'] = header;
     }
     return;
   };
-  
+
   /**
    * The default API client implementation.
    * @type {module:ApiClient}

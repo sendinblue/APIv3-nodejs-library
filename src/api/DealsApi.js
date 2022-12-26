@@ -95,9 +95,9 @@
     /**
      * Get all deals
      * @param {Object} opts Optional parameters
-     * @param {String} opts.filterAttributes Filter by attrbutes. If you have filter for owner on your side please send it as `attributes.owner`.\"
-     * @param {String} opts.filterLinkedCompaniesIds Filter by linked companies ids
-     * @param {String} opts.filterLinkedContactsIds Filter by linked companies ids
+     * @param {String} opts.filtersAttributes Filter by attrbutes. If you have filter for owner on your side please send it as `attributes.owner`.\"
+     * @param {String} opts.filtersLinkedCompaniesIds Filter by linked companies ids
+     * @param {String} opts.filtersLinkedContactsIds Filter by linked companies ids
      * @param {Number} opts.offset Index of the first document of the page
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {module:model/String} opts.sort Sort the results in the ascending/descending order. Default order is **descending** by creation if `sort` is not passed
@@ -112,9 +112,9 @@
       var pathParams = {
       };
       var queryParams = {
-        'filter[attributes]': opts['filterAttributes'],
-        'filter[linkedCompaniesIds]': opts['filterLinkedCompaniesIds'],
-        'filter[linkedContactsIds]': opts['filterLinkedContactsIds'],
+        'filters[attributes]': opts['filtersAttributes'],
+        'filters[linkedCompaniesIds]': opts['filtersLinkedCompaniesIds'],
+        'filters[linkedContactsIds]': opts['filtersLinkedContactsIds'],
         'offset': opts['offset'],
         'limit': opts['limit'],
         'sort': opts['sort'],
@@ -142,9 +142,9 @@
     /**
      * Get all deals
      * @param {Object} opts Optional parameters
-     * @param {String} opts.filterAttributes Filter by attrbutes. If you have filter for owner on your side please send it as `attributes.owner`.\"
-     * @param {String} opts.filterLinkedCompaniesIds Filter by linked companies ids
-     * @param {String} opts.filterLinkedContactsIds Filter by linked companies ids
+     * @param {String} opts.filtersAttributes Filter by attrbutes. If you have filter for owner on your side please send it as `attributes.owner`.\"
+     * @param {String} opts.filtersLinkedCompaniesIds Filter by linked companies ids
+     * @param {String} opts.filtersLinkedContactsIds Filter by linked companies ids
      * @param {Number} opts.offset Index of the first document of the page
      * @param {Number} opts.limit Number of documents per page (default to 50)
      * @param {module:model/String} opts.sort Sort the results in the ascending/descending order. Default order is **descending** by creation if `sort` is not passed
