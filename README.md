@@ -1,4 +1,4 @@
-# sib-api-v3-sdk
+# [DEPRECATED:warning:] sib-api-v3-sdk
 
 # SendinBlue's API v3 Node.js Library
 
