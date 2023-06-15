@@ -1,8 +1,8 @@
 # [DEPRECATED:warning:] sib-api-v3-sdk
 
 # Here are the new SDK details:
-- [NPM]([url](https://www.npmjs.com/package/@getbrevo/brevo))
-- [Github]([url](https://github.com/getbrevo/brevo-node))
+- NPM: https://www.npmjs.com/package/@getbrevo/brevo
+- Github: https://github.com/getbrevo/brevo-node
 
 # SendinBlue's API v3 Node.js Library
 
